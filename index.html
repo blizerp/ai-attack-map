@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AI Cyberattack Map</title>
-<meta name="description" content="Map of reported cyberattacks involving AI, updated automatically from public security reporting.">
+<meta name="description" content="Map of AI-related cyber incidents and major cyberattacks affecting critical services, finance, supply chains, and more.">
 <!-- Facebook link preview. Replace YOURNAME with your GitHub username after setup. -->
 <meta property="og:title" content="AI Cyberattack Map">
-<meta property="og:description" content="Every reported cyberattack involving AI, plotted where it hit. Updated every 6 hours.">
+<meta property="og:description" content="AI-related incidents and major cyberattacks, plotted where they hit. Updated every 6 hours.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://blizerp.github.io/ai-attack-map/">
 <meta property="og:image" content="https://blizerp.github.io/ai-attack-map/preview.png">
@@ -25,6 +25,7 @@
     color-scheme: dark;
     --using: #D7263D;   /* attackers used AI */
     --agent: #E08E0B;   /* AI agent acted on its own */
+    --major: #8065C7;
     --onai: #0F8B8D;    /* AI systems were the target */
     --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
     --head: "Archivo", "Arial Narrow", Arial, sans-serif;
@@ -153,13 +154,13 @@
 <body>
 <div id="map" aria-label="World map of incidents"></div>
 
-<section class="panel" id="controls-panel" aria-label="Map controls">
+<section class="panel collapsed" id="controls-panel" aria-label="Map controls">
   <header class="panel-header">
     <h1>AI Cyberattack Map</h1>
-    <button class="panel-toggle" id="toggle-panel" aria-expanded="true" aria-controls="panel-content" aria-label="Collapse map controls" title="Collapse map controls">−</button>
+    <button class="panel-toggle" id="toggle-panel" aria-expanded="false" aria-controls="panel-content" aria-label="Expand map controls" title="Expand map controls">+</button>
   </header>
   <div class="panel-content" id="panel-content">
-  <p class="sub">Reported attacks involving AI, plotted at the victim's location. Tap a target for details.</p>
+  <p class="sub">AI-related incidents and major cyberattacks, plotted at the victim’s location. Tap a skull for details.</p>
   <div class="row seg" role="group" aria-label="Time range">
     <button data-days="7">7 days</button>
     <button data-days="30" aria-pressed="true">30 days</button>
@@ -169,7 +170,9 @@
     <label style="color:var(--using)"><input type="checkbox" data-cat="using_ai" checked><span class="swatch"></span><span style="color:var(--ink)">Attackers used AI</span><span class="count" id="n-using_ai"></span></label>
     <label style="color:var(--agent)"><input type="checkbox" data-cat="by_ai_agent" checked><span class="swatch"></span><span style="color:var(--ink)">AI agent acted on its own</span><span class="count" id="n-by_ai_agent"></span></label>
     <label style="color:var(--onai)"><input type="checkbox" data-cat="on_ai_system" checked><span class="swatch"></span><span style="color:var(--ink)">AI systems targeted</span><span class="count" id="n-on_ai_system"></span></label>
+    <label style="color:var(--major)"><input type="checkbox" data-cat="major_cyber" checked><span class="swatch"></span><span style="color:var(--ink)">Major hacks (AI unconfirmed)</span><span class="count" id="n-major_cyber"></span></label>
   </div>
+  <p class="meta">Major hacks: serious attacks on essential services, finance, supply chains, or other critical systems; major data theft and losses. AI involvement is not confirmed in these reports.</p>
   <button class="global-btn" id="open-global">No fixed location (<span id="n-global">0</span>)</button>
   <p class="meta" id="updated">Loading incidents…</p>
   <p class="meta">Auto-summarized from public reporting. Pins mark where the victim or affected vendor is, not where the attacker is. Attribution is as reported by the source.</p>
@@ -193,6 +196,7 @@ const CATS = {
   using_ai:     { label: "Attackers used AI",        color: "#D7263D" },
   by_ai_agent:  { label: "AI agent acted on its own", color: "#E08E0B" },
   on_ai_system: { label: "AI systems targeted",       color: "#0F8B8D" },
+  major_cyber:  { label: "Major hack · AI unconfirmed", color: "#8065C7" },
 };
 const state = { days: 30, cats: new Set(Object.keys(CATS)), incidents: [] };
 
@@ -225,8 +229,10 @@ function card(i) {
       <dt>Who did it</dt><dd>${esc(i.attacker)}</dd>
       <dt>What</dt><dd>${esc(i.what)}</dd>
       <dt>AI's role</dt><dd>${esc(i.ai_role)}</dd>
+      ${i.significance && i.significance !== "Not reported" ? `<dt>Significance</dt><dd>${esc(i.significance)}</dd>` : ""}
       <dt>Why</dt><dd>${esc(i.why)}</dd>
     </dl>
+    ${i.ai_source_url ? `<div class="src">AI involvement reporting: <a href="${esc(safeUrl(i.ai_source_url))}" target="_blank" rel="noopener">${esc(i.ai_source_name)}</a></div>` : ""}
     <div class="src">Source: <a href="${esc(safeUrl(i.source_url))}" target="_blank" rel="noopener">${esc(i.source_name)}</a>${more ? ` · also ${more}` : ""}</div>
   </div>`;
 }
