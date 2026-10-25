@@ -35,6 +35,11 @@ class SelectionTests(unittest.TestCase):
             with self.subTest(changes=changes):
                 self.assertEqual(u.assess_severity({**base,**changes})['level'],level)
 
+    def test_financial_losses_do_not_require_multiple_victims(self):
+        for financial,level in [('unknown','unknown'),('limited','limited'),('substantial','significant'),('major','severe')]:
+            self.assertEqual(u.assess_severity(dict(context='real_world',reach='single',financial=financial))['level'],level)
+        self.assertEqual(u.assess_severity(dict(context='research_only',financial='major'))['level'],'unknown')
+
     def test_unknown_and_test_claims_never_get_critical_glow(self):
         for context in ['unknown','research_only','unverified']:
             self.assertEqual(u.assess_severity(dict(context=context,essential='widespread_or_safety',damage='destructive'))['level'],'unknown')

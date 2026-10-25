@@ -124,6 +124,7 @@ SEVERITY_FIELDS = {
     "reach": ["single", "multiple", "widespread", "unknown"],
     "damage": ["none", "limited", "sensitive_data", "privileged_access", "destructive", "unknown"],
     "essential": ["none", "disrupted", "widespread_or_safety", "unknown"],
+    "financial": ["none", "limited", "substantial", "major", "unknown"],
 }
 SEVERITY_SCHEMA = {
     "type": "object", "additionalProperties": False,
@@ -138,6 +139,7 @@ service: none only when explicitly no disruption, limited for brief/minor effect
 reach counts actually compromised/affected victims, NEVER scanned/targeted hosts, downloads, install base, or potential customers. single = one organization; multiple = at least two organizations or independently affected accounts/systems; widespread = hundreds of organizations/systems or at least one million sensitive records/affected people explicitly reported. Email addresses alone count as limited damage, not sensitive_data. Otherwise unknown.
 damage: sensitive_data = observed theft/exposure of medical/financial/private records or reusable secrets/credentials; privileged_access = demonstrated administrator/control access without documented data theft; destructive = actual destruction, not a malware capability; limited = documented lesser losses/non-sensitive disclosures; none only for explicitly blocked/harmless activity; otherwise unknown.
 essential: disrupted only for documented material essential-service interruption; widespread_or_safety only for broad essential-service interruption or demonstrated danger to people; none for explicitly unaffected services; otherwise unknown. Merely targeting a critical sector is insufficient.
+financial: major for documented actual losses of at least US$10 million; substantial for at least US$100,000 or explicitly reported material business losses; limited for reported lower losses; none only if explicitly no loss; unknown otherwise. Do not count ransom demands, test tokens, potential losses, or guess currency conversions. Use a clearly reported US-dollar equivalent when available.
 reason: one or two concise factual sentences explaining observed impact AND important limits. Distinguish confirmed harm from attempted harm and theoretical capability. Write 'Impact not established in the available reporting.' if insufficient. Never inflate an assessment to match a headline, CVSS score, attacker identity, or AI involvement.
 """
 SCHEMA = {
@@ -179,13 +181,13 @@ def assess_severity(evidence=None, source_url="", assessed_at=None):
         service, reach, damage, essential = (facts[k] for k in ("service", "reach", "damage", "essential"))
         if essential == "widespread_or_safety":
             level = "critical"
-        elif (essential == "disrupted" or service in {"major", "widespread"}
+        elif (essential == "disrupted" or service in {"major", "widespread"} or facts["financial"] == "major"
               or (reach == "widespread" and damage in {"sensitive_data", "privileged_access", "destructive"})
               or (reach == "multiple" and damage in {"sensitive_data", "destructive"})):
             level = "severe"
-        elif service == "substantial" or damage in {"sensitive_data", "privileged_access", "destructive"} or (reach in {"multiple", "widespread"} and damage == "limited"):
+        elif service == "substantial" or facts["financial"] == "substantial" or damage in {"sensitive_data", "privileged_access", "destructive"} or (reach in {"multiple", "widespread"} and damage == "limited"):
             level = "significant"
-        elif damage in {"none", "limited"} or service == "limited":
+        elif damage in {"none", "limited"} or service == "limited" or facts["financial"] == "limited":
             level = "limited"
     return {"level": level, "status": "preliminary", "reason": reason,
             "evidence": facts, "source_url": source_url,
