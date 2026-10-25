@@ -204,7 +204,7 @@
   <p class="meta">Major hacks: serious attacks on essential services, finance, supply chains, or other critical systems; major data theft and losses. AI involvement is not confirmed in these reports.</p>
   <button class="global-btn" id="open-global">Global / unlocated (<span id="n-global">0</span>)</button>
   <p class="meta" id="updated">Loading incidents…</p>
-  <p class="meta">Auto-summarized from public reporting. Pins mark reported affected areas or labeled company-location fallbacks. Some campaigns have multiple pins. Numbered circles group nearby pins; zoom in to separate them. Unlocated incidents appear in the global strip.</p>
+  <p class="meta">Auto-summarized from public reporting. Pins mark reported affected areas or labeled company-location fallbacks. Some campaigns have multiple pins. Numbered circles group nearby pins; tap a number to spread its skulls without changing zoom. Unlocated incidents appear in the global strip.</p>
   </div>
   <button class="panel-resize" id="resize-panel" aria-label="Resize map controls" title="Drag to resize. Arrow keys resize; Shift makes larger steps.">◢</button>
 </section>
@@ -244,6 +244,7 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=c
 
 const cluster = L.markerClusterGroup({
   showCoverageOnHover: false, maxClusterRadius: 40,
+  zoomToBoundsOnClick: false, spiderfyOnEveryZoom: true,
   iconCreateFunction: c => L.divIcon({ html: `<div class="cluster">${c.getChildCount()}</div>`, className: "", iconSize: [34, 34] }),
 });
 map.addLayer(cluster);
