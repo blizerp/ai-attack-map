@@ -307,7 +307,7 @@ function render() {
     for (const location of locations) {
       const icon = L.divIcon({ className: "", iconSize: [36, 44], iconAnchor: [18, 22], popupAnchor: [0, -22],
         html: skullHtml(i) });
-      markers.push(L.marker([location.lat, location.lon], { icon, title: i.title }).on("click", () => openIncident(i, location)));
+      markers.push(L.marker([location.lat, location.lon], { icon, title: i.title }).bindPopup(card(i, location), { maxWidth: 320, maxHeight: 360 }));
     }
   }
   cluster.addLayers(markers);
@@ -405,7 +405,9 @@ function openGlobal(incidentId = null) {
 }
 document.getElementById("global-markers").addEventListener("click", event => {
   const button = event.target.closest("button[data-incident]");
-  if (button) openGlobal(button.dataset.incident);
+  if (!button) return;
+  const incident = state.incidents.find(i => String(i.id) === button.dataset.incident);
+  if (incident) openIncident(incident, null);
 });
 document.getElementById("open-global").addEventListener("click", () => openGlobal());
 closeGlobal.addEventListener("click", () => drawer.close());
