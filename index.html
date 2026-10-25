@@ -18,10 +18,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
 <style>
   :root {
-    --ink: #1F2A36;
-    --slate: #5B6B7A;
-    --paper: #FFFFFF;
-    --rule: #CBD3DA;
+    --ink: #E6EDF3;
+    --slate: #A7B4C2;
+    --paper: #141C26;
+    --rule: #394857;
+    color-scheme: dark;
     --using: #D7263D;   /* attackers used AI */
     --agent: #E08E0B;   /* AI agent acted on its own */
     --onai: #0F8B8D;    /* AI systems were the target */
@@ -29,7 +30,7 @@
     --head: "Archivo", "Arial Narrow", Arial, sans-serif;
   }
   html, body { height: 100%; margin: 0; }
-  body { font-family: var(--body); color: var(--ink); background: #E9ECEA; }
+  body { font-family: var(--body); color: var(--ink); background: #0B1017; }
   #map { position: absolute; inset: 0; }
 
   /* Control panel */
@@ -37,9 +38,43 @@
     position: absolute; z-index: 1000;
     top: calc(12px + env(safe-area-inset-top, 0px)); left: 12px;
     width: min(340px, calc(100vw - 24px));
-    background: var(--paper); border: 2px solid var(--ink); border-radius: 4px;
-    padding: 14px 16px 12px; box-sizing: border-box;
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 14px 16px 20px; box-sizing: border-box;
+    display: flex; flex-direction: column;
+    min-width: min(260px, calc(100vw - 24px)); min-height: 160px;
+    max-width: calc(100vw - 24px);
+    max-height: calc(100dvh - 24px - env(safe-area-inset-top, 0px));
+    box-shadow: 0 8px 28px #0006;
   }
+  .panel-header { display: flex; align-items: flex-start; gap: 10px; flex-shrink: 0; }
+  .panel-header h1 { flex: 1; min-width: 0; }
+  .panel-toggle {
+    flex-shrink: 0; width: 32px; height: 32px; padding: 0;
+    color: var(--ink); background: #202D3B; border: 1px solid var(--rule);
+    border-radius: 4px; cursor: pointer; font: 600 1.2rem var(--body);
+  }
+  .panel-content { min-height: 0; overflow: auto; scrollbar-color: #536477 var(--paper); }
+  .panel-resize {
+    position: absolute; right: 0; bottom: 0; width: 28px; height: 28px;
+    padding: 0; border: 0; border-radius: 0 0 8px 0;
+    background: transparent; color: var(--slate); font-size: 20px;
+    cursor: nwse-resize; touch-action: none; user-select: none;
+  }
+  .panel.collapsed { width: min(300px, calc(100vw - 24px)) !important; height: auto !important; min-height: 0; padding-bottom: 14px; }
+  .panel.collapsed .panel-content, .panel.collapsed .panel-resize { display: none; }
+  .panel.collapsed h1 { margin: 0; }
+  .panel-toggle:hover, .global-btn:hover, .seg button:hover { background: #2A3A4B; }
+  .legend input { accent-color: #78B7FF; }
+  .leaflet-container { background: #0B1017; }
+  .leaflet-bar { border: 1px solid var(--rule) !important; }
+  .leaflet-bar a, .leaflet-bar a:hover { background: var(--paper); color: var(--ink); border-color: var(--rule); }
+  .leaflet-bar a.leaflet-disabled { background: #101720; color: #687687; }
+  .leaflet-container .leaflet-control-attribution { background: #141C26E8; color: var(--slate); }
+  .leaflet-control-attribution a, .inc a { color: #8DC4FF; }
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--paper); color: var(--ink); }
+  .leaflet-container a.leaflet-popup-close-button { color: var(--slate); }
+  .inc dd { overflow-wrap: anywhere; }
+
   h1 { font-family: var(--head); font-weight: 800; font-size: 1.45rem; line-height: 1.1; margin: 0 0 4px; letter-spacing: -0.01em; }
   .sub { font-size: 0.9rem; color: var(--slate); margin: 0 0 12px; }
   .row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
@@ -47,7 +82,7 @@
     font: 600 0.85rem var(--body); color: var(--ink); background: var(--paper);
     border: 1.5px solid var(--ink); border-radius: 3px; padding: 5px 10px; cursor: pointer;
   }
-  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  .seg button[aria-pressed="true"] { background: #315B85; color: #FFFFFF; border-color: #8DC4FF; }
   .legend label { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer; width: 100%; }
   .swatch { width: 12px; height: 12px; border-radius: 50%; border: 3px solid currentColor; box-sizing: border-box; }
   .count { margin-left: auto; color: var(--slate); font-variant-numeric: tabular-nums; }
@@ -57,7 +92,7 @@
   /* Bullseye marker */
   .bullseye {
     position: relative; width: 22px; height: 22px; box-sizing: border-box;
-    border: 2px solid var(--c); border-radius: 50%; background: rgba(255,255,255,0.85);
+    border: 2px solid var(--c); border-radius: 50%; background: rgba(20,28,38,0.9);
   }
   .bullseye::before { content: ""; position: absolute; inset: 2px; border: 2px solid var(--c); border-radius: 50%; }
   .bullseye::after  { content: ""; position: absolute; inset: 6px; background: var(--c); border-radius: 50%; }
@@ -67,12 +102,12 @@
 
   .cluster {
     display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
-    background: var(--ink); color: #fff; font: 800 0.85rem var(--head);
+    background: #31465D; color: #fff; font: 800 0.85rem var(--head);
     box-shadow: 0 0 0 4px rgba(31,42,54,0.25);
   }
 
   /* Popup + global list content */
-  .leaflet-popup-content-wrapper { border-radius: 4px; border: 2px solid var(--ink); box-shadow: none; }
+  .leaflet-popup-content-wrapper { border-radius: 6px; border: 1px solid var(--rule); box-shadow: 0 8px 28px #0006; }
   .leaflet-popup-content { margin: 12px 14px; font-family: var(--body); }
   .inc h2 { font: 800 1.02rem/1.2 var(--head); margin: 0 0 4px; }
   .inc .tag { display: inline-block; font-size: 0.75rem; font-weight: 600; color: #fff; border-radius: 2px; padding: 1px 6px; margin-bottom: 8px; }
@@ -80,11 +115,11 @@
   .inc dt { font-weight: 600; color: var(--slate); }
   .inc dd { margin: 0; }
   .inc .src { margin-top: 8px; font-size: 0.82rem; }
-  .inc a { color: var(--ink); }
+  .inc a { color: #8DC4FF; }
 
   .drawer {
     position: absolute; z-index: 1001; right: 0; top: 0; bottom: 0;
-    width: min(380px, 100vw); background: var(--paper); border-left: 2px solid var(--ink);
+    width: min(380px, 100vw); background: var(--paper); border-left: 1px solid var(--rule);
     padding: calc(14px + env(safe-area-inset-top, 0px)) 16px 16px; box-sizing: border-box;
     overflow-y: auto; transform: translateX(100%); transition: transform 0.2s ease;
   }
@@ -98,7 +133,7 @@
   .empty { color: var(--slate); font-size: 0.9rem; }
 
   @media (max-width: 520px) {
-    .panel { left: 8px; right: 8px; width: auto; padding: 10px 12px; }
+    .panel { left: 8px; width: min(340px, calc(100vw - 16px)); max-width: calc(100vw - 16px); padding: 10px 12px 20px; }
     h1 { font-size: 1.2rem; }
     .sub { display: none; }
     .legend { font-size: 0.85rem; }
@@ -108,8 +143,12 @@
 <body>
 <div id="map" aria-label="World map of incidents"></div>
 
-<section class="panel" aria-label="Map controls">
-  <h1>AI Cyberattack Map</h1>
+<section class="panel" id="controls-panel" aria-label="Map controls">
+  <header class="panel-header">
+    <h1>AI Cyberattack Map</h1>
+    <button class="panel-toggle" id="toggle-panel" aria-expanded="true" aria-controls="panel-content" aria-label="Collapse map controls" title="Collapse map controls">−</button>
+  </header>
+  <div class="panel-content" id="panel-content">
   <p class="sub">Reported attacks involving AI, plotted at the victim's location. Tap a target for details.</p>
   <div class="row seg" role="group" aria-label="Time range">
     <button data-days="7">7 days</button>
@@ -124,6 +163,8 @@
   <button class="global-btn" id="open-global">No fixed location (<span id="n-global">0</span>)</button>
   <p class="meta" id="updated">Loading incidents…</p>
   <p class="meta">Auto-summarized from public reporting. Pins mark where the victim or affected vendor is, not where the attacker is. Attribution is as reported by the source.</p>
+  </div>
+  <button class="panel-resize" id="resize-panel" aria-label="Resize map controls" title="Drag to resize. Arrow keys resize; Shift makes larger steps.">◢</button>
 </section>
 
 <aside class="drawer" id="drawer" aria-label="Incidents with no fixed location">
@@ -147,7 +188,7 @@ const state = { days: 30, cats: new Set(Object.keys(CATS)), incidents: [] };
 
 const map = L.map("map", { worldCopyJump: true, zoomControl: false, minZoom: 2 }).setView([25, 10], 2);
 L.control.zoom({ position: "bottomright" }).addTo(map);
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_4u4v_1_1dfd481a718ad664f12b6beb", {
+L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=cb1_4u4v_1_1dfd481a718ad664f12b6beb", {
   maxZoom: 18, subdomains: "abcd",
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
 }).addTo(map);
@@ -220,6 +261,47 @@ document.querySelectorAll(".legend input").forEach(cb => cb.addEventListener("ch
   cb.checked ? state.cats.add(cb.dataset.cat) : state.cats.delete(cb.dataset.cat);
   render();
 }));
+const panel = document.getElementById("controls-panel");
+const togglePanel = document.getElementById("toggle-panel");
+const resizePanel = document.getElementById("resize-panel");
+togglePanel.addEventListener("click", () => {
+  const collapsed = panel.classList.toggle("collapsed");
+  togglePanel.setAttribute("aria-expanded", String(!collapsed));
+  togglePanel.setAttribute("aria-label", collapsed ? "Expand map controls" : "Collapse map controls");
+  togglePanel.title = collapsed ? "Expand map controls" : "Collapse map controls";
+  togglePanel.textContent = collapsed ? "+" : "−";
+});
+function resizeControls(width, height) {
+  const rect = panel.getBoundingClientRect();
+  const maxWidth = Math.max(0, window.innerWidth - rect.left - 8);
+  const maxHeight = Math.max(0, window.innerHeight - rect.top - 8);
+  panel.style.width = Math.min(maxWidth, Math.max(Math.min(260, maxWidth), width)) + "px";
+  panel.style.height = Math.min(maxHeight, Math.max(Math.min(160, maxHeight), height)) + "px";
+}
+let panelDrag = null;
+resizePanel.addEventListener("pointerdown", event => {
+  if (event.button !== 0) return;
+  const rect = panel.getBoundingClientRect();
+  panelDrag = { id: event.pointerId, x: event.clientX, y: event.clientY, width: rect.width, height: rect.height };
+  resizePanel.setPointerCapture(event.pointerId);
+  event.preventDefault();
+});
+resizePanel.addEventListener("pointermove", event => {
+  if (!panelDrag || panelDrag.id !== event.pointerId) return;
+  resizeControls(panelDrag.width + event.clientX - panelDrag.x, panelDrag.height + event.clientY - panelDrag.y);
+});
+function endPanelResize() { panelDrag = null; }
+resizePanel.addEventListener("pointerup", endPanelResize);
+resizePanel.addEventListener("pointercancel", endPanelResize);
+resizePanel.addEventListener("lostpointercapture", endPanelResize);
+resizePanel.addEventListener("keydown", event => {
+  if (!["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(event.key)) return;
+  event.preventDefault();
+  const rect = panel.getBoundingClientRect();
+  const step = event.shiftKey ? 40 : 10;
+  resizeControls(rect.width + (event.key === "ArrowRight" ? step : event.key === "ArrowLeft" ? -step : 0),
+    rect.height + (event.key === "ArrowDown" ? step : event.key === "ArrowUp" ? -step : 0));
+});
 const drawer = document.getElementById("drawer");
 document.getElementById("open-global").addEventListener("click", () => drawer.classList.add("open"));
 document.getElementById("close-global").addEventListener("click", () => drawer.classList.remove("open"));
