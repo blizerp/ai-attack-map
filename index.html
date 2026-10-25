@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Cyberattack Map</title>
+<meta name="description" content="Map of reported cyberattacks involving AI, updated automatically from public security reporting.">
+<!-- Facebook link preview. Replace YOURNAME with your GitHub username after setup. -->
+<meta property="og:title" content="AI Cyberattack Map">
+<meta property="og:description" content="Every reported cyberattack involving AI, plotted where it hit. Updated every 6 hours.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blizerp.github.io/ai-attack-map/">
+<meta property="og:image" content="https://blizerp.github.io/ai-attack-map/preview.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+<style>
+  :root {
+    --ink: #1F2A36;
+    --slate: #5B6B7A;
+    --paper: #FFFFFF;
+    --rule: #CBD3DA;
+    --using: #D7263D;   /* attackers used AI */
+    --agent: #E08E0B;   /* AI agent acted on its own */
+    --onai: #0F8B8D;    /* AI systems were the target */
+    --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+    --head: "Archivo", "Arial Narrow", Arial, sans-serif;
+  }
+  html, body { height: 100%; margin: 0; }
+  body { font-family: var(--body); color: var(--ink); background: #E9ECEA; }
+  #map { position: absolute; inset: 0; }
+
+  /* Control panel */
+  .panel {
+    position: absolute; z-index: 1000;
+    top: calc(12px + env(safe-area-inset-top, 0px)); left: 12px;
+    width: min(340px, calc(100vw - 24px));
+    background: var(--paper); border: 2px solid var(--ink); border-radius: 4px;
+    padding: 14px 16px 12px; box-sizing: border-box;
+  }
+  h1 { font-family: var(--head); font-weight: 800; font-size: 1.45rem; line-height: 1.1; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { font-size: 0.9rem; color: var(--slate); margin: 0 0 12px; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .seg button, .global-btn {
+    font: 600 0.85rem var(--body); color: var(--ink); background: var(--paper);
+    border: 1.5px solid var(--ink); border-radius: 3px; padding: 5px 10px; cursor: pointer;
+  }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  .legend label { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer; width: 100%; }
+  .swatch { width: 12px; height: 12px; border-radius: 50%; border: 3px solid currentColor; box-sizing: border-box; }
+  .count { margin-left: auto; color: var(--slate); font-variant-numeric: tabular-nums; }
+  .meta { font-size: 0.78rem; color: var(--slate); margin: 8px 0 0; line-height: 1.35; }
+  button:focus-visible, input:focus-visible { outline: 3px solid var(--agent); outline-offset: 2px; }
+
+  /* Bullseye marker */
+  .bullseye {
+    position: relative; width: 22px; height: 22px; box-sizing: border-box;
+    border: 2px solid var(--c); border-radius: 50%; background: rgba(255,255,255,0.85);
+  }
+  .bullseye::before { content: ""; position: absolute; inset: 2px; border: 2px solid var(--c); border-radius: 50%; }
+  .bullseye::after  { content: ""; position: absolute; inset: 6px; background: var(--c); border-radius: 50%; }
+  .bullseye.fresh { animation: ping 1.8s ease-out infinite; }
+  @keyframes ping { 0% { box-shadow: 0 0 0 0 var(--c); } 100% { box-shadow: 0 0 0 14px transparent; } }
+  @media (prefers-reduced-motion: reduce) { .bullseye.fresh { animation: none; } }
+
+  .cluster {
+    display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+    background: var(--ink); color: #fff; font: 800 0.85rem var(--head);
+    box-shadow: 0 0 0 4px rgba(31,42,54,0.25);
+  }
+
+  /* Popup + global list content */
+  .leaflet-popup-content-wrapper { border-radius: 4px; border: 2px solid var(--ink); box-shadow: none; }
+  .leaflet-popup-content { margin: 12px 14px; font-family: var(--body); }
+  .inc h2 { font: 800 1.02rem/1.2 var(--head); margin: 0 0 4px; }
+  .inc .tag { display: inline-block; font-size: 0.75rem; font-weight: 600; color: #fff; border-radius: 2px; padding: 1px 6px; margin-bottom: 8px; }
+  .inc dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 3px 10px; font-size: 0.88rem; line-height: 1.35; }
+  .inc dt { font-weight: 600; color: var(--slate); }
+  .inc dd { margin: 0; }
+  .inc .src { margin-top: 8px; font-size: 0.82rem; }
+  .inc a { color: var(--ink); }
+
+  .drawer {
+    position: absolute; z-index: 1001; right: 0; top: 0; bottom: 0;
+    width: min(380px, 100vw); background: var(--paper); border-left: 2px solid var(--ink);
+    padding: calc(14px + env(safe-area-inset-top, 0px)) 16px 16px; box-sizing: border-box;
+    overflow-y: auto; transform: translateX(100%); transition: transform 0.2s ease;
+  }
+  .drawer.open { transform: none; }
+  .drawer header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+  .drawer h2.title { font: 800 1.15rem var(--head); margin: 0; }
+  .drawer details { border-top: 1px solid var(--rule); padding: 10px 0; }
+  .drawer summary { cursor: pointer; font-weight: 600; line-height: 1.3; }
+  .drawer summary small { display: block; font-weight: 400; color: var(--slate); }
+  .drawer details .inc { margin-top: 8px; }
+  .empty { color: var(--slate); font-size: 0.9rem; }
+
+  @media (max-width: 520px) {
+    .panel { left: 8px; right: 8px; width: auto; padding: 10px 12px; }
+    h1 { font-size: 1.2rem; }
+    .sub { display: none; }
+    .legend { font-size: 0.85rem; }
+  }
+</style>
+</head>
+<body>
+<div id="map" aria-label="World map of incidents"></div>
+
+<section class="panel" aria-label="Map controls">
+  <h1>AI Cyberattack Map</h1>
+  <p class="sub">Reported attacks involving AI, plotted at the victim's location. Tap a target for details.</p>
+  <div class="row seg" role="group" aria-label="Time range">
+    <button data-days="7">7 days</button>
+    <button data-days="30" aria-pressed="true">30 days</button>
+    <button data-days="0">All</button>
+  </div>
+  <div class="row legend">
+    <label style="color:var(--using)"><input type="checkbox" data-cat="using_ai" checked><span class="swatch"></span><span style="color:var(--ink)">Attackers used AI</span><span class="count" id="n-using_ai"></span></label>
+    <label style="color:var(--agent)"><input type="checkbox" data-cat="by_ai_agent" checked><span class="swatch"></span><span style="color:var(--ink)">AI agent acted on its own</span><span class="count" id="n-by_ai_agent"></span></label>
+    <label style="color:var(--onai)"><input type="checkbox" data-cat="on_ai_system" checked><span class="swatch"></span><span style="color:var(--ink)">AI systems targeted</span><span class="count" id="n-on_ai_system"></span></label>
+  </div>
+  <button class="global-btn" id="open-global">No fixed location (<span id="n-global">0</span>)</button>
+  <p class="meta" id="updated">Loading incidents…</p>
+  <p class="meta">Auto-summarized from public reporting. Pins mark where the victim or affected vendor is, not where the attacker is. Attribution is as reported by the source.</p>
+</section>
+
+<aside class="drawer" id="drawer" aria-label="Incidents with no fixed location">
+  <header>
+    <h2 class="title">No fixed location</h2>
+    <button class="global-btn" id="close-global">Close</button>
+  </header>
+  <p class="meta">Supply-chain packages, platform flaws, and campaigns with no single place to pin.</p>
+  <div id="global-list"></div>
+</aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+<script>
+const CATS = {
+  using_ai:     { label: "Attackers used AI",        color: "#D7263D" },
+  by_ai_agent:  { label: "AI agent acted on its own", color: "#E08E0B" },
+  on_ai_system: { label: "AI systems targeted",       color: "#0F8B8D" },
+};
+const state = { days: 30, cats: new Set(Object.keys(CATS)), incidents: [] };
+
+const map = L.map("map", { worldCopyJump: true, zoomControl: false, minZoom: 2 }).setView([25, 10], 2);
+L.control.zoom({ position: "bottomright" }).addTo(map);
+L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  maxZoom: 18, subdomains: "abcd",
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+}).addTo(map);
+
+const cluster = L.markerClusterGroup({
+  showCoverageOnHover: false, maxClusterRadius: 40,
+  iconCreateFunction: c => L.divIcon({ html: `<div class="cluster">${c.getChildCount()}</div>`, className: "", iconSize: [34, 34] }),
+});
+map.addLayer(cluster);
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
+const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "#";
+
+function card(i) {
+  const cat = CATS[i.category] || CATS.using_ai;
+  const more = (i.more_sources || []).map(s => `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(", ");
+  return `<div class="inc">
+    <h2>${esc(i.title)}</h2>
+    <span class="tag" style="background:${cat.color}">${cat.label}</span>
+    <dl>
+      <dt>When</dt><dd>${esc(i.date)}</dd>
+      <dt>Where</dt><dd>${esc(i.where)}</dd>
+      <dt>Who was hit</dt><dd>${esc(i.victim)}</dd>
+      <dt>Who did it</dt><dd>${esc(i.attacker)}</dd>
+      <dt>What</dt><dd>${esc(i.what)}</dd>
+      <dt>AI's role</dt><dd>${esc(i.ai_role)}</dd>
+      <dt>Why</dt><dd>${esc(i.why)}</dd>
+    </dl>
+    <div class="src">Source: <a href="${esc(safeUrl(i.source_url))}" target="_blank" rel="noopener">${esc(i.source_name)}</a>${more ? ` · also ${more}` : ""}</div>
+  </div>`;
+}
+
+function visible() {
+  const cutoff = state.days ? Date.now() - state.days * 864e5 : 0;
+  return state.incidents.filter(i => state.cats.has(i.category) && (!cutoff || Date.parse(i.date) >= cutoff));
+}
+
+function render() {
+  const list = visible();
+  cluster.clearLayers();
+  const fresh = Date.now() - 2 * 864e5;
+  const markers = [];
+  const global = [];
+  for (const i of list) {
+    if (i.lat == null || i.lon == null) { global.push(i); continue; }
+    const color = (CATS[i.category] || CATS.using_ai).color;
+    const isFresh = Date.parse(i.added || i.date) >= fresh;
+    const icon = L.divIcon({ className: "", iconSize: [22, 22], iconAnchor: [11, 11],
+      html: `<div class="bullseye${isFresh ? " fresh" : ""}" style="--c:${color}"></div>` });
+    markers.push(L.marker([i.lat, i.lon], { icon, title: i.title }).bindPopup(card(i), { maxWidth: 320 }));
+  }
+  cluster.addLayers(markers);
+
+  for (const k of Object.keys(CATS)) {
+    const n = state.incidents.filter(i => i.category === k && (!state.days || Date.parse(i.date) >= Date.now() - state.days * 864e5)).length;
+    document.getElementById("n-" + k).textContent = n;
+  }
+  document.getElementById("n-global").textContent = global.length;
+  document.getElementById("global-list").innerHTML = global.length
+    ? global.map(i => `<details><summary>${esc(i.title)}<small>${esc(i.date)} · ${CATS[i.category]?.label || ""}</small></summary>${card(i)}</details>`).join("")
+    : `<p class="empty">Nothing in this time range. Try “All”.</p>`;
+}
+
+document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".seg button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  state.days = Number(b.dataset.days);
+  render();
+}));
+document.querySelectorAll(".legend input").forEach(cb => cb.addEventListener("change", () => {
+  cb.checked ? state.cats.add(cb.dataset.cat) : state.cats.delete(cb.dataset.cat);
+  render();
+}));
+const drawer = document.getElementById("drawer");
+document.getElementById("open-global").addEventListener("click", () => drawer.classList.add("open"));
+document.getElementById("close-global").addEventListener("click", () => drawer.classList.remove("open"));
+
+fetch("attacks.json?v=" + Date.now())
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => {
+    state.incidents = data.incidents || [];
+    const u = data.updated ? new Date(data.updated).toLocaleString() : "not yet";
+    document.getElementById("updated").textContent = `${state.incidents.length} incidents tracked. Last updated ${u}.`;
+    render();
+  })
+  .catch(() => {
+    document.getElementById("updated").textContent = "Couldn't load incident data. Refresh the page to try again.";
+  });
+</script>
+</body>
+</html>
