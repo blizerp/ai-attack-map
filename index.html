@@ -124,6 +124,9 @@
     border-radius: 8px; box-shadow: 0 4px 18px #0006;
   }
   .global-strip[hidden] { display: none; }
+  body:has(#global-strip:not([hidden])) .panel:not(.collapsed) {
+    max-height: max(160px, calc(100dvh - 245px - env(safe-area-inset-top, 0px)));
+  }
   .global-strip h2 { font: 800 0.9rem var(--head); margin: 0 0 3px; }
   .global-strip p { margin: 0; font-size: 0.76rem; color: var(--slate); }
   .global-markers { display: flex; gap: 12px; overflow-x: auto; padding: 14px 4px 8px; }
