@@ -30,7 +30,7 @@
     --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
     --head: "Archivo", "Arial Narrow", Arial, sans-serif;
   }
-  html, body { height: 100%; margin: 0; }
+  html, body { height: 100%; margin: 0; overflow: hidden; }
   body { font-family: var(--body); color: var(--ink); background: #0B1017; }
   #map { position: absolute; inset: 0; }
 
@@ -90,12 +90,12 @@
   .meta { font-size: 0.78rem; color: var(--slate); margin: 8px 0 0; line-height: 1.35; }
   button:focus-visible, input:focus-visible { outline: 3px solid var(--agent); outline-offset: 2px; }
 
-  /* Skull marker with a red halo behind the image. */
+  /* Skull marker with a category-colored halo behind the image. */
   .skull-marker { position: relative; width: 36px; height: 44px; isolation: isolate; }
   .skull-marker::before {
     content: ""; position: absolute; inset: 8px 4px; z-index: -1;
-    border-radius: 50%; background: #FF243D55;
-    box-shadow: 0 0 12px 5px #FF243D77;
+    border-radius: 50%; background: var(--glow);
+    box-shadow: 0 0 12px 5px var(--glow);
     animation: skull-pulse 1.8s ease-out infinite;
     pointer-events: none;
   }
@@ -104,8 +104,8 @@
     filter: drop-shadow(0 2px 2px #000B); pointer-events: none; user-select: none;
   }
   @keyframes skull-pulse {
-    0% { transform: scale(0.85); opacity: 0.95; box-shadow: 0 0 8px 3px #FF243DAA; }
-    100% { transform: scale(1.7); opacity: 0; box-shadow: 0 0 18px 8px #FF243D00; }
+    0% { transform: scale(0.85); opacity: 0.95; box-shadow: 0 0 8px 3px var(--glow); }
+    100% { transform: scale(1.7); opacity: 0; box-shadow: 0 0 18px 8px transparent; }
   }
   @media (prefers-reduced-motion: reduce) {
     .skull-marker::before { animation: none; opacity: 0.6; }
@@ -116,6 +116,25 @@
     background: #31465D; color: #fff; font: 800 0.85rem var(--head);
     box-shadow: 0 0 0 4px rgba(31,42,54,0.25);
   }
+
+  .global-strip {
+    position: absolute; z-index: 999; bottom: 26px; left: 12px;
+    width: min(520px, calc(100vw - 76px)); box-sizing: border-box;
+    padding: 10px 12px; background: #141C26F2; border: 1px solid var(--rule);
+    border-radius: 8px; box-shadow: 0 4px 18px #0006;
+  }
+  .global-strip[hidden] { display: none; }
+  .global-strip h2 { font: 800 0.9rem var(--head); margin: 0 0 3px; }
+  .global-strip p { margin: 0; font-size: 0.76rem; color: var(--slate); }
+  .global-markers { display: flex; gap: 12px; overflow-x: auto; padding: 14px 4px 8px; }
+  .global-marker {
+    flex: 0 0 124px; display: flex; flex-direction: column; align-items: center;
+    gap: 6px; padding: 6px; border: 1px solid var(--rule); border-radius: 5px;
+    color: var(--ink); background: transparent; cursor: pointer; font: 600 0.76rem var(--body);
+  }
+  .global-marker:hover { background: #273747; }
+  .global-marker .marker-title { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .drawer details[open] { border-left: 3px solid #8DC4FF; padding-left: 8px; }
 
   /* Popup + global list content */
   .leaflet-popup-content-wrapper { border-radius: 6px; border: 1px solid var(--rule); box-shadow: 0 8px 28px #0006; }
@@ -173,19 +192,25 @@
     <label style="color:var(--major)"><input type="checkbox" data-cat="major_cyber" checked><span class="swatch"></span><span style="color:var(--ink)">Major hacks (AI unconfirmed)</span><span class="count" id="n-major_cyber"></span></label>
   </div>
   <p class="meta">Major hacks: serious attacks on essential services, finance, supply chains, or other critical systems; major data theft and losses. AI involvement is not confirmed in these reports.</p>
-  <button class="global-btn" id="open-global">No fixed location (<span id="n-global">0</span>)</button>
+  <button class="global-btn" id="open-global">Global / unlocated (<span id="n-global">0</span>)</button>
   <p class="meta" id="updated">Loading incidents…</p>
-  <p class="meta">Auto-summarized from public reporting. Pins mark where the victim or affected vendor is, not where the attacker is. Attribution is as reported by the source.</p>
+  <p class="meta">Auto-summarized from public reporting. Pins mark reported affected areas or labeled company-location fallbacks. Some campaigns have multiple pins. Numbered circles group nearby pins; zoom in to separate them. Unlocated incidents appear in the global strip.</p>
   </div>
   <button class="panel-resize" id="resize-panel" aria-label="Resize map controls" title="Drag to resize. Arrow keys resize; Shift makes larger steps.">◢</button>
 </section>
 
-<aside class="drawer" id="drawer" aria-label="Incidents with no fixed location">
+<section class="global-strip" id="global-strip" aria-label="Global or unlocated incident markers" hidden>
+  <h2>Global / location unconfirmed (<span id="strip-count">0</span>)</h2>
+  <p>These skulls are not geographic positions. Scroll to see every incident; click for details.</p>
+  <div class="global-markers" id="global-markers"></div>
+</section>
+
+<aside class="drawer" id="drawer" aria-label="Global or unlocated incident details">
   <header>
-    <h2 class="title">No fixed location</h2>
+    <h2 class="title">Global / location unconfirmed</h2>
     <button class="global-btn" id="close-global">Close</button>
   </header>
-  <p class="meta">Supply-chain packages, platform flaws, and campaigns with no single place to pin.</p>
+  <p class="meta">No supported geographic anchor is available for these incidents. Each also appears as a skull in the map’s global strip.</p>
   <div id="global-list"></div>
 </aside>
 
@@ -216,7 +241,7 @@ map.addLayer(cluster);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
 const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "#";
 
-function card(i) {
+function card(i, location = null) {
   const cat = CATS[i.category] || CATS.using_ai;
   const more = (i.more_sources || []).map(s => `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(", ");
   return `<div class="inc">
@@ -225,6 +250,7 @@ function card(i) {
     <dl>
       <dt>When</dt><dd>${esc(i.date)}</dd>
       <dt>Where</dt><dd>${esc(i.where)}</dd>
+      ${location ? `<dt>Map anchor</dt><dd>${esc(location.label)}<br>${esc(location.basis)}${location.entity ? ` · ${esc(location.entity)}` : ""}${location.source_url ? ` · <a href="${esc(safeUrl(location.source_url))}" target="_blank" rel="noopener">Location source</a>` : ""}</dd>` : ""}
       <dt>Who was hit</dt><dd>${esc(i.victim)}</dd>
       <dt>Who did it</dt><dd>${esc(i.attacker)}</dd>
       <dt>What</dt><dd>${esc(i.what)}</dd>
@@ -242,16 +268,27 @@ function visible() {
   return state.incidents.filter(i => state.cats.has(i.category) && (!cutoff || Date.parse(i.date) >= cutoff));
 }
 
+function mapLocations(i) {
+  const locations = i.locations?.length ? i.locations : [{lat: i.lat, lon: i.lon, label: i.where, basis: "Reported area (approximate)", source_url: i.source_url}];
+  return locations.filter(p => Number.isFinite(p.lat) && Number.isFinite(p.lon) && Math.abs(p.lat) <= 90 && Math.abs(p.lon) <= 180);
+}
+function skullHtml(i) {
+  const color = (CATS[i.category] || CATS.using_ai).color;
+  return `<div class="skull-marker" style="--glow:${color}"><img src="skull-marker.png" alt="" width="36" height="44" draggable="false"></div>`;
+}
 function render() {
   const list = visible();
   cluster.clearLayers();
   const markers = [];
   const global = [];
   for (const i of list) {
-    if (i.lat == null || i.lon == null) { global.push(i); continue; }
-    const icon = L.divIcon({ className: "", iconSize: [36, 44], iconAnchor: [18, 22], popupAnchor: [0, -22],
-      html: '<div class="skull-marker"><img src="skull-marker.png" alt="" width="36" height="44" draggable="false"></div>' });
-    markers.push(L.marker([i.lat, i.lon], { icon, title: i.title }).bindPopup(card(i), { maxWidth: 320 }));
+    const locations = mapLocations(i);
+    if (!locations.length) { global.push(i); continue; }
+    for (const location of locations) {
+      const icon = L.divIcon({ className: "", iconSize: [36, 44], iconAnchor: [18, 22], popupAnchor: [0, -22],
+        html: skullHtml(i) });
+      markers.push(L.marker([location.lat, location.lon], { icon, title: i.title }).bindPopup(card(i, location), { maxWidth: 320, maxHeight: 360 }));
+    }
   }
   cluster.addLayers(markers);
 
@@ -260,8 +297,12 @@ function render() {
     document.getElementById("n-" + k).textContent = n;
   }
   document.getElementById("n-global").textContent = global.length;
+  document.getElementById("global-strip").hidden = global.length === 0;
+  document.getElementById("strip-count").textContent = global.length;
+  document.getElementById("global-markers").innerHTML = global.map(i =>
+    `<button class="global-marker" data-incident="${esc(i.id)}" title="${esc(i.title)}" aria-label="${esc(i.title)} — location unconfirmed">${skullHtml(i)}<span class="marker-title">${esc(i.title)}</span></button>`).join("");
   document.getElementById("global-list").innerHTML = global.length
-    ? global.map(i => `<details><summary>${esc(i.title)}<small>${esc(i.date)} · ${CATS[i.category]?.label || ""}</small></summary>${card(i)}</details>`).join("")
+    ? global.map(i => `<details data-incident="${esc(i.id)}"><summary>${esc(i.title)}<small>${esc(i.date)} · ${CATS[i.category]?.label || ""}</small></summary>${card(i)}</details>`).join("")
     : `<p class="empty">Nothing in this time range. Try “All”.</p>`;
 }
 
@@ -316,6 +357,18 @@ resizePanel.addEventListener("keydown", event => {
     rect.height + (event.key === "ArrowDown" ? step : event.key === "ArrowUp" ? -step : 0));
 });
 const drawer = document.getElementById("drawer");
+document.getElementById("global-markers").addEventListener("click", event => {
+  const button = event.target.closest("button[data-incident]");
+  if (!button) return;
+  drawer.classList.add("open");
+  for (const detail of document.querySelectorAll("#global-list details")) {
+    detail.open = detail.dataset.incident === button.dataset.incident;
+    if (detail.open) {
+      detail.querySelector("summary").focus();
+      detail.scrollIntoView({block: "nearest"});
+    }
+  }
+});
 document.getElementById("open-global").addEventListener("click", () => drawer.classList.add("open"));
 document.getElementById("close-global").addEventListener("click", () => drawer.classList.remove("open"));
 
@@ -333,4 +386,5 @@ fetch("attacks.json?v=" + Date.now())
 </script>
 </body>
 </html>
+
 

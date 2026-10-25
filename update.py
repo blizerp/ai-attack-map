@@ -20,6 +20,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(ROOT, "attacks.json")
 SEEN_PATH = os.path.join(ROOT, "seen.json")
 GEO_PATH = os.path.join(ROOT, "geocache.json")
+LOCATION_REGISTRY_PATH = os.path.join(ROOT, "location_registry.json")
 
 MODEL = os.environ.get("OPENAI_MODEL") or "gpt-4o-mini"
 MAX_NEW = int(os.environ.get("MAX_NEW_ITEMS") or 150)
@@ -109,7 +110,8 @@ relevant = false for opinion, predictions, surveys, aggregate statistics, produc
 
 attacker: state who is reported or suspected AND by whom (e.g. "Attributed by Mandiant to ..."). Never state attribution more strongly than the source does.
 where: human-readable location of the victim(s). If the victim is a product or package, use the affected vendor's headquarters if known. Otherwise "No fixed location".
-geocode_query: a place a geocoder can resolve for "where", city-level if stated, else country (e.g. "Seoul, South Korea", "Germany"). Null when there is no fixed location.
+geocode_query: the first reported victim location, or null. Never infer an attack location from the attacker, a reporting outlet, or the mere use of an AI/cloud provider.
+location_queries: list every explicitly reported affected country or city as a separate query (up to 12), with basis="Reported affected area". For example Argentina AND Indonesia should produce two entries, not a combined query and not null. If an affected vendor's headquarters/office is explicitly stated, it can be a fallback with basis="Vendor headquarters (approximate)"; do not invent a headquarters from memory. Use [] when unknown. A verified vendor-location registry supplies other fallbacks outside extraction.
 date: YYYY-MM-DD of the incident or its disclosure. Use the published date given if nothing more specific is stated.
 duplicate_of: if this describes the same incident as one in the provided list of already-tracked incidents, return that incident's id; otherwise null.
 title: under 90 characters, plain and factual. Other fields: 1-2 short sentences each."""
@@ -128,10 +130,17 @@ SCHEMA = {
         "significance": TEXT,
         "geocode_query": {"type": ["string", "null"]},
         "duplicate_of": {"type": ["string", "null"]},
+        "location_queries": {"type": "array", "items": {
+            "type": "object", "additionalProperties": False,
+            "properties": {"query": TEXT, "basis": {"type": "string", "enum": [
+                "Reported affected area", "Vendor headquarters (approximate)"
+            ]}},
+            "required": ["query", "basis"],
+        }},
     },
     "required": ["relevant", "category", "title", "date", "victim", "attacker", "what",
                  "ai_role", "why", "where", "geocode_query", "duplicate_of",
-                 "major_impact", "impact_substantiated", "significance"],
+                 "major_impact", "impact_substantiated", "significance", "location_queries"],
 }
 
 
@@ -223,7 +232,7 @@ def geocode(query, cache):
     if not query:
         return None
     key = query.strip().lower()
-    if key in cache:
+    if cache.get(key) is not None:
         return cache[key]
     try:
         r = requests.get("https://nominatim.openstreetmap.org/search",
@@ -236,6 +245,45 @@ def geocode(query, cache):
         return None  # not cached, retried next run
     cache[key] = [float(hits[0]["lat"]), float(hits[0]["lon"])] if hits else None
     return cache[key]
+
+
+def locate_incident(inc, cache, queries=None):
+    """Add sourced map anchors without claiming that a proxy is the attack site."""
+    if inc.get("locations"):
+        return
+    if inc.get("lat") is not None and inc.get("lon") is not None:
+        inc["locations"] = [{"lat": inc["lat"], "lon": inc["lon"],
+                             "label": inc["where"], "basis": "Reported area (approximate)",
+                             "source_url": inc["source_url"]}]
+        return
+    queries = list(queries or [])
+    if not queries:
+        # Recover explicitly named areas from legacy records. New extraction uses
+        # location_queries for all reported countries, without this short list.
+        for name in ("Argentina", "Indonesia", "Brazil", "United States", "Peru", "Ecuador", "Western Europe"):
+            if re.search(r"\b" + re.escape(name) + r"\b", inc.get("where", ""), re.I):
+                queries.append({"query": name, "basis": "Reported affected area"})
+    if not queries:
+        for entry in load_json(LOCATION_REGISTRY_PATH, []):
+            if re.search(entry["pattern"], inc.get("victim", ""), re.I):
+                queries.append({"query": entry["query"],
+                                "basis": entry["basis"] + " (approximate; not an attack-site claim)",
+                                "entity": entry["entity"], "source_url": entry["source_url"]})
+                break
+    locations = []
+    used = set()
+    for place in queries[:12]:
+        coords = geocode(place["query"], cache)
+        if not coords or tuple(coords) in used:
+            continue
+        used.add(tuple(coords))
+        locations.append({"lat": coords[0], "lon": coords[1],
+                          "label": place["query"], "basis": place["basis"],
+                          "entity": place.get("entity", ""),
+                          "source_url": place.get("source_url", inc["source_url"])})
+    if locations:
+        inc["locations"] = locations
+        inc["lat"], inc["lon"] = locations[0]["lat"], locations[0]["lon"]
 
 
 def main():
@@ -285,22 +333,25 @@ def main():
             merged += 1
             continue
 
-        coords = geocode(rec["geocode_query"], geo)
+        queries = rec.get("location_queries") or ([{"query": rec["geocode_query"], "basis": "Reported area (approximate)"}] if rec["geocode_query"] else [])
         inc = {
             "id": c["id"], "title": rec["title"], "date": rec["date"] or c["date"],
             "category": rec["category"], "victim": rec["victim"], "attacker": rec["attacker"],
             "what": rec["what"], "ai_role": rec["ai_role"], "why": rec["why"], "where": rec["where"],
-            "lat": coords[0] if coords else None, "lon": coords[1] if coords else None,
+            "lat": None, "lon": None,
             "source_name": c["source"], "source_url": c["url"], "added": now,
             "major_impact": rec["major_impact"], "significance": rec["significance"],
         }
         if inc["category"] == "major_cyber":
             inc["ai_role"] = "AI involvement not confirmed in the reporting."
+        locate_incident(inc, geo, queries)
         data["incidents"].append(inc)
         by_id[inc["id"]] = inc
         added += 1
         print(f"+ [{inc['category']}] {inc['date']} {inc['title']}")
 
+    for inc in data["incidents"]:
+        locate_incident(inc, geo)
     data["incidents"].sort(key=lambda i: i["date"], reverse=True)
     data["updated"] = now
     save_json(DATA_PATH, data)
@@ -312,3 +363,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
