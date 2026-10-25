@@ -163,7 +163,7 @@
   .drawer header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 6px; flex-shrink: 0; }
   .drawer header button { flex-shrink: 0; }
   .drawer > .meta { flex-shrink: 0; margin-bottom: 10px; }
-  #global-list { min-height: 0; overflow-y: auto; overscroll-behavior: contain; overflow-wrap: anywhere; }
+  #global-list, #incident-content { min-height: 0; overflow-y: auto; overscroll-behavior: contain; overflow-wrap: anywhere; }
   .drawer .inc dl { grid-template-columns: max-content minmax(0, 1fr); }
   .drawer h2.title { font: 800 1.15rem var(--head); margin: 0; }
   .drawer details { border-top: 1px solid var(--rule); padding: 10px 0; }
@@ -222,6 +222,15 @@
   </header>
   <p class="meta">No supported geographic anchor is available for these incidents. Each also appears as a skull in the map’s global strip.</p>
   <div id="global-list"></div>
+</dialog>
+
+
+<dialog class="drawer" id="incident-dialog" aria-labelledby="incident-dialog-title">
+  <header>
+    <h2 class="title" id="incident-dialog-title">Incident details</h2>
+    <button class="global-btn" id="close-incident">Close</button>
+  </header>
+  <div id="incident-content"></div>
 </dialog>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
@@ -298,7 +307,7 @@ function render() {
     for (const location of locations) {
       const icon = L.divIcon({ className: "", iconSize: [36, 44], iconAnchor: [18, 22], popupAnchor: [0, -22],
         html: skullHtml(i) });
-      markers.push(L.marker([location.lat, location.lon], { icon, title: i.title }).bindPopup(card(i, location), { maxWidth: 320, maxHeight: 360 }));
+      markers.push(L.marker([location.lat, location.lon], { icon, title: i.title }).on("click", () => openIncident(i, location)));
     }
   }
   cluster.addLayers(markers);
@@ -367,6 +376,17 @@ resizePanel.addEventListener("keydown", event => {
   resizeControls(rect.width + (event.key === "ArrowRight" ? step : event.key === "ArrowLeft" ? -step : 0),
     rect.height + (event.key === "ArrowDown" ? step : event.key === "ArrowUp" ? -step : 0));
 });
+const incidentDialog = document.getElementById("incident-dialog");
+const incidentContent = document.getElementById("incident-content");
+const closeIncident = document.getElementById("close-incident");
+function openIncident(incident, location) {
+  incidentContent.innerHTML = card(incident, location);
+  if (!incidentDialog.open) incidentDialog.showModal();
+  closeIncident.focus({ preventScroll: true });
+  incidentContent.scrollTop = 0;
+}
+closeIncident.addEventListener("click", () => incidentDialog.close());
+
 const drawer = document.getElementById("drawer");
 const globalList = document.getElementById("global-list");
 const closeGlobal = document.getElementById("close-global");
