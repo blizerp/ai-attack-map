@@ -117,6 +117,29 @@ duplicate_of: if this describes the same incident as one in the provided list of
 title: under 90 characters, plain and factual. Other fields: 1-2 short sentences each."""
 
 TEXT = {"type": "string"}
+SEVERITY_LEVELS = {"unknown": 0, "limited": 1, "significant": 2, "severe": 3, "critical": 4}
+SEVERITY_FIELDS = {
+    "context": ["real_world", "research_only", "unverified", "unknown"],
+    "service": ["none", "limited", "substantial", "major", "widespread", "unknown"],
+    "reach": ["single", "multiple", "widespread", "unknown"],
+    "damage": ["none", "limited", "sensitive_data", "privileged_access", "destructive", "unknown"],
+    "essential": ["none", "disrupted", "widespread_or_safety", "unknown"],
+}
+SEVERITY_SCHEMA = {
+    "type": "object", "additionalProperties": False,
+    "properties": {**{key: {"type": "string", "enum": values} for key, values in SEVERITY_FIELDS.items()}, "reason": TEXT},
+    "required": list(SEVERITY_FIELDS) + ["reason"],
+}
+SYSTEM_PROMPT += """
+
+severity_evidence describes OBSERVED impact only, independently of attack category. Do not assign a numeric score.
+context: real_world for source-supported unauthorized activity against actual systems (even if an evaluation agent caused it); research_only for a controlled demonstration/test without established external victim harm; unverified for attacker claims/allegations without corroboration; unknown when unclear.
+service: none only when explicitly no disruption, limited for brief/minor effects, substantial for meaningful business interruption, major for prolonged/core-operation outage, widespread for broad regional or multi-provider outages; otherwise unknown.
+reach counts actually compromised/affected victims, NEVER scanned/targeted hosts, downloads, install base, or potential customers. single = one organization; multiple = at least two organizations or independently affected accounts/systems; widespread = hundreds of organizations/systems or at least one million sensitive records/affected people explicitly reported. Email addresses alone count as limited damage, not sensitive_data. Otherwise unknown.
+damage: sensitive_data = observed theft/exposure of medical/financial/private records or reusable secrets/credentials; privileged_access = demonstrated administrator/control access without documented data theft; destructive = actual destruction, not a malware capability; limited = documented lesser losses/non-sensitive disclosures; none only for explicitly blocked/harmless activity; otherwise unknown.
+essential: disrupted only for documented material essential-service interruption; widespread_or_safety only for broad essential-service interruption or demonstrated danger to people; none for explicitly unaffected services; otherwise unknown. Merely targeting a critical sector is insufficient.
+reason: one or two concise factual sentences explaining observed impact AND important limits. Distinguish confirmed harm from attempted harm and theoretical capability. Write 'Impact not established in the available reporting.' if insufficient. Never inflate an assessment to match a headline, CVSS score, attacker identity, or AI involvement.
+"""
 SCHEMA = {
     "type": "object",
     "additionalProperties": False,
@@ -128,6 +151,7 @@ SCHEMA = {
         "major_impact": {"type": "string", "enum": sorted(MAJOR_IMPACTS) + ["none"]},
         "impact_substantiated": {"type": "boolean"},
         "significance": TEXT,
+        "severity_evidence": SEVERITY_SCHEMA,
         "geocode_query": {"type": ["string", "null"]},
         "duplicate_of": {"type": ["string", "null"]},
         "location_queries": {"type": "array", "items": {
@@ -140,8 +164,43 @@ SCHEMA = {
     },
     "required": ["relevant", "category", "title", "date", "victim", "attacker", "what",
                  "ai_role", "why", "where", "geocode_query", "duplicate_of",
-                 "major_impact", "impact_substantiated", "significance", "location_queries"],
+                 "major_impact", "impact_substantiated", "significance", "location_queries", "severity_evidence"],
 }
+
+
+def assess_severity(evidence=None, source_url="", assessed_at=None):
+    """Transparent impact tiers, not CVSS or an official CISA rating."""
+    evidence = evidence or {}
+    facts = {key: evidence.get(key) if evidence.get(key) in values else "unknown"
+             for key, values in SEVERITY_FIELDS.items()}
+    reason = str(evidence.get("reason") or "Impact not established in the available reporting.").strip()
+    level = "unknown"
+    if facts["context"] == "real_world":
+        service, reach, damage, essential = (facts[k] for k in ("service", "reach", "damage", "essential"))
+        if essential == "widespread_or_safety":
+            level = "critical"
+        elif (essential == "disrupted" or service in {"major", "widespread"}
+              or (reach == "widespread" and damage in {"sensitive_data", "privileged_access", "destructive"})
+              or (reach == "multiple" and damage in {"sensitive_data", "destructive"})):
+            level = "severe"
+        elif service == "substantial" or damage in {"sensitive_data", "privileged_access", "destructive"} or (reach in {"multiple", "widespread"} and damage == "limited"):
+            level = "significant"
+        elif damage in {"none", "limited"} or service == "limited":
+            level = "limited"
+    return {"level": level, "status": "preliminary", "reason": reason,
+            "evidence": facts, "source_url": source_url,
+            "assessed_at": assessed_at or datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "method": "reported-impact-v1"}
+
+
+def update_severity(incident, evidence, source_url, assessed_at):
+    assessment = assess_severity(evidence, source_url, assessed_at)
+    previous = incident.get("severity")
+    # Missing details in a follow-up must not erase previously documented harm.
+    # Preserve the highest supported cumulative impact; corrections can be reviewed.
+    if previous and SEVERITY_LEVELS.get(previous.get("level"), 0) >= SEVERITY_LEVELS[assessment["level"]]:
+        return
+    incident["severity"] = assessment
 
 
 def load_json(path, default):
@@ -319,6 +378,7 @@ def main():
 
         dup = by_id.get(c["id"]) or by_id.get(rec["duplicate_of"] or "")
         if dup:
+            update_severity(dup, rec.get("severity_evidence"), c["url"], now)
             urls = {dup["source_url"]} | {s["url"] for s in dup.get("more_sources", [])}
             if c["url"] not in urls:
                 dup.setdefault("more_sources", []).append({"name": c["source"], "url": c["url"]})
@@ -344,6 +404,7 @@ def main():
         }
         if inc["category"] == "major_cyber":
             inc["ai_role"] = "AI involvement not confirmed in the reporting."
+        update_severity(inc, rec.get("severity_evidence"), c["url"], now)
         locate_incident(inc, geo, queries)
         data["incidents"].append(inc)
         by_id[inc["id"]] = inc
@@ -351,6 +412,8 @@ def main():
         print(f"+ [{inc['category']}] {inc['date']} {inc['title']}")
 
     for inc in data["incidents"]:
+        if "severity" not in inc:
+            inc["severity"] = assess_severity(source_url=inc.get("source_url", ""), assessed_at=now)
         locate_incident(inc, geo)
     data["incidents"].sort(key=lambda i: i["date"], reverse=True)
     data["updated"] = now
@@ -363,4 +426,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 

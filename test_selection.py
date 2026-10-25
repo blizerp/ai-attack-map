@@ -24,6 +24,37 @@ def record(**overrides):
     return rec
 
 class SelectionTests(unittest.TestCase):
+    def test_severity_tiers_depend_on_observed_impact(self):
+        base=dict(context='real_world',service='unknown',reach='single',damage='unknown',essential='unknown',reason='Source evidence.')
+        cases=[({},'unknown'), ({'damage':'limited'},'limited'), ({'damage':'sensitive_data'},'significant'),
+               ({'reach':'multiple','damage':'sensitive_data'},'severe'),
+               ({'reach':'widespread','damage':'privileged_access'},'severe'),
+               ({'service':'major'},'severe'), ({'essential':'disrupted'},'severe'),
+               ({'essential':'widespread_or_safety'},'critical')]
+        for changes,level in cases:
+            with self.subTest(changes=changes):
+                self.assertEqual(u.assess_severity({**base,**changes})['level'],level)
+
+    def test_unknown_and_test_claims_never_get_critical_glow(self):
+        for context in ['unknown','research_only','unverified']:
+            self.assertEqual(u.assess_severity(dict(context=context,essential='widespread_or_safety',damage='destructive'))['level'],'unknown')
+        self.assertEqual(u.assess_severity()['level'],'unknown')
+        self.assertEqual(u.assess_severity(dict(context='real_world',reach='widespread',damage='unknown'))['level'],'unknown')
+
+    def test_severity_followup_preserves_supported_impact(self):
+        inc={}
+        u.update_severity(inc,dict(context='real_world',damage='sensitive_data',reach='single'),'https://example.org/one','2026-10-25')
+        self.assertEqual(inc['severity']['level'],'significant')
+        u.update_severity(inc,dict(context='unverified'),'https://example.org/rumor','2026-10-25')
+        self.assertEqual(inc['severity']['source_url'],'https://example.org/one')
+        u.update_severity(inc,dict(context='real_world',essential='widespread_or_safety'),'https://example.org/two','2026-10-25')
+        self.assertEqual(inc['severity']['level'],'critical')
+        self.assertEqual(inc['severity']['source_url'],'https://example.org/two')
+
+    def test_severity_schema_is_strict(self):
+        self.assertFalse(u.SEVERITY_SCHEMA['additionalProperties'])
+        self.assertEqual(set(u.SEVERITY_SCHEMA['required']),set(u.SEVERITY_SCHEMA['properties']))
+
     def test_non_ai_attack_reaches_review(self):
         self.assertTrue(u.candidate_text('Ransomware shuts down a water utility'))
         self.assertTrue(u.candidate_text('Bank reports massive data theft'))
@@ -103,3 +134,4 @@ class SelectionTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

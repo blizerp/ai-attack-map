@@ -99,11 +99,18 @@ layout: null
   button:focus-visible, input:focus-visible { outline: 3px solid var(--agent); outline-offset: 2px; }
 
   /* Skull marker with a category-colored halo behind the image. */
-  .skull-marker { position: relative; width: 36px; height: 44px; isolation: isolate; }
+  .skull-marker {
+    position: relative; width: 36px; height: 44px; isolation: isolate;
+    --halo-opacity: 0.65; --halo-blur: 12px; --halo-spread: 5px; --halo-scale: 1.7;
+  }
+  .severity-unknown { --halo-opacity: 0.22; --halo-blur: 5px; --halo-spread: 1px; }
+  .severity-limited { --halo-opacity: 0.4; --halo-blur: 6px; --halo-spread: 2px; --halo-scale: 1.35; }
+  .severity-severe { --halo-opacity: 1; --halo-blur: 19px; --halo-spread: 8px; --halo-scale: 1.9; }
+  .severity-critical { --halo-opacity: 1; --halo-blur: 27px; --halo-spread: 12px; --halo-scale: 2.2; }
   .skull-marker::before {
     content: ""; position: absolute; inset: 8px 4px; z-index: -1;
     border-radius: 50%; background: var(--glow);
-    box-shadow: 0 0 12px 5px var(--glow);
+    box-shadow: 0 0 var(--halo-blur) var(--halo-spread) var(--glow);
     animation: skull-pulse 1.8s ease-out infinite;
     pointer-events: none;
   }
@@ -112,11 +119,27 @@ layout: null
     filter: drop-shadow(0 2px 2px #000B); pointer-events: none; user-select: none;
   }
   @keyframes skull-pulse {
-    0% { transform: scale(0.85); opacity: 0.95; box-shadow: 0 0 8px 3px var(--glow); }
-    100% { transform: scale(1.7); opacity: 0; box-shadow: 0 0 18px 8px transparent; }
+    0% { transform: scale(0.85); opacity: var(--halo-opacity); }
+    100% { transform: scale(var(--halo-scale)); opacity: 0; }
   }
+  .skull-marker.severity-unknown::before { animation: none; opacity: var(--halo-opacity); }
+  .skull-eyes { position: absolute; inset: 0; pointer-events: none; }
+  .skull-eyes::before, .skull-eyes::after {
+    content: ""; position: absolute; top: 44.5%; width: 3px; height: 3px;
+    transform: translate(-50%, -50%); border-radius: 50%; background: #FFCBC2;
+    box-shadow: 0 0 3px 2px #FF1C16, 0 0 8px 3px #F00000;
+  }
+  .skull-eyes::before { left: 31.5%; }
+  .skull-eyes::after { left: 68%; }
+  .severity-critical .skull-eyes::before, .severity-critical .skull-eyes::after {
+    background: #FFF2D7; box-shadow: 0 0 4px 3px #FF1C16, 0 0 12px 5px #F00000;
+  }
+  .severity-badge { display: inline-block; border: 1px solid var(--rule); border-radius: 3px; padding: 3px 6px; font-weight: 600; }
+  .severity-note { font-size: 0.82rem; line-height: 1.4; margin: 6px 0 10px; }
+  .severity-key { font-size: 0.78rem; color: var(--slate); margin-top: 8px; }
+  .severity-key summary { cursor: pointer; }
   @media (prefers-reduced-motion: reduce) {
-    .skull-marker::before { animation: none; opacity: 0.6; }
+    .skull-marker::before { animation: none; opacity: var(--halo-opacity); }
   }
 
   .cluster {
@@ -213,6 +236,10 @@ layout: null
   <p class="meta">Major hacks: serious attacks on essential services, finance, supply chains, or other critical systems; major data theft and losses. AI involvement is not confirmed in these reports.</p>
   <button class="global-btn" id="open-global">Global / unlocated (<span id="n-global">0</span>)</button>
   <p class="meta" id="updated">Loading incidents…</p>
+  <details class="severity-key"><summary>Glow intensity = reported impact</summary>
+    <p>Limited: soft. Significant: normal. Severe: strong. Critical: strongest. Unknown: faint and steady. Extra red eye glow marks Severe and Critical incidents.</p>
+    <p>Preliminary ratings use reported disruption, affected victims, data damage, and essential-service impact. Unknown is not low severity. Research-only and unverified impact stay Unknown. Target counts and possible harm do not count as confirmed damage.</p>
+  </details>
   <p class="meta">Auto-summarized from public reporting. Pins mark reported affected areas or labeled company-location fallbacks. Some campaigns have multiple pins. Numbered circles group nearby pins; tap a number to spread its skulls without changing zoom. Unlocated incidents appear in the global strip.</p>
   </div>
   <button class="panel-resize" id="resize-panel" aria-label="Resize map controls" title="Drag to resize. Arrow keys resize; Shift makes larger steps.">◢</button>
@@ -309,6 +336,10 @@ const CATS = {
   on_ai_system: { label: "AI systems targeted",       color: "#0F8B8D" },
   major_cyber:  { label: "Major hack · AI unconfirmed", color: "#8065C7" },
 };
+const SEVERITIES = { unknown: "Unknown", limited: "Limited", significant: "Significant", severe: "Severe", critical: "Critical" };
+function severityLevel(i) {
+  return Object.hasOwn(SEVERITIES, i.severity?.level) ? i.severity.level : "unknown";
+}
 const state = { days: 30, cats: new Set(Object.keys(CATS)), incidents: [] };
 
 const map = L.map("map", { worldCopyJump: true, zoomControl: false, minZoom: 2 }).setView([39, -98], 2);
@@ -334,6 +365,9 @@ function card(i, location = null) {
   return `<div class="inc">
     <h2>${esc(i.title)}</h2>
     <span class="tag" style="background:${cat.color}">${cat.label}</span>
+    <div><span class="severity-badge">Severity: ${SEVERITIES[severityLevel(i)]} · Preliminary</span></div>
+    <p class="severity-note">${esc(i.severity?.reason || "Impact not established in the available reporting.")}${i.severity?.evidence?.context === "research_only" ? " Research / test only." : i.severity?.evidence?.context === "unverified" ? " Impact unverified." : ""}
+    ${i.severity?.source_url ? `<a href="${esc(safeUrl(i.severity.source_url))}" target="_blank" rel="noopener">Rating source</a>` : ""}</p>
     <dl>
       <dt>When</dt><dd>${esc(i.date)}</dd>
       <dt>Where</dt><dd>${esc(i.where)}</dd>
@@ -380,7 +414,9 @@ function attackLabel(i) {
 
 function skullHtml(i) {
   const color = (CATS[i.category] || CATS.using_ai).color;
-  return `<div class="skull-marker" style="--glow:${color}"><img src="skull-marker.png" alt="" width="36" height="44" draggable="false"></div>`;
+  const severity = severityLevel(i);
+  const eyes = severity === "severe" || severity === "critical" ? '<span class="skull-eyes" aria-hidden="true"></span>' : "";
+  return `<div class="skull-marker severity-${severity}" style="--glow:${color}"><img src="skull-marker.png" alt="" width="36" height="44" draggable="false">${eyes}</div>`;
 }
 function render() {
   const list = visible();
@@ -512,5 +548,6 @@ fetch("attacks.json?v=" + Date.now())
 </script>
 </body>
 </html>
+
 
 

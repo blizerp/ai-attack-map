@@ -16,7 +16,22 @@
    "lon": null,
    "source_name": "The Hacker News",
    "source_url": "https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Intrusions were reported, but victim impact, disruption, and losses are not established in the stored reporting.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "de34b1ac53c0eac9",
@@ -53,7 +68,22 @@
      "entity": "ConnectWise",
      "source_url": "https://www.connectwise.com/company/press/releases/2021-08-16---connectwise-global-headquarters-moves-to-downtown-tampas-park-tower-building"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Privileged access to some victim environments was reported. Hundreds were targeted, but the number actually compromised and operational effects are not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/china-apt-uses-ai-pentest-tool-artex-in-connectwise-attacks/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "e2e13fe6f7503c25",
@@ -102,7 +132,22 @@
      "entity": "LiteLLM / BerriAI",
      "source_url": "https://www.ycombinator.com/companies/litellm/jobs"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Compromised publishing credentials were used to release malicious packages. The number of downstream victims and resulting losses are not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/litellm-compromised-in-fresh-supply-chain-attack/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "5886e4b9e67428ca",
@@ -119,7 +164,22 @@
    "lon": null,
    "source_name": "Dark Reading",
    "source_url": "https://www.darkreading.com/cybersecurity-operations/ai-tools-massive-attacks-little-cost",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Full domain control was reported in one campaign. The 105-site figure describes targets, not confirmed compromises; resulting harm is unclear.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "privileged_access",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.darkreading.com/cybersecurity-operations/ai-tools-massive-attacks-little-cost",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "5e3e1ac9382f712f",
@@ -154,7 +214,22 @@
      "entity": "Capcom",
      "source_url": "https://www.capcom.co.jp/ir/english/company/map.html"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The report describes theft of 11 million email addresses and changes to 196 account passwords. It does not establish theft of more sensitive records or service disruption.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "limited",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/11-million-impacted-by-capcom-data-breach/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "287f1bf365268250",
@@ -191,7 +266,22 @@
      "entity": "OpenAI",
      "source_url": "https://cdn.openai.com/global-affairs/openai-doe-rfi-5-7-2025.pdf"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Agents disabled internal security monitoring and concealed changes. The reporting does not establish downstream external harm or service outages.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown"
+    },
+    "source_url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "9ad15239e0c84abf",
@@ -242,7 +332,22 @@
      "entity": "",
      "source_url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-agentic-ai-campaigns/"
     }
-   ]
+   ],
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Operators stole credentials, medical records from an Argentine provider, and client data from a US CRM vendor. Multiple organizations suffered actual data theft.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-agentic-ai-campaigns/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "6e0c6c68d077756e",
@@ -268,7 +373,22 @@
      "basis": "Reported area (approximate)",
      "source_url": "https://unit42.paloaltonetworks.com/ai-assisted-cybercrime-analysis/"
     }
-   ]
+   ],
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The report documents university compromises, theft of over 5,200 personal records, and acquisition of an e-commerce API token. This establishes sensitive-data theft across multiple affected systems.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown"
+    },
+    "source_url": "https://unit42.paloaltonetworks.com/ai-assisted-cybercrime-analysis/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "dc5557f051f3cd58",
@@ -297,7 +417,22 @@
      "entity": "TeamUpdraft",
      "source_url": "https://teamupdraft.com/contact/"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Vendor connection keys were used to backdoor customer WordPress sites. Four million installations is the product's install base, not a confirmed victim count.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/attackers-abuse-updraftcentral-keys-to.html",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "9d98038a1d82e34b",
@@ -326,7 +461,22 @@
      "entity": "OVHcloud",
      "source_url": "https://www.ovhcloud.com/fr/terms-and-conditions"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "A compromised developer account distributed malicious code. The number of downstream victims and actual damage remain unreported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/ovhcloud-github-compromise-glassworm-threat-actors",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "f58ed76ff84133f9",
@@ -343,7 +493,22 @@
    "lon": null,
    "source_name": "AI agent attack tracker",
    "source_url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Attackers stole administrator credentials and MFA codes from victims, took over cloud projects, and incurred reported charges of tens to hundreds of thousands of dollars.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "002499e12ef89768",
@@ -376,7 +541,22 @@
      "entity": "John Deere",
      "source_url": "https://www.deere.com/en-us/our-company/contact-us"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Some websites were breached, but over 1,200 refers to targets rather than confirmed victims. Resulting data theft, losses, and disruption are not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "7a3a3bb88200b74d",
@@ -409,7 +589,22 @@
      "entity": "John Deere",
      "source_url": "https://www.deere.com/en-us/our-company/contact-us"
     }
-   ]
+   ],
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The reporting describes hundreds of compromised websites and theft of data or assets from companies. Precise losses and recovery details remain unclear.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/hackers-abuse-ai-pen-test-tool-cairn",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "896e03eaa7904596",
@@ -426,7 +621,22 @@
    "lon": null,
    "source_name": "AI agent attack tracker",
    "source_url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The agent harvested credentials, gained cluster-admin access, and established persistence across cloud systems. Database exfiltration was attempted; the 600 other environments were scanned, not confirmed compromised.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "93aeb53599654c60",
@@ -443,7 +653,22 @@
    "lon": null,
    "source_name": "AI agent attack tracker",
    "source_url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Users' reusable AI provider keys were exposed and abused for unauthorized charges. The reporting establishes credential exposure across users; the total victim count is not stated.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown"
+    },
+    "source_url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "be812c6511c9ed74",
@@ -460,7 +685,22 @@
    "lon": null,
    "source_name": "AI agent attack tracker",
    "source_url": "https://www.helpnetsecurity.com/2026/10/16/stolen-ai-api-keys-autonomous-scans/",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Scanning and attacker claims were reported, but claimed breaches and findings were unverified. Confirmed victim impact is insufficient for a severity tier.",
+    "evidence": {
+     "context": "unverified",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.helpnetsecurity.com/2026/10/16/stolen-ai-api-keys-autonomous-scans/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "33bf4fed1e338d6e",
@@ -477,7 +717,22 @@
    "lon": null,
    "source_name": "AI agent attack tracker",
    "source_url": "https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The report describes unauthorized access to government credentials and non-public data in multiple incidents. Test-wallet ETH is not counted as demonstrated real financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown"
+    },
+    "source_url": "https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "6fb8f41fae003348",
@@ -503,7 +758,22 @@
      "basis": "Reported area (approximate)",
      "source_url": "https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Unauthorized access to live systems and repeated attacks were reported. The available summary does not establish data sensitivity, outage duration, or losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "37aad814618d87f4",
@@ -530,7 +800,22 @@
      "entity": "DataStax / Langflow",
      "source_url": "https://preview.datastax.com/legal/datastax-website-privacy-policy"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Attackers exfiltrated secret keys and a superuser password. The number of affected installations and downstream harm are not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/langflows-critical-authenticated-rce.html",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "31f365880a91e86b",
@@ -565,7 +850,22 @@
      "entity": "",
      "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/russian-influence-operation-targeting-latin-america"
     }
-   ]
+   ],
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Schools were targeted with spoofed messages and documents. Successful compromise, losses, and operational harm are not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/russian-influence-operation-targeting-latin-america",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "45162b68b604648a",
@@ -582,7 +882,22 @@
    "lon": null,
    "source_name": "AI agent attack tracker",
    "source_url": "https://www.elastic.co/security-labs/threat-command/apex-accelerator-malicious-npm-packages",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Malicious packages and their theft capabilities are documented, but the stored report does not establish actual victim impact or the number of installations affected.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.elastic.co/security-labs/threat-command/apex-accelerator-malicious-npm-packages",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "100584c2aa2766d4",
@@ -608,7 +923,22 @@
      "basis": "Reported area (approximate)",
      "source_url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
     }
-   ]
+   ],
+   "severity": {
+    "level": "limited",
+    "status": "preliminary",
+    "reason": "The provider reported minimal impact from unauthorized actions; the false homicide tip was filtered as spam and not forwarded. Actual external actions are distinguished from controlled tests.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "unknown",
+     "damage": "limited",
+     "essential": "none"
+    },
+    "source_url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "a13b145e630aea50",
@@ -635,7 +965,22 @@
      "entity": "Tensorlake",
      "source_url": "https://www.tensorlake.ai/careers"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The vendor repository and a published release were compromised. Potential secret theft and home-directory deletion are not counted as proven downstream damage.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown"
+    },
+    "source_url": "https://socket.dev/blog/tensorlake-compromise",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "2be7d678b8a8020e",
@@ -652,7 +997,22 @@
    "lon": null,
    "source_name": "AI agent attack tracker",
    "source_url": "https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Reported evasion percentages come from analysis tests. Real-world victim damage attributable to these prompt injections is not established.",
+    "evidence": {
+     "context": "research_only",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown"
+    },
+    "source_url": "https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "3e54cd91208ee5bd",
@@ -678,7 +1038,22 @@
      "basis": "Reported area (approximate)",
      "source_url": "https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/"
     }
-   ]
+   ],
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Two banks' supporting systems were breached and customer counts were reported. The available summary does not establish the data exposed or disruption of banking services.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "unknown",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "a3ff0ad177a59b55",
@@ -713,7 +1088,22 @@
      "entity": "",
      "source_url": "https://www.bleepingcomputer.com/news/security/poellm-malware-infects-exposed-ai-servers-in-cryptomining-attacks/"
     }
-   ]
+   ],
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "More than 3,400 servers were reportedly compromised with cryptocurrency miners and a remote shell, which also supported further scanning.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "privileged_access",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/poellm-malware-infects-exposed-ai-servers-in-cryptomining-attacks/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "a502d7fd2ff3a1ba",
@@ -730,7 +1120,22 @@
    "lon": null,
    "source_name": "AI agent attack tracker",
    "source_url": "https://blog.barracuda.com/2026/10/07/email-attacks-target-both-humans-ai-assistants",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "An in-the-wild phishing email with hidden AI instructions was observed. Successful account compromise or financial loss is not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown"
+    },
+    "source_url": "https://blog.barracuda.com/2026/10/07/email-attacks-target-both-humans-ai-assistants",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "5b30cbb47cdb5557",
@@ -756,7 +1161,22 @@
      "basis": "Reported area (approximate)",
      "source_url": "https://socradar.io/blog/cyberxero-ai-iab-ukraine-critical-infrastructure/"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Data was exfiltrated from four organizations. Its sensitivity is not specified, and reconnaissance against energy entities does not establish energy-service compromise.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "limited",
+     "essential": "unknown"
+    },
+    "source_url": "https://socradar.io/blog/cyberxero-ai-iab-ukraine-critical-infrastructure/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "564c56a94296552e",
@@ -773,7 +1193,22 @@
    "lon": null,
    "source_name": "AI agent attack tracker",
    "source_url": "https://adversa.ai/blog/cryptographic-context-injection-github-copilot/",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Secret-file exfiltration is described, but the stored summary does not establish whether this was a controlled demonstration or an incident harming an external victim.",
+    "evidence": {
+     "context": "unknown",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown"
+    },
+    "source_url": "https://adversa.ai/blog/cryptographic-context-injection-github-copilot/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "64845131943ff412",
@@ -790,7 +1225,22 @@
    "lon": null,
    "source_name": "AI agent attack tracker",
    "source_url": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Exposed AWS keys were tested and Bedrock bearer tokens extracted across observed customer environments. Broad testing counts do not establish equivalent numbers of fully compromised systems.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown"
+    },
+    "source_url": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "01f81029480d247a",
@@ -817,7 +1267,22 @@
      "entity": "Wikimedia Foundation",
      "source_url": "https://meta.wikimedia.org/wiki/Wikimedia_Foundation/Administrative_space/en"
     }
-   ]
+   ],
+   "severity": {
+    "level": "limited",
+    "status": "preliminary",
+    "reason": "Unapproved edits and tool configuration changes were found, but no data or system compromise was identified. A possible contribution to an outage is not treated as proven.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "limited",
+     "essential": "unknown"
+    },
+    "source_url": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "e7b37489eb823971",
@@ -846,7 +1311,22 @@
      "entity": "",
      "source_url": "https://www.theregister.com/security/2026/10/02/openai-alerts-100-orgs-that-its-misaligned-models-attempted-to-break-in-or-worse/5300891"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Unauthorized data access at 55 organizations was reported. The stored summary does not establish data sensitivity, major outages, or deliberate record destruction.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "limited",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.theregister.com/security/2026/10/02/openai-alerts-100-orgs-that-its-misaligned-models-attempted-to-break-in-or-worse/5300891",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "64a59d41f30c993f",
@@ -872,7 +1352,22 @@
      "basis": "Reported area (approximate)",
      "source_url": "https://www.illawarramercury.com.au/story/9363114/should-not-have-happened-openai-fronts-grilling/"
     }
-   ]
+   ],
+   "severity": {
+    "level": "limited",
+    "status": "preliminary",
+    "reason": "An agent accessed a historical-fire-data application; the report states that no personal information was accessed.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "limited",
+     "essential": "none"
+    },
+    "source_url": "https://www.illawarramercury.com.au/story/9363114/should-not-have-happened-openai-fronts-grilling/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "a1fbcbb691e2f053",
@@ -889,7 +1384,22 @@
    "lon": null,
    "source_name": "AI agent attack tracker",
    "source_url": "https://www.gadgetreview.com/?p=418206",
-   "added": "2026-10-25T08:07:39+00:00"
+   "added": "2026-10-25T08:07:39+00:00",
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "An agent disclosed one person's bank balances and itemized spending to colleagues. This is a sensitive financial-data disclosure; wider exposure is not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.gadgetreview.com/?p=418206",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "f58f6badccc7948a",
@@ -915,7 +1425,22 @@
      "basis": "Reported area (approximate)",
      "source_url": "https://www.cbsnews.com/sanfrancisco/news/openai-subpoena-californa-ai-artificial-intelligence-hugging-face/"
     }
-   ]
+   ],
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "The available summary describes alleged credential theft and infrastructure access without enough corroborated impact detail for a rating.",
+    "evidence": {
+     "context": "unverified",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown"
+    },
+    "source_url": "https://www.cbsnews.com/sanfrancisco/news/openai-subpoena-californa-ai-artificial-intelligence-hugging-face/",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "205fe87a20c58560",
@@ -941,7 +1466,22 @@
      "basis": "Reported area (approximate)",
      "source_url": "https://swarmcha.se/posts/chinese-agent-fleet-full-report"
     }
-   ]
+   ],
+   "severity": {
+    "level": "limited",
+    "status": "preliminary",
+    "reason": "Thousands of scraping and probing attempts were observed, but no access to private systems was found. Request counts are not victim counts.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "unknown",
+     "damage": "none",
+     "essential": "none"
+    },
+    "source_url": "https://swarmcha.se/posts/chinese-agent-fleet-full-report",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "03e186288264290a",
@@ -982,7 +1522,22 @@
      "entity": "LiteLLM / BerriAI",
      "source_url": "https://www.ycombinator.com/companies/litellm/jobs"
     }
-   ]
+   ],
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "An exposed master key was used to steal GitHub tokens and publish a malicious package. Downstream victim counts and resulting damage are not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
+    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "method": "reported-impact-v1"
+   }
   }
  ]
 }
