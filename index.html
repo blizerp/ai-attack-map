@@ -151,13 +151,20 @@
   .inc a { color: #8DC4FF; }
 
   .drawer {
-    position: absolute; z-index: 1001; right: 0; top: 0; bottom: 0;
-    width: min(380px, 100vw); background: var(--paper); border-left: 1px solid var(--rule);
-    padding: calc(14px + env(safe-area-inset-top, 0px)) 16px 16px; box-sizing: border-box;
-    overflow-y: auto; transform: translateX(100%); transition: transform 0.2s ease;
+    position: fixed; inset: 0; margin: auto;
+    width: min(440px, calc(100vw - 32px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)));
+    max-height: calc(100dvh - 32px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+    background: var(--paper); color: var(--ink); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 16px; box-sizing: border-box; overflow: hidden;
+    box-shadow: 0 8px 28px #0008;
   }
-  .drawer.open { transform: none; }
-  .drawer header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+  .drawer[open] { display: flex; flex-direction: column; }
+  .drawer::backdrop { background: #0009; }
+  .drawer header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 6px; flex-shrink: 0; }
+  .drawer header button { flex-shrink: 0; }
+  .drawer > .meta { flex-shrink: 0; margin-bottom: 10px; }
+  #global-list { min-height: 0; overflow-y: auto; overscroll-behavior: contain; overflow-wrap: anywhere; }
+  .drawer .inc dl { grid-template-columns: max-content minmax(0, 1fr); }
   .drawer h2.title { font: 800 1.15rem var(--head); margin: 0; }
   .drawer details { border-top: 1px solid var(--rule); padding: 10px 0; }
   .drawer summary { cursor: pointer; font-weight: 600; line-height: 1.3; }
@@ -208,14 +215,14 @@
   <div class="global-markers" id="global-markers"></div>
 </section>
 
-<aside class="drawer" id="drawer" aria-label="Global or unlocated incident details">
+<dialog class="drawer" id="drawer" aria-labelledby="global-title">
   <header>
-    <h2 class="title">Global / location unconfirmed</h2>
+    <h2 class="title" id="global-title">Global / location unconfirmed</h2>
     <button class="global-btn" id="close-global">Close</button>
   </header>
   <p class="meta">No supported geographic anchor is available for these incidents. Each also appears as a skull in the map’s global strip.</p>
   <div id="global-list"></div>
-</aside>
+</dialog>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
@@ -228,7 +235,7 @@ const CATS = {
 };
 const state = { days: 30, cats: new Set(Object.keys(CATS)), incidents: [] };
 
-const map = L.map("map", { worldCopyJump: true, zoomControl: false, minZoom: 2 }).setView([25, 10], 2);
+const map = L.map("map", { worldCopyJump: true, zoomControl: false, minZoom: 2 }).setView([39, -98], 2);
 L.control.zoom({ position: "bottomright" }).addTo(map);
 L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=cb1_4u4v_1_1dfd481a718ad664f12b6beb", {
   maxZoom: 18, subdomains: "abcd",
@@ -360,20 +367,27 @@ resizePanel.addEventListener("keydown", event => {
     rect.height + (event.key === "ArrowDown" ? step : event.key === "ArrowUp" ? -step : 0));
 });
 const drawer = document.getElementById("drawer");
+const globalList = document.getElementById("global-list");
+const closeGlobal = document.getElementById("close-global");
+function openGlobal(incidentId = null) {
+  for (const detail of globalList.querySelectorAll("details")) {
+    detail.open = incidentId !== null && detail.dataset.incident === incidentId;
+  }
+  if (!drawer.open) drawer.showModal();
+  closeGlobal.focus({ preventScroll: true });
+  globalList.scrollTop = 0;
+  const selected = globalList.querySelector("details[open]");
+  if (selected) {
+    // Scroll only the list, never the page or the map behind the dialog.
+    globalList.scrollTop = selected.getBoundingClientRect().top - globalList.getBoundingClientRect().top;
+  }
+}
 document.getElementById("global-markers").addEventListener("click", event => {
   const button = event.target.closest("button[data-incident]");
-  if (!button) return;
-  drawer.classList.add("open");
-  for (const detail of document.querySelectorAll("#global-list details")) {
-    detail.open = detail.dataset.incident === button.dataset.incident;
-    if (detail.open) {
-      detail.querySelector("summary").focus();
-      detail.scrollIntoView({block: "nearest"});
-    }
-  }
+  if (button) openGlobal(button.dataset.incident);
 });
-document.getElementById("open-global").addEventListener("click", () => drawer.classList.add("open"));
-document.getElementById("close-global").addEventListener("click", () => drawer.classList.remove("open"));
+document.getElementById("open-global").addEventListener("click", () => openGlobal());
+closeGlobal.addEventListener("click", () => drawer.close());
 
 fetch("attacks.json?v=" + Date.now())
   .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
