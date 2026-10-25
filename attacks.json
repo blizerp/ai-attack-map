@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T16:29:32+00:00",
+ "updated": "2026-10-25T20:55:45+00:00",
  "incidents": [
   {
    "id": "5369155b1461441c",
@@ -35,6 +35,51 @@
     "assessed_at": "2026-10-25T16:29:32+00:00",
     "method": "reported-impact-v1"
    }
+  },
+  {
+   "id": "bfb2b01999f47ff8",
+   "title": "AI-Assisted PHP2Shell Attack Hit European Government Entity",
+   "date": "2026-10-25",
+   "category": "using_ai",
+   "victim": "A government entity in Europe",
+   "attacker": "Not reported",
+   "what": "Threat actors exploited PHP2Shell vulnerabilities CVE-2026-109618 and CVE-2026-109619, then used agentic AI platforms for post-exploitation. Within two hours, they accessed password hashes and multi-factor authentication data.",
+   "ai_role": "Attackers used agentic AI platforms for post-exploitation activity.",
+   "why": "The reporting explicitly links agentic AI use to post-exploitation following exploitation of the PHP2Shell vulnerabilities.",
+   "where": "Europe",
+   "lat": 51.0,
+   "lon": 10.0,
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html",
+   "added": "2026-10-25T20:55:45+00:00",
+   "major_impact": "none",
+   "significance": "Not reported",
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The attackers were observed accessing password hashes and multi-factor authentication data at a European government entity. The available reporting does not establish service disruption, broader victim reach, or a qualifying critical-network impact.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html",
+    "assessed_at": "2026-10-25T20:55:45+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 51.0,
+     "lon": 10.0,
+     "label": "Europe",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html"
+    }
+   ]
   },
   {
    "id": "50aae0be399ec8f3",
