@@ -123,6 +123,7 @@
     padding: 10px 12px; background: #141C26F2; border: 1px solid var(--rule);
     border-radius: 8px; box-shadow: 0 4px 18px #0006;
   }
+  .global-strip { transform: scale(0.75); transform-origin: bottom left; }
   .global-strip[hidden] { display: none; }
   body:has(#global-strip:not([hidden])) .panel:not(.collapsed) {
     max-height: max(160px, calc(100dvh - 245px - env(safe-area-inset-top, 0px)));
@@ -211,7 +212,6 @@
 
 <section class="global-strip" id="global-strip" aria-label="Global or unlocated incident markers" hidden>
   <h2>Global / location unconfirmed (<span id="strip-count">0</span>)</h2>
-  <p>These skulls are not geographic positions. Scroll to see every incident; click for details.</p>
   <div class="global-markers" id="global-markers"></div>
 </section>
 
