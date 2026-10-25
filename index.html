@@ -1,7 +1,11 @@
+---
+layout: null
+---
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="site-revision" content="{{ site.github.build_revision }}">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AI Cyberattack Map</title>
 <meta name="description" content="Map of AI-related cyber incidents and major cyberattacks affecting critical services, finance, supply chains, and more.">
@@ -235,6 +239,65 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+<script>
+// GitHub Pages supplies this revision at build time, so every deployment is detected.
+(() => {
+  const currentRevision = document.querySelector('meta[name="site-revision"]').content;
+  if (!/^[a-f0-9]{40}$/i.test(currentRevision)) return;
+  let checking = false;
+  let lastCheck = 0;
+  let pendingRevision = null;
+
+  function applyUpdate() {
+    if (!pendingRevision || document.hidden || document.querySelector("dialog[open]")) return;
+    const revision = pendingRevision;
+    pendingRevision = null;
+    // Prevent repeated reloads if an intermediary serves an older document.
+    try {
+      const key = "map-update-attempt:" + revision;
+      if (Date.now() - Number(sessionStorage.getItem(key) || 0) < 300000) return;
+      sessionStorage.setItem(key, String(Date.now()));
+    } catch (_) {
+      if (new URL(location.href).searchParams.get("v") === revision) return;
+    }
+    const fresh = new URL(location.href);
+    fresh.searchParams.set("v", revision);
+    fresh.searchParams.set("_fresh", String(Date.now()));
+    location.replace(fresh.href);
+  }
+
+  async function checkForUpdate() {
+    applyUpdate();
+    if (checking || document.hidden || Date.now() - lastCheck < 30000) return;
+    checking = true;
+    lastCheck = Date.now();
+    try {
+      const probe = new URL(location.href);
+      probe.searchParams.set("_check", String(Date.now()));
+      const response = await fetch(probe.href, { cache: "no-store" });
+      if (!response.ok) return;
+      const page = new DOMParser().parseFromString(await response.text(), "text/html");
+      const revision = page.querySelector('meta[name="site-revision"]')?.content;
+      if (/^[a-f0-9]{40}$/i.test(revision || "") && revision !== currentRevision) {
+        pendingRevision = revision;
+        applyUpdate();
+      }
+    } catch (_) {
+      // Keep the map usable offline or while a deployment is unavailable.
+    } finally {
+      checking = false;
+    }
+  }
+
+  window.addEventListener("pageshow", checkForUpdate);
+  window.addEventListener("focus", checkForUpdate);
+  window.addEventListener("online", checkForUpdate);
+  document.addEventListener("visibilitychange", checkForUpdate);
+  document.addEventListener("close", applyUpdate, true);
+  setInterval(checkForUpdate, 60000);
+  checkForUpdate();
+})();
+</script>
 <script>
 const CATS = {
   using_ai:     { label: "Attackers used AI",        color: "#D7263D" },
