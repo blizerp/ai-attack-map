@@ -42,19 +42,20 @@ layout: null
   .panel {
     position: absolute; z-index: 1000;
     top: calc(12px + env(safe-area-inset-top, 0px)); left: 12px;
-    width: min(340px, calc(100vw - 24px));
+    width: min(300px, calc(100vw - 24px));
     background: var(--paper); border: 1px solid var(--rule); border-radius: 8px;
-    padding: 14px 16px 20px; box-sizing: border-box;
+    padding: 8px 10px 14px; box-sizing: border-box; text-align: center;
     display: flex; flex-direction: column;
-    min-width: min(260px, calc(100vw - 24px)); min-height: 160px;
+    min-width: min(240px, calc(100vw - 24px)); min-height: 160px;
     max-width: calc(100vw - 24px);
     max-height: calc(100dvh - 24px - env(safe-area-inset-top, 0px));
     box-shadow: 0 8px 28px #0006;
   }
-  .panel-header { display: flex; align-items: flex-start; gap: 10px; flex-shrink: 0; }
-  .panel-header h1 { flex: 1; min-width: 0; }
+  .panel-header { display: grid; grid-template-columns: 28px minmax(0, 1fr) 28px; align-items: center; gap: 4px; flex-shrink: 0; margin-bottom: 6px; }
+  .panel-header h1 { grid-column: 2; min-width: 0; margin: 0; font-size: 1.1rem; text-align: center; }
+  .panel-header .panel-toggle { grid-column: 3; }
   .panel-toggle {
-    flex-shrink: 0; width: 32px; height: 32px; padding: 0;
+    flex-shrink: 0; width: 28px; height: 28px; padding: 0;
     color: var(--ink); background: #202D3B; border: 1px solid var(--rule);
     border-radius: 4px; cursor: pointer; font: 600 1.2rem var(--body);
   }
@@ -65,7 +66,10 @@ layout: null
     background: transparent; color: var(--slate); font-size: 20px;
     cursor: nwse-resize; touch-action: none; user-select: none;
   }
-  .panel.collapsed { width: min(300px, calc(100vw - 24px)) !important; height: auto !important; min-height: 0; padding-bottom: 14px; }
+  .panel.collapsed { width: min(290px, calc(100vw - 24px)) !important; height: auto !important; min-height: 0; padding: 8px 10px; }
+  .panel.collapsed .panel-header { margin-bottom: 0; }
+  .panel .row { justify-content: center; margin-bottom: 7px; }
+  .panel .meta { margin-top: 6px; }
   .panel.collapsed .panel-content, .panel.collapsed .panel-resize { display: none; }
   .panel.collapsed h1 { margin: 0; }
   .panel-toggle:hover, .global-btn:hover, .seg button:hover { background: #2A3A4B; }
@@ -88,7 +92,7 @@ layout: null
     border: 1.5px solid var(--ink); border-radius: 3px; padding: 5px 10px; cursor: pointer;
   }
   .seg button[aria-pressed="true"] { background: #315B85; color: #FFFFFF; border-color: #8DC4FF; }
-  .legend label { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer; width: 100%; }
+  .legend label { display: grid; grid-template-columns: 18px 12px minmax(0, 1fr) 18px; align-items: center; gap: 5px; font-size: 0.85rem; cursor: pointer; width: 100%; text-align: center; }
   .swatch { width: 12px; height: 12px; border-radius: 50%; border: 3px solid currentColor; box-sizing: border-box; }
   .count { margin-left: auto; color: var(--slate); font-variant-numeric: tabular-nums; }
   .meta { font-size: 0.78rem; color: var(--slate); margin: 8px 0 0; line-height: 1.35; }
@@ -132,7 +136,7 @@ layout: null
   body:has(#global-strip:not([hidden])) .panel:not(.collapsed) {
     max-height: max(160px, calc(100dvh - 245px - env(safe-area-inset-top, 0px)));
   }
-  .global-strip h2 { font: 800 0.9rem var(--head); margin: 0 0 3px; }
+  .global-strip h2 { font: 800 0.9rem var(--head); margin: 0 0 3px; text-align: center; }
   .global-strip p { margin: 0; font-size: 0.76rem; color: var(--slate); }
   .global-markers { display: flex; gap: 12px; overflow-x: auto; padding: 14px 4px 8px; }
   .global-marker {
@@ -141,7 +145,7 @@ layout: null
     color: var(--ink); background: transparent; cursor: pointer; font: 600 0.76rem var(--body);
   }
   .global-marker:hover { background: #273747; }
-  .global-marker .marker-title { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .global-marker .marker-title { display: block; white-space: nowrap; text-align: center; }
   .drawer details[open] { border-left: 3px solid #8DC4FF; padding-left: 8px; }
 
   /* Popup + global list content */
@@ -178,7 +182,7 @@ layout: null
   .empty { color: var(--slate); font-size: 0.9rem; }
 
   @media (max-width: 520px) {
-    .panel { left: 8px; width: min(340px, calc(100vw - 16px)); max-width: calc(100vw - 16px); padding: 10px 12px 20px; }
+    .panel { left: 8px; width: min(300px, calc(100vw - 16px)); max-width: calc(100vw - 16px); padding: 8px 10px 14px; }
     h1 { font-size: 1.2rem; }
     .sub { display: none; }
     .legend { font-size: 0.85rem; }
@@ -355,6 +359,25 @@ function mapLocations(i) {
   const locations = i.locations?.length ? i.locations : [{lat: i.lat, lon: i.lon, label: i.where, basis: "Reported area (approximate)", source_url: i.source_url}];
   return locations.filter(p => Number.isFinite(p.lat) && Number.isFinite(p.lon) && Math.abs(p.lat) <= 90 && Math.abs(p.lon) <= 180);
 }
+function attackLabel(i) {
+  // Short display labels; the complete report remains in the incident dialog.
+  const title = String(i.title || "");
+  const rules = [
+    [/ransomware/i, "Ransomware"],
+    [/phish/i, "Phishing"],
+    [/api keys|stolen aws keys/i, "API theft"],
+    [/supply.chain|npm packages/i, "Supply chain"],
+    [/prompt injection|hidden prompts/i, "Prompt injection"],
+    [/exfiltrat|\\.env secrets/i, "Data theft"],
+    [/multi.cloud|cloud intrusion/i, "Cloud intrusion"],
+    [/bank details|data leak|data exposed/i, "Data leak"],
+    [/botnet/i, "Botnet"],
+    [/ddos|denial.of.service/i, "DDoS"],
+    [/credential theft|stolen credentials/i, "Credential theft"],
+  ];
+  return rules.find(([pattern]) => pattern.test(title))?.[1] || "Intrusion";
+}
+
 function skullHtml(i) {
   const color = (CATS[i.category] || CATS.using_ai).color;
   return `<div class="skull-marker" style="--glow:${color}"><img src="skull-marker.png" alt="" width="36" height="44" draggable="false"></div>`;
@@ -383,7 +406,7 @@ function render() {
   document.getElementById("global-strip").hidden = global.length === 0;
   document.getElementById("strip-count").textContent = global.length;
   document.getElementById("global-markers").innerHTML = global.map(i =>
-    `<button class="global-marker" data-incident="${esc(i.id)}" title="${esc(i.title)}" aria-label="${esc(i.title)} — location unconfirmed">${skullHtml(i)}<span class="marker-title">${esc(i.title)}</span></button>`).join("");
+    `<button class="global-marker" data-incident="${esc(i.id)}" title="${esc(i.title)}" aria-label="${esc(i.title)} — location unconfirmed">${skullHtml(i)}<span class="marker-title">${esc(attackLabel(i))}</span></button>`).join("");
   document.getElementById("global-list").innerHTML = global.length
     ? global.map(i => `<details data-incident="${esc(i.id)}"><summary>${esc(i.title)}<small>${esc(i.date)} · ${CATS[i.category]?.label || ""}</small></summary>${card(i)}</details>`).join("")
     : `<p class="empty">Nothing in this time range. Try “All”.</p>`;
