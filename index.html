@@ -147,7 +147,7 @@ const state = { days: 30, cats: new Set(Object.keys(CATS)), incidents: [] };
 
 const map = L.map("map", { worldCopyJump: true, zoomControl: false, minZoom: 2 }).setView([25, 10], 2);
 L.control.zoom({ position: "bottomright" }).addTo(map);
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_4u4v_1_1dfd481a718ad664f12b6beb", {
   maxZoom: 18, subdomains: "abcd",
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
 }).addTo(map);
