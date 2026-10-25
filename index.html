@@ -89,16 +89,26 @@
   .meta { font-size: 0.78rem; color: var(--slate); margin: 8px 0 0; line-height: 1.35; }
   button:focus-visible, input:focus-visible { outline: 3px solid var(--agent); outline-offset: 2px; }
 
-  /* Bullseye marker */
-  .bullseye {
-    position: relative; width: 22px; height: 22px; box-sizing: border-box;
-    border: 2px solid var(--c); border-radius: 50%; background: rgba(20,28,38,0.9);
+  /* Skull marker with a red halo behind the image. */
+  .skull-marker { position: relative; width: 36px; height: 44px; isolation: isolate; }
+  .skull-marker::before {
+    content: ""; position: absolute; inset: 8px 4px; z-index: -1;
+    border-radius: 50%; background: #FF243D55;
+    box-shadow: 0 0 12px 5px #FF243D77;
+    animation: skull-pulse 1.8s ease-out infinite;
+    pointer-events: none;
   }
-  .bullseye::before { content: ""; position: absolute; inset: 2px; border: 2px solid var(--c); border-radius: 50%; }
-  .bullseye::after  { content: ""; position: absolute; inset: 6px; background: var(--c); border-radius: 50%; }
-  .bullseye.fresh { animation: ping 1.8s ease-out infinite; }
-  @keyframes ping { 0% { box-shadow: 0 0 0 0 var(--c); } 100% { box-shadow: 0 0 0 14px transparent; } }
-  @media (prefers-reduced-motion: reduce) { .bullseye.fresh { animation: none; } }
+  .skull-marker img {
+    display: block; width: 100%; height: 100%; object-fit: contain;
+    filter: drop-shadow(0 2px 2px #000B); pointer-events: none; user-select: none;
+  }
+  @keyframes skull-pulse {
+    0% { transform: scale(0.85); opacity: 0.95; box-shadow: 0 0 8px 3px #FF243DAA; }
+    100% { transform: scale(1.7); opacity: 0; box-shadow: 0 0 18px 8px #FF243D00; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .skull-marker::before { animation: none; opacity: 0.6; }
+  }
 
   .cluster {
     display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
@@ -229,15 +239,12 @@ function visible() {
 function render() {
   const list = visible();
   cluster.clearLayers();
-  const fresh = Date.now() - 2 * 864e5;
   const markers = [];
   const global = [];
   for (const i of list) {
     if (i.lat == null || i.lon == null) { global.push(i); continue; }
-    const color = (CATS[i.category] || CATS.using_ai).color;
-    const isFresh = Date.parse(i.added || i.date) >= fresh;
-    const icon = L.divIcon({ className: "", iconSize: [22, 22], iconAnchor: [11, 11],
-      html: `<div class="bullseye${isFresh ? " fresh" : ""}" style="--c:${color}"></div>` });
+    const icon = L.divIcon({ className: "", iconSize: [36, 44], iconAnchor: [18, 22], popupAnchor: [0, -22],
+      html: '<div class="skull-marker"><img src="skull-marker.png" alt="" width="36" height="44" draggable="false"></div>' });
     markers.push(L.marker([i.lat, i.lon], { icon, title: i.title }).bindPopup(card(i), { maxWidth: 320 }));
   }
   cluster.addLayers(markers);
@@ -320,3 +327,4 @@ fetch("attacks.json?v=" + Date.now())
 </script>
 </body>
 </html>
+
