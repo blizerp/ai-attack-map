@@ -355,10 +355,189 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-10-27-morning",
+   "date": "2026-10-27",
+   "edition": "morning",
+   "published_at": "2026-10-27T17:38:24+00:00",
+   "generated_at": "2026-10-27T17:38:24+00:00",
+   "window_start": "2026-10-27T07:50:05+00:00",
+   "window_end": "2026-10-27T17:38:24+00:00",
+   "sector_window_start": "2026-10-26T17:38:24+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "New reports describe data exposure at a developer platform, repeated breaches involving UK police suppliers, customer information stolen from an energy company, and a hardware-wallet verification compromise. An international operation also cut criminals off from 180,000 infected computers. Several incidents caused no reported service outage.",
+    "items": [
+     {
+      "headline": "Warp says a vendor breach exposed some AI activity records",
+      "what_happened": "Warp said an attack on a third-party vendor exposed agent decision logs and usage data for about 1% of its users. The incident was detected Friday, and outside investigators and law enforcement are involved.",
+      "impact": "Warp has not said whether source code, prompts, passwords or other sensitive data were exposed. The company says it contained the incident and notified users it identified as affected. The platform has at least 800,000 users.",
+      "what_next": "The investigation should clarify the affected users and the types of data exposed. Warp may provide further notices if more sensitive information is found.",
+      "change": "New report",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/",
+        "published": "2026-10-27T16:15:39+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "UK watchdog finds repeated breaches of suppliers holding police data",
+      "what_happened": "A UK policing watchdog reported multiple cyberattacks since 2021 against suppliers that held police information. It did not identify the suppliers, count the attacks or confirm whether data was stolen.",
+      "impact": "The report says some attacks affected operational systems, data or services, but the public impact of the supplier breaches is unclear. Police recorded 252 cybersecurity incidents in the first three months of 2026, plus 796 near misses.",
+      "what_next": "The investigation and oversight work may clarify which police forces, suppliers and records were affected. The watchdog warned that further attacks are highly likely.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/uk-police-data-breached-from-suppliers-watchdog-report",
+        "published": "2026-10-27T15:07:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Energy customers in France have data stolen through a partner platform",
+      "what_happened": "Attackers accessed a marketing platform used by ENGIE’s business partners and stole customer information. ENGIE said the company’s internal systems were not breached and the incident is limited to customers in France.",
+      "impact": "Names, addresses, contact details and energy contract information were exposed. No banking data was involved, and there is no report of power or gas service disruption.",
+      "what_next": "ENGIE has contacted affected customers and notified authorities. Further details, including the number of people affected, may emerge from the investigation.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "energy",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/",
+        "published": "2026-10-27T09:25:50+00:00"
+       }
+      ],
+      "incident_ids": [
+       "3b7ba51aebb1d253"
+      ]
+     },
+     {
+      "headline": "Hardware-wallet maker replaces verification key after website breach",
+      "what_happened": "Keystone said attackers obtained the key used to verify that its cryptocurrency hardware wallets are genuine, through a weakness in a third-party monitoring tool. Customer shipping records were also accessed.",
+      "impact": "A counterfeit wallet using the old key could pass the online check and potentially steal cryptocurrency, but Keystone reported no counterfeit devices or thefts. The breach exposed records for 25,964 buyers and 12,873 abandoned checkouts; payment and bank details were not involved.",
+      "what_next": "Keystone is destroying 18,835 unsold devices, replacing the verification key and contacting affected customers. Orders are paused while devices using the new key are prepared.",
+      "change": "Recovery update",
+      "sectors": [
+       "supply_chain",
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html",
+        "published": "2026-10-27T11:46:00+00:00"
+       }
+      ],
+      "incident_ids": [
+       "34380e2947a28faa"
+      ]
+     },
+     {
+      "headline": "Australia cuts malware criminals off from 180,000 infected computers",
+      "what_happened": "Australia’s Signals Directorate gained access to a criminal control system for the Amadey malware and disconnected it from about 180,000 infected computers worldwide. The malware had been used to install more malware and steal account details.",
+      "impact": "The criminals can no longer use that particular system to issue commands or steal new information from those computers. Earlier theft may still be misused, and the operation did not clean the infected devices.",
+      "what_next": "Authorities may identify victims or related criminal infrastructure. People and organizations affected by the malware may continue receiving notifications as investigations develop.",
+      "change": "Recovery update",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html",
+        "published": "2026-10-27T09:33:06+00:00"
+       }
+      ],
+      "incident_ids": [
+       "7d6a35f873247b0c",
+       "9bb29a9ec76db8f6"
+      ]
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "2 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 711
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 26,
+   "usage": {
+    "completion_tokens": 1112,
+    "prompt_tokens": 24785,
+    "total_tokens": 25897,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 165,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 24782,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-10-27T07:50:05+00:00"
+  "checked_at": "2026-10-27T17:38:24+00:00"
  }
 }
