@@ -12,6 +12,7 @@ sys.modules.setdefault('feedparser', types.SimpleNamespace())
 sys.modules.setdefault('openai', types.SimpleNamespace(OpenAI=lambda: object()))
 spec = importlib.util.spec_from_file_location('updater', os.path.join(os.path.dirname(__file__), 'update.py'))
 u = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = u
 spec.loader.exec_module(u)
 
 def record(**overrides):
@@ -19,7 +20,7 @@ def record(**overrides):
                impact_substantiated=True, significance='Utility confirmed a water service shutdown.',
                title='Water utility disrupted', date='2026-10-25', victim='Utility', attacker='Not reported',
                what='Service shut down', ai_role='Unspecified', why='Not reported', where='No fixed location',
-               geocode_query=None, duplicate_of=None)
+               geocode_query=None, duplicate_of=None, decision='include', decision_reason='Confirmed water service disruption', evidence_status='confirmed')
     rec.update(overrides)
     return rec
 
@@ -103,8 +104,11 @@ class SelectionTests(unittest.TestCase):
             paths = dict(DATA_PATH=os.path.join(root,'attacks.json'), SEEN_PATH=os.path.join(root,'seen.json'), GEO_PATH=os.path.join(root,'geocache.json'))
             u.save_json(paths['DATA_PATH'], dict(incidents=incidents, updated=None))
             u.save_json(paths['SEEN_PATH'], seen)
-            with patch.multiple(u, **paths), patch.dict(os.environ, OPENAI_API_KEY='test-only'), patch.object(u,'fetch_tracker',return_value=[]), patch.object(u,'fetch_feeds',return_value=items), patch.object(u,'extract',side_effect=records), patch.object(u,'geocode',return_value=None):
+            import coverage_collector as c
+            with patch.multiple(u, **paths), patch.object(u,'ROOT',root), patch.dict(os.environ, OPENAI_API_KEY='test-only'), patch.object(c,'discover',return_value=(items,[])), patch.object(c,'read_article',return_value=('Reported source evidence','article',None)), patch.object(u,'OpenAI',side_effect=lambda **kw: object()), patch.object(u,'extract',side_effect=records), patch.object(u,'geocode',return_value=None):
                 u.main()
+            decisions=u.load_json(os.path.join(root,'decisions.json'),{})
+            u.save_json(paths['SEEN_PATH'], [u.seen_key(i) for i in items if decisions.get(i['url'],{}).get('status') != 'error'])
             return u.load_json(paths['DATA_PATH'],{}), u.load_json(paths['SEEN_PATH'],[])
 
     def test_new_major_preserves_unconfirmed_label(self):
@@ -139,4 +143,5 @@ class SelectionTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
 

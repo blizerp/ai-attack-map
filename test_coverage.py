@@ -1,0 +1,86 @@
+import json
+import tempfile
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+import update as u
+import coverage_collector as c
+
+class CoverageTests(unittest.TestCase):
+    def test_missed_real_headlines_reach_review(self):
+        for title in ['Cybersecurity Issue Forces a Major New Mexico Hospital to Divert Patients and Close Clinics',
+                      'Gheist Uses Stolen GitHub Tokens to Steal Private Repository Secrets via Actions Logs',
+                      'Incident de sécurité: compromissions de contrôleurs de réfrigération',
+                      'Hospital system offline after security incident']:
+            self.assertTrue(u.candidate_text(title), title)
+
+    def test_changed_evidence_reopens_excluded_report(self):
+        item={'text':'New victim confirmation'}
+        previous={'policy':u.SELECTION_VERSION,'status':'exclude','checked':'2026-10-27T00:00:00+00:00','summary_hash':'old'}
+        self.assertTrue(c.due(item, previous, '2026-10-27T01:00:00+00:00',u.SELECTION_VERSION))
+
+    def test_unmodified_reports_do_not_repeat_every_run(self):
+        import hashlib
+        item={'text':'same'}
+        previous={'policy':u.SELECTION_VERSION,'status':'exclude','checked':'2026-10-27T00:00:00+00:00','summary_hash':hashlib.sha256(b'same').hexdigest()}
+        self.assertFalse(c.due(item,previous,'2026-10-27T01:00:00+00:00',u.SELECTION_VERSION))
+        self.assertTrue(c.due(item,previous,'2026-11-04T01:00:00+00:00',u.SELECTION_VERSION))
+
+    def test_full_article_replaces_thin_summary(self):
+        item={'text':'Short feed', 'url':'https://example.com/news'}
+        with patch.object(c,'download',return_value=(b'<article>body</article>',item['url'])), patch.object(c.trafilatura,'extract',return_value='Substantive facts. '*60):
+            body,mode,error=c.read_article(item)
+        self.assertEqual(mode,'article')
+        self.assertIsNone(error)
+        self.assertGreater(len(body),500)
+
+    def test_fetch_failure_is_labeled_summary_not_full_article(self):
+        with patch.object(c,'download',side_effect=ValueError('bad')):
+            body,mode,error=c.read_article({'text':'snippet','url':'https://example.com/news'})
+        self.assertEqual((body,mode),('snippet','summary'))
+        self.assertEqual(error,'ValueError')
+
+    def test_source_url_prevents_duplicate_with_different_id(self):
+        inc={'id':'old','title':'Old','date':'2026-06-03','category':'major_cyber','victim':'Hospital','source_url':'https://example.com/event'}
+        data={'incidents':[inc]}
+        rec={'category':'major_cyber','what':'Confirmed new detail','evidence_status':'confirmed','geocode_query':None}
+        with patch.object(u,'update_severity'):
+            result,_=c.merge_record(u,data,{'id':'different','url':inc['source_url'],'source':'Hospital','date':'2026-10-26'},rec,{},'2026-10-27T00:00:00+00:00')
+        self.assertEqual(result,'merged')
+        self.assertEqual(len(data['incidents']),1)
+        self.assertEqual(inc['date'],'2026-06-03')
+        self.assertEqual(inc['last_reported'],'2026-10-26')
+
+    def test_auth_failure_is_nonzero_and_keeps_last_success(self):
+        class AuthError(Exception):
+            status_code=401
+        with tempfile.TemporaryDirectory() as root:
+            initial={'updated':'2026-10-25T00:00:00+00:00','incidents':[]}
+            Path(root,'attacks.json').write_text(json.dumps(initial))
+            item={'id':'x','url':'https://example.com/news','title':'Hospital attack','source':'Test','date':'2026-10-26','text':'evidence'}
+            with patch.multiple(u,ROOT=root,DATA_PATH=str(Path(root,'attacks.json')),GEO_PATH=str(Path(root,'geocache.json'))), patch.dict(c.os.environ,OPENAI_API_KEY='test'), patch.object(c,'discover',return_value=([item],[])), patch.object(c,'read_article',return_value=('facts','article',None)), patch.object(u,'OpenAI',return_value=object()), patch.object(u,'extract',side_effect=AuthError('secret-fragment-must-not-leak')):
+                self.assertEqual(c.run(u),1)
+            self.assertEqual(json.loads(Path(root,'attacks.json').read_text())['updated'],initial['updated'])
+            status=json.loads(Path(root,'feed_status.json').read_text())
+            self.assertEqual(status['status'],'failed')
+            self.assertEqual(status['pending'],1)
+            self.assertNotIn('secret-fragment',Path(root,'decisions.json').read_text())
+
+    def test_private_article_urls_rejected(self):
+        for url in ['http://127.0.0.1/', 'http://localhost/', 'file:///etc/passwd','http://169.254.169.254/','https://user:pass@example.com/']:
+            self.assertFalse(c.public_url(url))
+        self.assertTrue(c.public_url('https://www.wiz.io/blog/report'))
+
+    def test_roundup_can_add_two_distinct_victims(self):
+        from test_selection import record
+        with tempfile.TemporaryDirectory() as root:
+            item={'id':'roundup','url':'https://example.com/roundup','title':'Two hospital breaches','source':'Test','date':'2026-10-26','text':'facts'}
+            records=[record(victim='Hospital A',title='Hospital A breach'),record(victim='Hospital B',title='Hospital B breach')]
+            with patch.multiple(u,ROOT=root,DATA_PATH=str(Path(root,'attacks.json')),GEO_PATH=str(Path(root,'geocache.json'))), patch.dict(c.os.environ,OPENAI_API_KEY='test'), patch.object(c,'discover',return_value=([item],[])), patch.object(c,'read_article',return_value=('facts','article',None)), patch.object(u,'OpenAI',return_value=object()), patch.object(u,'extract',return_value=records), patch.object(u,'geocode',return_value=None):
+                self.assertEqual(c.run(u),0)
+            data=json.loads(Path(root,'attacks.json').read_text())
+            self.assertEqual({i['victim'] for i in data['incidents']},{'Hospital A','Hospital B'})
+            self.assertEqual(len({i['id'] for i in data['incidents']}),2)
+
+if __name__=='__main__':
+    unittest.main()

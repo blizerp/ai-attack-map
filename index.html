@@ -231,9 +231,9 @@ layout: null
     <label style="color:var(--using)"><input type="checkbox" data-cat="using_ai" checked><span class="swatch"></span><span style="color:var(--ink)">Attackers used AI</span><span class="count" id="n-using_ai"></span></label>
     <label style="color:var(--agent)"><input type="checkbox" data-cat="by_ai_agent" checked><span class="swatch"></span><span style="color:var(--ink)">AI agent acted on its own</span><span class="count" id="n-by_ai_agent"></span></label>
     <label style="color:var(--onai)"><input type="checkbox" data-cat="on_ai_system" checked><span class="swatch"></span><span style="color:var(--ink)">AI systems targeted</span><span class="count" id="n-on_ai_system"></span></label>
-    <label style="color:var(--major)"><input type="checkbox" data-cat="major_cyber" checked><span class="swatch"></span><span style="color:var(--ink)">Major hacks (AI unconfirmed)</span><span class="count" id="n-major_cyber"></span></label>
+    <label style="color:var(--major)"><input type="checkbox" data-cat="major_cyber" checked><span class="swatch"></span><span style="color:var(--ink)">Significant hacks (AI unconfirmed)</span><span class="count" id="n-major_cyber"></span></label>
   </div>
-  <p class="meta">Major hacks: serious attacks on essential services, finance, supply chains, or other critical systems; major data theft and losses. AI involvement is not confirmed in these reports.</p>
+  <p class="meta">Meaningful attacks on essential services, businesses and supply chains, including sensitive-data theft. AI involvement is unconfirmed. Time filters use the latest reporting date.</p>
   <button class="global-btn" id="open-global">Global / unlocated (<span id="n-global">0</span>)</button>
   <p class="meta" id="updated">Loading incidents…</p>
   <details class="severity-key"><summary>Glow intensity = reported impact</summary>
@@ -334,7 +334,7 @@ const CATS = {
   using_ai:     { label: "Attackers used AI",        color: "#D7263D" },
   by_ai_agent:  { label: "AI agent acted on its own", color: "#E08E0B" },
   on_ai_system: { label: "AI systems targeted",       color: "#0F8B8D" },
-  major_cyber:  { label: "Major hack · AI unconfirmed", color: "#8065C7" },
+  major_cyber:  { label: "Significant hack · AI unconfirmed", color: "#8065C7" },
 };
 const SEVERITIES = { unknown: "Unknown", limited: "Limited", significant: "Significant", severe: "Severe", critical: "Critical" };
 function severityLevel(i) {
@@ -369,7 +369,9 @@ function card(i, location = null) {
     <p class="severity-note">${esc(i.severity?.reason || "Impact not established in the available reporting.")}${i.severity?.evidence?.context === "research_only" ? " Research / test only." : i.severity?.evidence?.context === "unverified" ? " Impact unverified." : ""}
     ${i.severity?.source_url ? `<a href="${esc(safeUrl(i.severity.source_url))}" target="_blank" rel="noopener">Rating source</a>` : ""}</p>
     <dl>
-      <dt>When</dt><dd>${esc(i.date)}</dd>
+      <dt>Incident date</dt><dd>${esc(i.date)}</dd>
+      ${i.last_reported || i.reported_date ? `<dt>Latest reporting</dt><dd>${esc(i.last_reported || i.reported_date)}</dd>` : ""}
+      ${i.evidence_status ? `<dt>Evidence</dt><dd>${i.evidence_status === "confirmed" ? "Incident confirmed" : "Incident under investigation; details may change"}</dd>` : ""}
       <dt>Where</dt><dd>${esc(i.where)}</dd>
       ${location ? `<dt>Map anchor</dt><dd>${esc(location.label)}<br>${esc(location.basis)}${location.entity ? ` · ${esc(location.entity)}` : ""}${location.source_url ? ` · <a href="${esc(safeUrl(location.source_url))}" target="_blank" rel="noopener">Location source</a>` : ""}</dd>` : ""}
       <dt>Who was hit</dt><dd>${esc(i.victim)}</dd>
@@ -379,6 +381,7 @@ function card(i, location = null) {
       ${i.significance && i.significance !== "Not reported" ? `<dt>Significance</dt><dd>${esc(i.significance)}</dd>` : ""}
       <dt>Why</dt><dd>${esc(i.why)}</dd>
     </dl>
+    ${i.updates?.length ? `<details><summary>Latest sourced updates</summary>${i.updates.slice().reverse().map(x => `<p>${esc(x.date)} — ${esc(x.what)} <a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener">${esc(x.source)}</a></p>`).join("")}</details>` : ""}
     ${i.ai_source_url ? `<div class="src">AI involvement reporting: <a href="${esc(safeUrl(i.ai_source_url))}" target="_blank" rel="noopener">${esc(i.ai_source_name)}</a></div>` : ""}
     <div class="src">Source: <a href="${esc(safeUrl(i.source_url))}" target="_blank" rel="noopener">${esc(i.source_name)}</a>${more ? ` · also ${more}` : ""}</div>
   </div>`;
@@ -386,7 +389,7 @@ function card(i, location = null) {
 
 function visible() {
   const cutoff = state.days ? Date.now() - state.days * 864e5 : 0;
-  return state.incidents.filter(i => state.cats.has(i.category) && (!cutoff || Date.parse(i.date) >= cutoff));
+  return state.incidents.filter(i => state.cats.has(i.category) && (!cutoff || Date.parse(i.last_reported || i.reported_date || i.date) >= cutoff));
 }
 
 function mapLocations(i) {
@@ -539,8 +542,17 @@ fetch("attacks.json?v=" + Date.now())
   .then(data => {
     state.incidents = data.incidents || [];
     const u = data.updated ? new Date(data.updated).toLocaleString() : "not yet";
-    document.getElementById("updated").textContent = `${state.incidents.length} incidents tracked. Last updated ${u}.`;
+    document.getElementById("updated").textContent = `${state.incidents.length} incidents tracked. Last successful collection ${u}.`;
     render();
+    fetch("feed_status.json?v=" + Date.now(), {cache:"no-store"}).then(r => r.ok ? r.json() : null).then(health => {
+      if (!health) return;
+      const checked = new Date(health.checked_at).toLocaleString();
+      const stale = Date.now() - Date.parse(health.checked_at) > 12 * 3600e3;
+      const label = health.status === "failed" ? "UPDATE FAILED" : health.status === "partial" ? "Partial coverage: some sources or articles failed" : stale ? "Collection overdue" : "Collection healthy";
+      document.getElementById("updated").textContent = `${state.incidents.length} incidents tracked. ${label}. Checked ${checked}. Last run: ${health.added} added, ${health.merged} updated.${health.pending ? ` ${health.pending} reports queued.` : ""}`;
+      const a = document.createElement("a"); a.href = "feed_status.json"; a.textContent = " Collection details"; a.target = "_blank"; a.rel="noopener";
+      document.getElementById("updated").appendChild(a);
+    }).catch(() => {});
   })
   .catch(() => {
     document.getElementById("updated").textContent = "Couldn't load incident data. Refresh the page to try again.";
@@ -548,6 +560,7 @@ fetch("attacks.json?v=" + Date.now())
 </script>
 </body>
 </html>
+
 
 
 

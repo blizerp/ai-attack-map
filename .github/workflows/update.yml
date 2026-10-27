@@ -15,20 +15,27 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install "feedparser==6.0.11" "requests>=2.31,<3" "openai>=1.40,<3"
-      - run: python update.py
+      - run: pip install "feedparser==6.0.11" "requests>=2.31,<3" "openai>=1.40,<3" "trafilatura>=2,<3"
+      - run: python -m unittest test_selection test_coverage
+      - run: python -u update.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          MAX_NEW_ITEMS: "1000"
       - name: Commit new data
+        if: always()
         run: |
           git config user.name "map-bot"
           git config user.email "map-bot@users.noreply.github.com"
           git add attacks.json seen.json geocache.json
+          for f in decisions.json pending.json backfill_progress.json feed_status.json; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
           git diff --cached --quiet || (git commit -m "Update incidents" && git push)
+
