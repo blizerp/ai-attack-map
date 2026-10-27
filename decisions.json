@@ -132,15 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-10-27T12:20:06+00:00",
+  "checked": "2026-10-27T22:20:35+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated, multi-victim compromise involving stolen organizational GitHub credentials, unauthorized workflow execution, secret exposure, and follow-on cloud activity. It duplicates the already tracked Gheist campaign record.",
+  "reason": "This is the same confirmed Gheist campaign already tracked under fdf212b3998ab3a2; the source provides additional technical and impact evidence, including private-repository execution and credential exposure.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated, multi-victim compromise involving stolen organizational GitHub credentials, unauthorized workflow execution, secret exposure, and follow-on cloud activity. It duplicates the already tracked Gheist campaign record.",
-    "title": "Gheist campaign abused stolen GitHub tokens in private repositories",
+    "reason": "This is the same confirmed Gheist campaign already tracked under fdf212b3998ab3a2; the source provides additional technical and impact evidence, including private-repository execution and credential exposure.",
+    "title": "Gheist campaign abused stolen GitHub tokens to exfiltrate secrets",
     "incident_id": "fdf212b3998ab3a2"
    }
   ],
@@ -18510,15 +18510,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-10-27T12:20:06+00:00",
+  "checked": "2026-10-27T22:20:35+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Credible researcher reporting substantiates a consequential real-world intrusion in which an AI agent carried out unauthorized access and data collection; it duplicates the already tracked unnamed GCP/AWS/Kubernetes intrusion.",
+  "reason": "Wiz CIRT substantiated a real-world AI-agent intrusion with broad unauthorized access, credential harvesting, privilege escalation, persistence, and sensitive-data access. It is the same incident as the already-tracked exposed-Kafka-UI multi-cloud intrusion.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Credible researcher reporting substantiates a consequential real-world intrusion in which an AI agent carried out unauthorized access and data collection; it duplicates the already tracked unnamed GCP/AWS/Kubernetes intrusion.",
-    "title": "AI agent breached unnamed organization’s multi-cloud environment",
+    "reason": "Wiz CIRT substantiated a real-world AI-agent intrusion with broad unauthorized access, credential harvesting, privilege escalation, persistence, and sensitive-data access. It is the same incident as the already-tracked exposed-Kafka-UI multi-cloud intrusion.",
+    "title": "AI agent breached an unnamed multi-cloud organization",
     "incident_id": "896e03eaa7904596"
    }
   ],
@@ -19003,14 +19003,14 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-10-27T12:20:06+00:00",
+  "checked": "2026-10-27T22:20:35+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz independently substantiates multiple real GCP compromises involving privileged access and material unauthorized AI-usage charges; this is the same campaign/event already tracked under f58ed76ff84133f9.",
+  "reason": "Wiz substantiated multiple real GCP compromises with privileged access and material unauthorized AI-related billing charges; this is the same incident/campaign already tracked under f58ed76ff84133f9.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz independently substantiates multiple real GCP compromises involving privileged access and material unauthorized AI-usage charges; this is the same campaign/event already tracked under f58ed76ff84133f9.",
+    "reason": "Wiz substantiated multiple real GCP compromises with privileged access and material unauthorized AI-related billing charges; this is the same incident/campaign already tracked under f58ed76ff84133f9.",
     "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
@@ -19812,15 +19812,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-10-27T12:20:06+00:00",
+  "checked": "2026-10-27T22:20:35+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed production software supply-chain compromise with a credential-stealing payload; this is an update to the already tracked LiteLLM incident.",
+  "reason": "Confirmed compromise of LiteLLM’s production release infrastructure and distribution of malicious packages qualifies as a supply-chain cyber incident; downstream victim count and data theft remain unestablished.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed production software supply-chain compromise with a credential-stealing payload; this is an update to the already tracked LiteLLM incident.",
-    "title": "LiteLLM 1.107.0 release compromised with credential stealer",
+    "reason": "Confirmed compromise of LiteLLM’s production release infrastructure and distribution of malicious packages qualifies as a supply-chain cyber incident; downstream victim count and data theft remain unestablished.",
+    "title": "LiteLLM 1.107.0 release compromised to steal credentials",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -22181,25 +22181,26 @@
  "https://www.darkreading.com/cybersecurity-analytics/benchmarking-security-of-ai-models-poses-challenges": {
   "title": "So Many AI Security Benchmarks, But None Tell the Whole Story",
   "source": "Dark Reading",
-  "checked": "2026-10-27T06:10:01+00:00",
+  "checked": "2026-10-27T22:20:35+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source is policy/analysis commentary about AI security benchmarks and does not document an actual cyber incident.",
+  "reason": "The source is policy/measurement commentary and contains no qualifying real-world cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source is policy/analysis commentary about AI security benchmarks and does not document an actual cyber incident.",
-    "title": "AI security benchmarks cannot capture the whole security picture"
+    "reason": "The source is policy/measurement commentary and contains no qualifying real-world cyber incident.",
+    "title": "Dark Reading article discusses limitations of AI security benchmarks"
    }
   ],
   "evidence": "summary",
-  "summary_hash": "52f7a03e997ab555d7e3b9bbaf8759637915b49ec8f6f39f7f332730d916b5e1",
+  "summary_hash": "811800d1b48622a5a542e3e4c1d3775a24fdcd4ff1ab5da5f1aad8cb7e934beb",
   "item": {
    "id": "b5ffc08b40538c91",
    "title": "So Many AI Security Benchmarks, But None Tell the Whole Story",
    "url": "https://www.darkreading.com/cybersecurity-analytics/benchmarking-security-of-ai-models-poses-challenges",
    "date": "2026-10-27",
-   "source": "Dark Reading"
+   "source": "Dark Reading",
+   "published_at": "2026-10-27T00:26:50+00:00"
   },
   "retrieval_warning": "HTTPError"
  },
@@ -22562,6 +22563,534 @@
    "date": "2026-10-27",
    "source": "The Hacker News",
    "published_at": "2026-10-27T11:32:46+00:00"
+  }
+ },
+ "https://www.wiz.io/blog/php2shell-exploitation-so-far": {
+  "title": "PHP2Shell: Exploitation Attempts and Remediation Trends",
+  "source": "Wiz Research",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the source reports blocked or incomplete exploitation attempts and honeypot activity, with no confirmed real-world victim compromise or consequences.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the source reports blocked or incomplete exploitation attempts and honeypot activity, with no confirmed real-world victim compromise or consequences.",
+    "title": "PHP2Shell exploitation attempts failed in observed telemetry"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "ad6b392bc8f1ba3175b4c07bc3fc15b0cd65711bf0e68f50ec077f86de330a73",
+  "item": {
+   "id": "d190d94f1c43c79f",
+   "title": "PHP2Shell: Exploitation Attempts and Remediation Trends",
+   "url": "https://www.wiz.io/blog/php2shell-exploitation-so-far",
+   "date": "2026-10-27",
+   "source": "Wiz Research",
+   "published_at": "2026-10-27T13:21:45+00:00"
+  }
+ },
+ "https://www.hipaajournal.com/data-breach-paylogix-kenaitze-bone-joint-center-wichita-family-dental/": {
+  "title": "Ransomware Incident at Paylogix Affects 41K Individuals",
+  "source": "HIPAA Journal",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "The organization confirmed consequential unauthorized network access involving sensitive health, financial, and identity information.; Confirmed compromise of an organizational email account containing sensitive patient, identity, and financial records.; Potentially meaningful website compromise was reported, but the source does not substantiate unauthorized access to or acquisition of patient data.; Duplicate of the already-tracked Paylogix incident; the source does not establish a separate event.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The organization confirmed consequential unauthorized network access involving sensitive health, financial, and identity information.",
+    "title": "Kenaitze Indian Tribe network breach exposed health and identity data",
+    "incident_id": "c0e01ee62ae98733"
+   },
+   {
+    "status": "include",
+    "reason": "Confirmed compromise of an organizational email account containing sensitive patient, identity, and financial records.",
+    "title": "Wichita Family Dental email account breach exposed patient records",
+    "incident_id": "f9b209437d495414"
+   },
+   {
+    "status": "defer",
+    "reason": "Potentially meaningful website compromise was reported, but the source does not substantiate unauthorized access to or acquisition of patient data.",
+    "title": "Website forms at Florida orthopedic practice may have been compromised"
+   },
+   {
+    "status": "exclude",
+    "reason": "Duplicate of the already-tracked Paylogix incident; the source does not establish a separate event.",
+    "title": "Paylogix breach affecting 41,739 individuals"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "7b79dbfba8af7edb4144c7f04ad9f5b18f3a7bfdb331715caa229d5d3fab6786",
+  "item": {
+   "id": "c0e01ee62ae98733",
+   "title": "Ransomware Incident at Paylogix Affects 41K Individuals",
+   "url": "https://www.hipaajournal.com/data-breach-paylogix-kenaitze-bone-joint-center-wichita-family-dental/",
+   "date": "2026-10-27",
+   "source": "HIPAA Journal",
+   "published_at": "2026-10-27T16:53:26+00:00"
+  }
+ },
+ "https://www.hipaajournal.com/brockton-neighborhood-health-center-data-breach-settlement/": {
+  "title": "Brockton Neighborhood Health Center to Pay Up to $850,000 to Settle Breach Lawsuit",
+  "source": "HIPAA Journal",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Court or settlement follow-up, not a new incident or operational update.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Court or settlement follow-up, not a new incident or operational update.",
+    "title": "Brockton Neighborhood Health Center to Pay Up to $850,000 to Settle Breach Lawsuit"
+   }
+  ],
+  "evidence": "title",
+  "summary_hash": "f1858d682f52db95362ce01a1b45813489d19982765523b56575b815b7d70b35",
+  "item": {
+   "id": "f01f209783fff0d9",
+   "title": "Brockton Neighborhood Health Center to Pay Up to $850,000 to Settle Breach Lawsuit",
+   "url": "https://www.hipaajournal.com/brockton-neighborhood-health-center-data-breach-settlement/",
+   "date": "2026-10-27",
+   "source": "HIPAA Journal",
+   "published_at": "2026-10-27T12:39:33+00:00"
+  }
+ },
+ "https://www.darkreading.com/endpoint-security/aokigahara-stealer-developer-keyrings-ai-assistants": {
+  "title": "'Aokigahara' Stealer Targets 'Developer Keyrings' & AI Assistants",
+  "source": "Dark Reading",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Potentially meaningful malware activity is described, but the supplied source excerpt provides no substantiated incident involving an actual victim.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Potentially meaningful malware activity is described, but the supplied source excerpt provides no substantiated incident involving an actual victim.",
+    "title": "Aokigahara stealer targets developer keyrings and AI assistants"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "d6d56e4597e942c372963599cd1bf707c7c75d2364c6c143749c551a73cdd555",
+  "item": {
+   "id": "d0239b5538280ddc",
+   "title": "'Aokigahara' Stealer Targets 'Developer Keyrings' & AI Assistants",
+   "url": "https://www.darkreading.com/endpoint-security/aokigahara-stealer-developer-keyrings-ai-assistants",
+   "date": "2026-10-27",
+   "source": "Dark Reading",
+   "published_at": "2026-10-27T16:47:20+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/cybersecurity-operations/ai-kill-off-cybersecurity-pros-skills": {
+  "title": "Beware the Slasher: AI Could Kill Off Cybersecurity Pros' Skills",
+  "source": "Dark Reading",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is policy and industry commentary rather than a substantive, newly reported cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is policy and industry commentary rather than a substantive, newly reported cyber incident.",
+    "title": "Dark Reading commentary on AI and cybersecurity skills"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "a03578a5b14df254c77a3b47ee435bbe9fe97aee44ff40e3023f856bd7287bcc",
+  "item": {
+   "id": "3942fb42827912c4",
+   "title": "Beware the Slasher: AI Could Kill Off Cybersecurity Pros' Skills",
+   "url": "https://www.darkreading.com/cybersecurity-operations/ai-kill-off-cybersecurity-pros-skills",
+   "date": "2026-10-27",
+   "source": "Dark Reading",
+   "published_at": "2026-10-27T17:43:07+00:00"
+  }
+ },
+ "https://www.darkreading.com/cyber-risk/sboms-alone-scope-supply-chain-attack": {
+  "title": "SBOMs Alone Can't Reveal the Scope of a Supply Chain Attack",
+  "source": "Dark Reading",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "The source is a defensive analysis and does not substantively document a distinct incident; related Shai-Hulud incidents are already tracked.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The source is a defensive analysis and does not substantively document a distinct incident; related Shai-Hulud incidents are already tracked.",
+    "title": "Article discusses limits of SBOMs in supply-chain attacks"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "e558b751c89330122cc01f494143cef332154b93eacca26d1f1ed2c8fc0b3db3",
+  "item": {
+   "id": "50647e72555d925b",
+   "title": "SBOMs Alone Can't Reveal the Scope of a Supply Chain Attack",
+   "url": "https://www.darkreading.com/cyber-risk/sboms-alone-scope-supply-chain-attack",
+   "date": "2026-10-27",
+   "source": "Dark Reading",
+   "published_at": "2026-10-27T19:58:06+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/cyber-risk/3-frameworks-cisos-ai-liability": {
+  "title": "3 Frameworks to Protect CISOs & Orgs Against AI Liability",
+  "source": "Dark Reading",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is general AI-liability guidance, not a report of an actual cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is general AI-liability guidance, not a report of an actual cyber incident.",
+    "title": "Dark Reading article on AI liability frameworks"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "70bb8616decbb87f32a69422a808a980e15adff712fbf49cf71757e8d9afffcb",
+  "item": {
+   "id": "c5c86984c8d7bcd7",
+   "title": "3 Frameworks to Protect CISOs & Orgs Against AI Liability",
+   "url": "https://www.darkreading.com/cyber-risk/3-frameworks-cisos-ai-liability",
+   "date": "2026-10-27",
+   "source": "Dark Reading",
+   "published_at": "2026-10-27T21:15:03+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/cloud-security/email-bombing-external-teams-chats-repeatable-access-path": {
+  "title": "External Teams Chats Anchor 15-Minute Malware Delivery",
+  "source": "Dark Reading",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Potentially meaningful malware-delivery campaign, but the supplied report does not substantiate successful compromises or consequences; attacker linkage is also uncertain.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Potentially meaningful malware-delivery campaign, but the supplied report does not substantiate successful compromises or consequences; attacker linkage is also uncertain.",
+    "title": "External Teams chats used in suspected malware-delivery campaign"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "74798f5f8a0247bbf933b6711c3b63bcf5fb1e29ab72ddd5776a3222f846c289",
+  "item": {
+   "id": "b7462f180574c3fb",
+   "title": "External Teams Chats Anchor 15-Minute Malware Delivery",
+   "url": "https://www.darkreading.com/cloud-security/email-bombing-external-teams-chats-repeatable-access-path",
+   "date": "2026-10-27",
+   "source": "Dark Reading",
+   "published_at": "2026-10-27T20:42:40+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/": {
+  "title": "Warp discloses breach exposing AI agent logs, user telemetry data",
+  "source": "BleepingComputer",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Warp and its reporting source substantiate unauthorized exploitation of a third-party infrastructure vendor and potential exposure of user agent logs and telemetry; the incident is meaningful despite unresolved scope.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Warp and its reporting source substantiate unauthorized exploitation of a third-party infrastructure vendor and potential exposure of user agent logs and telemetry; the incident is meaningful despite unresolved scope.",
+    "title": "Warp breach exposed AI-agent logs and telemetry",
+    "incident_id": "6e045b748d09abad"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "a6efcdbac5b220e9514ba8866f3aa8b4fefc20afb0df2766e8d4e6ff015df387",
+  "item": {
+   "id": "6e045b748d09abad",
+   "title": "Warp discloses breach exposing AI agent logs, user telemetry data",
+   "url": "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/",
+   "date": "2026-10-27",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-27T16:15:39+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries/": {
+  "title": "UNM Health ransomware attack disrupts patient care, surgeries",
+  "source": "BleepingComputer",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a substantiated cyberattack causing temporary disruption to hospital admissions, ambulance routing, surgeries, appointments, and academic operations. It is a later report of the already-tracked UNM Health incident, not a separate event.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a substantiated cyberattack causing temporary disruption to hospital admissions, ambulance routing, surgeries, appointments, and academic operations. It is a later report of the already-tracked UNM Health incident, not a separate event.",
+    "title": "UNM Health ransomware attack disrupted patient care and surgeries",
+    "incident_id": "62c149c3423ae5e2"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "fb963ddcfba1491e4ac571d8f33a2bd772017cc0a88d080c8df02db43179cab2",
+  "item": {
+   "id": "279dda4b1d22a0eb",
+   "title": "UNM Health ransomware attack disrupts patient care, surgeries",
+   "url": "https://www.bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries/",
+   "date": "2026-10-27",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-27T22:07:34+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/the-huntress-tragic-quadrant-ranking-threats-hitting-businesses-hardest/": {
+  "title": "The Huntress Tragic Quadrant: Ranking Threats Hitting Businesses Hardest",
+  "source": "BleepingComputer",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is a threat-trends/sponsored analysis article, and the only additionally described FakeAgent activity establishes delivery or reach—not a confirmed compromise or consequential victim impact. The EvilTokens item is already tracked.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is a threat-trends/sponsored analysis article, and the only additionally described FakeAgent activity establishes delivery or reach—not a confirmed compromise or consequential victim impact. The EvilTokens item is already tracked.",
+    "title": "Huntress threat-ranking article reports aggregate tactics and malware reach"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "a999d3e0e4db56a2597dc6f4720ae93ecdf7074625de7bffaf45a82a00070b15",
+  "item": {
+   "id": "0a147738a8e09f91",
+   "title": "The Huntress Tragic Quadrant: Ranking Threats Hitting Businesses Hardest",
+   "url": "https://www.bleepingcomputer.com/news/security/the-huntress-tragic-quadrant-ranking-threats-hitting-businesses-hardest/",
+   "date": "2026-10-27",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-27T14:01:11+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/tailscale-warns-of-serious-ssh-flaws-allowing-root-privilege-escalation/": {
+  "title": "Tailscale warns of SSH flaws allowing root privilege escalation",
+  "source": "BleepingComputer",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the source reports newly disclosed vulnerabilities and lab reproduction, with no confirmed real-world exploitation or unauthorized access.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the source reports newly disclosed vulnerabilities and lab reproduction, with no confirmed real-world exploitation or unauthorized access.",
+    "title": "Tailscale and headscale flaws disclosed without confirmed exploitation"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "04aeeed0f49fb327941d93b4ffc9c615838b7446b307352a1275287fbadcda93",
+  "item": {
+   "id": "ae0b167a1bb3e734",
+   "title": "Tailscale warns of SSH flaws allowing root privilege escalation",
+   "url": "https://www.bleepingcomputer.com/news/security/tailscale-warns-of-serious-ssh-flaws-allowing-root-privilege-escalation/",
+   "date": "2026-10-27",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-27T14:09:46+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data/": {
+  "title": "Hackers hijack Convertr analytics script to steal payment card data",
+  "source": "BleepingComputer",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Independent security researchers substantiated unauthorized modification of Convertr infrastructure and a payment-data skimmer loaded by multiple merchants’ checkout pages, creating meaningful downstream sensitive-data risk.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Independent security researchers substantiated unauthorized modification of Convertr infrastructure and a payment-data skimmer loaded by multiple merchants’ checkout pages, creating meaningful downstream sensitive-data risk.",
+    "title": "Convertr analytics script hijacked to skim e-commerce payment data",
+    "incident_id": "464316e22559bc13"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "5003e7cb9156135a56698353b87476c673f65e676c6d4371dac6e527097bfddc",
+  "item": {
+   "id": "464316e22559bc13",
+   "title": "Hackers hijack Convertr analytics script to steal payment card data",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data/",
+   "date": "2026-10-27",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-27T20:57:25+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-oob-updates-to-distrust-emudhra-certificates/": {
+  "title": "Microsoft releases Windows OOB updates to distrust eMudhra certificates",
+  "source": "BleepingComputer",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Duplicate follow-up covering Microsoft’s response to the already tracked eMudhra certificate compromise; no separate substantive incident is reported.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Duplicate follow-up covering Microsoft’s response to the already tracked eMudhra certificate compromise; no separate substantive incident is reported.",
+    "title": "Microsoft distrusts compromised eMudhra certificates"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "3e10a879c844fc31a4f9e4cea4c62ce0a453ff83d04815537c425a882140b0dd",
+  "item": {
+   "id": "88a820b5a53b9780",
+   "title": "Microsoft releases Windows OOB updates to distrust eMudhra certificates",
+   "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-oob-updates-to-distrust-emudhra-certificates/",
+   "date": "2026-10-27",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-27T18:20:28+00:00"
+  }
+ },
+ "https://therecord.media/university-of-new-mexico-hospital-diverts-cyber-incident": {
+  "title": "University of New Mexico hospital diverts ambulances after cyberattack",
+  "source": "The Record",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a separately reported, confirmed healthcare cyber incident with ambulance diversion and suspended patient care. It matches the already-tracked UNM Health incident, so it is linked as a duplicate rather than treated as a new event.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a separately reported, confirmed healthcare cyber incident with ambulance diversion and suspended patient care. It matches the already-tracked UNM Health incident, so it is linked as a duplicate rather than treated as a new event.",
+    "title": "UNM Health cyberattack diverted ambulances and suspended care",
+    "incident_id": "62c149c3423ae5e2"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "fb6f93fcb47047348be6015269f8a5696772a9be0aab237e3ce77d32b738ad8b",
+  "item": {
+   "id": "d9008b4c006fdf5f",
+   "title": "University of New Mexico hospital diverts ambulances after cyberattack",
+   "url": "https://therecord.media/university-of-new-mexico-hospital-diverts-cyber-incident",
+   "date": "2026-10-27",
+   "source": "The Record",
+   "published_at": "2026-10-27T14:57:00+00:00"
+  }
+ },
+ "https://therecord.media/uk-police-data-breached-from-suppliers-watchdog-report": {
+  "title": "Hackers repeatedly breached suppliers holding UK police data, watchdog finds",
+  "source": "The Record",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The watchdog substantiated multiple real compromises of trusted suppliers holding police information; the absence of disclosed loss figures or detailed victim identities does not negate the confirmed supply-chain intrusions.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The watchdog substantiated multiple real compromises of trusted suppliers holding police information; the absence of disclosed loss figures or detailed victim identities does not negate the confirmed supply-chain intrusions.",
+    "title": "UK police-data suppliers repeatedly breached since 2021",
+    "incident_id": "caa8702d6502ce4d"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "188ef5baefeabf56c3e7f75d3bd12335e82abfdaa4fe91011e56aefffb765d3e",
+  "item": {
+   "id": "caa8702d6502ce4d",
+   "title": "Hackers repeatedly breached suppliers holding UK police data, watchdog finds",
+   "url": "https://therecord.media/uk-police-data-breached-from-suppliers-watchdog-report",
+   "date": "2026-10-27",
+   "source": "The Record",
+   "published_at": "2026-10-27T15:07:00+00:00"
+  }
+ },
+ "https://therecord.media/nefilim-hive-ransomware-operator-70-months-prison": {
+  "title": "Nefilim, Hive ransomware operator given five-year-plus sentence after guilty plea",
+  "source": "The Record",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Court or settlement follow-up, not a new incident or operational update.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Court or settlement follow-up, not a new incident or operational update.",
+    "title": "Nefilim, Hive ransomware operator given five-year-plus sentence after guilty plea"
+   }
+  ],
+  "evidence": "title",
+  "summary_hash": "55516b5c90038fce7342cf22095e93c0eaccc9f1ec947a4b2915bbd73dc74df8",
+  "item": {
+   "id": "b3a247f43226c6d2",
+   "title": "Nefilim, Hive ransomware operator given five-year-plus sentence after guilty plea",
+   "url": "https://therecord.media/nefilim-hive-ransomware-operator-70-months-prison",
+   "date": "2026-10-27",
+   "source": "The Record",
+   "published_at": "2026-10-27T20:40:00+00:00"
+  }
+ },
+ "https://therecord.media/malicious-apps-russian-anxiety-gas-prices-drone-strikes": {
+  "title": "Malicious apps prey on Russians’ anxiety about fuel prices, drone strikes",
+  "source": "The Record",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "The source substantiates distribution of malicious apps and their capabilities, but does not provide evidence that users actually installed them or that unauthorized access, data theft, or other consequential compromise occurred.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "The source substantiates distribution of malicious apps and their capabilities, but does not provide evidence that users actually installed them or that unauthorized access, data theft, or other consequential compromise occurred.",
+    "title": "ZloyRAT apps targeted Russian drivers"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "927575db8dc3cbf195e0dda14c0da8355922b03cb3bf713c40fbc5e7823f6479",
+  "item": {
+   "id": "8ac8b34151f241ad",
+   "title": "Malicious apps prey on Russians’ anxiety about fuel prices, drone strikes",
+   "url": "https://therecord.media/malicious-apps-russian-anxiety-gas-prices-drone-strikes",
+   "date": "2026-10-27",
+   "source": "The Record",
+   "published_at": "2026-10-27T13:36:00+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/cyberstrikeai-uses-44-ai-agents-to.html": {
+  "title": "CyberStrikeAI Uses 44 AI Agents to Automate Hacking Operations Against Japan Targets",
+  "source": "The Hacker News",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Credible researcher evidence substantiates an actual intrusion and theft of sensitive organizational data; AI was used to assist the human-led attack.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Credible researcher evidence substantiates an actual intrusion and theft of sensitive organizational data; AI was used to assist the human-led attack.",
+    "title": "AI-assisted intrusion stole GIS server records and credentials",
+    "incident_id": "e56e431d418b3ba4"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "115b88002e6699d2f561155bab06d45a12ef6c77c7dbd09f9bbe93d5b0684443",
+  "item": {
+   "id": "e56e431d418b3ba4",
+   "title": "CyberStrikeAI Uses 44 AI Agents to Automate Hacking Operations Against Japan Targets",
+   "url": "https://thehackernews.com/2026/10/cyberstrikeai-uses-44-ai-agents-to.html",
+   "date": "2026-10-27",
+   "source": "The Hacker News",
+   "published_at": "2026-10-27T18:26:46+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html": {
+  "title": "Apple Backports Fix for Exploited CoreGraphics Flaw to Older iPhones and iPads",
+  "source": "The Hacker News",
+  "checked": "2026-10-27T22:20:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a substantiated real-world exploitation report involving targeted individuals and an Apple zero-day; it duplicates the already-tracked CoreGraphics incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a substantiated real-world exploitation report involving targeted individuals and an Apple zero-day; it duplicates the already-tracked CoreGraphics incident.",
+    "title": "Apple CoreGraphics zero-day exploited in targeted iOS attacks",
+    "incident_id": "e2423a46ae6a68be"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "57a96bce008eb87264816315dccc6561dde451c759d3e005e478694a6c163616",
+  "item": {
+   "id": "100d1b142ac66dec",
+   "title": "Apple Backports Fix for Exploited CoreGraphics Flaw to Older iPhones and iPads",
+   "url": "https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html",
+   "date": "2026-10-27",
+   "source": "The Hacker News",
+   "published_at": "2026-10-27T13:59:09+00:00"
   }
  }
 }
