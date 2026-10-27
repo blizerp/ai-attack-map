@@ -7,18 +7,19 @@
    "date": "2026-10-27",
    "edition": "initial",
    "published_at": "2026-10-27T07:50:05+00:00",
+   "generated_at": "2026-10-27T07:53:25+00:00",
    "window_start": "2026-10-26T07:50:05+00:00",
    "window_end": "2026-10-27T07:50:05+00:00",
    "sector_window_start": "2026-10-26T07:50:05+00:00",
    "sectors_enabled": true,
    "overview": {
-    "intro": "Several confirmed attacks caused real disruption or exposed large amounts of data. A New Mexico hospital diverted emergency patients and closed clinics. Attackers are now successfully exploiting PHP2Shell on some systems. Other reports involve hacked cameras, online stores, Microsoft 365 accounts and personal data.",
+    "intro": "Confirmed attacks affected hospital care, online stores, surveillance cameras and personal data. Investigations are still determining the full scope of several incidents.",
     "items": [
      {
-      "headline": "New Mexico hospital diverts patients after cybersecurity incident",
-      "what_happened": "The University of New Mexico Health System told people not to visit its main hospital, canceled clinic appointments and diverted ambulances. The FBI is assisting. The incident remains under investigation.",
-      "impact": "The state’s only Level 1 trauma center was temporarily unavailable for the most serious injuries. Other hospitals accepted additional patients. Operations began returning in phases later that day.",
-      "what_next": "UNM may provide more details as the investigation continues. Patients should check directly with the health system before traveling for appointments.",
+      "headline": "New Mexico hospital diverts ambulances after cybersecurity incident",
+      "what_happened": "The University of New Mexico Health System experienced a cybersecurity incident on Monday, October 26. Its main hospital stopped accepting some patients, more than 30 clinics canceled appointments, and classes were canceled. The FBI is assisting an active investigation.",
+      "impact": "Ambulances were sent elsewhere, temporarily leaving New Mexico without an emergency department able to handle the most serious injuries. Hospitals and clinics began reopening in stages later Monday. The health system’s Level 1 trauma center was affected.",
+      "what_next": "UNM is still investigating what happened and whether patient, employee or student data was taken. Patients should check directly with UNM before traveling for appointments or emergency care.",
       "change": "New report",
       "sectors": [
        "healthcare"
@@ -33,14 +34,16 @@
       "incident_ids": []
      },
      {
-      "headline": "PHP2Shell attacks reach confirmed working shells",
-      "what_happened": "Researchers recorded attackers running commands on honeypot servers using the recently fixed PHP2Shell flaws. CISA has now listed both flaws as actively exploited.",
-      "impact": "This confirms that vulnerable PHP websites can be taken over remotely without a password, although the evidence came from specially configured honeypots. No wider compromise or outage was reported.",
-      "what_next": "Organizations running affected PHP versions should apply the available updates urgently. Website users may see disruptions if operators take systems offline while patching.",
+      "headline": "Hackers confirmed running commands through widely used website software",
+      "what_happened": "Researchers confirmed successful attacks against decoy systems using two flaws in widely used PHP website software. The activity was recorded on October 24, after scanning and unsuccessful attempts had already been seen. The affected software versions were fixed October 21.",
+      "impact": "This does not show that ordinary websites were compromised, but it raises the risk for websites still running affected versions. PHP supports a large share of websites, including services people use for shopping and information.",
+      "what_next": "U.S. government agencies have until October 29 to apply fixes. Researchers are watching for attacks against real websites and for evidence that attackers downloaded additional malware.",
       "change": "Newly confirmed",
       "sectors": [
        "internet",
-       "supply_chain"
+       "finance",
+       "healthcare",
+       "food"
       ],
       "sources": [
        {
@@ -62,41 +65,15 @@
       "incident_ids": []
      },
      {
-      "headline": "Ukraine warns that Dahua cameras are being remotely hijacked",
-      "what_happened": "CERT-UA recorded cases where attackers accessed Dahua camera feeds, changed settings and created unauthorized accounts through the Easy4IP remote-access service.",
-      "impact": "Affected homes, businesses and institutions could lose control of cameras or have video watched remotely. The number of affected devices and any critical-infrastructure impact are unclear.",
-      "what_next": "Owners should disable Easy4IP when unnecessary, update device software and check for unknown accounts or configuration changes. Old malicious accounts may survive password changes or resets.",
+      "headline": "Nearly 1,000 online stores carry hidden code aimed at shoppers",
+      "what_happened": "A campaign active since July 2025 infected 953 online stores, mostly using Magento. The stores were altered to load attacker-controlled code only for real visitors, helping it avoid security checks. The final harmful payload has not been identified.",
+      "impact": "Shoppers may face redirects, scams or attempts to steal information, although the reporting does not confirm what the code ultimately did. Store owners may need to take sites offline while investigating, potentially delaying orders.",
+      "what_next": "Researchers are checking whether the campaign is still spreading and what the hidden code delivers. Customers should be cautious if a store behaves unusually or asks for unexpected payment or account details.",
       "change": "New report",
       "sectors": [
        "internet",
-       "supply_chain"
-      ],
-      "sources": [
-       {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html",
-        "published": "2026-10-27T06:34:47+00:00"
-       },
-       {
-        "name": "The Record",
-        "url": "https://therecord.media/ukraine-cert-ua-warning-chinese-dahua-cameras-hacked",
-        "published": "2026-10-26T14:21:00+00:00"
-       }
-      ],
-      "incident_ids": [
-       "e2423a46ae6a68be"
-      ]
-     },
-     {
-      "headline": "Malware found on 953 online stores may target shoppers",
-      "what_happened": "A long-running campaign inserted hidden code into 953 mostly Magento stores. The code selectively served further JavaScript to real visitors while avoiding scanners. The final payload has not been identified.",
-      "impact": "Shoppers on infected sites could be redirected, tracked or exposed to harmful code. The reports do not confirm payment theft or a specific shopper impact.",
-      "what_next": "Store operators should inspect for rogue accounts, unexpected page content and backdoors, then patch and change credentials. Customers should avoid suspicious redirects and monitor payment accounts.",
-      "change": "New report",
-      "sectors": [
        "finance",
-       "supply_chain",
-       "internet"
+       "food"
       ],
       "sources": [
        {
@@ -115,24 +92,48 @@
       ]
      },
      {
-      "headline": "Microsoft 365 token theft compromises 97 accounts",
-      "what_happened": "Attackers captured Microsoft sign-in sessions through fake login pages and replayed them, bypassing the need to repeat multifactor authentication. They compromised 97 accounts at 79 organizations.",
-      "impact": "Attackers added their own authentication methods, registered rogue devices and hid email rules affecting payroll and payment messages. Business email accounts were also used to send spam.",
-      "what_next": "Organizations should revoke sessions, review new devices and authentication methods, and check inbox rules. Customers should independently verify payment or password-change requests received by email.",
+      "headline": "Ukraine warns that hackers are taking over connected security cameras",
+      "what_happened": "Ukraine’s CERT-UA confirmed cases involving Dahua cameras and recorders. Attackers accessed video, changed settings and created accounts. The incidents were reported last week; the number of affected devices, targets and responsible group remain unknown.",
+      "impact": "Compromised cameras could expose homes, businesses, government sites or military-related activity. The warning does not confirm that any particular public facility or military camera was affected.",
+      "what_next": "Ukrainian authorities are investigating whether the activity connects to an earlier campaign that compromised more than 14,500 cameras between June and July. Camera owners may see service or viewing changes while systems are secured.",
       "change": "New report",
       "sectors": [
-       "finance",
        "internet"
       ],
       "sources": [
        {
         "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html",
-        "published": "2026-10-26T08:35:51+00:00"
+        "url": "https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html",
+        "published": "2026-10-27T06:34:47+00:00"
+       },
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/ukraine-cert-ua-warning-chinese-dahua-cameras-hacked",
+        "published": "2026-10-26T14:21:00+00:00"
        }
       ],
       "incident_ids": [
-       "dde8e8855e37a9d8"
+       "e2423a46ae6a68be"
+      ]
+     },
+     {
+      "headline": "University of Copenhagen says data on 525,000 people was accessed",
+      "what_happened": "Hackers entered a university test environment containing personal information. The university detected the breach on October 20 and disclosed it on October 23. A later update added 20,000 staff and students whose building-access PINs may have been exposed.",
+      "impact": "Names, national identity numbers, contact details and some access codes may be at risk. The university says daily operations were not disrupted and there is no indication that operational systems were accessed.",
+      "what_next": "The university is still determining the full scope and is replacing access codes while reopening restricted areas. Affected people should be wary of convincing messages asking for information or access.",
+      "change": "Impact increased",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525-000-people/",
+        "published": "2026-10-26T22:20:36+00:00"
+       }
+      ],
+      "incident_ids": [
+       "293e0804b3f8eaff"
       ]
      }
     ]
@@ -147,42 +148,47 @@
      "items": []
     },
     "food": {
-     "intro": "",
-     "items": []
-    },
-    "finance": {
-     "intro": "Confirmed attacks affected payment-related business email and online shopping systems, but no direct banking outage was reported.",
+     "intro": "A campaign affecting online shops could affect shopping and deliveries, but no specific food company or delivery outage was confirmed.",
      "items": [
       {
-       "headline": "Stolen Microsoft 365 sessions targeted payment-related email",
-       "what_happened": "A campaign compromised 97 Microsoft 365 accounts at 79 organizations after attackers replayed stolen login sessions.",
-       "impact": "Hidden rules removed or redirected messages mentioning payroll, deposits and bonuses. This could interfere with payment workflows, though no confirmed financial losses were reported.",
-       "what_next": "Organizations should review mailbox rules, new devices and MFA methods. Customers should verify payment changes through a separate trusted channel.",
+       "headline": "Hidden code found on 953 online stores",
+       "what_happened": "Researchers found attacker-controlled code on 953 stores, mostly Magento sites, in a campaign running since July 2025.",
+       "impact": "The code targets real shoppers, but its final purpose is unknown. No confirmed food-delivery outage or payment theft was reported.",
+       "what_next": "Researchers are investigating what the code delivers and whether more stores are affected. Shoppers should be cautious with unusual redirects or payment requests.",
        "change": "New report",
        "sectors": [
-        "finance",
+        "food",
         "internet"
        ],
        "sources": [
         {
          "name": "The Hacker News",
-         "url": "https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html",
-         "published": "2026-10-26T08:35:51+00:00"
+         "url": "https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html",
+         "published": "2026-10-26T18:12:22+00:00"
+        },
+        {
+         "name": "SecurityWeek",
+         "url": "https://www.securityweek.com/953-online-stores-infected-in-long-lasting-malware-campaign/",
+         "published": "2026-10-26T12:46:44+00:00"
         }
        ],
        "incident_ids": [
-        "dde8e8855e37a9d8"
+        "8cc26022e4d14b3b"
        ]
-      },
+      }
+     ]
+    },
+    "finance": {
+     "intro": "No confirmed banking or payment-system outage was reported. Online-store compromises create a possible shopping and payment risk, but theft was not confirmed.",
+     "items": [
       {
-       "headline": "Malicious code remains on hundreds of online stores",
-       "what_happened": "Attackers injected browser-loading code into 953 online stores, mainly Magento sites, in a campaign active since 2025.",
-       "impact": "The code targets real shoppers and may redirect or expose them to harmful content. No confirmed payment-card theft was reported.",
-       "what_next": "Store operators should investigate before customers are exposed. Shoppers should watch for unusual redirects and check payment accounts after suspicious purchases.",
+       "headline": "Compromised online stores may expose shoppers to scams",
+       "what_happened": "Attackers planted hidden browser code on 953 online stores. It was designed to distinguish real shoppers from security scanners, but researchers have not captured the final payload.",
+       "impact": "Customers could encounter redirects or attempts to collect payment or account details. The reports do not confirm stolen card data or payment failures.",
+       "what_next": "Investigators are working to identify the final payload and remaining affected stores. Shoppers should verify unusual payment prompts through the store’s normal website or app.",
        "change": "New report",
        "sectors": [
         "finance",
-        "supply_chain",
         "internet"
        ],
        "sources": [
@@ -204,14 +210,14 @@
      ]
     },
     "healthcare": {
-     "intro": "Healthcare saw the day’s clearest operational disruption: a major New Mexico hospital temporarily diverted emergency patients and canceled appointments.",
+     "intro": "A cybersecurity incident disrupted the largest hospital system in New Mexico. Separate healthcare data exposures affected plan members and patients, without reported care outages.",
      "items": [
       {
-       "headline": "UNM Health temporarily diverts emergency patients",
-       "what_happened": "A cybersecurity incident led UNM Health to block access to its main hospital, cancel appointments at more than 30 clinics and divert ambulances.",
-       "impact": "The disruption affected the state’s only Level 1 trauma center. Other health systems took additional patients, and UNM later began a phased reopening.",
-       "what_next": "The cause and scope remain unclear while law enforcement investigates. Patients should confirm appointments and emergency-care arrangements directly with providers.",
-       "change": "New report",
+       "headline": "New Mexico hospital resumes services in stages after cyber incident",
+       "what_happened": "UNM Health System diverted ambulances, canceled appointments at more than 30 clinics and canceled classes on October 26. Hospitals and clinics later began reopening in phases.",
+       "impact": "Emergency care and routine appointments were disrupted. Other New Mexico hospital systems accepted additional patients. The incident’s cause and data impact remain unclear.",
+       "what_next": "UNM and law enforcement are investigating. Patients should confirm appointment status and emergency options directly with their provider before traveling.",
+       "change": "Recovery update",
        "sectors": [
         "healthcare"
        ],
@@ -225,10 +231,10 @@
        "incident_ids": []
       },
       {
-       "headline": "Denver health plan reports vendor data exposure",
-       "what_happened": "A vendor’s exposed access key could have allowed read-only access to information about 238,083 health-plan members. The key was disabled in August.",
-       "impact": "Names, dates of birth, eligibility and health information may have been exposed. The plan has found no evidence the key was misused, and financial details were not included.",
-       "what_next": "Affected members should watch for convincing health-related scams and use the notification instructions from the plan.",
+       "headline": "Vendor access incident affects 238,083 Denver health-plan members",
+       "what_happened": "A vendor’s access key was publicly exposed for more than a year and could have opened a read-only database containing Denver Health Medical Plan information. The plan has not found evidence that the key was misused.",
+       "impact": "Names, dates of birth, eligibility, provider and health measurements may have been exposed. Financial details and Social Security numbers were not involved, and data could not be changed or deleted through the key.",
+       "what_next": "Denver Health Medical Plan is notifying affected people while the investigation continues. Recipients should watch for targeted health-related scams or messages requesting account information.",
        "change": "New report",
        "sectors": [
         "healthcare",
@@ -249,37 +255,13 @@
      ]
     },
     "internet": {
-     "intro": "Internet-facing systems are under active attack, including vulnerable PHP servers, remote camera systems and customer-facing online stores.",
+     "intro": "Confirmed incidents included a hospital disruption, compromised websites, hacked cameras and exposed university data. No broad communications outage was reported.",
      "items": [
       {
-       "headline": "CISA confirms active exploitation of PHP2Shell flaws",
-       "what_happened": "Researchers recorded successful remote command execution against vulnerable PHP honeypots, and CISA added the flaws to its exploited-vulnerability catalog.",
-       "impact": "Unpatched PHP websites may be taken over remotely. The reported success was on a specific test setup, so the effect on other systems is unclear.",
-       "what_next": "Website operators should install the PHP fixes and review systems for signs of unauthorized access.",
-       "change": "Newly confirmed",
-       "sectors": [
-        "internet",
-        "supply_chain"
-       ],
-       "sources": [
-        {
-         "name": "The Hacker News",
-         "url": "https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html",
-         "published": "2026-10-27T04:37:59+00:00"
-        },
-        {
-         "name": "SecurityWeek",
-         "url": "https://www.securityweek.com/php2shell-exploitation-moves-from-probes-to-working-shells/",
-         "published": "2026-10-26T13:30:10+00:00"
-        }
-       ],
-       "incident_ids": []
-      },
-      {
-       "headline": "Attackers use Microsoft Teams to impersonate IT staff",
-       "what_happened": "Researchers reported hundreds of cases where fake Teams support accounts persuaded workers to grant remote access or run malicious software.",
-       "impact": "Successful cases can lead to stolen data, internal spread and ransomware. The report did not give a confirmed total of victims or outages.",
-       "what_next": "Workers should not grant remote access or run commands at an unsolicited support person’s request. Contact internal IT through a known channel.",
+       "headline": "Hackers took over Dahua cameras in Ukraine",
+       "what_happened": "CERT-UA reported unauthorized access to Dahua cameras and recorders, including viewing video, changing settings and adding accounts. The timing and number of affected devices are unknown.",
+       "impact": "Private, business or government surveillance footage could be exposed. The report does not confirm effects on public internet or camera services.",
+       "what_next": "Authorities are investigating the scope and whether it matches an earlier campaign affecting more than 14,500 devices. Further findings may clarify which owners are affected.",
        "change": "New report",
        "sectors": [
         "internet"
@@ -287,24 +269,49 @@
        "sources": [
         {
          "name": "The Hacker News",
-         "url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
-         "published": "2026-10-26T15:52:40+00:00"
+         "url": "https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html",
+         "published": "2026-10-27T06:34:47+00:00"
+        },
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/ukraine-cert-ua-warning-chinese-dahua-cameras-hacked",
+         "published": "2026-10-26T14:21:00+00:00"
         }
        ],
        "incident_ids": [
-        "d47eb03ecc928f67"
+        "e2423a46ae6a68be"
+       ]
+      },
+      {
+       "headline": "University test system breach puts personal data at risk",
+       "what_happened": "The University of Copenhagen confirmed unauthorized access to a test environment holding data on 525,000 people, later adding 20,000 people whose access PINs may have been exposed.",
+       "impact": "Names, national identity numbers, contact details and some building-access information may be used for phishing or impersonation. University operations were not disrupted.",
+       "what_next": "The university is replacing access codes and continuing its investigation. Affected students and staff should verify unexpected messages independently.",
+       "change": "Impact increased",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525-000-people/",
+         "published": "2026-10-26T22:20:36+00:00"
+        }
+       ],
+       "incident_ids": [
+        "293e0804b3f8eaff"
        ]
       }
      ]
     },
     "supply_chain": {
-     "intro": "Trusted vendors and shared software remain a major route to wider exposure. Today’s confirmed examples involve a health-plan analytics vendor and PHP-based websites.",
+     "intro": "A vendor-related healthcare data incident affected Denver Health members. This was an exposed supplier key, not a compromise of widely distributed software.",
      "items": [
       {
-       "headline": "Vendor access key exposed health-plan member data",
-       "what_happened": "An analytics vendor left an access key on a public website for more than a year. The key could have read a database containing 238,083 health-plan members’ information.",
-       "impact": "Health and identity details may have been exposed, but the plan found no evidence of misuse. The key could not alter or delete records.",
-       "what_next": "Affected people should be alert for tailored phishing messages. The health plan says it is notifying them directly.",
+       "headline": "Exposed vendor key may have opened Denver health-plan data",
+       "what_happened": "SquareML, a healthcare analytics supplier, accidentally placed an access key on a public website in June 2025. Denver Health Medical Plan learned of the exposure on August 14, 2026, and disabled the key on August 18.",
+       "impact": "The key could provide read-only access to information on 238,083 members. The plan found no evidence of misuse, and records could not be changed, deleted or exported through the key.",
+       "what_next": "Denver Health is notifying affected members while the investigation continues. People receiving notices should be alert for health-insurance impersonation attempts.",
        "change": "New report",
        "sectors": [
         "supply_chain",
@@ -321,30 +328,6 @@
         "20c556acc3a3d9a1",
         "ee30a2cce26fa646"
        ]
-      },
-      {
-       "headline": "PHP attacks put many websites and services at risk",
-       "what_happened": "The PHP2Shell flaws are being exploited against test systems after fixes were released. PHP is widely used in websites and online services.",
-       "impact": "Some services may be taken offline for emergency patching, and unpatched sites could be remotely controlled. No broad service outage was reported.",
-       "what_next": "Organizations should update PHP and check connected applications and devices supplied by other vendors.",
-       "change": "Newly confirmed",
-       "sectors": [
-        "supply_chain",
-        "internet"
-       ],
-       "sources": [
-        {
-         "name": "The Hacker News",
-         "url": "https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html",
-         "published": "2026-10-27T04:37:59+00:00"
-        },
-        {
-         "name": "SecurityWeek",
-         "url": "https://www.securityweek.com/php2shell-exploitation-moves-from-probes-to-working-shells/",
-         "published": "2026-10-26T13:30:10+00:00"
-        }
-       ],
-       "incident_ids": []
       }
      ]
     }
@@ -359,24 +342,24 @@
      "entries": 15
     },
     {
-     "source": "SecurityWeek",
-     "ok": true,
-     "entries": 10
-    },
-    {
      "source": "The Record",
      "ok": true,
      "entries": 5
     },
     {
-     "source": "The Hacker News",
+     "source": "SecurityWeek",
      "ok": true,
-     "entries": 50
+     "entries": 10
     },
     {
      "source": "CERT-FR",
      "ok": true,
      "entries": 40
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
     },
     {
      "source": "Dark Reading",
@@ -396,18 +379,18 @@
    ],
    "reviewed_reports": 30,
    "usage": {
-    "completion_tokens": 2094,
-    "prompt_tokens": 25601,
-    "total_tokens": 27695,
+    "completion_tokens": 2245,
+    "prompt_tokens": 25896,
+    "total_tokens": 28141,
     "completion_tokens_details": {
      "accepted_prediction_tokens": 0,
      "audio_tokens": 0,
-     "reasoning_tokens": 55,
+     "reasoning_tokens": 76,
      "rejected_prediction_tokens": 0
     },
     "prompt_tokens_details": {
      "audio_tokens": 0,
-     "cache_write_tokens": 25598,
+     "cache_write_tokens": 25893,
      "cached_tokens": 0
     }
    }
