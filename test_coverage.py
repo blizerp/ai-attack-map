@@ -7,6 +7,23 @@ import update as u
 import coverage_collector as c
 
 class CoverageTests(unittest.TestCase):
+    def test_reviewed_exclusion_reopens_only_for_changed_evidence(self):
+        import hashlib
+        previous={'policy':u.SELECTION_VERSION,'status':'exclude','checked':'2026-10-01T00:00:00+00:00',
+                  'review_override':True,'summary_hash':hashlib.sha256(b'court recap').hexdigest()}
+        now='2026-10-27T00:00:00+00:00'
+        self.assertFalse(c.due({'text':'court recap'},previous,now,u.SELECTION_VERSION))
+        self.assertFalse(c.due({'title':'Old court recap'},previous,now,u.SELECTION_VERSION))
+        self.assertTrue(c.due({'text':'New operational incident facts'},previous,now,u.SELECTION_VERSION))
+
+    def test_legal_rehashes_are_not_new_attacks(self):
+        self.assertTrue(c.legal_followup('Snowflake Hacker Pleads Guilty in US Court'))
+        self.assertTrue(c.legal_followup('Ransom Cartel Mastermind Sentenced to 16 Years in Prison'))
+        self.assertFalse(c.legal_followup('Ransomware shuts down hospital care'))
+        self.assertTrue(c.legal_followup('Court Sentences Ransomware Operator'))
+        self.assertTrue(c.legal_followup('Strict Rules Set for Dataset in Multidistrict Litigation'))
+        self.assertFalse(c.legal_followup('In Other News: Ransomware Developer Sentenced, New Attack Disclosed'))
+
     def test_missed_real_headlines_reach_review(self):
         for title in ['Cybersecurity Issue Forces a Major New Mexico Hospital to Divert Patients and Close Clinics',
                       'Gheist Uses Stolen GitHub Tokens to Steal Private Repository Secrets via Actions Logs',
@@ -81,6 +98,17 @@ class CoverageTests(unittest.TestCase):
             data=json.loads(Path(root,'attacks.json').read_text())
             self.assertEqual({i['victim'] for i in data['incidents']},{'Hospital A','Hospital B'})
             self.assertEqual(len({i['id'] for i in data['incidents']}),2)
+
+    def test_roundup_new_primary_victim_does_not_overwrite_old_one(self):
+        from test_selection import record
+        original={'id':'roundup','title':'Hospital A','victim':'Hospital A','date':'2026-10-20','category':'major_cyber','source_url':'https://example.com/roundup'}
+        data={'incidents':[original]}
+        item={'id':'roundup','url':'https://example.com/roundup','source':'Test','date':'2026-10-26'}
+        with patch.object(u,'geocode',return_value=None):
+            result,new_id=c.merge_record(u,data,item,record(victim='Hospital B'),{},'2026-10-27T00:00:00+00:00')
+        self.assertEqual(result,'added')
+        self.assertNotEqual(new_id,'roundup')
+        self.assertEqual(data['incidents'][0]['victim'],'Hospital A')
 
 if __name__=='__main__':
     unittest.main()

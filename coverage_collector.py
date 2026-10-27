@@ -159,12 +159,23 @@ def discover(u, history, now):
         progress['cutoff'] = cutoff
     return items, health
 
+def legal_followup(title):
+    # These feeds carry many court stories about attacks from years earlier.
+    # They are not a new incident or operational update for this map.
+    if re.search(r'^in other news\b', title, re.I):
+        return False  # Mixed roundups still need incident-by-incident review.
+    return bool(re.search(r"\bsentenc(?:e|ed|es|ing)\b|pleads? guilty|pleaded guilty|gets? \d+ years|\bsettle(?:s|d|ment|ments)?\b|\blitigation\b|class.action lawsuit", title, re.I))
+
 def due(item, previous, now, version):
     if not previous or previous.get('policy') != version:
         return True
     if previous.get('status') == 'error':
         return True
     changed = previous.get('summary_hash') != hashlib.sha256(item.get('text','').encode()).hexdigest()
+    if previous.get('review_override'):
+        # A reviewed exclusion is durable until fresh feed evidence changes.
+        # Archive-only metadata is not evidence of an article revision.
+        return 'text' in item and changed
     if changed:
         return True
     # Recheck evolving and rejected reports for 90 days, not only new URLs.
@@ -175,7 +186,10 @@ def merge_record(u, data, item, rec, geo, now):
     by_id = {i['id']: i for i in data['incidents']}
     source_match = next((i for i in data['incidents'] if i['victim'].casefold() == rec.get('victim', i['victim']).casefold() and item['url'] in
                         {i['source_url']} | {s['url'] for s in i.get('more_sources', [])}), None)
-    dup = source_match or by_id.get(item['id']) or by_id.get(rec.get('duplicate_of'))
+    id_match = by_id.get(item['id'])
+    if id_match and id_match['victim'].casefold() != rec.get('victim', id_match['victim']).casefold():
+        id_match = None
+    dup = by_id.get(rec.get('duplicate_of')) or source_match or id_match
     reported = item.get('date') or now[:10]
     queries = rec.get('location_queries') or ([{'query':rec['geocode_query'], 'basis':'Reported affected area'}] if rec.get('geocode_query') else [])
     if dup:
@@ -198,7 +212,8 @@ def merge_record(u, data, item, rec, geo, now):
             u.locate_incident(dup, geo, queries)
         return 'merged', dup['id']
     inc = {k:rec[k] for k in ['title','date','category','victim','attacker','what','ai_role','why','where','major_impact','significance']}
-    inc.update(id=item['id'], source_name=item['source'], source_url=item['url'], added=now,
+    incident_id = item['id'] if item['id'] not in by_id else u.make_id(item['id'], rec['victim'], rec['date'])
+    inc.update(id=incident_id, source_name=item['source'], source_url=item['url'], added=now,
                reported_date=reported, last_reported=reported, evidence_status=rec.get('evidence_status','under_investigation'), lat=None, lon=None)
     if inc['category'] == 'major_cyber':
         inc['ai_role'] = 'AI involvement not confirmed in the reporting.'
@@ -209,6 +224,7 @@ def merge_record(u, data, item, rec, geo, now):
 
 def run(u):
     now = timestamp()
+    started = time.monotonic()
     root = u.ROOT
     path = lambda name: os.path.join(root, name)
     data = u.load_json(u.DATA_PATH, {'updated':None, 'incidents':[]})
@@ -216,12 +232,12 @@ def run(u):
     queue = u.load_json(path('pending.json'), {})
     history = u.load_json(path('backfill_progress.json'), {})
     geo = u.load_json(u.GEO_PATH, {})
-    status = {'checked_at':now,'last_success':data.get('updated'),'status':'running','added':0,'merged':0,'processed':0,'errors':0}
+    status = {'checked_at':now,'last_success':data.get('updated'),'status':'running','added':0,'merged':0,'processed':0,'errors':0,'summary_only':0,'retrieval_warnings':0}
     items, sources = discover(u, history, now)
     # Revisit decisions even after their articles rotate out of RSS.
     fresh_urls = {i['url'] for i in items}
     for url, old in audit.items():
-        if url not in fresh_urls and old.get('item') and old.get('status') in {'defer','exclude'}:
+        if url not in fresh_urls and old.get('item') and old.get('status') in {'defer','exclude','include'}:
             interval = 2 if old['status'] == 'defer' else 7
             if old.get('checked','') < (datetime.fromisoformat(now)-timedelta(days=interval)).isoformat():
                 items.append(old['item'])
@@ -229,13 +245,14 @@ def run(u):
     for item in items:
         key = item['url']
         if due(item, audit.get(key), now, u.SELECTION_VERSION):
-            # Full text stays in memory only; archives can be fetched again as needed.
+            # Retain a short feed excerpt for retries, never full article bodies.
             queue[key] = {k:v for k,v in item.items() if k != 'text'}
+            queue[key]['text'] = item.get('text','')[:400]
     live = {i['url']: i for i in items}
     cutoff = (datetime.fromisoformat(now)-timedelta(days=90)).date().isoformat()
     queue = {k:v for k,v in queue.items() if not v.get('date') or v['date'] >= cutoff}
-    # Priority seeds first, then oldest discovered reports so backfill cannot starve.
-    candidates = sorted(queue.values(), key=lambda i:(-i.get('priority',0), i.get('date',''), i['url']))[:u.MAX_NEW]
+    # Priority leads first, then fresh reports; older unfinished work stays queued.
+    candidates = sorted(queue.values(), key=lambda i:(i.get('priority',0), i.get('date',''), i['url']), reverse=True)[:u.MAX_NEW]
     print(f'{len(candidates)} candidates this run; {len(queue)} queued', flush=True)
     client = u.OpenAI(timeout=60, max_retries=1) if os.environ.get('OPENAI_API_KEY') else None
     if not client:
@@ -243,6 +260,9 @@ def run(u):
 
     def review(item, tracked):
         original = live.get(item['url'], item)
+        if legal_followup(item['title']):
+            rec = dict(relevant=False, decision='exclude', decision_reason='Court or settlement follow-up, not a new incident or operational update.', title=item['title'])
+            return [rec], 'title', None, hashlib.sha256(original.get('text','').encode()).hexdigest()
         body, mode, warning = read_article(original)
         enriched = dict(item, text=body)
         records = u.extract(client, enriched, tracked)
@@ -271,7 +291,7 @@ def run(u):
     # victims before committing a batch result, to avoid same-batch duplicates.
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for start in range(0, len(candidates), 4):
-            if fatal:
+            if fatal or time.monotonic() - started > 35 * 60:
                 break
             tracked = list(data['incidents'])
             known_ids = {i['id'] for i in tracked}
@@ -280,9 +300,7 @@ def run(u):
             for item, job in jobs:
                 try:
                     records, mode, warning, fingerprint = job.result()
-                    if any(rec.get('relevant') and not rec.get('duplicate_of') and any(
-                        i['id'] not in known_ids and i['victim'].casefold() == rec['victim'].casefold()
-                        for i in data['incidents']) for rec in records):
+                    if any(rec.get('relevant') for rec in records) and any(i['id'] not in known_ids for i in data['incidents']):
                         records, mode, warning, fingerprint = review(item, list(data['incidents']))
                     outcomes = []
                     for index, rec in enumerate(records):
@@ -302,7 +320,10 @@ def run(u):
                     entry = dict(title=item['title'], source=item['source'], checked=now, policy=u.SELECTION_VERSION,
                                  status=overall, reason='; '.join(x['reason'] for x in outcomes), decisions=outcomes,
                                  evidence=mode, summary_hash=fingerprint, item={k:v for k,v in item.items() if k != 'text'})
+                    if mode == 'summary':
+                        status['summary_only'] += 1
                     if warning:
+                        status['retrieval_warnings'] += 1
                         entry['retrieval_warning'] = warning
                     audit[item['url']] = entry
                     queue.pop(item['url'], None)
@@ -314,6 +335,7 @@ def run(u):
                     if getattr(e, 'status_code', None) in {401,403,429}:
                         fatal = True
             checkpoint()
+            print(f'reviewed {status["processed"]}/{len(candidates)} reports; {status["added"]} added, {status["merged"]} updated, {status["errors"]} errors', flush=True)
     failed_sources = [s for s in sources if not s['ok']]
     status['status'] = 'failed' if fatal or (candidates and not status['processed']) else ('partial' if status['errors'] or failed_sources else 'ok')
     if status['status'] == 'ok':
