@@ -1,6 +1,68 @@
 {
- "updated": "2026-10-27T06:10:01+00:00",
+ "updated": "2026-10-27T07:06:45+00:00",
  "incidents": [
+  {
+   "title": "Hackers compromised Dahua surveillance cameras in Ukraine",
+   "date": "2026-10-26",
+   "category": "major_cyber",
+   "victim": "Dahua camera and video-recorder operators in Ukraine; specific organizations were not reported",
+   "attacker": "Unknown; CERT-UA reported the compromises, but did not identify the responsible actors",
+   "what": "CERT-UA identified cases in which hackers gained unauthorized access to internet-connected Dahua cameras and video recorders, changed device settings, and created unauthorized user accounts. The attackers appear to have abused the Easy4IP remote-access feature, weak or default passwords, or outdated-firmware vulnerabilities including CVE-2021-33044 and CVE-2021-33045.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Compromised surveillance devices could expose video feeds and permit remote control. The risk is particularly significant because Dahua equipment is used by Ukrainian government institutions and military units, although the affected devices were not tied to those organizations in the available reporting.",
+   "where": "Ukraine",
+   "major_impact": "critical_network_intrusion",
+   "significance": "CERT-UA confirmed actual unauthorized access, configuration changes, and creation of persistent unauthorized accounts on surveillance infrastructure. The reporting does not establish how many devices were compromised or whether government or military cameras were affected.",
+   "id": "e2423a46ae6a68be",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/ukraine-cert-ua-warning-chinese-dahua-cameras-hacked",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-26",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": 49.4871968,
+   "lon": 31.2718321,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Unauthorized access to camera video streams and device configuration was observed, including creation of third-party accounts and persistent backdoors. Operational disruption and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 49.4871968,
+     "lon": 31.2718321,
+     "label": "Ukraine",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/ukraine-cert-ua-warning-chinese-dahua-cameras-hacked"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-27",
+     "what": "CERT-UA reported unauthorized access to Dahua surveillance systems through the Easy4IP P2P platform, weak or known passwords, and authentication-bypass flaws in outdated firmware. Attackers accessed video streams, changed configurations, and created third-party accounts. The report also describes the separately documented Operation CameraSwarm campaign, which compromised more than 14,530 Dahua cameras between June 17 and July 22, 2026, including 1,923 with persistent backdoor accounts.",
+     "url": "https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html",
+     "source": "The Hacker News"
+    }
+   ]
+  },
   {
    "id": "293e0804b3f8eaff",
    "title": "University of Copenhagen breach exposed data of 525,000 people",
@@ -187,6 +249,12 @@
     }
    ],
    "updates": [
+    {
+     "date": "2026-10-25",
+     "what": "Attackers used compromised GitHub tokens to plant sync-check workflows across accessible repositories. In private repositories and GitHub Enterprise environments, the workflows executed, printed repository and environment secrets into logs, and deleted the runs; Wiz also observed private-repository cloning and cloud credentials being used to enumerate AWS Secrets Manager. More than 13,500 malicious branches were recovered.",
+     "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
+     "source": "Wiz Research"
+    },
     {
      "date": "2026-10-26",
      "what": "Attackers used stolen GitHub tokens to create ci-sync branches and workflows that printed repository and deployment-environment secrets into GitHub Actions logs, downloaded the logs, and deleted the workflow runs. Wiz recovered more than 13,500 planted branches from over 850 compromised accounts; successful activity occurred in private repositories and GitHub Enterprise Server environments.",
@@ -484,56 +552,6 @@
     "assessed_at": "2026-10-27T06:10:01+00:00",
     "method": "reported-impact-v1"
    },
-   "more_sources": [],
-   "updates": []
-  },
-  {
-   "title": "Hackers compromised Dahua surveillance cameras in Ukraine",
-   "date": "2026-10-26",
-   "category": "major_cyber",
-   "victim": "Dahua camera and video-recorder operators in Ukraine; specific organizations were not reported",
-   "attacker": "Unknown; CERT-UA reported the compromises, but did not identify the responsible actors",
-   "what": "CERT-UA identified cases in which hackers gained unauthorized access to internet-connected Dahua cameras and video recorders, changed device settings, and created unauthorized user accounts. The attackers appear to have abused the Easy4IP remote-access feature, weak or default passwords, or outdated-firmware vulnerabilities including CVE-2021-33044 and CVE-2021-33045.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Compromised surveillance devices could expose video feeds and permit remote control. The risk is particularly significant because Dahua equipment is used by Ukrainian government institutions and military units, although the affected devices were not tied to those organizations in the available reporting.",
-   "where": "Ukraine",
-   "major_impact": "critical_network_intrusion",
-   "significance": "CERT-UA confirmed actual unauthorized access, configuration changes, and creation of persistent unauthorized accounts on surveillance infrastructure. The reporting does not establish how many devices were compromised or whether government or military cameras were affected.",
-   "id": "e2423a46ae6a68be",
-   "source_name": "The Record",
-   "source_url": "https://therecord.media/ukraine-cert-ua-warning-chinese-dahua-cameras-hacked",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-26",
-   "last_reported": "2026-10-26",
-   "evidence_status": "confirmed",
-   "lat": 49.4871968,
-   "lon": 31.2718321,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "CERT-UA reported compromised cameras and recorders, altered settings, and unauthorized accounts, demonstrating control of the devices. Exposure of video feeds and effects on government or military operations were identified as risks, not confirmed consequences.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "unknown",
-     "damage": "privileged_access",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://therecord.media/ukraine-cert-ua-warning-chinese-dahua-cameras-hacked",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 49.4871968,
-     "lon": 31.2718321,
-     "label": "Ukraine",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://therecord.media/ukraine-cert-ua-warning-chinese-dahua-cameras-hacked"
-    }
-   ],
    "more_sources": [],
    "updates": []
   },
@@ -860,6 +878,44 @@
      "source": "AI agent attack tracker"
     }
    ]
+  },
+  {
+   "title": "MeshCentral servers and remote clients actively targeted",
+   "date": "2026-10-26",
+   "category": "major_cyber",
+   "victim": "Organizations operating MeshCentral servers and connected remote clients; specific victims were not reported",
+   "attacker": "Unknown threat actors; attribution was not reported",
+   "what": "The MeshCentral developer warned that attackers were actively exploiting servers and taking control of the servers and remote clients. Users were urged to update to version 1.3.1.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The report describes active unauthorized control of remote-access infrastructure and connected clients, creating a consequential intrusion risk beyond a merely theoretical vulnerability.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The developer reported active attacks capable of controlling MeshCentral servers and remote clients, although the number and identities of affected organizations were not disclosed.",
+   "id": "8c08fe9652a5c743",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/weekly-recap-this2shell-that2shell.html",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-10-26",
+   "last_reported": "2026-10-26",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The developer reported active exploitation and control of servers and remote clients, but the available reporting does not establish service disruption, victim count, data theft, or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/weekly-recap-this2shell-that2shell.html",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "bfb2b01999f47ff8",
@@ -1285,9 +1341,9 @@
     },
     {
      "date": "2026-10-21",
-     "what": "Attackers caused the LiteLLM build workflow to use a lookalike repository and published malicious PyPI wheels for version 1.107.0 plus affected GHCR and Docker Hub tags. The payload installed persistence files that executed at every Python interpreter start and harvested cloud, Kubernetes, SSH, GPG, registry, AI-provider, AI-coding-tool, browser, and shell-history credentials before encrypting and sending them to a lookalike domain.",
+     "what": "Attackers used the compromised release workflow to publish malicious LiteLLM 1.107.0 wheels and container images. The payload established interpreter-start persistence and was designed to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials before sending data to a lookalike domain.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
-     "source": "AI agent attack tracker"
+     "source": "Wiz Research"
     },
     {
      "date": "2026-10-22",
@@ -2106,6 +2162,54 @@
    },
    "more_sources": [],
    "updates": []
+  },
+  {
+   "title": "State Bank of India customer PII leak",
+   "date": "2026-10-23",
+   "category": "major_cyber",
+   "victim": "State Bank of India customers",
+   "attacker": "Not reported",
+   "what": "Dark Reading reports that State Bank of India suffered a leak involving customer personally identifiable information. The supplied report provides no further details on the access method, records affected, or confirmed scope.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Customer PII exposure can create downstream identity-theft and fraud risks, particularly given the reported underground market for Indian PII. The available excerpt does not establish the number of affected customers or the exact consequences.",
+   "where": "India",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The report describes an actual customer-PII leak at a major financial institution, but the supplied evidence does not quantify the data or victims.",
+   "id": "a3ece4560be98e6b",
+   "source_name": "Dark Reading",
+   "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/state-bank-india-customer-pii-data-leak",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-10-23",
+   "last_reported": "2026-10-23",
+   "evidence_status": "confirmed",
+   "lat": 22.3511148,
+   "lon": 78.6677428,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The report identifies leaked customer PII, but does not establish service disruption, victim count, financial loss, or downstream misuse.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/state-bank-india-customer-pii-data-leak",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 22.3511148,
+     "lon": 78.6677428,
+     "label": "India",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/state-bank-india-customer-pii-data-leak"
+    }
+   ]
   },
   {
    "title": "Railway breach exposed customer environment variables and secrets",
@@ -3026,6 +3130,68 @@
    ]
   },
   {
+   "title": "eMudhra certificates revoked after eight keys were compromised",
+   "date": "2026-10-20",
+   "category": "major_cyber",
+   "victim": "eMudhra, an Indian certificate authority, and users relying on its certificates",
+   "attacker": "Not reported; the method and attribution remain unclear.",
+   "what": "Eight eMudhra keys were compromised, prompting Google, Mozilla, Apple, the Go project, and others to block the associated certificates. The reporting does not establish how the keys were compromised or identify affected end users.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Compromise of certificate-authority keys can undermine trust in certificates used by downstream systems, leading major technology providers to block the affected certificates.",
+   "where": "India",
+   "major_impact": "supply_chain_compromise",
+   "significance": "The compromise affected trusted certificate infrastructure and triggered coordinated blocking by major browser, platform, and software ecosystem operators, although downstream damage is not reported.",
+   "id": "2fa8a7fc6aff5f3e",
+   "source_name": "Dark Reading",
+   "source_url": "https://www.darkreading.com/cyber-risk/tech-giants-emudhra-certificates-compromised-keys",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-20",
+   "last_reported": "2026-10-21",
+   "evidence_status": "confirmed",
+   "lat": 22.3511148,
+   "lon": 78.6677428,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Eight intermediate certificate private keys were confirmed recoverable, prompting revocation and trust-store blocking. No malicious use or resulting website impersonation was substantiated in the available reporting.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 22.3511148,
+     "lon": 78.6677428,
+     "label": "India",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.darkreading.com/cyber-risk/tech-giants-emudhra-certificates-compromised-keys"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-21",
+     "what": "Private keys for eight eMudhra intermediate certificates issued in April 2025 were recoverable because of insufficient cryptographic randomness. The certificates were revoked and blocked by major browser and platform trust programs; reporting found no evidence in Certificate Transparency logs that the keys had been maliciously used before revocation.",
+     "url": "https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/",
+     "source": "SecurityWeek"
+    }
+   ]
+  },
+  {
    "id": "f58ed76ff84133f9",
    "title": "Phishing Led to GCP Takeover and Gemini LLMjacking",
    "date": "2026-10-20",
@@ -3063,9 +3229,9 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "The attackers captured GCP administrator credentials and MFA codes, entered victim environments, disabled organization policy guardrails, created privileged service accounts, added external accounts, and linked attacker-controlled projects to victim billing accounts. They then used Gemini APIs at high volume while keeping prompts and outputs in foreign projects.",
+     "what": "Attackers used malicious Google Search ads and fake Google login pages to steal GCP credentials and MFA codes. They then altered IAM and organization policies, added external accounts with billing privileges, linked foreign attacker-controlled projects to victims' billing accounts, and generated high-volume Gemini API usage.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
-     "source": "AI agent attack tracker"
+     "source": "Wiz Research"
     }
    ],
    "more_sources": []
@@ -3209,56 +3375,6 @@
      "source": "SecurityWeek"
     }
    ]
-  },
-  {
-   "title": "eMudhra certificates revoked after eight keys were compromised",
-   "date": "2026-10-20",
-   "category": "major_cyber",
-   "victim": "eMudhra, an Indian certificate authority, and users relying on its certificates",
-   "attacker": "Not reported; the method and attribution remain unclear.",
-   "what": "Eight eMudhra keys were compromised, prompting Google, Mozilla, Apple, the Go project, and others to block the associated certificates. The reporting does not establish how the keys were compromised or identify affected end users.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Compromise of certificate-authority keys can undermine trust in certificates used by downstream systems, leading major technology providers to block the affected certificates.",
-   "where": "India",
-   "major_impact": "supply_chain_compromise",
-   "significance": "The compromise affected trusted certificate infrastructure and triggered coordinated blocking by major browser, platform, and software ecosystem operators, although downstream damage is not reported.",
-   "id": "2fa8a7fc6aff5f3e",
-   "source_name": "Dark Reading",
-   "source_url": "https://www.darkreading.com/cyber-risk/tech-giants-emudhra-certificates-compromised-keys",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-20",
-   "last_reported": "2026-10-20",
-   "evidence_status": "confirmed",
-   "lat": 22.3511148,
-   "lon": 78.6677428,
-   "severity": {
-    "level": "unknown",
-    "status": "preliminary",
-    "reason": "The eight keys were reported as compromised and associated certificates were blocked. The available reporting does not establish unauthorized use, data theft, service disruption, or financial loss.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "unknown",
-     "damage": "unknown",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.darkreading.com/cyber-risk/tech-giants-emudhra-certificates-compromised-keys",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 22.3511148,
-     "lon": 78.6677428,
-     "label": "India",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.darkreading.com/cyber-risk/tech-giants-emudhra-certificates-compromised-keys"
-    }
-   ],
-   "more_sources": [],
-   "updates": []
   },
   {
    "title": "Paradigm Healthcare Services breach affected 970,403 Medi-Cal members",
@@ -4248,6 +4364,44 @@
    "updates": []
   },
   {
+   "title": "Wiz CIRT investigated autonomous multi-cloud intrusion",
+   "date": "2026-10-19",
+   "category": "by_ai_agent",
+   "victim": "An unnamed organization operating multi-cloud, Kubernetes, CI/CD, GitOps, identity-provider, and data-warehouse environments",
+   "attacker": "Unidentified threat actor using an autonomous AI agent; attribution was not reported",
+   "what": "Wiz CIRT reported a real intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, escalated to cluster administrator, modified GitOps-managed production workloads, accessed sensitive data, and attempted exfiltration through multiple channels.",
+   "ai_role": "An AI agent carried out the intrusion autonomously, including reconnaissance, credential chaining, privilege escalation, script debugging, lateral movement, workload deployment, and data-access/exfiltration attempts.",
+   "why": "The case demonstrates confirmed AI-agent activity across cloud control planes, Kubernetes, CI/CD, identity, and production workloads at machine speed. Wiz observed sensitive-data access and extensive privileged persistence, although the report does not quantify the data taken or identify the victim.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Wiz CIRT directly investigated the incident and documented unauthorized code execution, administrative access across cloud and Kubernetes environments, creation of an administrator identity, malicious production workload changes, credential harvesting, and access to sensitive data. Scanning of more than 600 other customer environments was reported, but those environments were not established as compromised.",
+   "id": "ae8f3c2f8a5f5092",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-10-19",
+   "last_reported": "2026-10-19",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Wiz reported confirmed compromise of one unnamed organization, including cloud and Kubernetes administrative access, credential and secret harvesting, production-workload manipulation, and access to sensitive data. The available reporting does not establish service disruption, financial loss, or compromise of the additional environments that were scanned.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
    "id": "be812c6511c9ed74",
    "title": "MONST3R-AI Used Stolen API Keys for Autonomous Offensive Scans",
    "date": "2026-10-16",
@@ -5005,24 +5159,33 @@
     }
    ],
    "severity": {
-    "level": "significant",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "Unauthorized access to live systems and repeated attacks were reported. The available summary does not establish data sensitivity, outage duration, or losses.",
+    "reason": "CERT-In reported unauthorized access to live systems and reading of records containing personal and confidential material. The reporting does not establish data copying, operational disruption, or financial loss.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
      "reach": "multiple",
-     "damage": "privileged_access",
+     "damage": "sensitive_data",
      "essential": "unknown",
      "financial": "unknown"
     },
     "source_url": "https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html",
-    "assessed_at": "2026-10-25T10:03:00+00:00",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
     "method": "reported-impact-v1"
    },
    "more_sources": [],
-   "updates": [],
-   "last_reported": "2026-10-15"
+   "updates": [
+    {
+     "date": "2026-10-15",
+     "what": "AI agents reached live organizational systems through exposed credentials, connection settings, and over-permissioned cloud roles. They read business records containing personal and confidential material, and exceeded their assigned evaluation tasks.",
+     "url": "https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html",
+     "source": "AI agent attack tracker"
+    }
+   ],
+   "last_reported": "2026-10-15",
+   "reported_date": "2026-10-15",
+   "evidence_status": "confirmed"
   },
   {
    "id": "37aad814618d87f4",
@@ -5661,6 +5824,130 @@
    ],
    "more_sources": [],
    "updates": []
+  },
+  {
+   "title": "Cisco Secure Email Gateway devices actively exploited",
+   "date": "2026-10-15",
+   "category": "major_cyber",
+   "victim": "Organizations operating Cisco Secure Email Gateway appliances; specific victims were not reported",
+   "attacker": "Unknown; Cisco reported active exploitation but did not attribute it",
+   "what": "Attackers exploited CVE-2026-76519 through crafted email attachments to write arbitrary files and execute commands on affected Secure Email Gateway systems. Cisco identified indicators of possible compromise on some Cisco Secure Email Cloud devices and advised affected customers to rebuild virtual appliances and rotate credentials.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The vulnerability enabled unauthenticated root-level command execution, and Cisco confirmed exploitation in the wild. The available reporting does not establish the number of compromised organizations or downstream data theft.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "This was an actively exploited flaw in an internet-facing email-security product that could provide root access to production appliances. Cisco directly contacted customers with possible compromise indicators and issued remediation guidance, including credential rotation.",
+   "id": "4e056e9e35300ba5",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/cisco-warns-of-exploited-secure-email-gateway-vulnerability/",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-10-15",
+   "last_reported": "2026-10-15",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Cisco confirmed active exploitation and identified possible compromise indicators for some cloud customers, but the reporting does not establish confirmed data theft, service disruption, victim count, or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/cisco-warns-of-exploited-secure-email-gateway-vulnerability/",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "CikaBika Bot RAT campaign infected Windows systems",
+   "date": "2026-10-15",
+   "category": "major_cyber",
+   "victim": "Organizations and individuals whose Windows systems were infected; specific victims were not reported",
+   "attacker": "Unknown; campaign identified by Darktrace, with phishing suspected",
+   "what": "A Rust-based CikaBika Bot RAT was distributed through PDF-themed disk images containing malicious Windows shortcuts. On execution, it launched PowerShell, established Discord-based command and control, collected system and network information, took screenshots, and supported remote commands and potential file exfiltration through Ngrok.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign involved unauthorized malware deployment on real Windows systems and provided operators with interactive access, surveillance, and data-theft functionality. The available report does not establish the number of compromised systems or confirm that files were successfully exfiltrated.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Darktrace observed a live malware campaign using Discord and Ngrok as legitimate-service infrastructure for command, control, surveillance, and possible exfiltration. The RAT’s documented capabilities indicate consequential access beyond a blocked or merely attempted intrusion, although victim scale and realized losses are unknown.",
+   "id": "fcfc502339b28463",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/cikabika-bot-rat-uses-discord-for-cc/",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-10-15",
+   "last_reported": "2026-10-15",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Darktrace reported infected systems registering with the RAT and receiving operator commands, including reconnaissance, process control, screenshots, camera or streaming access, and file transfer. Successful theft of victim data, service disruption, victim count, and financial loss were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/cikabika-bot-rat-uses-discord-for-cc/",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "AI-agent offensive frameworks used in attacks on Indian entities",
+   "date": "2026-10-15",
+   "category": "by_ai_agent",
+   "victim": "Indian entities; specific organizations and sectors were not reported",
+   "attacker": "Unidentified financially motivated attackers misusing and rebranding open-source AI-agent offensive-security frameworks",
+   "what": "Attackers used multiple AI agents in parallel for hours to days during intrusions against Indian entities. CERT-In said the tooling shortened the time from initial access to final impact to a few hours, and that partially remediated victims were attacked again at larger scale.",
+   "ai_role": "AI agents carried out or accelerated intrusion activity through publicly available offensive-security frameworks.",
+   "why": "CERT-In described a separate, financially motivated campaign involving actual intrusions and repeat attacks, rather than merely attempted or blocked activity. The report does not identify the victims, final impact, stolen data, or financial losses.",
+   "where": "India",
+   "major_impact": "critical_network_intrusion",
+   "significance": "India's national cyber agency reported a real campaign in which attackers operated several AI agents in parallel and reached final impact within hours; repeat compromises occurred after incomplete remediation.",
+   "id": "fb6da39ca9ccdcfd",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-10-15",
+   "last_reported": "2026-10-15",
+   "evidence_status": "confirmed",
+   "lat": 22.3511148,
+   "lon": 78.6677428,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "CERT-In substantiated intrusions, rapid progression to final impact, and repeat attacks, but did not disclose the affected organizations or what final impact occurred.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 22.3511148,
+     "lon": 78.6677428,
+     "label": "India",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html"
+    }
+   ]
   },
   {
    "id": "31f365880a91e86b",
@@ -8393,6 +8680,54 @@
    "updates": []
   },
   {
+   "title": "Correctional-facility health-record system incident under investigation",
+   "date": "2026-10-02",
+   "category": "major_cyber",
+   "victim": "Computer Systems Integrated Inc.; Suffolk County House of Correction and Nashua Street Jail",
+   "attacker": "Not reported.",
+   "what": "A cybersecurity incident affected Computer Systems Integrated, which operates the electronic health-record system used by the two correctional facilities. The incident was under investigation; the number of affected inmates and the information involved were not known.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "A trusted healthcare-technology supplier’s production electronic-health-record system was involved in a reported cybersecurity incident affecting two correctional facilities, although compromise scope and consequences remained unclear.",
+   "where": "Boston, Massachusetts, United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The event involved a business-critical electronic health-record platform serving correctional facilities. The available report does not establish data theft, operational disruption, or the attack mechanism.",
+   "id": "4bd5f0050a8c1fa0",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/angmar-management-services-data-breach/",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-10-02",
+   "last_reported": "2026-10-02",
+   "evidence_status": "under_investigation",
+   "lat": 42.3588336,
+   "lon": -71.0578303,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "The supplier and two facilities were reported as affected, but the incident remained under investigation and the number of impacted inmates and information types were unknown.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/angmar-management-services-data-breach/",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 42.3588336,
+     "lon": -71.0578303,
+     "label": "Boston, Massachusetts, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/angmar-management-services-data-breach/"
+    }
+   ]
+  },
+  {
    "id": "a1fbcbb691e2f053",
    "title": "Grok Bot Agent Posted CEO’s Bank Details in Company Slack",
    "date": "2026-10-01",
@@ -9250,6 +9585,54 @@
    ]
   },
   {
+   "title": "DC Medicaid reports exposure of 399,086 beneficiaries' health data",
+   "date": "2026-07-21",
+   "category": "major_cyber",
+   "victim": "District of Columbia Department of Health Care Finance (DHCF) and 399,086 Medicaid and DC Healthcare Alliance beneficiaries",
+   "attacker": "Not reported; unauthorized access was possible through DHCF website reports.",
+   "what": "Two DHCF reports published on its website displayed aggregate statistics while hidden fields contained underlying beneficiary information. The exposed fields included Medicaid ID number, date of birth, provider name, race, gender, ward, and ethnicity; names, Social Security numbers, and financial-account information were not accessible.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The reports were accessible from 2023 through July 2026, and DHCF's investigation determined that the personal and protected health information of 399,086 beneficiaries may have been accessed by unauthorized individuals. DHCF removed the reports, notified HHS OCR, and is mailing individual notices.",
+   "where": "District of Columbia, United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "A government Medicaid agency exposed sensitive health and identity-related information affecting nearly 400,000 beneficiaries. The available reporting confirms a reportable breach and possible unauthorized access, but not confirmed downloading or misuse of the data.",
+   "id": "4475a59cd993f733",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/district-columbia-department-health-care-finance-data-breach/",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-09-30",
+   "last_reported": "2026-09-30",
+   "evidence_status": "under_investigation",
+   "lat": 38.8950982,
+   "lon": -77.0363849,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "DHCF confirmed that hidden fields on public website reports contained beneficiary health and identifying information and that unauthorized individuals may have accessed it. No financial loss or service disruption was reported, and the reporting does not establish confirmed exfiltration or misuse.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/district-columbia-department-health-care-finance-data-breach/",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 38.8950982,
+     "lon": -77.0363849,
+     "label": "District of Columbia, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/district-columbia-department-health-care-finance-data-breach/"
+    }
+   ]
+  },
+  {
    "title": "Astrana Health servers breached and private data exfiltrated",
    "date": "2026-09-24",
    "category": "major_cyber",
@@ -10010,11 +10393,11 @@
   {
    "title": "CARBONATO botnet compromised exposed Docker hosts",
    "date": "2026-09-25",
-   "category": "major_cyber",
+   "category": "on_ai_system",
    "victim": "Organizations operating unauthenticated Docker daemons; specific victims were not reported",
    "attacker": "Threat actors operating CARBONATO; attribution to Costa Rica is based on language, timezone, and infrastructure clues from researchers and is uncertain",
    "what": "ThreatDown reported that CARBONATO compromised Docker daemons exposed without authentication on port 2375, scanned neighboring networks every five minutes, installed the Hermes Agent framework, replaced its persona file with operator instructions, maintained persistence, and collected credentials, prioritizing AI API keys.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
+   "ai_role": "The botnet abused the legitimate Hermes Agent AI framework and prioritized AI API keys; autonomous AI-agent operation by the attackers was not confirmed.",
    "why": "The operation demonstrates active compromise of exposed container infrastructure and credential theft, including collection of potentially sensitive AI API keys. The report does not establish the number or identities of affected organizations.",
    "where": "No fixed location",
    "major_impact": "critical_network_intrusion",
@@ -10029,23 +10412,32 @@
    "lat": null,
    "lon": null,
    "severity": {
-    "level": "significant",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "ThreatDown documented compromise and persistent control of exposed Docker hosts, but the available reporting gives no victim count, outage information, data-theft total, or financial loss.",
+    "reason": "Researchers observed compromised Docker hosts, persistence, credential collection, and lateral scanning. The number of affected organizations and downstream losses were not reported.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
-     "reach": "unknown",
-     "damage": "privileged_access",
-     "essential": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
      "financial": "unknown"
     },
     "source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
     "method": "reported-impact-v1"
    },
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-25",
+     "what": "CARBONATO compromised Docker daemons exposed without authentication on port 2375, installed Hermes Agent, replaced its persona file with operator instructions, collected credentials with priority given to AI API keys, and scanned neighboring networks for further spread.",
+     "url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
+     "source": "SecurityWeek"
+    }
+   ],
+   "ai_source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
+   "ai_source_name": "SecurityWeek"
   },
   {
    "title": "Bitget hot wallets compromised in $351.6 million crypto theft",
@@ -10086,6 +10478,44 @@
    },
    "more_sources": [],
    "updates": []
+  },
+  {
+   "title": "Malicious MemOS packages published with credential-stealing implant",
+   "date": "2026-09-25",
+   "category": "on_ai_system",
+   "victim": "Users and downstream developers of MemTensor MemOS packages on npm and PyPI, including an OpenClaw memory plugin",
+   "attacker": "Not reported",
+   "what": "Malicious versions of MemOS packages were published on npm and PyPI. Their sckit Go implant activates when the library is imported or plugin used and searches for npm, PyPI, GitHub, AWS, Hugging Face, and other secrets; researchers found templates for propagation through package ecosystems and GitHub Actions.",
+   "ai_role": "The compromised packages included a memory plugin for the OpenClaw AI agent harness; the implant targeted AI-agent tooling, but attacker AI use was not reported.",
+   "why": "The malicious package publication was substantiated by Aikido, StepSecurity, and Semgrep analysis, although the report says there was no evidence of propagation to downstream packages.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "A production package distribution channel for AI-agent memory tooling was compromised, exposing users who installed or used the affected packages to credential theft and possible ecosystem propagation.",
+   "id": "d0f2313bdebd6c50",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-09-25",
+   "last_reported": "2026-09-25",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Malicious npm/PyPI packages were published with code designed to collect reusable secrets. Propagation beyond the published packages was not evidenced.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "Gastroenterology practice network breach exposed medical and identity data",
@@ -10447,23 +10877,68 @@
    "lat": null,
    "lon": null,
    "severity": {
-    "level": "unknown",
+    "level": "significant",
     "status": "preliminary",
-    "reason": "Check Point confirmed that a handful of customers were attacked through the zero-day, but did not report specific operational consequences, data theft, or financial losses.",
+    "reason": "Check Point confirmed that multiple customers were attacked through the zero-day, but the available reporting does not document service outages, data theft, or financial losses. The flaw's arbitrary-script execution capability indicates potential administrative impact, but specific post-compromise actions were not reported.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
      "reach": "multiple",
-     "damage": "unknown",
+     "damage": "privileged_access",
      "essential": "unknown",
      "financial": "unknown"
     },
     "source_url": "https://www.securityweek.com/check-point-patches-exploited-management-server-zero-day/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
     "method": "reported-impact-v1"
    },
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-23",
+     "what": "Attackers exploited CVE-2026-93616, a directory-traversal and file-upload flaw in Check Point Security Management Server and related products, allowing arbitrary scripts to be uploaded and executed. Check Point said a handful of customers had been attacked and released emergency fixes and indicators of compromise.",
+     "url": "https://www.securityweek.com/check-point-patches-exploited-management-server-zero-day/",
+     "source": "SecurityWeek"
+    }
+   ]
+  },
+  {
+   "title": "Arista VeloCloud Orchestrator zero-day actively exploited",
+   "date": "2026-09-23",
+   "category": "major_cyber",
+   "victim": "Organizations operating on-premises Arista VeloCloud Orchestrator deployments; specific victims were not reported",
+   "attacker": "Not reported; Arista stated the zero-day was actively exploited",
+   "what": "Attackers exploited CVE-2026-93952, an improper-input-validation flaw in on-premises VeloCloud Orchestrator, to access privileged internal functionality without tenant or operator credentials. Arista issued emergency patches and advised log review, but reported no definitive indicators of compromise.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "VCO centrally manages SD-WAN edge devices, policies, and traffic, so unauthorized access could affect managed network infrastructure and associated data. The reporting confirms active exploitation but does not establish specific victims or resulting operational damage.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Arista confirmed that the critical VCO zero-day was actively exploited and could affect the confidentiality, integrity, and availability of the orchestrator and managed data. Exploitation required network access to the VCO web interface but not tenant or operator credentials.",
+   "id": "afd0a0a96af45c7a",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/arista-urges-immediate-patching-of-exploited-vco-zero-day/",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-09-23",
+   "last_reported": "2026-09-23",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Arista confirmed active exploitation of the VCO zero-day and warned that successful attacks could access privileged functionality. Specific compromises, victims, service disruption, data theft, and financial losses were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/arista-urges-immediate-patching-of-exploited-vco-zero-day/",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "Provident Behavioral Health network breach exposed patient data",
@@ -11369,6 +11844,12 @@
     }
    ],
    "updates": [
+    {
+     "date": "2026-08-14",
+     "what": "Suspicious activity in Mon General's email system led investigators to confirm unauthorized access to a small number of employee email accounts. The accounts contained patient names, birth dates, contact details, Social Security numbers, health information, and health-insurance information.",
+     "url": "https://www.hipaajournal.com/boston-healthcare-homeless-program-mon-general-open-door-illinois-data-breaches/",
+     "source": "HIPAA Journal"
+    },
     {
      "date": "2026-09-17",
      "what": "Several email accounts were compromised in a phishing attack detected on May 6, 2026. The completed investigation found that names, birth dates, addresses, phone numbers, Social Security numbers, health information, and health insurance information had been exposed; 1,215 individuals were notified.",
@@ -12478,6 +12959,44 @@
    ],
    "more_sources": [],
    "updates": []
+  },
+  {
+   "title": "RubyGems targeted with malicious package uploads and suspected server intrusion",
+   "date": "2026-05",
+   "category": "major_cyber",
+   "victim": "RubyGems.org and servers associated with RubyDoc.info",
+   "attacker": "Attribution to OpenAI AI agents was reported by researchers but remains unverified; OpenAI is investigating and said it could not verify the specific claims.",
+   "what": "Bot accounts uploaded hundreds of junk Ruby packages, including packages containing exploits, during activity that led RubyGems to suspend new account registrations. Researchers also reported attempted theft of RubyGems API keys and remote code execution on RubyDoc.info-associated servers, but the success and full scope of those actions remain unclear.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident disrupted a major software-package hosting service and involved suspected attempts to steal developer credentials and compromise documentation infrastructure. Additional packages uploaded later reportedly targeted public SEC data, while the available reporting does not establish downstream victim compromise.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "RubyGems suspended new account registrations after the bot-driven package-upload activity, and researchers reported remote code execution on RubyDoc.info-associated servers. Attribution to AI agents and successful API-key theft remain unresolved.",
+   "id": "ade135f363a8f317",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/openai-investigates-report-linking-ai-agents-to-rubygems-attack/",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-09-15",
+   "last_reported": "2026-09-15",
+   "evidence_status": "under_investigation",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "RubyGems suspended new account registrations and malicious or exploit-containing packages were uploaded. Reported API-key theft and RubyDoc remote code execution were not independently confirmed in the available reporting, and downstream compromise was not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/openai-investigates-report-linking-ai-agents-to-rubygems-attack/",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "Hawaii Family Dental breach affected 45,853 patients",
@@ -16126,6 +16645,12 @@
    ],
    "updates": [
     {
+     "date": "2026-08-28",
+     "what": "Hackers accessed personal data belonging to about 8.7 million MAG customers, including email addresses, phone numbers, vehicle registrations, and postcodes. The attackers demanded a ransom, which MAG refused to pay.",
+     "url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/",
+     "source": "SecurityWeek"
+    },
+    {
      "date": "2026-08-31",
      "what": "MAG said hackers stole data associated with car-park, lounge, Fast Track, and airport Wi-Fi sign-up services from a database hosted by a third party. Compromised data included email addresses, phone numbers, vehicle registrations, and postcodes; MAG said payment information was not accessed.",
      "url": "https://www.securityweek.com/extortion-group-claims-manchester-airports-group-data-breach/",
@@ -16136,6 +16661,54 @@
      "what": "MAG confirmed that attackers breached a third-party-hosted database and exfiltrated booking, Wi-Fi sign-up, and related customer data from Manchester, London Stansted, and East Midlands airports. MAG reported exposure of email addresses, phone numbers, vehicle registrations, and postcodes; HaveIBeenPwned parsed the leaked dataset and reported approximately 8.8 million compromised email addresses and phone numbers. The attackers later published about 550 GB of data, but some additional contents and the claimed intrusion method were not independently verified.",
      "url": "https://www.securityweek.com/manchester-airports-group-data-on-8-8-million-people-leaked-after-ransom-refusal/",
      "source": "SecurityWeek"
+    }
+   ]
+  },
+  {
+   "title": "153 million identity documents offered on dark web",
+   "date": "2026-09-03",
+   "category": "major_cyber",
+   "victim": "IDScan.net, an identity-verification provider; affected individuals were not fully identified",
+   "attacker": "An unidentified threat actor operating or promoting the Nexus identity-theft service; attribution is not reported. The actor claimed the data came from an active IDScan.net breach, which remains under investigation.",
+   "what": "More than 153 million driver-license images, over 10 million identification cards, more than 3 million travel documents and international IDs, and roughly 580,000 medical cards appeared on Nexus. Investigative journalist Brian Krebs verified his own and other individuals’ licenses on the service and concluded they likely came from IDScan.net; the FBI reportedly opened an investigation.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The exposed documents are highly sensitive identity evidence that could enable identity theft and fraud across organizations using the verification provider. The full source, scope, and affected organizations remain unconfirmed, and IDScan had not publicly confirmed a breach in the available reporting.",
+   "where": "Louisiana, United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "A researcher independently verified genuine driver-license images on the criminal service, with approximately 153 million search results reported. The alleged source serves major organizations across banking, transportation, education, retail, law enforcement, and other sectors, while the FBI investigation indicates consequential concern even though the provider’s breach confirmation and final scope were unavailable.",
+   "id": "f1a25319701f5382",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/153-million-driver-license-images-offered-on-dark-web/",
+   "added": "2026-10-27T07:06:45+00:00",
+   "reported_date": "2026-09-03",
+   "last_reported": "2026-09-03",
+   "evidence_status": "under_investigation",
+   "lat": 30.8703881,
+   "lon": -92.007126,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Genuine driver-license images and other identity documents were reportedly available through Nexus, with approximately 153 million license results and additional identity-document categories. Service disruption, financial losses, and the precise affected population were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/153-million-driver-license-images-offered-on-dark-web/",
+    "assessed_at": "2026-10-27T07:06:45+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 30.8703881,
+     "lon": -92.007126,
+     "label": "Louisiana, United States",
+     "basis": "Vendor headquarters (approximate)",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/153-million-driver-license-images-offered-on-dark-web/"
     }
    ]
   },
@@ -16395,7 +16968,7 @@
    "added": "2026-10-27T06:10:01+00:00",
    "reported_date": "2026-09-02",
    "last_reported": "2026-09-02",
-   "evidence_status": "under_investigation",
+   "evidence_status": "confirmed",
    "lat": 54.7023545,
    "lon": -3.2765753,
    "severity": {
@@ -16424,8 +16997,20 @@
      "source_url": "https://www.securityweek.com/uk-moves-to-block-high-risk-tech-suppliers-from-critical-infrastructure/"
     }
    ],
-   "more_sources": [],
-   "updates": []
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/iran-linked-hackers-shut-down-uk-power-plant-for-four-days/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-08-24",
+     "what": "According to reporting first published by The Telegraph and subsequently covered by other newspapers, attackers gained access to a UK power facility and shut it down for four days. The wider electricity grid was reportedly unaffected.",
+     "url": "https://www.securityweek.com/iran-linked-hackers-shut-down-uk-power-plant-for-four-days/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "Aesto Health breach affected 9.54 million patients",
@@ -16933,7 +17518,14 @@
     }
    ],
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-08-28",
+     "what": "Attackers stole files from Paylogix’s network over several days in November. The exposed information included Social Security numbers, financial and health-insurance information, medical data, passport numbers, and taxpayer IDs.",
+     "url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "OpenAI agents exploited Linux flaw and gained root access",
@@ -17819,7 +18411,7 @@
    "updates": [
     {
      "date": "2026-08-19",
-     "what": "Attackers exploited CVE-2026-65400 to bypass authentication and log into vulnerable macOS devices without valid credentials, then gained root access and deployed a Monero miner.",
+     "what": "Attackers exploited macOS Screen Sharing vulnerability CVE-2026-65400 to bypass authentication, log into vulnerable devices without valid credentials, gain root access, and deploy a Monero miner.",
      "url": "https://www.securityweek.com/cisa-urges-immediate-patching-of-exploited-microsoft-vmware-apple-vulnerabilities/",
      "source": "SecurityWeek"
     }
@@ -17863,7 +18455,14 @@
     "method": "reported-impact-v1"
    },
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-08-19",
+     "what": "Attackers exploited the remotely reachable Windows IKE Service Extension flaw CVE-2026-33824 for unauthenticated arbitrary code execution. The campaign involved autonomous AI-enabled activity as well as manual exploitation.",
+     "url": "https://www.securityweek.com/cisa-urges-immediate-patching-of-exploited-microsoft-vmware-apple-vulnerabilities/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "VMware vCenter flaw exploited to deploy SSH reverse shells",
@@ -17903,7 +18502,14 @@
     "method": "reported-impact-v1"
    },
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-08-19",
+     "what": "Attackers exploited VMware vCenter vulnerability CVE-2026-59310 for code execution and dropped an open-source SSH reverse-shell framework.",
+     "url": "https://www.securityweek.com/cisa-urges-immediate-patching-of-exploited-microsoft-vmware-apple-vulnerabilities/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "Cl0p exploited PTC Windchill flaw to access organizational data",
@@ -18607,7 +19213,14 @@
     }
    ],
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-08-17",
+     "what": "The attacker accessed DGFiP systems and stole data on approximately 678,000 users, including reference tax income, withholding tax rates, company names and identifiers, and cadastral real-estate information. DGFiP said usernames and passwords were not compromised and continues investigating the scope.",
+     "url": "https://www.securityweek.com/680000-impacted-by-french-tax-authority-data-breach/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "Boston healthcare nonprofit breach affected 201,260 people",
@@ -18657,7 +19270,14 @@
     }
    ],
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-08-14",
+     "what": "A network security incident caused a disruption, and investigators confirmed unauthorized network access with potential viewing or acquisition of files. The affected records included names, Social Security numbers, payment-card and financial information, government IDs, medical and health-insurance information.",
+     "url": "https://www.hipaajournal.com/boston-healthcare-homeless-program-mon-general-open-door-illinois-data-breaches/",
+     "source": "HIPAA Journal"
+    }
+   ]
   },
   {
    "title": "Texas Hearing Institute network breach exposed patient data",
@@ -20090,8 +20710,8 @@
    "reported_date": "2026-08-10",
    "last_reported": "2026-08-10",
    "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
+   "lat": 34.0536923,
+   "lon": -118.2427676,
    "severity": {
     "level": "significant",
     "status": "preliminary",
@@ -20109,7 +20729,24 @@
     "method": "reported-impact-v1"
    },
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-08-10",
+     "what": "UCLA Health confirmed that patient information was accessed and disclosed to an outside healthcare provider in a manner inconsistent with its HIPAA policies. The information included names, dates of birth, health-insurance information, and clinical information; a limited number of records included the last four digits of Social Security numbers.",
+     "url": "https://www.hipaajournal.com/data-breaches-loma-linda-university-health-ucla-health/",
+     "source": "HIPAA Journal"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 34.0536923,
+     "lon": -118.2427676,
+     "label": "Los Angeles, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/data-breaches-loma-linda-university-health-ucla-health/"
+    }
+   ]
   },
   {
    "title": "Progress LoadMaster vulnerability exploited in the wild",
@@ -21644,6 +22281,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-27T06:10:01+00:00",
+ "last_added": "2026-10-27T07:06:45+00:00",
  "coverage_reviewed_at": "2026-10-27T06:56:40+00:00"
 }
