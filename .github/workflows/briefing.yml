@@ -13,6 +13,10 @@ on:
         type: choice
         default: auto
         options: [auto, morning, evening]
+      replace_latest:
+        description: 'Regenerate the latest edition for an editorial correction (uses API credits)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -39,6 +43,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          BRIEF_REPLACE_LATEST: ${{ inputs.replace_latest && 'true' || 'false' }}
           BRIEF_SCHEDULE: ${{ github.event.schedule }}
           BRIEF_EDITION: ${{ inputs.edition || 'auto' }}
       - name: Commit briefing and health

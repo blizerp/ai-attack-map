@@ -83,6 +83,25 @@ class BriefingTests(unittest.TestCase):
             self.assertEqual(saved['edition'],'evening');self.assertTrue(saved['sectors_enabled'])
             self.assertNotIn('text',(root/'brief_state.json').read_text())
 
+    def test_editorial_replacement_keeps_window_and_failed_replacement_keeps_content(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ,{'BRIEF_SCHEDULE':'','BRIEF_EDITION':'auto','BRIEF_REPLACE_LATEST':'false'}):
+            root=Path(tmp)
+            response=SimpleNamespace(choices=[SimpleNamespace(finish_reason='stop',message=SimpleNamespace(content=json.dumps(result()),refusal=None))],usage=None)
+            create=unittest.mock.Mock(return_value=response)
+            client=SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+            gather=lambda *args:([report()],[{'source':'Example','ok':True}],0)
+            self.assertEqual(b.run(root,NOW,client,gather),0)
+            original=json.loads((root/'briefings.json').read_text())['editions'][0]
+            os.environ['BRIEF_REPLACE_LATEST']='true'
+            self.assertEqual(b.run(root,NOW+timedelta(minutes=20),client,gather),0)
+            current=json.loads((root/'briefings.json').read_text())['editions']
+            self.assertEqual(len(current),1)
+            self.assertEqual(current[0]['window_end'],original['window_end'])
+            self.assertEqual(create.call_count,2)
+            create.side_effect=RuntimeError('failed replacement')
+            self.assertEqual(b.run(root,NOW+timedelta(minutes=30),client,gather),1)
+            self.assertEqual(json.loads((root/'briefings.json').read_text())['editions'],current)
+
     def test_morning_has_no_sector_rewrite(self):
         reports=b.prepare([report()],NOW-timedelta(hours=9),NOW-timedelta(days=1),{},False)
         value=b.validate(result(),reports,[],False)
