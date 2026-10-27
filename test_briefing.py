@@ -52,7 +52,8 @@ class BriefingTests(unittest.TestCase):
 
     def test_source_validation_and_mapping(self):
         reports=b.prepare([report()],NOW-timedelta(hours=9),NOW-timedelta(days=1),{},True)
-        validated=b.validate(result(),reports,[{'id':'map1','source_url':report()['url']}],True)
+        value=result();value['overview']['items'][0]['headline']='Example Regional Hospital services disrupted'
+        validated=b.validate(value,reports,[{'id':'map1','victim':'Example Regional Hospital','source_url':report()['url']}],True)
         self.assertEqual(validated['overview']['items'][0]['incident_ids'],['map1'])
         bad=result();bad['overview']['items'][0]['source_ids']=['invented']
         with self.assertRaises(ValueError):b.validate(bad,reports,[],True)
@@ -101,6 +102,18 @@ class BriefingTests(unittest.TestCase):
             create.side_effect=RuntimeError('failed replacement')
             self.assertEqual(b.run(root,NOW+timedelta(minutes=30),client,gather),1)
             self.assertEqual(json.loads((root/'briefings.json').read_text())['editions'],current)
+
+    def test_generic_online_store_does_not_imply_food_sector(self):
+        item={'sectors':['internet','food','water','energy']}
+        b.ground_sector_tags(item,[{'title':'953 online stores hacked','text':'Shoppers encountered malicious browser code.'}])
+        self.assertEqual(item['sectors'],['internet'])
+        item={'sectors':['food']}
+        b.ground_sector_tags(item,[{'title':'Food distributor attack','text':'Food deliveries were delayed.'}])
+        self.assertEqual(item['sectors'],['food'])
+
+    def test_roundup_link_does_not_point_at_another_victim(self):
+        item={'headline':'Denver Health data exposed','what_happened':'Denver Health vendor key exposed.'}
+        self.assertEqual(b.matching_incidents(item,[{'id':'wrong','victim':'Johns Hopkins Bayview Medical Center'}, {'id':'right','victim':'Denver Health Medical Plan'}]),['right'])
 
     def test_morning_has_no_sector_rewrite(self):
         reports=b.prepare([report()],NOW-timedelta(hours=9),NOW-timedelta(days=1),{},False)

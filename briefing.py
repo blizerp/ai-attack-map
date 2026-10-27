@@ -7,6 +7,7 @@ import concurrent.futures
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
@@ -73,7 +74,12 @@ was itself compromised. An exposed supplier key affecting a customer's data DOES
 belong there. For supply-chain items name the compromised upstream relationship.
 For finance, distinguish actual payment/banking effects from hypothetical theft.
 Do not classify hospitals as food or water without
-specific evidence. No arbitrary requirement to fill every tab.
+specific evidence. No arbitrary requirement to fill every tab. Sector assignments require actual
+reported sector involvement, never a hypothetical customer/use case. Generic
+online shopping is NOT Food & Agriculture without an identified food business.
+Do not label a general software exploit Healthcare, Food or Finance just because
+those industries might use it. Do not give instructions about seeking emergency
+medical care; report service-restoration notices and investigation developments.
 source_ids must cite supplied report IDs supporting each item, never invented IDs.
 Use only the fresh_for_overview reports for Overview. Compare with prior_overviews:
 DO NOT repeat previously covered facts, even from a new URL. Include a known event
@@ -185,6 +191,37 @@ def prepare(reports, start, daily_start, seen, sectors_enabled):
                            'source_revised': changed})
     return candidates
 
+SECTOR_TERMS = {
+    'energy': r'\b(?:electricity|electrical|energy|power grid|power plant|power station|power utility|power utilities|oil|gas|refinery|pipeline|nuclear)\b',
+    'water': r'\b(?:water|wastewater|sewage|desalination)\b',
+    'food': r'\b(?:food|agriculture|agricultural|farm|farms|farming|grocery|groceries|supermarket|meat|dairy|grain|restaurant|restaurants|beverage)\b',
+    'finance': r'\b(?:bank|banks|banking|financial|finance|payment|payments|payroll|card|cards|cryptocurrency|crypto|insurance)\b',
+    'healthcare': r'\b(?:hospital|hospitals|health|healthcare|medical|patient|patients|clinic|clinics|pharmacy)\b',
+}
+
+def ground_sector_tags(item, source_reports):
+    # A conservative evidence floor: generic website attacks must not fill food,
+    # water or power tabs merely because those sectors could use the software.
+    evidence = ' '.join(r.get('title','') + ' ' + r.get('text','') for r in source_reports)
+    item['sectors'] = [s for s in item['sectors'] if s not in SECTOR_TERMS or re.search(SECTOR_TERMS[s], evidence, re.I)]
+
+def matching_incidents(item, candidates):
+    # A roundup URL may describe several unrelated victims. A shared URL alone
+    # must not link a Denver story to a Johns Hopkins marker from that article.
+    generic = {'the','and','of','affected','unknown','multiple','various','organizations',
+               'organization','users','customers','companies','company','systems',
+               'system','people','accounts','hospital','hospitals','health','medical',
+               'center','centre','group','network','online','stores','services',
+               'service','government','businesses','victims','unspecified','not','reported'}
+    narrative = ' '.join(item.get(k,'') for k in ['headline','what_happened']).casefold()
+    found = set()
+    for incident in candidates:
+        tokens = re.findall(r"[a-z0-9]+", incident.get('victim','').casefold())
+        names = [t for t in tokens if len(t) >= 4 and t not in generic]
+        if any(re.search(r'\b'+re.escape(t)+r'\b', narrative) for t in names):
+            found.add(incident['id'])
+    return sorted(found)
+
 def validate(result, reports, incidents, sectors_enabled):
     from jsonschema import validate as validate_schema
     validate_schema(result, SCHEMA)
@@ -192,7 +229,7 @@ def validate(result, reports, incidents, sectors_enabled):
     map_urls = {}
     for incident in incidents:
         for url in [incident.get('source_url')] + [x['url'] for x in incident.get('more_sources', [])]:
-            map_urls.setdefault(url, []).append(incident['id'])
+            map_urls.setdefault(url, []).append(incident)
     for key, section in [('overview', result['overview'])] + list(result['sectors'].items()):
         if key != 'overview' and not sectors_enabled:
             section.update(intro='', items=[])
@@ -213,8 +250,14 @@ def validate(result, reports, incidents, sectors_enabled):
             if set(ids) <= used:
                 raise ValueError('Duplicate evidence in section')
             used.update(ids)
+            ground_sector_tags(item, [by_id[i] for i in ids])
             item['sources'] = [{'name': by_id[i]['source'], 'url': by_id[i]['url'], 'published': by_id[i]['published']} for i in dict.fromkeys(ids)]
-            item['incident_ids'] = sorted({mid for i in ids for mid in map_urls.get(by_id[i]['url'], [])})
+            item['incident_ids'] = matching_incidents(item, [inc for i in ids for inc in map_urls.get(by_id[i]['url'], [])])
+        if key != 'overview':
+            kept = [item for item in section['items'] if key in item['sectors']]
+            if len(kept) != len(section['items']):
+                section['intro'] = ''
+            section['items'] = kept
     return result
 
 def generate(client, candidates, previous, sectors_enabled, incidents):
