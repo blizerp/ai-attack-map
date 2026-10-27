@@ -32,7 +32,7 @@
     if(!data) return;
     const all=data.editions || [];
     const overview=all.find(e => e.id===selectedEdition) || newestForDate();
-    if(!overview) {content.innerHTML='<p>The first briefing has not been published yet.</p>'; return;}
+    if(!overview) {content.innerHTML=data.last_attempt?.status==='failed'?'<p class="brief-warning">The first briefing could not be completed. A new edition will appear after a successful update.</p>':'<p>The first briefing has not been published yet.</p>'; return;}
     editions.hidden=selectedTab!=='overview';
     editions.innerHTML=all.filter(e=>e.date===date.value).map(e=>`<button data-edition="${escape(e.id)}" aria-pressed="${e.id===overview.id}">${editionNames[e.edition]||'Briefing'}</button>`).join('');
     const edition=selectedTab==='overview'?overview:all.filter(e=>e.sectors_enabled&&e.date<=date.value).at(-1);
