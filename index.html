@@ -101,8 +101,10 @@ layout: null
   /* Skull marker with a category-colored halo behind the image. */
   .skull-marker {
     position: relative; width: 36px; height: 44px; isolation: isolate;
+    transform: scale(0.6); transform-origin: top left;
     --halo-opacity: 0.65; --halo-blur: 12px; --halo-spread: 5px; --halo-scale: 1.7;
   }
+  .skull-wrap { width: 21.6px; height: 26.4px; }
   .severity-unknown { --halo-opacity: 0.22; --halo-blur: 5px; --halo-spread: 1px; }
   .severity-limited { --halo-opacity: 0.4; --halo-blur: 6px; --halo-spread: 2px; --halo-scale: 1.35; }
   .severity-severe { --halo-opacity: 1; --halo-blur: 19px; --halo-spread: 8px; --halo-scale: 1.9; }
@@ -143,9 +145,9 @@ layout: null
   }
 
   .cluster {
-    display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
-    background: #31465D; color: #fff; font: 800 0.85rem var(--head);
-    box-shadow: 0 0 0 4px rgba(31,42,54,0.25);
+    display: grid; place-items: center; width: 20.4px; height: 20.4px; border-radius: 50%;
+    background: #31465D; color: #fff; font: 800 10px var(--head);
+    box-shadow: 0 0 0 2.4px rgba(31,42,54,0.25);
   }
 
   .global-strip {
@@ -161,9 +163,9 @@ layout: null
   }
   .global-strip h2 { font: 800 0.9rem var(--head); margin: 0 0 3px; text-align: center; }
   .global-strip p { margin: 0; font-size: 0.76rem; color: var(--slate); }
-  .global-markers { display: flex; gap: 12px; overflow-x: auto; padding: 14px 4px 8px; }
+  .global-markers { display: flex; gap: 8px; overflow-x: auto; padding: 14px 4px 8px; }
   .global-marker {
-    flex: 0 0 124px; display: flex; flex-direction: column; align-items: center;
+    flex: 0 0 auto; min-width: 74.4px; display: flex; flex-direction: column; align-items: center;
     gap: 6px; padding: 6px; border: 1px solid var(--rule); border-radius: 5px;
     color: var(--ink); background: transparent; cursor: pointer; font: 600 0.76rem var(--body);
   }
@@ -223,8 +225,9 @@ layout: null
   <div class="panel-content" id="panel-content">
   <p class="sub">AI-related incidents and major cyberattacks, plotted at the victim’s location. Tap a skull for details.</p>
   <div class="row seg" role="group" aria-label="Time range">
-    <button data-days="7">7 days</button>
-    <button data-days="30" aria-pressed="true">30 days</button>
+    <button data-days="3">3 days</button>
+    <button data-days="7" aria-pressed="true">7 days</button>
+    <button data-days="30">30 days</button>
     <button data-days="0">All</button>
   </div>
   <div class="row legend">
@@ -340,7 +343,13 @@ const SEVERITIES = { unknown: "Unknown", limited: "Limited", significant: "Signi
 function severityLevel(i) {
   return Object.hasOwn(SEVERITIES, i.severity?.level) ? i.severity.level : "unknown";
 }
-const state = { days: 30, cats: new Set(Object.keys(CATS)), incidents: [] };
+const SEVERITY_RANK = { unknown: 0, limited: 1, significant: 2, severe: 3, critical: 4 };
+function compareGlobalSeverity(a, b) {
+  const severityDifference = SEVERITY_RANK[severityLevel(b)] - SEVERITY_RANK[severityLevel(a)];
+  const reported = i => Date.parse(i.last_reported || i.reported_date || i.date) || 0;
+  return severityDifference || reported(b) - reported(a) || String(a.id).localeCompare(String(b.id));
+}
+const state = { days: 7, cats: new Set(Object.keys(CATS)), incidents: [] };
 
 const map = L.map("map", { worldCopyJump: true, zoomControl: false, minZoom: 2 }).setView([39, -98], 2);
 L.control.zoom({ position: "bottomright" }).addTo(map);
@@ -350,9 +359,9 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=c
 }).addTo(map);
 
 const cluster = L.markerClusterGroup({
-  showCoverageOnHover: false, maxClusterRadius: 40,
+  showCoverageOnHover: false, maxClusterRadius: 24,
   zoomToBoundsOnClick: false, spiderfyOnEveryZoom: true,
-  iconCreateFunction: c => L.divIcon({ html: `<div class="cluster">${c.getChildCount()}</div>`, className: "", iconSize: [34, 34] }),
+  iconCreateFunction: c => L.divIcon({ html: `<div class="cluster">${c.getChildCount()}</div>`, className: "", iconSize: [20.4, 20.4] }),
 });
 map.addLayer(cluster);
 
@@ -419,7 +428,7 @@ function skullHtml(i) {
   const color = (CATS[i.category] || CATS.using_ai).color;
   const severity = severityLevel(i);
   const eyes = severity === "severe" || severity === "critical" ? '<span class="skull-eyes" aria-hidden="true"></span>' : "";
-  return `<div class="skull-marker severity-${severity}" style="--glow:${color}"><img src="skull-marker.png" alt="" width="36" height="44" draggable="false">${eyes}</div>`;
+  return `<div class="skull-wrap"><div class="skull-marker severity-${severity}" style="--glow:${color}"><img src="skull-marker.png" alt="" width="36" height="44" draggable="false">${eyes}</div></div>`;
 }
 function render() {
   const list = visible();
@@ -430,7 +439,7 @@ function render() {
     const locations = mapLocations(i);
     if (!locations.length) { global.push(i); continue; }
     for (const location of locations) {
-      const icon = L.divIcon({ className: "", iconSize: [36, 44], iconAnchor: [18, 22], popupAnchor: [0, -22],
+      const icon = L.divIcon({ className: "", iconSize: [21.6, 26.4], iconAnchor: [10.8, 13.2], popupAnchor: [0, -13.2],
         html: skullHtml(i) });
       markers.push(L.marker([location.lat, location.lon], { icon, title: i.title }).on("click", () => openIncident(i, location)));
     }
@@ -441,11 +450,13 @@ function render() {
     const n = state.incidents.filter(i => i.category === k && (!state.days || Date.parse(i.last_reported || i.reported_date || i.date) >= Date.now() - state.days * 864e5)).length;
     document.getElementById("n-" + k).textContent = n;
   }
+  global.sort(compareGlobalSeverity);
   document.getElementById("n-global").textContent = global.length;
   document.getElementById("global-strip").hidden = global.length === 0;
   document.getElementById("strip-count").textContent = global.length;
   document.getElementById("global-markers").innerHTML = global.map(i =>
     `<button class="global-marker" data-incident="${esc(i.id)}" title="${esc(i.title)}" aria-label="${esc(i.title)} — location unconfirmed">${skullHtml(i)}<span class="marker-title">${esc(attackLabel(i))}</span></button>`).join("");
+  document.getElementById("global-markers").scrollLeft = 0;
   document.getElementById("global-list").innerHTML = global.length
     ? global.map(i => `<details data-incident="${esc(i.id)}"><summary>${esc(i.title)}<small>${esc(i.date)} · ${CATS[i.category]?.label || ""}</small></summary>${card(i)}</details>`).join("")
     : `<p class="empty">Nothing in this time range. Try “All”.</p>`;
