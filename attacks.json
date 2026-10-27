@@ -2164,17 +2164,17 @@
    "updates": []
   },
   {
-   "title": "State Bank of India customer PII leak",
-   "date": "2026-10-23",
+   "title": "State Bank of India confirms leak of 3,897 customer records",
+   "date": "2026-10-21",
    "category": "major_cyber",
    "victim": "State Bank of India customers",
    "attacker": "Not reported",
-   "what": "Dark Reading reports that State Bank of India suffered a leak involving customer personally identifiable information. The supplied report provides no further details on the access method, records affected, or confirmed scope.",
+   "what": "SBI acknowledged that 3,897 customer records were leaked online; this is not necessarily the number of individual customers. Exposed information included contact details, dates of birth, bank profile identifiers and loan metadata. Reporting also described KYC material. The bank said core operations remained normal; the intrusion method was not disclosed.",
    "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Customer PII exposure can create downstream identity-theft and fraud risks, particularly given the reported underground market for Indian PII. The available excerpt does not establish the number of affected customers or the exact consequences.",
+   "why": "A bank disclosure and independent checks of leaked samples substantiate the incident.",
    "where": "India",
    "major_impact": "large_scale_data_theft",
-   "significance": "The report describes an actual customer-PII leak at a major financial institution, but the supplied evidence does not quantify the data or victims.",
+   "significance": "Confirmed exposure of sensitive banking and identity data creates impersonation and loan-fraud risks even though the affected share of the bank’s customer base was small.",
    "id": "a3ece4560be98e6b",
    "source_name": "Dark Reading",
    "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/state-bank-india-customer-pii-data-leak",
@@ -2187,7 +2187,7 @@
    "severity": {
     "level": "significant",
     "status": "preliminary",
-    "reason": "The report identifies leaked customer PII, but does not establish service disruption, victim count, financial loss, or downstream misuse.",
+    "reason": "Confirmed exposure of sensitive banking and identity records; no operational disruption or financial theft was confirmed.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
@@ -3826,9 +3826,9 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT investigated an intrusion that began with remote code execution through an exposed Kafka UI. The AI agent deployed backdoors, harvested Kubernetes and cloud credentials, moved across GCP and AWS, created privileged identities, accessed CI/CD and GitOps systems, deployed workloads, and attempted to exfiltrate sensitive data.",
+     "what": "Wiz CIRT reported a real intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, escalated to cluster administrator, modified GitOps-managed production workloads, accessed sensitive data, and attempted exfiltration through multiple channels.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
-     "source": "AI agent attack tracker"
+     "source": "Wiz Research"
     }
    ],
    "more_sources": []
@@ -4362,44 +4362,6 @@
    },
    "more_sources": [],
    "updates": []
-  },
-  {
-   "title": "Wiz CIRT investigated autonomous multi-cloud intrusion",
-   "date": "2026-10-19",
-   "category": "by_ai_agent",
-   "victim": "An unnamed organization operating multi-cloud, Kubernetes, CI/CD, GitOps, identity-provider, and data-warehouse environments",
-   "attacker": "Unidentified threat actor using an autonomous AI agent; attribution was not reported",
-   "what": "Wiz CIRT reported a real intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, escalated to cluster administrator, modified GitOps-managed production workloads, accessed sensitive data, and attempted exfiltration through multiple channels.",
-   "ai_role": "An AI agent carried out the intrusion autonomously, including reconnaissance, credential chaining, privilege escalation, script debugging, lateral movement, workload deployment, and data-access/exfiltration attempts.",
-   "why": "The case demonstrates confirmed AI-agent activity across cloud control planes, Kubernetes, CI/CD, identity, and production workloads at machine speed. Wiz observed sensitive-data access and extensive privileged persistence, although the report does not quantify the data taken or identify the victim.",
-   "where": "No fixed location",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Wiz CIRT directly investigated the incident and documented unauthorized code execution, administrative access across cloud and Kubernetes environments, creation of an administrator identity, malicious production workload changes, credential harvesting, and access to sensitive data. Scanning of more than 600 other customer environments was reported, but those environments were not established as compromised.",
-   "id": "ae8f3c2f8a5f5092",
-   "source_name": "Wiz Research",
-   "source_url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
-   "added": "2026-10-27T07:06:45+00:00",
-   "reported_date": "2026-10-19",
-   "last_reported": "2026-10-19",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "Wiz reported confirmed compromise of one unnamed organization, including cloud and Kubernetes administrative access, credential and secret harvesting, production-workload manipulation, and access to sensitive data. The available reporting does not establish service disruption, financial loss, or compromise of the additional environments that were scanned.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "single",
-     "damage": "sensitive_data",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
-    "assessed_at": "2026-10-27T07:06:45+00:00",
-    "method": "reported-impact-v1"
-   }
   },
   {
    "id": "be812c6511c9ed74",
@@ -9581,54 +9543,6 @@
      "what": "Attackers exploited CVE-2026-88771 and CVE-2026-88772 in NetScaler ADC and Gateway appliances for unauthenticated remote code execution and root access. They altered web-server configurations, installed web shells and tunneling tools, and in at least one intrusion conducted internal reconnaissance and stole credentials.",
      "url": "https://www.securityweek.com/government-finance-orgs-targeted-in-weeks-long-netscaler-zero-day-attacks/",
      "source": "SecurityWeek"
-    }
-   ]
-  },
-  {
-   "title": "DC Medicaid reports exposure of 399,086 beneficiaries' health data",
-   "date": "2026-07-21",
-   "category": "major_cyber",
-   "victim": "District of Columbia Department of Health Care Finance (DHCF) and 399,086 Medicaid and DC Healthcare Alliance beneficiaries",
-   "attacker": "Not reported; unauthorized access was possible through DHCF website reports.",
-   "what": "Two DHCF reports published on its website displayed aggregate statistics while hidden fields contained underlying beneficiary information. The exposed fields included Medicaid ID number, date of birth, provider name, race, gender, ward, and ethnicity; names, Social Security numbers, and financial-account information were not accessible.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The reports were accessible from 2023 through July 2026, and DHCF's investigation determined that the personal and protected health information of 399,086 beneficiaries may have been accessed by unauthorized individuals. DHCF removed the reports, notified HHS OCR, and is mailing individual notices.",
-   "where": "District of Columbia, United States",
-   "major_impact": "large_scale_data_theft",
-   "significance": "A government Medicaid agency exposed sensitive health and identity-related information affecting nearly 400,000 beneficiaries. The available reporting confirms a reportable breach and possible unauthorized access, but not confirmed downloading or misuse of the data.",
-   "id": "4475a59cd993f733",
-   "source_name": "HIPAA Journal",
-   "source_url": "https://www.hipaajournal.com/district-columbia-department-health-care-finance-data-breach/",
-   "added": "2026-10-27T07:06:45+00:00",
-   "reported_date": "2026-09-30",
-   "last_reported": "2026-09-30",
-   "evidence_status": "under_investigation",
-   "lat": 38.8950982,
-   "lon": -77.0363849,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "DHCF confirmed that hidden fields on public website reports contained beneficiary health and identifying information and that unauthorized individuals may have accessed it. No financial loss or service disruption was reported, and the reporting does not establish confirmed exfiltration or misuse.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.hipaajournal.com/district-columbia-department-health-care-finance-data-breach/",
-    "assessed_at": "2026-10-27T07:06:45+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 38.8950982,
-     "lon": -77.0363849,
-     "label": "District of Columbia, United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.hipaajournal.com/district-columbia-department-health-care-finance-data-breach/"
     }
    ]
   },
@@ -22282,5 +22196,5 @@
   }
  ],
  "last_added": "2026-10-27T07:06:45+00:00",
- "coverage_reviewed_at": "2026-10-27T06:56:40+00:00"
+ "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }

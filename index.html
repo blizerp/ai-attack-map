@@ -438,7 +438,7 @@ function render() {
   cluster.addLayers(markers);
 
   for (const k of Object.keys(CATS)) {
-    const n = state.incidents.filter(i => i.category === k && (!state.days || Date.parse(i.date) >= Date.now() - state.days * 864e5)).length;
+    const n = state.incidents.filter(i => i.category === k && (!state.days || Date.parse(i.last_reported || i.reported_date || i.date) >= Date.now() - state.days * 864e5)).length;
     document.getElementById("n-" + k).textContent = n;
   }
   document.getElementById("n-global").textContent = global.length;
@@ -549,7 +549,7 @@ fetch("attacks.json?v=" + Date.now())
       const checked = new Date(health.checked_at).toLocaleString();
       const stale = Date.now() - Date.parse(health.checked_at) > 12 * 3600e3;
       const label = health.status === "failed" ? "UPDATE FAILED" : health.status === "running" ? (stale ? "Last collection did not finish" : "Collection in progress") : health.status === "partial" ? "Partial coverage: some sources or articles failed" : stale ? "Collection overdue" : "Collection healthy";
-      document.getElementById("updated").textContent = `${state.incidents.length} incidents tracked. ${label}. Checked ${checked}. Last run: ${health.added} added, ${health.merged} updated.${health.pending ? ` ${health.pending} reports queued.` : ""}${health.summary_only ? ` ${health.summary_only} reports had summary-only evidence.` : ""}`;
+      document.getElementById("updated").textContent = `${state.incidents.length} incidents tracked. ${label}. Checked ${checked}. Last run: ${health.retained_added ?? health.added} added, ${health.merged} updated.${health.pending ? ` ${health.pending} reports queued.` : ""}${health.summary_only ? ` ${health.summary_only} reports had summary-only evidence.` : ""}`;
       const a = document.createElement("a"); a.href = "feed_status.json"; a.textContent = " Collection details"; a.target = "_blank"; a.rel="noopener";
       document.getElementById("updated").appendChild(a);
     }).catch(() => {});

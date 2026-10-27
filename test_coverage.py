@@ -7,6 +7,17 @@ import update as u
 import coverage_collector as c
 
 class CoverageTests(unittest.TestCase):
+    def test_single_report_reuses_incident_when_victim_name_is_paraphrased(self):
+        from test_selection import record
+        inc={'id':'canonical','title':'Cloud intrusion','date':'2026-10-20','category':'major_cyber',
+             'victim':'Unnamed organization operating two cloud environments','source_url':'https://example.com/report'}
+        data={'incidents':[inc]}
+        item={'id':'new','url':inc['source_url'],'source':'Researcher','date':'2026-10-26','single_incident':True}
+        with patch.object(u,'update_severity'):
+            result,identifier=c.merge_record(u,data,item,record(victim='An unnamed cloud customer'),{},'2026-10-27T00:00:00+00:00')
+        self.assertEqual((result,identifier),('merged','canonical'))
+        self.assertEqual(len(data['incidents']),1)
+
     def test_reviewed_exclusion_reopens_only_for_changed_evidence(self):
         import hashlib
         previous={'policy':u.SELECTION_VERSION,'status':'exclude','checked':'2026-10-01T00:00:00+00:00',

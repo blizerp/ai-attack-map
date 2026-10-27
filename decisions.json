@@ -13184,14 +13184,13 @@
   "source": "HIPAA Journal",
   "checked": "2026-10-27T07:06:45+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The government agency disclosed a substantiated reportable breach involving possible unauthorized access to sensitive Medicaid and health-related records of 399,086 people.",
+  "status": "defer",
+  "reason": "Accidental publication of hidden report fields, with no established unauthorized access; not yet evidence of an attack.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The government agency disclosed a substantiated reportable breach involving possible unauthorized access to sensitive Medicaid and health-related records of 399,086 people.",
-    "title": "DC Medicaid reports exposure of 399,086 beneficiaries' health data",
-    "incident_id": "4475a59cd993f733"
+    "status": "defer",
+    "reason": "Accidental publication of hidden report fields, with no established unauthorized access; not yet evidence of an attack.",
+    "title": "DC Medicaid reports exposure of 399,086 beneficiaries' health data"
    }
   ],
   "evidence": "article",
@@ -13202,7 +13201,9 @@
    "url": "https://www.hipaajournal.com/district-columbia-department-health-care-finance-data-breach/",
    "date": "2026-09-30",
    "source": "HIPAA Journal"
-  }
+  },
+  "review_override": true,
+  "reviewed_at": "2026-10-27T07:13:28+00:00"
  },
  "https://www.hipaajournal.com/free-webinar-is-ai-putting-your-practice-at-risk/": {
   "title": "Free Webinar Recording: Is AI Putting Your Practice at Risk?",
@@ -18511,13 +18512,13 @@
   "checked": "2026-10-27T07:06:45+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Independent researcher evidence substantiates a consequential real-world intrusion involving autonomous AI-agent actions, privileged access, production workload changes, and sensitive-data access. It is the same incident already tracked under 896e23e23cc521341.",
+  "reason": "Same sourced Kafka/cloud intrusion already tracked; victim-name paraphrase merged.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Independent researcher evidence substantiates a consequential real-world intrusion involving autonomous AI-agent actions, privileged access, production workload changes, and sensitive-data access. It is the same incident already tracked under 896e23e23cc521341.",
+    "reason": "Same sourced Kafka/cloud intrusion already tracked; victim-name paraphrase merged.",
     "title": "Wiz CIRT investigated autonomous multi-cloud intrusion",
-    "incident_id": "ae8f3c2f8a5f5092"
+    "incident_id": "896e03eaa7904596"
    }
   ],
   "evidence": "article",
@@ -18528,7 +18529,9 @@
    "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
    "date": "2026-10-19",
    "source": "Wiz Research"
-  }
+  },
+  "review_override": true,
+  "reviewed_at": "2026-10-27T07:13:28+00:00"
  },
  "https://www.wiz.io/blog/detect-supply-chain-zero-days-at-publication": {
   "title": "Supply Chain Zero Days: Closing the Gap Between Publication and Detection",
@@ -20827,16 +20830,16 @@
   "checked": "2026-10-27T07:06:45+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The source reports an actual leak of customer PII from a financial institution, which is a meaningful sensitive-data compromise; scope and consequences remain unspecified.",
+  "reason": "Full article reviewed: bank acknowledged 3,897 leaked records and reporting independently verified samples. Automated article retrieval had failed.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The source reports an actual leak of customer PII from a financial institution, which is a meaningful sensitive-data compromise; scope and consequences remain unspecified.",
-    "title": "State Bank of India customer PII leak",
+    "reason": "Full article reviewed: bank acknowledged 3,897 leaked records and reporting independently verified samples. Automated article retrieval had failed.",
+    "title": "State Bank of India confirms leak of 3,897 customer records",
     "incident_id": "a3ece4560be98e6b"
    }
   ],
-  "evidence": "summary",
+  "evidence": "article_manually_verified",
   "summary_hash": "827f6421919eba0a394659299bf62d42b5f4d8b63c231a6eef83219cb6b9d080",
   "item": {
    "id": "a3ece4560be98e6b",
@@ -20845,7 +20848,9 @@
    "date": "2026-10-23",
    "source": "Dark Reading"
   },
-  "retrieval_warning": "HTTPError"
+  "retrieval_warning": "HTTPError",
+  "reviewed_at": "2026-10-27T07:13:28+00:00",
+  "review_override": true
  },
  "https://www.darkreading.com/cybersecurity-operations/ai-agents-insider-threats-inside-microsoft-unified-security-stack": {
   "title": "AI Agents as Insider Threats: Inside Microsoft's Bet on a Unified Security Stack",

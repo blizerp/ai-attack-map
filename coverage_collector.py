@@ -184,8 +184,13 @@ def due(item, previous, now, version):
 
 def merge_record(u, data, item, rec, geo, now):
     by_id = {i['id']: i for i in data['incidents']}
-    source_match = next((i for i in data['incidents'] if i['victim'].casefold() == rec.get('victim', i['victim']).casefold() and item['url'] in
-                        {i['source_url']} | {s['url'] for s in i.get('more_sources', [])}), None)
+    source_records = [i for i in data['incidents'] if item['url'] in
+                      {i['source_url']} | {s['url'] for s in i.get('more_sources', [])}]
+    source_match = next((i for i in source_records if i['victim'].casefold() == rec.get('victim', i['victim']).casefold()), None)
+    if source_match is None and item.get('single_incident') and len(source_records) == 1:
+        # One report, one known event: a paraphrased victim name is not a new attack.
+        # Multi-event roundups retain victim-level matching.
+        source_match = source_records[0]
     id_match = by_id.get(item['id'])
     if id_match and id_match['victim'].casefold() != rec.get('victim', id_match['victim']).casefold():
         id_match = None
@@ -309,6 +314,7 @@ def run(u):
                         detail = {'status':outcome, 'reason':rec['decision_reason'], 'title':rec['title']}
                         if accepted:
                             event_item = dict(item)
+                            event_item['single_incident'] = len(records) == 1
                             if index:
                                 event_item['id'] = u.make_id(item['id'], rec['victim'], rec['date'])
                             result, incident_id = merge_record(u, data, event_item, rec, geo, now)
