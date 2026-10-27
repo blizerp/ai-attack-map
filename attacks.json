@@ -1,6 +1,51 @@
 {
- "updated": "2026-10-27T05:12:31+00:00",
+ "updated": "2026-10-27T05:48:56+00:00",
  "incidents": [
+  {
+   "id": "293e0804b3f8eaff",
+   "title": "University of Copenhagen breach exposed data of 525,000 people",
+   "date": "2026-10-26",
+   "category": "major_cyber",
+   "victim": "University of Copenhagen",
+   "attacker": "Not reported",
+   "what": "Hackers accessed a University of Copenhagen test environment containing personal data belonging to 525,000 people.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The university confirmed unauthorized access to personal data affecting 525,000 people.",
+   "where": "Copenhagen, Denmark",
+   "lat": 55.6867243,
+   "lon": 12.5700724,
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525-000-people/",
+   "added": "2026-10-27T05:48:56+00:00",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The University of Copenhagen confirmed that hackers accessed personal data belonging to 525,000 people, meeting the reported large-scale data-theft threshold.",
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The university confirmed unauthorized access to personal data affecting 525,000 people. The report does not establish service disruption, financial losses, or the identity of the attackers.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525-000-people/",
+    "assessed_at": "2026-10-27T05:48:56+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 55.6867243,
+     "lon": 12.5700724,
+     "label": "Copenhagen, Denmark",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525-000-people/"
+    }
+   ]
+  },
   {
    "id": "5369155b1461441c",
    "title": "Malicious AGENTS.md File Tricked Coding Agent Into Installing Rogue Package",
@@ -20,21 +65,31 @@
    "major_impact": "none",
    "significance": "The reported impact is limited to installation of a rogue npm package on one customer environment; further compromise or damage was not reported.",
    "severity": {
-    "level": "unknown",
+    "level": "limited",
     "status": "preliminary",
-    "reason": "Researchers observed the agent install a rogue npm package in a customer environment. The available reporting does not establish data theft, service disruption, or financial loss.",
+    "reason": "Forever Security observed the attempt on a real customer's machine and stopped the agent before any code ran; no resulting compromise or loss was reported.",
     "evidence": {
      "context": "real_world",
-     "service": "unknown",
+     "service": "none",
      "reach": "single",
-     "damage": "unknown",
+     "damage": "none",
      "essential": "unknown",
      "financial": "unknown"
     },
-    "source_url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
-    "assessed_at": "2026-10-25T16:29:32+00:00",
+    "source_url": "https://thehackernews.com/2026/10/malicious-file-in-downloads-folder.html",
+    "assessed_at": "2026-10-27T05:48:56+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/malicious-file-in-downloads-folder.html"
+    },
+    {
+     "name": "Dark Reading",
+     "url": "https://www.darkreading.com/application-security/in-the-wild-attack-ai-agents-trust-markdown"
+    }
+   ]
   },
   {
    "id": "bfb2b01999f47ff8",
@@ -1158,7 +1213,13 @@
     "source_url": "https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/",
     "assessed_at": "2026-10-25T10:03:00+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/"
+    }
+   ]
   },
   {
    "id": "a3ff0ad177a59b55",
