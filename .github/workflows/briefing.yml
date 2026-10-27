@@ -1,0 +1,56 @@
+name: Publish Daily Threat Brief
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+      timezone: America/New_York
+    - cron: '0 17 * * *'
+      timezone: America/New_York
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: 'Auto publishes the current edition (or an opening brief on first run)'
+        type: choice
+        default: auto
+        options: [auto, morning, evening]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-map
+  cancel-in-progress: false
+
+jobs:
+  briefing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install 'feedparser==6.0.11' 'requests>=2.31,<3' 'openai>=1.40,<3' 'trafilatura>=2,<3' 'jsonschema>=4,<5'
+      - run: python -m unittest test_briefing test_site
+      - name: Collect current reporting and write briefing
+        run: python -u briefing.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          BRIEF_SCHEDULE: ${{ github.event.schedule }}
+          BRIEF_EDITION: ${{ inputs.edition || 'auto' }}
+      - name: Commit briefing and health
+        if: always()
+        run: |
+          git config user.name 'map-bot'
+          git config user.email 'map-bot@users.noreply.github.com'
+          for f in briefings.json brief_state.json; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish Daily Threat Brief'
+            git pull --rebase origin main
+            git push
+          fi

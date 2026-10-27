@@ -10,6 +10,10 @@ class SiteTests(unittest.TestCase):
             root = Path(directory)
             root.joinpath('index.html').write_text('---\nlayout: null\n---\n<meta name="site-revision" content="{{ site.github.build_revision }}">')
             root.joinpath('attacks.json').write_text('{"incidents":[]}')
+            root.joinpath('briefings.json').write_text('{"editions":[]}')
+            root.joinpath('briefing.js').write_text('// briefing UI')
+            root.joinpath('briefing.css').write_text('/* briefing styles */')
+            root.joinpath('brief_state.json').write_text('{"seen":{}}')
             root.joinpath('feed_status.json').write_text('{"status":"failed"}')
             root.joinpath('private-test.env').write_text('never publish arbitrary files')
             out = root / '_site'
@@ -19,6 +23,10 @@ class SiteTests(unittest.TestCase):
             self.assertEqual(out.joinpath('attacks.json').read_text(), '{"incidents":[]}')
             self.assertIn('failed', out.joinpath('feed_status.json').read_text())
             self.assertFalse(out.joinpath('private-test.env').exists())
+            self.assertTrue(out.joinpath('briefings.json').exists())
+            self.assertTrue(out.joinpath('briefing.js').exists())
+            self.assertTrue(out.joinpath('briefing.css').exists())
+            self.assertFalse(out.joinpath('brief_state.json').exists())
 
 
 if __name__ == '__main__':

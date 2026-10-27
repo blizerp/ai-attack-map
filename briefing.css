@@ -1,0 +1,35 @@
+.threat-brief { position:absolute; z-index:1100; top:calc(12px + env(safe-area-inset-top, 0px)); right:12px; width:min(640px, calc(100vw - 340px)); color:var(--ink); background:#141C26F8; border:1px solid var(--rule); border-radius:8px; box-shadow:0 8px 28px #0008; overflow:hidden; }
+.threat-brief:not(.open) { width:250px; }
+#brief-toggle { width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; border:0; background:transparent; padding:12px 14px; color:var(--ink); cursor:pointer; font:800 1rem var(--head); }
+#brief-toggle-icon { font:600 1.2rem var(--body); color:#9BC6F5; }
+#brief-body { max-height:calc(100dvh - 100px - env(safe-area-inset-top, 0px)); overflow:auto; overscroll-behavior:contain; scrollbar-color:#536477 var(--paper); padding:0 16px 16px; }
+#brief-body[hidden] { display:none; }
+.brief-kicker { font-size:.69rem; letter-spacing:.13em; color:#94B9DF; margin:4px 0 12px; }
+#brief-tabs { display:flex; gap:6px; overflow-x:auto; padding:0 0 10px; scrollbar-width:thin; }
+#brief-tabs button, #brief-editions button, .brief-map { flex-shrink:0; font:600 .85rem var(--body); color:var(--ink); padding:7px 10px; border:1px solid var(--rule); border-radius:5px; background:#1C2835; cursor:pointer; }
+#brief-tabs button[aria-selected="true"], #brief-editions button[aria-pressed="true"] { background:#315B85; border-color:#8DC4FF; }
+.brief-selectors { display:flex; flex-wrap:wrap; align-items:end; justify-content:space-between; gap:10px; padding:6px 0 12px; border-bottom:1px solid var(--rule); }
+.brief-selectors label { display:flex; flex-direction:column; gap:3px; color:var(--slate); font-size:.78rem; }
+#brief-date { font:600 .88rem var(--body); color:var(--ink); padding:6px; border:1px solid var(--rule); border-radius:4px; background:#1C2835; max-width:100%; }
+#brief-editions { display:flex; gap:5px; }
+#brief-content { line-height:1.5; overflow-wrap:anywhere; }
+#brief-content h2 { font:800 1.15rem var(--head); margin:17px 0 6px; }
+.brief-time, .brief-change { font-size:.76rem; color:#A9BDD2; }
+.brief-time { margin:6px 0 12px; }
+.brief-intro { color:#D9E4EF; font-size:1rem; }
+.brief-item { padding:17px 0; border-top:1px solid var(--rule); }
+.brief-item h3 { font:800 1rem/1.35 var(--head); margin:5px 0 10px; }
+.brief-item p { margin:8px 0; font-size:.94rem; }
+.brief-item strong { color:#DCEBFA; }
+.brief-change { display:inline-block; padding:2px 7px; border:1px solid #40536A; border-radius:4px; }
+.brief-sources { display:flex; flex-wrap:wrap; gap:6px 12px; margin:10px 0; font-size:.82rem; }
+.threat-brief a { color:#93C7FF; }
+.brief-warning { padding:10px; border-left:3px solid #E08E0B; background:#2B261D; color:#E7D8BC; font-size:.85rem; }
+.brief-footer { border-top:1px solid var(--rule); padding-top:12px; margin-bottom:0; font-size:.73rem; line-height:1.5; color:var(--slate); }
+@media(max-width:680px) {
+  .panel:not(.collapsed) ~ .threat-brief { display:none; }
+  .threat-brief, .threat-brief:not(.open) { top:calc(74px + env(safe-area-inset-top, 0px)); right:12px; width:calc(100vw - 24px); }
+  #brief-body { max-height:calc(100dvh - 150px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); padding:0 12px 12px; }
+  #brief-tabs button { padding:9px 10px; }
+  .brief-map { min-height:40px; }
+}

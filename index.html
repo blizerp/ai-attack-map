@@ -20,6 +20,7 @@ layout: null
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+<link rel="stylesheet" href="briefing.css?v={{ site.github.build_revision }}">
 <style>
   :root {
     --ink: #E6EDF3;
@@ -101,10 +102,10 @@ layout: null
   /* Skull marker with a category-colored halo behind the image. */
   .skull-marker {
     position: relative; width: 36px; height: 44px; isolation: isolate;
-    transform: scale(0.6); transform-origin: top left;
+    transform: scale(0.75); transform-origin: top left;
     --halo-opacity: 0.65; --halo-blur: 12px; --halo-spread: 5px; --halo-scale: 1.7;
   }
-  .skull-wrap { width: 21.6px; height: 26.4px; }
+  .skull-wrap { width: 27px; height: 33px; }
   .severity-unknown { --halo-opacity: 0.22; --halo-blur: 5px; --halo-spread: 1px; }
   .severity-limited { --halo-opacity: 0.4; --halo-blur: 6px; --halo-spread: 2px; --halo-scale: 1.35; }
   .severity-severe { --halo-opacity: 1; --halo-blur: 19px; --halo-spread: 8px; --halo-scale: 1.9; }
@@ -145,9 +146,9 @@ layout: null
   }
 
   .cluster {
-    display: grid; place-items: center; width: 20.4px; height: 20.4px; border-radius: 50%;
+    display: grid; place-items: center; width: 25.5px; height: 25.5px; border-radius: 50%;
     background: #31465D; color: #fff; font: 800 10px var(--head);
-    box-shadow: 0 0 0 2.4px rgba(31,42,54,0.25);
+    box-shadow: 0 0 0 3px rgba(31,42,54,0.25);
   }
 
   .global-strip {
@@ -165,7 +166,7 @@ layout: null
   .global-strip p { margin: 0; font-size: 0.76rem; color: var(--slate); }
   .global-markers { display: flex; gap: 8px; overflow-x: auto; padding: 14px 4px 8px; }
   .global-marker {
-    flex: 0 0 auto; min-width: 74.4px; display: flex; flex-direction: column; align-items: center;
+    flex: 0 0 auto; min-width: 93px; display: flex; flex-direction: column; align-items: center;
     gap: 6px; padding: 6px; border: 1px solid var(--rule); border-radius: 5px;
     color: var(--ink); background: transparent; cursor: pointer; font: 600 0.76rem var(--body);
   }
@@ -253,6 +254,20 @@ layout: null
   <div class="global-markers" id="global-markers"></div>
 </section>
 
+<section id="threat-brief" class="threat-brief" aria-label="Daily Threat Brief">
+  <button id="brief-toggle" aria-expanded="false" aria-controls="brief-body"><span>Daily Threat Brief</span><span id="brief-toggle-icon" aria-hidden="true">+</span></button>
+  <div id="brief-body" hidden>
+    <p class="brief-kicker">THE BIG PICTURE · IN PLAIN ENGLISH</p>
+    <div id="brief-tabs" role="tablist" aria-label="Briefing sectors"></div>
+    <div class="brief-selectors">
+      <label>Edition date <select id="brief-date"></select></label>
+      <div id="brief-editions" aria-label="Time of briefing"></div>
+    </div>
+    <div id="brief-content" role="tabpanel" aria-live="polite"><p>Loading the latest briefing…</p></div>
+    <p class="brief-footer">Morning 8 a.m. · Evening 5 p.m. Eastern.<br>Sector roundups daily at 5 p.m. · Publication times may vary.<br>AI-written from linked reporting. Coverage is limited to monitored sources.</p>
+  </div>
+</section>
+
 <dialog class="drawer" id="drawer" aria-labelledby="global-title">
   <header>
     <h2 class="title" id="global-title">Global / location unconfirmed</h2>
@@ -283,7 +298,7 @@ layout: null
   let pendingRevision = null;
 
   function applyUpdate() {
-    if (!pendingRevision || document.hidden || document.querySelector("dialog[open]")) return;
+    if (!pendingRevision || document.hidden || document.querySelector("dialog[open], #threat-brief.open")) return;
     const revision = pendingRevision;
     pendingRevision = null;
     // Prevent repeated reloads if an intermediary serves an older document.
@@ -359,9 +374,9 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=c
 }).addTo(map);
 
 const cluster = L.markerClusterGroup({
-  showCoverageOnHover: false, maxClusterRadius: 24,
+  showCoverageOnHover: false, maxClusterRadius: 30,
   zoomToBoundsOnClick: false, spiderfyOnEveryZoom: true,
-  iconCreateFunction: c => L.divIcon({ html: `<div class="cluster">${c.getChildCount()}</div>`, className: "", iconSize: [20.4, 20.4] }),
+  iconCreateFunction: c => L.divIcon({ html: `<div class="cluster">${c.getChildCount()}</div>`, className: "", iconSize: [25.5, 25.5] }),
 });
 map.addLayer(cluster);
 
@@ -439,7 +454,7 @@ function render() {
     const locations = mapLocations(i);
     if (!locations.length) { global.push(i); continue; }
     for (const location of locations) {
-      const icon = L.divIcon({ className: "", iconSize: [21.6, 26.4], iconAnchor: [10.8, 13.2], popupAnchor: [0, -13.2],
+      const icon = L.divIcon({ className: "", iconSize: [27, 33], iconAnchor: [13.5, 16.5], popupAnchor: [0, -16.5],
         html: skullHtml(i) });
       markers.push(L.marker([location.lat, location.lon], { icon, title: i.title }).on("click", () => openIncident(i, location)));
     }
@@ -569,8 +584,10 @@ fetch("attacks.json?v=" + Date.now())
     document.getElementById("updated").textContent = "Couldn't load incident data. Refresh the page to try again.";
   });
 </script>
+<script src="briefing.js?v={{ site.github.build_revision }}"></script>
 </body>
 </html>
+
 
 
 

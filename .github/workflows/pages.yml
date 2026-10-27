@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   workflow_run:
-    workflows: [Update attack map]
+    workflows: [Update attack map, Publish Daily Threat Brief]
     types: [completed]
     branches: [main]
   workflow_dispatch:
@@ -38,3 +38,4 @@ jobs:
           path: _site
       - uses: actions/deploy-pages@v4
         id: deployment
+

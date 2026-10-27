@@ -95,7 +95,9 @@ def read_feed(u, name, url, cutoff):
         if not public_url(link) or not u.candidate_text(title + ' ' + body):
             continue
         result.append(dict(id=u.make_id(link, title), title=title, url=link,
-                           date=date, source=name, text=body[:18000]))
+                           date=date, source=name, text=body[:18000],
+                           published_at=(datetime(*(e.get('updated_parsed') or e.get('published_parsed'))[:6], tzinfo=timezone.utc).isoformat()
+                                         if (e.get('updated_parsed') or e.get('published_parsed')) else None)))
     return result, dates, len(feed.entries)
 
 def read_article(item):
@@ -355,3 +357,4 @@ def run(u):
         with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
             f.write(summary + '\n\n' + '\n'.join(f'- {s["source"]}: {"OK" if s["ok"] else s.get("error","unavailable")}' for s in sources))
     return 1 if status['status'] == 'failed' else 0
+
