@@ -132,15 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-27T12:20:06+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated, distinct token-abuse campaign affecting hundreds of organizational accounts and private repositories, with observed exfiltration of sensitive secrets. It duplicates the already tracked Gheist incident while providing updated evidence of private-repository and enterprise execution.",
+  "reason": "This is a substantiated, multi-victim compromise involving stolen organizational GitHub credentials, unauthorized workflow execution, secret exposure, and follow-on cloud activity. It duplicates the already tracked Gheist campaign record.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated, distinct token-abuse campaign affecting hundreds of organizational accounts and private repositories, with observed exfiltration of sensitive secrets. It duplicates the already tracked Gheist incident while providing updated evidence of private-repository and enterprise execution.",
-    "title": "Gheist campaign exfiltrated secrets from private GitHub repositories",
+    "reason": "This is a substantiated, multi-victim compromise involving stolen organizational GitHub credentials, unauthorized workflow execution, secret exposure, and follow-on cloud activity. It duplicates the already tracked Gheist campaign record.",
+    "title": "Gheist campaign abused stolen GitHub tokens in private repositories",
     "incident_id": "fdf212b3998ab3a2"
    }
   ],
@@ -151,7 +151,8 @@
    "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
    "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
    "date": "2026-10-25",
-   "source": "Wiz Research"
+   "source": "Wiz Research",
+   "published_at": "2026-10-25T17:55:33+00:00"
   }
  },
  "https://hscnews.unm.edu/news/ambulance-traffic-diverted-clinical-appointments-cancelled-and-classes-cancelled-due-to-cybersecurity-issue-at-unm-hsc": {
@@ -18509,15 +18510,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-27T12:20:06+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Same sourced Kafka/cloud intrusion already tracked; victim-name paraphrase merged.",
+  "reason": "Credible researcher reporting substantiates a consequential real-world intrusion in which an AI agent carried out unauthorized access and data collection; it duplicates the already tracked unnamed GCP/AWS/Kubernetes intrusion.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Same sourced Kafka/cloud intrusion already tracked; victim-name paraphrase merged.",
-    "title": "Wiz CIRT investigated autonomous multi-cloud intrusion",
+    "reason": "Credible researcher reporting substantiates a consequential real-world intrusion in which an AI agent carried out unauthorized access and data collection; it duplicates the already tracked unnamed GCP/AWS/Kubernetes intrusion.",
+    "title": "AI agent breached unnamed organization’s multi-cloud environment",
     "incident_id": "896e03eaa7904596"
    }
   ],
@@ -18528,10 +18529,9 @@
    "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
    "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
    "date": "2026-10-19",
-   "source": "Wiz Research"
-  },
-  "review_override": true,
-  "reviewed_at": "2026-10-27T07:13:28+00:00"
+   "source": "Wiz Research",
+   "published_at": "2026-10-19T11:26:53+00:00"
+  }
  },
  "https://www.wiz.io/blog/detect-supply-chain-zero-days-at-publication": {
   "title": "Supply Chain Zero Days: Closing the Gap Between Publication and Detection",
@@ -19003,14 +19003,14 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-27T12:20:06+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The source substantiates multiple real GCP compromises with privileged access and material unauthorized Gemini billing; this is the same campaign already tracked under f58ed76ff84133f9, so it is recorded as a duplicate rather than a new incident.",
+  "reason": "Wiz independently substantiates multiple real GCP compromises involving privileged access and material unauthorized AI-usage charges; this is the same campaign/event already tracked under f58ed76ff84133f9.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The source substantiates multiple real GCP compromises with privileged access and material unauthorized Gemini billing; this is the same campaign already tracked under f58ed76ff84133f9, so it is recorded as a duplicate rather than a new incident.",
+    "reason": "Wiz independently substantiates multiple real GCP compromises involving privileged access and material unauthorized AI-usage charges; this is the same campaign/event already tracked under f58ed76ff84133f9.",
     "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
@@ -19022,7 +19022,8 @@
    "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
    "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
    "date": "2026-10-20",
-   "source": "Wiz Research"
+   "source": "Wiz Research",
+   "published_at": "2026-10-20T20:03:10+00:00"
   }
  },
  "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/": {
@@ -19811,15 +19812,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-27T12:20:06+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated supply-chain compromise of LiteLLM’s package and container release infrastructure, already tracked as the same LiteLLM campaign; the new reporting adds detailed evidence of the malicious payload, credential targets, and release-workflow compromise.",
+  "reason": "Confirmed production software supply-chain compromise with a credential-stealing payload; this is an update to the already tracked LiteLLM incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated supply-chain compromise of LiteLLM’s package and container release infrastructure, already tracked as the same LiteLLM campaign; the new reporting adds detailed evidence of the malicious payload, credential targets, and release-workflow compromise.",
-    "title": "LiteLLM 1.107.0 supply-chain release stole credentials",
+    "reason": "Confirmed production software supply-chain compromise with a credential-stealing payload; this is an update to the already tracked LiteLLM incident.",
+    "title": "LiteLLM 1.107.0 release compromised with credential stealer",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -19830,7 +19831,8 @@
    "title": "LiteLLM Compromised, Steals Credentials",
    "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
    "date": "2026-10-21",
-   "source": "Wiz Research"
+   "source": "Wiz Research",
+   "published_at": "2026-10-21T13:44:12+00:00"
   }
  },
  "https://www.wiz.io/blog/php2shell-php-rce": {
@@ -22248,6 +22250,318 @@
    "url": "https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html",
    "date": "2026-10-27",
    "source": "The Hacker News"
+  }
+ },
+ "https://www.securityweek.com/risks-spelled-out-for-anthropic-investors-include-possible-harms-from-runaway-ai/": {
+  "title": "Risks Spelled Out for Anthropic Investors Include Possible Harms From Runaway AI",
+  "source": "SecurityWeek",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is an IPO risk-factor and AI safety discussion, not a substantiated cyber incident. The article mentions blocked malicious activity and hypothetical future harms without documenting an actual compromise.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is an IPO risk-factor and AI safety discussion, not a substantiated cyber incident. The article mentions blocked malicious activity and hypothetical future harms without documenting an actual compromise.",
+    "title": "Anthropic IPO filing discusses potential AI risks"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "a35c6f9251f1157d6f8f5adefbe91ee47afb6b6c1645fe096ef5f1f4cde4fb68",
+  "item": {
+   "id": "929bcb6348e68d87",
+   "title": "Risks Spelled Out for Anthropic Investors Include Possible Harms From Runaway AI",
+   "url": "https://www.securityweek.com/risks-spelled-out-for-anthropic-investors-include-possible-harms-from-runaway-ai/",
+   "date": "2026-10-27",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-27T10:44:20+00:00"
+  }
+ },
+ "https://www.securityweek.com/ios-macos-27-2-patch-286-bugs-fix-for-exploited-flaw-backported-to-ios-18/": {
+  "title": "iOS, macOS 27.2 Patch 286 Bugs; Fix for Exploited Flaw Backported to iOS 18",
+  "source": "SecurityWeek",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: a patch/vulnerability report with acknowledged but otherwise undocumented exploitation; no substantiated real-world victim impact is reported.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: a patch/vulnerability report with acknowledged but otherwise undocumented exploitation; no substantiated real-world victim impact is reported.",
+    "title": "Apple patches exploited CVE-2026-86950"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "a350a4a6f7a359db1cad947c9de831c8915e4f1937a385d718a87d1073f10c2b",
+  "item": {
+   "id": "dd95bff74a017aaa",
+   "title": "iOS, macOS 27.2 Patch 286 Bugs; Fix for Exploited Flaw Backported to iOS 18",
+   "url": "https://www.securityweek.com/ios-macos-27-2-patch-286-bugs-fix-for-exploited-flaw-backported-to-ios-18/",
+   "date": "2026-10-27",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-27T11:49:57+00:00"
+  }
+ },
+ "https://www.hipaajournal.com/data-breach-northshore-health-centers/": {
+  "title": "Data Breach Announced by NorthShore Health Centers",
+  "source": "HIPAA Journal",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "NorthShore confirmed consequential unauthorized access to its IT environment and potential access to sensitive patient information; the ransomware group's attribution and the final scope remain unverified or under investigation.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "NorthShore confirmed consequential unauthorized access to its IT environment and potential access to sensitive patient information; the ransomware group's attribution and the final scope remain unverified or under investigation.",
+    "title": "NorthShore Health Centers patient files accessed in cyber incident",
+    "incident_id": "28afa93ef1838f1c"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "a50445441fa8292603662a1d3f432b7240e1d73aa9c51422ea4d8578cf30477b",
+  "item": {
+   "id": "28afa93ef1838f1c",
+   "title": "Data Breach Announced by NorthShore Health Centers",
+   "url": "https://www.hipaajournal.com/data-breach-northshore-health-centers/",
+   "date": "2026-10-27",
+   "source": "HIPAA Journal",
+   "published_at": "2026-10-27T11:39:57+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/": {
+  "title": "Energy giant ENGIE discloses data breach affecting customers",
+  "source": "BleepingComputer",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "ENGIE and credible factual reporting substantiate unauthorized access to a partner marketing platform and theft of meaningful customer and contract data.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "ENGIE and credible factual reporting substantiate unauthorized access to a partner marketing platform and theft of meaningful customer and contract data.",
+    "title": "ENGIE partner marketing platform breach exposed French customer data",
+    "incident_id": "3b7ba51aebb1d253"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "c059d82d400c2872696e517b4e68f48210add4947f9e007d5b5e12cdea71b5b9",
+  "item": {
+   "id": "3b7ba51aebb1d253",
+   "title": "Energy giant ENGIE discloses data breach affecting customers",
+   "url": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/",
+   "date": "2026-10-27",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-27T09:25:50+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/": {
+  "title": "CISA confirms PHP2Shell vulnerabilities now exploited in attacks",
+  "source": "BleepingComputer",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude because the evidence concerns unsuccessful attempts and honeypot exploitation, with no confirmed compromise of actual victim organizations.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude because the evidence concerns unsuccessful attempts and honeypot exploitation, with no confirmed compromise of actual victim organizations.",
+    "title": "PHP2Shell exploitation observed only against honeypot systems"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "f3559ba1e4f38a5f0978a0a5083c5ae254a7e9ff1d0902b959657f4489eb559c",
+  "item": {
+   "id": "5dbd098fc969dec1",
+   "title": "CISA confirms PHP2Shell vulnerabilities now exploited in attacks",
+   "url": "https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/",
+   "date": "2026-10-27",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-27T08:20:54+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/": {
+  "title": "Apple backports CoreGraphics zero-day patches to older iPhones",
+  "source": "BleepingComputer",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Apple confirmed that a zero-day was exploited in targeted attacks against real iOS users; this is more than a vulnerability disclosure or blocked attempt.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Apple confirmed that a zero-day was exploited in targeted attacks against real iOS users; this is more than a vulnerability disclosure or blocked attempt.",
+    "title": "Apple CoreGraphics zero-day exploited in targeted iOS attacks",
+    "incident_id": "458cb9a66814b80b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "57cc707b3e9c0196070cfbaa222e3bcf633c47fc4814ee1709ac7679673cf353",
+  "item": {
+   "id": "458cb9a66814b80b",
+   "title": "Apple backports CoreGraphics zero-day patches to older iPhones",
+   "url": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
+   "date": "2026-10-27",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-27T10:36:12+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html": {
+  "title": "OpenAI Compaction Flaw Let Researchers Bypass Hidden Reasoning Protections",
+  "source": "The Hacker News",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this was a research demonstration and disclosed product flaw, not a confirmed real-world compromise or incident causing external harm.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this was a research demonstration and disclosed product flaw, not a confirmed real-world compromise or incident causing external harm.",
+    "title": "Researchers demonstrated OpenAI reasoning-extraction flaw"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "1114ca6e2f11a5ccd7e2f19e01bcf4ceeb16b79ff83a8d967868576d2ca5eeb1",
+  "item": {
+   "id": "3048d2b45489608b",
+   "title": "OpenAI Compaction Flaw Let Researchers Bypass Hidden Reasoning Protections",
+   "url": "https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html",
+   "date": "2026-10-27",
+   "source": "The Hacker News",
+   "published_at": "2026-10-27T08:22:43+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html": {
+  "title": "Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens",
+  "source": "The Hacker News",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is a patched vulnerability and research demonstration with no confirmed exploitation or victim compromise.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is a patched vulnerability and research demonstration with no confirmed exploitation or victim compromise.",
+    "title": "Microsoft Authenticator Android token-stealing flaw"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "98cbf2676de594878e07e0db0efc178b86f45a75f0bb5f32cfeb2c982902b501",
+  "item": {
+   "id": "2f639c76a725e50f",
+   "title": "Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens",
+   "url": "https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html",
+   "date": "2026-10-27",
+   "source": "The Hacker News",
+   "published_at": "2026-10-27T12:09:50+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/lazarus-abuses-south-korean-security.html": {
+  "title": "Lazarus Abuses South Korean Security Software to Deploy Malware Using Post-Quantum Encryption",
+  "source": "The Hacker News",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Independent researcher evidence substantiates a distinct campaign involving unauthorized access to at least three organizations and reported data exfiltration; it is not a mere vulnerability or attacker-only claim.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Independent researcher evidence substantiates a distinct campaign involving unauthorized access to at least three organizations and reported data exfiltration; it is not a mere vulnerability or attacker-only claim.",
+    "title": "Lazarus FlashHole campaign breached South Korean organizations",
+    "incident_id": "704a470a0bfb2127"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "93b8cf7a1fc5c4395e6aaf456969170dc5b4186034824113e4c4012124ea056a",
+  "item": {
+   "id": "704a470a0bfb2127",
+   "title": "Lazarus Abuses South Korean Security Software to Deploy Malware Using Post-Quantum Encryption",
+   "url": "https://thehackernews.com/2026/10/lazarus-abuses-south-korean-security.html",
+   "date": "2026-10-27",
+   "source": "The Hacker News",
+   "published_at": "2026-10-27T11:32:31+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html": {
+  "title": "Keystone to Destroy 18,835 Hardware Wallets After Hackers Steal Device Verification Key",
+  "source": "The Hacker News",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Keystone substantiated unauthorized access, customer-record access, and theft of a production device-verification key with operational and downstream security consequences.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Keystone substantiated unauthorized access, customer-record access, and theft of a production device-verification key with operational and downstream security consequences.",
+    "title": "Keystone website breach exposed wallet-verification key and customer data",
+    "incident_id": "34380e2947a28faa"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "722d183cd6d7bf6e1a52c9d6d41f7821f0be7372d359489b8aa23407401bf87a",
+  "item": {
+   "id": "34380e2947a28faa",
+   "title": "Keystone to Destroy 18,835 Hardware Wallets After Hackers Steal Device Verification Key",
+   "url": "https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html",
+   "date": "2026-10-27",
+   "source": "The Hacker News",
+   "published_at": "2026-10-27T11:46:00+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html": {
+  "title": "Australia Gets Into Amadey Malware Backend, Cuts Off Access to 180,000 Infected Computers",
+  "source": "The Hacker News",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "ASD-confirmed disruption of a criminal malware backend serving approximately 180,000 infected real-world computers is a substantiated multi-victim compromise with meaningful unauthorized access.; ASD independently substantiated theft of approximately 5 TB of sensitive business and personal data from an unnamed business, including millions of files tied to Australian victims.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "ASD-confirmed disruption of a criminal malware backend serving approximately 180,000 infected real-world computers is a substantiated multi-victim compromise with meaningful unauthorized access.",
+    "title": "ASD disrupted Amadey controller serving 180,000 infected computers",
+    "incident_id": "9bb29a9ec76db8f6"
+   },
+   {
+    "status": "include",
+    "reason": "ASD independently substantiated theft of approximately 5 TB of sensitive business and personal data from an unnamed business, including millions of files tied to Australian victims.",
+    "title": "ASD destroyed 5 TB of stolen business and personal data",
+    "incident_id": "7d6a35f873247b0c"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "7de32cbe2dc7bf7deeb1c54f6eae650c5600043a3b9aa6620b92c31d9ada410b",
+  "item": {
+   "id": "9bb29a9ec76db8f6",
+   "title": "Australia Gets Into Amadey Malware Backend, Cuts Off Access to 180,000 Infected Computers",
+   "url": "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html",
+   "date": "2026-10-27",
+   "source": "The Hacker News",
+   "published_at": "2026-10-27T09:33:06+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/ai-generated-fake-login-pages-are.html": {
+  "title": "AI-Generated Fake Login Pages Are Making Account Takeovers Easier",
+  "source": "The Hacker News",
+  "checked": "2026-10-27T12:20:06+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "No actual compromise or affected victim is reported; the content is a general explanation of AI-assisted phishing methods and defensive measures.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "No actual compromise or affected victim is reported; the content is a general explanation of AI-assisted phishing methods and defensive measures.",
+    "title": "AI-generated phishing pages discussed without a reported incident"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "2fb0e7f0411aaf8d8ee8311f080ee205cb1fc07b7e7603f96b5feae4107d14ce",
+  "item": {
+   "id": "49bd4de09d4712af",
+   "title": "AI-Generated Fake Login Pages Are Making Account Takeovers Easier",
+   "url": "https://thehackernews.com/2026/10/ai-generated-fake-login-pages-are.html",
+   "date": "2026-10-27",
+   "source": "The Hacker News",
+   "published_at": "2026-10-27T11:32:46+00:00"
   }
  }
 }

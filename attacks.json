@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T07:06:45+00:00",
+ "updated": "2026-10-27T12:20:06+00:00",
  "incidents": [
   {
    "title": "Hackers compromised Dahua surveillance cameras in Ukraine",
@@ -60,6 +60,346 @@
      "what": "CERT-UA reported unauthorized access to Dahua surveillance systems through the Easy4IP P2P platform, weak or known passwords, and authentication-bypass flaws in outdated firmware. Attackers accessed video streams, changed configurations, and created third-party accounts. The report also describes the separately documented Operation CameraSwarm campaign, which compromised more than 14,530 Dahua cameras between June 17 and July 22, 2026, including 1,923 with persistent backdoor accounts.",
      "url": "https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html",
      "source": "The Hacker News"
+    }
+   ]
+  },
+  {
+   "title": "NorthShore Health Centers patient files accessed in cyber incident",
+   "date": "2026-08-10 to 2026-08-11",
+   "category": "major_cyber",
+   "victim": "NorthShore Health Centers",
+   "attacker": "An unnamed unauthorized third party accessed NorthShore's IT environment. The Insomnia ransomware group claimed responsibility and later alleged it leaked stolen data, but that attribution is not independently verified in the report.",
+   "what": "NorthShore detected suspicious network activity and confirmed unauthorized access to parts of its IT environment. Files potentially containing patient personal and protected health information may have been viewed or obtained; the investigation and data review remain ongoing.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident involved confirmed unauthorized access to a healthcare provider's systems and potentially sensitive medical, insurance, and identity information. The number of affected individuals and the exact data involved have not yet been established.",
+   "where": "Northwest Indiana, United States, including Porter, Lake, La Porte, and Jasper Counties",
+   "major_impact": "critical_network_intrusion",
+   "significance": "NorthShore confirmed access to its IT environment and possible exposure of patient records, including likely medical and insurance information. The event matters despite the unresolved scope because it affected a healthcare provider's sensitive data systems.",
+   "id": "28afa93ef1838f1c",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/data-breach-northshore-health-centers/",
+   "added": "2026-10-27T12:20:06+00:00",
+   "reported_date": "2026-10-27",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": 41.4457032,
+   "lon": -87.0724971,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "NorthShore confirmed unauthorized access to parts of its IT environment and potential access to patient files. The affected population, confirmed data theft, service effects, and financial losses were not established in the available reporting.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/data-breach-northshore-health-centers/",
+    "assessed_at": "2026-10-27T12:20:06+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 41.4457032,
+     "lon": -87.0724971,
+     "label": "Porter County, Indiana, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/data-breach-northshore-health-centers/"
+    },
+    {
+     "lat": 41.4193829,
+     "lon": -87.3692227,
+     "label": "Lake County, Indiana, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/data-breach-northshore-health-centers/"
+    },
+    {
+     "lat": 41.6348259,
+     "lon": -86.7348814,
+     "label": "La Porte County, Indiana, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/data-breach-northshore-health-centers/"
+    },
+    {
+     "lat": 41.0321808,
+     "lon": -87.1066598,
+     "label": "Jasper County, Indiana, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/data-breach-northshore-health-centers/"
+    }
+   ]
+  },
+  {
+   "title": "ENGIE partner marketing platform breach exposed French customer data",
+   "date": "2026-10-27",
+   "category": "major_cyber",
+   "victim": "ENGIE customers in France; partner marketing platform",
+   "attacker": "Unknown; ENGIE did not attribute the incident to a specific threat group.",
+   "what": "Attackers breached a marketing platform used by ENGIE business partners and stole customer data. The exposed information included names, addresses, email addresses, phone numbers, energy delivery or metering-point identifiers, customer IDs, and contract numbers.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "ENGIE said the incident was limited to customers in France, notified authorities and affected customers, and cut off attacker access. The company stated that its internal IT systems and banking data were not compromised.",
+   "where": "France",
+   "major_impact": "large_scale_data_theft",
+   "significance": "This was a confirmed theft of energy customers’ contact, account-identifying, and contract information from a trusted partner platform. The number of affected customers was not disclosed, and the incident did not compromise ENGIE’s internal systems.",
+   "id": "3b7ba51aebb1d253",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/",
+   "added": "2026-10-27T12:20:06+00:00",
+   "reported_date": "2026-10-27",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": 46.603354,
+   "lon": 1.8883335,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "ENGIE confirmed unauthorized access and theft of customer contact and energy-contract information, but reported no internal-system compromise or banking-data exposure. The number of affected customers and any financial loss were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/",
+    "assessed_at": "2026-10-27T12:20:06+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 46.603354,
+     "lon": 1.8883335,
+     "label": "France",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/"
+    }
+   ]
+  },
+  {
+   "title": "Apple CoreGraphics zero-day exploited in targeted iOS attacks",
+   "date": "2026-10-27",
+   "category": "major_cyber",
+   "victim": "Specific targeted individuals using vulnerable Apple devices; identities were not reported",
+   "attacker": "Not reported; Apple described the attacks as extremely sophisticated and targeted",
+   "what": "Apple confirmed that CVE-2026-86950, an out-of-bounds write in CoreGraphics, was exploited against versions of iOS before iOS 27. Processing a maliciously crafted file could enable arbitrary code execution. Apple backported patches to additional older iPhones and iPads.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "This is a confirmed exploitation of a zero-day against real devices, with potential code-execution consequences, although the attackers, victims, and resulting actions were not identified.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Apple confirmed exploitation in highly targeted attacks, and the flaw could provide arbitrary code execution through a maliciously crafted file. The available report does not establish data theft, persistence, or broader operational impact.",
+   "id": "458cb9a66814b80b",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
+   "added": "2026-10-27T12:20:06+00:00",
+   "reported_date": "2026-10-27",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Apple confirmed exploitation against specific targeted individuals, but the available reporting does not establish what attackers did after exploitation or quantify affected users.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
+    "assessed_at": "2026-10-27T12:20:06+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Lazarus FlashHole campaign breached South Korean organizations",
+   "date": "2025-07 to 2026-10-27",
+   "category": "major_cyber",
+   "victim": "At least three South Korean organizations in the construction, software, and wire-communication equipment manufacturing sectors",
+   "attacker": "North Korea-linked Lazarus Group, attributed by Kaspersky; attribution remains an assessment",
+   "what": "Attackers used spear-phishing and malicious websites to abuse vulnerable South Korean financial-security software, deploy TechHub, TouchHub, ClientHub, LPEClient, and Cubridge malware, establish persistence, execute commands, and steal files and browser data. Kaspersky reported that at least one infection resulted in data exfiltration to the ULOSE dark-web leak site.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign demonstrates a confirmed compromise of multiple South Korean organizations through trusted, widely used security software and included observed data exfiltration. The malware also used ML-KEM-1024 post-quantum encryption for command-and-control communications.",
+   "where": "South Korea",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Kaspersky documented intrusions affecting at least three organizations and described malware capable of command execution, persistence, and file and browser-data theft; at least one infection led to reported data exfiltration.",
+   "id": "704a470a0bfb2127",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/lazarus-abuses-south-korean-security.html",
+   "added": "2026-10-27T12:20:06+00:00",
+   "reported_date": "2026-10-27",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": 36.638392,
+   "lon": 127.6961188,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Kaspersky reported compromises at at least three South Korean organizations and data exfiltration in at least one case. Service disruption, financial losses, and the precise scope or sensitivity of stolen data were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/lazarus-abuses-south-korean-security.html",
+    "assessed_at": "2026-10-27T12:20:06+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.638392,
+     "lon": 127.6961188,
+     "label": "South Korea",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/lazarus-abuses-south-korean-security.html"
+    }
+   ]
+  },
+  {
+   "title": "Keystone website breach exposed wallet-verification key and customer data",
+   "date": "2026-10-20",
+   "category": "major_cyber",
+   "victim": "Keystone",
+   "attacker": "Unknown; an attacker exploited a vulnerability in a third-party data-monitoring tool used by Keystone's website.",
+   "what": "The attacker escalated privileges on Keystone's website, obtained the hardware-wallet device-verification key, and accessed customer records. Keystone said 25,964 buyer records and 12,873 unpaid checkout records were affected; payment-card, bank, and government-ID data and recovery phrases/private keys were not involved.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Possession of the verification key could allow counterfeit Keystone devices to pass the online authenticity check, although Keystone reported no counterfeit devices or resulting cryptocurrency theft. The company blocked access, replaced the key, paused shipping, and plans to destroy 18,835 unsold devices containing the old key.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Keystone confirmed unauthorized privileged access, theft of a device-authentication secret, and access to tens of thousands of customer records. The compromised key created a downstream hardware-supply risk even though no counterfeit devices or crypto theft had been reported.",
+   "id": "34380e2947a28faa",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html",
+   "added": "2026-10-27T12:20:06+00:00",
+   "reported_date": "2026-10-27",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Keystone confirmed website compromise, access to customer shipping and order records, and theft of the wallet-verification key. Shipping was paused and 18,835 unsold devices are being destroyed; no cryptocurrency theft or counterfeit-device sales were reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html",
+    "assessed_at": "2026-10-27T12:20:06+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "ASD disrupted Amadey controller serving 180,000 infected computers",
+   "date": "2026-10-27",
+   "category": "major_cyber",
+   "victim": "Users and organizations operating approximately 180,000 computers infected with Amadey worldwide, including some in Australia",
+   "attacker": "Criminal Amadey operator; specific actor not identified. ASD said it accessed the operator's backend.",
+   "what": "Australian Signals Directorate operators gained access to an Amadey command-and-control backend and disconnected it from approximately 180,000 infected computers. Amadey could install additional malware, steal credentials, and provide remote access.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The operation affected a large multi-victim malware population and involved demonstrated unauthorized access to infected systems, although the reporting does not establish how much data was previously stolen or which individual victims were affected.",
+   "where": "Worldwide; some affected computers were in Australia",
+   "major_impact": "critical_network_intrusion",
+   "significance": "ASD and ABC reporting describe a confirmed Amadey infection set of about 180,000 computers and a successful disruption of the criminal controller. Earlier theft was not reversed, and stolen credentials or session cookies may remain usable.",
+   "id": "9bb29a9ec76db8f6",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html",
+   "added": "2026-10-27T12:20:06+00:00",
+   "reported_date": "2026-10-27",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": -24.7761086,
+   "lon": 134.755,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "ASD disconnected the controller from approximately 180,000 infected computers, ending that controller's access, but the available reporting does not quantify prior theft, operational outages, or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "widespread",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html",
+    "assessed_at": "2026-10-27T12:20:06+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": -24.7761086,
+     "lon": 134.755,
+     "label": "Australia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html"
+    }
+   ]
+  },
+  {
+   "title": "ASD destroyed 5 TB of stolen business and personal data",
+   "date": "2026-10-27",
+   "category": "major_cyber",
+   "victim": "An unnamed business and individuals in Australia and other countries whose data was stolen",
+   "attacker": "Unidentified attackers; ASD said it received a tip about the stolen data and intervened. Attribution was not reported.",
+   "what": "ASD accessed and destroyed approximately 5 terabytes of data stolen from a business and offered for sale. The files included business documents, personal data, login credentials, and passwords; approximately 4.8 million files related to Australians, with hundreds of thousands from victims in other countries.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The case documents confirmed theft of a large volume of sensitive organizational and personal data, although the original intrusion method, affected business, and whether attackers retained other copies were not reported.",
+   "where": "Australia and other countries",
+   "major_impact": "large_scale_data_theft",
+   "significance": "ASD's intervention identified and destroyed an estimated 5 TB of stolen data, including reusable credentials and passwords affecting millions of files. The unnamed victim organization and original compromise remain unspecified.",
+   "id": "7d6a35f873247b0c",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html",
+   "added": "2026-10-27T12:20:06+00:00",
+   "reported_date": "2026-10-27",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": -24.7761086,
+   "lon": 134.755,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "ASD reported approximately 5 TB of stolen business and personal data, including credentials and passwords, with an estimated 4.8 million files concerning Australians. Operational disruption and financial loss were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html",
+    "assessed_at": "2026-10-27T12:20:06+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": -24.7761086,
+     "lon": 134.755,
+     "label": "Australia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html"
     }
    ]
   },
@@ -251,7 +591,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used compromised GitHub tokens to plant sync-check workflows across accessible repositories. In private repositories and GitHub Enterprise environments, the workflows executed, printed repository and environment secrets into logs, and deleted the runs; Wiz also observed private-repository cloning and cloud credentials being used to enumerate AWS Secrets Manager. More than 13,500 malicious branches were recovered.",
+     "what": "Attackers used stolen GitHub tokens to plant workflows in repositories, dump repository and environment secrets, and delete workflow runs. In private repositories and GitHub Enterprise environments, workflows executed without approval; Wiz also observed stolen cloud credentials being used to enumerate AWS Secrets Manager.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -1341,7 +1681,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "Attackers used the compromised release workflow to publish malicious LiteLLM 1.107.0 wheels and container images. The payload established interpreter-start persistence and was designed to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials before sending data to a lookalike domain.",
+     "what": "Attackers altered the LiteLLM release workflow through a lookalike repository and published malicious PyPI wheels and container images. The payload used Python startup persistence and was designed to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, then exfiltrate them.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -3229,7 +3569,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Attackers used malicious Google Search ads and fake Google login pages to steal GCP credentials and MFA codes. They then altered IAM and organization policies, added external accounts with billing privileges, linked foreign attacker-controlled projects to victims' billing accounts, and generated high-volume Gemini API usage.",
+     "what": "Attackers phished privileged GCP users, captured credentials and MFA codes, altered organization policies, added attacker-controlled accounts, and linked external GCP projects to victims’ billing accounts. The attackers then ran high-volume Gemini API workloads charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -3826,7 +4166,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT reported a real intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, escalated to cluster administrator, modified GitOps-managed production workloads, accessed sensitive data, and attempted exfiltration through multiple channels.",
+     "what": "Wiz CIRT investigated an intrusion that began with exploitation of an exposed Kafka UI Java RCE. The AI agent deployed backdoors, harvested Kubernetes and cloud credentials, created privileged identities, accessed AWS and GCP environments, escalated to cluster-admin, modified production workloads, and collected sensitive data for exfiltration.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -22195,6 +22535,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-27T07:06:45+00:00",
+ "last_added": "2026-10-27T12:20:06+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
