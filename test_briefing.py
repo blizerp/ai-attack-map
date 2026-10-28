@@ -120,4 +120,69 @@ class BriefingTests(unittest.TestCase):
         value=b.validate(result(),reports,[],False)
         self.assertTrue(all(not s['items'] for s in value['sectors'].values()))
 
+
+class CatchupTests(unittest.TestCase):
+    def prior(self, date='2026-10-27', kind='evening'):
+        return {'id':date+'-'+kind,'date':date,'edition':kind,'published_at':date+'T21:00:00+00:00','window_end':date+'T21:00:00+00:00','overview':{'items':[]}}
+
+    def test_catchup_uses_due_slot_not_retry_cron(self):
+        for stamp, expected in [('2026-10-28T13:23:00Z',('2026-10-28','morning')),
+                                ('2026-10-29T02:23:00Z',('2026-10-28','morning'))]:
+            slot=b.catchup_slot(b.parse(stamp),[self.prior()],{})
+            self.assertEqual(slot[:2],expected)
+        self.assertIsNone(b.catchup_slot(b.parse('2026-10-28T11:23:00Z'),[self.prior()],{}))
+
+    def test_bound_old_outage_to_two_latest_slots_and_empty_to_one(self):
+        now=b.parse('2026-10-28T22:23:00Z')
+        self.assertEqual(b.catchup_slot(now,[self.prior('2026-09-01')],{})[:2],('2026-10-28','morning'))
+        self.assertEqual(b.catchup_slot(now,[],{})[:2],('2026-10-28','evening'))
+
+    def test_no_old_backfill_after_newer_published_or_opening(self):
+        now=b.parse('2026-10-28T22:23:00Z')
+        self.assertIsNone(b.catchup_slot(now,[self.prior('2026-10-28')],{}))
+        opening=self.prior('2026-10-28','initial')
+        self.assertIsNone(b.catchup_slot(now,[opening],{}))
+
+    def test_dst_schedule_targets(self):
+        for stamp,hour in [('2026-03-08T12:23:00Z',12),('2026-11-01T13:23:00Z',13)]:
+            date,kind,target=b.catchup_slot(b.parse(stamp),[],{})
+            self.assertEqual(kind,'morning');self.assertEqual(target.astimezone(b.UTC).hour,hour)
+        date,kind,target=b.catchup_slot(b.parse('2026-11-01T06:23:00Z'),[],{})
+        self.assertEqual((date,kind),('2026-10-31','evening'))
+        self.assertEqual(target.astimezone(b.UTC).hour,21)
+
+    def test_evening_window_crosses_dst_in_local_calendar(self):
+        for stamp, expected in [('2026-03-08T07:30:00Z','2026-03-07T13:00:00Z'),
+                                ('2026-11-01T08:30:00Z','2026-10-31T12:00:00Z')]:
+            start,_=b.windows(b.parse(stamp),'evening',[])
+            self.assertEqual(start,b.parse(expected))
+
+    def test_repeated_automatic_invocations_no_feed_or_api_duplicates(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ,{'BRIEF_CATCH_UP':'true','BRIEF_SCHEDULE':'23 * * * *','BRIEF_REPLACE_LATEST':'false'}):
+            root=Path(tmp);b.atomic(root/'briefings.json',{'editions':[self.prior()]})
+            gather=unittest.mock.Mock(return_value=([],[],0))
+            client=object();now=b.parse('2026-10-28T13:23:00Z')
+            self.assertEqual(b.run(root,now,client,gather),0)
+            self.assertEqual(b.run(root,now,client,gather),0)
+            self.assertEqual(gather.call_count,1)
+            data=b.read(root/'briefings.json',{})
+            self.assertEqual(data['editions'][-1]['id'],'2026-10-28-morning')
+            self.assertTrue(data['editions'][-1]['warnings'])
+
+    def test_failure_backoff_and_three_attempt_budget_then_manual_retry(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ,{'BRIEF_CATCH_UP':'true','BRIEF_REPLACE_LATEST':'false','BRIEF_EDITION':'morning','BRIEF_SCHEDULE':''}):
+            root=Path(tmp);prior=self.prior();b.atomic(root/'briefings.json',{'editions':[prior]})
+            gather=unittest.mock.Mock(side_effect=RuntimeError('offline'))
+            now=b.parse('2026-10-28T13:23:00Z')
+            self.assertEqual(b.run(root,now,object(),gather),1)
+            self.assertEqual(b.run(root,now+timedelta(minutes=10),object(),gather),0)
+            for hours in (1,2):self.assertEqual(b.run(root,now+timedelta(hours=hours),object(),gather),1)
+            self.assertEqual(b.run(root,now+timedelta(hours=3),object(),gather),0)
+            self.assertEqual(gather.call_count,3)
+            self.assertEqual(b.read(root/'briefings.json',{})['editions'],[prior])
+            os.environ['BRIEF_CATCH_UP']='false'
+            gather.side_effect=None;gather.return_value=([],[],0)
+            self.assertEqual(b.run(root,now+timedelta(hours=3),object(),gather),0)
+            self.assertEqual(b.read(root/'briefings.json',{})['editions'][-1]['id'],'2026-10-28-morning')
+
 if __name__=='__main__':unittest.main()
