@@ -1,4 +1,32 @@
-(() => {
+// Evaluate expected publication by New York calendar time, including DST.
+// Thirty minutes allows normal generation; a missed dispatch is visible afterward.
+function expectedBriefing(now) {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', hourCycle: 'h23'
+  }).formatToParts(new Date(now)).map(p => [p.type, p.value]));
+  let date = `${parts.year}-${parts.month}-${parts.day}`;
+  const hour = Number(parts.hour);
+  const edition = hour >= 17 || hour < 8 ? 'evening' : 'morning';
+  if (hour < 8) date = new Date(Date.parse(date + 'T12:00:00Z') - 86400000).toISOString().slice(0, 10);
+  const id = date + '-' + edition;
+  return {id, date, edition};
+}
+function missingBriefing(editions, now = Date.now()) {
+  const expected = expectedBriefing(now - 30 * 60000);
+  const key = slot => slot.date + '-' + (slot.edition === 'morning' ? '08' : '17');
+  const expectedKey = key(expected);
+  const covered = editions.some(e => {
+    if (e.edition === 'initial' && Number.isFinite(Date.parse(e.window_end)))
+      return key(expectedBriefing(Date.parse(e.window_end))) >= expectedKey;
+    const match = /^(\d{4}-\d{2}-\d{2})-(morning|evening)$/.exec(e.id || '');
+    return match && key({date:match[1], edition:match[2]}) >= expectedKey;
+  });
+  return covered ? null : expected;
+}
+if (typeof module !== 'undefined' && module.exports) module.exports = {missingBriefing};
+
+if (typeof document !== 'undefined') (() => {
   const tabs = {overview:'Overview', energy:'Energy & Power', water:'Water', food:'Food & Agriculture', finance:'Finance', healthcare:'Healthcare', internet:'Internet & Telecom', supply_chain:'Supply Chain'};
   const editionNames = {morning:'Morning', evening:'Evening', initial:'Opening brief'};
   const shell = document.getElementById('threat-brief');
@@ -8,7 +36,7 @@
   const date = document.getElementById('brief-date');
   const editions = document.getElementById('brief-editions');
   const tablist = document.getElementById('brief-tabs');
-  let data = null, selectedTab = 'overview', selectedEdition = null, loaded = false;
+  let data = null, selectedTab = 'overview', selectedEdition = null, loadVersion = 0, refreshFailed = false;
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const link = value => /^https?:\/\//i.test(value || '') ? escape(value) : '#';
   const time = value => new Date(value).toLocaleString('en-US', {timeZone:'America/New_York', month:'short', day:'numeric', hour:'numeric', minute:'2-digit', timeZoneName:'short'});
@@ -32,18 +60,19 @@
     if(!data) return;
     const all=data.editions || [];
     const overview=all.find(e => e.id===selectedEdition) || newestForDate();
-    if(!overview) {content.innerHTML=data.last_attempt?.status==='failed'?'<p class="brief-warning">The first briefing could not be completed. A new edition will appear after a successful update.</p>':'<p>The first briefing has not been published yet.</p>'; return;}
+    const missing=missingBriefing(all);
+    const refreshWarning=refreshFailed?'<p class="brief-warning">Could not refresh the briefing. Showing the last loaded copy; close and reopen to retry.</p>':'';
+    const overdue=refreshWarning+(missing?`<p class="brief-warning">The ${escape(day(missing.date))} ${escape(missing.edition)} briefing is overdue (scheduled for ${missing.edition==='morning'?'8 a.m.':'5 p.m.'} Eastern). Catch-up checks are enabled; publication may still be delayed.</p>`:'');
+    if(!overview) {content.innerHTML=overdue+(data.last_attempt?.status==='failed'?'<p class="brief-warning">The first briefing could not be completed. A new edition will appear after a successful update.</p>':'<p>The first briefing has not been published yet.</p>'); return;}
     editions.hidden=selectedTab!=='overview';
     editions.innerHTML=all.filter(e=>e.date===date.value).map(e=>`<button data-edition="${escape(e.id)}" aria-pressed="${e.id===overview.id}">${editionNames[e.edition]||'Briefing'}</button>`).join('');
     const edition=selectedTab==='overview'?overview:all.filter(e=>e.sectors_enabled&&e.date<=date.value).at(-1);
-    if(!edition) {content.innerHTML='<p>Sector roundups will appear with the first evening briefing at 5 p.m. Eastern.</p>'; return;}
+    if(!edition) {content.innerHTML=overdue+'<p>Sector roundups will appear with the first evening briefing at 5 p.m. Eastern.</p>'; return;}
     const section=selectedTab==='overview'?edition.overview:edition.sectors[selectedTab];
     const title=selectedTab==='overview'?(edition.edition==='initial'?'Opening brief':(editionNames[edition.edition]||'Latest')+' briefing'):tabs[selectedTab]+' daily roundup';
-    const latest=all.at(-1);
     const failed=data.last_attempt?.status==='failed';
-    const stale=latest&&Date.now()-Date.parse(latest.published_at)>26*3600e3;
     const previousSector=selectedTab!=='overview'&&edition.date!==date.value;
-    content.innerHTML=`${failed?'<p class="brief-warning">The latest update could not be completed. The previous published briefing is still available below.</p>':stale?'<p class="brief-warning">The latest briefing is overdue. Check the publication time below.</p>':''}
+    content.innerHTML=`${overdue}${failed?'<p class="brief-warning">The latest update could not be completed. The previous published briefing is still available below.</p>':''}
       <h2>${escape(title)}</h2><p class="brief-time">Published ${escape(time(edition.published_at))}<br>Reporting window: ${escape(time(selectedTab==='overview'?edition.window_start:edition.sector_window_start))} – ${escape(time(edition.window_end))}</p>
       ${previousSector?'<p class="brief-warning">Showing the previous daily roundup. The next sector update is due at 5 p.m. Eastern.</p>':''}
       ${(edition.warnings||[]).map(w=>`<p class="brief-warning">${escape(w)}</p>`).join('')}
@@ -67,21 +96,33 @@
     closeBrief();openIncident(incident,locations[0]||null);
   });
   function closeBrief(){shell.classList.remove('open');body.hidden=true;toggle.setAttribute('aria-expanded','false');document.getElementById('brief-toggle-icon').textContent='+';shell.dispatchEvent(new Event('close',{bubbles:true}));}
-  async function loadBrief(){
+  async function loadBrief(preserveSelection=false){
+    const version=++loadVersion;
     try{
       const response=await fetch('briefings.json?v='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error(response.status);
-      data=await response.json();loaded=true;
+      const nextData=await response.json();
+      if(version!==loadVersion)return;
+      const oldDate=date.value, oldEdition=selectedEdition, oldTab=selectedTab;
+      const wasLatest=oldEdition===data?.editions.at(-1)?.id;
+      data=nextData;refreshFailed=false;
       const dates=[...new Set(data.editions.map(e=>e.date))].sort().reverse();
       date.innerHTML=dates.map(d=>`<option value="${escape(d)}">${escape(day(d))}</option>`).join('');
       selectedEdition=data.editions.at(-1)?.id;
-      chooseTab('overview');
-    }catch(_){content.innerHTML='<p>The briefing could not be loaded. Close and reopen this panel to try again.</p>';}
+      if(preserveSelection&&!wasLatest&&dates.includes(oldDate)){date.value=oldDate;selectedEdition=oldEdition;}
+      chooseTab(preserveSelection?oldTab:'overview');
+    }catch(_){
+      if(version!==loadVersion)return;
+      if(data){refreshFailed=true;renderBrief();}
+      else content.innerHTML='<p>The briefing could not be loaded. Close and reopen this panel to try again.</p>';
+    }
   }
   toggle.addEventListener('click',()=>{
     if(shell.classList.contains('open')){closeBrief();return;}
     shell.classList.add('open');body.hidden=false;toggle.setAttribute('aria-expanded','true');document.getElementById('brief-toggle-icon').textContent='−';
-    if(loaded){date.value=data.editions.at(-1)?.date||'';selectedEdition=data.editions.at(-1)?.id;chooseTab('overview');}else loadBrief();
+    loadBrief();
     body.scrollTop=0;
   });
+  setInterval(()=>{if(!body.hidden&&data)renderBrief();},60000);
+  setInterval(()=>{if(!body.hidden)loadBrief(true);},300000);
   shell.addEventListener('keydown',e=>{if(e.key==='Escape'){closeBrief();toggle.focus();}});
 })();
