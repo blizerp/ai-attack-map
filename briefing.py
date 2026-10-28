@@ -119,6 +119,41 @@ def edition_slot(now, schedule='', requested='auto', initial=False):
         target -= timedelta(days=1)
     return target.date().isoformat(), kind, target
 
+def catchup_slot(now, editions, attempts):
+    """One missing slot per invocation, bounded to the two latest due slots.
+
+    Never backfill before a newer published edition: its actual reporting window
+    already covers the gap. Calendar slots use New York wall time, not UTC hours.
+    """
+    local = now.astimezone(NY)
+    slots = []
+    for days in (1, 0):
+        for kind, hour in (('morning', 8), ('evening', 17)):
+            target = (local - timedelta(days=days)).replace(hour=hour, minute=0, second=0, microsecond=0)
+            if target <= local:
+                slots.append((target.date().isoformat(), kind, target))
+    completed = [(e['date'], 8 if e.get('edition') == 'morning' else 17)
+                 for e in editions if e.get('edition') in {'morning', 'evening'}]
+    # A manual opening brief covers the due slot at its collection time too.
+    for edition in editions:
+        if edition.get('edition') == 'initial':
+            date, _, target = edition_slot(parse(edition['window_end']))
+            completed.append((date, target.hour))
+    latest = max(completed, default=None)
+    # An empty archive starts with the current due edition, not historical churn.
+    candidates = slots[-2:] if editions else slots[-1:]
+    for date, kind, target in candidates:
+        key = (date, target.hour)
+        if latest and key <= latest:
+            continue
+        attempt = attempts.get(date + '-' + kind, {})
+        if attempt.get('count', 0) >= 3:
+            continue
+        if attempt.get('checked_at') and now - parse(attempt['checked_at']) < timedelta(minutes=45):
+            return None
+        return date, kind, target
+    return None
+
 def windows(now, kind, editions):
     local = now.astimezone(NY)
     if kind == 'initial':
@@ -126,9 +161,10 @@ def windows(now, kind, editions):
     elif kind == 'morning':
         start = (local - timedelta(days=1)).replace(hour=17, minute=0, second=0, microsecond=0).astimezone(UTC)
     else:
-        start = local.replace(hour=8, minute=0, second=0, microsecond=0).astimezone(UTC)
-        if start > now:
+        start = local.replace(hour=8, minute=0, second=0, microsecond=0)
+        if start > local:
             start -= timedelta(days=1)
+        start = start.astimezone(UTC)
     prior = [parse(e['window_end']) for e in editions if parse(e['window_end']) < now]
     if prior:
         # Continue from actual collection time, including delayed/missed editions.
@@ -285,7 +321,22 @@ def run(root=ROOT, now=None, client=None, gatherer=gather):
     generated_at = iso(now)
     if replacement:
         now = parse(replacement['window_end'])
-    date, kind, target = edition_slot(now, os.environ.get('BRIEF_SCHEDULE',''), os.environ.get('BRIEF_EDITION') or 'auto', not archive['editions'])
+    automatic = os.environ.get('BRIEF_CATCH_UP') == 'true' and not replacement
+    if automatic:
+        attempts = archive.setdefault('automatic_attempts', {})
+        slot = catchup_slot(now, archive['editions'], attempts)
+        if slot is None:
+            print('No eligible missing briefing; no feeds or API call')
+            return 0
+        date, kind, target = slot
+        key = date + '-' + kind
+        attempts[key] = {'count': attempts.get(key, {}).get('count', 0) + 1, 'checked_at': iso(now)}
+        cutoff_day = (now.astimezone(NY) - timedelta(days=3)).date().isoformat()
+        archive['automatic_attempts'] = {key: value for key, value in attempts.items() if key[:10] >= cutoff_day}
+        # Commit this health record even on generation failure, bounding retries.
+        atomic(archive_path, archive)
+    else:
+        date, kind, target = edition_slot(now, os.environ.get('BRIEF_SCHEDULE',''), os.environ.get('BRIEF_EDITION') or 'auto', not archive['editions'])
     if replacement:
         date, kind = replacement['date'], replacement['edition']
     edition_id = date + '-' + kind
@@ -305,6 +356,8 @@ def run(root=ROOT, now=None, client=None, gatherer=gather):
         client = client or OpenAI(timeout=180, max_retries=1)
         result, usage = generate(client, candidates, previous, sectors_enabled, incidents)
         warnings = []
+        if automatic and now - target.astimezone(UTC) > timedelta(minutes=30):
+            warnings.append('This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.')
         unavailable = [s['source'] for s in health if not s['ok']]
         if unavailable:
             warnings.append('Some sources were unavailable: ' + ', '.join(unavailable) + '.')
@@ -314,7 +367,7 @@ def run(root=ROOT, now=None, client=None, gatherer=gather):
         if summary_count:
             warnings.append(f'{summary_count} reports had only a short source excerpt available.')
         edition = dict(id=edition_id, date=date, edition=kind, published_at=iso(now), generated_at=generated_at,
-                       window_start=iso(start), window_end=iso(now), sector_window_start=iso(daily_start),
+                       scheduled_for=iso(target), window_start=iso(start), window_end=iso(now), sector_window_start=iso(daily_start),
                        sectors_enabled=sectors_enabled, overview=result['overview'],
                        sectors=result['sectors'] if sectors_enabled else {}, warnings=warnings,
                        sources=health, reviewed_reports=len(candidates), usage=usage)
@@ -330,7 +383,7 @@ def run(root=ROOT, now=None, client=None, gatherer=gather):
         print(f'briefing done: {edition_id}, {len(candidates)} reports reviewed, {len(result["overview"]["items"])} overview items', flush=True)
         return 0
     except Exception as exc:
-        archive['last_attempt'] = {'status':'failed', 'checked_at':iso(now), 'error':collector.safe_error(exc)}
+        archive['last_attempt'] = {'status':'failed', 'edition_id':edition_id, 'checked_at':iso(now), 'error':collector.safe_error(exc)}
         atomic(archive_path, archive)
         print('briefing failed: ' + collector.safe_error(exc), flush=True)
         return 1
