@@ -534,10 +534,330 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-10-27-evening",
+   "date": "2026-10-27",
+   "edition": "evening",
+   "published_at": "2026-10-28T00:20:32+00:00",
+   "generated_at": "2026-10-28T00:20:32+00:00",
+   "window_start": "2026-10-27T17:38:24+00:00",
+   "window_end": "2026-10-28T00:20:32+00:00",
+   "sector_window_start": "2026-10-27T00:20:32+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "New reports show a Japanese hosting provider confirming customer data exposure, a payment-data theft campaign through a shared shopping platform, and full recovery after Monday’s New Mexico hospital disruption.",
+    "items": [
+     {
+      "headline": "Japanese hosting provider confirms customer data was published online",
+      "what_happened": "GMO Internet said attackers who entered its Onamae Desktop Cloud stole and published company and customer data. The intrusion was detected October 20. The provider had warned that malware might have been placed on up to 26,739 customer servers.",
+      "impact": "Customer payment information was not exposed, but trading-account details and MetaTrader sign-in information may have been. GMO says ransomware was not activated on customer machines, although service availability was reduced while servers were shut down.",
+      "what_next": "GMO is scanning customer systems, checking the leaked data and working with Trend Micro. It may offer further compensation and replace computers damaged by any later ransomware activity.",
+      "change": "Impact increased",
+      "sectors": [
+       "internet",
+       "finance",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+        "published": "2026-10-27T23:35:51+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Shared shopping-platform code stole card details from Brazilian shoppers",
+      "what_happened": "Attackers altered an analytics script used by Convertr, a Brazilian online-shopping platform serving dozens of major brands. The script loaded on merchants’ checkout pages and collected card numbers, expiration dates, security codes, names and taxpayer numbers. The campaign was found October 24.",
+      "impact": "Some shoppers who paid by card through affected Brazilian stores may have had payment details captured. This is a confirmed payment-data theft campaign, but the number of affected shoppers and any resulting fraud are unclear.",
+      "what_next": "Convertr removed the harmful code and upgraded the affected software. It is notifying merchants and payment providers. Investigators may clarify which stores and transactions were exposed.",
+      "change": "New report",
+      "sectors": [
+       "finance",
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data/",
+        "published": "2026-10-27T20:57:25+00:00"
+       }
+      ],
+      "incident_ids": [
+       "464316e22559bc13"
+      ]
+     },
+     {
+      "headline": "New Mexico hospital says patient care has fully returned to normal",
+      "what_happened": "After Monday’s cyberattack, UNM Health said all critical electronic systems were back online Tuesday. Hospitals reopened fully, ambulance traffic returned to normal, and clinics resumed scheduled appointments and procedures.",
+      "impact": "The earlier ambulance diversion, canceled appointments and suspended surgeries have ended. UNM said the event affected some end-user devices but did not reach core systems or servers. Claims by a ransomware group about stolen data remain unconfirmed.",
+      "what_next": "UNM and law enforcement are still investigating the cause and scope. Patients, staff and students may receive further notices if investigators confirm information exposure.",
+      "change": "Recovery update",
+      "sectors": [
+       "healthcare"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries/",
+        "published": "2026-10-27T22:07:34+00:00"
+       }
+      ],
+      "incident_ids": [
+       "62c149c3423ae5e2"
+      ]
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "Confirmed payment-data theft affected a shared Brazilian shopping platform. A separate Japanese hosting incident may expose trading-account details, but no banking or payment data was reported stolen.",
+     "items": [
+      {
+       "headline": "Brazilian checkout script captured shoppers’ payment details",
+       "what_happened": "A compromised analytics script used by Convertr-loaded online stores collected card information during checkout. Convertr removed the script after the campaign was identified October 24.",
+       "impact": "Card payments made through some affected Brazilian stores may be exposed. Confirmed financial losses and the number of affected shoppers are not known.",
+       "what_next": "Merchants and payment providers are being notified. Further investigation may identify affected stores and transactions.",
+       "change": "New report",
+       "sectors": [
+        "finance",
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data/",
+         "published": "2026-10-27T20:57:25+00:00"
+        }
+       ],
+       "incident_ids": [
+        "464316e22559bc13"
+       ]
+      },
+      {
+       "headline": "Japanese cloud-service customers warned about exposed trading credentials",
+       "what_happened": "GMO Internet said attackers stole and published company and customer data after entering its Onamae Desktop Cloud service. Trading-account details and MetaTrader sign-in information may be included.",
+       "impact": "No payment information was exposed, according to GMO. The company has not confirmed misuse of trading accounts, but customer servers experienced reduced availability during the response.",
+       "what_next": "GMO is verifying the leaked information and scanning customer systems. More details about affected accounts and compensation may follow.",
+       "change": "Impact increased",
+       "sectors": [
+        "finance",
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+         "published": "2026-10-27T23:35:51+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "healthcare": {
+     "intro": "UNM Health reports that the service disruption from Monday’s cyberattack has ended. The investigation and any data-exposure assessment continue.",
+     "items": [
+      {
+       "headline": "New Mexico hospital restores ambulances, clinics and surgeries",
+       "what_happened": "UNM Health said hospitals are fully open, ambulance traffic is normal and clinics have resumed scheduled care after Monday’s attack.",
+       "impact": "The earlier diversion of ambulances and cancellation of appointments and outpatient surgeries have stopped. UNM says core systems and servers were not penetrated, but some end-user devices were affected.",
+       "what_next": "Law enforcement and UNM are continuing to determine what happened and whether information was taken. Additional notices may be issued if the scope changes.",
+       "change": "Recovery update",
+       "sectors": [
+        "healthcare"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries/",
+         "published": "2026-10-27T22:07:34+00:00"
+        }
+       ],
+       "incident_ids": [
+        "62c149c3423ae5e2"
+       ]
+      }
+     ]
+    },
+    "internet": {
+     "intro": "A Japanese hosting provider confirmed a customer-data leak and continuing recovery work. A separate shared checkout service was used to steal payment information from online shoppers.",
+     "items": [
+      {
+       "headline": "Japanese hosting provider confirms data leak after customer-server incident",
+       "what_happened": "GMO Internet said data belonging to the company and its Onamae Desktop Cloud customers was published online after an October 20 intrusion. Up to 26,739 customer servers may have received malware, according to the company’s earlier warning.",
+       "impact": "Service availability was reduced while servers were shut down and examined. GMO says payment information was not exposed, but trading credentials and account details may have been.",
+       "what_next": "The company is scanning systems, checking the authenticity of leaked data and working with outside investigators. It says ransomware has not been activated on customer machines.",
+       "change": "Impact increased",
+       "sectors": [
+        "internet",
+        "finance",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+         "published": "2026-10-27T23:35:51+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Compromised checkout script affected stores using a shared platform",
+       "what_happened": "Attackers changed Convertr’s analytics script so it collected information entered by shoppers on checkout pages. The code was removed after the campaign was identified October 24.",
+       "impact": "Some online shoppers in Brazil may have had card and identity details stolen. The number of affected stores and customers is not yet known.",
+       "what_next": "Convertr is notifying merchants and payment providers while investigators determine the campaign’s reach.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "finance",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data/",
+         "published": "2026-10-27T20:57:25+00:00"
+        }
+       ],
+       "incident_ids": [
+        "464316e22559bc13"
+       ]
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "Two incidents involved upstream services used by other organizations: a Japanese hosting provider and a shared Brazilian shopping platform. Both created risks beyond a single company’s own systems.",
+     "items": [
+      {
+       "headline": "GMO cloud service breach put customer servers and data at risk",
+       "what_happened": "Attackers breached Onamae Desktop Cloud, a Japanese virtual-server provider, and may have placed malware on customer servers. GMO later confirmed that company and customer data was published online.",
+       "impact": "Customers faced reduced service availability while servers were shut down. Trading credentials may have been exposed, but payment information was not, according to GMO.",
+       "what_next": "GMO is examining customer systems and leaked information. The extent of customer impact and any further compensation remain under review.",
+       "change": "Impact increased",
+       "sectors": [
+        "supply_chain",
+        "internet",
+        "finance"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+         "published": "2026-10-27T23:35:51+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Convertr platform breach exposed shoppers across multiple stores",
+       "what_happened": "A malicious change to Convertr’s shared analytics script reached checkout pages for merchants using the platform. The script stole payment and identity details entered by shoppers.",
+       "impact": "This was a confirmed compromise of a shared service, not just one online store. Affected merchants and the number of exposed shoppers are still unclear.",
+       "what_next": "Convertr removed the code and upgraded the affected software. Merchant and payment-provider investigations may establish the full scope.",
+       "change": "New report",
+       "sectors": [
+        "supply_chain",
+        "finance",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data/",
+         "published": "2026-10-27T20:57:25+00:00"
+        }
+       ],
+       "incident_ids": [
+        "464316e22559bc13"
+       ]
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "6 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 711
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 38,
+   "usage": {
+    "completion_tokens": 1831,
+    "prompt_tokens": 33177,
+    "total_tokens": 35008,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 112,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 33174,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-10-27T17:38:24+00:00"
+  "checked_at": "2026-10-28T00:20:32+00:00"
  }
 }
