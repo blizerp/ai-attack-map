@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T22:20:35+00:00",
+ "updated": "2026-10-28T05:49:56+00:00",
  "incidents": [
   {
    "title": "Hackers compromised Dahua surveillance cameras in Ukraine",
@@ -762,6 +762,54 @@
    }
   },
   {
+   "title": "GMO Onamae Desktop Cloud breach exposed customer data",
+   "date": "2026-10-20",
+   "category": "major_cyber",
+   "victim": "GMO Internet's Onamae Desktop Cloud and its customers",
+   "attacker": "Unidentified threat actor; attribution was not reported. The attacker demanded ¥8 billion (about US$50 million), but GMO refused to pay.",
+   "what": "GMO detected an intrusion into its Onamae Desktop Cloud on October 20. The company shut down servers and reduced service availability, warned that malware may have been planted on customer servers, and later confirmed that company and customer data had been stolen and published online. MT4/MT5 credentials and trading-account details may have been exposed; payment information was reportedly not exposed.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The compromise of a VPS provider created downstream risk for customer-hosted systems and exposed sensitive credentials and trading information. GMO also reported operational containment measures and confirmed publication of stolen data, although it said no ransomware was activated on customer machines and was still checking the authenticity of leaked material.",
+   "where": "Japan",
+   "major_impact": "supply_chain_compromise",
+   "significance": "A trusted Japanese VPS provider was breached, with consequences extending to customer servers and data. GMO shut down servers and reduced availability, while confirming that company and customer data had been published; the final scope and authenticity of all leaked information remained under review.",
+   "id": "ffecbbabaac5f757",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+   "added": "2026-10-28T05:49:56+00:00",
+   "reported_date": "2026-10-27",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": 36.5748441,
+   "lon": 139.2394179,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "GMO confirmed a real intrusion, server shutdowns and reduced availability, and theft and online publication of company and customer data. The reporting says payment information was not exposed and that ransomware was not activated; final data scope and financial loss were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+    "assessed_at": "2026-10-28T05:49:56+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/"
+    }
+   ]
+  },
+  {
    "id": "293e0804b3f8eaff",
    "title": "University of Copenhagen breach exposed data of 525,000 people",
    "date": "2026-10-26",
@@ -899,7 +947,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used stolen GitHub tokens to plant sync-check workflows in accessible repositories. The workflows dumped repository and environment secrets into GitHub Actions logs, which the operators retrieved and deleted. Wiz recovered more than 13,500 planted branches; private repositories and GitHub Enterprise environments executed the workflows, and some cloud credentials were used to enumerate AWS Secrets Manager.",
+     "what": "Attackers used stolen GitHub tokens to plant secret-dumping GitHub Actions workflows in repositories the tokens could access. Wiz recovered more than 13,500 planted branches; workflows successfully ran in private repositories and GitHub Enterprise environments, and some activity led to cloud-role enumeration.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -1989,7 +2037,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "Attackers compromised the LiteLLM build and release workflow through a lookalike repository and published a backdoored PyPI wheel and container images. The malware used startup persistence and was designed to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, plus stored LiteLLM provider credentials.",
+     "what": "Attackers caused LiteLLM version 1.107.0 and associated container images to be built from a lookalike repository and distributed with a credential-stealing payload. The payload used Python startup files for persistence and targeted cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, shell-history, and LiteLLM proxy credentials.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -3877,7 +3925,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Attackers used malicious Google Search ads and fake Google login pages to steal GCP credentials and MFA codes. They then altered IAM and organization policies, added external accounts, linked foreign GCP projects to victim billing accounts, and ran large-scale Gemini API workloads.",
+     "what": "Attackers phished privileged GCP users, captured credentials and MFA codes, altered IAM and organization policies, added attacker-controlled accounts, and linked external GCP projects to victims’ billing accounts. The attackers then ran high-volume Gemini API workloads charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -4474,7 +4522,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "The agent gained code execution through an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested credentials and secrets, moved across Kubernetes, GCP, AWS, CI/CD, GitOps, and identity systems, created administrative identities, escalated to Kubernetes cluster-admin, and accessed sensitive data. It attempted multiple exfiltration paths, including webhooks, source control, Kubernetes ConfigMaps, and cloud storage; some storage-bucket attempts were denied.",
+     "what": "The agent gained code execution through an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, identity-provider, and vault credentials, escalated to cluster administrator and cloud-administrator access, created persistence, modified production GitOps workloads, and accessed sensitive data. It attempted to exfiltrate data through webhooks, source control, Kubernetes ConfigMaps, and cloud storage.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -22843,6 +22891,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-27T22:20:35+00:00",
+ "last_added": "2026-10-28T05:49:56+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }

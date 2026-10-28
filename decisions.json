@@ -132,15 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-10-27T22:20:35+00:00",
+  "checked": "2026-10-28T05:49:56+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is the same confirmed Gheist campaign already tracked under fdf212b3998ab3a2; the source provides additional technical and impact evidence, including private-repository execution and credential exposure.",
+  "reason": "Independent researcher evidence substantiates a large-scale campaign using compromised GitHub tokens to execute workflows and access secrets in private and enterprise repositories. This is the already-tracked Gheist incident, with additional evidence of successful private-repository and cloud follow-on activity.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is the same confirmed Gheist campaign already tracked under fdf212b3998ab3a2; the source provides additional technical and impact evidence, including private-repository execution and credential exposure.",
-    "title": "Gheist campaign abused stolen GitHub tokens to exfiltrate secrets",
+    "reason": "Independent researcher evidence substantiates a large-scale campaign using compromised GitHub tokens to execute workflows and access secrets in private and enterprise repositories. This is the already-tracked Gheist incident, with additional evidence of successful private-repository and cloud follow-on activity.",
+    "title": "Gheist campaign abused stolen GitHub tokens across 850 accounts",
     "incident_id": "fdf212b3998ab3a2"
    }
   ],
@@ -18510,15 +18510,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-10-27T22:20:35+00:00",
+  "checked": "2026-10-28T05:49:56+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz CIRT substantiated a real-world AI-agent intrusion with broad unauthorized access, credential harvesting, privilege escalation, persistence, and sensitive-data access. It is the same incident as the already-tracked exposed-Kafka-UI multi-cloud intrusion.",
+  "reason": "Wiz CIRT substantiated a consequential unauthorized intrusion into an actual organization, and the incident matches the already-tracked exposed-Kafka-UI multi-cloud AI-agent intrusion.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz CIRT substantiated a real-world AI-agent intrusion with broad unauthorized access, credential harvesting, privilege escalation, persistence, and sensitive-data access. It is the same incident as the already-tracked exposed-Kafka-UI multi-cloud intrusion.",
-    "title": "AI agent breached an unnamed multi-cloud organization",
+    "reason": "Wiz CIRT substantiated a consequential unauthorized intrusion into an actual organization, and the incident matches the already-tracked exposed-Kafka-UI multi-cloud AI-agent intrusion.",
+    "title": "AI agent conducted multi-cloud intrusion via exposed Kafka UI",
     "incident_id": "896e03eaa7904596"
    }
   ],
@@ -19003,14 +19003,14 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-10-27T22:20:35+00:00",
+  "checked": "2026-10-28T05:49:56+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz substantiated multiple real GCP compromises with privileged access and material unauthorized AI-related billing charges; this is the same incident/campaign already tracked under f58ed76ff84133f9.",
+  "reason": "Wiz substantiated multiple consequential GCP compromises with privileged-account takeover and substantial unauthorized Gemini billing. This is the same incident pattern already tracked under f58ed76ff84133f9.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz substantiated multiple real GCP compromises with privileged access and material unauthorized AI-related billing charges; this is the same incident/campaign already tracked under f58ed76ff84133f9.",
+    "reason": "Wiz substantiated multiple consequential GCP compromises with privileged-account takeover and substantial unauthorized Gemini billing. This is the same incident pattern already tracked under f58ed76ff84133f9.",
     "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
@@ -19812,15 +19812,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-10-27T22:20:35+00:00",
+  "checked": "2026-10-28T05:49:56+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed compromise of LiteLLM’s production release infrastructure and distribution of malicious packages qualifies as a supply-chain cyber incident; downstream victim count and data theft remain unestablished.",
+  "reason": "Confirmed compromise of LiteLLM’s package and container release infrastructure with a credential-stealing payload; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25, with additional technical evidence from Wiz.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed compromise of LiteLLM’s production release infrastructure and distribution of malicious packages qualifies as a supply-chain cyber incident; downstream victim count and data theft remain unestablished.",
-    "title": "LiteLLM 1.107.0 release compromised to steal credentials",
+    "reason": "Confirmed compromise of LiteLLM’s package and container release infrastructure with a credential-stealing payload; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25, with additional technical evidence from Wiz.",
+    "title": "LiteLLM 1.107.0 supply-chain release stole credentials",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -23091,6 +23091,57 @@
    "date": "2026-10-27",
    "source": "The Hacker News",
    "published_at": "2026-10-27T13:59:09+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/": {
+  "title": "Japan's GMO urges customers to shut down PCs amid ransomware threat",
+  "source": "BleepingComputer",
+  "checked": "2026-10-28T05:49:56+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The provider confirmed unauthorized access, operational containment, downstream customer risk, and stolen data published online. This is a meaningful supply-chain/provider compromise, not merely an attacker claim or blocked attempt.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The provider confirmed unauthorized access, operational containment, downstream customer risk, and stolen data published online. This is a meaningful supply-chain/provider compromise, not merely an attacker claim or blocked attempt.",
+    "title": "GMO Onamae Desktop Cloud breach exposed customer data",
+    "incident_id": "ffecbbabaac5f757"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "882f2775b6554a923dc1494f8270408a80e1c2e2ee5a3be651041233f3e283bc",
+  "item": {
+   "id": "ffecbbabaac5f757",
+   "title": "Japan's GMO urges customers to shut down PCs amid ransomware threat",
+   "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+   "date": "2026-10-27",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-27T23:35:51+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/artificial-intelligence/openais-gpt-61-terra-is-safer-overall-but-shows-more-destructive-action-flags-in-tests/": {
+  "title": "OpenAI's GPT-6.1 Terra is safer overall, but shows more destructive-action flags in tests",
+  "source": "BleepingComputer",
+  "checked": "2026-10-28T05:49:56+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is a model-safety evaluation and research report, not a substantiated real-world cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is a model-safety evaluation and research report, not a substantiated real-world cyber incident.",
+    "title": "GPT-6.1 Terra safety behaviors tested in simulations"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "bc66797ceb11bd277b1f035bc5307e2cd94fb6706677b53b059869d90d35af4c",
+  "item": {
+   "id": "675ad5dcb3e23e5f",
+   "title": "OpenAI's GPT-6.1 Terra is safer overall, but shows more destructive-action flags in tests",
+   "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openais-gpt-61-terra-is-safer-overall-but-shows-more-destructive-action-flags-in-tests/",
+   "date": "2026-10-27",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-27T22:43:27+00:00"
   }
  }
 }
