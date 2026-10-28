@@ -1,14 +1,14 @@
 {
- "updated": "2026-10-28T13:03:49+00:00",
+ "updated": "2026-10-28T22:39:58+00:00",
  "incidents": [
   {
    "title": "China-linked hackers rooted firewalls and accessed management systems",
    "date": "2026-10-23 to 2026-10-24",
-   "category": "major_cyber",
+   "category": "using_ai",
    "victim": "A US government-affiliated organization and other organizations operating the targeted firewalls; specific organizations were not reported",
    "attacker": "Unattributed China-linked or Chinese-nexus actor, according to Dream; specific threat actor not identified",
    "what": "Attackers exploited PHP2Shell and Fragnesia vulnerabilities against internet-facing firewalls. They installed root webshells on 24 devices, then used a reverse SSH tunnel to access an internal firewall-management server at a US government-affiliated organization, retrieve configurations and credentials, decrypt an LDAP service-account password, enumerate the domain, conduct password spraying, and attempt to create Active Directory backdoor accounts.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
+   "ai_role": "Dream found Anthropic Claude Code, FOFA and aiscan-related API keys, and code characteristics suggesting AI-assisted tooling and development; the reporting does not establish that an AI agent autonomously carried out the intrusion.",
    "why": "The incident involved confirmed root-level access to firewalls and subsequent access to an internal management server containing enterprise firewall configurations and credentials. Dream observed no post-exploitation activity on 22 devices, while the US government-affiliated environment was subjected to deeper intrusion activity.",
    "where": "US government-affiliated environment; other affected firewall locations were not reported",
    "major_impact": "critical_network_intrusion",
@@ -46,6 +46,22 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.securityweek.com/china-linked-hackers-exploit-php2shell-to-root-firewalls/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html"
+    }
+   ],
+   "ai_source_url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
+   "ai_source_name": "The Hacker News",
+   "updates": [
+    {
+     "date": "2026-10-28",
+     "what": "Dream researchers reported that attackers chained the PHP2Shell vulnerabilities with the Fragnesia Linux kernel privilege-escalation flaw to obtain root access on 25 firewall servers across the United States, Japan, Taiwan, and South Korea. The attackers planted web shells, used a reverse SSH tunnel into a U.S. government-affiliated network, accessed an internal firewall management server, and targeted Active Directory for credential extraction, enumeration, password spraying, and attempted backdoor-account creation.",
+     "url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
+     "source": "The Hacker News"
     }
    ]
   },
@@ -264,6 +280,274 @@
     },
     "source_url": "https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html",
     "assessed_at": "2026-10-28T13:03:49+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Metabase exploits exposed Blueberry Pediatrics patient data",
+   "date": "2026-08-22 to 2026-08-24",
+   "category": "major_cyber",
+   "victim": "Blueberry Pediatrics and its patients",
+   "attacker": "Two different unidentified threat actors; attribution not reported",
+   "what": "Attackers exploited a critical Metabase vulnerability through Blueberry Pediatrics and its prescription-service provider Photon, obtaining copies of patient data. The exposed information included names, dates of birth, health-plan details, medical records, service dates, medical codes, charges, contact details, member IDs, and medication information; financial information, Social Security numbers, photos, and videos were not involved.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident affected 340,915 individuals and involved theft of sensitive medical and insurance information from a telemedicine provider and a healthcare supplier.",
+   "where": "United States; affected residents in Oregon and Texas were reported",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Blueberry Pediatrics confirmed that patient data was obtained after Metabase exploitation, and the Oregon and Texas attorneys general were notified of affected residents. The scale and medical sensitivity make this a substantial healthcare data breach, although the final overlap between the two related exposures is not fully established.",
+   "id": "dcbaade5ec633091",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/blueberry-pediatrics-photon-data-breach/",
+   "added": "2026-10-28T22:39:58+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-28",
+   "evidence_status": "confirmed",
+   "lat": 43.9792797,
+   "lon": -120.737257,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Blueberry Pediatrics reported theft of data affecting 340,915 individuals, including medical records, health-plan information, and medication data. The available reporting does not establish service disruption or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/blueberry-pediatrics-photon-data-breach/",
+    "assessed_at": "2026-10-28T22:39:58+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 43.9792797,
+     "lon": -120.737257,
+     "label": "Oregon, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/blueberry-pediatrics-photon-data-breach/"
+    },
+    {
+     "lat": 31.2638905,
+     "lon": -98.5456116,
+     "label": "Texas, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/blueberry-pediatrics-photon-data-breach/"
+    }
+   ]
+  },
+  {
+   "title": "Volt Typhoon used Silent Train in zero-day intrusions",
+   "date": "2026-10-28",
+   "category": "major_cyber",
+   "victim": "Telecommunications firms, government agencies, defense contractors, educational institutes, utilities and other critical-infrastructure organizations, satellite providers, IT firms, MSPs, transportation and emergency-service organizations; specific victims were not reported",
+   "attacker": "Volt Typhoon, identified as a Chinese state-sponsored group by Black Lotus Labs; attribution is researcher-assessed",
+   "what": "Black Lotus Labs observed Volt Typhoon using the Silent Train framework, which chains compromised routers, modems, and other devices as disposable relays. The group exploited at least four reported zero-day vulnerabilities in VeloCloud Orchestrator, Cisco Catalyst SD-WAN, N-able N-central, and Versa Director, with a suspected Quest KACE zero-day also observed, to steal credentials, exfiltrate data, maintain remote access, and reach downstream customers.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The intrusions targeted centralized management and edge infrastructure that can provide administrative control and access to downstream customer environments. Researchers observed actual exploitation, credential theft, data exfiltration, and persistent access rather than merely attempted attacks.",
+   "where": "United States, with California, Texas, and Hawaii identified as the most targeted regions",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Independent researcher observations confirmed exploitation of multiple zero-days and compromise of relay and enterprise systems across telecommunications, government, defense, utility, transportation, and other sectors. The affected management platforms could provide privileged access to downstream customers.",
+   "id": "a5181cd3aa60aa7f",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/",
+   "added": "2026-10-28T22:39:58+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-28",
+   "evidence_status": "confirmed",
+   "lat": 36.7014631,
+   "lon": -118.755997,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Black Lotus Labs reported hundreds of identified victims and described credential access, data exfiltration, and continued access capabilities. Specific victim-level outages, stolen-data volumes, and financial losses were not established in the available reporting.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
+    "assessed_at": "2026-10-28T22:39:58+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.7014631,
+     "lon": -118.755997,
+     "label": "California, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/"
+    },
+    {
+     "lat": 31.2638905,
+     "lon": -98.5456116,
+     "label": "Texas, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/"
+    },
+    {
+     "lat": 19.5938015,
+     "lon": -155.4283701,
+     "label": "Hawaii, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-28",
+     "what": "Black Lotus Labs reported that Volt Typhoon used the Silent Train network to exploit four confirmed zero-day campaigns involving Versa Director, N-able N-central, Cisco Catalyst SD-WAN Controller, and Arista VeloCloud Orchestrator. The compromised relay infrastructure supported credential access, data exfiltration, and continued access to victim environments.",
+     "url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
+     "source": "The Hacker News"
+    }
+   ]
+  },
+  {
+   "title": "Sony ISP subsidiary breach exposed 2.5 million customer records",
+   "date": "2026-10-19",
+   "category": "major_cyber",
+   "victim": "Sony Network Communications, including So-net and plala services; affected NTT Docomo Hikari customers",
+   "attacker": "Unauthorized party; attribution was not reported.",
+   "what": "Sony Network Communications confirmed unauthorized access to its So-net member database. The breach exposed 2,585,481 customer records containing names, phone numbers, email addresses, user IDs, dates of birth, gender, and internet connection IDs; 54,401 additional email addresses were exposed with account passwords.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident affected a telecommunications provider and exposed more than 2.5 million customer records, including reusable account passwords in a subset of cases. Sony shut down compromised servers, blocked external communication, notified Japan's privacy regulator, and the investigation into cause and scope continues.",
+   "where": "Japan",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The confirmed exposure of 2,585,481 telecom-customer records, plus 54,401 email addresses with passwords, represents large-scale theft of sensitive personal information. NTT Docomo warned affected customers about phishing and impersonation risks, although misuse of the data had not been confirmed as of October 27.",
+   "id": "8d9eceb5e20bcce3",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
+   "added": "2026-10-28T22:39:58+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-28",
+   "evidence_status": "confirmed",
+   "lat": 36.5748441,
+   "lon": 139.2394179,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Sony confirmed unauthorized database access and exposure of more than 2.5 million customer records, including passwords for 54,401 email addresses. Compromised servers were shut down and external communication blocked; no material telecom-service outage or financial loss was reported, and misuse of the data was not confirmed.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
+    "assessed_at": "2026-10-28T22:39:58+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/"
+    }
+   ]
+  },
+  {
+   "title": "Moldova government systems breached, exposing data and disrupting services",
+   "date": "2026-10-19 to 2026-10-23",
+   "category": "major_cyber",
+   "victim": "Moldovan government services, information systems and administrative panels",
+   "attacker": "Unknown; Moldovan authorities are investigating possible foreign state involvement but have made no attribution.",
+   "what": "Attackers exploited vulnerabilities in unauthenticated government services, made approximately 11 million data-access requests, and extracted information associated with about 750,000 identification numbers. The access path also enabled retrieval of additional data from interconnected government systems.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Potentially exposed information included identity, health-insurance, benefits, pension, disability, driver's-license, vehicle-ownership and possible financial records. Authorities temporarily disconnected vulnerable services and more than 30 government information systems, disrupting online applications and registrations for construction, veterinary transport, medicine imports and food safety.",
+   "where": "Moldova",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Moldovan authorities disclosed extraction of data linked to approximately 750,000 identification numbers and confirmed disruption of dozens of public services. Bank-card information was reportedly not compromised, and authorities found no evidence that official records were altered.",
+   "id": "645312f381555447",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/moldova-investigates-possible-foreign-involvement-cyberattacks",
+   "added": "2026-10-28T22:39:58+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-28",
+   "evidence_status": "confirmed",
+   "lat": 47.2879608,
+   "lon": 28.5670941,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The government temporarily disconnected more than 30 information systems and vulnerable public services, while preliminary findings indicated extraction of personal and potentially financial information linked to about 750,000 identification numbers. Final scope and individual-level exposure remain under investigation.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "disrupted",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/moldova-investigates-possible-foreign-involvement-cyberattacks",
+    "assessed_at": "2026-10-28T22:39:58+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 47.2879608,
+     "lon": 28.5670941,
+     "label": "Moldova",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/moldova-investigates-possible-foreign-involvement-cyberattacks"
+    }
+   ]
+  },
+  {
+   "title": "Japan Airlines provider breach exposed data of 92,000 customers",
+   "date": "2026-10-28",
+   "category": "major_cyber",
+   "victim": "Japan Airlines and Japan Transocean Air customers; reservation provider Amadeus IT Group",
+   "attacker": "Unknown hackers; no attribution was reported.",
+   "what": "Amadeus informed Japan Airlines that hackers accessed part of the reservation data for Japan Airlines and Japan Transocean Air flights. Exposed information included names, reservation codes, and flight information for 92,000 customers; for about 2,000 customers, passport numbers, frequent-flyer numbers, email addresses, and phone numbers were also accessed.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident compromised a trusted provider supporting airline reservation, ticketing, and check-in systems and exposed sensitive travel and identity information. Flight operations were not affected, and credit-card numbers were not compromised.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Japan Airlines confirmed that its IT provider reported unauthorized access affecting 92,000 customers, including passport and contact data for approximately 2,000 people.",
+   "id": "6a5c48955e180878",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/japan-airlines-warns-of-breach-country-grapples-with-incidents",
+   "added": "2026-10-28T22:39:58+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-28",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The provider breach exposed reservation and, for approximately 2,000 customers, passport, frequent-flyer, email, and phone information. Japan Airlines said flight operations and credit-card data were unaffected; financial loss was not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/japan-airlines-warns-of-breach-country-grapples-with-incidents",
+    "assessed_at": "2026-10-28T22:39:58+00:00",
     "method": "reported-impact-v1"
    }
   },
@@ -1165,7 +1449,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used stolen GitHub tokens to plant secret-dumping workflows in repositories. Wiz recovered more than 13,500 planted branches; private and GitHub Enterprise workflow runs completed, exposed repository or environment secrets, and in some cases enabled cloud-credential enumeration.",
+     "what": "Attackers used stolen GitHub tokens to plant workflows in accessible repositories and dump repository, environment, cloud, CI/CD, and other secrets into GitHub workflow logs. Wiz recovered more than 13,500 planted branches; successful execution was observed in private repositories and GitHub Enterprise environments, including activity that assumed AWS roles.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -2109,6 +2393,10 @@
     {
      "name": "SecurityWeek",
      "url": "https://www.securityweek.com/connectwise-suspends-cloud-services-in-response-to-cyberattack/"
+    },
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
     }
    ],
    "locations": [
@@ -2146,6 +2434,12 @@
      "what": "Attackers used a compromised ConnectWise Cloud Backup credential to sign in to Microsoft 365 tenants. Huntress observed successful access in more than 300 tenants, and in one tenant the ConnectWise Cloud Management app was added to the Global Administrator role and used to create client secrets in management applications.",
      "url": "https://www.securityweek.com/connectwise-suspends-cloud-services-in-response-to-cyberattack/",
      "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-10-21",
+     "what": "Storm-0940 compromised multiple ConnectWise cloud applications and used ARTEX AI agents to authenticate to downstream Microsoft 365 environments through the applications’ existing trusted access. Microsoft observed reconnaissance, application-credential changes, privilege-related directory operations, and in some environments reading secrets from Azure Key Vaults.",
+     "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/",
+     "source": "AI agent attack tracker"
     },
     {
      "date": "2026-10-22",
@@ -2209,6 +2503,10 @@
     {
      "name": "Wiz Research",
      "url": "https://www.wiz.io/blog/artex-in-the-wild-storm-0940-expands-targeting-of-it-and-software-vendors"
+    },
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://www.wiz.io/blog/php2shell-php-rce"
     }
    ],
    "locations": [
@@ -2255,9 +2553,15 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The LiteLLM 1.107.0 PyPI wheels and associated container images were built from a lookalike repository and contained persistence files that execute at interpreter startup. The payload collected cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and other credentials, and was designed to transmit them to an attacker-controlled lookalike domain. PyPI and container registries removed or quarantined the affected artifacts on October 21.",
+     "what": "A malicious LiteLLM 1.107.0 release was uploaded to PyPI and Docker. The package included a credential stealer targeting browser, cloud, and AI secrets, plus a dormant command-and-control capability.",
+     "url": "https://www.wiz.io/blog/php2shell-php-rce",
+     "source": "AI agent attack tracker"
+    },
+    {
+     "date": "2026-10-21",
+     "what": "The attacker used stolen maintainer and workflow credentials to compromise the LiteLLM release process and publish malicious PyPI wheels and Docker/GHCR images. The packages installed persistence that executed at Python startup and attempted to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials before sending data to a lookalike domain.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
-     "source": "Wiz Research"
+     "source": "AI agent attack tracker"
     },
     {
      "date": "2026-10-22",
@@ -4143,7 +4447,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Attackers captured GCP users’ credentials and MFA codes, accessed victim environments, disabled organization policy guardrails, created privileged service accounts and Gemini API keys, added external accounts, and linked attacker-controlled projects to victims’ billing accounts. The linked projects were then used for high-volume Gemini API inference.",
+     "what": "Wiz CIRT investigated multiple intrusions in which phishing captured privileged GCP credentials and MFA codes. Attackers altered IAM and organization policies, added external accounts, linked attacker-controlled projects to victims’ billing accounts, and ran high-volume Gemini API workloads.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -4740,7 +5044,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT investigated an intrusion that began with confirmed remote code execution through an exposed Kafka UI. The AI agent deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, and identity credentials, created accounts and pipelines, obtained cluster-administrator and broad AWS access, modified production workloads, and accessed sensitive data while attempting multiple exfiltration channels.",
+     "what": "Wiz CIRT documented an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created an administrator identity, obtained cluster-admin and cross-account administrative access, modified GitOps deployments, and accessed sensitive data. The agent attempted and in some cases completed data collection and exfiltration through repositories, Kubernetes ConfigMaps, logs, and an external webhook; some bucket-exfiltration attempts were denied.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -23051,6 +23355,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-28T13:03:49+00:00",
+ "last_added": "2026-10-28T22:39:58+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
