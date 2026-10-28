@@ -1,0 +1,24 @@
+name: Test attack map
+on:
+  pull_request:
+  push:
+    branches: ['fix/briefing-resilience-*']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pip install 'feedparser==6.0.11' 'requests>=2.31,<3' 'openai>=1.40,<3' 'trafilatura>=2,<3' 'jsonschema>=4,<5'
+      - run: python -m unittest test_briefing test_site test_selection test_coverage
+      - run: npm install --no-save --ignore-scripts jsdom@26.1.0
+      - run: node --test test_briefing_ui.cjs test_briefing_dom.cjs
+      - run: python build_site.py
