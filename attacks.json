@@ -1,6 +1,272 @@
 {
- "updated": "2026-10-28T05:49:56+00:00",
+ "updated": "2026-10-28T13:03:49+00:00",
  "incidents": [
+  {
+   "title": "China-linked hackers rooted firewalls and accessed management systems",
+   "date": "2026-10-23 to 2026-10-24",
+   "category": "major_cyber",
+   "victim": "A US government-affiliated organization and other organizations operating the targeted firewalls; specific organizations were not reported",
+   "attacker": "Unattributed China-linked or Chinese-nexus actor, according to Dream; specific threat actor not identified",
+   "what": "Attackers exploited PHP2Shell and Fragnesia vulnerabilities against internet-facing firewalls. They installed root webshells on 24 devices, then used a reverse SSH tunnel to access an internal firewall-management server at a US government-affiliated organization, retrieve configurations and credentials, decrypt an LDAP service-account password, enumerate the domain, conduct password spraying, and attempt to create Active Directory backdoor accounts.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident involved confirmed root-level access to firewalls and subsequent access to an internal management server containing enterprise firewall configurations and credentials. Dream observed no post-exploitation activity on 22 devices, while the US government-affiliated environment was subjected to deeper intrusion activity.",
+   "where": "US government-affiliated environment; other affected firewall locations were not reported",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Observed exploitation progressed from internet-facing firewalls to an internal management server, exposing configurations and credentials for every firewall managed by the organization and enabling attempted domain compromise.",
+   "id": "8550c665be3b6045",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/china-linked-hackers-exploit-php2shell-to-root-firewalls/",
+   "added": "2026-10-28T13:03:49+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-28",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Dream observed root webshells on 24 firewalls and confirmed deeper access at a US government-affiliated environment, including access to firewall configurations, credentials, and LDAP service-account information. Operational disruption or data theft was not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/china-linked-hackers-exploit-php2shell-to-root-firewalls/",
+    "assessed_at": "2026-10-28T13:03:49+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/china-linked-hackers-exploit-php2shell-to-root-firewalls/"
+    }
+   ]
+  },
+  {
+   "title": "UNM Health ransomware attack diverted ambulances",
+   "date": "2026-10-26",
+   "category": "major_cyber",
+   "victim": "University of New Mexico Health System, including UNM Hospital and the Health Sciences Center",
+   "attacker": "Not confirmed. The ransomware group Byod claimed responsibility, but that claim is unverified.",
+   "what": "UNM Health detected a cyberattack that blocked access to critical systems. It cancelled appointments and outpatient surgeries, limited new patients, temporarily diverted ambulances from 12:30 to 2:30 p.m., and later restored critical systems and normal ambulance operations. UNM said containment prevented the threat actor from reaching core systems and servers; the nature and scope of unauthorized access remain under investigation.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident disrupted care at UNM Hospital, New Mexico’s only level 1 trauma center, creating a documented patient-safety and essential-service impact. Patient-data involvement and the final extent of compromise were not established.",
+   "where": "Albuquerque, New Mexico, United States",
+   "major_impact": "essential_service_disruption",
+   "significance": "UNM Health temporarily diverted ambulances, cancelled clinical activity, and limited patient intake during a system outage. The outage affected the university health sciences system, although UNM reported that core systems and servers were protected and restored by October 27.",
+   "id": "5c383d5b8468ff2c",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/university-new-mexico-health-system-cyberattack/",
+   "added": "2026-10-28T13:03:49+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-28",
+   "evidence_status": "under_investigation",
+   "lat": 35.0841034,
+   "lon": -106.650985,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "UNM confirmed unauthorized cyber activity and a system outage that cancelled appointments and outpatient surgeries and diverted ambulances for two hours. The available reporting does not establish whether patient or other sensitive data was stolen; the attacker’s claimed exfiltration is unverified.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "disrupted",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/university-new-mexico-health-system-cyberattack/",
+    "assessed_at": "2026-10-28T13:03:49+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 35.0841034,
+     "lon": -106.650985,
+     "label": "Albuquerque, New Mexico, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/university-new-mexico-health-system-cyberattack/"
+    }
+   ]
+  },
+  {
+   "title": "ShinyHunters exploited Oracle PeopleSoft customers",
+   "date": "2026-09-28",
+   "category": "major_cyber",
+   "victim": "More than 100 Oracle PeopleSoft customers, including the University of Nottingham, NAIC, and Nissan",
+   "attacker": "ShinyHunters, tracked by Google as UNC6240; attribution is based on Mandiant and Google Threat Intelligence Group reporting.",
+   "what": "The group modified its exploit for CVE-2026-35273 to bypass web-application-firewall rules protecting the PeopleSoft Environment Management Hub. Mandiant and GTIG observed web-shell deployment, SideEye backdoors, Neo-reGeorg tunneling, MeshCentral, and commands executed with root or System privileges.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "PeopleSoft supports core finance, human-resources, payroll, and supply-chain functions. The campaign reached more than 100 customers and enabled privileged access to application data, configuration files, and database connection strings, with potential extortion based on the group’s established data-theft pattern.",
+   "where": "Organizations in multiple countries; specifically reported victims include the University of Nottingham in the United Kingdom and NAIC in the United States. Nissan was also identified as a confirmed victim, but its affected location was not reported.",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Google and Mandiant reported observed compromise of dozens of systems, including persistent web shells and backdoors, and commands executed with root or System privileges. The campaign affected more than 100 PeopleSoft customers, although incident-specific data theft and operational losses were not established.",
+   "id": "be4782ece5ea9d5a",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-09-28",
+   "last_reported": "2026-10-28",
+   "evidence_status": "confirmed",
+   "lat": 52.9534193,
+   "lon": -1.1496461,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Researchers observed real compromises across more than 100 PeopleSoft customers, including persistence, backdoors, internal tunneling, and root/System-level command execution. The reporting does not establish campaign-wide service disruption, confirmed data exfiltration, or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/",
+    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 52.9534193,
+     "lon": -1.1496461,
+     "label": "Nottingham, United Kingdom",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/"
+    },
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/shinyhunters-exploited-oracle.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-28",
+     "what": "Attackers exploited a pre-patch PeopleSoft zero-day chain involving SSRF, trusted loopback access to the Environment Management Hub, and paths to remote code execution. Mandiant reported an initial campaign from May 27 to June 9, followed by a larger September wave; attackers used URL encoding to bypass some web-application-firewall rules and deployed web shells or other code-execution mechanisms.",
+     "url": "https://thehackernews.com/2026/10/shinyhunters-exploited-oracle.html",
+     "source": "The Hacker News"
+    }
+   ]
+  },
+  {
+   "title": "GMO Onamae Desktop Cloud breach exposed customer data",
+   "date": "2026-10-20",
+   "category": "major_cyber",
+   "victim": "GMO Internet's Onamae Desktop Cloud and its customers",
+   "attacker": "Unidentified threat actor; attribution was not reported. The attacker demanded ¥8 billion (about US$50 million), but GMO refused to pay.",
+   "what": "GMO detected an intrusion into its Onamae Desktop Cloud on October 20. The company shut down servers and reduced service availability, warned that malware may have been planted on customer servers, and later confirmed that company and customer data had been stolen and published online. MT4/MT5 credentials and trading-account details may have been exposed; payment information was reportedly not exposed.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The compromise of a VPS provider created downstream risk for customer-hosted systems and exposed sensitive credentials and trading information. GMO also reported operational containment measures and confirmed publication of stolen data, although it said no ransomware was activated on customer machines and was still checking the authenticity of leaked material.",
+   "where": "Japan",
+   "major_impact": "supply_chain_compromise",
+   "significance": "A trusted Japanese VPS provider was breached, with consequences extending to customer servers and data. GMO shut down servers and reduced availability, while confirming that company and customer data had been published; the final scope and authenticity of all leaked information remained under review.",
+   "id": "ffecbbabaac5f757",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+   "added": "2026-10-28T05:49:56+00:00",
+   "reported_date": "2026-10-27",
+   "last_reported": "2026-10-28",
+   "evidence_status": "confirmed",
+   "lat": 36.5748441,
+   "lon": 139.2394179,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "GMO confirmed a real intrusion, server shutdowns and reduced availability, and theft and online publication of company and customer data. The reporting says payment information was not exposed and that ransomware was not activated; final data scope and financial loss were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+    "assessed_at": "2026-10-28T05:49:56+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-28",
+     "what": "GMO confirmed unauthorized access to the Desktop Cloud service, malicious programs on some customer servers, and exfiltration of customer information. Credentials saved in trading software were exposed, and OANDA Japan confirmed unauthorized logins and trades on some customer accounts using credentials believed to have leaked from GMO servers.",
+     "url": "https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html",
+     "source": "The Hacker News"
+    }
+   ]
+  },
+  {
+   "title": "PolyShell breached hundreds of Adobe Commerce stores",
+   "date": "Since at least July 2025",
+   "category": "major_cyber",
+   "victim": "Hundreds of e-commerce stores using Adobe Commerce or Magento",
+   "attacker": "Unknown; Sansec observed the exploitation campaign",
+   "what": "Attackers exploited CVE-2026-48356, also called PolyShell, to breach stores and inject a malicious loader through Magento CMS blocks. The loader could fetch and execute an attacker-controlled payload, but no next-stage malware was recovered.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign involved confirmed compromise of hundreds of production e-commerce stores and insertion of executable attacker-controlled code.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Hundreds of stores were reportedly breached, demonstrating broad compromise of business-critical e-commerce infrastructure. The exact attacker objective and downstream payload remain unknown.",
+   "id": "80878b66f73ef3ef",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html",
+   "added": "2026-10-28T13:03:49+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-28",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Sansec reported that attackers breached hundreds of stores and injected a malicious loader into Magento CMS blocks. The available reporting does not establish service outages, financial losses, or the contents of a follow-on payload.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "privileged_access",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html",
+    "assessed_at": "2026-10-28T13:03:49+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
   {
    "title": "Hackers compromised Dahua surveillance cameras in Ukraine",
    "date": "2026-10-26",
@@ -762,54 +1028,6 @@
    }
   },
   {
-   "title": "GMO Onamae Desktop Cloud breach exposed customer data",
-   "date": "2026-10-20",
-   "category": "major_cyber",
-   "victim": "GMO Internet's Onamae Desktop Cloud and its customers",
-   "attacker": "Unidentified threat actor; attribution was not reported. The attacker demanded ¥8 billion (about US$50 million), but GMO refused to pay.",
-   "what": "GMO detected an intrusion into its Onamae Desktop Cloud on October 20. The company shut down servers and reduced service availability, warned that malware may have been planted on customer servers, and later confirmed that company and customer data had been stolen and published online. MT4/MT5 credentials and trading-account details may have been exposed; payment information was reportedly not exposed.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The compromise of a VPS provider created downstream risk for customer-hosted systems and exposed sensitive credentials and trading information. GMO also reported operational containment measures and confirmed publication of stolen data, although it said no ransomware was activated on customer machines and was still checking the authenticity of leaked material.",
-   "where": "Japan",
-   "major_impact": "supply_chain_compromise",
-   "significance": "A trusted Japanese VPS provider was breached, with consequences extending to customer servers and data. GMO shut down servers and reduced availability, while confirming that company and customer data had been published; the final scope and authenticity of all leaked information remained under review.",
-   "id": "ffecbbabaac5f757",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
-   "added": "2026-10-28T05:49:56+00:00",
-   "reported_date": "2026-10-27",
-   "last_reported": "2026-10-27",
-   "evidence_status": "confirmed",
-   "lat": 36.5748441,
-   "lon": 139.2394179,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "GMO confirmed a real intrusion, server shutdowns and reduced availability, and theft and online publication of company and customer data. The reporting says payment information was not exposed and that ransomware was not activated; final data scope and financial loss were not established.",
-    "evidence": {
-     "context": "real_world",
-     "service": "substantial",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
-    "assessed_at": "2026-10-28T05:49:56+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 36.5748441,
-     "lon": 139.2394179,
-     "label": "Japan",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/"
-    }
-   ]
-  },
-  {
    "id": "293e0804b3f8eaff",
    "title": "University of Copenhagen breach exposed data of 525,000 people",
    "date": "2026-10-26",
@@ -947,7 +1165,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used stolen GitHub tokens to plant secret-dumping GitHub Actions workflows in repositories the tokens could access. Wiz recovered more than 13,500 planted branches; workflows successfully ran in private repositories and GitHub Enterprise environments, and some activity led to cloud-role enumeration.",
+     "what": "Attackers used stolen GitHub tokens to plant secret-dumping workflows in repositories. Wiz recovered more than 13,500 planted branches; private and GitHub Enterprise workflow runs completed, exposed repository or environment secrets, and in some cases enabled cloud-credential enumeration.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -2037,7 +2255,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "Attackers caused LiteLLM version 1.107.0 and associated container images to be built from a lookalike repository and distributed with a credential-stealing payload. The payload used Python startup files for persistence and targeted cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, shell-history, and LiteLLM proxy credentials.",
+     "what": "The LiteLLM 1.107.0 PyPI wheels and associated container images were built from a lookalike repository and contained persistence files that execute at interpreter startup. The payload collected cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and other credentials, and was designed to transmit them to an attacker-controlled lookalike domain. PyPI and container registries removed or quarantined the affected artifacts on October 21.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -3925,7 +4143,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Attackers phished privileged GCP users, captured credentials and MFA codes, altered IAM and organization policies, added attacker-controlled accounts, and linked external GCP projects to victims’ billing accounts. The attackers then ran high-volume Gemini API workloads charged to the victims.",
+     "what": "Attackers captured GCP users’ credentials and MFA codes, accessed victim environments, disabled organization policy guardrails, created privileged service accounts and Gemini API keys, added external accounts, and linked attacker-controlled projects to victims’ billing accounts. The linked projects were then used for high-volume Gemini API inference.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -4522,7 +4740,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "The agent gained code execution through an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, identity-provider, and vault credentials, escalated to cluster administrator and cloud-administrator access, created persistence, modified production GitOps workloads, and accessed sensitive data. It attempted to exfiltrate data through webhooks, source control, Kubernetes ConfigMaps, and cloud storage.",
+     "what": "Wiz CIRT investigated an intrusion that began with confirmed remote code execution through an exposed Kafka UI. The AI agent deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, and identity credentials, created accounts and pipelines, obtained cluster-administrator and broad AWS access, modified production workloads, and accessed sensitive data while attempting multiple exfiltration channels.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -10785,64 +11003,6 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.hipaajournal.com/california-critical-access-hospital-cybersecurity-incident/"
-    }
-   ],
-   "more_sources": [],
-   "updates": []
-  },
-  {
-   "title": "ShinyHunters exploited Oracle PeopleSoft customers",
-   "date": "2026-09-28",
-   "category": "major_cyber",
-   "victim": "More than 100 Oracle PeopleSoft customers, including the University of Nottingham, NAIC, and Nissan",
-   "attacker": "ShinyHunters, tracked by Google as UNC6240; attribution is based on Mandiant and Google Threat Intelligence Group reporting.",
-   "what": "The group modified its exploit for CVE-2026-35273 to bypass web-application-firewall rules protecting the PeopleSoft Environment Management Hub. Mandiant and GTIG observed web-shell deployment, SideEye backdoors, Neo-reGeorg tunneling, MeshCentral, and commands executed with root or System privileges.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "PeopleSoft supports core finance, human-resources, payroll, and supply-chain functions. The campaign reached more than 100 customers and enabled privileged access to application data, configuration files, and database connection strings, with potential extortion based on the group’s established data-theft pattern.",
-   "where": "Organizations in multiple countries; specifically reported victims include the University of Nottingham in the United Kingdom and NAIC in the United States. Nissan was also identified as a confirmed victim, but its affected location was not reported.",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Google and Mandiant reported observed compromise of dozens of systems, including persistent web shells and backdoors, and commands executed with root or System privileges. The campaign affected more than 100 PeopleSoft customers, although incident-specific data theft and operational losses were not established.",
-   "id": "be4782ece5ea9d5a",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-09-28",
-   "last_reported": "2026-09-28",
-   "evidence_status": "confirmed",
-   "lat": 52.9534193,
-   "lon": -1.1496461,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "Researchers observed real compromises across more than 100 PeopleSoft customers, including persistence, backdoors, internal tunneling, and root/System-level command execution. The reporting does not establish campaign-wide service disruption, confirmed data exfiltration, or financial loss.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "privileged_access",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 52.9534193,
-     "lon": -1.1496461,
-     "label": "Nottingham, United Kingdom",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/"
-    },
-    {
-     "lat": 39.7837304,
-     "lon": -100.445882,
-     "label": "United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/"
     }
    ],
    "more_sources": [],
@@ -22891,6 +23051,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-28T05:49:56+00:00",
+ "last_added": "2026-10-28T13:03:49+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }

@@ -132,15 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-10-28T05:49:56+00:00",
+  "checked": "2026-10-28T13:03:49+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Independent researcher evidence substantiates a large-scale campaign using compromised GitHub tokens to execute workflows and access secrets in private and enterprise repositories. This is the already-tracked Gheist incident, with additional evidence of successful private-repository and cloud follow-on activity.",
+  "reason": "This is the already tracked Gheist campaign, with new researcher evidence confirming successful exploitation in private and enterprise repositories and exposure of organizational secrets.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Independent researcher evidence substantiates a large-scale campaign using compromised GitHub tokens to execute workflows and access secrets in private and enterprise repositories. This is the already-tracked Gheist incident, with additional evidence of successful private-repository and cloud follow-on activity.",
-    "title": "Gheist campaign abused stolen GitHub tokens across 850 accounts",
+    "reason": "This is the already tracked Gheist campaign, with new researcher evidence confirming successful exploitation in private and enterprise repositories and exposure of organizational secrets.",
+    "title": "Gheist campaign abused stolen GitHub tokens in private repositories",
     "incident_id": "fdf212b3998ab3a2"
    }
   ],
@@ -18510,15 +18510,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-10-28T05:49:56+00:00",
+  "checked": "2026-10-28T13:03:49+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz CIRT substantiated a consequential unauthorized intrusion into an actual organization, and the incident matches the already-tracked exposed-Kafka-UI multi-cloud AI-agent intrusion.",
+  "reason": "Wiz CIRT substantiates a consequential unauthorized intrusion against a real organization and documents autonomous AI-agent execution, privileged access, production modification, and sensitive-data access. It is the same incident already tracked as the exposed Kafka UI multi-cloud AI-agent intrusion.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz CIRT substantiated a consequential unauthorized intrusion into an actual organization, and the incident matches the already-tracked exposed-Kafka-UI multi-cloud AI-agent intrusion.",
-    "title": "AI agent conducted multi-cloud intrusion via exposed Kafka UI",
+    "reason": "Wiz CIRT substantiates a consequential unauthorized intrusion against a real organization and documents autonomous AI-agent execution, privileged access, production modification, and sensitive-data access. It is the same incident already tracked as the exposed Kafka UI multi-cloud AI-agent intrusion.",
+    "title": "AI agent breached an unnamed organization’s multi-cloud environment",
     "incident_id": "896e03eaa7904596"
    }
   ],
@@ -19003,15 +19003,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-10-28T05:49:56+00:00",
+  "checked": "2026-10-28T13:03:49+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz substantiated multiple consequential GCP compromises with privileged-account takeover and substantial unauthorized Gemini billing. This is the same incident pattern already tracked under f58ed76ff84133f9.",
+  "reason": "Wiz CIRT substantiates multiple real-world GCP compromises with privileged access and material unauthorized cloud charges; this is the same GCP/Gemini LLMjacking incident already tracked under the supplied record.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz substantiated multiple consequential GCP compromises with privileged-account takeover and substantial unauthorized Gemini billing. This is the same incident pattern already tracked under f58ed76ff84133f9.",
-    "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
+    "reason": "Wiz CIRT substantiates multiple real-world GCP compromises with privileged access and material unauthorized cloud charges; this is the same GCP/Gemini LLMjacking incident already tracked under the supplied record.",
+    "title": "Phishing-led GCP takeover funded unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
   ],
@@ -19812,15 +19812,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-10-28T05:49:56+00:00",
+  "checked": "2026-10-28T13:03:49+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed compromise of LiteLLM’s package and container release infrastructure with a credential-stealing payload; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25, with additional technical evidence from Wiz.",
+  "reason": "Confirmed compromise of LiteLLM’s release/build workflow and published PyPI and container artifacts created a real supply-chain risk with credential-stealing functionality. This is the same LiteLLM supply-chain event already tracked, with later reporting adding detailed technical evidence.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed compromise of LiteLLM’s package and container release infrastructure with a credential-stealing payload; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25, with additional technical evidence from Wiz.",
-    "title": "LiteLLM 1.107.0 supply-chain release stole credentials",
+    "reason": "Confirmed compromise of LiteLLM’s release/build workflow and published PyPI and container artifacts created a real supply-chain risk with credential-stealing functionality. This is the same LiteLLM supply-chain event already tracked, with later reporting adding detailed technical evidence.",
+    "title": "LiteLLM release pipeline compromised with credential-stealing payload",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -21953,35 +21953,36 @@
  "https://www.hipaajournal.com/denver-health-medical-plan-data-breach/": {
   "title": "Denver Health Medical Plan Discloses Vendor Breach Affecting 238K Members",
   "source": "HIPAA Journal",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-28T13:03:49+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "The public credential and accessible sensitive database are substantiated, but the reporting states there is no evidence of unauthorized use; under the available facts, confirmed compromise or unauthorized access is not established.; This is the same Johns Hopkins Bayview incident already tracked under 20c556acc3a3d9a1; this report adds disclosure details but does not describe a separate event.; This is the same BASS Medical Group intrusion already tracked under ee30a2cce26fa646; the report provides additional disclosure and data-type details but not a distinct incident.",
+  "reason": "Potentially meaningful exposure of sensitive health information was reported, but there is no evidence of unauthorized access or misuse; treat as an exposure pending further substantiation.; This is the same Johns Hopkins Bayview incident already tracked under 20c556acc3a3d9a1.; This is the same BASS Medical Group incident already tracked under ee30a2cce26fa646.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "The public credential and accessible sensitive database are substantiated, but the reporting states there is no evidence of unauthorized use; under the available facts, confirmed compromise or unauthorized access is not established.",
-    "title": "Denver Health Medical Plan vendor key exposed member database"
+    "reason": "Potentially meaningful exposure of sensitive health information was reported, but there is no evidence of unauthorized access or misuse; treat as an exposure pending further substantiation.",
+    "title": "Denver Health Medical Plan vendor key exposed member data"
    },
    {
     "status": "exclude",
-    "reason": "This is the same Johns Hopkins Bayview incident already tracked under 20c556acc3a3d9a1; this report adds disclosure details but does not describe a separate event.",
-    "title": "Johns Hopkins Bayview patient spreadsheet uploaded to public AI tool"
+    "reason": "This is the same Johns Hopkins Bayview incident already tracked under 20c556acc3a3d9a1.",
+    "title": "Johns Hopkins Bayview patient data uploaded to AI tool"
    },
    {
     "status": "exclude",
-    "reason": "This is the same BASS Medical Group intrusion already tracked under ee30a2cce26fa646; the report provides additional disclosure and data-type details but not a distinct incident.",
+    "reason": "This is the same BASS Medical Group incident already tracked under ee30a2cce26fa646.",
     "title": "BASS Medical Group network intrusion exposed health information"
    }
   ],
   "evidence": "feed_full_text",
-  "summary_hash": "bf14ba0b7db40af58790982b00b933224e04889568ce6897ea85f70fcf567b44",
+  "summary_hash": "1033880eef47eb032637516e3e8fa0f4e2d18a134eb5d9697571ca3b5264a686",
   "item": {
    "id": "ad7d3025d64e60f0",
    "title": "Denver Health Medical Plan Discloses Vendor Breach Affecting 238K Members",
    "url": "https://www.hipaajournal.com/denver-health-medical-plan-data-breach/",
    "date": "2026-10-26",
-   "source": "HIPAA Journal"
+   "source": "HIPAA Journal",
+   "published_at": "2026-10-26T19:13:24+00:00"
   }
  },
  "https://www.hipaajournal.com/hapi-fhir-vulnerabilities-smile-cdr/": {
@@ -22763,19 +22764,19 @@
  "https://www.darkreading.com/cloud-security/email-bombing-external-teams-chats-repeatable-access-path": {
   "title": "External Teams Chats Anchor 15-Minute Malware Delivery",
   "source": "Dark Reading",
-  "checked": "2026-10-27T22:20:35+00:00",
+  "checked": "2026-10-28T13:03:49+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful malware-delivery campaign, but the supplied report does not substantiate successful compromises or consequences; attacker linkage is also uncertain.",
+  "reason": "Potentially meaningful malware-delivery campaign, but the supplied reporting lacks substantiated evidence of successful compromise or consequences.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful malware-delivery campaign, but the supplied report does not substantiate successful compromises or consequences; attacker linkage is also uncertain.",
-    "title": "External Teams chats used in suspected malware-delivery campaign"
+    "reason": "Potentially meaningful malware-delivery campaign, but the supplied reporting lacks substantiated evidence of successful compromise or consequences.",
+    "title": "External Teams-chat campaign reportedly delivered malware"
    }
   ],
   "evidence": "summary",
-  "summary_hash": "74798f5f8a0247bbf933b6711c3b63bcf5fb1e29ab72ddd5776a3222f846c289",
+  "summary_hash": "900e77655c1a20bac9beaa2af5e2d2505937e327b2a0c1b2f5488c6a64cd5912",
   "item": {
    "id": "b7462f180574c3fb",
    "title": "External Teams Chats Anchor 15-Minute Malware Delivery",
@@ -23142,6 +23143,442 @@
    "date": "2026-10-27",
    "source": "BleepingComputer",
    "published_at": "2026-10-27T22:43:27+00:00"
+  }
+ },
+ "https://www.securityweek.com/secrets-management-firm-infisical-valued-at-600-million-after-40-million-raise/": {
+  "title": "Secrets Management Firm Infisical Valued at $600 Million After $40 Million Raise",
+  "source": "SecurityWeek",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is a financing and product announcement without evidence of an actual compromise or other qualifying cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is a financing and product announcement without evidence of an actual compromise or other qualifying cyber incident.",
+    "title": "Infisical raises $40 million in funding"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "5561fe2c92c42c52dc1ec08af426decd39dd72a54dae1a9d819a035655068371",
+  "item": {
+   "id": "8ac2f2a4e132ab1b",
+   "title": "Secrets Management Firm Infisical Valued at $600 Million After $40 Million Raise",
+   "url": "https://www.securityweek.com/secrets-management-firm-infisical-valued-at-600-million-after-40-million-raise/",
+   "date": "2026-10-28",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-28T09:48:24+00:00"
+  }
+ },
+ "https://www.securityweek.com/hackers-start-probing-fresh-oracle-ebs-vulnerability/": {
+  "title": "Hackers Start Probing Fresh Oracle EBS Vulnerability",
+  "source": "SecurityWeek",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude because the source reports probing against decoy systems, with no confirmed real-world victim compromise or consequences.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude because the source reports probing against decoy systems, with no confirmed real-world victim compromise or consequences.",
+    "title": "Oracle EBS probes observed only against security decoys"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "43db0fda38ed8e03d82dd30d11de135c5fc925b58a47b694c9bfc3e1c24b2f27",
+  "item": {
+   "id": "66fbef87005a9dc3",
+   "title": "Hackers Start Probing Fresh Oracle EBS Vulnerability",
+   "url": "https://www.securityweek.com/hackers-start-probing-fresh-oracle-ebs-vulnerability/",
+   "date": "2026-10-28",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-28T09:14:23+00:00"
+  }
+ },
+ "https://www.securityweek.com/cisa-warns-of-node2shell-exploitation-as-honeypots-log-attack-attempts/": {
+  "title": "CISA Warns of Node2Shell Exploitation as Honeypots Log Attack Attempts",
+  "source": "SecurityWeek",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the source reports honeypot/sensor exploitation attempts and a failed exploit stage, not a confirmed compromise of actual victim systems.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the source reports honeypot/sensor exploitation attempts and a failed exploit stage, not a confirmed compromise of actual victim systems.",
+    "title": "Node2Shell attempts recorded only against honeypots"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "118630893f7a705d0ce84b0708ee74529069a67fd5fbedc528edd4d88a6548a0",
+  "item": {
+   "id": "129590957fb40b7c",
+   "title": "CISA Warns of Node2Shell Exploitation as Honeypots Log Attack Attempts",
+   "url": "https://www.securityweek.com/cisa-warns-of-node2shell-exploitation-as-honeypots-log-attack-attempts/",
+   "date": "2026-10-28",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-28T08:37:24+00:00"
+  }
+ },
+ "https://www.securityweek.com/china-linked-hackers-exploit-php2shell-to-root-firewalls/": {
+  "title": "China-Linked Hackers Exploit PHP2Shell to Root Firewalls",
+  "source": "SecurityWeek",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Independent researcher evidence substantiates exploitation of 25 firewalls, root access on 24 devices, and consequential intrusion into a US government-affiliated environment; this is more than scanning or attempted exploitation.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Independent researcher evidence substantiates exploitation of 25 firewalls, root access on 24 devices, and consequential intrusion into a US government-affiliated environment; this is more than scanning or attempted exploitation.",
+    "title": "China-linked hackers rooted firewalls and accessed management systems",
+    "incident_id": "8550c665be3b6045"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "8c216637179e8d69a743ce48d6efc8a1d02ae496084603491adcf8ba916bd965",
+  "item": {
+   "id": "8550c665be3b6045",
+   "title": "China-Linked Hackers Exploit PHP2Shell to Root Firewalls",
+   "url": "https://www.securityweek.com/china-linked-hackers-exploit-php2shell-to-root-firewalls/",
+   "date": "2026-10-28",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-28T12:00:59+00:00"
+  }
+ },
+ "https://www.hipaajournal.com/university-new-mexico-health-system-cyberattack/": {
+  "title": "University of New Mexico Health System Diverts Ambulances Due to Ransomware Attack",
+  "source": "HIPAA Journal",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a separately reported, substantiated consequential cyber incident already tracked under the same UNM Health event; the report adds confirmed ambulance diversion and other care disruption details.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a separately reported, substantiated consequential cyber incident already tracked under the same UNM Health event; the report adds confirmed ambulance diversion and other care disruption details.",
+    "title": "UNM Health ransomware attack diverted ambulances",
+    "incident_id": "5c383d5b8468ff2c"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "f28215b230f761c161d136075768af46a34286b5a5a5aa98c474c486a03a5800",
+  "item": {
+   "id": "5c383d5b8468ff2c",
+   "title": "University of New Mexico Health System Diverts Ambulances Due to Ransomware Attack",
+   "url": "https://www.hipaajournal.com/university-new-mexico-health-system-cyberattack/",
+   "date": "2026-10-28",
+   "source": "HIPAA Journal",
+   "published_at": "2026-10-28T10:10:28+00:00"
+  }
+ },
+ "https://www.hipaajournal.com/baptist-health-medical-center-drew-county-data-breach-settlement/": {
+  "title": "Baptist Health Data Breach Settlement Gets First Nod",
+  "source": "HIPAA Journal",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Court or settlement follow-up, not a new incident or operational update.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Court or settlement follow-up, not a new incident or operational update.",
+    "title": "Baptist Health Data Breach Settlement Gets First Nod"
+   }
+  ],
+  "evidence": "title",
+  "summary_hash": "3ef21ae002ee5383bd1c67f5e750dcb9ada796a51eb6a016db720042992b1fe6",
+  "item": {
+   "id": "383b0686f7ba0126",
+   "title": "Baptist Health Data Breach Settlement Gets First Nod",
+   "url": "https://www.hipaajournal.com/baptist-health-medical-center-drew-county-data-breach-settlement/",
+   "date": "2026-10-28",
+   "source": "HIPAA Journal",
+   "published_at": "2026-10-28T10:00:28+00:00"
+  }
+ },
+ "https://www.darkreading.com/cybersecurity-operations/third-serengeti-sweep-1400-arrests-investigations-mature": {
+  "title": "Third Serengeti Sweep Tops 1,400 Arrests as Investigations Mature",
+  "source": "Dark Reading",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Enforcement-only aggregate with no distinct substantive incident facts; excluded under the rule against court, sentencing, or enforcement recaps without new incident details.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Enforcement-only aggregate with no distinct substantive incident facts; excluded under the rule against court, sentencing, or enforcement recaps without new incident details.",
+    "title": "Operation Serengeti enforcement results"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "6f46729494ebcbe5c1a58bc45af8544b70eafa0e4a7c4553fdc0d15d4bae098b",
+  "item": {
+   "id": "5d35adc27b9083e8",
+   "title": "Third Serengeti Sweep Tops 1,400 Arrests as Investigations Mature",
+   "url": "https://www.darkreading.com/cybersecurity-operations/third-serengeti-sweep-1400-arrests-investigations-mature",
+   "date": "2026-10-28",
+   "source": "Dark Reading",
+   "published_at": "2026-10-28T06:00:00+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.bleepingcomputer.com/news/security/nefilim-and-hive-ransomware-affiliate-gets-70-months-in-prison/": {
+  "title": "Nefilim and Hive ransomware affiliate gets 70 months in prison",
+  "source": "BleepingComputer",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: sentencing-only legal recap of ransomware attacks from 2018-2021; it does not substantively report a new incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: sentencing-only legal recap of ransomware attacks from 2018-2021; it does not substantively report a new incident.",
+    "title": "Nefilim and Hive affiliate sentenced for earlier attacks"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "aa2cc3ec6d5d1069a31bf15c06ede3ccbed78ac7558acac2942d6dde02304a92",
+  "item": {
+   "id": "ce3e6827c7cccd6a",
+   "title": "Nefilim and Hive ransomware affiliate gets 70 months in prison",
+   "url": "https://www.bleepingcomputer.com/news/security/nefilim-and-hive-ransomware-affiliate-gets-70-months-in-prison/",
+   "date": "2026-10-28",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-28T09:43:15+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/": {
+  "title": "Hackers now scanning systems for recently-patched Oracle flaw",
+  "source": "BleepingComputer",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: scanning and exploratory exploitation against decoys, without evidence of a successful compromise or meaningful real-world consequence.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: scanning and exploratory exploitation against decoys, without evidence of a successful compromise or meaningful real-world consequence.",
+    "title": "Attackers scanned for unpatched Oracle EBS systems"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "02da7c6ae9cd77d45885b8f20ad9ccaef01ecdad7df9285f518e5b697d23796a",
+  "item": {
+   "id": "0c8142edc77875a6",
+   "title": "Hackers now scanning systems for recently-patched Oracle flaw",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/",
+   "date": "2026-10-28",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-28T12:19:57+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-now-exploiting-critical-node2shell-flaw/": {
+  "title": "CISA warns of hackers now exploiting critical Node2Shell flaw",
+  "source": "BleepingComputer",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is a vulnerability-exploitation warning and patching notice with no substantiated compromise of identified victims or documented real-world consequences.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is a vulnerability-exploitation warning and patching notice with no substantiated compromise of identified victims or documented real-world consequences.",
+    "title": "Hackers reportedly exploit critical Brotli Node2Shell flaw"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "66593b50b41967963472bcb6dafbcc41401412729dfc01db493ccf639f5c93f3",
+  "item": {
+   "id": "4a5ac3d76c9c0811",
+   "title": "CISA warns of hackers now exploiting critical Node2Shell flaw",
+   "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-now-exploiting-critical-node2shell-flaw/",
+   "date": "2026-10-28",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-28T10:46:23+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/tailscale-patches-ssh-flaws-that-could.html": {
+  "title": "Tailscale Patches SSH Flaws That Could Let Hacked Devices Gain Root Access on Other Servers",
+  "source": "The Hacker News",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is a vulnerability disclosure and controlled laboratory demonstration without evidence that real systems were compromised or that an attack occurred.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is a vulnerability disclosure and controlled laboratory demonstration without evidence that real systems were compromised or that an attack occurred.",
+    "title": "Tailscale SSH flaws demonstrated in laboratory testing"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "70d081a35754817c4536a78dff2e3c2737f42f0a4a20d56af32d5400477ddaf7",
+  "item": {
+   "id": "bbf5c8d9e2a2f998",
+   "title": "Tailscale Patches SSH Flaws That Could Let Hacked Devices Gain Root Access on Other Servers",
+   "url": "https://thehackernews.com/2026/10/tailscale-patches-ssh-flaws-that-could.html",
+   "date": "2026-10-28",
+   "source": "The Hacker News",
+   "published_at": "2026-10-28T06:20:37+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/shinyhunters-exploited-oracle.html": {
+  "title": "ShinyHunters-Exploited Oracle PeopleSoft Zero-Day Turns Out to Be Three Chained Flaws",
+  "source": "The Hacker News",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is substantive reporting on the same confirmed ShinyHunters Oracle PeopleSoft campaign already tracked under be4782ece5ea9d5a; retain it as a duplicate-linked update rather than a new incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is substantive reporting on the same confirmed ShinyHunters Oracle PeopleSoft campaign already tracked under be4782ece5ea9d5a; retain it as a duplicate-linked update rather than a new incident.",
+    "title": "ShinyHunters exploited three chained Oracle PeopleSoft flaws",
+    "incident_id": "be4782ece5ea9d5a"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "70d1ab5b933e21371fbe9b8371921862798f6e6998cb029ff052a938fc19c7a4",
+  "item": {
+   "id": "98f29089129abfdc",
+   "title": "ShinyHunters-Exploited Oracle PeopleSoft Zero-Day Turns Out to Be Three Chained Flaws",
+   "url": "https://thehackernews.com/2026/10/shinyhunters-exploited-oracle.html",
+   "date": "2026-10-28",
+   "source": "The Hacker News",
+   "published_at": "2026-10-28T06:04:58+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html": {
+  "title": "Japan's GMO Offers $1 Million Bounty to Catch Hackers Behind FX Trading Cloud Breach",
+  "source": "The Hacker News",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a confirmed, already-tracked breach with unauthorized access, customer-data exfiltration, service-wide containment shutdown, and independently confirmed unauthorized trading. The report adds substantive consequences and response details rather than describing a separate incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a confirmed, already-tracked breach with unauthorized access, customer-data exfiltration, service-wide containment shutdown, and independently confirmed unauthorized trading. The report adds substantive consequences and response details rather than describing a separate incident.",
+    "title": "GMO Onamae Desktop Cloud breach enabled unauthorized FX trades",
+    "incident_id": "ffecbbabaac5f757"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "b02b4d124a271df263d70de56845f3569677ee21658648f2d113e8b9596fad79",
+  "item": {
+   "id": "e0ddc2248b0b0410",
+   "title": "Japan's GMO Offers $1 Million Bounty to Catch Hackers Behind FX Trading Cloud Breach",
+   "url": "https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html",
+   "date": "2026-10-28",
+   "source": "The Hacker News",
+   "published_at": "2026-10-28T07:13:21+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html": {
+  "title": "Anthropic's Unreleased AI Model Chains Flaws Into Working Chrome, Safari, Windows and Linux Exploits",
+  "source": "The Hacker News",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the source describes controlled research and patched proof-of-concept exploits, not a confirmed compromise or harmful cyber incident affecting real external victims.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the source describes controlled research and patched proof-of-concept exploits, not a confirmed compromise or harmful cyber incident affecting real external victims.",
+    "title": "Anthropic model demonstrated lab exploit chains"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "6fd6648750df53d7545c1d6f8f84b330317b4801a34509b9a260bc677eb267dc",
+  "item": {
+   "id": "8fab4f29d6ffa7d1",
+   "title": "Anthropic's Unreleased AI Model Chains Flaws Into Working Chrome, Safari, Windows and Linux Exploits",
+   "url": "https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html",
+   "date": "2026-10-28",
+   "source": "The Hacker News",
+   "published_at": "2026-10-28T08:15:07+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/american-organizations-under-attack.html": {
+  "title": "American Organizations Under Attack: Skyw4lker Device Code Phishing Campaign Exposed",
+  "source": "The Hacker News",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is a campaign and sandbox-analysis report describing potential compromise, without substantiated unauthorized access or consequences for a real organization.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is a campaign and sandbox-analysis report describing potential compromise, without substantiated unauthorized access or consequences for a real organization.",
+    "title": "Skyw4lker device-code phishing campaign analyzed"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "45a2702c327f6bd14c378da37c0e989363b326f5dd42e9cbe525816343c380d4",
+  "item": {
+   "id": "2a02c4ed266e8dc3",
+   "title": "American Organizations Under Attack: Skyw4lker Device Code Phishing Campaign Exposed",
+   "url": "https://thehackernews.com/2026/10/american-organizations-under-attack.html",
+   "date": "2026-10-28",
+   "source": "The Hacker News",
+   "published_at": "2026-10-28T10:30:00+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html": {
+  "title": "Adobe Fixes 8 Critical Campaign Classic Flaws Allowing Code Execution and Security Bypass",
+  "source": "The Hacker News",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is a vulnerability and patch announcement without evidence of a real-world compromise or consequential exploitation.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is a vulnerability and patch announcement without evidence of a real-world compromise or consequential exploitation.",
+    "title": "Adobe patches critical Campaign Classic and Connect flaws"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "18e386efac7ea39acee94a5d2645773cba679da237769ea0fb567fc03c9d3f6b",
+  "item": {
+   "id": "e1a44c40fd0ad551",
+   "title": "Adobe Fixes 8 Critical Campaign Classic Flaws Allowing Code Execution and Security Bypass",
+   "url": "https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html",
+   "date": "2026-10-28",
+   "source": "The Hacker News",
+   "published_at": "2026-10-28T11:15:51+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html": {
+  "title": "Adobe Commerce PolyShell Attacks Breach Hundreds of Stores as Brotli Exploit Traffic Emerges",
+  "source": "The Hacker News",
+  "checked": "2026-10-28T13:03:49+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Independent security-researcher reporting substantiates actual compromises of hundreds of e-commerce stores, not merely scanning or exploit attempts.; Blocked or honeypot exploit attempts without a confirmed external victim are out of scope.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Independent security-researcher reporting substantiates actual compromises of hundreds of e-commerce stores, not merely scanning or exploit attempts.",
+    "title": "PolyShell breached hundreds of Adobe Commerce stores",
+    "incident_id": "80878b66f73ef3ef"
+   },
+   {
+    "status": "exclude",
+    "reason": "Blocked or honeypot exploit attempts without a confirmed external victim are out of scope.",
+    "title": "Brotli exploit traffic observed against sensors and honeypots"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "624b916980815e72a0ae4873f8fa7084cb82c02ac86c134ab72edbdb7d27d785",
+  "item": {
+   "id": "80878b66f73ef3ef",
+   "title": "Adobe Commerce PolyShell Attacks Breach Hundreds of Stores as Brotli Exploit Traffic Emerges",
+   "url": "https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html",
+   "date": "2026-10-28",
+   "source": "The Hacker News",
+   "published_at": "2026-10-28T05:42:26+00:00"
   }
  }
 }
