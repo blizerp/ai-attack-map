@@ -854,10 +854,191 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-10-28-morning",
+   "date": "2026-10-28",
+   "edition": "morning",
+   "published_at": "2026-10-28T18:00:00+00:00",
+   "generated_at": "2026-10-28T18:00:00+00:00",
+   "window_start": "2026-10-28T00:20:32+00:00",
+   "window_end": "2026-10-28T18:00:00+00:00",
+   "sector_window_start": "2026-10-27T18:00:00+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "New reports describe a large government-data breach in Moldova, customer-record exposure at a Sony internet provider, stolen patient information through a healthcare vendor, and confirmed attacks on network firewalls. A Japanese hosting breach has also been linked to unauthorized trading on some customer accounts.",
+    "items": [
+     {
+      "headline": "Moldova restores public services after government data breach",
+      "what_happened": "Attackers extracted information linked to about 750,000 identification numbers from Moldovan government services between October 19 and 23. Authorities say roughly 11 million requests were made and are investigating possible foreign involvement, without naming a country or group.",
+      "impact": "The stolen information may include identity, health, benefits, pension, vehicle and financial records. Dozens of public services were disrupted, including permits and food-safety registrations. Most have since been secured and are being restored. Bank card data was not exposed, officials said.",
+      "what_next": "Authorities are checking the remaining systems and investigating further attempts made after October 23. People may face convincing messages pretending to come from banks or government offices.",
+      "change": "New report",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/moldova-investigates-possible-foreign-involvement-cyberattacks",
+        "published": "2026-10-28T16:37:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Sony internet customers’ personal records exposed in breach",
+      "what_happened": "Sony Network Communications confirmed that a breach exposed about 2.5 million records containing information on current and former customers. The supplied report does not yet describe the exact data fields or the incident date.",
+      "impact": "Customer privacy is affected, but the available reporting does not confirm payment theft, service outages or misuse of the information.",
+      "what_next": "Sony’s investigation should clarify which customers and records were involved and whether any further effects are found.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
+        "published": "2026-10-28T16:45:47+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Healthcare vendor breaches expose data on 341,000 children and families",
+      "what_happened": "Two attackers exploited a flaw in Metabase, a third-party data-analysis tool used by Blueberry Pediatrics and prescription provider Photon. Blueberry learned of the first incident on August 22 and the second on August 24; the breach was reported publicly in this window.",
+      "impact": "Names, birth dates, health-plan details, medical records, service charges and medication information were exposed. Financial information, Social Security numbers, photos and videos were not involved. Patient care disruption was not reported.",
+      "what_next": "Blueberry has blocked access, fixed the vendor flaw and is reviewing the affected records. Some people may receive more than one breach notice.",
+      "change": "New report",
+      "sectors": [
+       "healthcare",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "HIPAA Journal",
+        "url": "https://www.hipaajournal.com/blueberry-pediatrics-photon-data-breach/",
+        "published": "2026-10-28T15:37:37+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Japanese hosting breach linked to unauthorized trading on customer accounts",
+      "what_happened": "Attackers breached GMO Internet’s Desktop Cloud hosting service and stole customer information. A broker said leaked trading logins were used to make unauthorized trades on some customers’ accounts. GMO shut down servers across its plans starting October 21.",
+      "impact": "Trading customers may face account restrictions, losses or delays while brokers investigate. GMO says payment-card data was not stored there; the number of affected customers and qualifying trades remains unknown.",
+      "what_next": "GMO and brokers are investigating the leaked data and trades. The company has not confirmed the full compensation scope or impact on other services.",
+      "change": "Impact increased",
+      "sectors": [
+       "finance",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html",
+        "published": "2026-10-28T07:13:21+00:00"
+       }
+      ],
+      "incident_ids": [
+       "ffecbbabaac5f757"
+      ]
+     },
+     {
+      "headline": "Attackers break into 25 firewalls, including a U.S.-linked network",
+      "what_happened": "Researchers found attacks on 25 internet-facing firewalls in the United States, Japan, Taiwan and South Korea on October 23 and 24. Two systems belonged to a U.S. government-affiliated environment, where attackers reached an internal management server and searched for account credentials.",
+      "impact": "The activity shows confirmed compromise of network equipment, but the reporting does not establish stolen data, broader access or disruption to public services. The suspected China-linked operation has not been definitively attributed.",
+      "what_next": "The affected organization and investigators are assessing whether credentials or internal systems were successfully accessed. The full scope remains unclear.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
+        "published": "2026-10-28T16:02:45+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/china-linked-hackers-exploit-php2shell-to-root-firewalls/",
+        "published": "2026-10-28T12:00:59+00:00"
+       }
+      ],
+      "incident_ids": [
+       "8550c665be3b6045"
+      ]
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "4 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 711
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    }
+   ],
+   "reviewed_reports": 33,
+   "usage": {
+    "completion_tokens": 1033,
+    "prompt_tokens": 32553,
+    "total_tokens": 33586,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 65,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 32550,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-10-28T00:20:32+00:00"
+  "checked_at": "2026-10-28T18:00:00+00:00"
  }
 }
