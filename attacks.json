@@ -1,6 +1,498 @@
 {
- "updated": "2026-10-29T05:54:30+00:00",
+ "updated": "2026-10-29T13:11:07+00:00",
  "incidents": [
+  {
+   "title": "Volt Typhoon used Silent Train in zero-day intrusions",
+   "date": "2026-10-28",
+   "category": "major_cyber",
+   "victim": "Telecommunications firms, government agencies, defense contractors, educational institutes, utilities and other critical-infrastructure organizations, satellite providers, IT firms, MSPs, transportation and emergency-service organizations; specific victims were not reported",
+   "attacker": "Volt Typhoon, identified as a Chinese state-sponsored group by Black Lotus Labs; attribution is researcher-assessed",
+   "what": "Black Lotus Labs observed Volt Typhoon using the Silent Train framework, which chains compromised routers, modems, and other devices as disposable relays. The group exploited at least four reported zero-day vulnerabilities in VeloCloud Orchestrator, Cisco Catalyst SD-WAN, N-able N-central, and Versa Director, with a suspected Quest KACE zero-day also observed, to steal credentials, exfiltrate data, maintain remote access, and reach downstream customers.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The intrusions targeted centralized management and edge infrastructure that can provide administrative control and access to downstream customer environments. Researchers observed actual exploitation, credential theft, data exfiltration, and persistent access rather than merely attempted attacks.",
+   "where": "United States, with California, Texas, and Hawaii identified as the most targeted regions",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Independent researcher observations confirmed exploitation of multiple zero-days and compromise of relay and enterprise systems across telecommunications, government, defense, utility, transportation, and other sectors. The affected management platforms could provide privileged access to downstream customers.",
+   "id": "a5181cd3aa60aa7f",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/",
+   "added": "2026-10-28T22:39:58+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 36.7014631,
+   "lon": -118.755997,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Black Lotus Labs reported hundreds of identified victims and described credential access, data exfiltration, and continued access capabilities. Specific victim-level outages, stolen-data volumes, and financial losses were not established in the available reporting.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
+    "assessed_at": "2026-10-28T22:39:58+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.7014631,
+     "lon": -118.755997,
+     "label": "California, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/"
+    },
+    {
+     "lat": 31.2638905,
+     "lon": -98.5456116,
+     "label": "Texas, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/"
+    },
+    {
+     "lat": 19.5938015,
+     "lon": -155.4283701,
+     "label": "Hawaii, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-28",
+     "what": "Black Lotus Labs reported that Volt Typhoon used the Silent Train network to exploit four confirmed zero-day campaigns involving Versa Director, N-able N-central, Cisco Catalyst SD-WAN Controller, and Arista VeloCloud Orchestrator. The compromised relay infrastructure supported credential access, data exfiltration, and continued access to victim environments.",
+     "url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
+     "source": "The Hacker News"
+    },
+    {
+     "date": "2026-10-29",
+     "what": "Attackers exploited Cisco SD-WAN CVE-2026-20127 without credentials to bypass peering authentication, obtain administrator rights, and deploy KeyDrift malware on SD-WAN controllers. The malware included a backdoor and modules designed to collect encryption keying material and relay commands.",
+     "url": "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/",
+     "source": "SecurityWeek"
+    }
+   ]
+  },
+  {
+   "title": "Sony ISP subsidiary breach exposed 2.5 million customer records",
+   "date": "2026-10-19",
+   "category": "major_cyber",
+   "victim": "Sony Network Communications, including So-net and plala services; affected NTT Docomo Hikari customers",
+   "attacker": "Unauthorized party; attribution was not reported.",
+   "what": "Sony Network Communications confirmed unauthorized access to its So-net member database. The breach exposed 2,585,481 customer records containing names, phone numbers, email addresses, user IDs, dates of birth, gender, and internet connection IDs; 54,401 additional email addresses were exposed with account passwords.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident affected a telecommunications provider and exposed more than 2.5 million customer records, including reusable account passwords in a subset of cases. Sony shut down compromised servers, blocked external communication, notified Japan's privacy regulator, and the investigation into cause and scope continues.",
+   "where": "Japan",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The confirmed exposure of 2,585,481 telecom-customer records, plus 54,401 email addresses with passwords, represents large-scale theft of sensitive personal information. NTT Docomo warned affected customers about phishing and impersonation risks, although misuse of the data had not been confirmed as of October 27.",
+   "id": "8d9eceb5e20bcce3",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
+   "added": "2026-10-28T22:39:58+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 36.5748441,
+   "lon": 139.2394179,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Sony confirmed unauthorized database access and exposure of more than 2.5 million customer records, including passwords for 54,401 email addresses. Compromised servers were shut down and external communication blocked; no material telecom-service outage or financial loss was reported, and misuse of the data was not confirmed.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
+    "assessed_at": "2026-10-28T22:39:58+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Attackers accessed So-net's member database and stole personal information from approximately 2.6 million current and former So-net and Plala subscribers. The data included names, birth dates, gender, phone numbers, email addresses, user IDs, and internet-connection IDs; approximately 54,000 email addresses and passwords from four additional mail services were also exposed.",
+     "url": "https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net/",
+     "source": "SecurityWeek"
+    }
+   ]
+  },
+  {
+   "title": "iRhythm patient data stolen from third-party applications",
+   "date": "2026-06-03 to 2026-06-08",
+   "category": "major_cyber",
+   "victim": "iRhythm Holdings, Inc.",
+   "attacker": "Unauthorized individuals; attribution not reported.",
+   "what": "Unauthorized individuals accessed certain third-party-hosted business applications and downloaded stored data between June 3 and June 8, 2026. The stolen information included patient names, contact details, account numbers, device serial numbers, insurance numbers, dates of service, and dates of birth.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident exposed sensitive patient and insurance-related information, prompting iRhythm to notify impacted individuals and provide protective guidance. iRhythm reported no impact to its clinical or medical-device systems, patient safety, products, manufacturing, distribution, or customer connections.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "iRhythm confirmed that unauthorized individuals accessed and downloaded sensitive patient information from third-party-hosted business applications. The number of affected individuals was not reported, but the data included medical-service and insurance-related identifiers.",
+   "id": "f9509bdd055c164a",
+   "source_name": "iRhythm",
+   "source_url": "https://investors.irhythmtech.com/news/news-details/2026/iRhythm-Provides-Update-on-Cybersecurity-Incident-Previously-Disclosed-in-June-2026/default.aspx",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-02",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 31.2638905,
+   "lon": -98.5456116,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The company confirmed exfiltration of sensitive patient and account information affecting at least 360,000 individuals. iRhythm reported no impact to clinical or medical-device operations and did not disclose confirmed financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/irhythm-data-breach-impacts-over-360000-people/",
+    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/irhythm-data-breach-impacts-over-360000-people/"
+    },
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/irhythm-data-breach/"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/hhs-filing-puts-irhythm-data-breach-toll-at-8-2-million/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-12",
+     "what": "Hackers accessed and exfiltrated patient data from third-party-hosted business applications. Exposed information included names, contact details, dates of birth, phone numbers, account and device data, insurance numbers, and dates of service.",
+     "url": "https://www.securityweek.com/irhythm-data-breach-impacts-over-360000-people/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-10-19",
+     "what": "The attacker gained unauthorized access to certain business applications and exfiltrated personal and protected health information. Reported data included names, contact details, patient account numbers, device serial numbers, insurance numbers, dates of birth, and dates of service.",
+     "url": "https://www.hipaajournal.com/irhythm-data-breach/",
+     "source": "HIPAA Journal"
+    },
+    {
+     "date": "2026-10-29",
+     "what": "Attackers compromised certain third-party-hosted business applications and potentially stole names, addresses, dates of birth, email addresses, phone numbers, account and device data, insurance numbers, and dates of service. iRhythm reported no impact to its products, clinical or medical-device systems, customer connections, manufacturing, distribution, patient safety, or ability to meet patient needs.",
+     "url": "https://www.securityweek.com/hhs-filing-puts-irhythm-data-breach-toll-at-8-2-million/",
+     "source": "SecurityWeek"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 31.2638905,
+     "lon": -98.5456116,
+     "label": "Texas, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://investors.irhythmtech.com/news/news-details/2026/iRhythm-Provides-Update-on-Cybersecurity-Incident-Previously-Disclosed-in-June-2026/default.aspx"
+    },
+    {
+     "lat": 33.6874388,
+     "lon": -80.4363743,
+     "label": "South Carolina, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://investors.irhythmtech.com/news/news-details/2026/iRhythm-Provides-Update-on-Cybersecurity-Incident-Previously-Disclosed-in-June-2026/default.aspx"
+    }
+   ]
+  },
+  {
+   "title": "Warp Panda used ESXi flaw to hide activity in US intrusions",
+   "date": "2025 to early 2026",
+   "category": "major_cyber",
+   "victim": "U.S. organizations, including law firms; specific victims were not reported",
+   "attacker": "Warp Panda, a China-nexus threat actor, according to CrowdStrike; attribution is not independently confirmed in the report",
+   "what": "CrowdStrike reported that Warp Panda exploited CVE-2026-41709 as a zero-day after gaining access to VMware vCenter environments. The flaw allowed logged-in administrators to perform operations without those actions appearing in audit logs; the actor deployed malware including BrickStorm, TetanusStorm, SharpStorm, DualGauge, and GuestConduit.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The intrusions involved unauthorized access to business-critical virtualization infrastructure and deliberately reduced audit visibility, hindering detection and investigation. The report does not establish specific data theft, operational outages, or financial losses.",
+   "where": "United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "CrowdStrike observed exploitation in intrusions against multiple U.S. organizations, including law firms, while CISA added the flaw to its Known Exploited Vulnerabilities catalog. The vulnerability was used to conceal attacker activity in VMware environments.",
+   "id": "fb1d5d5777b3835d",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/chinese-hackers-quietly-used-low-severity-esxi-logging-flaw-as-zero-day/",
+   "added": "2026-10-29T13:11:07+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "CrowdStrike reported intrusions in multiple U.S. organizations and deployment of malware after access to VMware environments. The available reporting confirms administrative-level activity and suppressed audit logging but does not establish service disruption, data theft, or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/chinese-hackers-quietly-used-low-severity-esxi-logging-flaw-as-zero-day/",
+    "assessed_at": "2026-10-29T13:11:07+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/chinese-hackers-quietly-used-low-severity-esxi-logging-flaw-as-zero-day/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "CrowdStrike reported that Warp Panda exploited VMware ESXi CVE-2026-41709 as a zero-day after gaining administrative access, allowing operations to bypass audit logging. In related intrusions, the actor pivoted to VMware vCenter, deployed BRICKSTORM and SharpStorm malware, harvested cloud session tokens, and in at least one case registered a rogue MFA device.",
+     "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html",
+     "source": "The Hacker News"
+    }
+   ]
+  },
+  {
+   "title": "Cisco ASA and FTD VPN zero-day exploited in the wild",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Organizations operating affected Cisco Secure Firewall ASA or FTD software; specific victims were not reported",
+   "attacker": "Unknown; Cisco confirmed exploitation in the wild but disclosed no threat actor details",
+   "what": "Attackers remotely exploited CVE-2026-76418 in the Remote Access SSL VPN service without authenticating. A malicious connection request could force an affected firewall to restart, disrupting availability.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "This is a confirmed, actively exploited zero-day affecting network perimeter devices and remote-access infrastructure. The reporting does not establish the number of compromised devices or observed outages.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Cisco confirmed real-world exploitation of an unauthenticated VPN flaw that can remotely restart firewalls. Specific victims, attack scale, and consequences were not disclosed.",
+   "id": "0e60e89019ed7cd1",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august/",
+   "added": "2026-10-29T13:11:07+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Cisco confirmed exploitation in the wild, but did not provide victim identities or evidence of specific device restarts, outages, data theft, or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august/",
+    "assessed_at": "2026-10-29T13:11:07+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Attackers exploited CVE-2026-76418, an unauthenticated Cisco ASA and FTD flaw, to remotely force vulnerable SSL VPN firewall devices to reload and enter a denial-of-service condition. Cisco said its PSIRT observed active exploitation in October 2026.",
+     "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
+     "source": "BleepingComputer"
+    }
+   ]
+  },
+  {
+   "title": "KeyDrift malware compromised Cisco SD-WAN control systems",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "An unnamed organization operating Cisco Catalyst SD-WAN control systems",
+   "attacker": "UAT-11473, according to Cisco Talos; Talos found considerable infrastructure overlap with Silent Train but did not establish that they are the same group. Lumen separately linked Silent Train to Volt Typhoon, but did not tie that activity to KeyDrift.",
+   "what": "Attackers exploited CVE-2026-20127 to bypass authentication and obtain administrative access to Cisco Catalyst SD-WAN Controllers, Managers, or Validators. They installed KeyDrift malware, including components that injected into the vdaemon process, could execute commands and relay traffic, and attempted to extract AES-256 key material used to encrypt traffic between sites. Talos described the exploitation as historical, with activity dating back to at least 2023; whether keys were transmitted or reused was not established.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The compromise affected systems that manage an organization's SD-WAN network and could expose encryption keys protecting inter-site traffic. The reporting confirms malware deployment and privileged access, but does not establish the number of affected organizations, successful key exfiltration, or downstream decryption.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Cisco Talos observed custom malware implanted in SD-WAN control-plane systems after exploitation of a critical authentication-bypass flaw. The malware was capable of accessing decrypted control messages and extracting traffic-encryption key material, creating a consequential risk to network confidentiality and control.",
+   "id": "4dc4a1512003044a",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html",
+   "added": "2026-10-29T13:11:07+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Talos reported historical real-world compromises in which attackers gained administrative access and planted KeyDrift on Cisco SD-WAN control systems. Key extraction was the malware's purpose, but the reporting does not confirm that keys were successfully sent or used, nor does it document service disruption or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html",
+    "assessed_at": "2026-10-29T13:11:07+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/cisco-patches-exploited-catalyst-sd-wan-zero-day-vulnerability/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-01",
+     "what": "Attackers exploited CVE-2026-76504, an authentication bypass caused by improper URI-encoding handling, to reach a restricted API endpoint and potentially obtain administrative API access without authentication. Cisco and CISA provided remediation guidance and indicators of compromise, but did not disclose specific victims or exploitation outcomes.",
+     "url": "https://www.securityweek.com/cisco-patches-exploited-catalyst-sd-wan-zero-day-vulnerability/",
+     "source": "SecurityWeek"
+    }
+   ]
+  },
+  {
+   "title": "PAN-OS zero-day exploited against Palo Alto firewalls",
+   "date": "2026-10-15",
+   "category": "major_cyber",
+   "victim": "Organizations operating Palo Alto Networks PA-Series and VM-Series firewalls or Panorama",
+   "attacker": "Not reported; Palo Alto Networks observed limited exploitation but did not identify a threat actor.",
+   "what": "CVE-2026-0322, a PAN-OS management-interface vulnerability, was exploited in malicious attacks. An authenticated attacker with network access could execute arbitrary code with root privileges; Palo Alto Networks released patches and indicators of compromise.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident involved observed exploitation of a zero-day affecting security management infrastructure. The number of compromised devices and resulting victim impact were not reported.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Palo Alto Networks confirmed very limited exploitation targeting PAN-OS management interfaces, and CISA added the vulnerability to its Known Exploited Vulnerabilities catalog.",
+   "id": "d312fa7392f56427",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-15",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Observed exploitation resulted in root access to 25 servers and credential extraction, but the reporting does not establish service outages, data theft beyond credentials, or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html",
+    "assessed_at": "2026-10-29T13:11:07+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Palo Alto Networks reported active exploitation of CVE-2026-109618 and CVE-2026-109619 against internet-exposed management interfaces. Dream observed the vulnerabilities chained with the Fragnesia Linux privilege-escalation flaw to root 25 servers in the United States, Japan, Taiwan, and South Korea; recovered artifacts showed credential extraction, directory enumeration, and attacks against Active Directory.",
+     "url": "https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html",
+     "source": "The Hacker News"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/"
+    },
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/"
+    },
+    {
+     "lat": 23.9739374,
+     "lon": 120.9820179,
+     "label": "Taiwan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/"
+    },
+    {
+     "lat": 36.638392,
+     "lon": 127.6961188,
+     "label": "South Korea",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/"
+    }
+   ]
+  },
   {
    "title": "China-linked hackers rooted firewalls and accessed management systems",
    "date": "2026-10-23 to 2026-10-24",
@@ -336,132 +828,6 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.hipaajournal.com/blueberry-pediatrics-photon-data-breach/"
-    }
-   ]
-  },
-  {
-   "title": "Volt Typhoon used Silent Train in zero-day intrusions",
-   "date": "2026-10-28",
-   "category": "major_cyber",
-   "victim": "Telecommunications firms, government agencies, defense contractors, educational institutes, utilities and other critical-infrastructure organizations, satellite providers, IT firms, MSPs, transportation and emergency-service organizations; specific victims were not reported",
-   "attacker": "Volt Typhoon, identified as a Chinese state-sponsored group by Black Lotus Labs; attribution is researcher-assessed",
-   "what": "Black Lotus Labs observed Volt Typhoon using the Silent Train framework, which chains compromised routers, modems, and other devices as disposable relays. The group exploited at least four reported zero-day vulnerabilities in VeloCloud Orchestrator, Cisco Catalyst SD-WAN, N-able N-central, and Versa Director, with a suspected Quest KACE zero-day also observed, to steal credentials, exfiltrate data, maintain remote access, and reach downstream customers.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The intrusions targeted centralized management and edge infrastructure that can provide administrative control and access to downstream customer environments. Researchers observed actual exploitation, credential theft, data exfiltration, and persistent access rather than merely attempted attacks.",
-   "where": "United States, with California, Texas, and Hawaii identified as the most targeted regions",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Independent researcher observations confirmed exploitation of multiple zero-days and compromise of relay and enterprise systems across telecommunications, government, defense, utility, transportation, and other sectors. The affected management platforms could provide privileged access to downstream customers.",
-   "id": "a5181cd3aa60aa7f",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/",
-   "added": "2026-10-28T22:39:58+00:00",
-   "reported_date": "2026-10-28",
-   "last_reported": "2026-10-28",
-   "evidence_status": "confirmed",
-   "lat": 36.7014631,
-   "lon": -118.755997,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Black Lotus Labs reported hundreds of identified victims and described credential access, data exfiltration, and continued access capabilities. Specific victim-level outages, stolen-data volumes, and financial losses were not established in the available reporting.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "widespread",
-     "damage": "privileged_access",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
-    "assessed_at": "2026-10-28T22:39:58+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 36.7014631,
-     "lon": -118.755997,
-     "label": "California, United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/"
-    },
-    {
-     "lat": 31.2638905,
-     "lon": -98.5456116,
-     "label": "Texas, United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/"
-    },
-    {
-     "lat": 19.5938015,
-     "lon": -155.4283701,
-     "label": "Hawaii, United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/"
-    }
-   ],
-   "more_sources": [
-    {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html"
-    }
-   ],
-   "updates": [
-    {
-     "date": "2026-10-28",
-     "what": "Black Lotus Labs reported that Volt Typhoon used the Silent Train network to exploit four confirmed zero-day campaigns involving Versa Director, N-able N-central, Cisco Catalyst SD-WAN Controller, and Arista VeloCloud Orchestrator. The compromised relay infrastructure supported credential access, data exfiltration, and continued access to victim environments.",
-     "url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
-     "source": "The Hacker News"
-    }
-   ]
-  },
-  {
-   "title": "Sony ISP subsidiary breach exposed 2.5 million customer records",
-   "date": "2026-10-19",
-   "category": "major_cyber",
-   "victim": "Sony Network Communications, including So-net and plala services; affected NTT Docomo Hikari customers",
-   "attacker": "Unauthorized party; attribution was not reported.",
-   "what": "Sony Network Communications confirmed unauthorized access to its So-net member database. The breach exposed 2,585,481 customer records containing names, phone numbers, email addresses, user IDs, dates of birth, gender, and internet connection IDs; 54,401 additional email addresses were exposed with account passwords.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The incident affected a telecommunications provider and exposed more than 2.5 million customer records, including reusable account passwords in a subset of cases. Sony shut down compromised servers, blocked external communication, notified Japan's privacy regulator, and the investigation into cause and scope continues.",
-   "where": "Japan",
-   "major_impact": "large_scale_data_theft",
-   "significance": "The confirmed exposure of 2,585,481 telecom-customer records, plus 54,401 email addresses with passwords, represents large-scale theft of sensitive personal information. NTT Docomo warned affected customers about phishing and impersonation risks, although misuse of the data had not been confirmed as of October 27.",
-   "id": "8d9eceb5e20bcce3",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
-   "added": "2026-10-28T22:39:58+00:00",
-   "reported_date": "2026-10-28",
-   "last_reported": "2026-10-28",
-   "evidence_status": "confirmed",
-   "lat": 36.5748441,
-   "lon": 139.2394179,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Sony confirmed unauthorized database access and exposure of more than 2.5 million customer records, including passwords for 54,401 email addresses. Compromised servers were shut down and external communication blocked; no material telecom-service outage or financial loss was reported, and misuse of the data was not confirmed.",
-    "evidence": {
-     "context": "real_world",
-     "service": "limited",
-     "reach": "widespread",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
-    "assessed_at": "2026-10-28T22:39:58+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 36.5748441,
-     "lon": 139.2394179,
-     "label": "Japan",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/"
     }
    ]
   },
@@ -1449,7 +1815,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used stolen GitHub tokens to plant workflows in repositories, execute them in private and enterprise environments, and dump repository, environment, cloud, Kubernetes, and runner credentials. Wiz recovered more than 13,500 malicious branches from over 850 compromised accounts; some cloud credentials were subsequently used to enumerate AWS Secrets Manager.",
+     "what": "Attackers used stolen GitHub tokens to plant secret-dumping workflows in repositories accessible to those tokens. Wiz recovered more than 13,500 planted branches; workflows successfully ran in private repositories and GitHub Enterprise environments, exposing repository, environment, cloud, and potentially self-hosted-runner secrets.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -2559,7 +2925,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker used compromised release infrastructure to publish LiteLLM 1.107.0 wheels and container images containing a credential stealer. The malware used persistence files to execute at interpreter startup and attempted to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials before encrypting and sending data to a lookalike domain.",
+     "what": "The attacker used stolen tokens to alter LiteLLM’s release workflow and publish malicious PyPI wheels and container images tagged 1.107.0 and related tags. The payload established interpreter-start persistence and was designed to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and LiteLLM proxy credentials. PyPI quarantined the release and the affected container tags were pulled the same day.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -2571,7 +2937,7 @@
     },
     {
      "date": "2026-10-22",
-     "what": "Wiz reported that malicious LiteLLM version 1.107.0 was uploaded to PyPI and Docker. The package included a credential stealer targeting browser, cloud, and AI secrets, along with dormant command-and-control capability.",
+     "what": "Wiz reported that LiteLLM version 1.107.0 was uploaded to PyPI and Docker with a credential stealer targeting browser, cloud, and AI secrets, plus dormant command-and-control capability.",
      "url": "https://www.wiz.io/blog/artex-in-the-wild-storm-0940-expands-targeting-of-it-and-software-vendors",
      "source": "Wiz Research"
     },
@@ -4447,7 +4813,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Threat actors phished GCP users for credentials and MFA codes, then used privileged access to alter IAM and organization policies, add external accounts, create Gemini API credentials, and link attacker-controlled projects to victims’ billing accounts. Wiz observed unauthorized Gemini API usage generating charges within 24–48 hours.",
+     "what": "Attackers phished GCP credentials and MFA codes, accessed victim environments, disabled organization policy guardrails, created privileged service accounts and Gemini API keys, added external accounts, and linked attacker-controlled projects to victims’ billing accounts.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -5044,92 +5410,12 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT documented a real intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested credentials, created privileged identities, escalated to cluster-admin, modified GitOps-managed production workloads, accessed cloud environments, and attempted data exfiltration.",
+     "what": "Wiz CIRT documented a real intrusion beginning through an exposed Kafka UI Java RCE. The AI agent deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, and identity-provider credentials, created administrative identities, escalated to cluster-admin and cloud-organization administrator access, modified production workloads, accessed sensitive data, and attempted exfiltration.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
    ],
    "more_sources": []
-  },
-  {
-   "title": "iRhythm patient data stolen from third-party applications",
-   "date": "2026-06-03 to 2026-06-08",
-   "category": "major_cyber",
-   "victim": "iRhythm Holdings, Inc.",
-   "attacker": "Unauthorized individuals; attribution not reported.",
-   "what": "Unauthorized individuals accessed certain third-party-hosted business applications and downloaded stored data between June 3 and June 8, 2026. The stolen information included patient names, contact details, account numbers, device serial numbers, insurance numbers, dates of service, and dates of birth.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The incident exposed sensitive patient and insurance-related information, prompting iRhythm to notify impacted individuals and provide protective guidance. iRhythm reported no impact to its clinical or medical-device systems, patient safety, products, manufacturing, distribution, or customer connections.",
-   "where": "No fixed location",
-   "major_impact": "large_scale_data_theft",
-   "significance": "iRhythm confirmed that unauthorized individuals accessed and downloaded sensitive patient information from third-party-hosted business applications. The number of affected individuals was not reported, but the data included medical-service and insurance-related identifiers.",
-   "id": "f9509bdd055c164a",
-   "source_name": "iRhythm",
-   "source_url": "https://investors.irhythmtech.com/news/news-details/2026/iRhythm-Provides-Update-on-Cybersecurity-Incident-Previously-Disclosed-in-June-2026/default.aspx",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-02",
-   "last_reported": "2026-10-19",
-   "evidence_status": "confirmed",
-   "lat": 31.2638905,
-   "lon": -98.5456116,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "The company confirmed exfiltration of sensitive patient and account information affecting at least 360,000 individuals. iRhythm reported no impact to clinical or medical-device operations and did not disclose confirmed financial losses.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/irhythm-data-breach-impacts-over-360000-people/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "more_sources": [
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/irhythm-data-breach-impacts-over-360000-people/"
-    },
-    {
-     "name": "HIPAA Journal",
-     "url": "https://www.hipaajournal.com/irhythm-data-breach/"
-    }
-   ],
-   "updates": [
-    {
-     "date": "2026-10-12",
-     "what": "Hackers accessed and exfiltrated patient data from third-party-hosted business applications. Exposed information included names, contact details, dates of birth, phone numbers, account and device data, insurance numbers, and dates of service.",
-     "url": "https://www.securityweek.com/irhythm-data-breach-impacts-over-360000-people/",
-     "source": "SecurityWeek"
-    },
-    {
-     "date": "2026-10-19",
-     "what": "The attacker gained unauthorized access to certain business applications and exfiltrated personal and protected health information. Reported data included names, contact details, patient account numbers, device serial numbers, insurance numbers, dates of birth, and dates of service.",
-     "url": "https://www.hipaajournal.com/irhythm-data-breach/",
-     "source": "HIPAA Journal"
-    }
-   ],
-   "locations": [
-    {
-     "lat": 31.2638905,
-     "lon": -98.5456116,
-     "label": "Texas, United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://investors.irhythmtech.com/news/news-details/2026/iRhythm-Provides-Update-on-Cybersecurity-Incident-Previously-Disclosed-in-June-2026/default.aspx"
-    },
-    {
-     "lat": 33.6874388,
-     "lon": -80.4363743,
-     "label": "South Carolina, United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://investors.irhythmtech.com/news/news-details/2026/iRhythm-Provides-Update-on-Cybersecurity-Incident-Previously-Disclosed-in-June-2026/default.aspx"
-    }
-   ]
   },
   {
    "title": "UNC5820 implanted FortiGate malware in telecom intrusion",
@@ -6909,46 +7195,6 @@
      "financial": "unknown"
     },
     "source_url": "https://www.securityweek.com/novel-android-banking-rat-hirudo-replaces-banking-apps-with-trojanized-copies/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "more_sources": [],
-   "updates": []
-  },
-  {
-   "title": "PAN-OS zero-day exploited against Palo Alto firewalls",
-   "date": "2026-10-15",
-   "category": "major_cyber",
-   "victim": "Organizations operating Palo Alto Networks PA-Series and VM-Series firewalls or Panorama",
-   "attacker": "Not reported; Palo Alto Networks observed limited exploitation but did not identify a threat actor.",
-   "what": "CVE-2026-0322, a PAN-OS management-interface vulnerability, was exploited in malicious attacks. An authenticated attacker with network access could execute arbitrary code with root privileges; Palo Alto Networks released patches and indicators of compromise.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The incident involved observed exploitation of a zero-day affecting security management infrastructure. The number of compromised devices and resulting victim impact were not reported.",
-   "where": "No fixed location",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Palo Alto Networks confirmed very limited exploitation targeting PAN-OS management interfaces, and CISA added the vulnerability to its Known Exploited Vulnerabilities catalog.",
-   "id": "d312fa7392f56427",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-15",
-   "last_reported": "2026-10-15",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "unknown",
-    "status": "preliminary",
-    "reason": "Exploitation was confirmed by Palo Alto Networks, but the available reporting does not establish successful compromise of specific customer environments or resulting operational, data, or financial consequences.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "unknown",
-     "damage": "unknown",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/",
     "assessed_at": "2026-10-27T06:10:01+00:00",
     "method": "reported-impact-v1"
    },
@@ -11505,7 +11751,7 @@
    "updates": [
     {
      "date": "2026-09-25",
-     "what": "CARBONATO compromised Docker daemons exposed without authentication on port 2375, installed Hermes Agent, replaced its persona file with operator instructions, collected credentials with priority given to AI API keys, and scanned neighboring networks for further spread.",
+     "what": "CARBONATO compromised Docker daemons exposed without authentication on port 2375, installed Hermes Agent, replaced its persona file with operator instructions, and collected credentials with AI API keys prioritized.",
      "url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
      "source": "SecurityWeek"
     }
@@ -11589,7 +11835,15 @@
     "source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
     "assessed_at": "2026-10-27T07:06:45+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-09-25",
+     "what": "Malicious versions of MemOS packages were published on npm and PyPI. The sckit Go implant searched for npm, PyPI, GitHub, AWS, Hugging Face and other secrets and included templates for propagation through package repositories and GitHub Actions; propagation was not evidenced.",
+     "url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "Gastroenterology practice network breach exposed medical and identity data",
@@ -12920,7 +13174,7 @@
    "updates": [
     {
      "date": "2026-08-14",
-     "what": "Suspicious activity in Mon General's email system led investigators to confirm unauthorized access to a small number of employee email accounts. The accounts contained patient names, birth dates, contact details, Social Security numbers, health information, and health-insurance information.",
+     "what": "A small number of employee email accounts were accessed by an unauthorized third party. The accounts contained patient names, birth dates, contact information, Social Security numbers, health information, and health-insurance information.",
      "url": "https://www.hipaajournal.com/boston-healthcare-homeless-program-mon-general-open-door-illinois-data-breaches/",
      "source": "HIPAA Journal"
     },
@@ -18087,6 +18341,100 @@
    ]
   },
   {
+   "title": "SonicWall SMA1000 zero-days used in ransomware intrusions",
+   "date": "2026-06-22",
+   "category": "major_cyber",
+   "victim": "Multiple private and government organizations using SonicWall SMA1000 appliances",
+   "attacker": "INC Ransomware was identified by Resecurity as the most active group; Volexity attributed observed exploitation to UTA0533, while other actors were also reported chaining the vulnerabilities. Attribution remains partly uncertain.",
+   "what": "Threat actors exploited CVE-2026-15409 and CVE-2026-15410 in SonicWall SMA1000 secure remote access appliances as zero-days from at least June 22. The flaws enabled unauthenticated WebSocket access to restricted services and privilege escalation to root; observed activity included credential harvesting, malicious-file deployment, backdoors, and pivots into internal corporate networks.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign provided attackers with privileged access to remote-access appliances and, in some cases, internal corporate networks. Resecurity assisted multiple victims with incident response and vulnerability assessments, while private and government organizations in several countries were listed on the INC ransomware leak site.",
+   "where": "Organizations in the United States, Australia, United Arab Emirates, Colombia, and Switzerland, among other countries",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Security researchers and incident responders documented exploitation of the SonicWall appliances, credential harvesting, malicious files, root-level access, and internal-network pivoting. The report does not establish the final operational or financial impact for the listed victims.",
+   "id": "fd0df5547b3b8f98",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-08-03",
+   "last_reported": "2026-09-02",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Observed exploitation gave attackers root-level access to SMA1000 appliances, and Rapid7 observed pivots into internal networks. Multiple victims were assisted by Resecurity, but service outages and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/",
+    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/"
+    },
+    {
+     "lat": -24.7761086,
+     "lon": 134.755,
+     "label": "Australia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/"
+    },
+    {
+     "lat": 24.0002488,
+     "lon": 53.9994829,
+     "label": "United Arab Emirates",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/"
+    },
+    {
+     "lat": 4.099917,
+     "lon": -72.9088133,
+     "label": "Colombia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/"
+    },
+    {
+     "lat": 46.7985624,
+     "lon": 8.2319736,
+     "label": "Switzerland",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-09-02",
+     "what": "Attackers exploited CVE-2026-83548, a pre-authentication SSRF flaw, and CVE-2026-83549, an authenticated OS command-injection flaw, apparently chaining them against SMA1000 appliances. SonicWall confirmed exploitation in the wild but reported no victim or attack details.",
+     "url": "https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/",
+     "source": "SecurityWeek"
+    }
+   ]
+  },
+  {
    "title": "Aesto Health breach affected 9.54 million patients",
    "date": "2025-12-02 to 2025-12-18",
    "category": "major_cyber",
@@ -20347,7 +20695,7 @@
    "updates": [
     {
      "date": "2026-08-14",
-     "what": "A network security incident caused a disruption, and investigators confirmed unauthorized network access with potential viewing or acquisition of files. The affected records included names, Social Security numbers, payment-card and financial information, government IDs, medical and health-insurance information.",
+     "what": "A network security incident caused a network disruption, and independent cybersecurity investigators confirmed that an unauthorized party accessed the organization’s network and potentially viewed or obtained files. The exposed information included Social Security numbers, payment-card and financial data, medical records, and health-insurance information.",
      "url": "https://www.hipaajournal.com/boston-healthcare-homeless-program-mon-general-open-door-illinois-data-breaches/",
      "source": "HIPAA Journal"
     }
@@ -21806,7 +22154,7 @@
    "updates": [
     {
      "date": "2026-08-10",
-     "what": "UCLA Health confirmed that patient information was accessed and disclosed to an outside healthcare provider in a manner inconsistent with its HIPAA policies. The information included names, dates of birth, health-insurance information, and clinical information; a limited number of records included the last four digits of Social Security numbers.",
+     "what": "Patient information was accessed and disclosed to an outside healthcare provider between December 27, 2024, and April 21, 2026. The information included names, dates of birth, health insurance information, clinical information such as referral orders, and, for a limited number of people, the last four Social Security-number digits.",
      "url": "https://www.hipaajournal.com/data-breaches-loma-linda-university-health-ucla-health/",
      "source": "HIPAA Journal"
     }
@@ -22001,6 +22349,54 @@
      "what": "An attacker exploited CVE-2026-72898, a zero-day SQL injection in Metabase versions 1.58 and later, through the password-reset API. Wiz reverse-engineered the flaw and observed public proof-of-concept exploits by August 10.",
      "url": "https://www.wiz.io/blog/inside-the-metabase-sqli-exploited-in-the-wild",
      "source": "Wiz Research"
+    }
+   ]
+  },
+  {
+   "title": "Loma Linda University Health patient dataset uploaded to AI platform",
+   "date": "2026-08-10",
+   "category": "major_cyber",
+   "victim": "Loma Linda University Health",
+   "attacker": "Not reported; the dataset was uploaded to an external AI platform during an approved research study.",
+   "what": "A dataset containing medical record numbers, dates of birth, and limited orthopedic clinical information was uploaded to an external AI platform. The number of affected individuals was not disclosed; complete treatment records, Social Security numbers, financial information, and insurance information were reportedly not included.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident exposed sensitive patient information to an external platform and prompted an investigation and review of controls governing external technologies.",
+   "where": "Loma Linda, California, United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Loma Linda University Health confirmed exposure of patient identifiers and limited clinical data through an external AI platform, although the affected population and any further misuse were not reported.",
+   "id": "e97d20f0a1e2bb5b",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/data-breaches-loma-linda-university-health-ucla-health/",
+   "added": "2026-10-29T13:11:07+00:00",
+   "reported_date": "2026-08-10",
+   "last_reported": "2026-08-10",
+   "evidence_status": "confirmed",
+   "lat": 34.0537971,
+   "lon": -117.2610925,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The reported dataset contained medical record numbers, dates of birth, and limited clinical information. No service disruption or financial loss was reported, and the number of affected people remains undisclosed.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/data-breaches-loma-linda-university-health-ucla-health/",
+    "assessed_at": "2026-10-29T13:11:07+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 34.0537971,
+     "lon": -117.2610925,
+     "label": "Loma Linda, California, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/data-breaches-loma-linda-university-health-ucla-health/"
     }
    ]
   },
@@ -22809,88 +23205,6 @@
    "updates": []
   },
   {
-   "title": "SonicWall SMA1000 zero-days used in ransomware intrusions",
-   "date": "2026-06-22",
-   "category": "major_cyber",
-   "victim": "Multiple private and government organizations using SonicWall SMA1000 appliances",
-   "attacker": "INC Ransomware was identified by Resecurity as the most active group; Volexity attributed observed exploitation to UTA0533, while other actors were also reported chaining the vulnerabilities. Attribution remains partly uncertain.",
-   "what": "Threat actors exploited CVE-2026-15409 and CVE-2026-15410 in SonicWall SMA1000 secure remote access appliances as zero-days from at least June 22. The flaws enabled unauthenticated WebSocket access to restricted services and privilege escalation to root; observed activity included credential harvesting, malicious-file deployment, backdoors, and pivots into internal corporate networks.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The campaign provided attackers with privileged access to remote-access appliances and, in some cases, internal corporate networks. Resecurity assisted multiple victims with incident response and vulnerability assessments, while private and government organizations in several countries were listed on the INC ransomware leak site.",
-   "where": "Organizations in the United States, Australia, United Arab Emirates, Colombia, and Switzerland, among other countries",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Security researchers and incident responders documented exploitation of the SonicWall appliances, credential harvesting, malicious files, root-level access, and internal-network pivoting. The report does not establish the final operational or financial impact for the listed victims.",
-   "id": "fd0df5547b3b8f98",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-08-03",
-   "last_reported": "2026-08-03",
-   "evidence_status": "confirmed",
-   "lat": 39.7837304,
-   "lon": -100.445882,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "Observed exploitation gave attackers root-level access to SMA1000 appliances, and Rapid7 observed pivots into internal networks. Multiple victims were assisted by Resecurity, but service outages and financial losses were not reported.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "privileged_access",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 39.7837304,
-     "lon": -100.445882,
-     "label": "United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/"
-    },
-    {
-     "lat": -24.7761086,
-     "lon": 134.755,
-     "label": "Australia",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/"
-    },
-    {
-     "lat": 24.0002488,
-     "lon": 53.9994829,
-     "label": "United Arab Emirates",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/"
-    },
-    {
-     "lat": 4.099917,
-     "lon": -72.9088133,
-     "label": "Colombia",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/"
-    },
-    {
-     "lat": 46.7985624,
-     "lon": 8.2319736,
-     "label": "Switzerland",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/"
-    }
-   ],
-   "more_sources": [],
-   "updates": []
-  },
-  {
    "title": "River Bank ransomware attack accessed network and exfiltrated data",
    "date": "2026-06-16",
    "category": "major_cyber",
@@ -23355,6 +23669,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-28T22:39:58+00:00",
+ "last_added": "2026-10-29T13:11:07+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }

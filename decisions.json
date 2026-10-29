@@ -132,14 +132,14 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-10-29T05:54:30+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a confirmed, distinct campaign involving unauthorized use of more than 850 compromised GitHub accounts, execution of malicious workflows, and theft of organizational and cloud credentials. It is already tracked as the same Gheist campaign.",
+  "reason": "Wiz substantiates a real multi-victim campaign that compromised GitHub accounts and executed workflows to steal organizational and cloud secrets. This is the same Gheist campaign already tracked under fdf212b3998ab3a2, so it is retained as an additional source rather than a new incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a confirmed, distinct campaign involving unauthorized use of more than 850 compromised GitHub accounts, execution of malicious workflows, and theft of organizational and cloud credentials. It is already tracked as the same Gheist campaign.",
+    "reason": "Wiz substantiates a real multi-victim campaign that compromised GitHub accounts and executed workflows to steal organizational and cloud secrets. This is the same Gheist campaign already tracked under fdf212b3998ab3a2, so it is retained as an additional source rather than a new incident.",
     "title": "Gheist campaign stole secrets through compromised GitHub tokens",
     "incident_id": "fdf212b3998ab3a2"
    }
@@ -2463,25 +2463,26 @@
  "https://www.hipaajournal.com/data-breaches-loma-linda-university-health-ucla-health/": {
   "title": "Data Breaches Announced by Loma Linda University Health & UCLA Health",
   "source": "HIPAA Journal",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Potentially meaningful patient-data exposure was confirmed, but the supplied reporting describes an inadvertent upload and does not substantiate unauthorized access or a cyber compromise.; UCLA Health confirmed access and improper disclosure of sensitive patient information; this is the same incident already tracked under c20f7c4e2c7baca5.",
+  "status": "include",
+  "reason": "Confirmed exposure of sensitive patient information to an external AI platform qualifies as a meaningful healthcare data incident; the affected count and downstream misuse remain unknown.; This is the already-tracked UCLA Health incident, with additional reporting confirming the disclosure window and categories of exposed information.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potentially meaningful patient-data exposure was confirmed, but the supplied reporting describes an inadvertent upload and does not substantiate unauthorized access or a cyber compromise.",
-    "title": "Loma Linda University Health research dataset uploaded to AI platform"
+    "status": "include",
+    "reason": "Confirmed exposure of sensitive patient information to an external AI platform qualifies as a meaningful healthcare data incident; the affected count and downstream misuse remain unknown.",
+    "title": "Loma Linda University Health patient dataset uploaded to AI platform",
+    "incident_id": "e97d20f0a1e2bb5b"
    },
    {
     "status": "include",
-    "reason": "UCLA Health confirmed access and improper disclosure of sensitive patient information; this is the same incident already tracked under c20f7c4e2c7baca5.",
+    "reason": "This is the already-tracked UCLA Health incident, with additional reporting confirming the disclosure window and categories of exposed information.",
     "title": "UCLA Health patient information disclosed to outside provider",
     "incident_id": "c20f7c4e2c7baca5"
    }
   ],
   "evidence": "article",
-  "summary_hash": "16484641101894b19e2baeb6e38e26f698ecd5fc661cb21245c826a15c92c6ef",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "e97d20f0a1e2bb5b",
    "title": "Data Breaches Announced by Loma Linda University Health & UCLA Health",
@@ -3162,19 +3163,19 @@
  "https://www.securityweek.com/cisco-patches-firewall-zero-day-exploited-for-dos-attacks/": {
   "title": "Cisco Patches Firewall Zero-Day Exploited for DoS Attacks",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Potentially meaningful exploitation is reported, but there is insufficient evidence of an actual victim compromise or consequential impact.",
+  "status": "exclude",
+  "reason": "Exclude because active exploitation and exploit capability are reported without evidence of an actual consequential compromise, identified victim, or observed impact.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potentially meaningful exploitation is reported, but there is insufficient evidence of an actual victim compromise or consequential impact.",
-    "title": "Cisco firewall zero-day exploited for denial-of-service"
+    "status": "exclude",
+    "reason": "Exclude because active exploitation and exploit capability are reported without evidence of an actual consequential compromise, identified victim, or observed impact.",
+    "title": "Cisco ASA/FTD zero-day exploitation reported without confirmed victims"
    }
   ],
   "evidence": "article",
-  "summary_hash": "871b95bc16f8d754247aeb636ae20320e19ab240f46e9a238c0fae3f04be1a38",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "34c577e3fc164400",
    "title": "Cisco Patches Firewall Zero-Day Exploited for DoS Attacks",
@@ -3614,31 +3615,31 @@
  "https://www.hipaajournal.com/boston-healthcare-homeless-program-mon-general-open-door-illinois-data-breaches/": {
   "title": "Boston Healthcare for the Homeless Program Breach Affects 201,000 Individuals",
   "source": "HIPAA Journal",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "This is a substantive healthcare network compromise with confirmed unauthorized access and a reported impact of 201,260 individuals; it duplicates an already tracked incident.; The report substantiates unauthorized access to hospital email accounts containing sensitive patient information; it duplicates an already tracked Mon General incident.; The victim's breach-portal report supports a potentially meaningful healthcare incident, but the available evidence does not independently substantiate the alleged patient-data theft or its scope.",
+  "reason": "Confirmed unauthorized network access and large-scale theft or potential acquisition of sensitive healthcare and financial records; this is a duplicate of an already tracked incident.; Confirmed unauthorized access to hospital email accounts containing sensitive patient records; this is a duplicate of an already tracked incident.; Potentially meaningful healthcare data theft is reported, but compromise and impact are not independently substantiated; the evidence is limited to an attacker claim and a placeholder estimate.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantive healthcare network compromise with confirmed unauthorized access and a reported impact of 201,260 individuals; it duplicates an already tracked incident.",
-    "title": "Boston Healthcare for the Homeless Program breach affected 201,260",
+    "reason": "Confirmed unauthorized network access and large-scale theft or potential acquisition of sensitive healthcare and financial records; this is a duplicate of an already tracked incident.",
+    "title": "Boston Healthcare for the Homeless breach affected 201,260 people",
     "incident_id": "ac824764e12369b2"
    },
    {
     "status": "include",
-    "reason": "The report substantiates unauthorized access to hospital email accounts containing sensitive patient information; it duplicates an already tracked Mon General incident.",
+    "reason": "Confirmed unauthorized access to hospital email accounts containing sensitive patient records; this is a duplicate of an already tracked incident.",
     "title": "Mon General email breach exposed patient information",
     "incident_id": "e017ba807e6e8215"
    },
    {
     "status": "defer",
-    "reason": "The victim's breach-portal report supports a potentially meaningful healthcare incident, but the available evidence does not independently substantiate the alleged patient-data theft or its scope.",
-    "title": "Open Door Health Center of Illinois reported a cyberattack"
+    "reason": "Potentially meaningful healthcare data theft is reported, but compromise and impact are not independently substantiated; the evidence is limited to an attacker claim and a placeholder estimate.",
+    "title": "Open Door Health Center data-theft report remains unverified"
    }
   ],
   "evidence": "article",
-  "summary_hash": "9da11ae774b8071924f8800fb667d6ceb344baed65c88e1f9abe72e6ea1a39b4",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "ac824764e12369b2",
    "title": "Boston Healthcare for the Homeless Program Breach Affects 201,000 Individuals",
@@ -4122,19 +4123,19 @@
  "https://www.securityweek.com/fortune-500-companies-hit-in-azure-data-theft-campaign/": {
   "title": "Fortune 500 Companies Hit in Azure Data Theft Campaign",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful multi-organization data theft is reported, but the available evidence relies on an attacker’s claim and unconfirmed researcher analysis; defer pending victim, provider, or stronger independent confirmation.",
+  "reason": "Potentially meaningful multi-organization data theft is reported, but the evidence is limited to an attacker’s claim and researcher analysis without victim or authority confirmation.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful multi-organization data theft is reported, but the available evidence relies on an attacker’s claim and unconfirmed researcher analysis; defer pending victim, provider, or stronger independent confirmation.",
-    "title": "Alleged Azure tenant data theft from multiple enterprises"
+    "reason": "Potentially meaningful multi-organization data theft is reported, but the evidence is limited to an attacker’s claim and researcher analysis without victim or authority confirmation.",
+    "title": "TheHatman claimed Azure data theft from Fortune 500 tenants"
    }
   ],
   "evidence": "article",
-  "summary_hash": "a2cd5a71282d72abe4e9bf1204cfc96456d4fef9e0e6fb1bea4c611a674242a0",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "a95c2f7698e4e0d4",
    "title": "Fortune 500 Companies Hit in Azure Data Theft Campaign",
@@ -4906,19 +4907,19 @@
  "https://www.securityweek.com/hackers-target-zimbra-servers-in-active-exploitation-campaign/": {
   "title": "Hackers Target Zimbra Servers in Active Exploitation Campaign",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Active exploitation is reported, but no successful compromise, affected victim, or consequence is substantiated. This does not meet the threshold for a confirmed incident record.",
+  "reason": "Potentially meaningful exploitation was reported by a credible authority, but the available evidence does not establish a successful compromise of real victim systems or consequential impact.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Active exploitation is reported, but no successful compromise, affected victim, or consequence is substantiated. This does not meet the threshold for a confirmed incident record.",
-    "title": "Zimbra CVE-2026-73570 exploitation reported without victim evidence"
+    "reason": "Potentially meaningful exploitation was reported by a credible authority, but the available evidence does not establish a successful compromise of real victim systems or consequential impact.",
+    "title": "Zimbra CVE-2026-73570 exploitation reported in Poland"
    }
   ],
   "evidence": "article",
-  "summary_hash": "2a6e41a0cdd131a13d2fb650cfd69e40617267559c84f1c5f401e6db36d68655",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "93b07a8acded1fa0",
    "title": "Hackers Target Zimbra Servers in Active Exploitation Campaign",
@@ -5705,19 +5706,19 @@
  "https://www.securityweek.com/cisa-over-100-internet-exposed-water-systems-targeted-in-july-cyberattacks/": {
   "title": "CISA: Over 100 Internet-Exposed Water Systems Targeted in July Cyberattacks",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Credible reporting confirms malicious targeting of exposed water-sector systems but does not confirm unauthorized access, compromise, or meaningful operational impact; mere targeting does not qualify as a confirmed incident.",
+  "status": "exclude",
+  "reason": "The report substantiates targeting of exposed water systems but not an actual compromise or meaningful consequence; it therefore falls within targeting/attempt activity rather than a qualifying incident.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Credible reporting confirms malicious targeting of exposed water-sector systems but does not confirm unauthorized access, compromise, or meaningful operational impact; mere targeting does not qualify as a confirmed incident.",
-    "title": "CISA reports targeting of over 100 exposed water systems"
+    "status": "exclude",
+    "reason": "The report substantiates targeting of exposed water systems but not an actual compromise or meaningful consequence; it therefore falls within targeting/attempt activity rather than a qualifying incident.",
+    "title": "CISA reported targeting of more than 100 exposed water systems"
    }
   ],
   "evidence": "article",
-  "summary_hash": "ad8ba018934dd108ce17943e68c2deaf61ee4dbb35bba1233fba175840cee23b",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "300a95ed6d33334c",
    "title": "CISA: Over 100 Internet-Exposed Water Systems Targeted in July Cyberattacks",
@@ -7185,19 +7186,20 @@
  "https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/": {
   "title": "SonicWall Warns of Two SMA1000 Zero-Days Exploited in Attacks",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Exploitation is reportedly occurring in the wild, but the source lacks evidence of a confirmed meaningful compromise or consequences at a victim organization.",
+  "status": "include",
+  "reason": "Include as a confirmed real-world exploitation event involving business-critical remote-access appliances; this is a duplicate of the already tracked SonicWall SMA1000 zero-day incident.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Exploitation is reportedly occurring in the wild, but the source lacks evidence of a confirmed meaningful compromise or consequences at a victim organization.",
-    "title": "SonicWall SMA1000 zero-days exploited in attacks"
+    "status": "include",
+    "reason": "Include as a confirmed real-world exploitation event involving business-critical remote-access appliances; this is a duplicate of the already tracked SonicWall SMA1000 zero-day incident.",
+    "title": "SonicWall SMA1000 zero-days exploited in attacks",
+    "incident_id": "fd0df5547b3b8f98"
    }
   ],
   "evidence": "article",
-  "summary_hash": "2e0ecfa66b14201c535722b4bbf9a29217274fdc9df5e5ec49df1888e311e060",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "2e7a9097180f53b9",
    "title": "SonicWall Warns of Two SMA1000 Zero-Days Exploited in Attacks",
@@ -7725,19 +7727,19 @@
  "https://www.securityweek.com/sangoma-switchvox-vulnerabilities-exploited-in-the-wild/": {
   "title": "Sangoma Switchvox Vulnerability Exploited in the Wild",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful exploitation is reported by Horizon3 and CISA, but the source does not substantiate an actual victim compromise or consequence.",
+  "reason": "Potentially meaningful exploitation is reported, but evidence of actual victim compromise or consequences is insufficient for inclusion.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful exploitation is reported by Horizon3 and CISA, but the source does not substantiate an actual victim compromise or consequence.",
-    "title": "Sangoma Switchvox vulnerability exploited in the wild"
+    "reason": "Potentially meaningful exploitation is reported, but evidence of actual victim compromise or consequences is insufficient for inclusion.",
+    "title": "Sangoma Switchvox flaw reportedly exploited in the wild"
    }
   ],
   "evidence": "article",
-  "summary_hash": "10a5a71aa310ee411c12ded6a387960dcbf996206804f92a576a582a86dcb4ae",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "7cb754453b665576",
    "title": "Sangoma Switchvox Vulnerability Exploited in the Wild",
@@ -10200,19 +10202,19 @@
  "https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/": {
   "title": "First Agentic AI Data Breach Reported to Spanish Regulator",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful AI-agent intrusion, but the source does not independently establish that the reported breach was genuine; the regulator's investigation remains open.",
+  "reason": "Potentially meaningful unauthorized access and data manipulation are reported by a regulator, but the report explicitly says the investigation is continuing and questions whether the notification is genuine and what mechanism caused the activity.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful AI-agent intrusion, but the source does not independently establish that the reported breach was genuine; the regulator's investigation remains open.",
-    "title": "Reported AI-agent breach notified to Spanish regulator"
+    "reason": "Potentially meaningful unauthorized access and data manipulation are reported by a regulator, but the report explicitly says the investigation is continuing and questions whether the notification is genuine and what mechanism caused the activity.",
+    "title": "Spanish regulator reports alleged AI-agent data breach"
    }
   ],
   "evidence": "article",
-  "summary_hash": "1580b7c19b8630c20cf53b714d1415613391deea6034424798a907fd221a0911",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "03979d3e6a171134",
    "title": "First Agentic AI Data Breach Reported to Spanish Regulator",
@@ -10796,19 +10798,19 @@
  "https://www.securityweek.com/critical-orkes-conductor-vulnerability-exploited-in-attacks/": {
   "title": "Critical Orkes Conductor Vulnerability Exploited in Attacks",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful active exploitation is reported, but the available evidence documents attacks and blocked attempts rather than a substantiated compromise or consequence at a real victim organization.",
+  "reason": "Potentially meaningful exploitation is reported, but successful compromise and victim impact are not substantiated; blocked attempts alone do not qualify as a confirmed incident.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful active exploitation is reported, but the available evidence documents attacks and blocked attempts rather than a substantiated compromise or consequence at a real victim organization.",
+    "reason": "Potentially meaningful exploitation is reported, but successful compromise and victim impact are not substantiated; blocked attempts alone do not qualify as a confirmed incident.",
     "title": "Orkes Conductor vulnerability exploited in attacks"
    }
   ],
   "evidence": "article",
-  "summary_hash": "80c8ded7bf1b53e257afc4cddf2016d86ebdb3d969bce71716d608a085e5f701",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "54fa5d8ac50c3d4a",
    "title": "Critical Orkes Conductor Vulnerability Exploited in Attacks",
@@ -11111,19 +11113,19 @@
  "https://www.securityweek.com/fake-lastpass-installers-push-kernel-level-edr-killer-rapuncel-stealer/": {
   "title": "Fake LastPass Installers Push Kernel-Level EDR Killer, ‘Rapuncel’ Stealer",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful malware campaign, but the supplied report does not confirm that any victim systems were actually compromised; the 40 impersonated organizations are not reported as victims.",
+  "reason": "Potentially meaningful malware distribution is documented, but the supplied report does not establish an actual compromised victim or observed unauthorized consequences.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful malware campaign, but the supplied report does not confirm that any victim systems were actually compromised; the 40 impersonated organizations are not reported as victims.",
-    "title": "Fake LastPass installers delivered Rapuncel stealer"
+    "reason": "Potentially meaningful malware distribution is documented, but the supplied report does not establish an actual compromised victim or observed unauthorized consequences.",
+    "title": "Fake LastPass installers distributed Rapuncel stealer"
    }
   ],
   "evidence": "article",
-  "summary_hash": "eaa07eb100a9eef89f22050888b4d2376f01c2f711b2b3a5eaf373bd3e76b1bb",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "54d9182356fb993b",
    "title": "Fake LastPass Installers Push Kernel-Level EDR Killer, ‘Rapuncel’ Stealer",
@@ -11740,19 +11742,19 @@
  "https://www.securityweek.com/shinyhunters-claims-fbi-hack-demands-retraction-of-threat-report/": {
   "title": "ShinyHunters Claims FBI Hack, Demands Retraction of Threat Report",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "This is a follow-up report on the already-tracked FBIJobs.gov defacement. The additional breach and data-theft claims come from ShinyHunters and have not been confirmed by the FBI or independently verified.",
+  "reason": "The report adds unverified attacker claims about a major FBI compromise; the FBI is investigating, and the alleged data sample’s origin has not been confirmed. The confirmed website defacement is already tracked separately.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "This is a follow-up report on the already-tracked FBIJobs.gov defacement. The additional breach and data-theft claims come from ShinyHunters and have not been confirmed by the FBI or independently verified.",
-    "title": "ShinyHunters claims broader FBI breach after FBIJobs defacement"
+    "reason": "The report adds unverified attacker claims about a major FBI compromise; the FBI is investigating, and the alleged data sample’s origin has not been confirmed. The confirmed website defacement is already tracked separately.",
+    "title": "ShinyHunters’ alleged FBI breach remains unconfirmed"
    }
   ],
   "evidence": "article",
-  "summary_hash": "8ae746259bb9207d97fd9db59ac6791e59f6b4d6e850fd0b54968f78e1f53c57",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "6fe54f31ac4a79e5",
    "title": "ShinyHunters Claims FBI Hack, Demands Retraction of Threat Report",
@@ -12245,51 +12247,31 @@
  "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/": {
   "title": "In Other News: Clop Leak Site Takeover, Docker Botnet Hunts AI Keys, Water Utility Exposure",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful infrastructure compromise, but the available evidence is an unverified attacker claim.; Research disclosure without established external victim harm.; Researchers substantiated malicious package publication and credential-stealing functionality in AI-agent tooling, meeting the supply-chain compromise threshold.; Credential exposure and potential access paths are reported, but no actual utility-system compromise is substantiated.; Malware research and capability reporting without confirmed real-world compromise.; Potentially meaningful multi-victim malware campaign, but the supplied report does not substantiate actual victim compromise or losses.; This is the same CARBONATO Docker-host compromise already tracked as 180a77575cb182d7; the new report provides additional technical evidence and AI-key targeting.",
+  "reason": "This is a substantiated malicious-package supply-chain incident, already tracked as the same MemOS compromise.; This is the same CARBONATO exposed-Docker compromise already tracked.; Malware distribution and capabilities are reported, but actual unauthorized access or victim harm is not substantiated.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potentially meaningful infrastructure compromise, but the available evidence is an unverified attacker claim.",
-    "title": "ShinyHunters claimed takeover of Cl0p leak site"
-   },
-   {
-    "status": "exclude",
-    "reason": "Research disclosure without established external victim harm.",
-    "title": "BragJack browser-AI assistant takeover flaws disclosed"
-   },
-   {
     "status": "include",
-    "reason": "Researchers substantiated malicious package publication and credential-stealing functionality in AI-agent tooling, meeting the supply-chain compromise threshold.",
+    "reason": "This is a substantiated malicious-package supply-chain incident, already tracked as the same MemOS compromise.",
     "title": "Malicious MemOS packages published with credential-stealing implant",
     "incident_id": "d0f2313bdebd6c50"
    },
    {
-    "status": "exclude",
-    "reason": "Credential exposure and potential access paths are reported, but no actual utility-system compromise is substantiated.",
-    "title": "Infostealer exposure at water utilities lacked confirmed intrusions"
-   },
-   {
-    "status": "exclude",
-    "reason": "Malware research and capability reporting without confirmed real-world compromise.",
-    "title": "CLOSEDQUORUM AI-directed malware described without wild-use evidence"
+    "status": "include",
+    "reason": "This is the same CARBONATO exposed-Docker compromise already tracked.",
+    "title": "CARBONATO botnet compromised exposed Docker hosts for AI credentials",
+    "incident_id": "180a77575cb182d7"
    },
    {
     "status": "defer",
-    "reason": "Potentially meaningful multi-victim malware campaign, but the supplied report does not substantiate actual victim compromise or losses.",
-    "title": "RemControl Android banking trojan campaign described"
-   },
-   {
-    "status": "include",
-    "reason": "This is the same CARBONATO Docker-host compromise already tracked as 180a77575cb182d7; the new report provides additional technical evidence and AI-key targeting.",
-    "title": "CARBONATO botnet compromised exposed Docker hosts",
-    "incident_id": "180a77575cb182d7"
+    "reason": "Malware distribution and capabilities are reported, but actual unauthorized access or victim harm is not substantiated.",
+    "title": "RemControl Android banking trojan described in malware campaign"
    }
   ],
   "evidence": "article",
-  "summary_hash": "4342c66bdfdd1e4e83cb70f9ddcc53e75293dce18ac258ce8ff8f7ce904b7330",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "180a77575cb182d7",
    "title": "In Other News: Clop Leak Site Takeover, Docker Botnet Hunts AI Keys, Water Utility Exposure",
@@ -12326,19 +12308,19 @@
  "https://www.securityweek.com/roundcube-webmail-vulnerability-in-attackers-crosshairs/": {
   "title": "Roundcube Webmail Vulnerability in Attackers’ Crosshairs",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Potentially meaningful exploitation is reported, but the source does not substantiate an actual compromise or consequence for a victim; defer pending evidence of affected systems or organizations.",
+  "status": "exclude",
+  "reason": "Exclude: this is a vulnerability-exploitation warning without substantiated victim compromise or documented consequences.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potentially meaningful exploitation is reported, but the source does not substantiate an actual compromise or consequence for a victim; defer pending evidence of affected systems or organizations.",
-    "title": "Roundcube CVE-2026-48842 exploitation reported without victim evidence"
+    "status": "exclude",
+    "reason": "Exclude: this is a vulnerability-exploitation warning without substantiated victim compromise or documented consequences.",
+    "title": "Roundcube vulnerability exploited in the wild"
    }
   ],
   "evidence": "article",
-  "summary_hash": "7ec76243b73d1a04f3a48eafde631258e476402819f59f723559da6a500cee55",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "2b2e1ab1f9a51a5f",
    "title": "Roundcube Webmail Vulnerability in Attackers’ Crosshairs",
@@ -12470,19 +12452,19 @@
  "https://www.securityweek.com/microsoft-sharepoint-flaw-cve-2026-65660-now-exploited-in-attacks/": {
   "title": "Microsoft SharePoint Flaw CVE-2026-65660 Now Exploited in Attacks",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful exploitation was observed, but the source does not substantiate a successful compromise or victim impact; defer pending evidence of an actual intrusion.",
+  "reason": "Defer because the reporting confirms exploitation attempts but does not substantiate a successful compromise or consequential impact at a victim organization.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful exploitation was observed, but the source does not substantiate a successful compromise or victim impact; defer pending evidence of an actual intrusion.",
+    "reason": "Defer because the reporting confirms exploitation attempts but does not substantiate a successful compromise or consequential impact at a victim organization.",
     "title": "SharePoint CVE-2026-65660 Exploitation Attempts Observed"
    }
   ],
   "evidence": "article",
-  "summary_hash": "391c460643487fe5403f7d1063f64be0647c172015b9dd4c37b6ddfdf24b2e5f",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "29678bc546a5a6ba",
    "title": "Microsoft SharePoint Flaw CVE-2026-65660 Now Exploited in Attacks",
@@ -13545,15 +13527,15 @@
  "https://www.gadgetreview.com/?p=418206": {
   "title": "A Read-Only Grok Bot \"CFO\" Agent Posted a CEO's Bank Balances to the Company Slack",
   "source": "AI agent attack tracker",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful AI-agent disclosure of sensitive financial information, but the sole report relies on the affected individual’s screenshots and account and expressly notes that the incident was not independently verified.",
+  "reason": "Potentially meaningful AI-agent disclosure, but the source explicitly says it was not independently verified and relies primarily on the affected person’s screenshots and account.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful AI-agent disclosure of sensitive financial information, but the sole report relies on the affected individual’s screenshots and account and expressly notes that the incident was not independently verified.",
-    "title": "Grok agent allegedly posted CEO’s bank details in company Slack"
+    "reason": "Potentially meaningful AI-agent disclosure, but the source explicitly says it was not independently verified and relies primarily on the affected person’s screenshots and account.",
+    "title": "Grok agent allegedly posted CEO bank data to company Slack"
    }
   ],
   "evidence": "article",
@@ -13680,19 +13662,20 @@
  "https://www.securityweek.com/cisco-patches-exploited-catalyst-sd-wan-zero-day-vulnerability/": {
   "title": "Cisco Patches Exploited Catalyst SD-WAN Zero-Day Vulnerability",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Potentially meaningful exploitation is reported, but the source provides no substantiated victim compromise or observed consequence beyond exploitation attempts.",
+  "status": "include",
+  "reason": "Cisco confirmed real-world exploitation of a critical authentication bypass in a business-critical network-management platform; this is the same Catalyst SD-WAN incident already tracked under 4dc4a1512003044a.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potentially meaningful exploitation is reported, but the source provides no substantiated victim compromise or observed consequence beyond exploitation attempts.",
-    "title": "Cisco Catalyst SD-WAN Manager zero-day exploited in the wild"
+    "status": "include",
+    "reason": "Cisco confirmed real-world exploitation of a critical authentication bypass in a business-critical network-management platform; this is the same Catalyst SD-WAN incident already tracked under 4dc4a1512003044a.",
+    "title": "Cisco Catalyst SD-WAN Manager zero-day exploited in the wild",
+    "incident_id": "4dc4a1512003044a"
    }
   ],
   "evidence": "article",
-  "summary_hash": "9fb9a40f5cd4f269776994fd806224c5ae12db15de56810d81f113f944330a82",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "feb9e5b238f306ba",
    "title": "Cisco Patches Exploited Catalyst SD-WAN Zero-Day Vulnerability",
@@ -14085,19 +14068,19 @@
  "https://www.securityweek.com/exploited-fortinet-fortimail-zero-day-calls-for-urgent-action/": {
   "title": "Exploited Fortinet FortiMail Zero-Day Calls for Urgent Action",
   "source": "SecurityWeek",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Active exploitation is credibly reported, but the source provides no substantiated victim or consequential compromise details needed for inclusion as a meaningful incident.",
+  "reason": "Potentially meaningful exploitation is reported, but the source lacks substantiated victim-level compromise or consequences needed for inclusion.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Active exploitation is credibly reported, but the source provides no substantiated victim or consequential compromise details needed for inclusion as a meaningful incident.",
-    "title": "FortiMail zero-day exploited in the wild"
+    "reason": "Potentially meaningful exploitation is reported, but the source lacks substantiated victim-level compromise or consequences needed for inclusion.",
+    "title": "FortiMail zero-day reportedly exploited in the wild"
    }
   ],
   "evidence": "article",
-  "summary_hash": "f458a427d8571ee1705c8181e94c15fc4f10037926a276da02170ba3b329f514",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "db77070331493845",
    "title": "Exploited Fortinet FortiMail Zero-Day Calls for Urgent Action",
@@ -18510,15 +18493,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-10-29T05:54:30+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz independently substantiated a consequential real-world AI-agent intrusion against an unnamed organization. It is the same incident as the already-tracked multi-cloud intrusion via exposed Kafka UI.",
+  "reason": "Wiz CIRT substantiates a consequential real-world intrusion by an AI agent, including production-environment compromise, privileged access, and sensitive-data access. This is the same incident already tracked under 896e03fe6f750f.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz independently substantiated a consequential real-world AI-agent intrusion against an unnamed organization. It is the same incident as the already-tracked multi-cloud intrusion via exposed Kafka UI.",
-    "title": "AI agent conducted multi-cloud intrusion via exposed Kafka UI",
+    "reason": "Wiz CIRT substantiates a consequential real-world intrusion by an AI agent, including production-environment compromise, privileged access, and sensitive-data access. This is the same incident already tracked under 896e03fe6f750f.",
+    "title": "AI agent breached unnamed multi-cloud organization",
     "incident_id": "896e03eaa7904596"
    }
   ],
@@ -19003,14 +18986,14 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-10-29T05:54:30+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed multiple real-world GCP compromises with privileged-account takeover and material unauthorized Gemini API charges; this is the same incident/campaign already tracked under f58ed76ff84133f9.",
+  "reason": "Wiz independently substantiates multiple consequential GCP compromises and unauthorized financial use of victim billing accounts; this is the same campaign already tracked under f58ed76ff84133f9.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed multiple real-world GCP compromises with privileged-account takeover and material unauthorized Gemini API charges; this is the same incident/campaign already tracked under f58ed76ff84133f9.",
+    "reason": "Wiz independently substantiates multiple consequential GCP compromises and unauthorized financial use of victim billing accounts; this is the same campaign already tracked under f58ed76ff84133f9.",
     "title": "Phishing campaign hijacked GCP billing for Gemini LLMjacking",
     "incident_id": "f58ed76ff84133f9"
    }
@@ -19301,15 +19284,15 @@
  "https://www.darkreading.com/cloud-security/tidb-breach-flawed-cloud-security": {
   "title": "TiDB Breach Exposes Flawed Cloud Security Assumptions",
   "source": "Dark Reading",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "The source asserts a TiDB breach but supplies no reliable incident-specific evidence of unauthorized access, affected customers, data exposure, or operational consequences.",
+  "reason": "The supplied headline and excerpt do not provide enough evidence to confirm a specific compromise, victim impact, or affected location.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "The source asserts a TiDB breach but supplies no reliable incident-specific evidence of unauthorized access, affected customers, data exposure, or operational consequences.",
-    "title": "TiDB cloud breach reported without substantiated impact details"
+    "reason": "The supplied headline and excerpt do not provide enough evidence to confirm a specific compromise, victim impact, or affected location.",
+    "title": "TiDB cloud-security breach report lacks incident details"
    }
   ],
   "evidence": "summary",
@@ -19319,7 +19302,8 @@
    "title": "TiDB Breach Exposes Flawed Cloud Security Assumptions",
    "url": "https://www.darkreading.com/cloud-security/tidb-breach-flawed-cloud-security",
    "date": "2026-10-21",
-   "source": "Dark Reading"
+   "source": "Dark Reading",
+   "published_at": "2026-10-21T21:15:39+00:00"
   },
   "retrieval_warning": "HTTPError"
  },
@@ -19812,15 +19796,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-10-29T05:54:30+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed production software and release-pipeline compromise with malicious artifacts distributed through PyPI and container registries; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
+  "reason": "This is a newly detailed report of the already-tracked LiteLLM supply-chain compromise, with confirmed unauthorized release-workflow access and malicious package/container publication.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed production software and release-pipeline compromise with malicious artifacts distributed through PyPI and container registries; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
-    "title": "LiteLLM PyPI and container releases compromised to steal credentials",
+    "reason": "This is a newly detailed report of the already-tracked LiteLLM supply-chain compromise, with confirmed unauthorized release-workflow access and malicious package/container publication.",
+    "title": "LiteLLM PyPI and container releases backdoored to steal credentials",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -19838,21 +19822,15 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-10-29T05:54:30+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is vulnerability research and proof-of-concept exploitation without established external victim harm; potential exploitability alone is out of scope.; This is the already-tracked LiteLLM supply-chain compromise, supported here by additional details about the malicious version and distribution channels.",
+  "status": "exclude",
+  "reason": "Exclude the PHP2Shell research as a controlled demonstration without established external victim harm; do not create a duplicate for the already-tracked LiteLLM supply-chain incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "This is vulnerability research and proof-of-concept exploitation without established external victim harm; potential exploitability alone is out of scope.",
-    "title": "PHP2Shell vulnerabilities demonstrated in controlled research"
-   },
-   {
-    "status": "include",
-    "reason": "This is the already-tracked LiteLLM supply-chain compromise, supported here by additional details about the malicious version and distribution channels.",
-    "title": "Malicious LiteLLM 1.107.0 package uploaded to PyPI and Docker",
-    "incident_id": "e2e13fe6f7503c25"
+    "reason": "Exclude the PHP2Shell research as a controlled demonstration without established external victim harm; do not create a duplicate for the already-tracked LiteLLM supply-chain incident.",
+    "title": "PHP2Shell research demonstrated, but no real-world victims reported"
    }
   ],
   "evidence": "article",
@@ -20468,15 +20446,21 @@
  "https://www.wiz.io/blog/artex-in-the-wild-storm-0940-expands-targeting-of-it-and-software-vendors": {
   "title": "ARTEX in the Wild: Storm-0940 Expands Targeting of IT and Software Vendors",
   "source": "Wiz Research",
-  "checked": "2026-10-27T07:06:45+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Potentially meaningful real-world targeting is independently observed, but the source does not confirm a successful compromise or consequential unauthorized access; it primarily reports attempted attacks.",
+  "status": "include",
+  "reason": "The report substantiates a malicious LiteLLM package release affecting downstream distribution channels; it is the already-tracked LiteLLM supply-chain incident.; The source substantiates attack attempts and reconnaissance, not a confirmed compromise or consequential unauthorized access.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potentially meaningful real-world targeting is independently observed, but the source does not confirm a successful compromise or consequential unauthorized access; it primarily reports attempted attacks.",
-    "title": "ARTEX actor targeted IT and software vendors"
+    "status": "include",
+    "reason": "The report substantiates a malicious LiteLLM package release affecting downstream distribution channels; it is the already-tracked LiteLLM supply-chain incident.",
+    "title": "Malicious LiteLLM 1.107.0 package uploaded to PyPI and Docker",
+    "incident_id": "e2e13fe6f7503c25"
+   },
+   {
+    "status": "exclude",
+    "reason": "The source substantiates attack attempts and reconnaissance, not a confirmed compromise or consequential unauthorized access.",
+    "title": "ARTEX campaign probed software vendors without confirmed compromise"
    }
   ],
   "evidence": "article",
@@ -20486,7 +20470,8 @@
    "title": "ARTEX in the Wild: Storm-0940 Expands Targeting of IT and Software Vendors",
    "url": "https://www.wiz.io/blog/artex-in-the-wild-storm-0940-expands-targeting-of-it-and-software-vendors",
    "date": "2026-10-22",
-   "source": "Wiz Research"
+   "source": "Wiz Research",
+   "published_at": "2026-10-22T13:05:31+00:00"
   }
  },
  "https://www.wiz.io/blog/aspm-ai-era-pt-2-prioritize-appsec-risk": {
@@ -21321,15 +21306,15 @@
  "https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html": {
   "title": "OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication",
   "source": "The Hacker News",
-  "checked": "2026-10-29T05:54:30+00:00",
+  "checked": "2026-10-29T13:11:07+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude because the substantive events were controlled security evaluations and research demonstrations without established external victim harm; the report does not document a qualifying real-world cyber incident.",
+  "reason": "Exclude: the reported events are controlled red-team and AI-safety evaluation findings without established real-world external harm. The article's references to prior incidents are background rather than newly documented incidents.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude because the substantive events were controlled security evaluations and research demonstrations without established external victim harm; the report does not document a qualifying real-world cyber incident.",
-    "title": "OpenAI red-team agents demonstrated sandbox escapes"
+    "reason": "Exclude: the reported events are controlled red-team and AI-safety evaluation findings without established real-world external harm. The article's references to prior incidents are background rather than newly documented incidents.",
+    "title": "AI agents demonstrated sandbox escapes in controlled testing"
    }
   ],
   "evidence": "article",
@@ -24190,6 +24175,446 @@
    "url": "https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-4fc4-wcmh-4g86",
    "date": "2026-10-21",
    "source": "AI agent attack tracker"
+  }
+ },
+ "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/": {
+  "title": "Over 41,000 DHS Employee Records Leaked Online",
+  "source": "SecurityWeek",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Potentially meaningful exposure of government personnel and access information is reported, but the alleged compromise relies on an attacker claim and a leaked dataset whose DHS/Okta origin has not been confirmed.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Potentially meaningful exposure of government personnel and access information is reported, but the alleged compromise relies on an attacker claim and a leaked dataset whose DHS/Okta origin has not been confirmed.",
+    "title": "DHS employee database leaked online, breach source disputed"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "0ccfe126da0971ec031914430e93677d012e8b61e3a456b411159135a827492a",
+  "item": {
+   "id": "0e3249a520322cec",
+   "title": "Over 41,000 DHS Employee Records Leaked Online",
+   "url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/",
+   "date": "2026-10-29",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-29T12:54:14+00:00"
+  }
+ },
+ "https://www.securityweek.com/hhs-filing-puts-irhythm-data-breach-toll-at-8-2-million/": {
+  "title": "HHS Filing Puts iRhythm Data Breach Toll at 8.2 Million",
+  "source": "SecurityWeek",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a substantive disclosure updating the already tracked iRhythm incident with the HHS-confirmed affected count and detailed categories of compromised data; it is not a new attack.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a substantive disclosure updating the already tracked iRhythm incident with the HHS-confirmed affected count and detailed categories of compromised data; it is not a new attack.",
+    "title": "iRhythm breach affected 8.18 million people",
+    "incident_id": "f9509bdd055c164a"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "58ba3810113e6c2a2527082d3d681b1d0550d8b1a373cb3c040514ef7dd9cd01",
+  "item": {
+   "id": "2776a6abc00e2dd6",
+   "title": "HHS Filing Puts iRhythm Data Breach Toll at 8.2 Million",
+   "url": "https://www.securityweek.com/hhs-filing-puts-irhythm-data-breach-toll-at-8-2-million/",
+   "date": "2026-10-29",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-29T08:27:16+00:00"
+  }
+ },
+ "https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net/": {
+  "title": "Hackers Steal 2.6 Million Records From Sony’s Japanese ISP So-net",
+  "source": "SecurityWeek",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a confirmed, large-scale theft of subscriber personal data and reusable email credentials. It is the same Sony Network Communications/So-net incident already tracked under 8d9eceb5e20bcce3.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a confirmed, large-scale theft of subscriber personal data and reusable email credentials. It is the same Sony Network Communications/So-net incident already tracked under 8d9eceb5e20bcce3.",
+    "title": "So-net breach exposed nearly 2.6 million subscriber records",
+    "incident_id": "8d9eceb5e20bcce3"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "499f8c4d1a91ecbf543389a5107ae40b7ca09965ecbd4ee0d0d4af0eeac9718f",
+  "item": {
+   "id": "e5dc4777964a84d8",
+   "title": "Hackers Steal 2.6 Million Records From Sony’s Japanese ISP So-net",
+   "url": "https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net/",
+   "date": "2026-10-29",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-29T11:00:00+00:00"
+  }
+ },
+ "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/": {
+  "title": "Cisco SD-WAN Zero-Day Exploitation Tied to Volt Typhoon’s ‘Silent Train’ Network",
+  "source": "SecurityWeek",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Confirmed exploitation of Cisco SD-WAN controllers and deployment of persistent malware caused consequential unauthorized access across multiple organizations. This is an additional report on the already tracked Silent Train/Volt Typhoon campaign.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Confirmed exploitation of Cisco SD-WAN controllers and deployment of persistent malware caused consequential unauthorized access across multiple organizations. This is an additional report on the already tracked Silent Train/Volt Typhoon campaign.",
+    "title": "Volt Typhoon-linked actors exploited Cisco SD-WAN zero-day",
+    "incident_id": "a5181cd3aa60aa7f"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "f6e3d0a63bce7a33110e3253042efdf80e7604d63d6e7eb97e07dd811ca4bca8",
+  "item": {
+   "id": "40183598d66106bb",
+   "title": "Cisco SD-WAN Zero-Day Exploitation Tied to Volt Typhoon’s ‘Silent Train’ Network",
+   "url": "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/",
+   "date": "2026-10-29",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-29T10:29:25+00:00"
+  }
+ },
+ "https://www.securityweek.com/chinese-hackers-quietly-used-low-severity-esxi-logging-flaw-as-zero-day/": {
+  "title": "Chinese Hackers Quietly Used Low-Severity ESXi Logging Flaw as Zero-Day",
+  "source": "SecurityWeek",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Credible researcher reporting substantiates zero-day exploitation and consequential unauthorized access to VMware infrastructure at multiple real organizations; this is not merely vulnerability disclosure or an attacker claim.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Credible researcher reporting substantiates zero-day exploitation and consequential unauthorized access to VMware infrastructure at multiple real organizations; this is not merely vulnerability disclosure or an attacker claim.",
+    "title": "Warp Panda used ESXi flaw to hide activity in US intrusions",
+    "incident_id": "fb1d5d5777b3835d"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "b7f5f1203916071cd43165aa55b163e0546b46d034457da4c6dccf2432dc7d8b",
+  "item": {
+   "id": "fb1d5d5777b3835d",
+   "title": "Chinese Hackers Quietly Used Low-Severity ESXi Logging Flaw as Zero-Day",
+   "url": "https://www.securityweek.com/chinese-hackers-quietly-used-low-severity-esxi-logging-flaw-as-zero-day/",
+   "date": "2026-10-29",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-29T08:01:05+00:00"
+  }
+ },
+ "https://www.securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august/": {
+  "title": "Attackers Exploit Second Cisco Firewall VPN Zero-Day Since August",
+  "source": "SecurityWeek",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Include because Cisco confirmed active exploitation of a remotely reachable, unauthenticated VPN vulnerability in operational firewall appliances; victim scope and concrete effects remain undisclosed.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Include because Cisco confirmed active exploitation of a remotely reachable, unauthenticated VPN vulnerability in operational firewall appliances; victim scope and concrete effects remain undisclosed.",
+    "title": "Cisco ASA and FTD VPN zero-day exploited in the wild",
+    "incident_id": "0e60e89019ed7cd1"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "c2ea62f9da3314bc3a13d3741ecae125de81c5b215f5f9ec67922a6a26ead5ce",
+  "item": {
+   "id": "0e60e89019ed7cd1",
+   "title": "Attackers Exploit Second Cisco Firewall VPN Zero-Day Since August",
+   "url": "https://www.securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august/",
+   "date": "2026-10-29",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-29T09:47:10+00:00"
+  }
+ },
+ "https://www.hipaajournal.com/hospital-ransomware-attacker-70-months-jail/": {
+  "title": "Hospital Ransomware Attacker Receives 70 Month Jail Term",
+  "source": "HIPAA Journal",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: court and sentencing coverage that rehashes earlier ransomware attacks without substantive new incident facts.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: court and sentencing coverage that rehashes earlier ransomware attacks without substantive new incident facts.",
+    "title": "Ransomware affiliate sentenced for earlier hospital attacks"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "5778b7cadfbbba50e4e55628df8354f08e4441bbc447c8165b3dd3436ff06979",
+  "item": {
+   "id": "7b6a981414e8cfda",
+   "title": "Hospital Ransomware Attacker Receives 70 Month Jail Term",
+   "url": "https://www.hipaajournal.com/hospital-ransomware-attacker-70-months-jail/",
+   "date": "2026-10-29",
+   "source": "HIPAA Journal",
+   "published_at": "2026-10-29T11:44:27+00:00"
+  }
+ },
+ "https://www.darkreading.com/threat-intelligence/ai-relay-service-openai-codex-claude-code-sandboxes": {
+  "title": "Shadowy AI Relay Disables OpenAI Codex, Claude Code Sandboxes",
+  "source": "Dark Reading",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "The report concerns an AI relay service with security features turned off, but does not substantiate an actual cyber incident or consequential unauthorized activity.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The report concerns an AI relay service with security features turned off, but does not substantiate an actual cyber incident or consequential unauthorized activity.",
+    "title": "AI relay service reportedly disables coding-tool sandboxes"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "edc3254d3a9fcf09f688974de6747fec212b3da5730841f6d04c91b626c4209c",
+  "item": {
+   "id": "e60540b93f971ee8",
+   "title": "Shadowy AI Relay Disables OpenAI Codex, Claude Code Sandboxes",
+   "url": "https://www.darkreading.com/threat-intelligence/ai-relay-service-openai-codex-claude-code-sandboxes",
+   "date": "2026-10-29",
+   "source": "Dark Reading",
+   "published_at": "2026-10-29T10:00:00+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/": {
+  "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
+  "source": "BleepingComputer",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Cisco confirmed real-world exploitation of a firewall zero-day capable of crashing SSL VPN devices; this is the same incident already tracked under 0e60e89019ed7cd1.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Cisco confirmed real-world exploitation of a firewall zero-day capable of crashing SSL VPN devices; this is the same incident already tracked under 0e60e89019ed7cd1.",
+    "title": "Cisco ASA and FTD SSL VPN zero-day exploited to crash firewalls",
+    "incident_id": "0e60e89019ed7cd1"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "19bf83635ba02a9ab0bd9988d45e0064584c31ab0fcc1d357e9f6729eae0baa6",
+  "item": {
+   "id": "9f5b681f22787f73",
+   "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
+   "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
+   "date": "2026-10-29",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-29T11:10:13+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/the-rise-of-threat-operator-how-ai-will.html": {
+  "title": "The Rise of the Threat Operator: How AI Will Redefine Security Operations and Careers",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "The source is forward-looking commentary about AI-enabled security operations and careers, with no substantive real-world cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The source is forward-looking commentary about AI-enabled security operations and careers, with no substantive real-world cyber incident.",
+    "title": "AI’s emerging role in security operations"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "af56970da2c872d4be489d7be8503aed53d27fc05cedd230e0bcde3c2a71e876",
+  "item": {
+   "id": "fab919f4654e109e",
+   "title": "The Rise of the Threat Operator: How AI Will Redefine Security Operations and Careers",
+   "url": "https://thehackernews.com/2026/10/the-rise-of-threat-operator-how-ai-will.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T11:33:41+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html": {
+  "title": "Hackers Exploited Cisco SD-WAN Flaw to Plant Malware Built to Steal Encryption Keys",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Independent Cisco Talos evidence substantiates exploitation of Cisco SD-WAN control systems and malware implantation, which is a consequential compromise even though victims and final impact are not identified.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Independent Cisco Talos evidence substantiates exploitation of Cisco SD-WAN control systems and malware implantation, which is a consequential compromise even though victims and final impact are not identified.",
+    "title": "KeyDrift malware compromised Cisco SD-WAN control systems",
+    "incident_id": "4dc4a1512003044a"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "ffbe499857c7101650868478870ab04fd0960d6198ff95ef28b6c328ba1c7919",
+  "item": {
+   "id": "4dc4a1512003044a",
+   "title": "Hackers Exploited Cisco SD-WAN Flaw to Plant Malware Built to Steal Encryption Keys",
+   "url": "https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T08:24:22+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html": {
+  "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Exploitation is confirmed, but the report does not establish an actual victim compromise or meaningful consequence; the vulnerability is also already tracked.; This is the already-tracked KeyDrift/Cisco SD-WAN intrusion, not a distinct newly reported incident.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Exploitation is confirmed, but the report does not establish an actual victim compromise or meaningful consequence; the vulnerability is also already tracked.",
+    "title": "Cisco ASA and FTD VPN flaw exploited in the wild"
+   },
+   {
+    "status": "exclude",
+    "reason": "This is the already-tracked KeyDrift/Cisco SD-WAN intrusion, not a distinct newly reported incident.",
+    "title": "KeyDrift malware compromised Cisco SD-WAN control systems"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "a88ea3711e6d4dd7b586fc252b6d9f1e965545cda93d18f494f7a47f9d4219c1",
+  "item": {
+   "id": "aa94775f70a6c07e",
+   "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
+   "url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T10:44:46+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html": {
+  "title": "China-Linked Hackers Exploited VMware ESX Zero-Day to Reduce Audit Trail Visibility",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The report substantiates a distinct real-world campaign involving zero-day exploitation and consequential unauthorized access in U.S. legal-sector organizations; it is a later report of the already tracked Warp Panda/ESXi incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The report substantiates a distinct real-world campaign involving zero-day exploitation and consequential unauthorized access in U.S. legal-sector organizations; it is a later report of the already tracked Warp Panda/ESXi incident.",
+    "title": "Warp Panda exploited VMware ESXi zero-day in U.S. legal-sector intrusions",
+    "incident_id": "fb1d5d5777b3835d"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "737cbf05609eb4c6282ec60605477484edb85ab76aff3cd608ab923051844b54",
+  "item": {
+   "id": "b04ca01fc12045d4",
+   "title": "China-Linked Hackers Exploited VMware ESX Zero-Day to Reduce Audit Trail Visibility",
+   "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T06:22:33+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html": {
+  "title": "Attackers Exploit PHP2Shell Flaws in Internet-Exposed Palo Alto Networks Management Interfaces",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The report substantiates active exploitation and consequential unauthorized access to multiple real systems, including root access and credential extraction. It is retained as additional reporting on the already-tracked PAN-OS exploitation incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The report substantiates active exploitation and consequential unauthorized access to multiple real systems, including root access and credential extraction. It is retained as additional reporting on the already-tracked PAN-OS exploitation incident.",
+    "title": "PHP2Shell exploitation rooted 25 Palo Alto firewall servers",
+    "incident_id": "d312fa7392f56427"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "6245b91fc81e6ed2ee8d22a5d722b38d5cd3466a8266a1fc297d60fbb2cf7535",
+  "item": {
+   "id": "1b7ea59a8a7fdd41",
+   "title": "Attackers Exploit PHP2Shell Flaws in Internet-Exposed Palo Alto Networks Management Interfaces",
+   "url": "https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T05:50:17+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/attacker-tried-to-exploit-alpine-linuxs.html": {
+  "title": "Attacker Tried to Exploit Alpine Linux’s GitLab via CVSS 10.0 Flaw Its Ruby Left Open",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the reporting describes failed exploitation attempts and precautionary remediation, with no evidence that the attacker gained access, executed code, or stole data.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the reporting describes failed exploitation attempts and precautionary remediation, with no evidence that the attacker gained access, executed code, or stole data.",
+    "title": "Attacker failed to exploit Alpine Linux GitLab server"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "26d5f4dbb4e810ba6d5f6cf6fb99a35f8e9226041ec92adf65e678c6edbde61f",
+  "item": {
+   "id": "a250e26db6d2c877",
+   "title": "Attacker Tried to Exploit Alpine Linux’s GitLab via CVSS 10.0 Flaw Its Ruby Left Open",
+   "url": "https://thehackernews.com/2026/10/attacker-tried-to-exploit-alpine-linuxs.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T09:05:39+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html": {
+  "title": "26,400 Valid Cloud and AI Credentials Found Exposed in Public Gitee Repositories",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: exposed and valid credentials alone do not establish an actual cyber compromise or meaningful downstream consequence; no unauthorized use was confirmed.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: exposed and valid credentials alone do not establish an actual cyber compromise or meaningful downstream consequence; no unauthorized use was confirmed.",
+    "title": "Valid cloud and AI credentials exposed in public Gitee repositories"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "b1904be2520ab48ac6131025c13cc44e8b9b5c2777760c7a2888e59ecd676705",
+  "item": {
+   "id": "d24b286bd0afa7a2",
+   "title": "26,400 Valid Cloud and AI Credentials Found Exposed in Public Gitee Repositories",
+   "url": "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T11:33:15+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/08/learn-how-to-build-security-operations.html": {
+  "title": "Webinar: How to Build AI Threat Readiness Into Your Security Operations",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T13:11:07+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "No substantive real-world cyber incident is reported; the article is an event announcement and general security commentary.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "No substantive real-world cyber incident is reported; the article is an event announcement and general security commentary.",
+    "title": "Webinar on AI threat readiness, not a cyber incident"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "3cc7bfa0ef680abe44af4da0a1e9438599b0adf490adc1d4a34ad7e0ab9a3b35",
+  "item": {
+   "id": "d3b17d70c06e47f1",
+   "title": "Webinar: How to Build AI Threat Readiness Into Your Security Operations",
+   "url": "https://thehackernews.com/2026/08/learn-how-to-build-security-operations.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T11:39:41+00:00"
   }
  }
 }
