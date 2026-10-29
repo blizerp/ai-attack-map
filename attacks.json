@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T13:11:07+00:00",
+ "updated": "2026-10-29T22:49:24+00:00",
  "incidents": [
   {
    "title": "Volt Typhoon used Silent Train in zero-day intrusions",
@@ -396,6 +396,10 @@
     {
      "name": "SecurityWeek",
      "url": "https://www.securityweek.com/cisco-patches-exploited-catalyst-sd-wan-zero-day-vulnerability/"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/"
     }
    ],
    "updates": [
@@ -404,6 +408,12 @@
      "what": "Attackers exploited CVE-2026-76504, an authentication bypass caused by improper URI-encoding handling, to reach a restricted API endpoint and potentially obtain administrative API access without authentication. Cisco and CISA provided remediation guidance and indicators of compromise, but did not disclose specific victims or exploitation outcomes.",
      "url": "https://www.securityweek.com/cisco-patches-exploited-catalyst-sd-wan-zero-day-vulnerability/",
      "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-10-29",
+     "what": "Cisco Talos observed exploitation of the Cisco Catalyst SD-WAN Controller authentication-bypass flaw CVE-2026-20127 to deploy KeyDrift. The malware operated in controller processes, enabled persistent access and command execution, intercepted decrypted control traffic, and extracted suspected IPsec key material for encrypted exfiltration.",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/",
+     "source": "BleepingComputer"
     }
    ]
   },
@@ -494,6 +504,364 @@
    ]
   },
   {
+   "title": "Wiz observed agentic cloud intrusion with bulk secret theft",
+   "date": "2026-10-29",
+   "category": "by_ai_agent",
+   "victim": "Unnamed organization; specific victim was not reported",
+   "attacker": "Not reported; Wiz investigated the intrusion and attributed the hands-on activity to an AI agent, but did not identify the operator.",
+   "what": "Wiz reported a chained remote-code-execution intrusion that reached cloud credentials and Kubernetes tokens, achieved persistence, replicated across several pods, and exfiltrated bulk secrets. The operation showed machine-paced adaptive scripting and parallel lateral movement.",
+   "ai_role": "An AI agent appears to have performed reconnaissance, exploitation, privilege escalation, cloud and Kubernetes credential theft, persistence, and secret exfiltration; the human operator and framework were not reported.",
+   "why": "The incident demonstrates confirmed unauthorized access to production cloud and Kubernetes environments with theft of reusable credentials and secrets, although the victim and final scope were not disclosed.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Wiz reported observed compromise, persistence across pods, and bulk secret exfiltration rather than merely attempted exploitation. The incident illustrates AI-agent involvement in consequential cloud intrusion activity.",
+   "id": "d22f0579003d30c6",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Wiz described a real investigated intrusion involving RCE, cloud-credential and Kubernetes-token theft, persistence, and bulk secret exfiltration. Service disruption and financial loss were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Hermes AI agent compromised Thailand ministry systems",
+   "date": "2026-10-29",
+   "category": "by_ai_agent",
+   "victim": "Thailand’s Ministry of Finance",
+   "attacker": "Not reported; Hunt.io found attacker-controlled infrastructure running the Hermes AI agent.",
+   "what": "Hunt.io found logs showing Hermes operating unattended in “YOLO” mode during an intrusion. The agent enumerated internal hosts, inspected files, and investigated privilege-escalation opportunities; multiple ministry systems were compromised, with web shells, stolen credentials, and a custom Go-based implant discovered.",
+   "ai_role": "The Hermes AI agent performed unattended reconnaissance, file inspection, and privilege-escalation activity during the intrusion. The initial access method and human operator were not reported.",
+   "why": "Multiple government systems were actually compromised and persistence artifacts and stolen credentials were found, even though investigators had not established data exfiltration.",
+   "where": "Thailand",
+   "major_impact": "critical_network_intrusion",
+   "significance": "This is a confirmed government-system compromise in which independent researchers found evidence of an AI agent carrying out hands-on post-compromise activity and persistence.",
+   "id": "3154910f0425e4ea",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 14.8971921,
+   "lon": 100.83273,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Hunt.io reported compromise of multiple ministry systems, web shells, stolen credentials, and an implant. No data exfiltration or service disruption had been established at discovery.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 14.8971921,
+     "lon": 100.83273,
+     "label": "Thailand",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks"
+    }
+   ]
+  },
+  {
+   "title": "BAE security incident disrupted US bankruptcy noticing services",
+   "date": "2026-10-09",
+   "category": "major_cyber",
+   "victim": "BAE Systems’ Bankruptcy Noticing Center (BNC), operated for the US federal bankruptcy courts",
+   "attacker": "Not reported; BAE and the judiciary have not determined or disclosed whether the incident was a cyberattack.",
+   "what": "A confirmed security incident affecting BAE infrastructure made the BNC systems and websites unavailable. The center stopped generating and sending bankruptcy notices, and the National Creditor Registration Service went offline, preventing electronic-filing users from generating creditor mailing lists.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The disruption affected bankruptcy-noticing operations across federal bankruptcy courts, while courts continued accepting filings and sending some electronic filing notifications through other channels. The cause, scope, and whether data was compromised remained undisclosed.",
+   "where": "United States",
+   "major_impact": "essential_service_disruption",
+   "significance": "The BNC handles notices for every US federal bankruptcy court, and notices issued through the center since October 9 were reportedly not delivered. Restoration had no estimated date at publication.",
+   "id": "cc9fb9e7c0d78f4a",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/bae-systems-security-incident-stalls-notices-from-us-bankruptcy-courts/",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-16",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "BAE and the Administrative Office of the US Courts confirmed a security incident and the resulting unavailability of BNC systems. The reporting did not establish data theft, destructive effects, financial losses, or the incident’s technical cause.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "unknown",
+     "essential": "disrupted",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/bae-systems-security-incident-stalls-notices-from-us-bankruptcy-courts/",
+    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/bae-systems-security-incident-stalls-notices-from-us-bankruptcy-courts/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/bae-says-no-data-extracted-in-incident-hitting-bankruptcy-courts/"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/us-bankruptcy-courts-it-contractor-says-no-data-stolen-cyberattack"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "The BNC went offline around October 9, stopping bankruptcy notices from flowing through the center. Service resumed October 26, with delayed notices being cleared oldest first; BAE said no data was extracted and no personally identifiable information was breached.",
+     "url": "https://www.securityweek.com/bae-says-no-data-extracted-in-incident-hitting-bankruptcy-courts/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-10-29",
+     "what": "A cyberattack took the BNC’s production and distribution systems offline, along with related judiciary websites. Services are being restored, with courts processing a backlog dating to October 7 and delayed paper notices.",
+     "url": "https://therecord.media/us-bankruptcy-courts-it-contractor-says-no-data-stolen-cyberattack",
+     "source": "The Record"
+    }
+   ]
+  },
+  {
+   "title": "Japan Airlines provider breach exposed data of 92,000 customers",
+   "date": "2026-10-28",
+   "category": "major_cyber",
+   "victim": "Japan Airlines and Japan Transocean Air customers; reservation provider Amadeus IT Group",
+   "attacker": "Unknown hackers; no attribution was reported.",
+   "what": "Amadeus informed Japan Airlines that hackers accessed part of the reservation data for Japan Airlines and Japan Transocean Air flights. Exposed information included names, reservation codes, and flight information for 92,000 customers; for about 2,000 customers, passport numbers, frequent-flyer numbers, email addresses, and phone numbers were also accessed.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident compromised a trusted provider supporting airline reservation, ticketing, and check-in systems and exposed sensitive travel and identity information. Flight operations were not affected, and credit-card numbers were not compromised.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Japan Airlines confirmed that its IT provider reported unauthorized access affecting 92,000 customers, including passport and contact data for approximately 2,000 people.",
+   "id": "6a5c48955e180878",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/japan-airlines-warns-of-breach-country-grapples-with-incidents",
+   "added": "2026-10-28T22:39:58+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The provider breach exposed reservation and, for approximately 2,000 customers, passport, frequent-flyer, email, and phone information. Japan Airlines said flight operations and credit-card data were unaffected; financial loss was not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/japan-airlines-warns-of-breach-country-grapples-with-incidents",
+    "assessed_at": "2026-10-28T22:39:58+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Amadeus notified Japan Airlines that its Passenger Service System was accessed without authorization. Data exposed included reservation codes, names, flight dates, routes and travel classes for about 90,000 customers; about 2,000 additional customers also had contact, passport, nationality, frequent-flyer, flight, ticket and seat data exposed.",
+     "url": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
+     "source": "BleepingComputer"
+    }
+   ]
+  },
+  {
+   "title": "Polymarket halted trading after DebugBear script compromise",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Polymarket and users of Polymarket.com; DebugBear third-party RUM service",
+   "attacker": "Unknown; researchers traced approximately $2.57 million in POL transfers to a suspected attacker-controlled wallet.",
+   "what": "Attackers compromised Polymarket’s third-party DebugBear monitoring service and distributed malicious JavaScript through its infrastructure. The script targeted authenticated Polymarket sessions, attempted to liquidate prediction-market positions and transfer cryptocurrency or tokens, and communicated account and transaction data to attacker-controlled infrastructure.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The compromise affected a cryptocurrency prediction-market platform and its trusted third-party script provider, creating a path to unauthorized financial transactions. Polymarket temporarily halted trading and said it would reimburse affected traders, but it did not disclose the number of affected users or confirmed stolen amount.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "Polymarket confirmed the third-party-provider compromise and temporarily suspended trading. Hudson Rock researcher evidence and blockchain analysis identified malicious code and approximately $2.57 million in transfers to a suspected attacker wallet, although the final theft and affected-user count remain unconfirmed.",
+   "id": "83273d8d85f8311b",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Polymarket placed trading into cancel-only mode, paused relayer actions, and halted trading for roughly an hour while containing the incident. Malicious code attempted unauthorized asset transfers, but the confirmed amount stolen and number of affected users were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Malicious Hugging Face models hijacked GPU hosts",
+   "date": "2026-10-29",
+   "category": "on_ai_system",
+   "victim": "Users of self-hosted inference servers and a shared research GPU cluster",
+   "attacker": "Pluto Security attributed the campaign to a financially motivated Chinese-speaking operator; attribution is uncertain.",
+   "what": "Researchers found 31 malicious Hugging Face repositories across seven accounts. Models abused trust_remote_code to execute Python code, install cryptocurrency miners, remove competing miners, and in some versions open reverse shells; nine machines in a shared research GPU cluster were observed mining for the operator.",
+   "ai_role": "The compromised model repositories targeted AI model-loading and self-hosted inference environments; AI was the abused platform rather than the confirmed autonomous attacker.",
+   "why": "The campaign compromised or attempted to compromise systems used for AI inference, with observed unauthorized mining and backdoor functionality. Repository downloads exceeded 32,000, but researchers stated that downloads do not establish infections.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Researchers observed nine GPU-cluster machines mining for the operator and confirmed reverse-shell code in malicious models. The campaign also returned under new accounts after the initial repositories were removed.",
+   "id": "043c45c961e49b37",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Unauthorized mining was observed on nine machines, and the payload included reverse-shell functionality. The reported cryptocurrency proceeds were approximately $5,000, while broader victim losses and service disruption were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "none",
+     "financial": "limited"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Fragnesia-PHP2Shell campaign rooted 25 servers",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "At least 25 servers in the United States, Japan, Taiwan, and South Korea, including three in a US government-affiliated environment",
+   "attacker": "Unattributed threat actors; Dream Security researchers documented the operation and exploitation artifacts",
+   "what": "Attackers chained the PHP2Shell vulnerabilities (CVE-2026-109618 and CVE-2026-109619) with the Fragnesia Linux kernel flaw (CVE-2026-46300) to deploy webshells and obtain root access. Dream Security identified target lists, exploitation logs, and approximately 40 post-exploitation scripts.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign demonstrated successful compromise and root-level control of multiple internet-facing servers, including systems in a US government-affiliated environment. The available reporting does not establish data theft, service disruption, or final organizational impact.",
+   "where": "United States, Japan, Taiwan, and South Korea",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Independent researchers observed a completed intrusion operation that rooted 25 servers across four countries and focused on three servers in a US government-affiliated environment; this is more than a vulnerability or exploit claim.",
+   "id": "ea0735cf930607de",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Dream Security reported rooted servers, exploitation logs, and post-exploitation activity, including three servers in a US government-affiliated environment. The source does not substantiate data theft, outages, financial loss, or effects on essential services.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
+    },
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
+    },
+    {
+     "lat": 23.9739374,
+     "lon": 120.9820179,
+     "label": "Taiwan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
+    },
+    {
+     "lat": 36.638392,
+     "lon": 127.6961188,
+     "label": "South Korea",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
+    }
+   ]
+  },
+  {
    "title": "China-linked hackers rooted firewalls and accessed management systems",
    "date": "2026-10-23 to 2026-10-24",
    "category": "using_ai",
@@ -510,7 +878,7 @@
    "source_url": "https://www.securityweek.com/china-linked-hackers-exploit-php2shell-to-root-firewalls/",
    "added": "2026-10-28T13:03:49+00:00",
    "reported_date": "2026-10-28",
-   "last_reported": "2026-10-28",
+   "last_reported": "2026-10-29",
    "evidence_status": "confirmed",
    "lat": 39.7837304,
    "lon": -100.445882,
@@ -544,6 +912,10 @@
     {
      "name": "The Hacker News",
      "url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/php2shell-successful-exploitation-reports-emerge"
     }
    ],
    "ai_source_url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
@@ -554,6 +926,366 @@
      "what": "Dream researchers reported that attackers chained the PHP2Shell vulnerabilities with the Fragnesia Linux kernel privilege-escalation flaw to obtain root access on 25 firewall servers across the United States, Japan, Taiwan, and South Korea. The attackers planted web shells, used a reverse SSH tunnel into a U.S. government-affiliated network, accessed an internal firewall management server, and targeted Active Directory for credential extraction, enumeration, password spraying, and attempted backdoor-account creation.",
      "url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
      "source": "The Hacker News"
+    },
+    {
+     "date": "2026-10-29",
+     "what": "Dream researchers found 24 firewalls successfully compromised using PHP2Shell chained with CVE-2026-46300. Attackers planted webshells on most systems; two government-related servers received additional attention, with evidence of root access, credential extraction, directory enumeration, private-key access, and network-topology discovery.",
+     "url": "https://therecord.media/php2shell-successful-exploitation-reports-emerge",
+     "source": "The Record"
+    }
+   ]
+  },
+  {
+   "title": "Cyberattack disrupts Belgium’s MyMinfin tax portal",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Belgium’s Federal Public Service Finance (FPS Finance)",
+   "attacker": "Unknown; Belgian authorities have not identified the attacker.",
+   "what": "FPS Finance took the MyMinfin online tax and financial-services platform offline after a cyberattack and was investigating its scope. Several other government applications remained fully or partially operational.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The shutdown occurred days before an October 31 filing deadline, forcing authorities to extend the deadline for affected taxpayers. Authorities said there was no current indication of data theft, but the possibility of exposure remained under investigation.",
+   "where": "Belgium",
+   "major_impact": "essential_service_disruption",
+   "significance": "A cyberattack caused a national government tax portal to be taken offline during a filing period, disrupting public financial administration and requiring a deadline extension. Data theft had not been established in the available reporting.",
+   "id": "b0820cab6df62b82",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/cyberattack-disrupts-belgian-tax-services-before-deadline",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "under_investigation",
+   "lat": 50.6402809,
+   "lon": 4.6667145,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "FPS Finance suspended access to the main MyMinfin tax platform and extended the filing deadline for affected taxpayers. The authority reported no current indication of data theft, while investigation of scope and possible exposure continued.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "disrupted",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/cyberattack-disrupts-belgian-tax-services-before-deadline",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 50.6402809,
+     "lon": 4.6667145,
+     "label": "Belgium",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/cyberattack-disrupts-belgian-tax-services-before-deadline"
+    }
+   ]
+  },
+  {
+   "title": "FortiBleed campaign exposed more than 40,000 secrets",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Organizations using affected FortiGate devices; specific victims were not reported",
+   "attacker": "Not reported; Hudson Rock documented the campaign data",
+   "what": "Hudson Rock identified 975 additional domains and 40,573 exposed secrets, including local-user records and Active Directory LDAP bind records, in source files associated with 1,689 FortiGate host identifiers.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The exposed material included reusable authentication information that could enable unauthorized access to organizational networks and directories.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Independent researcher evidence documents a large volume of organizational credentials and directory-binding records tied to FortiGate systems, although the final extent of successful reuse is not reported.",
+   "id": "a878616353add20c",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Hudson Rock reported 40,573 exposed secrets and associated organizational host identifiers. Operational disruption and financial loss were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Attackers hijacked DNS for school and government domains",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Unnamed school and government domain owners, including an Indian government domain",
+   "attacker": "Hidden Hawk was linked to one cluster; the second campaign's attribution was not reported",
+   "what": "Infoblox reported unauthorized access to DNS administration in two operations. Attackers created CNAME records or delegated subzones so institutional hostnames served illegal-gambling doorway pages.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The attackers abused trusted institutional namespaces and DNS control to redirect or host content under legitimate school and government domains.",
+   "where": "India; other affected countries were not reported",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The reporting describes actual unauthorized DNS administration access affecting institutional domains, with reputational and web-service integrity consequences even though data theft was not reported.",
+   "id": "836bf6c03318ab5c",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 22.3511148,
+   "lon": 78.6677428,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Unauthorized DNS control and domain changes were observed. No material outage, data theft, or quantified financial loss was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 22.3511148,
+     "lon": 78.6677428,
+     "label": "India",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html"
+    }
+   ]
+  },
+  {
+   "title": "China-linked hackers accessed a Suva regional organization",
+   "date": "2026-07 to 2026-08",
+   "category": "major_cyber",
+   "victim": "An unnamed regional organization in Suva",
+   "attacker": "Hackers linked to China; the U.S. Embassy in Fiji did not identify a specific threat actor",
+   "what": "The U.S. Embassy in Fiji said the hackers maintained access to the organization's network for several days during July and August 2026.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident involved confirmed persistent unauthorized access to an organizational network, although accessed data and operational consequences were not disclosed.",
+   "where": "Suva, Fiji",
+   "major_impact": "critical_network_intrusion",
+   "significance": "A government source disclosed a real network intrusion with maintained access; the absence of reported data or service impact limits the observed severity assessment.",
+   "id": "dff1f22a7c3119ed",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": -18.1415884,
+   "lon": 178.4421662,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The U.S. Embassy confirmed several days of network access, but did not report what systems or data were accessed or whether services were disrupted.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": -18.1415884,
+     "lon": 178.4421662,
+     "label": "Suva, Fiji",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html"
+    }
+   ]
+  },
+  {
+   "title": "Camera-management software was used to breach enterprise networks",
+   "date": "2026-09 to 2026-10",
+   "category": "major_cyber",
+   "victim": "Multiple unnamed enterprise organizations using the compromised camera-management software",
+   "attacker": "Not reported; Huntress observed the incidents",
+   "what": "Huntress observed multiple September and October incidents in which attackers entered enterprise networks through compromised camera-management software associated with a Korean camera and recorder vendor. Attackers abused WpcMon.exe to sideload DLLs and establish outbound connections.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "A trusted camera-management application served as the entry point into enterprise networks, creating a downstream software compromise with confirmed unauthorized access.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "The incidents demonstrate compromise of a trusted enterprise software component used for camera infrastructure and resulting network intrusions, although victims and downstream losses were not named.",
+   "id": "9c39122794999550",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Huntress observed multiple enterprise-network intrusions and outbound connections through the compromised application. Data theft and service disruption were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Philippine agency lost 68 GB of case-management data",
+   "date": "2026-09-06",
+   "category": "major_cyber",
+   "victim": "An unnamed Philippine government agency responsible for overseas employment and migrant-worker administration",
+   "attacker": "Unknown threat actor; Hunt.io identified the exposed transfer log and toolkit",
+   "what": "Hunt.io reported that an attacker copied 68 GB in under 24 minutes, including 27 SQL Server backups whose filenames corresponded to the agency's case-management systems. The attacker left the transfer log and tools exposed online.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident involved confirmed bulk exfiltration from government case-management systems, with the exact records and number of affected people not reported.",
+   "where": "Philippines",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Bulk theft of government case-management backups represents a substantial sensitive-data compromise, even though the agency and final scope were not named.",
+   "id": "a46135882e699799",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 12.7503486,
+   "lon": 122.7312101,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Hunt.io observed a 68 GB transfer and 27 case-management SQL backups. The contents, affected individuals, and operational disruption were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 12.7503486,
+     "lon": 122.7312101,
+     "label": "Philippines",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html"
+    }
+   ]
+  },
+  {
+   "title": "Miasma-linked worm hijacked 42 GitHub repositories",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "42 GitHub repositories across 11 owners, plus developers who installed affected packages",
+   "attacker": "Threat actors associated with the Miasma family; JFrog and SafeDep reported the activity",
+   "what": "Attackers hijacked 42 third-party GitHub repositories and inserted large payload blobs and execution hooks for AI coding assistants and IDEs. Malicious packages stole credentials, propagated to other repositories, and installed a wiper that deleted home directories when stolen GitHub tokens were revoked.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign compromised software-development repositories and developer credentials, enabling further malicious releases and destructive actions in downstream environments.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "The campaign compromised source repositories across multiple owners and used developer tooling and CI workflows to propagate, making it a material software-supply-chain incident.",
+   "id": "390f615b6256fd87",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "JFrog and SafeDep reported repository compromise, credential theft, malicious releases, and a wiper capable of deleting victims' home directories. The number of downstream installations and actual deletions was not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "destructive",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "MR ROBOT banking trojan infected 153 Android devices",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Customers of Indian banks; at least 153 infected Android-device users",
+   "attacker": "MR ROBOT crimeware platform operators and affiliates; attribution was not reported",
+   "what": "CloudSEK described a rented Android banking-trojan service distributed through fake app pages and messaging lures. One affiliate reportedly intercepted 5,407 text messages from 153 infected devices and used the malware to target OTPs, card details, UPI PINs, credentials, and calls.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign compromised real mobile devices and intercepted authentication messages and banking-related information, creating a credible risk of account and payment compromise.",
+   "where": "India",
+   "major_impact": "major_financial_loss",
+   "significance": "This was a multi-victim banking-malware operation with observed SMS interception across 153 devices; the report does not establish completed theft or quantify financial losses.",
+   "id": "9fa05ad032119989",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 22.3511148,
+   "lon": 78.6677428,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "CloudSEK reported 153 infected devices and 5,407 intercepted text messages, alongside targeting of banking secrets. Completed fraudulent transfers and monetary losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 22.3511148,
+     "lon": 78.6677428,
+     "label": "India",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html"
     }
    ]
   },
@@ -878,44 +1610,6 @@
      "source_url": "https://therecord.media/moldova-investigates-possible-foreign-involvement-cyberattacks"
     }
    ]
-  },
-  {
-   "title": "Japan Airlines provider breach exposed data of 92,000 customers",
-   "date": "2026-10-28",
-   "category": "major_cyber",
-   "victim": "Japan Airlines and Japan Transocean Air customers; reservation provider Amadeus IT Group",
-   "attacker": "Unknown hackers; no attribution was reported.",
-   "what": "Amadeus informed Japan Airlines that hackers accessed part of the reservation data for Japan Airlines and Japan Transocean Air flights. Exposed information included names, reservation codes, and flight information for 92,000 customers; for about 2,000 customers, passport numbers, frequent-flyer numbers, email addresses, and phone numbers were also accessed.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The incident compromised a trusted provider supporting airline reservation, ticketing, and check-in systems and exposed sensitive travel and identity information. Flight operations were not affected, and credit-card numbers were not compromised.",
-   "where": "No fixed location",
-   "major_impact": "large_scale_data_theft",
-   "significance": "Japan Airlines confirmed that its IT provider reported unauthorized access affecting 92,000 customers, including passport and contact data for approximately 2,000 people.",
-   "id": "6a5c48955e180878",
-   "source_name": "The Record",
-   "source_url": "https://therecord.media/japan-airlines-warns-of-breach-country-grapples-with-incidents",
-   "added": "2026-10-28T22:39:58+00:00",
-   "reported_date": "2026-10-28",
-   "last_reported": "2026-10-28",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "The provider breach exposed reservation and, for approximately 2,000 customers, passport, frequent-flyer, email, and phone information. Japan Airlines said flight operations and credit-card data were unaffected; financial loss was not reported.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "single",
-     "damage": "sensitive_data",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://therecord.media/japan-airlines-warns-of-breach-country-grapples-with-incidents",
-    "assessed_at": "2026-10-28T22:39:58+00:00",
-    "method": "reported-impact-v1"
-   }
   },
   {
    "title": "Hackers compromised Dahua surveillance cameras in Ukraine",
@@ -1815,7 +2509,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used stolen GitHub tokens to plant secret-dumping workflows in repositories accessible to those tokens. Wiz recovered more than 13,500 planted branches; workflows successfully ran in private repositories and GitHub Enterprise environments, exposing repository, environment, cloud, and potentially self-hosted-runner secrets.",
+     "what": "Attackers used stolen GitHub tokens to plant workflows in reachable repositories. In private repositories and GitHub Enterprise environments, the workflows executed, exposed repository and environment secrets in logs, and were then deleted. Wiz also observed private-repository cloning, self-hosted-runner activity, and cloud credentials being used to enumerate AWS Secrets Manager.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -2925,7 +3619,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker used stolen tokens to alter LiteLLM’s release workflow and publish malicious PyPI wheels and container images tagged 1.107.0 and related tags. The payload established interpreter-start persistence and was designed to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and LiteLLM proxy credentials. PyPI quarantined the release and the affected container tags were pulled the same day.",
+     "what": "The attacker used stolen maintainer and workflow credentials to disable branch protection and publish malicious LiteLLM 1.107.0 PyPI wheels and container images. The packages installed persistence that executed at interpreter startup and attempted to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and stored LiteLLM credentials.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -4813,7 +5507,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Attackers phished GCP credentials and MFA codes, accessed victim environments, disabled organization policy guardrails, created privileged service accounts and Gemini API keys, added external accounts, and linked attacker-controlled projects to victims’ billing accounts.",
+     "what": "Attackers phished privileged GCP users, captured credentials and MFA codes, altered IAM and organization policies, added external administrative accounts, and linked attacker-controlled GCP projects to victims’ billing accounts. The projects then generated high-volume Gemini API usage charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -5410,7 +6104,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT documented a real intrusion beginning through an exposed Kafka UI Java RCE. The AI agent deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, and identity-provider credentials, created administrative identities, escalated to cluster-admin and cloud-organization administrator access, modified production workloads, accessed sensitive data, and attempted exfiltration.",
+     "what": "Wiz CIRT documented a real intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested credentials and secrets, escalated to cluster-admin and cloud-administrator access, created identities and pipelines, modified production workloads, and attempted data exfiltration. Wiz reported that the same source IP also scanned more than 600 other customer environments, but the documented compromise concerns one organization.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -6178,56 +6872,6 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.hipaajournal.com/mid-florida-dermatology-plastic-surgery-data-breach/"
-    }
-   ],
-   "more_sources": [],
-   "updates": []
-  },
-  {
-   "title": "BAE security incident disrupted US bankruptcy noticing services",
-   "date": "2026-10-09",
-   "category": "major_cyber",
-   "victim": "BAE Systems’ Bankruptcy Noticing Center (BNC), operated for the US federal bankruptcy courts",
-   "attacker": "Not reported; BAE and the judiciary have not determined or disclosed whether the incident was a cyberattack.",
-   "what": "A confirmed security incident affecting BAE infrastructure made the BNC systems and websites unavailable. The center stopped generating and sending bankruptcy notices, and the National Creditor Registration Service went offline, preventing electronic-filing users from generating creditor mailing lists.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The disruption affected bankruptcy-noticing operations across federal bankruptcy courts, while courts continued accepting filings and sending some electronic filing notifications through other channels. The cause, scope, and whether data was compromised remained undisclosed.",
-   "where": "United States",
-   "major_impact": "essential_service_disruption",
-   "significance": "The BNC handles notices for every US federal bankruptcy court, and notices issued through the center since October 9 were reportedly not delivered. Restoration had no estimated date at publication.",
-   "id": "cc9fb9e7c0d78f4a",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/bae-systems-security-incident-stalls-notices-from-us-bankruptcy-courts/",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-16",
-   "last_reported": "2026-10-16",
-   "evidence_status": "under_investigation",
-   "lat": 39.7837304,
-   "lon": -100.445882,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "BAE and the Administrative Office of the US Courts confirmed a security incident and the resulting unavailability of BNC systems. The reporting did not establish data theft, destructive effects, financial losses, or the incident’s technical cause.",
-    "evidence": {
-     "context": "real_world",
-     "service": "substantial",
-     "reach": "multiple",
-     "damage": "unknown",
-     "essential": "disrupted",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/bae-systems-security-incident-stalls-notices-from-us-bankruptcy-courts/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 39.7837304,
-     "lon": -100.445882,
-     "label": "United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/bae-systems-security-incident-stalls-notices-from-us-bankruptcy-courts/"
     }
    ],
    "more_sources": [],
@@ -23669,6 +24313,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-29T13:11:07+00:00",
+ "last_added": "2026-10-29T22:49:24+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }

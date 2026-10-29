@@ -132,15 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-10-29T13:11:07+00:00",
+  "checked": "2026-10-29T22:49:24+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz substantiates a real multi-victim campaign that compromised GitHub accounts and executed workflows to steal organizational and cloud secrets. This is the same Gheist campaign already tracked under fdf212b3998ab3a2, so it is retained as an additional source rather than a new incident.",
+  "reason": "This is the already-tracked Gheist campaign, with additional substantiated evidence of successful secret theft and cloud-role activity in private and enterprise repositories; it should remain one incident record rather than a new incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz substantiates a real multi-victim campaign that compromised GitHub accounts and executed workflows to steal organizational and cloud secrets. This is the same Gheist campaign already tracked under fdf212b3998ab3a2, so it is retained as an additional source rather than a new incident.",
-    "title": "Gheist campaign stole secrets through compromised GitHub tokens",
+    "reason": "This is the already-tracked Gheist campaign, with additional substantiated evidence of successful secret theft and cloud-role activity in private and enterprise repositories; it should remain one incident record rather than a new incident.",
+    "title": "Gheist campaign dumped secrets from compromised GitHub repositories",
     "incident_id": "fdf212b3998ab3a2"
    }
   ],
@@ -18493,15 +18493,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-10-29T13:11:07+00:00",
+  "checked": "2026-10-29T22:49:24+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz CIRT substantiates a consequential real-world intrusion by an AI agent, including production-environment compromise, privileged access, and sensitive-data access. This is the same incident already tracked under 896e03fe6f750f.",
+  "reason": "Wiz CIRT substantiated a consequential real-world intrusion in which an AI agent gained broad privileged access, harvested sensitive secrets and data, established persistence, and altered production workloads. This is the same documented incident already tracked under 896e03a99e01777c.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz CIRT substantiates a consequential real-world intrusion by an AI agent, including production-environment compromise, privileged access, and sensitive-data access. This is the same incident already tracked under 896e03fe6f750f.",
-    "title": "AI agent breached unnamed multi-cloud organization",
+    "reason": "Wiz CIRT substantiated a consequential real-world intrusion in which an AI agent gained broad privileged access, harvested sensitive secrets and data, established persistence, and altered production workloads. This is the same documented incident already tracked under 896e03a99e01777c.",
+    "title": "Wiz observed AI agent conduct multi-cloud intrusion",
     "incident_id": "896e03eaa7904596"
    }
   ],
@@ -18986,15 +18986,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-10-29T13:11:07+00:00",
+  "checked": "2026-10-29T22:49:24+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz independently substantiates multiple consequential GCP compromises and unauthorized financial use of victim billing accounts; this is the same campaign already tracked under f58ed76ff84133f9.",
+  "reason": "This is a substantiated multi-victim cloud compromise involving privileged access and material unauthorized AI charges; it is already tracked as the same GCP takeover and Gemini LLMjacking incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz independently substantiates multiple consequential GCP compromises and unauthorized financial use of victim billing accounts; this is the same campaign already tracked under f58ed76ff84133f9.",
-    "title": "Phishing campaign hijacked GCP billing for Gemini LLMjacking",
+    "reason": "This is a substantiated multi-victim cloud compromise involving privileged access and material unauthorized AI charges; it is already tracked as the same GCP takeover and Gemini LLMjacking incident.",
+    "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
   ],
@@ -19796,15 +19796,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-10-29T13:11:07+00:00",
+  "checked": "2026-10-29T22:49:24+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a newly detailed report of the already-tracked LiteLLM supply-chain compromise, with confirmed unauthorized release-workflow access and malicious package/container publication.",
+  "reason": "Confirmed production release-pipeline and package-distribution compromise with credential-stealing payloads; retain as the same incident as the already-tracked LiteLLM supply-chain attack, with the earlier incident date and additional technical evidence.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a newly detailed report of the already-tracked LiteLLM supply-chain compromise, with confirmed unauthorized release-workflow access and malicious package/container publication.",
-    "title": "LiteLLM PyPI and container releases backdoored to steal credentials",
+    "reason": "Confirmed production release-pipeline and package-distribution compromise with credential-stealing payloads; retain as the same incident as the already-tracked LiteLLM supply-chain attack, with the earlier incident date and additional technical evidence.",
+    "title": "LiteLLM release pipeline compromised to distribute credential stealer",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -19822,15 +19822,15 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-10-29T13:11:07+00:00",
+  "checked": "2026-10-29T22:49:24+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude the PHP2Shell research as a controlled demonstration without established external victim harm; do not create a duplicate for the already-tracked LiteLLM supply-chain incident.",
+  "reason": "Exclude: the main report is a controlled vulnerability discovery and exploit demonstration, not a confirmed real-world compromise; no external victim or operational consequence is substantiated.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude the PHP2Shell research as a controlled demonstration without established external victim harm; do not create a duplicate for the already-tracked LiteLLM supply-chain incident.",
-    "title": "PHP2Shell research demonstrated, but no real-world victims reported"
+    "reason": "Exclude: the main report is a controlled vulnerability discovery and exploit demonstration, not a confirmed real-world compromise; no external victim or operational consequence is substantiated.",
+    "title": "PHP2Shell vulnerabilities demonstrated in research testing"
    }
   ],
   "evidence": "article",
@@ -22587,36 +22587,34 @@
  "https://www.hipaajournal.com/data-breach-paylogix-kenaitze-bone-joint-center-wichita-family-dental/": {
   "title": "Ransomware Incident at Paylogix Affects 41K Individuals",
   "source": "HIPAA Journal",
-  "checked": "2026-10-27T22:20:35+00:00",
+  "checked": "2026-10-29T22:49:24+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "The organization confirmed consequential unauthorized network access involving sensitive health, financial, and identity information.; Confirmed compromise of an organizational email account containing sensitive patient, identity, and financial records.; Potentially meaningful website compromise was reported, but the source does not substantiate unauthorized access to or acquisition of patient data.; Duplicate of the already-tracked Paylogix incident; the source does not establish a separate event.",
+  "reason": "This is a substantive confirmed incident, but it is already tracked under incident 84ac0d521e2631f7.; This is already tracked under incident c0e01ee62ae98733.; This incident is already tracked under incident f9b209437d495414.; Potential website compromise was reported, but unauthorized access to or acquisition of patient data was not substantiated.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The organization confirmed consequential unauthorized network access involving sensitive health, financial, and identity information.",
-    "title": "Kenaitze Indian Tribe network breach exposed health and identity data",
-    "incident_id": "c0e01ee62ae98733"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed compromise of an organizational email account containing sensitive patient, identity, and financial records.",
-    "title": "Wichita Family Dental email account breach exposed patient records",
-    "incident_id": "f9b209437d495414"
-   },
-   {
-    "status": "defer",
-    "reason": "Potentially meaningful website compromise was reported, but the source does not substantiate unauthorized access to or acquisition of patient data.",
-    "title": "Website forms at Florida orthopedic practice may have been compromised"
+    "status": "exclude",
+    "reason": "This is a substantive confirmed incident, but it is already tracked under incident 84ac0d521e2631f7.",
+    "title": "Paylogix network intrusion exposed protected health information"
    },
    {
     "status": "exclude",
-    "reason": "Duplicate of the already-tracked Paylogix incident; the source does not establish a separate event.",
-    "title": "Paylogix breach affecting 41,739 individuals"
+    "reason": "This is already tracked under incident c0e01ee62ae98733.",
+    "title": "Kenaitze Indian Tribe network breach exposed health data"
+   },
+   {
+    "status": "exclude",
+    "reason": "This incident is already tracked under incident f9b209437d495414.",
+    "title": "Paylogix report mentions Wichita Family Dental email breach"
+   },
+   {
+    "status": "defer",
+    "reason": "Potential website compromise was reported, but unauthorized access to or acquisition of patient data was not substantiated.",
+    "title": "Palm Beaches orthopedic website forms may have exposed patient data"
    }
   ],
-  "evidence": "feed_full_text",
-  "summary_hash": "7b79dbfba8af7edb4144c7f04ad9f5b18f3a7bfdb331715caa229d5d3fab6786",
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "c0e01ee62ae98733",
    "title": "Ransomware Incident at Paylogix Affects 41K Individuals",
@@ -22654,15 +22652,15 @@
  "https://www.darkreading.com/endpoint-security/aokigahara-stealer-developer-keyrings-ai-assistants": {
   "title": "'Aokigahara' Stealer Targets 'Developer Keyrings' & AI Assistants",
   "source": "Dark Reading",
-  "checked": "2026-10-27T22:20:35+00:00",
+  "checked": "2026-10-29T22:49:24+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Potentially meaningful malware activity is described, but the supplied source excerpt provides no substantiated incident involving an actual victim.",
+  "status": "exclude",
+  "reason": "The supplied material reports targeting or capability rather than a substantiated real-world cyber incident.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potentially meaningful malware activity is described, but the supplied source excerpt provides no substantiated incident involving an actual victim.",
-    "title": "Aokigahara stealer targets developer keyrings and AI assistants"
+    "status": "exclude",
+    "reason": "The supplied material reports targeting or capability rather than a substantiated real-world cyber incident.",
+    "title": "Aokigahara Stealer targets developer keyrings and AI assistants"
    }
   ],
   "evidence": "summary",
@@ -23013,19 +23011,19 @@
  "https://therecord.media/malicious-apps-russian-anxiety-gas-prices-drone-strikes": {
   "title": "Malicious apps prey on Russians’ anxiety about fuel prices, drone strikes",
   "source": "The Record",
-  "checked": "2026-10-27T22:20:35+00:00",
+  "checked": "2026-10-29T22:49:24+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "The source substantiates distribution of malicious apps and their capabilities, but does not provide evidence that users actually installed them or that unauthorized access, data theft, or other consequential compromise occurred.",
+  "reason": "Potentially meaningful malware campaign, but the available reporting does not substantiate actual installations, unauthorized access or victim harm.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "The source substantiates distribution of malicious apps and their capabilities, but does not provide evidence that users actually installed them or that unauthorized access, data theft, or other consequential compromise occurred.",
-    "title": "ZloyRAT apps targeted Russian drivers"
+    "reason": "Potentially meaningful malware campaign, but the available reporting does not substantiate actual installations, unauthorized access or victim harm.",
+    "title": "Malicious Android apps target Russian drivers with ZloyRAT"
    }
   ],
   "evidence": "article",
-  "summary_hash": "927575db8dc3cbf195e0dda14c0da8355922b03cb3bf713c40fbc5e7823f6479",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "8ac8b34151f241ad",
    "title": "Malicious apps prey on Russians’ anxiety about fuel prices, drone strikes",
@@ -23602,19 +23600,19 @@
  "https://www.hipaajournal.com/project-lifeline-250-cybersecurity-rural-hospitals/": {
   "title": "Government Initiative Provides Free Cybersecurity Upgrades and Security Services to Rural Hospitals",
   "source": "HIPAA Journal",
-  "checked": "2026-10-28T22:39:58+00:00",
+  "checked": "2026-10-29T22:49:24+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "This is a cybersecurity program announcement, not a substantiated real-world cyber incident.",
+  "reason": "The article concerns a planned cybersecurity assistance program and related policy context, not a substantive real-world cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "This is a cybersecurity program announcement, not a substantiated real-world cyber incident.",
+    "reason": "The article concerns a planned cybersecurity assistance program and related policy context, not a substantive real-world cyber incident.",
     "title": "Project Lifeline 250 offers rural hospitals cybersecurity upgrades"
    }
   ],
   "evidence": "feed_full_text",
-  "summary_hash": "6c1405fd6fb25e3bb099fbed05233c4e17ce806542cc3a1da3fde5a8c096ab62",
+  "summary_hash": "1bc60d97bfad4e284dccafca80b3ace201b44a773cb8047fdc9d36f656143b4d",
   "item": {
    "id": "73dda35590ec71d5",
    "title": "Government Initiative Provides Free Cybersecurity Upgrades and Security Services to Rural Hospitals",
@@ -24616,5 +24614,702 @@
    "source": "The Hacker News",
    "published_at": "2026-10-29T11:39:41+00:00"
   }
+ },
+ "https://www.wiz.io/blog/the-rise-of-agentic-attacks": {
+  "title": "The Rise of Agentic Attacks: What They Look Like, and Where They're Headed",
+  "source": "Wiz Research",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Wiz substantiated a real production-environment compromise with credential and secret theft; the victim and location remain undisclosed.; The report substantiates unauthorized access to multiple government systems and recovered persistence and credential-theft artifacts; the AI agent’s role is supported by attacker-infrastructure logs.; The report supports real attacks and AI-assisted exploitation activity, but does not clearly substantiate consequential unauthorized access or final victim impact for the described Japan cases.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Wiz substantiated a real production-environment compromise with credential and secret theft; the victim and location remain undisclosed.",
+    "title": "Wiz observed agentic cloud intrusion with bulk secret theft",
+    "incident_id": "d22f0579003d30c6"
+   },
+   {
+    "status": "include",
+    "reason": "The report substantiates unauthorized access to multiple government systems and recovered persistence and credential-theft artifacts; the AI agent’s role is supported by attacker-infrastructure logs.",
+    "title": "Hermes AI agent compromised Thailand ministry systems",
+    "incident_id": "3154910f0425e4ea"
+   },
+   {
+    "status": "defer",
+    "reason": "The report supports real attacks and AI-assisted exploitation activity, but does not clearly substantiate consequential unauthorized access or final victim impact for the described Japan cases.",
+    "title": "AI-assisted API attacks affected organizations in Japan"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "2d615508b245954fd889bd281eccaacc843174f9f8c6bed8a16bfffcd6dc3003",
+  "item": {
+   "id": "d22f0579003d30c6",
+   "title": "The Rise of Agentic Attacks: What They Look Like, and Where They're Headed",
+   "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+   "date": "2026-10-29",
+   "source": "Wiz Research",
+   "published_at": "2026-10-29T14:26:22+00:00"
+  }
+ },
+ "https://www.securityweek.com/how-secure-are-us-elections-voting-machine-risks-and-the-growing-threat-of-ai/": {
+  "title": "How Secure Are US Elections? Voting Machine Risks and the Growing Threat of AI",
+  "source": "SecurityWeek",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the article provides cybersecurity commentary, hypothetical scenarios, and historical context rather than evidence of a newly reported real-world compromise or material cyber consequence.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the article provides cybersecurity commentary, hypothetical scenarios, and historical context rather than evidence of a newly reported real-world compromise or material cyber consequence.",
+    "title": "Article discusses hypothetical US election cyber risks"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "1fd77119251ba149a99099d761e083b52950cdbe2a349febf5759e7b0727c343",
+  "item": {
+   "id": "5a6aef5f5c8c0b99",
+   "title": "How Secure Are US Elections? Voting Machine Risks and the Growing Threat of AI",
+   "url": "https://www.securityweek.com/how-secure-are-us-elections-voting-machine-risks-and-the-growing-threat-of-ai/",
+   "date": "2026-10-29",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-29T15:00:00+00:00"
+  }
+ },
+ "https://www.securityweek.com/google-says-gemini-4-carbon-leads-in-finding-exploiting-and-fixing-vulnerabilities/": {
+  "title": "Google Touts Powerful Cybersecurity Capabilities in Gemini 4 Carbon Model",
+  "source": "SecurityWeek",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Product announcement and benchmark results without a substantive real-world cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Product announcement and benchmark results without a substantive real-world cyber incident.",
+    "title": "Google announces Gemini 4 Carbon cybersecurity model"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "3a91b28d13b041315b7f2245558fa789d20ff2baafa4e73699764149f7ca6b76",
+  "item": {
+   "id": "02bfbdf056d265e3",
+   "title": "Google Touts Powerful Cybersecurity Capabilities in Gemini 4 Carbon Model",
+   "url": "https://www.securityweek.com/google-says-gemini-4-carbon-leads-in-finding-exploiting-and-fixing-vulnerabilities/",
+   "date": "2026-10-29",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-29T15:01:00+00:00"
+  }
+ },
+ "https://www.securityweek.com/cisco-open-sources-quarry-to-catch-ai-agent-attacks-hidden-in-harmless-steps/": {
+  "title": "Cisco Open Sources Quarry to Catch AI Agent Attacks Hidden in Harmless Steps",
+  "source": "SecurityWeek",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the report announces a defensive security project and provides background on earlier incidents rather than documenting a distinct new compromise.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the report announces a defensive security project and provides background on earlier incidents rather than documenting a distinct new compromise.",
+    "title": "Cisco open-sources Project Quarry for AI-agent attack detection"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "7772e5582b3ec16d63f52033d38d37ca3047779e1127063eb1474be0366805c4",
+  "item": {
+   "id": "4bf14ff9a2059f14",
+   "title": "Cisco Open Sources Quarry to Catch AI Agent Attacks Hidden in Harmless Steps",
+   "url": "https://www.securityweek.com/cisco-open-sources-quarry-to-catch-ai-agent-attacks-hidden-in-harmless-steps/",
+   "date": "2026-10-29",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-29T14:18:03+00:00"
+  }
+ },
+ "https://www.securityweek.com/bae-says-no-data-extracted-in-incident-hitting-bankruptcy-courts/": {
+  "title": "BAE Says No Data Extracted in Incident Hitting Bankruptcy Courts",
+  "source": "SecurityWeek",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a newly reported substantive update to the already tracked BNC incident: restoration, confirmation of more than two weeks of service disruption, and a denial of data extraction. It qualifies because a business-critical federal court service was materially unavailable, although the cyber cause remains unconfirmed.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a newly reported substantive update to the already tracked BNC incident: restoration, confirmation of more than two weeks of service disruption, and a denial of data extraction. It qualifies because a business-critical federal court service was materially unavailable, although the cyber cause remains unconfirmed.",
+    "title": "BAE-operated Bankruptcy Noticing Center outage resolved",
+    "incident_id": "cc9fb9e7c0d78f4a"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "bea38f22f82ca043874b7a9ccebd618d630a6c4a6753feafd82d6eff8a4e7cd7",
+  "item": {
+   "id": "47803ae2ee87c93b",
+   "title": "BAE Says No Data Extracted in Incident Hitting Bankruptcy Courts",
+   "url": "https://www.securityweek.com/bae-says-no-data-extracted-in-incident-hitting-bankruptcy-courts/",
+   "date": "2026-10-29",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-29T13:26:49+00:00"
+  }
+ },
+ "https://www.hipaajournal.com/goodrx-25-million-settlement-tracking-technology-lawsuit/": {
+  "title": "GoodRx & Criteo Revised $32 Million Data Privacy Settlement Gets First Approval",
+  "source": "HIPAA Journal",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Court or settlement follow-up, not a new incident or operational update.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Court or settlement follow-up, not a new incident or operational update.",
+    "title": "GoodRx & Criteo Revised $32 Million Data Privacy Settlement Gets First Approval"
+   }
+  ],
+  "evidence": "title",
+  "summary_hash": "56a635ae606a927c150ceb0185b9e4b074c98dd04bba6d9b751212f0ad854337",
+  "item": {
+   "id": "025413e353edf14c",
+   "title": "GoodRx & Criteo Revised $32 Million Data Privacy Settlement Gets First Approval",
+   "url": "https://www.hipaajournal.com/goodrx-25-million-settlement-tracking-technology-lawsuit/",
+   "date": "2026-10-29",
+   "source": "HIPAA Journal",
+   "published_at": "2026-10-29T13:00:45+00:00"
+  }
+ },
+ "https://www.darkreading.com/cyberattacks-data-breaches/anthropic-phishing-emails-bypass-security-tools": {
+  "title": "Anthropic-Themed Phishing Emails Bypass Top Security Tools",
+  "source": "Dark Reading",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is a report of phishing emails bypassing security tools without a substantiated successful compromise or consequential victim impact.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is a report of phishing emails bypassing security tools without a substantiated successful compromise or consequential victim impact.",
+    "title": "Phishing emails bypass some secure email gateways"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "36464bbb2817ef67648def842472a5e4bd6676d6202df6a59b9af20ffac0008d",
+  "item": {
+   "id": "4ed170aabf80f644",
+   "title": "Anthropic-Themed Phishing Emails Bypass Top Security Tools",
+   "url": "https://www.darkreading.com/cyberattacks-data-breaches/anthropic-phishing-emails-bypass-security-tools",
+   "date": "2026-10-29",
+   "source": "Dark Reading",
+   "published_at": "2026-10-29T21:21:56+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/cyber-risk/rethinking-cybersecurity-awareness-ai-era": {
+  "title": "Rethinking Cybersecurity Awareness in the AI Era",
+  "source": "Dark Reading",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "The source is a cybersecurity-awareness discussion and does not substantiate a distinct qualifying cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The source is a cybersecurity-awareness discussion and does not substantiate a distinct qualifying cyber incident.",
+    "title": "Dark Reading discusses cybersecurity awareness in the AI era"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "b975076b992d330fbdc23016eeeea1aaba465980e9e4541072a88a5f9d18289b",
+  "item": {
+   "id": "b0b1c24b7c71b78d",
+   "title": "Rethinking Cybersecurity Awareness in the AI Era",
+   "url": "https://www.darkreading.com/cyber-risk/rethinking-cybersecurity-awareness-ai-era",
+   "date": "2026-10-29",
+   "source": "Dark Reading",
+   "published_at": "2026-10-29T20:15:37+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/application-security/claude-model-exploits-major-browsers-oses": {
+  "title": "Claude Model Builds Exploits Across Major Browsers & OSes",
+  "source": "Dark Reading",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is a capability or research report without an established external victim or real-world cyber harm.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is a capability or research report without an established external victim or real-world cyber harm.",
+    "title": "Claude model found exploit chains in browsers and operating systems"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "ee160a545ef3faa2611f2aa44ec683a2e5f2e7d62802dab347c156ad308e0e96",
+  "item": {
+   "id": "e13a9cb1335d4ce4",
+   "title": "Claude Model Builds Exploits Across Major Browsers & OSes",
+   "url": "https://www.darkreading.com/application-security/claude-model-exploits-major-browsers-oses",
+   "date": "2026-10-29",
+   "source": "Dark Reading",
+   "published_at": "2026-10-29T18:15:59+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/": {
+  "title": "Polymarket halts trading after crypto-draining script breach, $2.5M traced",
+  "source": "BleepingComputer",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Confirmed compromise of a trusted third-party service led to malicious code being delivered through Polymarket and caused a temporary trading suspension with attempted or potentially completed cryptocurrency theft.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Confirmed compromise of a trusted third-party service led to malicious code being delivered through Polymarket and caused a temporary trading suspension with attempted or potentially completed cryptocurrency theft.",
+    "title": "Polymarket halted trading after DebugBear script compromise",
+    "incident_id": "83273d8d85f8311b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "ba1b4275e7744601d3918ed9e155a660b3db5b66e725f753a574a12b743b02a1",
+  "item": {
+   "id": "83273d8d85f8311b",
+   "title": "Polymarket halts trading after crypto-draining script breach, $2.5M traced",
+   "url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
+   "date": "2026-10-29",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-29T21:47:25+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/": {
+  "title": "Japan Airlines suffers third-party data breach exposing passenger info",
+  "source": "BleepingComputer",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Confirmed unauthorized access to a trusted aviation supplier exposed sensitive passenger data at Japan Airlines Group; this is the same incident already tracked under 6a5c48955e180878.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Confirmed unauthorized access to a trusted aviation supplier exposed sensitive passenger data at Japan Airlines Group; this is the same incident already tracked under 6a5c48955e180878.",
+    "title": "Amadeus breach exposed data of 92,000 Japan Airlines customers",
+    "incident_id": "6a5c48955e180878"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "bc278b8d6eae40edece4a8634cf5694ab204dace62cb53aefe1d62992c78ec00",
+  "item": {
+   "id": "982a59ecf45b99ad",
+   "title": "Japan Airlines suffers third-party data breach exposing passenger info",
+   "url": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
+   "date": "2026-10-29",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-29T22:08:04+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/": {
+  "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
+  "source": "BleepingComputer",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Independent researcher evidence and factual reporting substantiate malicious code execution and unauthorized activity on real GPU infrastructure; the reported download count is not treated as an infection count.; A malicious repository and payload were documented, but no actual victim compromise or meaningful external harm was substantiated.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Independent researcher evidence and factual reporting substantiate malicious code execution and unauthorized activity on real GPU infrastructure; the reported download count is not treated as an infection count.",
+    "title": "Malicious Hugging Face models hijacked GPU hosts",
+    "incident_id": "043c45c961e49b37"
+   },
+   {
+    "status": "exclude",
+    "reason": "A malicious repository and payload were documented, but no actual victim compromise or meaningful external harm was substantiated.",
+    "title": "Fake Solana starter kit targeted AI coding agents"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "7d02a5323a34aadb266f53b87a1c0053a62a138486bef5bfe267fd52fa3bf764",
+  "item": {
+   "id": "043c45c961e49b37",
+   "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
+   "url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
+   "date": "2026-10-29",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-29T22:09:24+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/": {
+  "title": "Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware",
+  "source": "BleepingComputer",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Independent Cisco Talos research substantiates exploitation of Cisco SD-WAN controllers and deployment of KeyDrift in real organizational intrusions; this is the same event as the already-tracked Cisco SD-WAN compromise.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Independent Cisco Talos research substantiates exploitation of Cisco SD-WAN controllers and deployment of KeyDrift in real organizational intrusions; this is the same event as the already-tracked Cisco SD-WAN compromise.",
+    "title": "KeyDrift malware compromised Cisco SD-WAN controllers",
+    "incident_id": "4dc4a1512003044a"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "f0686912f6aa462a8423571105f3c597731f1d6238f6fc3403153e41d8458cf1",
+  "item": {
+   "id": "6eb646ca7c3a8c0e",
+   "title": "Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/",
+   "date": "2026-10-29",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-29T18:38:26+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft/": {
+  "title": "Fake crypto app on Apple App Store linked to $23K wallet theft",
+  "source": "BleepingComputer",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Include because an independently investigated malicious app caused actual cryptocurrency theft from multiple wallets; this is more than a blocked attempt or isolated scam, though the victims and attacker remain partly uncertain.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Include because an independently investigated malicious app caused actual cryptocurrency theft from multiple wallets; this is more than a blocked attempt or isolated scam, though the victims and attacker remain partly uncertain.",
+    "title": "Fake App Store crypto app drained 27 Solana wallets"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "c1085dd5fd2adc338998f307ceca040d0594b1e9e6af0f8fdc16bed4d23e5710",
+  "item": {
+   "id": "4b3833588a3c07d2",
+   "title": "Fake crypto app on Apple App Store linked to $23K wallet theft",
+   "url": "https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft/",
+   "date": "2026-10-29",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-29T19:23:41+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/": {
+  "title": "CISA warns of Fragnesia Linux flaw chained in PHP2Shell attacks",
+  "source": "BleepingComputer",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Researchers substantiated successful root-level compromises of 25 servers across four countries, including a US government-affiliated environment; the event has meaningful operational security consequences.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Researchers substantiated successful root-level compromises of 25 servers across four countries, including a US government-affiliated environment; the event has meaningful operational security consequences.",
+    "title": "Fragnesia-PHP2Shell campaign rooted 25 servers",
+    "incident_id": "ea0735cf930607de"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "67365c64e22305fb3ac4cd6c5aadee5f6026fcea3b36c91e00fb76c66b234690",
+  "item": {
+   "id": "ea0735cf930607de",
+   "title": "CISA warns of Fragnesia Linux flaw chained in PHP2Shell attacks",
+   "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
+   "date": "2026-10-29",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-29T13:59:48+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/": {
+  "title": "Binance probes potential $5.8 billion crypto-theft hack",
+  "source": "BleepingComputer",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Potentially major incident, but the available reporting says Binance had not confirmed that the transfers were unauthorized or that cryptocurrency was stolen; attacker and impact claims remain insufficiently substantiated.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Potentially major incident, but the available reporting says Binance had not confirmed that the transfers were unauthorized or that cryptocurrency was stolen; attacker and impact claims remain insufficiently substantiated.",
+    "title": "Binance investigates suspected crypto-theft incident"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "ab9063661104e79e3255578962a2105cc4585604af34202dd4eee07713d0cc82",
+  "item": {
+   "id": "0e9f3ca9776670ef",
+   "title": "Binance probes potential $5.8 billion crypto-theft hack",
+   "url": "https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/",
+   "date": "2026-10-29",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-29T22:45:23+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/3-ways-ai-agents-already-operate-in-your-browser/": {
+  "title": "3 Ways AI Agents Already Operate in Your Browser",
+  "source": "BleepingComputer",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is sponsored commentary about possible AI-browser risks and security controls, with no confirmed real-world cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is sponsored commentary about possible AI-browser risks and security controls, with no confirmed real-world cyber incident.",
+    "title": "Sponsored article describes browser AI-agent risks"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "fb075f5980b027373d1ff20ea7bf4b914eb96a4aae38a965deb6339b414fb0a3",
+  "item": {
+   "id": "75a567b1ce7ea998",
+   "title": "3 Ways AI Agents Already Operate in Your Browser",
+   "url": "https://www.bleepingcomputer.com/news/security/3-ways-ai-agents-already-operate-in-your-browser/",
+   "date": "2026-10-29",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-29T14:00:10+00:00"
+  }
+ },
+ "https://therecord.media/us-bankruptcy-courts-it-contractor-says-no-data-stolen-cyberattack": {
+  "title": "Federal bankruptcy courts contractor says no data stolen during cyber intrusion",
+  "source": "The Record",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a confirmed cyberattack causing a consequential outage to the federal bankruptcy-noticing system. It is an update to the already-tracked BNC incident, not a separate event.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a confirmed cyberattack causing a consequential outage to the federal bankruptcy-noticing system. It is an update to the already-tracked BNC incident, not a separate event.",
+    "title": "BNC cyberattack halted federal bankruptcy-notice processing",
+    "incident_id": "cc9fb9e7c0d78f4a"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "fe291d07de99238c5ea3500d31cd2603dad3b6a5d5869b6ab971bc46a67e65f5",
+  "item": {
+   "id": "76d7a2c1e0ab6502",
+   "title": "Federal bankruptcy courts contractor says no data stolen during cyber intrusion",
+   "url": "https://therecord.media/us-bankruptcy-courts-it-contractor-says-no-data-stolen-cyberattack",
+   "date": "2026-10-29",
+   "source": "The Record",
+   "published_at": "2026-10-29T16:13:00+00:00"
+  }
+ },
+ "https://therecord.media/php2shell-successful-exploitation-reports-emerge": {
+  "title": "Limited reports of PHP bug exploitation emerge",
+  "source": "The Record",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is the same PHP2Shell firewall campaign already tracked under 8550c665be3b6045, with additional substantiated details about 24 compromised firewalls, root access, credentials, and AI-tool evidence.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is the same PHP2Shell firewall campaign already tracked under 8550c665be3b6045, with additional substantiated details about 24 compromised firewalls, root access, credentials, and AI-tool evidence.",
+    "title": "PHP2Shell campaign compromised 24 firewalls, including US government-related systems",
+    "incident_id": "8550c665be3b6045"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "308e0245ee56930e6998ea98d1b723f0a5c19fb152180479fba5b7df94971b6f",
+  "item": {
+   "id": "54ce53320373b25d",
+   "title": "Limited reports of PHP bug exploitation emerge",
+   "url": "https://therecord.media/php2shell-successful-exploitation-reports-emerge",
+   "date": "2026-10-29",
+   "source": "The Record",
+   "published_at": "2026-10-29T20:01:25+00:00"
+  }
+ },
+ "https://therecord.media/cyberattack-disrupts-belgian-tax-services-before-deadline": {
+  "title": "Cyberattack disrupts Belgian tax services before filing deadline",
+  "source": "The Record",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Credible reporting and the finance ministry’s statement substantiate a consequential cyberattack that shut down a government tax platform and disrupted filing services, despite unknown attribution and unconfirmed data theft.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Credible reporting and the finance ministry’s statement substantiate a consequential cyberattack that shut down a government tax platform and disrupted filing services, despite unknown attribution and unconfirmed data theft.",
+    "title": "Cyberattack disrupts Belgium’s MyMinfin tax portal",
+    "incident_id": "b0820cab6df62b82"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "b3f170ab9833b557fc86ce900c99e40cb3829f06a675afe85388eb356bbdc393",
+  "item": {
+   "id": "b0820cab6df62b82",
+   "title": "Cyberattack disrupts Belgian tax services before filing deadline",
+   "url": "https://therecord.media/cyberattack-disrupts-belgian-tax-services-before-deadline",
+   "date": "2026-10-29",
+   "source": "The Record",
+   "published_at": "2026-10-29T13:31:00+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html": {
+  "title": "ThreatsDay: Critical Firewall Flaws, Banking Trojans Rented, Weaponized PDF, Token Theft + 26 More Stories",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Research evidence substantiates theft or exposure of meaningful organizational credentials and directory records, beyond mere scanning or vulnerability reporting.; Confirmed unauthorized access to organizational DNS administration and manipulation of institutional domains qualifies as a consequential network intrusion.; The U.S. Embassy's disclosure substantiates unauthorized access to a real organization's network, despite unknown final impact.; Independent researcher evidence substantiates multiple real enterprise compromises through a trusted camera-management application.; Independent researcher evidence substantiates actual exfiltration of government database backups and meaningful sensitive-data theft.; The report substantiates compromise of production-adjacent repositories and downstream developer environments, not merely malicious package publication or attempted exploitation.; Observed infection of numerous devices and interception of banking authentication messages qualifies as a meaningful multi-victim credential-theft campaign.; Potentially meaningful ransomware activity is reported, but the victim compromises are based on workspace contents and are not independently confirmed.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Research evidence substantiates theft or exposure of meaningful organizational credentials and directory records, beyond mere scanning or vulnerability reporting.",
+    "title": "FortiBleed campaign exposed more than 40,000 secrets",
+    "incident_id": "a878616353add20c"
+   },
+   {
+    "status": "include",
+    "reason": "Confirmed unauthorized access to organizational DNS administration and manipulation of institutional domains qualifies as a consequential network intrusion.",
+    "title": "Attackers hijacked DNS for school and government domains",
+    "incident_id": "836bf6c03318ab5c"
+   },
+   {
+    "status": "include",
+    "reason": "The U.S. Embassy's disclosure substantiates unauthorized access to a real organization's network, despite unknown final impact.",
+    "title": "China-linked hackers accessed a Suva regional organization",
+    "incident_id": "dff1f22a7c3119ed"
+   },
+   {
+    "status": "include",
+    "reason": "Independent researcher evidence substantiates multiple real enterprise compromises through a trusted camera-management application.",
+    "title": "Camera-management software was used to breach enterprise networks",
+    "incident_id": "9c39122794999550"
+   },
+   {
+    "status": "include",
+    "reason": "Independent researcher evidence substantiates actual exfiltration of government database backups and meaningful sensitive-data theft.",
+    "title": "Philippine agency lost 68 GB of case-management data",
+    "incident_id": "a46135882e699799"
+   },
+   {
+    "status": "include",
+    "reason": "The report substantiates compromise of production-adjacent repositories and downstream developer environments, not merely malicious package publication or attempted exploitation.",
+    "title": "Miasma-linked worm hijacked 42 GitHub repositories",
+    "incident_id": "390f615b6256fd87"
+   },
+   {
+    "status": "include",
+    "reason": "Observed infection of numerous devices and interception of banking authentication messages qualifies as a meaningful multi-victim credential-theft campaign.",
+    "title": "MR ROBOT banking trojan infected 153 Android devices",
+    "incident_id": "9fa05ad032119989"
+   },
+   {
+    "status": "defer",
+    "reason": "Potentially meaningful ransomware activity is reported, but the victim compromises are based on workspace contents and are not independently confirmed.",
+    "title": "Unverified n0n ransomware victim count from exposed workspace"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "270295348d089828b85058a3a00e97d2ea6a8850b5ac3a575ef52ef69094ed88",
+  "item": {
+   "id": "a878616353add20c",
+   "title": "ThreatsDay: Critical Firewall Flaws, Banking Trojans Rented, Weaponized PDF, Token Theft + 26 More Stories",
+   "url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T19:11:58+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html": {
+  "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the report concerns a vulnerability and research exploit demonstration, while explicitly stating that exploitation in real-world attacks had not been reported.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the report concerns a vulnerability and research exploit demonstration, while explicitly stating that exploitation in real-world attacks had not been reported.",
+    "title": "Linux kernel TCP flaw reported without observed exploitation"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "6eb9f8a90bf469eee0ef68796097701063e6e0f170a0af706649e77d9e117f7d",
+  "item": {
+   "id": "b2a4b95df3ed33d9",
+   "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
+   "url": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T15:57:05+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html": {
+  "title": "Google's Gemini 4 Carbon Leads Benchmarks for Finding, Exploiting, and Patching Vulnerabilities",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Product and research announcement without a substantiated real-world compromise, victim, or consequential cyber impact.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Product and research announcement without a substantiated real-world compromise, victim, or consequential cyber impact.",
+    "title": "Google announces Gemini 4 Carbon cybersecurity benchmarks"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "b0d911e2339782def03b67bf472ce2f4e56920648fa8c0018c84f09fd2d450ef",
+  "item": {
+   "id": "bcfd632cc63deb2b",
+   "title": "Google's Gemini 4 Carbon Leads Benchmarks for Finding, Exploiting, and Patching Vulnerabilities",
+   "url": "https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T13:42:40+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html": {
+  "title": "Fake ChatGPT and Claude Apps Abuse Signed Executables to Deploy Crypto Miners",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Potentially meaningful malware campaign, but the supplied report does not confirm unauthorized compromise of actual victim systems or establish victim impact.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Potentially meaningful malware campaign, but the supplied report does not confirm unauthorized compromise of actual victim systems or establish victim impact.",
+    "title": "Yoba malware campaign distributed fake ChatGPT and Claude apps"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "c1c22011d2fbf72697458a59d739dc25b5fe4da47fec592ad71668b9b732b999",
+  "item": {
+   "id": "4c91d4cad21aadc8",
+   "title": "Fake ChatGPT and Claude Apps Abuse Signed Executables to Deploy Crypto Miners",
+   "url": "https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html",
+   "date": "2026-10-29",
+   "source": "The Hacker News",
+   "published_at": "2026-10-29T15:20:29+00:00"
+  }
+ },
+ "https://www.darkreading.com/cybersecurity-operations/ai-root-hospital-corridors-raised-security-stakes": {
+  "title": "AI Takes Root in Hospital Corridors, Raises Security Stakes",
+  "source": "Dark Reading",
+  "checked": "2026-10-29T22:49:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "The supplied text is a general discussion of AI adoption and cybersecurity stakes in healthcare, not evidence of a distinct cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The supplied text is a general discussion of AI adoption and cybersecurity stakes in healthcare, not evidence of a distinct cyber incident.",
+    "title": "Article discusses healthcare AI security risks"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "68fccd30547731ba33a2364822741de38296db00d7a3679bf7fb4bff82529fa0",
+  "item": {
+   "id": "e196189dff0c8c3d",
+   "title": "AI Takes Root in Hospital Corridors, Raises Security Stakes",
+   "url": "https://www.darkreading.com/cybersecurity-operations/ai-root-hospital-corridors-raised-security-stakes",
+   "date": "2026-10-28",
+   "source": "Dark Reading",
+   "published_at": "2026-10-28T15:29:06+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  }
 }
