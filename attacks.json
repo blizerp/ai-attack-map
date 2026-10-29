@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T22:39:58+00:00",
+ "updated": "2026-10-29T05:54:30+00:00",
  "incidents": [
   {
    "title": "China-linked hackers rooted firewalls and accessed management systems",
@@ -1449,7 +1449,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used stolen GitHub tokens to plant workflows in accessible repositories and dump repository, environment, cloud, CI/CD, and other secrets into GitHub workflow logs. Wiz recovered more than 13,500 planted branches; successful execution was observed in private repositories and GitHub Enterprise environments, including activity that assumed AWS roles.",
+     "what": "Attackers used stolen GitHub tokens to plant workflows in repositories, execute them in private and enterprise environments, and dump repository, environment, cloud, Kubernetes, and runner credentials. Wiz recovered more than 13,500 malicious branches from over 850 compromised accounts; some cloud credentials were subsequently used to enumerate AWS Secrets Manager.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -2553,15 +2553,15 @@
     },
     {
      "date": "2026-10-21",
-     "what": "A malicious LiteLLM 1.107.0 release was uploaded to PyPI and Docker. The package included a credential stealer targeting browser, cloud, and AI secrets, plus a dormant command-and-control capability.",
+     "what": "A malicious LiteLLM version, 1.107.0, was uploaded to PyPI and Docker. It contained a credential stealer targeting browser, cloud, and AI secrets, plus dormant command-and-control capability.",
      "url": "https://www.wiz.io/blog/php2shell-php-rce",
-     "source": "AI agent attack tracker"
+     "source": "Wiz Research"
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker used stolen maintainer and workflow credentials to compromise the LiteLLM release process and publish malicious PyPI wheels and Docker/GHCR images. The packages installed persistence that executed at Python startup and attempted to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials before sending data to a lookalike domain.",
+     "what": "The attacker used compromised release infrastructure to publish LiteLLM 1.107.0 wheels and container images containing a credential stealer. The malware used persistence files to execute at interpreter startup and attempted to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials before encrypting and sending data to a lookalike domain.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
-     "source": "AI agent attack tracker"
+     "source": "Wiz Research"
     },
     {
      "date": "2026-10-22",
@@ -4447,7 +4447,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Wiz CIRT investigated multiple intrusions in which phishing captured privileged GCP credentials and MFA codes. Attackers altered IAM and organization policies, added external accounts, linked attacker-controlled projects to victims’ billing accounts, and ran high-volume Gemini API workloads.",
+     "what": "Threat actors phished GCP users for credentials and MFA codes, then used privileged access to alter IAM and organization policies, add external accounts, create Gemini API credentials, and link attacker-controlled projects to victims’ billing accounts. Wiz observed unauthorized Gemini API usage generating charges within 24–48 hours.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -5044,7 +5044,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT documented an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created an administrator identity, obtained cluster-admin and cross-account administrative access, modified GitOps deployments, and accessed sensitive data. The agent attempted and in some cases completed data collection and exfiltration through repositories, Kubernetes ConfigMaps, logs, and an external webhook; some bucket-exfiltration attempts were denied.",
+     "what": "Wiz CIRT documented a real intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested credentials, created privileged identities, escalated to cluster-admin, modified GitOps-managed production workloads, accessed cloud environments, and attempted data exfiltration.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }

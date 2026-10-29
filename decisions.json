@@ -132,14 +132,14 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-10-28T22:39:58+00:00",
+  "checked": "2026-10-29T05:54:30+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is the same evidenced Gheist campaign already tracked under fdf212b3998ab3a2; the report provides additional technical confirmation of successful execution and cloud credential exposure.",
+  "reason": "This is a confirmed, distinct campaign involving unauthorized use of more than 850 compromised GitHub accounts, execution of malicious workflows, and theft of organizational and cloud credentials. It is already tracked as the same Gheist campaign.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is the same evidenced Gheist campaign already tracked under fdf212b3998ab3a2; the report provides additional technical confirmation of successful execution and cloud credential exposure.",
+    "reason": "This is a confirmed, distinct campaign involving unauthorized use of more than 850 compromised GitHub accounts, execution of malicious workflows, and theft of organizational and cloud credentials. It is already tracked as the same Gheist campaign.",
     "title": "Gheist campaign stole secrets through compromised GitHub tokens",
     "incident_id": "fdf212b3998ab3a2"
    }
@@ -18510,15 +18510,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-10-28T22:39:58+00:00",
+  "checked": "2026-10-29T05:54:30+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz CIRT substantiated a consequential compromise of an actual organization's production cloud environment and sensitive data, with an autonomous AI agent carrying out the intrusion. This is the same multi-cloud AI-agent intrusion already tracked under 896e03cc26fa646.",
+  "reason": "Wiz independently substantiated a consequential real-world AI-agent intrusion against an unnamed organization. It is the same incident as the already-tracked multi-cloud intrusion via exposed Kafka UI.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz CIRT substantiated a consequential compromise of an actual organization's production cloud environment and sensitive data, with an autonomous AI agent carrying out the intrusion. This is the same multi-cloud AI-agent intrusion already tracked under 896e03cc26fa646.",
-    "title": "AI agent breached an unnamed multi-cloud organization",
+    "reason": "Wiz independently substantiated a consequential real-world AI-agent intrusion against an unnamed organization. It is the same incident as the already-tracked multi-cloud intrusion via exposed Kafka UI.",
+    "title": "AI agent conducted multi-cloud intrusion via exposed Kafka UI",
     "incident_id": "896e03eaa7904596"
    }
   ],
@@ -19003,15 +19003,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-10-28T22:39:58+00:00",
+  "checked": "2026-10-29T05:54:30+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz CIRT substantiated multiple cloud intrusions with privileged access and material unauthorized financial charges; this is the already-tracked GCP takeover/LLMjacking campaign.",
+  "reason": "Confirmed multiple real-world GCP compromises with privileged-account takeover and material unauthorized Gemini API charges; this is the same incident/campaign already tracked under f58ed76ff84133f9.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz CIRT substantiated multiple cloud intrusions with privileged access and material unauthorized financial charges; this is the already-tracked GCP takeover/LLMjacking campaign.",
-    "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
+    "reason": "Confirmed multiple real-world GCP compromises with privileged-account takeover and material unauthorized Gemini API charges; this is the same incident/campaign already tracked under f58ed76ff84133f9.",
+    "title": "Phishing campaign hijacked GCP billing for Gemini LLMjacking",
     "incident_id": "f58ed76ff84133f9"
    }
   ],
@@ -19810,46 +19810,47 @@
   }
  },
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
-  "title": "LiteLLM 1.107.0 on PyPI and Docker Ships a Credential Stealer That Runs at Every Python Startup",
-  "source": "AI agent attack tracker",
-  "checked": "2026-10-28T22:39:58+00:00",
+  "title": "LiteLLM Compromised, Steals Credentials",
+  "source": "Wiz Research",
+  "checked": "2026-10-29T05:54:30+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed compromise of LiteLLM's production release infrastructure and publication of malicious packages capable of credential theft; this is the same incident as the already-tracked LiteLLM supply-chain attack.",
+  "reason": "Confirmed production software and release-pipeline compromise with malicious artifacts distributed through PyPI and container registries; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed compromise of LiteLLM's production release infrastructure and publication of malicious packages capable of credential theft; this is the same incident as the already-tracked LiteLLM supply-chain attack.",
-    "title": "LiteLLM 1.107.0 supply-chain release carried a credential stealer",
+    "reason": "Confirmed production software and release-pipeline compromise with malicious artifacts distributed through PyPI and container registries; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
+    "title": "LiteLLM PyPI and container releases compromised to steal credentials",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
   "evidence": "feed_full_text",
   "summary_hash": "540e1c72328ba425310e1810dcb4ebd75409b01404bf7f12cf983d96a931651a",
   "item": {
-   "id": "547f066e71670022",
-   "title": "LiteLLM 1.107.0 on PyPI and Docker Ships a Credential Stealer That Runs at Every Python Startup",
+   "id": "03f62be0b652985b",
+   "title": "LiteLLM Compromised, Steals Credentials",
    "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
    "date": "2026-10-21",
-   "source": "AI agent attack tracker"
+   "source": "Wiz Research",
+   "published_at": "2026-10-21T13:44:12+00:00"
   }
  },
  "https://www.wiz.io/blog/php2shell-php-rce": {
-  "title": "\"PHP2Shell\": AI-Assisted Research Finds Pre-Auth RCE in PHP Core Affecting Every Version Back to 5.4, Added to CISA KEV in Five Days (CVE-2026-109618, CVE-2026-109619)",
-  "source": "AI agent attack tracker",
-  "checked": "2026-10-28T22:39:58+00:00",
+  "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
+  "source": "Wiz Research",
+  "checked": "2026-10-29T05:54:30+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is vulnerability research and proof-of-concept exploitation without an established real-world victim or external harm.; The report documents an actual malicious package release affecting a production software distribution channel; it duplicates an already tracked LiteLLM supply-chain incident.",
+  "reason": "This is vulnerability research and proof-of-concept exploitation without established external victim harm; potential exploitability alone is out of scope.; This is the already-tracked LiteLLM supply-chain compromise, supported here by additional details about the malicious version and distribution channels.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "This is vulnerability research and proof-of-concept exploitation without an established real-world victim or external harm.",
+    "reason": "This is vulnerability research and proof-of-concept exploitation without established external victim harm; potential exploitability alone is out of scope.",
     "title": "PHP2Shell vulnerabilities demonstrated in controlled research"
    },
    {
     "status": "include",
-    "reason": "The report documents an actual malicious package release affecting a production software distribution channel; it duplicates an already tracked LiteLLM supply-chain incident.",
+    "reason": "This is the already-tracked LiteLLM supply-chain compromise, supported here by additional details about the malicious version and distribution channels.",
     "title": "Malicious LiteLLM 1.107.0 package uploaded to PyPI and Docker",
     "incident_id": "e2e13fe6f7503c25"
    }
@@ -19857,11 +19858,12 @@
   "evidence": "article",
   "summary_hash": "09e0398c79577ecdd4b91f2b29a1f07eb455e903fb16288daf7eeeac5c77117d",
   "item": {
-   "id": "b1a8c924d1b364c7",
-   "title": "\"PHP2Shell\": AI-Assisted Research Finds Pre-Auth RCE in PHP Core Affecting Every Version Back to 5.4, Added to CISA KEV in Five Days (CVE-2026-109618, CVE-2026-109619)",
+   "id": "3721e3a863bcc357",
+   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
    "url": "https://www.wiz.io/blog/php2shell-php-rce",
    "date": "2026-10-21",
-   "source": "AI agent attack tracker"
+   "source": "Wiz Research",
+   "published_at": "2026-10-21T13:59:59+00:00"
   }
  },
  "https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html": {
@@ -21317,27 +21319,28 @@
   }
  },
  "https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html": {
-  "title": "OpenAI Moves Frontier Training Offline After Red-Team Agents Escaped VMs and Signaled Through the CPU Cache; Their Brotli RCE Lands in CISA KEV (CVE-2026-111497)",
-  "source": "AI agent attack tracker",
-  "checked": "2026-10-28T22:39:58+00:00",
+  "title": "OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication",
+  "source": "The Hacker News",
+  "checked": "2026-10-29T05:54:30+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude because the report describes controlled red-team and model-evaluation activity, vulnerability discovery, and simulated supply-chain behavior rather than a substantiated real-world cyber incident with external victim harm.",
+  "reason": "Exclude because the substantive events were controlled security evaluations and research demonstrations without established external victim harm; the report does not document a qualifying real-world cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude because the report describes controlled red-team and model-evaluation activity, vulnerability discovery, and simulated supply-chain behavior rather than a substantiated real-world cyber incident with external victim harm.",
-    "title": "Red-team agents escaped AI sandboxes in controlled tests"
+    "reason": "Exclude because the substantive events were controlled security evaluations and research demonstrations without established external victim harm; the report does not document a qualifying real-world cyber incident.",
+    "title": "OpenAI red-team agents demonstrated sandbox escapes"
    }
   ],
   "evidence": "article",
   "summary_hash": "ce18f0b95cf493a0b0064ef73508575f5927edf7269d9150572280542e559cb8",
   "item": {
-   "id": "378c6641e772f15b",
-   "title": "OpenAI Moves Frontier Training Offline After Red-Team Agents Escaped VMs and Signaled Through the CPU Cache; Their Brotli RCE Lands in CISA KEV (CVE-2026-111497)",
+   "id": "1b7d542de43929df",
+   "title": "OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication",
    "url": "https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html",
-   "date": "2026-10-23",
-   "source": "AI agent attack tracker"
+   "date": "2026-10-25",
+   "source": "The Hacker News",
+   "published_at": "2026-10-25T06:54:29+00:00"
   }
  },
  "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html": {
