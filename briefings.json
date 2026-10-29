@@ -1035,10 +1035,283 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-10-28-evening",
+   "date": "2026-10-28",
+   "edition": "evening",
+   "published_at": "2026-10-29T00:41:09+00:00",
+   "generated_at": "2026-10-29T00:41:09+00:00",
+   "window_start": "2026-10-28T18:00:00+00:00",
+   "window_end": "2026-10-29T00:41:09+00:00",
+   "sector_window_start": "2026-10-28T00:41:09+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "New reporting confirms a customer-data breach at Japan Airlines, details a long-running espionage network targeting critical services, and reports a major international operation against cybercrime. Flight operations were not disrupted, but several incidents could lead to fraud or impersonation attempts.",
+    "items": [
+     {
+      "headline": "Japan Airlines says 92,000 customers’ reservation data was exposed",
+      "what_happened": "Japan Airlines said hackers entered Amadeus, the outside provider running its reservation, ticketing and check-in systems. Data from 92,000 Japan Airlines and Japan Transocean Air customers was accessed. About 2,000 records also included passport numbers, frequent-flyer numbers, email addresses and phone numbers.",
+      "impact": "Flights, ticketing and check-in were not disrupted. Credit-card numbers were not exposed. Affected customers face a higher risk of convincing phishing emails, calls or fake websites using travel details.",
+      "what_next": "Japan Airlines says it will contact affected customers. The investigation should clarify how the provider was breached and whether additional customer records were accessed.",
+      "change": "New report",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/japan-airlines-warns-of-breach-country-grapples-with-incidents",
+        "published": "2026-10-28T20:33:00+00:00"
+       }
+      ],
+      "incident_ids": [
+       "6a5c48955e180878"
+      ]
+     },
+     {
+      "headline": "Researchers uncover covert network used to reach critical services",
+      "what_happened": "Researchers said the China-linked group known as Volt Typhoon used a rotating chain of hacked routers, connected devices and business systems to hide attacks. The network supported at least four attacks using previously unknown flaws against management systems and other high-value targets.",
+      "impact": "Hundreds of organizations were identified across communications, government, defense, utilities, transportation, aviation, water and emergency services. The report does not describe a new public outage or confirm that any particular household service was disrupted.",
+      "what_next": "Investigators may identify more victims and clarify what information or access was obtained. The findings point to continued concern for critical services during a future crisis, but do not confirm such disruption now.",
+      "change": "New report",
+      "sectors": [
+       "energy",
+       "water",
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
+        "published": "2026-10-28T18:08:33+00:00"
+       },
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/",
+        "published": "2026-10-28T16:00:00+00:00"
+       }
+      ],
+      "incident_ids": [
+       "a5181cd3aa60aa7f"
+      ]
+     },
+     {
+      "headline": "International operation reports 1,462 arrests in cybercrime crackdown",
+      "what_happened": "Interpol’s third Operation Serengeti led to 1,462 arrests across 20 African countries and the United States. Authorities reported recovering $105 million in stolen funds.",
+      "impact": "The operation may interrupt criminal groups involved in online fraud and related theft. The supplied report does not identify specific services, companies or customers affected by the arrests.",
+      "what_next": "Authorities may announce further charges, victim notifications or recovered money as investigations continue.",
+      "change": "New report",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cybersecurity-operations/third-serengeti-sweep-1400-arrests-investigations-mature",
+        "published": "2026-10-28T06:00:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "",
+     "items": []
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "Japan Airlines reported customer-data exposure through its reservation provider. Researchers also described a covert network used in attacks on communications and other critical infrastructure.",
+     "items": [
+      {
+       "headline": "Japan Airlines reports customer-data exposure through reservation provider",
+       "what_happened": "Hackers accessed part of the reservation data held by Amadeus, affecting 92,000 Japan Airlines and Japan Transocean Air customers. About 2,000 records included more sensitive travel and contact details.",
+       "impact": "Flight operations and credit-card systems were not affected. Customers may face targeted impersonation attempts using reservation or passport information.",
+       "what_next": "Japan Airlines will contact affected customers while the provider and authorities investigate the breach.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/japan-airlines-warns-of-breach-country-grapples-with-incidents",
+         "published": "2026-10-28T20:33:00+00:00"
+        }
+       ],
+       "incident_ids": [
+        "6a5c48955e180878"
+       ]
+      },
+      {
+       "headline": "Covert hacking network reached high-value communications and utility targets",
+       "what_happened": "Researchers said Volt Typhoon used compromised routers and other devices as temporary relays for attacks on telecommunications, government, defense, utilities, transportation, water and emergency services.",
+       "impact": "The report identifies hundreds of victims but does not confirm a current public outage or a particular affected service. It shows that trusted network equipment can be used to conceal access to important organizations.",
+       "what_next": "More victims and the extent of stolen information or retained access may be identified as investigations continue.",
+       "change": "New report",
+       "sectors": [
+        "energy",
+        "water",
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
+         "published": "2026-10-28T18:08:33+00:00"
+        },
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/",
+         "published": "2026-10-28T16:00:00+00:00"
+        }
+       ],
+       "incident_ids": [
+        "a5181cd3aa60aa7f"
+       ]
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "A breach at the outside provider running Japan Airlines reservations exposed customer records. Researchers also described attacks that used compromised devices and management systems as stepping stones to high-value organizations.",
+     "items": [
+      {
+       "headline": "Japan Airlines customers affected through breached reservation provider",
+       "what_happened": "Amadeus, an outside provider for reservations, ticketing and check-in, told Japan Airlines that hackers accessed customer reservation data for Japan Airlines and Japan Transocean Air flights.",
+       "impact": "The airlines reported no flight disruption and no credit-card exposure. The incident affects customer privacy and may support targeted travel-related scams.",
+       "what_next": "Japan Airlines and investigators are expected to clarify the provider breach and the full set of affected records.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/japan-airlines-warns-of-breach-country-grapples-with-incidents",
+         "published": "2026-10-28T20:33:00+00:00"
+        }
+       ],
+       "incident_ids": [
+        "6a5c48955e180878"
+       ]
+      },
+      {
+       "headline": "Researchers describe compromised devices used as attack relays",
+       "what_happened": "Volt Typhoon reportedly routed attacks through hacked consumer, business and enterprise devices before targeting management platforms and high-value organizations. The compromised devices formed a temporary chain rather than a distributed software-update compromise.",
+       "impact": "The activity affected organizations across communications, utilities, water, transportation, aviation and emergency services, but no new public-service outage was confirmed.",
+       "what_next": "Investigations may establish which organizations retained unauthorized access and whether downstream data was taken.",
+       "change": "New report",
+       "sectors": [
+        "energy",
+        "water",
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
+         "published": "2026-10-28T18:08:33+00:00"
+        },
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/",
+         "published": "2026-10-28T16:00:00+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "3 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 711
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 34,
+   "usage": {
+    "completion_tokens": 1568,
+    "prompt_tokens": 35351,
+    "total_tokens": 36919,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 150,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 35348,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-10-28T18:00:00+00:00"
+  "checked_at": "2026-10-29T00:41:09+00:00"
  }
 }
