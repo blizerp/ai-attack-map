@@ -132,15 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-10-29T22:49:24+00:00",
+  "checked": "2026-10-30T05:55:46+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is the already-tracked Gheist campaign, with additional substantiated evidence of successful secret theft and cloud-role activity in private and enterprise repositories; it should remain one incident record rather than a new incident.",
+  "reason": "This is additional reporting on the already tracked Gheist campaign and substantiates real compromises of GitHub accounts and repositories, workflow execution, and secret exposure; it is not a new incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is the already-tracked Gheist campaign, with additional substantiated evidence of successful secret theft and cloud-role activity in private and enterprise repositories; it should remain one incident record rather than a new incident.",
-    "title": "Gheist campaign dumped secrets from compromised GitHub repositories",
+    "reason": "This is additional reporting on the already tracked Gheist campaign and substantiates real compromises of GitHub accounts and repositories, workflow execution, and secret exposure; it is not a new incident.",
+    "title": "Gheist campaign abused stolen GitHub tokens in private repositories",
     "incident_id": "fdf212b3998ab3a2"
    }
   ],
@@ -18493,16 +18493,16 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-10-29T22:49:24+00:00",
+  "checked": "2026-10-30T05:55:46+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz CIRT substantiated a consequential real-world intrusion in which an AI agent gained broad privileged access, harvested sensitive secrets and data, established persistence, and altered production workloads. This is the same documented incident already tracked under 896e03a99e01777c.",
+  "reason": "Independent incident-response reporting substantiates an actual compromise of a business-critical multi-cloud environment and confirms that an AI agent conducted the intrusion. It matches the already-tracked Wiz agentic cloud intrusion event.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz CIRT substantiated a consequential real-world intrusion in which an AI agent gained broad privileged access, harvested sensitive secrets and data, established persistence, and altered production workloads. This is the same documented incident already tracked under 896e03a99e01777c.",
-    "title": "Wiz observed AI agent conduct multi-cloud intrusion",
-    "incident_id": "896e03eaa7904596"
+    "reason": "Independent incident-response reporting substantiates an actual compromise of a business-critical multi-cloud environment and confirms that an AI agent conducted the intrusion. It matches the already-tracked Wiz agentic cloud intrusion event.",
+    "title": "Wiz observed autonomous AI agent breach a multi-cloud organization",
+    "incident_id": "d22f0579003d30c6"
    }
   ],
   "evidence": "article",
@@ -18986,14 +18986,14 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-10-29T22:49:24+00:00",
+  "checked": "2026-10-30T05:55:46+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated multi-victim cloud compromise involving privileged access and material unauthorized AI charges; it is already tracked as the same GCP takeover and Gemini LLMjacking incident.",
+  "reason": "Wiz independently substantiates multiple real GCP compromises involving privileged access and substantial unauthorized AI charges; this is the same campaign already tracked under f58ed76ff84133f9, so it is recorded as an additional source rather than a new incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated multi-victim cloud compromise involving privileged access and material unauthorized AI charges; it is already tracked as the same GCP takeover and Gemini LLMjacking incident.",
+    "reason": "Wiz independently substantiates multiple real GCP compromises involving privileged access and substantial unauthorized AI charges; this is the same campaign already tracked under f58ed76ff84133f9, so it is recorded as an additional source rather than a new incident.",
     "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
@@ -19796,14 +19796,14 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-10-29T22:49:24+00:00",
+  "checked": "2026-10-30T05:55:46+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed production release-pipeline and package-distribution compromise with credential-stealing payloads; retain as the same incident as the already-tracked LiteLLM supply-chain attack, with the earlier incident date and additional technical evidence.",
+  "reason": "Confirmed compromise of LiteLLM’s production release and package-distribution infrastructure with credential-stealing payloads; this is the same incident already tracked under e2e13fe6f7503c25.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed production release-pipeline and package-distribution compromise with credential-stealing payloads; retain as the same incident as the already-tracked LiteLLM supply-chain attack, with the earlier incident date and additional technical evidence.",
+    "reason": "Confirmed compromise of LiteLLM’s production release and package-distribution infrastructure with credential-stealing payloads; this is the same incident already tracked under e2e13fe6f7503c25.",
     "title": "LiteLLM release pipeline compromised to distribute credential stealer",
     "incident_id": "e2e13fe6f7503c25"
    }
@@ -19822,15 +19822,15 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-10-29T22:49:24+00:00",
+  "checked": "2026-10-30T05:55:46+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: the main report is a controlled vulnerability discovery and exploit demonstration, not a confirmed real-world compromise; no external victim or operational consequence is substantiated.",
+  "reason": "Exclude because this is a vulnerability disclosure and controlled research demonstration without substantiated real-world victim compromise; the separate LiteLLM reference is not a newly documented incident here.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: the main report is a controlled vulnerability discovery and exploit demonstration, not a confirmed real-world compromise; no external victim or operational consequence is substantiated.",
-    "title": "PHP2Shell vulnerabilities demonstrated in research testing"
+    "reason": "Exclude because this is a vulnerability disclosure and controlled research demonstration without substantiated real-world victim compromise; the separate LiteLLM reference is not a newly documented incident here.",
+    "title": "Wiz disclosed PHP2Shell vulnerabilities after controlled exploit demonstrations"
    }
   ],
   "evidence": "article",
@@ -25311,5 +25311,56 @@
    "published_at": "2026-10-28T15:29:06+00:00"
   },
   "retrieval_warning": "HTTPError"
+ },
+ "https://thehackernews.com/2026/10/binance-suffers-security-breach.html": {
+  "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
+  "source": "The Hacker News",
+  "checked": "2026-10-30T05:55:46+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Binance confirmed an actual compromise with unauthorized withdrawals, temporary trading-platform restrictions, and multibillion-dollar financial impact. This is distinct from the previously tracked Bitget wallet theft.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Binance confirmed an actual compromise with unauthorized withdrawals, temporary trading-platform restrictions, and multibillion-dollar financial impact. This is distinct from the previously tracked Bitget wallet theft.",
+    "title": "Binance breach enabled approximately $5.9 billion in withdrawals",
+    "incident_id": "0608e73237d158c5"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "cc2419ca5d33c6dbe3bb5b8e820cfa409d5a9416eda9de586f0f3b485f8567a1",
+  "item": {
+   "id": "0608e73237d158c5",
+   "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
+   "url": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
+   "date": "2026-10-30",
+   "source": "The Hacker News",
+   "published_at": "2026-10-30T04:14:59+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-doubles-chatgpt-pro-usage-limits-after-backlash-over-planned-50-percent-cut/": {
+  "title": "OpenAI doubles ChatGPT Pro usage limits after backlash over planned 50% cut",
+  "source": "BleepingComputer",
+  "checked": "2026-10-30T05:55:46+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the source reports a commercial usage-limit reversal and customer-feedback response, not an actual cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the source reports a commercial usage-limit reversal and customer-feedback response, not an actual cyber incident.",
+    "title": "OpenAI reverses planned ChatGPT usage-limit reduction"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "4ad83a94764c211a4c1214d0772e09ba77493a20c37c103a211a48a19d1fd58c",
+  "item": {
+   "id": "72e0daf2ede63b5e",
+   "title": "OpenAI doubles ChatGPT Pro usage limits after backlash over planned 50% cut",
+   "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-doubles-chatgpt-pro-usage-limits-after-backlash-over-planned-50-percent-cut/",
+   "date": "2026-10-29",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-29T23:35:52+00:00"
+  }
  }
 }

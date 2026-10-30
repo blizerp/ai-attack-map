@@ -1,6 +1,44 @@
 {
- "updated": "2026-10-29T22:49:24+00:00",
+ "updated": "2026-10-30T05:55:46+00:00",
  "incidents": [
+  {
+   "title": "Binance breach enabled approximately $5.9 billion in withdrawals",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "Binance and affected cryptocurrency-asset holders",
+   "attacker": "Identity not confirmed; Binance said the incident may have involved a compromised DevOps engineer’s laptop, while Chainalysis described the funds as stolen.",
+   "what": "An attacker allegedly used access from a compromised DevOps laptop to reach a service container and submit unauthorized withdrawal transactions. Binance estimated approximately $5.912 billion was stolen at the time of theft; nearly $3 billion had been frozen on-chain, including funds frozen by Tether, Circle, and the Arbitrum Security Council.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident caused a multibillion-dollar cryptocurrency theft and prompted Binance to suspend deposits and withdrawals while it revoked authorization and investigated.",
+   "where": "No fixed location",
+   "major_impact": "major_financial_loss",
+   "significance": "Binance reported unauthorized withdrawals affecting approximately $6.3 billion in assets, with about $5.912 billion estimated stolen and nearly $3 billion frozen. Binance said it would cover losses through its SAFU and corporate funds, but the investigation and recovery effort remained ongoing.",
+   "id": "0608e73237d158c5",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
+   "added": "2026-10-30T05:55:46+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Binance confirmed a security incident, unauthorized withdrawal transactions, temporary suspension of deposits and withdrawals, and an estimated $5.912 billion stolen at the time of theft. The report does not establish whether private keys were compromised; Binance said there was no evidence of a wallet private-key leak.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "none",
+     "financial": "major"
+    },
+    "source_url": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
+    "assessed_at": "2026-10-30T05:55:46+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
   {
    "title": "Volt Typhoon used Silent Train in zero-day intrusions",
    "date": "2026-10-28",
@@ -539,7 +577,21 @@
     "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
     "assessed_at": "2026-10-29T22:49:24+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "Wiz Research",
+     "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-19",
+     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, and identity-provider credentials, escalated to cluster and cloud administrative access, created accounts and pipelines, and attempted to access and exfiltrate sensitive data. The same source IP was also observed scanning more than 600 other Wiz customer environments during the period.",
+     "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
+     "source": "Wiz Research"
+    }
+   ]
   },
   {
    "title": "Hermes AI agent compromised Thailand ministry systems",
@@ -2509,7 +2561,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used stolen GitHub tokens to plant workflows in reachable repositories. In private repositories and GitHub Enterprise environments, the workflows executed, exposed repository and environment secrets in logs, and were then deleted. Wiz also observed private-repository cloning, self-hosted-runner activity, and cloud credentials being used to enumerate AWS Secrets Manager.",
+     "what": "The Gheist campaign planted sync-check workflows in repositories accessible through stolen tokens to dump repository and environment secrets into workflow logs, then retrieved and deleted the runs. In some private and GitHub Enterprise environments, workflows executed without approval; Wiz also observed private-repository cloning and cloud-role enumeration using credentials from the same organizations.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -3619,7 +3671,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker used stolen maintainer and workflow credentials to disable branch protection and publish malicious LiteLLM 1.107.0 PyPI wheels and container images. The packages installed persistence that executed at interpreter startup and attempted to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and stored LiteLLM credentials.",
+     "what": "The attacker compromised LiteLLM version 1.107.0 and corresponding container images, inserting persistence through Python startup files. The malware stole cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and AI coding-tool credentials, and queried stored provider credentials when a proxy database was configured.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -5507,7 +5559,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Attackers phished privileged GCP users, captured credentials and MFA codes, altered IAM and organization policies, added external administrative accounts, and linked attacker-controlled GCP projects to victims’ billing accounts. The projects then generated high-volume Gemini API usage charged to the victims.",
+     "what": "Attackers phished privileged GCP users for credentials and MFA codes, then altered IAM and organizational policies, added attacker-controlled accounts, and linked external GCP projects to victims’ billing accounts. The attackers used the linked accounts to run large-scale Gemini API workloads while hiding prompts and outputs in foreign projects.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -24313,6 +24365,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-29T22:49:24+00:00",
+ "last_added": "2026-10-30T05:55:46+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
