@@ -1308,11 +1308,391 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-10-29-evening",
+   "date": "2026-10-29",
+   "edition": "evening",
+   "published_at": "2026-10-30T00:42:06+00:00",
+   "generated_at": "2026-10-30T00:42:06+00:00",
+   "window_start": "2026-10-29T00:41:09+00:00",
+   "window_end": "2026-10-30T00:42:06+00:00",
+   "sector_window_start": "2026-10-29T00:42:06+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "Confirmed incidents this evening include a major cryptocurrency investigation, a short trading interruption, a Japanese internet-customer breach and a Belgian tax-service outage. Several events involve stolen personal or payment data, but the full effects remain under investigation.",
+    "items": [
+     {
+      "headline": "Binance investigates a possible cryptocurrency theft of billions",
+      "what_happened": "Binance is investigating transfers from several of its digital-asset wallets. Blockchain researchers estimate that as much as $5.8 billion is linked to the suspected attacker, but Binance has not confirmed that the transfers were unauthorized or how much was stolen. Two stablecoin issuers froze more than $2.3 billion connected to the incident.",
+      "impact": "Binance says customer funds are safe. The reported figure is not a confirmed loss, so the effect on customers is unclear. Frozen assets may limit further movement while the investigation continues.",
+      "what_next": "Binance, law enforcement and blockchain analysts are checking whether the transfers were a breach and determining the actual amount involved. Customers should rely on official Binance notices, not unsolicited messages or links.",
+      "change": "Developing",
+      "sectors": [
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/",
+        "published": "2026-10-29T22:45:23+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Polymarket restores trading after a third-party script stole cryptocurrency",
+      "what_happened": "A compromised website-monitoring provider supplied harmful code to Polymarket visitors. The code attempted to use logged-in trading sessions to sell positions and move cryptocurrency. Polymarket paused trading for about an hour on October 29, fixed the issue and said affected traders would be fully reimbursed.",
+      "impact": "About $2.5 million in assets has been traced to a suspected attacker wallet, but Polymarket has not said how many users lost funds or the final amount. Trading is now back online. The incident involved a supplier used by the platform.",
+      "what_next": "Polymarket and law enforcement are investigating the provider breach and reimbursement process. More users or affected amounts may be identified as the review continues.",
+      "change": "Recovery update",
+      "sectors": [
+       "finance",
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
+        "published": "2026-10-29T21:47:25+00:00"
+       }
+      ],
+      "incident_ids": [
+       "83273d8d85f8311b"
+      ]
+     },
+     {
+      "headline": "Sony’s Japanese internet provider confirms 2.6 million records were stolen",
+      "what_happened": "Attackers entered the So-net member database on October 19. Sony Network Communications says records for about 2.14 million So-net customers and 443,000 Plala customers were taken. The data includes names, birth dates, contact details and internet connection IDs. Passwords for about 54,000 separate email accounts were also exposed.",
+      "impact": "Affected email users were forced to change passwords because attackers could otherwise read or send messages. Sixteen records included bank-account details, but credit-card data and bank PINs were not stored. No internet outage was reported.",
+      "what_next": "Sony is still investigating how the attackers got in and has reported the incident to Japan’s privacy regulator. Customers may receive further notices about exposed records or account protections.",
+      "change": "Impact increased",
+      "sectors": [
+       "internet",
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net/",
+        "published": "2026-10-29T11:00:00+00:00"
+       }
+      ],
+      "incident_ids": [
+       "8d9eceb5e20bcce3"
+      ]
+     },
+     {
+      "headline": "Belgium takes its main online tax portal offline after an attack",
+      "what_happened": "Belgium’s finance ministry suspended MyMinfin on October 28 while investigating a cyberattack. The portal handles tax and other financial services. The shutdown came just before an October 31 filing deadline, and authorities said they would extend the deadline.",
+      "impact": "People who use MyMinfin may be unable to file or manage tax matters online until services return. Officials said there is currently no indication that data was stolen. Other government applications remained fully or partly available.",
+      "what_next": "Investigators are checking whether any information was exposed and when the portal can safely return. A revised filing deadline will be announced.",
+      "change": "New report",
+      "sectors": [
+       "finance",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/cyberattack-disrupts-belgian-tax-services-before-deadline",
+        "published": "2026-10-29T13:31:00+00:00"
+       }
+      ],
+      "incident_ids": [
+       "b0820cab6df62b82"
+      ]
+     },
+     {
+      "headline": "Japan Airlines says its booking provider breach affected other airlines too",
+      "what_happened": "A new report confirms that the Amadeus travel-services breach was maliciously exploited, after Japan Airlines reported exposure of about 92,000 customer records. Reports also identify impact at All Nippon Airways, Asiana Airlines and Korean Air. The breach occurred between August 2023 and September 2026.",
+      "impact": "JAL flights, ticketing and check-in were not disrupted, and payment-card numbers were not exposed. Travel details and, for about 2,000 JAL customers, passport and contact information were accessed. The wider airline impact is still unclear.",
+      "what_next": "Amadeus and affected airlines are determining how many customers and organizations were involved. Customers may receive additional notices and should be cautious of messages using real travel details.",
+      "change": "Impact increased",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
+        "published": "2026-10-29T22:08:04+00:00"
+       }
+      ],
+      "incident_ids": [
+       "6a5c48955e180878"
+      ]
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "A possible large cryptocurrency theft is under investigation, while a separate platform restored trading after confirmed customer losses. Belgium’s tax portal also remains disrupted during an investigation.",
+     "items": [
+      {
+       "headline": "Binance investigates a possible cryptocurrency theft of billions",
+       "what_happened": "Binance is investigating transfers from several of its digital-asset wallets. Researchers estimate that as much as $5.8 billion is linked to the suspected attacker, but the exchange has not confirmed that the transfers were unauthorized or that customer funds were lost.",
+       "impact": "Binance says customer funds are safe. The amount involved and effect on customers remain unclear. Stablecoin issuers froze more than $2.3 billion connected to the incident.",
+       "what_next": "The exchange, law enforcement and blockchain analysts are determining whether this was a breach and the actual amount involved.",
+       "change": "Developing",
+       "sectors": [
+        "finance"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/",
+         "published": "2026-10-29T22:45:23+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Polymarket resumes trading after cryptocurrency-draining code attack",
+       "what_happened": "Harmful code from a compromised monitoring provider targeted logged-in Polymarket users. The platform paused trading for about an hour, fixed the issue and said it would reimburse affected traders.",
+       "impact": "About $2.5 million in assets was traced to a suspected attacker wallet. The number of affected users and final loss are not known. Trading has resumed.",
+       "what_next": "Polymarket is investigating the supplier breach and will clarify how reimbursement will work.",
+       "change": "Recovery update",
+       "sectors": [
+        "finance",
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
+         "published": "2026-10-29T21:47:25+00:00"
+        }
+       ],
+       "incident_ids": [
+        "83273d8d85f8311b"
+       ]
+      },
+      {
+       "headline": "Belgium extends tax filing deadline after taking portal offline",
+       "what_happened": "Belgium suspended its MyMinfin tax portal after an October 28 cyberattack. The ministry is investigating and said taxpayers affected by the October 31 deadline will receive more time.",
+       "impact": "Online tax filing and related services may be unavailable. Officials have found no indication of stolen data so far.",
+       "what_next": "Authorities will announce a new deadline and report whether the investigation finds any information exposure.",
+       "change": "New report",
+       "sectors": [
+        "finance",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/cyberattack-disrupts-belgian-tax-services-before-deadline",
+         "published": "2026-10-29T13:31:00+00:00"
+        }
+       ],
+       "incident_ids": [
+        "b0820cab6df62b82"
+       ]
+      }
+     ]
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "A Japanese internet provider confirmed a large customer-record breach, while a short-lived trading incident and a Belgian government portal outage affected online services.",
+     "items": [
+      {
+       "headline": "Sony’s Japanese internet provider confirms 2.6 million records were stolen",
+       "what_happened": "Attackers entered the So-net member database on October 19 and took records belonging to about 2.6 million current and former customers. The exposed information includes names, birth dates, contact details and internet connection IDs. Passwords for about 54,000 separate email accounts were also exposed.",
+       "impact": "Those email users had to change passwords because attackers could otherwise access their mail. No internet outage was reported. Credit-card data and bank PINs were not stored, although 16 records included bank-account details.",
+       "what_next": "Sony is investigating the entry point and has reported the incident to Japan’s privacy regulator. Further customer notices may follow.",
+       "change": "Impact increased",
+       "sectors": [
+        "internet",
+        "finance"
+       ],
+       "sources": [
+        {
+         "name": "SecurityWeek",
+         "url": "https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net/",
+         "published": "2026-10-29T11:00:00+00:00"
+        }
+       ],
+       "incident_ids": [
+        "8d9eceb5e20bcce3"
+       ]
+      },
+      {
+       "headline": "Belgium’s main online tax service remains offline after an attack",
+       "what_happened": "The finance ministry took MyMinfin offline on October 28 while investigating a cyberattack. The service handles tax and other financial administration.",
+       "impact": "People may be unable to complete tax tasks online. The ministry extended the filing deadline and said there is no current indication that data was stolen.",
+       "what_next": "Investigators are checking the scope of the incident and will announce a revised deadline and restoration information.",
+       "change": "New report",
+       "sectors": [
+        "finance",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/cyberattack-disrupts-belgian-tax-services-before-deadline",
+         "published": "2026-10-29T13:31:00+00:00"
+        }
+       ],
+       "incident_ids": [
+        "b0820cab6df62b82"
+       ]
+      },
+      {
+       "headline": "Japan Airlines booking breach is linked to several other carriers",
+       "what_happened": "The Amadeus travel-services breach that exposed Japan Airlines customer data was confirmed as an actual malicious intrusion. New reporting also identifies All Nippon Airways, Asiana Airlines and Korean Air as affected by the same supplier flaw.",
+       "impact": "JAL reported no flight, ticketing or check-in outage and no exposed card numbers. Travel details and some passport and contact information were accessed. The total number of affected travelers across airlines is unknown.",
+       "what_next": "Amadeus and the airlines are investigating the wider scope and may issue more customer notices.",
+       "change": "Impact increased",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
+         "published": "2026-10-29T22:08:04+00:00"
+        }
+       ],
+       "incident_ids": [
+        "6a5c48955e180878"
+       ]
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "Two incidents involved compromised outside providers: harmful code used by a trading platform and passenger-data exposure through a shared airline booking service.",
+     "items": [
+      {
+       "headline": "A compromised website-monitoring provider disrupted Polymarket trading",
+       "what_happened": "Attackers compromised DebugBear, a website performance-monitoring provider, and used its code to target Polymarket users. Polymarket halted trading for about an hour, removed the provider’s code and restored service.",
+       "impact": "Researchers traced about $2.5 million in cryptocurrency to a suspected attacker wallet. Polymarket has not disclosed the number of affected users but says it will reimburse them.",
+       "what_next": "The provider, Polymarket and law enforcement are investigating how the shared service was compromised and which users were affected.",
+       "change": "Recovery update",
+       "sectors": [
+        "supply_chain",
+        "finance",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
+         "published": "2026-10-29T21:47:25+00:00"
+        }
+       ],
+       "incident_ids": [
+        "83273d8d85f8311b"
+       ]
+      },
+      {
+       "headline": "Airline booking-system breach reaches several carriers",
+       "what_happened": "Amadeus, an outside provider for airline reservations and check-in, was maliciously breached. Japan Airlines reported about 92,000 affected customer records, and new reporting identifies possible impact at All Nippon Airways, Asiana Airlines and Korean Air.",
+       "impact": "JAL flights and check-in continued normally, and card numbers were not exposed. Passenger names, routes and booking details were accessed, with more sensitive information exposed for about 2,000 JAL customers. The wider scope is unclear.",
+       "what_next": "Amadeus and affected airlines are investigating the supplier breach and may identify more airlines or customers.",
+       "change": "Impact increased",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
+         "published": "2026-10-29T22:08:04+00:00"
+        }
+       ],
+       "incident_ids": [
+        "6a5c48955e180878"
+       ]
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "4 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 712
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 40,
+   "usage": {
+    "completion_tokens": 2494,
+    "prompt_tokens": 42508,
+    "total_tokens": 45002,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 132,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 42505,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
-  "status": "failed",
-  "checked_at": "2026-10-29T18:09:37+00:00",
-  "error": "ValueError"
+  "status": "ok",
+  "checked_at": "2026-10-30T00:42:06+00:00"
  }
 }
