@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T05:55:46+00:00",
+ "updated": "2026-10-30T13:03:35+00:00",
  "incidents": [
   {
    "title": "Binance breach enabled approximately $5.9 billion in withdrawals",
@@ -36,6 +36,282 @@
     },
     "source_url": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
     "assessed_at": "2026-10-30T05:55:46+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/binance-hit-by-record-6-billion-crypto-hack"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-30",
+     "what": "An attacker apparently compromised a DevOps engineer’s laptop, reached a service container, and caused Binance hot-wallet systems to sign unauthorized withdrawal transactions across ten blockchains. Binance reported no evidence that wallet private keys were leaked.",
+     "url": "https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-10-30",
+     "what": "Attackers compromised a DevOps engineer’s laptop, accessed a service container, and submitted unauthorized withdrawal transactions from Binance wallets across ten blockchains. Binance said it found no evidence that a wallet private key was leaked; approximately $2.7 billion was frozen, while about $2.4 billion remained beyond issuers’ reach in the cited reporting.",
+     "url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
+     "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-10-30",
+     "what": "A compromised laptop belonging to a Binance engineer enabled access to systems that authorized fraudulent withdrawal transactions. Binance suspended deposits and withdrawals for 48 hours; approximately $3 billion was frozen, while the attackers retained more than $2.4 billion in cryptocurrency, according to the report.",
+     "url": "https://therecord.media/binance-hit-by-record-6-billion-crypto-hack",
+     "source": "The Record"
+    }
+   ]
+  },
+  {
+   "title": "Polymarket halted trading after DebugBear script compromise",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Polymarket and users of Polymarket.com; DebugBear third-party RUM service",
+   "attacker": "Unknown; researchers traced approximately $2.57 million in POL transfers to a suspected attacker-controlled wallet.",
+   "what": "Attackers compromised Polymarket’s third-party DebugBear monitoring service and distributed malicious JavaScript through its infrastructure. The script targeted authenticated Polymarket sessions, attempted to liquidate prediction-market positions and transfer cryptocurrency or tokens, and communicated account and transaction data to attacker-controlled infrastructure.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The compromise affected a cryptocurrency prediction-market platform and its trusted third-party script provider, creating a path to unauthorized financial transactions. Polymarket temporarily halted trading and said it would reimburse affected traders, but it did not disclose the number of affected users or confirmed stolen amount.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "Polymarket confirmed the third-party-provider compromise and temporarily suspended trading. Hudson Rock researcher evidence and blockchain analysis identified malicious code and approximately $2.57 million in transfers to a suspected attacker wallet, although the final theft and affected-user count remain unconfirmed.",
+   "id": "83273d8d85f8311b",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 54.7023545,
+   "lon": -3.2765753,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Polymarket placed trading into cancel-only mode, paused relayer actions, and halted trading for roughly an hour while containing the incident. Malicious code attempted unauthorized asset transfers, but the confirmed amount stolen and number of affected users were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/polymarket-confirms-cyberattack-third-party"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-30",
+     "what": "A malicious JavaScript payload served through compromised DebugBear infrastructure targeted authenticated Polymarket users. It attempted to sell positions and redirect proceeds or position tokens to an attacker-controlled address by reusing authority available in logged-in sessions.",
+     "url": "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-10-30",
+     "what": "Polymarket confirmed that a third-party provider was compromised, causing outages and the temporary suspension of trading. Hudson Rock identified the provider as DebugBear and reported wallet-draining code; Polymarket removed the provider's code and said it would reimburse affected traders.",
+     "url": "https://therecord.media/polymarket-confirms-cyberattack-third-party",
+     "source": "The Record"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 54.7023545,
+     "lon": -3.2765753,
+     "label": "United Kingdom",
+     "basis": "Vendor headquarters (approximate)",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/"
+    }
+   ]
+  },
+  {
+   "title": "Lehigh Valley Health Network ransomware exposed 248,359 records",
+   "date": "2023-02-04",
+   "category": "major_cyber",
+   "victim": "Lehigh Valley Health Network, including Delta Medix-related IT systems",
+   "attacker": "ALPHV/BlackCat ransomware group, according to the report; attribution is not independently established here",
+   "what": "ALPHV/BlackCat breached parts of the network, exfiltrated patient files, demanded a ransom, and later leaked the data after the ransom was not paid. Exposed information included identity, financial, medical, and cancer-treatment photographs.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident involved confirmed unauthorized access and theft of sensitive health, identity, and financial information affecting 248,359 individuals. The 2026 report adds OCR findings and a penalty but describes an intrusion detected in February 2023, not a new attack.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "HHS OCR determined that the breach impermissibly disclosed PHI of 248,359 people, including diagnoses, medications, Social Security numbers, and highly sensitive oncology photographs; the stolen data was reportedly published on a dark-web leak site.",
+   "id": "1e65e1c43420ba36",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/lehigh-valley-health-network-hipaa-penalty/",
+   "added": "2026-10-30T13:03:35+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The report substantiates ransomware access, exfiltration, and leakage of sensitive records affecting 248,359 individuals. It reports an $800,000 OCR penalty and a $65 million class-action settlement, but those are regulatory and litigation outcomes rather than a clearly reported operational loss from the attack.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/lehigh-valley-health-network-hipaa-penalty/",
+    "assessed_at": "2026-10-30T13:03:35+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Cyberattack disrupts Russian retailer Poryadok for five days",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "Poryadok",
+   "attacker": "Unknown; Poryadok confirmed a cyberattack but did not identify the perpetrator.",
+   "what": "A cyberattack disrupted Poryadok’s website, mobile app, customer-support channels and physical stores. Customers could not collect paid orders, access loyalty accounts, arrange returns or contact support; some stores remained closed for five consecutive days.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident caused a substantial operational outage at a retailer operating 48 stores across 32 Russian cities, while the breach method, attacker and possible customer-data compromise remained undisclosed.",
+   "where": "Russia",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Poryadok confirmed the cyberattack and the resulting multi-day disruption to stores and online services. The outage affected order fulfillment, customer access and retail operations across multiple Russian cities.",
+   "id": "1ec6874f660c4580",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/russian-home-goods-chain-faces-disruptions",
+   "added": "2026-10-30T13:03:35+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 51.6605982,
+   "lon": 39.2005858,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Poryadok’s stores and online services were unavailable for five consecutive days, preventing order collection and other customer operations. The reporting does not establish data theft or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "major",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/russian-home-goods-chain-faces-disruptions",
+    "assessed_at": "2026-10-30T13:03:35+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 51.6605982,
+     "lon": 39.2005858,
+     "label": "Voronezh, Russia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/russian-home-goods-chain-faces-disruptions"
+    },
+    {
+     "lat": 51.7270357,
+     "lon": 36.192248,
+     "label": "Kursk, Russia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/russian-home-goods-chain-faces-disruptions"
+    }
+   ]
+  },
+  {
+   "title": "NetamLoader infected a government Windows system in Asia",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "An unnamed Asian government organization using a customized Windows 10 version",
+   "attacker": "Unknown; Kaspersky could not link the operation to a known state-sponsored group",
+   "what": "Kaspersky identified NetamLoader on one government computer in the first half of 2026. The malware was found in a package stored in a Windows-update directory and could evade security tools, collect host information, download additional code, communicate with attacker infrastructure, and delete files and logs. Researchers suspected a supply-chain route but could not confirm that update infrastructure was compromised.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident demonstrates a confirmed compromise of a government system using malware tailored to a government-specific operating environment, with possible trusted-update or software-distribution implications. The number of affected systems and any data theft remain unknown.",
+   "where": "Asia",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Kaspersky observed the malware on an infected government computer and reported capabilities for persistence, defense evasion, reconnaissance, and downloading additional payloads. No sensitive-data theft or broader government impact was established.",
+   "id": "fcfc74f3570ba5e9",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/hackers-target-government-windows-systems-asia-new-malware",
+   "added": "2026-10-30T13:03:35+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "One government computer was confirmed infected, and the malware could interfere with security scanning, collect system information, and download additional code. Researchers had not established whether sensitive information was stolen or whether more systems were affected.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/hackers-target-government-windows-systems-asia-new-malware",
+    "assessed_at": "2026-10-30T13:03:35+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Trojanized Claude Code extension distributed through Cursor Marketplace",
+   "date": "2026-10-29",
+   "category": "on_ai_system",
+   "victim": "Users who installed Claude Code extension version 2.1.313 through the Cursor Marketplace; at most 5,000 users",
+   "attacker": "Unknown; the method used to introduce the unauthorized update remains unclear.",
+   "what": "Attackers distributed a modified version of Anthropic's Claude Code extension under its legitimate publisher identity and extension ID. The update added an SSH key, attempted persistence through scheduled tasks, crontab, and LaunchAgent, created a reverse tunnel, and sent host reconnaissance data to attacker-controlled infrastructure.",
+   "ai_role": "The compromised package was Anthropic's Claude Code extension, an AI coding tool; reporting does not establish that AI was used by the attacker.",
+   "why": "The extension could provide persistent access to developer systems and expose information about usernames, hosts, Git configuration, and credential-related environment variables. Cursor shut down its marketplace, removed the malicious version, and Anthropic released version 2.1.314.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "A legitimate AI coding-extension update was compromised in a software-distribution marketplace and reached up to 5,000 users. Researchers observed persistence, reverse-tunnel functionality, and reconnaissance collection, although successful SSH access was constrained on many Windows and macOS systems by administrative requirements.",
+   "id": "e3ed66e626b0480b",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+   "added": "2026-10-30T13:03:35+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The malicious update was distributed to at most 5,000 users and was observed adding an attacker SSH key, installing persistence, and transmitting host details. The reporting does not establish confirmed follow-on commands, file theft, or operational outages.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+    "assessed_at": "2026-10-30T13:03:35+00:00",
     "method": "reported-impact-v1"
    }
   },
@@ -587,7 +863,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, and identity-provider credentials, escalated to cluster and cloud administrative access, created accounts and pipelines, and attempted to access and exfiltrate sensitive data. The same source IP was also observed scanning more than 600 other Wiz customer environments during the period.",
+     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, identity-provider, and vault credentials, created privileged identities, pushed malicious GitOps workloads, and attempted to access and exfiltrate sensitive data.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -764,44 +1040,6 @@
      "source": "BleepingComputer"
     }
    ]
-  },
-  {
-   "title": "Polymarket halted trading after DebugBear script compromise",
-   "date": "2026-10-29",
-   "category": "major_cyber",
-   "victim": "Polymarket and users of Polymarket.com; DebugBear third-party RUM service",
-   "attacker": "Unknown; researchers traced approximately $2.57 million in POL transfers to a suspected attacker-controlled wallet.",
-   "what": "Attackers compromised Polymarket’s third-party DebugBear monitoring service and distributed malicious JavaScript through its infrastructure. The script targeted authenticated Polymarket sessions, attempted to liquidate prediction-market positions and transfer cryptocurrency or tokens, and communicated account and transaction data to attacker-controlled infrastructure.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The compromise affected a cryptocurrency prediction-market platform and its trusted third-party script provider, creating a path to unauthorized financial transactions. Polymarket temporarily halted trading and said it would reimburse affected traders, but it did not disclose the number of affected users or confirmed stolen amount.",
-   "where": "No fixed location",
-   "major_impact": "supply_chain_compromise",
-   "significance": "Polymarket confirmed the third-party-provider compromise and temporarily suspended trading. Hudson Rock researcher evidence and blockchain analysis identified malicious code and approximately $2.57 million in transfers to a suspected attacker wallet, although the final theft and affected-user count remain unconfirmed.",
-   "id": "83273d8d85f8311b",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
-   "added": "2026-10-29T22:49:24+00:00",
-   "reported_date": "2026-10-29",
-   "last_reported": "2026-10-29",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "Polymarket placed trading into cancel-only mode, paused relayer actions, and halted trading for roughly an hour while containing the incident. Malicious code attempted unauthorized asset transfers, but the confirmed amount stolen and number of affected users were not reported.",
-    "evidence": {
-     "context": "real_world",
-     "service": "substantial",
-     "reach": "unknown",
-     "damage": "unknown",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
-    "assessed_at": "2026-10-29T22:49:24+00:00",
-    "method": "reported-impact-v1"
-   }
   },
   {
    "title": "Malicious Hugging Face models hijacked GPU hosts",
@@ -3665,13 +3903,13 @@
     },
     {
      "date": "2026-10-21",
-     "what": "A malicious LiteLLM version, 1.107.0, was uploaded to PyPI and Docker. It contained a credential stealer targeting browser, cloud, and AI secrets, plus dormant command-and-control capability.",
+     "what": "A malicious LiteLLM version 1.107.0 was uploaded to PyPI and Docker. The package reportedly contained a credential stealer targeting browser, cloud, and AI secrets, plus dormant command-and-control capability.",
      "url": "https://www.wiz.io/blog/php2shell-php-rce",
      "source": "Wiz Research"
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker compromised LiteLLM version 1.107.0 and corresponding container images, inserting persistence through Python startup files. The malware stole cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and AI coding-tool credentials, and queried stored provider credentials when a proxy database was configured.",
+     "what": "The attacker published malicious LiteLLM 1.107.0 PyPI wheels and matching GHCR/Docker Hub images. The payload used Python startup persistence to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, and could query stored LiteLLM provider credentials.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -24365,6 +24603,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-30T05:55:46+00:00",
+ "last_added": "2026-10-30T13:03:35+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }

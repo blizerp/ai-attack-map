@@ -132,16 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-10-30T05:55:46+00:00",
+  "checked": "2026-10-30T13:03:35+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is additional reporting on the already tracked Gheist campaign and substantiates real compromises of GitHub accounts and repositories, workflow execution, and secret exposure; it is not a new incident.",
+  "status": "exclude",
+  "reason": "This is a substantive, researcher-confirmed campaign, but it duplicates the already-tracked Gheist incident fdf212b3998ab3a2; the source provides additional detail rather than a distinct incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is additional reporting on the already tracked Gheist campaign and substantiates real compromises of GitHub accounts and repositories, workflow execution, and secret exposure; it is not a new incident.",
-    "title": "Gheist campaign abused stolen GitHub tokens in private repositories",
-    "incident_id": "fdf212b3998ab3a2"
+    "status": "exclude",
+    "reason": "This is a substantive, researcher-confirmed campaign, but it duplicates the already-tracked Gheist incident fdf212b3998ab3a2; the source provides additional detail rather than a distinct incident.",
+    "title": "Gheist campaign abused stolen GitHub tokens across private repositories"
    }
   ],
   "evidence": "article",
@@ -18493,15 +18492,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-10-30T05:55:46+00:00",
+  "checked": "2026-10-30T13:03:35+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Independent incident-response reporting substantiates an actual compromise of a business-critical multi-cloud environment and confirms that an AI agent conducted the intrusion. It matches the already-tracked Wiz agentic cloud intrusion event.",
+  "reason": "Wiz CIRT substantiates a consequential real-world autonomous cloud intrusion with privileged access and sensitive-secret theft; this is the same incident already tracked as d22f0579003d30c6.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Independent incident-response reporting substantiates an actual compromise of a business-critical multi-cloud environment and confirms that an AI agent conducted the intrusion. It matches the already-tracked Wiz agentic cloud intrusion event.",
-    "title": "Wiz observed autonomous AI agent breach a multi-cloud organization",
+    "reason": "Wiz CIRT substantiates a consequential real-world autonomous cloud intrusion with privileged access and sensitive-secret theft; this is the same incident already tracked as d22f0579003d30c6.",
+    "title": "Wiz investigated autonomous multi-cloud intrusion",
     "incident_id": "d22f0579003d30c6"
    }
   ],
@@ -18986,16 +18985,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-10-30T05:55:46+00:00",
+  "checked": "2026-10-30T13:03:35+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Wiz independently substantiates multiple real GCP compromises involving privileged access and substantial unauthorized AI charges; this is the same campaign already tracked under f58ed76ff84133f9, so it is recorded as an additional source rather than a new incident.",
+  "status": "exclude",
+  "reason": "This is the same GCP takeover and Gemini LLMjacking campaign already tracked under incident f58ed76ff84133f9; the source provides additional detail but not a distinct incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Wiz independently substantiates multiple real GCP compromises involving privileged access and substantial unauthorized AI charges; this is the same campaign already tracked under f58ed76ff84133f9, so it is recorded as an additional source rather than a new incident.",
-    "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
-    "incident_id": "f58ed76ff84133f9"
+    "status": "exclude",
+    "reason": "This is the same GCP takeover and Gemini LLMjacking campaign already tracked under incident f58ed76ff84133f9; the source provides additional detail but not a distinct incident.",
+    "title": "Cloud billing accounts hijacked for unauthorized Gemini usage"
    }
   ],
   "evidence": "article",
@@ -19796,15 +19794,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-10-30T05:55:46+00:00",
+  "checked": "2026-10-30T13:03:35+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed compromise of LiteLLM’s production release and package-distribution infrastructure with credential-stealing payloads; this is the same incident already tracked under e2e13fe6f7503c25.",
+  "reason": "Confirmed compromise of LiteLLM’s production release pipeline and PyPI/container distribution channels with malicious artifacts capable of stealing sensitive credentials; this is the same incident already tracked under e2e13fe6f7503c25.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed compromise of LiteLLM’s production release and package-distribution infrastructure with credential-stealing payloads; this is the same incident already tracked under e2e13fe6f7503c25.",
-    "title": "LiteLLM release pipeline compromised to distribute credential stealer",
+    "reason": "Confirmed compromise of LiteLLM’s production release pipeline and PyPI/container distribution channels with malicious artifacts capable of stealing sensitive credentials; this is the same incident already tracked under e2e13fe6f7503c25.",
+    "title": "LiteLLM release compromised with credential-stealing malware",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -19822,15 +19820,21 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-10-30T05:55:46+00:00",
+  "checked": "2026-10-30T13:03:35+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude because this is a vulnerability disclosure and controlled research demonstration without substantiated real-world victim compromise; the separate LiteLLM reference is not a newly documented incident here.",
+  "status": "include",
+  "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without established external victim harm.; Include as a duplicate-supported mention of the confirmed LiteLLM supply-chain compromise; it describes a malicious release distributed through PyPI and Docker.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude because this is a vulnerability disclosure and controlled research demonstration without substantiated real-world victim compromise; the separate LiteLLM reference is not a newly documented incident here.",
-    "title": "Wiz disclosed PHP2Shell vulnerabilities after controlled exploit demonstrations"
+    "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without established external victim harm.",
+    "title": "PHP2Shell vulnerabilities demonstrated in controlled research"
+   },
+   {
+    "status": "include",
+    "reason": "Include as a duplicate-supported mention of the confirmed LiteLLM supply-chain compromise; it describes a malicious release distributed through PyPI and Docker.",
+    "title": "Malicious LiteLLM 1.107.0 package uploaded to PyPI and Docker",
+    "incident_id": "e2e13fe6f7503c25"
    }
   ],
   "evidence": "article",
@@ -25315,20 +25319,19 @@
  "https://thehackernews.com/2026/10/binance-suffers-security-breach.html": {
   "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
   "source": "The Hacker News",
-  "checked": "2026-10-30T05:55:46+00:00",
+  "checked": "2026-10-30T13:03:35+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Binance confirmed an actual compromise with unauthorized withdrawals, temporary trading-platform restrictions, and multibillion-dollar financial impact. This is distinct from the previously tracked Bitget wallet theft.",
+  "status": "exclude",
+  "reason": "This is a substantive update and additional-source corroboration for the already-tracked Binance breach, not a distinct incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Binance confirmed an actual compromise with unauthorized withdrawals, temporary trading-platform restrictions, and multibillion-dollar financial impact. This is distinct from the previously tracked Bitget wallet theft.",
-    "title": "Binance breach enabled approximately $5.9 billion in withdrawals",
-    "incident_id": "0608e73237d158c5"
+    "status": "exclude",
+    "reason": "This is a substantive update and additional-source corroboration for the already-tracked Binance breach, not a distinct incident.",
+    "title": "Binance breach enabled approximately $5.9 billion in withdrawals"
    }
   ],
   "evidence": "article",
-  "summary_hash": "cc2419ca5d33c6dbe3bb5b8e820cfa409d5a9416eda9de586f0f3b485f8567a1",
+  "summary_hash": "8d0990275bfab038aaca0630aa9e24673f825a20d22bd8c433288ba20f143049",
   "item": {
    "id": "0608e73237d158c5",
    "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
@@ -25362,5 +25365,465 @@
    "source": "BleepingComputer",
    "published_at": "2026-10-29T23:35:52+00:00"
   }
+ },
+ "https://www.securityweek.com/max-severity-gitlab-vulnerability-exploited-against-alpine-linux/": {
+  "title": "Max-Severity GitLab Vulnerability Exploited Against Alpine Linux",
+  "source": "SecurityWeek",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude because the reported activity was a failed exploitation attempt with no substantiated unauthorized access, data theft, tampering, or operational consequence.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude because the reported activity was a failed exploitation attempt with no substantiated unauthorized access, data theft, tampering, or operational consequence.",
+    "title": "Failed CVE-2026-97229 exploit attempt against Alpine Linux GitLab"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "85806d8f58efda7c3cccfdc0474a3d6f0395aeb8e940286ddfe783d7bbbbc518",
+  "item": {
+   "id": "d6e03c506b4f0957",
+   "title": "Max-Severity GitLab Vulnerability Exploited Against Alpine Linux",
+   "url": "https://www.securityweek.com/max-severity-gitlab-vulnerability-exploited-against-alpine-linux/",
+   "date": "2026-10-30",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-30T09:32:27+00:00"
+  }
+ },
+ "https://www.securityweek.com/fresh-wordpress-vulnerability-in-attackers-crosshairs/": {
+  "title": "Fresh WordPress Vulnerability in Attackers’ Crosshairs",
+  "source": "SecurityWeek",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the source reports active exploitation attempts but explicitly states that successful compromises were not reported.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the source reports active exploitation attempts but explicitly states that successful compromises were not reported.",
+    "title": "WordPress update-process vulnerability targeted without confirmed compromises"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "0d33f0dcef470e7d3744fd2d8264d8a46b03200cba76715893b5db5c4eb6da76",
+  "item": {
+   "id": "d60fe79bc501a73f",
+   "title": "Fresh WordPress Vulnerability in Attackers’ Crosshairs",
+   "url": "https://www.securityweek.com/fresh-wordpress-vulnerability-in-attackers-crosshairs/",
+   "date": "2026-10-30",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-30T12:04:13+00:00"
+  }
+ },
+ "https://www.securityweek.com/drupal-commerce-core-vulnerability-exploited-against-online-stores/": {
+  "title": "Drupal Commerce Core Vulnerability Exploited Against Online Stores",
+  "source": "SecurityWeek",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Potentially meaningful exploitation is reported, but the source does not substantiate an actual consequential compromise or victim impact; defer pending evidence of affected stores or concrete consequences.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Potentially meaningful exploitation is reported, but the source does not substantiate an actual consequential compromise or victim impact; defer pending evidence of affected stores or concrete consequences.",
+    "title": "Drupal Commerce Core exploitation reported against online stores"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "5a8706a10d3c8bf25e555184fa32d23f426c4ef123734b127b6746603d8df508",
+  "item": {
+   "id": "76d68c45944a2559",
+   "title": "Drupal Commerce Core Vulnerability Exploited Against Online Stores",
+   "url": "https://www.securityweek.com/drupal-commerce-core-vulnerability-exploited-against-online-stores/",
+   "date": "2026-10-30",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-30T11:07:11+00:00"
+  }
+ },
+ "https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/": {
+  "title": "$6 Billion Binance Hack Bears Hallmarks of North Korea’s TraderTraitor",
+  "source": "SecurityWeek",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is the same Binance breach already tracked under 0608e73237d158c5, with updated reporting on the estimated theft, intrusion path, and attribution assessment.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is the same Binance breach already tracked under 0608e73237d158c5, with updated reporting on the estimated theft, intrusion path, and attribution assessment.",
+    "title": "Binance hot-wallet intrusion enabled $6.36 billion crypto theft",
+    "incident_id": "0608e73237d158c5"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "0271b5dfa0d7547739fa6476a893a5f0af83c967da5eb6d9358472e2cd007c87",
+  "item": {
+   "id": "bea4dfc19f15df8e",
+   "title": "$6 Billion Binance Hack Bears Hallmarks of North Korea’s TraderTraitor",
+   "url": "https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/",
+   "date": "2026-10-30",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-30T08:16:26+00:00"
+  }
+ },
+ "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/": {
+  "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
+  "source": "SecurityWeek",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The report substantiates a real third-party compromise, malicious code served to Polymarket users, unauthorized withdrawals, and a temporary trading disruption. It is the same incident already tracked under 83273d8d85f8311b.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The report substantiates a real third-party compromise, malicious code served to Polymarket users, unauthorized withdrawals, and a temporary trading disruption. It is the same incident already tracked under 83273d8d85f8311b.",
+    "title": "Polymarket halted trading after DebugBear script compromise",
+    "incident_id": "83273d8d85f8311b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "db889d93178262f80b78092f45a5bd576ca57dbc1e086df4ea1a1b46a1f09098",
+  "item": {
+   "id": "535f68c41a1f1c89",
+   "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
+   "url": "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/",
+   "date": "2026-10-30",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-30T09:41:36+00:00"
+  }
+ },
+ "https://www.hipaajournal.com/lehigh-valley-health-network-hipaa-penalty/": {
+  "title": "Lehigh Valley Health Network Pays $800K Penalty to Resolve HIPAA Violations",
+  "source": "HIPAA Journal",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Although published as a HIPAA enforcement and settlement report, it provides substantive facts about a confirmed ransomware compromise, sensitive-data theft, and disclosure affecting 248,359 people. The incident is dated to February 2023 rather than treated as a new 2026 attack.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Although published as a HIPAA enforcement and settlement report, it provides substantive facts about a confirmed ransomware compromise, sensitive-data theft, and disclosure affecting 248,359 people. The incident is dated to February 2023 rather than treated as a new 2026 attack.",
+    "title": "Lehigh Valley Health Network ransomware exposed 248,359 records",
+    "incident_id": "1e65e1c43420ba36"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "5060f43512fa8d399e510722652e02afe30db7ac1a2ac81b500410dd638a09a2",
+  "item": {
+   "id": "1e65e1c43420ba36",
+   "title": "Lehigh Valley Health Network Pays $800K Penalty to Resolve HIPAA Violations",
+   "url": "https://www.hipaajournal.com/lehigh-valley-health-network-hipaa-penalty/",
+   "date": "2026-10-30",
+   "source": "HIPAA Journal",
+   "published_at": "2026-10-30T10:48:28+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/": {
+  "title": "CISA says max severity GitLab flaw now exploited in the wild",
+  "source": "BleepingComputer",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is a vulnerability and active-exploitation alert without a substantiated successful compromise or documented victim consequences.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is a vulnerability and active-exploitation alert without a substantiated successful compromise or documented victim consequences.",
+    "title": "GitLab flaw exploited in the wild, with no confirmed victims"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e3d8af22d6585ce9556ba488dab424292f2c9f2d0bd87652cba14748313af57b",
+  "item": {
+   "id": "08ac8b3b07ff698a",
+   "title": "CISA says max severity GitLab flaw now exploited in the wild",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/",
+   "date": "2026-10-30",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-30T13:00:32+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/": {
+  "title": "Drupal warns of critical Commerce Core flaw exploited in attacks",
+  "source": "BleepingComputer",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is a vulnerability and exploitation warning with no substantiated actual victim compromise or meaningful operational, data, financial, or downstream consequence.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is a vulnerability and exploitation warning with no substantiated actual victim compromise or meaningful operational, data, financial, or downstream consequence.",
+    "title": "Drupal Commerce Core flaw reportedly exploited in the wild"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "d59bc0bf9fd2b4f3b1de4a920e11db0a3dffde4057ee9f1ac5ebf1669efce980",
+  "item": {
+   "id": "f7643882c8417522",
+   "title": "Drupal warns of critical Commerce Core flaw exploited in attacks",
+   "url": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/",
+   "date": "2026-10-30",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-30T10:16:07+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/": {
+  "title": "Binance links $6.3 billion crypto theft to compromised DevOps laptop",
+  "source": "BleepingComputer",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a confirmed Binance compromise with unauthorized withdrawals, substantial temporary service disruption, and multi-billion-dollar financial impact. It updates the already-tracked incident with Binance’s explanation and revised loss estimates; it is not a separate incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a confirmed Binance compromise with unauthorized withdrawals, substantial temporary service disruption, and multi-billion-dollar financial impact. It updates the already-tracked incident with Binance’s explanation and revised loss estimates; it is not a separate incident.",
+    "title": "Binance breach enabled approximately $6.3 billion in withdrawals",
+    "incident_id": "0608e73237d158c5"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "9e08adce060473d10e018a6f7d7ce7187c350a882f491fcbbcdd0efd740aeaa9",
+  "item": {
+   "id": "94f0fd322b0b1aa7",
+   "title": "Binance links $6.3 billion crypto theft to compromised DevOps laptop",
+   "url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
+   "date": "2026-10-30",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-30T09:18:13+00:00"
+  }
+ },
+ "https://therecord.media/russian-home-goods-chain-faces-disruptions": {
+  "title": "Russian popular home goods chain faces days of disruption following cyberattack",
+  "source": "The Record",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The retailer confirmed an actual cyberattack that caused a multi-day outage, store closures and failed order-collection and support services. Data compromise, attribution and financial impact were not established.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The retailer confirmed an actual cyberattack that caused a multi-day outage, store closures and failed order-collection and support services. Data compromise, attribution and financial impact were not established.",
+    "title": "Cyberattack disrupts Russian retailer Poryadok for five days",
+    "incident_id": "1ec6874f660c4580"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "ecb38ae5768dfbdecafc0dffbd59788b56e3b31771ca9187c4a4d19590f857bb",
+  "item": {
+   "id": "1ec6874f660c4580",
+   "title": "Russian popular home goods chain faces days of disruption following cyberattack",
+   "url": "https://therecord.media/russian-home-goods-chain-faces-disruptions",
+   "date": "2026-10-30",
+   "source": "The Record",
+   "published_at": "2026-10-30T11:30:00+00:00"
+  }
+ },
+ "https://therecord.media/polymarket-confirms-cyberattack-third-party": {
+  "title": "Polymarket confirms cyberattack on third-party provider after outages",
+  "source": "The Record",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a confirmed third-party compromise with meaningful service disruption and substantiated cryptocurrency losses; it is a later report of the already-tracked Polymarket/DebugBear incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a confirmed third-party compromise with meaningful service disruption and substantiated cryptocurrency losses; it is a later report of the already-tracked Polymarket/DebugBear incident.",
+    "title": "Polymarket third-party provider compromise caused outages and crypto losses",
+    "incident_id": "83273d8d85f8311b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "1db925160f4fe76e42ce3268fadcf89f711e800220fd6ef8bd4cf0b61d0c5e9f",
+  "item": {
+   "id": "64a024892016c5aa",
+   "title": "Polymarket confirms cyberattack on third-party provider after outages",
+   "url": "https://therecord.media/polymarket-confirms-cyberattack-third-party",
+   "date": "2026-10-30",
+   "source": "The Record",
+   "published_at": "2026-10-30T11:33:00+00:00"
+  }
+ },
+ "https://therecord.media/hackers-target-government-windows-systems-asia-new-malware": {
+  "title": "Hackers target government Windows systems in Asia with new malware",
+  "source": "The Record",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Kaspersky independently substantiated an actual infection of a government computer; this is not merely a vulnerability or attacker claim. Scope, victim identity, and downstream impact remain uncertain.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Kaspersky independently substantiated an actual infection of a government computer; this is not merely a vulnerability or attacker claim. Scope, victim identity, and downstream impact remain uncertain.",
+    "title": "NetamLoader infected a government Windows system in Asia",
+    "incident_id": "fcfc74f3570ba5e9"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "57a7d31a44e955760c482ed14d6d31f4d38040a7e90c2d3de8c1a2610ff2c194",
+  "item": {
+   "id": "fcfc74f3570ba5e9",
+   "title": "Hackers target government Windows systems in Asia with new malware",
+   "url": "https://therecord.media/hackers-target-government-windows-systems-asia-new-malware",
+   "date": "2026-10-30",
+   "source": "The Record",
+   "published_at": "2026-10-30T12:36:00+00:00"
+  }
+ },
+ "https://therecord.media/binance-hit-by-record-6-billion-crypto-hack": {
+  "title": "Binance hit by record $6.3 billion crypto hack, scrambles to freeze funds",
+  "source": "The Record",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a substantiated Binance compromise with unauthorized access to withdrawal systems, temporary service suspension, and multibillion-dollar financial consequences. It duplicates the already tracked Binance incident while providing updated loss and recovery details.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a substantiated Binance compromise with unauthorized access to withdrawal systems, temporary service suspension, and multibillion-dollar financial consequences. It duplicates the already tracked Binance incident while providing updated loss and recovery details.",
+    "title": "Binance breach enabled approximately $6.3 billion in withdrawals",
+    "incident_id": "0608e73237d158c5"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "5aa3ad769fa1926941970f76281da2242632d2757e29d2d85b9fdca79055f6a3",
+  "item": {
+   "id": "893b9a4cb8aba330",
+   "title": "Binance hit by record $6.3 billion crypto hack, scrambles to freeze funds",
+   "url": "https://therecord.media/binance-hit-by-record-6-billion-crypto-hack",
+   "date": "2026-10-30",
+   "source": "The Record",
+   "published_at": "2026-10-30T00:00:00+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html": {
+  "title": "Syrian Hacker Behind Fake Tweet That Triggered $136 Billion Market Drop Gets 42 Months in Prison",
+  "source": "The Hacker News",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is a legal/sentencing recap of attacks from 2013 and earlier, with no substantive newly reported incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is a legal/sentencing recap of attacks from 2013 and earlier, with no substantive newly reported incident.",
+    "title": "Syrian Electronic Army conspiracy sentencing recap"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "194205f4ecabf73713ee7b55eed92e49be86e702ba1a7bd83a3ef8f944a93112",
+  "item": {
+   "id": "9a8a1b6ecac8bb72",
+   "title": "Syrian Hacker Behind Fake Tweet That Triggered $136 Billion Market Drop Gets 42 Months in Prison",
+   "url": "https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html",
+   "date": "2026-10-30",
+   "source": "The Hacker News",
+   "published_at": "2026-10-30T10:40:45+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html": {
+  "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor",
+  "source": "The Hacker News",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The report substantiates a real supply-chain compromise of an AI coding extension, with distribution to users and observed persistence and reconnaissance behavior; it is not merely a vulnerability or attacker claim.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The report substantiates a real supply-chain compromise of an AI coding extension, with distribution to users and observed persistence and reconnaissance behavior; it is not merely a vulnerability or attacker claim.",
+    "title": "Trojanized Claude Code extension distributed through Cursor Marketplace",
+    "incident_id": "e3ed66e626b0480b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "bcaea396bfb885718d9c37b7611b1dbe70d055bda858951bde6f467920bfba7c",
+  "item": {
+   "id": "e3ed66e626b0480b",
+   "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor",
+   "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+   "date": "2026-10-30",
+   "source": "The Hacker News",
+   "published_at": "2026-10-30T08:55:47+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html": {
+  "title": "Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw",
+  "source": "The Hacker News",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is a vulnerability/exploitation warning without substantiated evidence of a specific consequential compromise or victim impact.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is a vulnerability/exploitation warning without substantiated evidence of a specific consequential compromise or victim impact.",
+    "title": "Drupal Commerce Core flaw reportedly exploited in the wild"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "06a259e11b761dc53d9e128609b76d6c6eb4e5b9bae208935567f59ef858e941",
+  "item": {
+   "id": "1841f65cd64709a5",
+   "title": "Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw",
+   "url": "https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html",
+   "date": "2026-10-30",
+   "source": "The Hacker News",
+   "published_at": "2026-10-30T07:45:30+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html": {
+  "title": "CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV",
+  "source": "The Hacker News",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the Alpine Linux activity was an unsuccessful, blocked exploitation attempt, while the Cisco item lacks confirmed victim compromise or observed impact; vulnerability exploitation alone is insufficient.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the Alpine Linux activity was an unsuccessful, blocked exploitation attempt, while the Cisco item lacks confirmed victim compromise or observed impact; vulnerability exploitation alone is insufficient.",
+    "title": "CISA adds exploited GitLab and Cisco firewall flaws to KEV"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "95e3dc322f449f580abac3aec438f01bab0591a079f235b2b6a4c358861944cb",
+  "item": {
+   "id": "9b88dceb5d76d173",
+   "title": "CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV",
+   "url": "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html",
+   "date": "2026-10-30",
+   "source": "The Hacker News",
+   "published_at": "2026-10-30T07:27:05+00:00"
+  }
+ },
+ "https://www.darkreading.com/cybersecurity-operations/why-ctf-more-important-than-ever": {
+  "title": "Why CTF Competitions May Be More Important Than Ever",
+  "source": "Dark Reading",
+  "checked": "2026-10-30T13:03:35+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "The source is an opinion or analysis article about CTF competitions, not a substantive cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The source is an opinion or analysis article about CTF competitions, not a substantive cyber incident.",
+    "title": "Dark Reading discusses the value of CTF competitions"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "86f607aca3cb97add9476e9eb05d2e523a7c2e0959659cb83eef2d3bfc3700ca",
+  "item": {
+   "id": "a663bb4053d14ec4",
+   "title": "Why CTF Competitions May Be More Important Than Ever",
+   "url": "https://www.darkreading.com/cybersecurity-operations/why-ctf-more-important-than-ever",
+   "date": "2026-10-29",
+   "source": "Dark Reading",
+   "published_at": "2026-10-29T19:56:44+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  }
 }
