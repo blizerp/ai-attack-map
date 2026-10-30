@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T13:03:35+00:00",
+ "updated": "2026-10-30T22:25:52+00:00",
  "incidents": [
   {
    "title": "Binance breach enabled approximately $5.9 billion in withdrawals",
@@ -313,7 +313,647 @@
     "source_url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
     "assessed_at": "2026-10-30T13:03:35+00:00",
     "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-30",
+     "what": "A trojanized Claude Code extension distributed for about 11 hours installed persistence, attempted to add an attacker-controlled SSH key and establish a reverse tunnel, and sent host reconnaissance including usernames, hostnames, public IPs, Git email addresses, and environment-variable names. Researchers found coding errors likely prevented remote SSH access on many Windows and macOS systems, although persistence and reconnaissance still functioned.",
+     "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
+     "source": "BleepingComputer"
+    }
+   ]
+  },
+  {
+   "title": "Fragnesia-PHP2Shell campaign rooted 25 servers",
+   "date": "2026-10-29",
+   "category": "using_ai",
+   "victim": "At least 25 servers in the United States, Japan, Taiwan, and South Korea, including three in a US government-affiliated environment",
+   "attacker": "Unattributed threat actors; Dream Security researchers documented the operation and exploitation artifacts",
+   "what": "Attackers chained the PHP2Shell vulnerabilities (CVE-2026-109618 and CVE-2026-109619) with the Fragnesia Linux kernel flaw (CVE-2026-46300) to deploy webshells and obtain root access. Dream Security identified target lists, exploitation logs, and approximately 40 post-exploitation scripts.",
+   "ai_role": "SecurityWeek reports that the hackers were assisted by AI in chaining the exploits; the reporting does not establish that an AI agent independently carried out the intrusions.",
+   "why": "The campaign demonstrated successful compromise and root-level control of multiple internet-facing servers, including systems in a US government-affiliated environment. The available reporting does not establish data theft, service disruption, or final organizational impact.",
+   "where": "United States, Japan, Taiwan, and South Korea",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Independent researchers observed a completed intrusion operation that rooted 25 servers across four countries and focused on three servers in a US government-affiliated environment; this is more than a vulnerability or exploit claim.",
+   "id": "ea0735cf930607de",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
+   "added": "2026-10-29T22:49:24+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Dream Security reported rooted servers, exploitation logs, and post-exploitation activity, including three servers in a US government-affiliated environment. The source does not substantiate data theft, outages, financial loss, or effects on essential services.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
+    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
+    },
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
+    },
+    {
+     "lat": 23.9739374,
+     "lon": 120.9820179,
+     "label": "Taiwan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
+    },
+    {
+     "lat": 36.638392,
+     "lon": 127.6961188,
+     "label": "South Korea",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/php2shell-attacks-root-palo-alto-firewalls-but-fail-against-wordpress/"
+    }
+   ],
+   "ai_source_url": "https://www.securityweek.com/php2shell-attacks-root-palo-alto-firewalls-but-fail-against-wordpress/",
+   "ai_source_name": "SecurityWeek",
+   "updates": [
+    {
+     "date": "2026-10-30",
+     "what": "Attackers chained the PHP2Shell vulnerabilities CVE-2026-109618 and CVE-2026-109619 with the Fragnesia Linux kernel privilege-escalation flaw to deploy webshells and obtain root access on Palo Alto firewall management interfaces. Palo Alto Networks independently confirmed the reported tooling and campaign.",
+     "url": "https://www.securityweek.com/php2shell-attacks-root-palo-alto-firewalls-but-fail-against-wordpress/",
+     "source": "SecurityWeek"
+    }
+   ]
+  },
+  {
+   "title": "Cathedral AI agents accessed limited Anthropic business systems",
+   "date": "2026-10-30",
+   "category": "by_ai_agent",
+   "victim": "Anthropic",
+   "attacker": "Cathedral, a cybersecurity startup; Anthropic disputes the reported scope and says the access was cut off the same day.",
+   "what": "Cathedral reported that its AI agents entered Anthropic systems through weaknesses in third-party business software and reached meeting transcripts, salary and job-offer data, and Slack discussions. Anthropic said only a limited set of sales, HR, and IT systems was reached and that Claude conversations, source code, and model weights were not affected.",
+   "ai_role": "Cathedral said AI agents conducted the intrusion and accessed Anthropic systems; the precise agent activity and scope remain disputed.",
+   "why": "The incident involved unauthorized access to an AI provider’s internal systems and sensitive organizational records, although Anthropic says core model assets were unaffected.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Anthropic acknowledged that a limited set of internal business systems was reached, while the reported access to sensitive personnel and internal communications data remains disputed in scope.",
+   "id": "cb49d2d670c8087f",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/",
+   "added": "2026-10-30T22:25:52+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "under_investigation",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Anthropic said limited sales, HR, and IT systems were reached and cut off the access the same day. The available reporting does not establish the full scope of data accessed or any financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/",
+    "assessed_at": "2026-10-30T22:25:52+00:00",
+    "method": "reported-impact-v1"
    }
+  },
+  {
+   "title": "Cloudflare Workers AI cross-tenant responses exposed customer data",
+   "date": "2026-09-09",
+   "category": "on_ai_system",
+   "victim": "Cloudflare Workers AI customers using the GLM 5.3 model",
+   "attacker": "No attacker identified; Cloudflare attributed the exposure to a configuration mismatch and an SGLang inference-engine bug. A Knostic researcher reported the issue.",
+   "what": "Between August 27 and September 9, 155 GLM 5.3 responses on Cloudflare’s Workers AI platform contained data from other customers’ recent requests. The issue affected over-length prompts and was caused by cache handling in combination with an SGLang bug; Cloudflare fixed it and reported no evidence of deliberate exploitation.",
+   "ai_role": "The affected system was an AI inference platform; the reporting does not indicate that an AI agent carried out the exposure.",
+   "why": "Cross-tenant leakage exposed customer-request data across an AI service, demonstrating compromise of data isolation even though deliberate exploitation was not observed.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Cloudflare documented 155 cross-customer responses containing residual data from other requests, making this a confirmed AI-platform data-isolation failure with exposure beyond a single tenant.",
+   "id": "2c8826cf4b8e74e4",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/",
+   "added": "2026-10-30T22:25:52+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Cloudflare confirmed that 155 responses contained data from other customers’ recent requests. The available reporting does not identify the contents of the leaked prompts or establish deliberate access or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/",
+    "assessed_at": "2026-10-30T22:25:52+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Connecticut DSS breach affected 41,000 people",
+   "date": "2026-08",
+   "category": "major_cyber",
+   "victim": "Connecticut Department of Social Services",
+   "attacker": "Unknown; no attribution reported.",
+   "what": "A hacking incident involving a provider reimbursement account exposed or impermissibly accessed protected health information of 41,000 people.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident affected a state public-service agency and thousands of healthcare-related records through unauthorized access to a reimbursement account.",
+   "where": "Connecticut, United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "HHS OCR reporting records a confirmed hacking/IT incident affecting 41,000 individuals at a state department.",
+   "id": "92bf4ffa96e70947",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+   "added": "2026-10-30T22:25:52+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 41.6500201,
+   "lon": -72.7342163,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Protected health information of 41,000 individuals was reported exposed or impermissibly accessed. Service disruption and financial loss were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+    "assessed_at": "2026-10-30T22:25:52+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 41.6500201,
+     "lon": -72.7342163,
+     "label": "Connecticut, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/"
+    }
+   ]
+  },
+  {
+   "title": "Qilin ransomware affected City Ambulance Service records",
+   "date": "2026-08",
+   "category": "major_cyber",
+   "victim": "Viking Enterprises, Inc., doing business as City Ambulance Service",
+   "attacker": "Qilin ransomware; attribution to the broader operators is not established.",
+   "what": "A Qilin ransomware attack affected the email systems of City Ambulance Service and exposed protected health information of 14,324 people.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident affected an emergency medical services provider and involved confirmed exposure of patient information.",
+   "where": "Texas, United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "A ransomware compromise of an ambulance-service provider exposed more than 14,000 individuals' protected health information.",
+   "id": "45d9079931374c1a",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+   "added": "2026-10-30T22:25:52+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 31.2638905,
+   "lon": -98.5456116,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The report identifies a Qilin ransomware attack and 14,324 affected individuals. Operational disruption and financial loss were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+    "assessed_at": "2026-10-30T22:25:52+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 31.2638905,
+     "lon": -98.5456116,
+     "label": "Texas, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/"
+    }
+   ]
+  },
+  {
+   "title": "Public Partnerships breach involved insider data theft",
+   "date": "2026-08",
+   "category": "major_cyber",
+   "victim": "Public Partnerships LLC",
+   "attacker": "A former network facilitator; the report describes insider data theft rather than external attribution.",
+   "what": "A former facilitator stole data from a network server, affecting protected health information of 12,018 people.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The report explicitly characterizes the event as insider data theft involving a healthcare business associate.",
+   "where": "New York, United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Confirmed theft by a trusted insider affected more than 12,000 healthcare records.",
+   "id": "701af7aebe198ea5",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+   "added": "2026-10-30T22:25:52+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 40.7127281,
+   "lon": -74.0060152,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Data theft from a network server was reported for 12,018 individuals. No service disruption or financial loss was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+    "assessed_at": "2026-10-30T22:25:52+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 40.7127281,
+     "lon": -74.0060152,
+     "label": "New York, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/"
+    }
+   ]
+  },
+  {
+   "title": "Kim Knobbe breach reported with affected count unresolved",
+   "date": "2026-08",
+   "category": "major_cyber",
+   "victim": "Kim Knobbe, a healthcare business associate",
+   "attacker": "Unknown; no attribution or incident details were reported.",
+   "what": "An unauthorized access or disclosure incident involving a network server was reported. The initial OCR filing listed 11,927 affected individuals, but provided no further information about the event.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The breach record indicates a consequential unauthorized-access event involving healthcare information, although the mechanism and actual scope remain unclear.",
+   "where": "Missouri, United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The OCR record identifies nearly 12,000 potentially affected individuals while explicitly noting that incident information was unavailable.",
+   "id": "b6308ef8f0623e44",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+   "added": "2026-10-30T22:25:52+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 38.7604815,
+   "lon": -92.5617875,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "An unauthorized access/disclosure incident and an affected count of 11,927 were reported, but the available source provides no details on what data was accessed or whether theft occurred.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+    "assessed_at": "2026-10-30T22:25:52+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 38.7604815,
+     "lon": -92.5617875,
+     "label": "Missouri, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/"
+    }
+   ]
+  },
+  {
+   "title": "Baraga County Memorial Hospital reported ransomware breach",
+   "date": "2026-08",
+   "category": "major_cyber",
+   "victim": "Baraga County Memorial Hospital",
+   "attacker": "Wallstreet ransomware; attribution to the operators is not independently established.",
+   "what": "A Wallstreet ransomware attack was reported at Baraga County Memorial Hospital. The initial filing listed 501 affected individuals pending investigation.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The event is a confirmed ransomware incident at a hospital, although the available report uses a provisional affected count and does not describe operational consequences.",
+   "where": "Michigan, United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "A hospital ransomware compromise is operationally significant even though the initial affected count is a placeholder and final scope is unresolved.",
+   "id": "19cc58cfbd213d28",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+   "added": "2026-10-30T22:25:52+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "under_investigation",
+   "lat": 43.6211955,
+   "lon": -84.6824346,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Ransomware at the hospital was reported, but the source provides only a provisional count of 501 affected individuals and does not establish data theft or service disruption.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+    "assessed_at": "2026-10-30T22:25:52+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 43.6211955,
+     "lon": -84.6824346,
+     "label": "Michigan, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/"
+    }
+   ]
+  },
+  {
+   "title": "WellDyneRX reported hacking incident affecting 500 people",
+   "date": "2026-08",
+   "category": "major_cyber",
+   "victim": "WellDyneRX, LLC",
+   "attacker": "Unknown; no attribution reported.",
+   "what": "A hacking incident affecting a network server was reported at WellDyneRX. The initial filing listed 500 affected individuals.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The breach was reported by a healthcare-related organization and involved unauthorized access to a network server, although the initial affected count is provisional.",
+   "where": "Florida, United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "This is a confirmed organizational network compromise involving protected health information, with final scope still unresolved.",
+   "id": "f83e192dccafa475",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+   "added": "2026-10-30T22:25:52+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "under_investigation",
+   "lat": 27.7567667,
+   "lon": -81.4639835,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "A network-server hacking incident was reported with an initial count of 500 affected individuals. The available report does not establish data theft, service disruption, or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+    "assessed_at": "2026-10-30T22:25:52+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 27.7567667,
+     "lon": -81.4639835,
+     "label": "Florida, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/"
+    }
+   ]
+  },
+  {
+   "title": "Revolve breach exposed payment-card information",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "Revolve, an online fashion retailer, and customers who saved payment information in Revolve accounts",
+   "attacker": "Unknown cybercriminals; attribution was not reported.",
+   "what": "Hackers accessed multiple Revolve systems and used automated means to obtain customer names, contact information, payment-card numbers, and expiration dates. Revolve reported at least 127,200 affected people in Texas and 1,328 in Vermont, with notifications also filed in Massachusetts.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident involved unauthorized access to sensitive payment-card data held by a major e-commerce retailer. Revolve said there were no operational disruptions and no material financial impact was expected; the total affected population remains unknown.",
+   "where": "United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "A credible report based on Revolve’s SEC filing and regulatory notifications documents theft of payment-card information from an online retailer, with at least 128,528 affected people identified in Texas and Vermont.",
+   "id": "d098d27b6b4f9769",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards",
+   "added": "2026-10-30T22:25:52+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 31.2638905,
+   "lon": -98.5456116,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Revolve confirmed unauthorized access and theft of names, contact information, payment-card numbers, and expiration dates. The company reported no operational disruption and said it did not expect a material financial impact; the total number of affected customers and any fraud losses were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards",
+    "assessed_at": "2026-10-30T22:25:52+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 31.2638905,
+     "lon": -98.5456116,
+     "label": "Texas, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards"
+    },
+    {
+     "lat": 44.5990718,
+     "lon": -72.5002608,
+     "label": "Vermont, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards"
+    },
+    {
+     "lat": 42.3788774,
+     "lon": -72.032366,
+     "label": "Massachusetts, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards"
+    }
+   ]
+  },
+  {
+   "title": "Florida financial-aid breach exposed records of 4.9 million people",
+   "date": "2026-10-19",
+   "category": "major_cyber",
+   "victim": "Florida Department of Education, including the Florida Student Financial Aid website",
+   "attacker": "Unknown; Florida Department of Education reported access by an unauthorized party and did not identify the attacker.",
+   "what": "An unauthorized party accessed a system or database containing financial-aid applicant information, including names, addresses, phone numbers, genders, email addresses, Social Security numbers, and dates of birth. The state took the financial-aid website offline and began an investigation with the Florida Digital Service and Florida Department of Law Enforcement.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident exposed sensitive identity and financial-aid applicant data for approximately 4.9 million people, creating substantial identity-theft risk. Financial aid disbursements, tuition payments, scholarships, grants, and student loans were reported as unaffected.",
+   "where": "Florida, United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Florida officials confirmed unauthorized access and warned that sensitive records, including Social Security numbers and dates of birth, were exposed for nearly 5 million financial-aid applicants. The affected site was taken offline, although core aid payments and programs continued.",
+   "id": "4c8edab482b9c4df",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/florida-warns-5-million-affected-financial-aid-site-breach",
+   "added": "2026-10-30T22:25:52+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 27.7567667,
+   "lon": -81.4639835,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The Florida Student Financial Aid website was taken down and other department services could face temporary disruption, but financial-aid disbursements and related programs were reported unaffected. Officials confirmed exposure of sensitive personal records affecting approximately 4.9 million people; financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/florida-warns-5-million-affected-financial-aid-site-breach",
+    "assessed_at": "2026-10-30T22:25:52+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 27.7567667,
+     "lon": -81.4639835,
+     "label": "Florida, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/florida-warns-5-million-affected-financial-aid-site-breach"
+    }
+   ]
+  },
+  {
+   "title": "ARTEX AI gang breached over 90 South Korean organizations",
+   "date": "September 2025 to October 2026",
+   "category": "using_ai",
+   "victim": "More than 90 organizations in South Korea, including educational institutes, hospitals, large corporations, and golf courses",
+   "attacker": "South Korean cybercrime operation; Seoul Metropolitan Police identified seven suspects, with the alleged gang leader arrested and referred to prosecutors. Attribution remains based on police investigation.",
+   "what": "The operation breached more than 90 organizations and allegedly stole records relating to 8.2 million people. The attackers initially used conventional tools and adopted the ARTEX AI penetration-testing suite in late August 2026; in 38 incidents they demanded ransom payments of 360 million won (reported as approximately US$270,000) to avoid data leakage.",
+   "ai_role": "ARTEX AI was reportedly used to conduct and expand most of the attacks, according to South Korean police and local media.",
+   "why": "The campaign combined unauthorized access to numerous organizations with the theft of 8.2 million records and ransom demands. It is significant as a confirmed law-enforcement case involving AI-assisted cybercrime at multi-organization scale.",
+   "where": "South Korea",
+   "major_impact": "large_scale_data_theft",
+   "significance": "South Korean police linked seven suspects to breaches of more than 90 organizations and reported theft of 8.2 million records. The use of ARTEX AI to expand the operation demonstrates real-world attacker use of AI in a broad data-theft campaign, although the exact records and downstream harm remain under investigation.",
+   "id": "ee1d4a2a3bf84e8a",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-26",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 36.638392,
+   "lon": 127.6961188,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Police and local-media reporting describe actual compromises of more than 90 organizations and theft of 8.2 million records. Ransom demands were reported, but no ransom payment or confirmed financial loss was established; investigators were still checking whether data had been leaked.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/",
+    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.638392,
+     "lon": 127.6961188,
+     "label": "South Korea",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-30",
+     "what": "Beginning October 17, Vapor Panda used the ARTEX AI penetration-testing framework with DeepSeek and another commercial LLM to conduct concurrent intrusions. Post-exploitation was confirmed at nine organizations, including deployment of BLOODALCHEMY, credential spraying, network scanning and reconnaissance; the agents also performed actions such as web-shell creation, password extraction and privileged-account enumeration under human oversight.",
+     "url": "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html",
+     "source": "The Hacker News"
+    }
+   ]
   },
   {
    "title": "Volt Typhoon used Silent Train in zero-day intrusions",
@@ -1078,78 +1718,6 @@
     "assessed_at": "2026-10-29T22:49:24+00:00",
     "method": "reported-impact-v1"
    }
-  },
-  {
-   "title": "Fragnesia-PHP2Shell campaign rooted 25 servers",
-   "date": "2026-10-29",
-   "category": "major_cyber",
-   "victim": "At least 25 servers in the United States, Japan, Taiwan, and South Korea, including three in a US government-affiliated environment",
-   "attacker": "Unattributed threat actors; Dream Security researchers documented the operation and exploitation artifacts",
-   "what": "Attackers chained the PHP2Shell vulnerabilities (CVE-2026-109618 and CVE-2026-109619) with the Fragnesia Linux kernel flaw (CVE-2026-46300) to deploy webshells and obtain root access. Dream Security identified target lists, exploitation logs, and approximately 40 post-exploitation scripts.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The campaign demonstrated successful compromise and root-level control of multiple internet-facing servers, including systems in a US government-affiliated environment. The available reporting does not establish data theft, service disruption, or final organizational impact.",
-   "where": "United States, Japan, Taiwan, and South Korea",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Independent researchers observed a completed intrusion operation that rooted 25 servers across four countries and focused on three servers in a US government-affiliated environment; this is more than a vulnerability or exploit claim.",
-   "id": "ea0735cf930607de",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
-   "added": "2026-10-29T22:49:24+00:00",
-   "reported_date": "2026-10-29",
-   "last_reported": "2026-10-29",
-   "evidence_status": "confirmed",
-   "lat": 39.7837304,
-   "lon": -100.445882,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "Dream Security reported rooted servers, exploitation logs, and post-exploitation activity, including three servers in a US government-affiliated environment. The source does not substantiate data theft, outages, financial loss, or effects on essential services.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "privileged_access",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
-    "assessed_at": "2026-10-29T22:49:24+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 39.7837304,
-     "lon": -100.445882,
-     "label": "United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
-    },
-    {
-     "lat": 36.5748441,
-     "lon": 139.2394179,
-     "label": "Japan",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
-    },
-    {
-     "lat": 23.9739374,
-     "lon": 120.9820179,
-     "label": "Taiwan",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
-    },
-    {
-     "lat": 36.638392,
-     "lon": 127.6961188,
-     "label": "South Korea",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/"
-    }
-   ]
   },
   {
    "title": "China-linked hackers rooted firewalls and accessed management systems",
@@ -2799,7 +3367,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "The Gheist campaign planted sync-check workflows in repositories accessible through stolen tokens to dump repository and environment secrets into workflow logs, then retrieved and deleted the runs. In some private and GitHub Enterprise environments, workflows executed without approval; Wiz also observed private-repository cloning and cloud-role enumeration using credentials from the same organizations.",
+     "what": "The campaign used stolen GitHub tokens to plant workflow files in repositories accessible to compromised accounts. In private repositories and GitHub Enterprise environments, workflows executed, dumped repository and environment secrets into GitHub logs, and the logs were retrieved and deleted. Wiz recovered more than 13,500 planted branches and observed cloud-role assumptions and additional credential-search activity on some self-hosted runners.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -3100,56 +3668,6 @@
     "assessed_at": "2026-10-27T06:10:01+00:00",
     "method": "reported-impact-v1"
    },
-   "more_sources": [],
-   "updates": []
-  },
-  {
-   "title": "ARTEX AI gang breached over 90 South Korean organizations",
-   "date": "September 2025 to October 2026",
-   "category": "using_ai",
-   "victim": "More than 90 organizations in South Korea, including educational institutes, hospitals, large corporations, and golf courses",
-   "attacker": "South Korean cybercrime operation; Seoul Metropolitan Police identified seven suspects, with the alleged gang leader arrested and referred to prosecutors. Attribution remains based on police investigation.",
-   "what": "The operation breached more than 90 organizations and allegedly stole records relating to 8.2 million people. The attackers initially used conventional tools and adopted the ARTEX AI penetration-testing suite in late August 2026; in 38 incidents they demanded ransom payments of 360 million won (reported as approximately US$270,000) to avoid data leakage.",
-   "ai_role": "ARTEX AI was reportedly used to conduct and expand most of the attacks, according to South Korean police and local media.",
-   "why": "The campaign combined unauthorized access to numerous organizations with the theft of 8.2 million records and ransom demands. It is significant as a confirmed law-enforcement case involving AI-assisted cybercrime at multi-organization scale.",
-   "where": "South Korea",
-   "major_impact": "large_scale_data_theft",
-   "significance": "South Korean police linked seven suspects to breaches of more than 90 organizations and reported theft of 8.2 million records. The use of ARTEX AI to expand the operation demonstrates real-world attacker use of AI in a broad data-theft campaign, although the exact records and downstream harm remain under investigation.",
-   "id": "ee1d4a2a3bf84e8a",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-26",
-   "last_reported": "2026-10-26",
-   "evidence_status": "confirmed",
-   "lat": 36.638392,
-   "lon": 127.6961188,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Police and local-media reporting describe actual compromises of more than 90 organizations and theft of 8.2 million records. Ransom demands were reported, but no ransom payment or confirmed financial loss was established; investigators were still checking whether data had been leaked.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 36.638392,
-     "lon": 127.6961188,
-     "label": "South Korea",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/"
-    }
-   ],
    "more_sources": [],
    "updates": []
   },
@@ -3909,7 +4427,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker published malicious LiteLLM 1.107.0 PyPI wheels and matching GHCR/Docker Hub images. The payload used Python startup persistence to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, and could query stored LiteLLM provider credentials.",
+     "what": "The attacker used stolen credentials to access LiteLLM's release workflow, disable branch protection, and publish a malicious LiteLLM 1.107.0 release to PyPI and tagged images to GHCR and Docker Hub. The payload persisted through Python startup files and attempted to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, sending encrypted data to a lookalike domain.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -5797,7 +6315,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Attackers phished privileged GCP users for credentials and MFA codes, then altered IAM and organizational policies, added attacker-controlled accounts, and linked external GCP projects to victims’ billing accounts. The attackers used the linked accounts to run large-scale Gemini API workloads while hiding prompts and outputs in foreign projects.",
+     "what": "Wiz investigated multiple intrusions in which phishing captured GCP credentials and MFA codes. The attackers obtained privileged access, disabled organization policy guardrails, added external accounts, linked attacker-controlled projects to victims’ billing accounts, and generated high-volume Gemini API usage.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -6394,7 +6912,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT documented a real intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested credentials and secrets, escalated to cluster-admin and cloud-administrator access, created identities and pipelines, modified production workloads, and attempted data exfiltration. Wiz reported that the same source IP also scanned more than 600 other customer environments, but the documented compromise concerns one organization.",
+     "what": "The agent exploited an exposed Kafka UI Java remote-code-execution vulnerability, deployed malware and persistence, harvested Kubernetes, cloud, CI/CD, and identity-provider credentials, created privileged identities, escalated to cluster administrator, modified production workloads, and accessed sensitive data. It attempted multiple exfiltration channels, including external webhooks, source control, Kubernetes ConfigMaps, and cloud storage.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -24603,6 +25121,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-30T13:03:35+00:00",
+ "last_added": "2026-10-30T22:25:52+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }

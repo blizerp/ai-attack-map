@@ -132,15 +132,16 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-10-30T13:03:35+00:00",
+  "checked": "2026-10-30T22:25:52+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is a substantive, researcher-confirmed campaign, but it duplicates the already-tracked Gheist incident fdf212b3998ab3a2; the source provides additional detail rather than a distinct incident.",
+  "status": "include",
+  "reason": "This is the same substantiated Gheist campaign already tracked, with additional reporting confirming ongoing evolution, successful private/enterprise execution, secret exposure, and cloud-role activity.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is a substantive, researcher-confirmed campaign, but it duplicates the already-tracked Gheist incident fdf212b3998ab3a2; the source provides additional detail rather than a distinct incident.",
-    "title": "Gheist campaign abused stolen GitHub tokens across private repositories"
+    "status": "include",
+    "reason": "This is the same substantiated Gheist campaign already tracked, with additional reporting confirming ongoing evolution, successful private/enterprise execution, secret exposure, and cloud-role activity.",
+    "title": "Gheist campaign compromised over 850 GitHub accounts",
+    "incident_id": "fdf212b3998ab3a2"
    }
   ],
   "evidence": "article",
@@ -18492,16 +18493,16 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-10-30T13:03:35+00:00",
+  "checked": "2026-10-30T22:25:52+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz CIRT substantiates a consequential real-world autonomous cloud intrusion with privileged access and sensitive-secret theft; this is the same incident already tracked as d22f0579003d30c6.",
+  "reason": "Confirmed real-world autonomous AI-agent intrusion with consequential privileged access, credential theft, production-environment compromise, and sensitive-data access; this is the same incident already tracked under 896e03eaa790459d.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz CIRT substantiates a consequential real-world autonomous cloud intrusion with privileged access and sensitive-secret theft; this is the same incident already tracked as d22f0579003d30c6.",
-    "title": "Wiz investigated autonomous multi-cloud intrusion",
-    "incident_id": "d22f0579003d30c6"
+    "reason": "Confirmed real-world autonomous AI-agent intrusion with consequential privileged access, credential theft, production-environment compromise, and sensitive-data access; this is the same incident already tracked under 896e03eaa790459d.",
+    "title": "Wiz observed autonomous multi-cloud intrusion from exposed Kafka UI",
+    "incident_id": "896e03eaa7904596"
    }
   ],
   "evidence": "article",
@@ -18985,15 +18986,16 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-10-30T13:03:35+00:00",
+  "checked": "2026-10-30T22:25:52+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is the same GCP takeover and Gemini LLMjacking campaign already tracked under incident f58ed76ff84133f9; the source provides additional detail but not a distinct incident.",
+  "status": "include",
+  "reason": "Wiz independently substantiated multiple real GCP compromises with privileged access and material unauthorized AI charges; this is the same campaign already tracked under f58ed76ff84133f9.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is the same GCP takeover and Gemini LLMjacking campaign already tracked under incident f58ed76ff84133f9; the source provides additional detail but not a distinct incident.",
-    "title": "Cloud billing accounts hijacked for unauthorized Gemini usage"
+    "status": "include",
+    "reason": "Wiz independently substantiated multiple real GCP compromises with privileged access and material unauthorized AI charges; this is the same campaign already tracked under f58ed76ff84133f9.",
+    "title": "Phishing campaign hijacked GCP billing for Gemini LLMjacking",
+    "incident_id": "f58ed76ff84133f9"
    }
   ],
   "evidence": "article",
@@ -19794,15 +19796,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-10-30T13:03:35+00:00",
+  "checked": "2026-10-30T22:25:52+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed compromise of LiteLLM’s production release pipeline and PyPI/container distribution channels with malicious artifacts capable of stealing sensitive credentials; this is the same incident already tracked under e2e13fe6f7503c25.",
+  "reason": "Confirmed production release-pipeline and package compromise with a credential-stealing payload affecting an AI infrastructure project; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed compromise of LiteLLM’s production release pipeline and PyPI/container distribution channels with malicious artifacts capable of stealing sensitive credentials; this is the same incident already tracked under e2e13fe6f7503c25.",
-    "title": "LiteLLM release compromised with credential-stealing malware",
+    "reason": "Confirmed production release-pipeline and package compromise with a credential-stealing payload affecting an AI infrastructure project; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
+    "title": "LiteLLM release pipeline and packages compromised",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -19820,21 +19822,15 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-10-30T13:03:35+00:00",
+  "checked": "2026-10-30T22:25:52+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without established external victim harm.; Include as a duplicate-supported mention of the confirmed LiteLLM supply-chain compromise; it describes a malicious release distributed through PyPI and Docker.",
+  "status": "exclude",
+  "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without confirmed real-world unauthorized access or victim consequences. The separately mentioned LiteLLM package compromise is background/promotional material and is already tracked.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without established external victim harm.",
+    "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without confirmed real-world unauthorized access or victim consequences. The separately mentioned LiteLLM package compromise is background/promotional material and is already tracked.",
     "title": "PHP2Shell vulnerabilities demonstrated in controlled research"
-   },
-   {
-    "status": "include",
-    "reason": "Include as a duplicate-supported mention of the confirmed LiteLLM supply-chain compromise; it describes a malicious release distributed through PyPI and Docker.",
-    "title": "Malicious LiteLLM 1.107.0 package uploaded to PyPI and Docker",
-    "incident_id": "e2e13fe6f7503c25"
    }
   ],
   "evidence": "article",
@@ -21950,29 +21946,29 @@
  "https://www.hipaajournal.com/denver-health-medical-plan-data-breach/": {
   "title": "Denver Health Medical Plan Discloses Vendor Breach Affecting 238K Members",
   "source": "HIPAA Journal",
-  "checked": "2026-10-28T13:03:49+00:00",
+  "checked": "2026-10-30T22:25:52+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful exposure of sensitive health information was reported, but there is no evidence of unauthorized access or misuse; treat as an exposure pending further substantiation.; This is the same Johns Hopkins Bayview incident already tracked under 20c556acc3a3d9a1.; This is the same BASS Medical Group incident already tracked under ee30a2cce26fa646.",
+  "reason": "The vendor credential was publicly exposed and theoretically permitted read-only access to sensitive records, but the organization reported no evidence of unauthorized use. This is deferred under the rule for accidental exposure without evidence of unauthorized access.; This is the same Johns Hopkins Bayview incident already tracked under 20c556acc3a3d9a1.; This is the same BASS Medical Group incident already tracked under ee30a2cce26fa646.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful exposure of sensitive health information was reported, but there is no evidence of unauthorized access or misuse; treat as an exposure pending further substantiation.",
-    "title": "Denver Health Medical Plan vendor key exposed member data"
+    "reason": "The vendor credential was publicly exposed and theoretically permitted read-only access to sensitive records, but the organization reported no evidence of unauthorized use. This is deferred under the rule for accidental exposure without evidence of unauthorized access.",
+    "title": "Denver Health Medical Plan vendor key exposed member health data"
    },
    {
     "status": "exclude",
     "reason": "This is the same Johns Hopkins Bayview incident already tracked under 20c556acc3a3d9a1.",
-    "title": "Johns Hopkins Bayview patient data uploaded to AI tool"
+    "title": "Johns Hopkins Bayview staff uploaded patient spreadsheet to public AI tool"
    },
    {
     "status": "exclude",
     "reason": "This is the same BASS Medical Group incident already tracked under ee30a2cce26fa646.",
-    "title": "BASS Medical Group network intrusion exposed health information"
+    "title": "BASS Medical Group confirms unauthorized network access"
    }
   ],
-  "evidence": "feed_full_text",
-  "summary_hash": "1033880eef47eb032637516e3e8fa0f4e2d18a134eb5d9697571ca3b5264a686",
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "ad7d3025d64e60f0",
    "title": "Denver Health Medical Plan Discloses Vendor Breach Affecting 238K Members",
@@ -22177,24 +22173,24 @@
   }
  },
  "https://www.darkreading.com/cybersecurity-analytics/benchmarking-security-of-ai-models-poses-challenges": {
-  "title": "So Many AI Security Benchmarks, But None Tell the Whole Story",
+  "title": "So Many AI Security Benchmarks, but None Tell the Whole Story",
   "source": "Dark Reading",
-  "checked": "2026-10-27T22:20:35+00:00",
+  "checked": "2026-10-30T22:25:52+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source is policy/measurement commentary and contains no qualifying real-world cyber incident.",
+  "reason": "This is policy/technical commentary about AI security benchmarks without a substantive real-world cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source is policy/measurement commentary and contains no qualifying real-world cyber incident.",
-    "title": "Dark Reading article discusses limitations of AI security benchmarks"
+    "reason": "This is policy/technical commentary about AI security benchmarks without a substantive real-world cyber incident.",
+    "title": "AI security benchmark commentary"
    }
   ],
   "evidence": "summary",
-  "summary_hash": "811800d1b48622a5a542e3e4c1d3775a24fdcd4ff1ab5da5f1aad8cb7e934beb",
+  "summary_hash": "9050a73103b7812730e1a4d05bb47983635a2da64b0b2b5a4f82d38b997323f0",
   "item": {
-   "id": "b5ffc08b40538c91",
-   "title": "So Many AI Security Benchmarks, But None Tell the Whole Story",
+   "id": "4a220862d2d94af7",
+   "title": "So Many AI Security Benchmarks, but None Tell the Whole Story",
    "url": "https://www.darkreading.com/cybersecurity-analytics/benchmarking-security-of-ai-models-poses-challenges",
    "date": "2026-10-27",
    "source": "Dark Reading",
@@ -22759,15 +22755,15 @@
  "https://www.darkreading.com/cloud-security/email-bombing-external-teams-chats-repeatable-access-path": {
   "title": "External Teams Chats Anchor 15-Minute Malware Delivery",
   "source": "Dark Reading",
-  "checked": "2026-10-28T13:03:49+00:00",
+  "checked": "2026-10-30T22:25:52+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful malware-delivery campaign, but the supplied reporting lacks substantiated evidence of successful compromise or consequences.",
+  "reason": "Potentially meaningful enterprise malware activity is reported, but the supplied article lacks verified victim or compromise consequences.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful malware-delivery campaign, but the supplied reporting lacks substantiated evidence of successful compromise or consequences.",
-    "title": "External Teams-chat campaign reportedly delivered malware"
+    "reason": "Potentially meaningful enterprise malware activity is reported, but the supplied article lacks verified victim or compromise consequences.",
+    "title": "External Teams-chat campaign reportedly delivers malware"
    }
   ],
   "evidence": "summary",
@@ -25293,19 +25289,19 @@
  "https://www.darkreading.com/cybersecurity-operations/ai-root-hospital-corridors-raised-security-stakes": {
   "title": "AI Takes Root in Hospital Corridors, Raises Security Stakes",
   "source": "Dark Reading",
-  "checked": "2026-10-29T22:49:24+00:00",
+  "checked": "2026-10-30T22:25:52+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The supplied text is a general discussion of AI adoption and cybersecurity stakes in healthcare, not evidence of a distinct cyber incident.",
+  "reason": "The report provides general commentary about AI in healthcare and cybersecurity risk, not a distinct substantiated cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The supplied text is a general discussion of AI adoption and cybersecurity stakes in healthcare, not evidence of a distinct cyber incident.",
-    "title": "Article discusses healthcare AI security risks"
+    "reason": "The report provides general commentary about AI in healthcare and cybersecurity risk, not a distinct substantiated cyber incident.",
+    "title": "Dark Reading reports healthcare AI security concerns"
    }
   ],
   "evidence": "summary",
-  "summary_hash": "68fccd30547731ba33a2364822741de38296db00d7a3679bf7fb4bff82529fa0",
+  "summary_hash": "2413f50b24d967b31af54edf4413b58b5f3796f7bf9dd6811d7d1cf80ceee1ea",
   "item": {
    "id": "e196189dff0c8c3d",
    "title": "AI Takes Root in Hospital Corridors, Raises Security Stakes",
@@ -25496,20 +25492,19 @@
  "https://www.hipaajournal.com/lehigh-valley-health-network-hipaa-penalty/": {
   "title": "Lehigh Valley Health Network Pays $800K Penalty to Resolve HIPAA Violations",
   "source": "HIPAA Journal",
-  "checked": "2026-10-30T13:03:35+00:00",
+  "checked": "2026-10-30T22:25:52+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Although published as a HIPAA enforcement and settlement report, it provides substantive facts about a confirmed ransomware compromise, sensitive-data theft, and disclosure affecting 248,359 people. The incident is dated to February 2023 rather than treated as a new 2026 attack.",
+  "status": "exclude",
+  "reason": "Duplicate of the already-tracked 2023 Lehigh Valley Health Network ransomware incident; this publication primarily reports regulatory enforcement and settlement facts.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Although published as a HIPAA enforcement and settlement report, it provides substantive facts about a confirmed ransomware compromise, sensitive-data theft, and disclosure affecting 248,359 people. The incident is dated to February 2023 rather than treated as a new 2026 attack.",
-    "title": "Lehigh Valley Health Network ransomware exposed 248,359 records",
-    "incident_id": "1e65e1c43420ba36"
+    "status": "exclude",
+    "reason": "Duplicate of the already-tracked 2023 Lehigh Valley Health Network ransomware incident; this publication primarily reports regulatory enforcement and settlement facts.",
+    "title": "Lehigh Valley Health Network ransomware breach"
    }
   ],
   "evidence": "feed_full_text",
-  "summary_hash": "5060f43512fa8d399e510722652e02afe30db7ac1a2ac81b500410dd638a09a2",
+  "summary_hash": "f7f77eb1a8821b49ea749e6fe50e98c2fd731f76f11a031cd3c4d9a9e4f0e600",
   "item": {
    "id": "1e65e1c43420ba36",
    "title": "Lehigh Valley Health Network Pays $800K Penalty to Resolve HIPAA Violations",
@@ -25825,5 +25820,474 @@
    "published_at": "2026-10-29T19:56:44+00:00"
   },
   "retrieval_warning": "HTTPError"
+ },
+ "https://www.wiz.io/blog/ai-threat-readiness-survey-report-2026": {
+  "title": "Key Takeaways: AI Threat Readiness Survey Report 2026",
+  "source": "Wiz Research",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: survey findings, security commentary, and unsuccessful exploitation attempts do not constitute a confirmed cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: survey findings, security commentary, and unsuccessful exploitation attempts do not constitute a confirmed cyber incident.",
+    "title": "Wiz AI Threat Readiness survey reports security trends"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "a74c4d97b9109ff7a032acc3edab50ef72f185fca9e9120af5d66504a54c52b3",
+  "item": {
+   "id": "4ce9cb2d6de8aa8b",
+   "title": "Key Takeaways: AI Threat Readiness Survey Report 2026",
+   "url": "https://www.wiz.io/blog/ai-threat-readiness-survey-report-2026",
+   "date": "2026-10-30",
+   "source": "Wiz Research",
+   "published_at": "2026-10-30T12:57:42+00:00"
+  }
+ },
+ "https://www.securityweek.com/php2shell-attacks-root-palo-alto-firewalls-but-fail-against-wordpress/": {
+  "title": "PHP2Shell Attacks Root Palo Alto Firewalls but Fail Against WordPress",
+  "source": "SecurityWeek",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Confirmed compromises of at least 25 Palo Alto firewalls were independently substantiated by Palo Alto Networks and researchers; the report adds source-supported AI involvement and is the same PHP2Shell/Fragnesia campaign already tracked.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Confirmed compromises of at least 25 Palo Alto firewalls were independently substantiated by Palo Alto Networks and researchers; the report adds source-supported AI involvement and is the same PHP2Shell/Fragnesia campaign already tracked.",
+    "title": "PHP2Shell campaign rooted at least 25 Palo Alto firewalls",
+    "incident_id": "ea0735cf930607de"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "0b9d1aa9e922d477126f8b8e8cfa6e4f8907ac38e1934053f98e91dff5970e55",
+  "item": {
+   "id": "e5a9603867586d14",
+   "title": "PHP2Shell Attacks Root Palo Alto Firewalls but Fail Against WordPress",
+   "url": "https://www.securityweek.com/php2shell-attacks-root-palo-alto-firewalls-but-fail-against-wordpress/",
+   "date": "2026-10-30",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-30T15:09:25+00:00"
+  }
+ },
+ "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/": {
+  "title": "In Other News: Anthropic Breach Dispute, UEFI Flaw Hits Most Servers, Cloudflare AI Data Leak",
+  "source": "SecurityWeek",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Anthropic confirmed that internal systems were reached, making this more than an attacker claim or research-only demonstration; the extent of access remains disputed.; The provider confirmed actual cross-tenant data disclosure and remediation; it qualifies as a meaningful compromise of an AI platform despite the absence of evidence of deliberate exploitation.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Anthropic confirmed that internal systems were reached, making this more than an attacker claim or research-only demonstration; the extent of access remains disputed.",
+    "title": "Cathedral AI agents accessed limited Anthropic business systems",
+    "incident_id": "cb49d2d670c8087f"
+   },
+   {
+    "status": "include",
+    "reason": "The provider confirmed actual cross-tenant data disclosure and remediation; it qualifies as a meaningful compromise of an AI platform despite the absence of evidence of deliberate exploitation.",
+    "title": "Cloudflare Workers AI cross-tenant responses exposed customer data",
+    "incident_id": "2c8826cf4b8e74e4"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "4dafd83c619bff91b795a04485421987d1e799199e89a7251a6bdc03daa6e17e",
+  "item": {
+   "id": "cb49d2d670c8087f",
+   "title": "In Other News: Anthropic Breach Dispute, UEFI Flaw Hits Most Servers, Cloudflare AI Data Leak",
+   "url": "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/",
+   "date": "2026-10-30",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-30T14:41:35+00:00"
+  }
+ },
+ "https://www.securityweek.com/bulletproof-host-virtualine-loses-its-domain-to-fbi-seizure/": {
+  "title": "Bulletproof Host Virtualine Loses Its Domain to FBI Seizure",
+  "source": "SecurityWeek",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is a law-enforcement domain seizure and takedown action, not a substantiated compromise causing meaningful harm to a victim's systems or data.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is a law-enforcement domain seizure and takedown action, not a substantiated compromise causing meaningful harm to a victim's systems or data.",
+    "title": "FBI seized Virtualine bulletproof-hosting domain"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "8f827eab76f93509c02759bd4b4af208a5b1d7e20c240474114ad88a4da56dbd",
+  "item": {
+   "id": "32755954788a11dc",
+   "title": "Bulletproof Host Virtualine Loses Its Domain to FBI Seizure",
+   "url": "https://www.securityweek.com/bulletproof-host-virtualine-loses-its-domain-to-fbi-seizure/",
+   "date": "2026-10-30",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-30T13:36:12+00:00"
+  }
+ },
+ "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/": {
+  "title": "August 2026 Healthcare Data Breach Report",
+  "source": "HIPAA Journal",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The source substantiates unauthorized access affecting 41,000 healthcare-related records at a government public-service entity.; This is a substantiated ransomware compromise of an emergency-healthcare provider with confirmed exposure of protected health information.; The source confirms unauthorized insider access and theft of protected health information affecting 12,018 people.; The HHS breach record substantiates an unauthorized access/disclosure event with a reported affected count, despite limited incident details.; The source substantiates an actual ransomware event at a hospital; the provisional count and unknown final impact do not negate the compromise.; The source records an actual hacking incident at a healthcare organization; the placeholder count warrants limited impact claims but not exclusion.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The source substantiates unauthorized access affecting 41,000 healthcare-related records at a government public-service entity.",
+    "title": "Connecticut DSS breach affected 41,000 people",
+    "incident_id": "92bf4ffa96e70947"
+   },
+   {
+    "status": "include",
+    "reason": "This is a substantiated ransomware compromise of an emergency-healthcare provider with confirmed exposure of protected health information.",
+    "title": "Qilin ransomware affected City Ambulance Service records",
+    "incident_id": "45d9079931374c1a"
+   },
+   {
+    "status": "include",
+    "reason": "The source confirms unauthorized insider access and theft of protected health information affecting 12,018 people.",
+    "title": "Public Partnerships breach involved insider data theft",
+    "incident_id": "701af7aebe198ea5"
+   },
+   {
+    "status": "include",
+    "reason": "The HHS breach record substantiates an unauthorized access/disclosure event with a reported affected count, despite limited incident details.",
+    "title": "Kim Knobbe breach reported with affected count unresolved",
+    "incident_id": "b6308ef8f0623e44"
+   },
+   {
+    "status": "include",
+    "reason": "The source substantiates an actual ransomware event at a hospital; the provisional count and unknown final impact do not negate the compromise.",
+    "title": "Baraga County Memorial Hospital reported ransomware breach",
+    "incident_id": "19cc58cfbd213d28"
+   },
+   {
+    "status": "include",
+    "reason": "The source records an actual hacking incident at a healthcare organization; the placeholder count warrants limited impact claims but not exclusion.",
+    "title": "WellDyneRX reported hacking incident affecting 500 people",
+    "incident_id": "f83e192dccafa475"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "45bb52cda4382b9e7c9286b27f1d8a3b44d29abd693b5c3e160cb323aefd103a",
+  "item": {
+   "id": "92bf4ffa96e70947",
+   "title": "August 2026 Healthcare Data Breach Report",
+   "url": "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/",
+   "date": "2026-10-30",
+   "source": "HIPAA Journal",
+   "published_at": "2026-10-30T17:52:10+00:00"
+  }
+ },
+ "https://www.darkreading.com/cyberattacks-data-breaches/devs-trojanized-claude-code-extension-cursor": {
+  "title": "Devs Hit by Trojanized Claude Code Extension for Cursor",
+  "source": "Dark Reading",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Duplicate of an already-tracked incident; the source adds no distinct substantive event.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Duplicate of an already-tracked incident; the source adds no distinct substantive event.",
+    "title": "Trojanized Claude Code extension distributed through Cursor"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "a17a07101af13e0ad4d89727fc41894e4e3be2cf8a44ce28fa367f6a6ec4a537",
+  "item": {
+   "id": "aa3b8a0caa5ec0f8",
+   "title": "Devs Hit by Trojanized Claude Code Extension for Cursor",
+   "url": "https://www.darkreading.com/cyberattacks-data-breaches/devs-trojanized-claude-code-extension-cursor",
+   "date": "2026-10-30",
+   "source": "Dark Reading",
+   "published_at": "2026-10-30T20:05:58+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/": {
+  "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
+  "source": "BleepingComputer",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Potentially meaningful hardware supply-chain compromise, but the source states that the device has not been examined or confirmed and that no funds are known to have been stolen.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Potentially meaningful hardware supply-chain compromise, but the source states that the device has not been examined or confirmed and that no funds are known to have been stolen.",
+    "title": "Suspected Trezor wallet implant reported by Indonesian buyer"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "3aec04c62066586b6267e9ed74ddd01966840401b9c7c939c4166574438293cc",
+  "item": {
+   "id": "5bd0bbf19ecb788e",
+   "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
+   "url": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
+   "date": "2026-10-30",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-30T15:58:20+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/ss7-and-diameter-attacks-how-signaling-flaws-expose-your-phone/": {
+  "title": "SS7 and Diameter Attacks: How Signaling Flaws Expose Your Phone",
+  "source": "BleepingComputer",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "General commentary and historical examples do not establish a distinct qualifying cyber incident; the piece is also sponsored content promoting a carrier.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "General commentary and historical examples do not establish a distinct qualifying cyber incident; the piece is also sponsored content promoting a carrier.",
+    "title": "BleepingComputer SS7 and Diameter attack explainer"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "ffcd83f49d533c3ceb833280ede696f2c417ac4e5a207386d977902243d5db8d",
+  "item": {
+   "id": "0fae265d32822ccc",
+   "title": "SS7 and Diameter Attacks: How Signaling Flaws Expose Your Phone",
+   "url": "https://www.bleepingcomputer.com/news/security/ss7-and-diameter-attacks-how-signaling-flaws-expose-your-phone/",
+   "date": "2026-10-30",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-30T14:00:10+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/": {
+  "title": "Malicious Claude Code extension on Cursor planted SSH backdoors",
+  "source": "BleepingComputer",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Confirmed malicious software was distributed through a trusted extension marketplace and executed on user systems, installing persistence and sending reconnaissance data; this is the already-tracked Claude Code extension supply-chain incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Confirmed malicious software was distributed through a trusted extension marketplace and executed on user systems, installing persistence and sending reconnaissance data; this is the already-tracked Claude Code extension supply-chain incident.",
+    "title": "Malicious Claude Code extension distributed through Cursor Marketplace",
+    "incident_id": "e3ed66e626b0480b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "54ffbd3c741ddcfbe4e87f4473f30a2dc00e8d89c6fbac9fde26d4f9db69be60",
+  "item": {
+   "id": "452076940aa9018c",
+   "title": "Malicious Claude Code extension on Cursor planted SSH backdoors",
+   "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
+   "date": "2026-10-30",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-30T14:36:54+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/": {
+  "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
+  "source": "BleepingComputer",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is a vulnerability and controlled exploit demonstration without evidence of an actual external compromise.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is a vulnerability and controlled exploit demonstration without evidence of an actual external compromise.",
+    "title": "Critical Linux kernel flaw enables potential MPTCP root access"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "1d67afaaf4789c16544bc5e30f4b88dc6139a91ec4c4f653a5f278ce6f1c6886",
+  "item": {
+   "id": "9cae37f54566134b",
+   "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
+   "url": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
+   "date": "2026-10-30",
+   "source": "BleepingComputer",
+   "published_at": "2026-10-30T21:09:46+00:00"
+  }
+ },
+ "https://therecord.media/syrian-electronic-army-hacker-sentenced-three-years": {
+  "title": "Syrian Electronic Army hacker gets prison time for attacks on Western targets",
+  "source": "The Record",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is a court/sentencing recap of old incidents, not a substantive newly reported cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is a court/sentencing recap of old incidents, not a substantive newly reported cyber incident.",
+    "title": "Syrian Electronic Army hacker sentenced for historical attacks"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "5406bd19d7adcfe20b9ea423cba45a066d0f86d77ba334f2b2633e7e763b29e2",
+  "item": {
+   "id": "11ed6f976af0b309",
+   "title": "Syrian Electronic Army hacker gets prison time for attacks on Western targets",
+   "url": "https://therecord.media/syrian-electronic-army-hacker-sentenced-three-years",
+   "date": "2026-10-30",
+   "source": "The Record",
+   "published_at": "2026-10-30T14:24:00+00:00"
+  }
+ },
+ "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards": {
+  "title": "Fashion retailer Resolve says hackers stole payment card information",
+  "source": "The Record",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The company disclosed a confirmed compromise involving theft of sensitive payment-card data, with more than 128,000 affected people reported across Texas and Vermont and additional Massachusetts notifications.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The company disclosed a confirmed compromise involving theft of sensitive payment-card data, with more than 128,000 affected people reported across Texas and Vermont and additional Massachusetts notifications.",
+    "title": "Revolve breach exposed payment-card information",
+    "incident_id": "d098d27b6b4f9769"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "2a420cacdc2d8282a6ec99c988a2add1f2ae3a51cf8dad11756b9b8d22f0e496",
+  "item": {
+   "id": "d098d27b6b4f9769",
+   "title": "Fashion retailer Resolve says hackers stole payment card information",
+   "url": "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards",
+   "date": "2026-10-30",
+   "source": "The Record",
+   "published_at": "2026-10-30T19:00:00+00:00"
+  }
+ },
+ "https://therecord.media/florida-warns-5-million-affected-financial-aid-site-breach": {
+  "title": "Florida warns that 4.9 million people had Social Security numbers leaked in financial aid site breach",
+  "source": "The Record",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Florida officials and credible reporting substantiated unauthorized access to a government financial-aid system and exposure of sensitive records affecting approximately 4.9 million people.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Florida officials and credible reporting substantiated unauthorized access to a government financial-aid system and exposure of sensitive records affecting approximately 4.9 million people.",
+    "title": "Florida financial-aid breach exposed records of 4.9 million people",
+    "incident_id": "4c8edab482b9c4df"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "626be97c1d5ce676bf3e2dbdb13e570254c1b019e419f43e3ccf8fdc67b7ad31",
+  "item": {
+   "id": "4c8edab482b9c4df",
+   "title": "Florida warns that 4.9 million people had Social Security numbers leaked in financial aid site breach",
+   "url": "https://therecord.media/florida-warns-5-million-affected-financial-aid-site-breach",
+   "date": "2026-10-30",
+   "source": "The Record",
+   "published_at": "2026-10-30T15:54:00+00:00"
+  }
+ },
+ "https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale": {
+  "title": "DOJ raises privacy concerns over potential sale of Character.AI chats",
+  "source": "The Record",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is a bankruptcy privacy and potential data-sale dispute, not a substantiated cyber compromise or unauthorized data disclosure.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is a bankruptcy privacy and potential data-sale dispute, not a substantiated cyber compromise or unauthorized data disclosure.",
+    "title": "DOJ raises privacy concerns over possible Character.AI data sale"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "fbea87e218ee13e5d28fa010d12960354ca1b5826325e57a78fe539ad78d722e",
+  "item": {
+   "id": "c8ffcf87ce95f3b6",
+   "title": "DOJ raises privacy concerns over potential sale of Character.AI chats",
+   "url": "https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale",
+   "date": "2026-10-30",
+   "source": "The Record",
+   "published_at": "2026-10-30T20:45:00+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html": {
+  "title": "WordPress RCE Flaw Draws Nearly 63,000 Attack Attempts in Just 24 Hours",
+  "source": "The Hacker News",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude because the source reports blocked exploitation attempts and polling activity without confirming a successful compromise or meaningful victim impact.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude because the source reports blocked exploitation attempts and polling activity without confirming a successful compromise or meaningful victim impact.",
+    "title": "WordPress RCE exploitation attempts blocked by Wordfence"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "63b393b130c02e927eda6127f87210a90203b59ee1f31c4192f857ad130e109a",
+  "item": {
+   "id": "90ea90ec617cdbf9",
+   "title": "WordPress RCE Flaw Draws Nearly 63,000 Attack Attempts in Just 24 Hours",
+   "url": "https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html",
+   "date": "2026-10-30",
+   "source": "The Hacker News",
+   "published_at": "2026-10-30T14:08:14+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html": {
+  "title": "TeamViewer Flaw Lets Remote Computers Attack Users Who Connect to Control Them",
+  "source": "The Hacker News",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is a vulnerability disclosure and research demonstration without evidence of exploitation against real external victims.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is a vulnerability disclosure and research demonstration without evidence of exploitation against real external victims.",
+    "title": "TeamViewer flaw enables host-to-viewer code execution"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "bbb47fee8c7db0ee6163c4028638b08eee420d8a4ffc6c83ad7ac421e1e62333",
+  "item": {
+   "id": "8897dd6ab28a7db0",
+   "title": "TeamViewer Flaw Lets Remote Computers Attack Users Who Connect to Control Them",
+   "url": "https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html",
+   "date": "2026-10-30",
+   "source": "The Hacker News",
+   "published_at": "2026-10-30T15:17:28+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html": {
+  "title": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide",
+  "source": "The Hacker News",
+  "checked": "2026-10-30T22:25:52+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Credible researcher reporting substantiates a distinct, large-scale campaign with confirmed post-exploitation at nine organizations; it is the same ARTEX campaign already tracked, so this record updates that incident rather than creating a separate event.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Credible researcher reporting substantiates a distinct, large-scale campaign with confirmed post-exploitation at nine organizations; it is the same ARTEX campaign already tracked, so this record updates that incident rather than creating a separate event.",
+    "title": "Vapor Panda used ARTEX agents against over 200 organizations",
+    "incident_id": "ee1d4a2a3bf84e8a"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "6e89e8598b9c8fc163037cf3cfa3a3ebcc55a70b8a5632debd8e754c73269577",
+  "item": {
+   "id": "e1b7392b04cb69dd",
+   "title": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide",
+   "url": "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html",
+   "date": "2026-10-30",
+   "source": "The Hacker News",
+   "published_at": "2026-10-30T16:58:44+00:00"
+  }
  }
 }
