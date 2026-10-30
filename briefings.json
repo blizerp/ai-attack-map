@@ -1689,10 +1689,183 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-10-30-morning",
+   "date": "2026-10-30",
+   "edition": "morning",
+   "published_at": "2026-10-30T17:47:57+00:00",
+   "generated_at": "2026-10-30T17:47:57+00:00",
+   "window_start": "2026-10-30T00:42:06+00:00",
+   "window_end": "2026-10-30T17:47:57+00:00",
+   "sector_window_start": "2026-10-29T17:47:57+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Confirmed developments include a large cryptocurrency theft that temporarily halted withdrawals, a malicious developer tool distributed through a trusted marketplace, and a major Florida financial-aid data breach. A suspected counterfeit hardware wallet has also raised supply-chain concerns, but no Trezor-linked theft is confirmed.",
+    "items": [
+     {
+      "headline": "Binance confirms major cryptocurrency theft and pauses withdrawals",
+      "what_happened": "Binance says attackers used access linked to a compromised employee laptop to submit unauthorized withdrawals. Blockchain investigators estimate about $6.3 billion was taken on October 29. Binance has not confirmed the investigators’ attribution, but says it will cover customer losses.",
+      "impact": "Deposits and withdrawals were temporarily suspended while checks took place. Binance says customer funds are safe and plans to reimburse losses. About $2.7 billion was frozen, while the remaining amount remains under investigation.",
+      "what_next": "Binance expects withdrawals to resume after security checks. Investigators are tracing the funds and determining the full loss. Further updates may clarify the cause, recovery and any impact on customers.",
+      "change": "Impact increased",
+      "sectors": [
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
+        "published": "2026-10-30T09:18:13+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/",
+        "published": "2026-10-30T08:16:26+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
+        "published": "2026-10-30T04:14:59+00:00"
+       }
+      ],
+      "incident_ids": [
+       "0608e73237d158c5"
+      ]
+     },
+     {
+      "headline": "Malicious Claude coding extension reached up to 5,000 developers",
+      "what_happened": "A modified version of Anthropic’s Claude Code extension was distributed through Cursor’s marketplace for about 11 hours on October 29. It tried to create lasting remote access and sent basic computer details to attackers. Cursor removed it and temporarily closed the marketplace.",
+      "impact": "Up to 5,000 developers may have installed the package. The malware could expose development computers and information used by their projects. No wider distribution through Microsoft’s or Open VSX’s marketplaces was confirmed.",
+      "what_next": "Cursor is contacting affected users and reviewing other marketplace extensions. The investigation may establish how the package was published and whether any developer credentials or project data were accessed.",
+      "change": "New report",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+        "published": "2026-10-30T08:55:47+00:00"
+       },
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
+        "published": "2026-10-30T14:36:54+00:00"
+       }
+      ],
+      "incident_ids": [
+       "e3ed66e626b0480b"
+      ]
+     },
+     {
+      "headline": "Florida financial-aid breach exposes Social Security numbers of 4.9 million people",
+      "what_happened": "Florida’s education department said an unauthorized party accessed the state financial-aid website. Exposed information includes names, addresses, contact details, birth dates and Social Security numbers. The breach was discovered October 19 and the site has been taken offline.",
+      "impact": "Nearly 5 million people who applied for Florida financial aid may face identity-theft and fraud risks. Student aid, scholarships, loans, tuition payments and aid disbursements were not disrupted.",
+      "what_next": "Florida officials are investigating with state law-enforcement and technology agencies. More details and notifications may follow. The department says affected people should watch their credit reports and financial accounts.",
+      "change": "New report",
+      "sectors": [
+       "internet",
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/florida-warns-5-million-affected-financial-aid-site-breach",
+        "published": "2026-10-30T15:54:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Trezor warns that a reseller may have sold an altered crypto wallet",
+      "what_happened": "Trezor received a credible report that a Safe 5 wallet bought from Southeast Asian reseller CryptoBilis contained an extra circuit board and mobile connection. The device has not yet been examined, so the suspected implant is not confirmed.",
+      "impact": "A tampered device could expose a wallet’s recovery phrase and allow cryptocurrency theft. Trezor says it knows of no stolen funds linked to this case. The warning applies to devices bought through CryptoBilis from March 2026 onward.",
+      "what_next": "Trezor is waiting to examine the device and is investigating the reseller relationship. Buyers may receive replacement or voucher offers. The company may issue further warnings if the suspected alteration is confirmed.",
+      "change": "Developing",
+      "sectors": [
+       "supply_chain",
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
+        "published": "2026-10-30T15:58:20+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "2 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 713
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 29,
+   "usage": {
+    "completion_tokens": 985,
+    "prompt_tokens": 32129,
+    "total_tokens": 33114,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 92,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 32126,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-10-30T00:42:06+00:00"
+  "checked_at": "2026-10-30T17:47:57+00:00"
  }
 }
