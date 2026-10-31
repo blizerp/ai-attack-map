@@ -185,4 +185,57 @@ class CatchupTests(unittest.TestCase):
             self.assertEqual(b.run(root,now+timedelta(hours=3),object(),gather),0)
             self.assertEqual(b.read(root/'briefings.json',{})['editions'][-1]['id'],'2026-10-28-morning')
 
+
+class GenerationRecoveryTests(unittest.TestCase):
+    def answer(self, value, finish_reason='stop'):
+        return SimpleNamespace(
+            choices=[SimpleNamespace(finish_reason=finish_reason,
+                                     message=SimpleNamespace(content=json.dumps(value), refusal=None))],
+            usage=None)
+
+    def client(self, answers):
+        create = unittest.mock.Mock(side_effect=answers)
+        client = SimpleNamespace(chat=SimpleNamespace(
+            completions=SimpleNamespace(create=create)))
+        return client, create
+
+    def test_invalid_source_ids_get_one_corrective_retry(self):
+        candidates=b.prepare([report()],NOW-timedelta(hours=9),NOW-timedelta(days=1),{},True)
+        bad=result()
+        bad['overview']['items'][0]['source_ids']=['made-up-id']
+        client,create=self.client([self.answer(bad), self.answer(result())])
+        content,usage=b.generate(client,candidates,[],True,[])
+        self.assertEqual(create.call_count,2)
+        self.assertEqual(content['overview']['items'][0]['sources'][0]['url'],report()['url'])
+        retry_prompt=create.call_args_list[1].kwargs['messages'][-1]['content']
+        self.assertIn('Missing or invented source reference',retry_prompt)
+        self.assertNotIn('Hospital confirmed an outage',retry_prompt)
+
+    def test_incomplete_output_gets_one_retry(self):
+        candidates=b.prepare([report()],NOW-timedelta(hours=9),NOW-timedelta(days=1),{},True)
+        client,create=self.client([self.answer(result(),'length'),self.answer(result())])
+        content,_=b.generate(client,candidates,[],True,[])
+        self.assertEqual(create.call_count,2)
+        self.assertEqual(len(content['overview']['items']),1)
+
+    def test_invalid_twice_does_not_publish_or_advance_memory(self):
+        bad=result()
+        bad['overview']['items'][0]['source_ids']=['made-up-id']
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, {
+                'BRIEF_SCHEDULE':'', 'BRIEF_EDITION':'evening',
+                'BRIEF_REPLACE_LATEST':'false', 'BRIEF_CATCH_UP':'false'}):
+            root=Path(tmp)
+            prior={'id':'2026-10-26-evening','date':'2026-10-26','edition':'evening',
+                   'published_at':'2026-10-26T21:00:00+00:00',
+                   'window_end':'2026-10-26T21:00:00+00:00','overview':{'items':[]}}
+            b.atomic(root/'briefings.json',{'editions':[prior]})
+            client,create=self.client([self.answer(bad),self.answer(bad)])
+            gather=lambda *args:([report()],[{'source':'Example','ok':True}],0)
+            self.assertEqual(b.run(root,NOW,client,gather),1)
+            self.assertEqual(create.call_count,2)
+            saved=b.read(root/'briefings.json',{})
+            self.assertEqual(saved['editions'],[prior])
+            self.assertEqual(saved['last_attempt']['status'],'failed')
+            self.assertFalse((root/'brief_state.json').exists())
+
 if __name__=='__main__':unittest.main()

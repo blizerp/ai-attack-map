@@ -40,5 +40,9 @@ jobs:
           for f in decisions.json pending.json backfill_progress.json feed_status.json; do
             if [ -f "$f" ]; then git add "$f"; fi
           done
-          git diff --cached --quiet || (git commit -m "Update incidents" && git push)
+          if ! git diff --cached --quiet; then
+            git commit -m "Update incidents"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
 

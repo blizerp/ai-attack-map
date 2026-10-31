@@ -299,18 +299,50 @@ def validate(result, reports, incidents, sectors_enabled):
 def generate(client, candidates, previous, sectors_enabled, incidents):
     if not candidates:
         return {'overview': {'intro': '', 'items': []}, 'sectors': {s: {'intro': '', 'items': []} for s in SECTORS}}, {}
-    response = client.chat.completions.create(
-        model=os.environ.get('OPENAI_MODEL') or u.MODEL, reasoning_effort='low',
-        max_completion_tokens=14000,
-        messages=[{'role': 'system', 'content': PROMPT}, {'role': 'user', 'content': json.dumps({
-            'sectors_enabled': sectors_enabled, 'prior_overviews': previous, 'reports': candidates}, ensure_ascii=False)}],
-        response_format={'type': 'json_schema', 'json_schema': {'name': 'daily_threat_brief', 'strict': True, 'schema': SCHEMA}})
-    if response.choices[0].finish_reason != 'stop' or response.choices[0].message.refusal:
-        raise ValueError('Incomplete or refused briefing')
-    result = validate(json.loads(response.choices[0].message.content), candidates, incidents, sectors_enabled)
-    usage = response.usage.model_dump() if response.usage else {}
-    print('briefing API usage: ' + json.dumps(usage), flush=True)
-    return result, usage
+    from jsonschema.exceptions import ValidationError as SchemaValidationError
+    data = {'sectors_enabled': sectors_enabled, 'prior_overviews': previous, 'reports': candidates}
+    base_messages = [{'role': 'system', 'content': PROMPT},
+                     {'role': 'user', 'content': json.dumps(data, ensure_ascii=False)}]
+    feedback = None
+    for attempt in range(2):
+        messages = base_messages + ([{'role': 'user', 'content': feedback}] if feedback else [])
+        response = client.chat.completions.create(
+            model=os.environ.get('OPENAI_MODEL') or u.MODEL, reasoning_effort='low',
+            max_completion_tokens=14000, messages=messages,
+            response_format={'type': 'json_schema',
+                             'json_schema': {'name': 'daily_threat_brief', 'strict': True, 'schema': SCHEMA}})
+        choice = response.choices[0]
+        if choice.message.refusal:
+            raise ValueError('Refused briefing')
+        if choice.finish_reason != 'stop':
+            reason = 'Incomplete briefing output'
+        else:
+            try:
+                result = validate(json.loads(choice.message.content), candidates, incidents, sectors_enabled)
+            except SchemaValidationError:
+                reason = 'Model output did not match schema'
+            except (ValueError, TypeError, KeyError) as exc:
+                # Only display errors defined by this module. Never log model text,
+                # report contents or exception strings from external services.
+                known = {'Too many briefing items', 'Missing or invented source reference',
+                         'Overview reused old evidence', 'Sector item outside daily window',
+                         'Sector item classified inconsistently', 'Duplicate evidence in section'}
+                reason = str(exc) if type(exc) is ValueError and str(exc) in known else 'Invalid briefing JSON'
+            else:
+                usage = response.usage.model_dump() if response.usage else {}
+                print('briefing API usage: ' + json.dumps(usage), flush=True)
+                return result, usage
+        if attempt:
+            print('briefing rejected: ' + reason + '; retry limit reached', flush=True)
+            raise ValueError('Briefing validation failed after two attempts')
+        print('briefing rejected: ' + reason + '; retrying once', flush=True)
+        feedback = ('Your previous briefing did not pass validation: ' + reason +
+                    '. Generate a fresh and shorter complete JSON response from the supplied reports. '
+                    'Every source_ids entry MUST match a supplied report ID. '
+                    'Use only fresh_for_overview reports in the overview, daily-window evidence '
+                    'for sector items, and do not duplicate evidence within one section. '
+                    'Include only genuinely relevant sectors. Use fewer items if needed.')
+
 
 def run(root=ROOT, now=None, client=None, gatherer=gather):
     now = now or datetime.now(UTC)
