@@ -2036,10 +2036,139 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-10-31-morning",
+   "date": "2026-10-31",
+   "edition": "morning",
+   "published_at": "2026-10-31T12:42:24+00:00",
+   "generated_at": "2026-10-31T12:42:24+00:00",
+   "scheduled_for": "2026-10-31T12:00:00+00:00",
+   "window_start": "2026-10-31T02:15:21+00:00",
+   "window_end": "2026-10-31T12:42:24+00:00",
+   "sector_window_start": "2026-10-30T12:42:24+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting confirms a customer-data breach at Chainalysis and a large, AI-assisted campaign against organizations worldwide. Attackers also exploited flaws in Ivanti business firewalls, but public reporting does not identify affected customers or service outages.",
+    "items": [
+     {
+      "headline": "Chainalysis says customer contact records were accessed",
+      "what_happened": "Chainalysis said an outside attacker entered its systems and internal tools this month. The accessed data included user IDs, names, email addresses and workplace roles. The company said investigation content, login credentials and active sign-in sessions were not accessed.",
+      "impact": "Affected users may receive convincing messages pretending to come from Chainalysis or their workplace. No service outage, payment loss or exposure of investigation material was reported.",
+      "what_next": "Chainalysis is investigating the incident and strengthening its systems. It may provide more details about the affected users and the full scope of the breach.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+        "published": "2026-10-31T12:01:56+00:00"
+       }
+      ],
+      "incident_ids": [
+       "e94efd15e11a3993"
+      ]
+     },
+     {
+      "headline": "AI-assisted campaign reached more than 200 organizations worldwide",
+      "what_happened": "Researchers said the China-linked group tracked as Vapor Panda used an artificial-intelligence tool to attack more than 200 organizations from October 17. Confirmed follow-on activity occurred at nine organizations, including government, telecommunications, financial, pharmaceutical, defense and semiconductor targets.",
+      "impact": "The reporting does not confirm a public outage or disruption to household services. The campaign could expose internal accounts and systems at affected organizations, but the full impact and identities of all victims remain unclear.",
+      "what_next": "Investigators may identify more victims and clarify what information or access was obtained. The campaign shows that attackers can attempt more break-ins at the same time, rather than proving disruption to any particular public service.",
+      "change": "New report",
+      "sectors": [
+       "finance",
+       "internet",
+       "energy",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html",
+        "published": "2026-10-30T16:58:44+00:00"
+       }
+      ],
+      "incident_ids": [
+       "ee1d4a2a3bf84e8a"
+      ]
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below."
+   ],
+   "sources": [
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 714
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 6,
+   "usage": {
+    "completion_tokens": 603,
+    "prompt_tokens": 12637,
+    "total_tokens": 13240,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 122,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 12634,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-10-31T02:15:21+00:00"
+  "checked_at": "2026-10-31T12:42:24+00:00"
+ },
+ "automatic_attempts": {
+  "2026-10-31-morning": {
+   "count": 1,
+   "checked_at": "2026-10-31T12:42:24+00:00"
+  }
  }
 }
