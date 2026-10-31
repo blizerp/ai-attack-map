@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T22:25:52+00:00",
+ "updated": "2026-10-31T05:51:58+00:00",
  "incidents": [
   {
    "title": "Binance breach enabled approximately $5.9 billion in withdrawals",
@@ -956,6 +956,82 @@
    ]
   },
   {
+   "title": "Stolen AI key used for 800,000 Bedrock calls",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "An unnamed organization whose AI-service credentials were stolen",
+   "attacker": "Unidentified actors; Wiz linked the activity to infrastructure associated with LLM resale operations but said it could not definitively identify the operators behind the abuse.",
+   "what": "Wiz observed a stolen key used for approximately 800,000 Amazon Bedrock calls over more than 30 hours, with about 90% succeeding. The activity included quota and model enumeration followed by high-volume use of Claude models.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The compromised credential enabled unauthorized consumption of a cloud AI service; Wiz estimated that the two documented cases together likely generated more than US$100,000 in usage at list prices.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Wiz directly observed unauthorized use of a stolen enterprise AI credential and subsequent high-volume model access. The precise victim, attacker, and final financial liability were not reported.",
+   "id": "75a9abb54aa30128",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+   "added": "2026-10-31T05:51:58+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Wiz observed unauthorized use of a stolen organizational key and estimated more than US$100,000 in combined usage across two cases; it did not report data theft or service disruption.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "substantial"
+    },
+    "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+    "assessed_at": "2026-10-31T05:51:58+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Stolen restricted AI key abused for over one million calls",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "An unnamed organization whose restricted AI-service credential was stolen",
+   "attacker": "Unidentified actors; Wiz observed multiple resale-related infrastructures testing the key but did not establish who conducted the initial compromise or flood.",
+   "what": "Wiz observed a stolen, policy-restricted key used for approximately 1.7 million Amazon Bedrock calls over 13 hours, with more than one million successful. The activity followed permission checks, model testing, and quota enumeration.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The stolen credential was used for unauthorized high-volume access to AI models, and the activity resembled resold coding-agent traffic; Wiz estimated that the two documented cases together likely exceeded US$100,000 in usage at list prices.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Wiz directly documented large-scale unauthorized use of a compromised enterprise AI credential, including attempts to bypass policy restrictions through model and region testing. The victim and ultimate loss allocation remain unknown.",
+   "id": "d7a97f151e81f660",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+   "added": "2026-10-31T05:51:58+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Wiz observed more than one million successful unauthorized Bedrock calls and estimated over US$100,000 in combined usage across the two cases; no data theft or operational outage was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "substantial"
+    },
+    "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+    "assessed_at": "2026-10-31T05:51:58+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
    "title": "Volt Typhoon used Silent Train in zero-day intrusions",
    "date": "2026-10-28",
    "category": "major_cyber",
@@ -1503,7 +1579,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, identity-provider, and vault credentials, created privileged identities, pushed malicious GitOps workloads, and attempted to access and exfiltrate sensitive data.",
+     "what": "Wiz CIRT documented an AI agent exploiting an exposed Kafka UI for Java remote code execution, deploying malware and backdoors, harvesting credentials, escalating to cluster and cloud administration, creating an administrator identity, modifying GitOps and CI/CD systems, and accessing sensitive data. The agent also attempted to exfiltrate data through webhooks, source control, Kubernetes ConfigMaps, and cloud storage.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -3367,7 +3443,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "The campaign used stolen GitHub tokens to plant workflow files in repositories accessible to compromised accounts. In private repositories and GitHub Enterprise environments, workflows executed, dumped repository and environment secrets into GitHub logs, and the logs were retrieved and deleted. Wiz recovered more than 13,500 planted branches and observed cloud-role assumptions and additional credential-search activity on some self-hosted runners.",
+     "what": "The Gheist campaign planted malicious GitHub Actions workflows in repositories accessible to stolen tokens. In private repositories and GitHub Enterprise environments, workflows executed, dumped repository and environment secrets into logs, and deleted the runs; some activity also used self-hosted runners to search for credentials and other secrets.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -4427,7 +4503,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker used stolen credentials to access LiteLLM's release workflow, disable branch protection, and publish a malicious LiteLLM 1.107.0 release to PyPI and tagged images to GHCR and Docker Hub. The payload persisted through Python startup files and attempted to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, sending encrypted data to a lookalike domain.",
+     "what": "The attacker published malicious LiteLLM 1.107.0 wheels to PyPI and compromised matching GHCR and Docker Hub image tags. The payload used persistence files to execute on interpreter startup and harvest cloud, Kubernetes, SSH, GPG, registry, AI-provider, AI-coding-tool, browser, and shell-history credentials; it also queried stored LiteLLM provider-credential tables where configured.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -6315,7 +6391,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Wiz investigated multiple intrusions in which phishing captured GCP credentials and MFA codes. The attackers obtained privileged access, disabled organization policy guardrails, added external accounts, linked attacker-controlled projects to victims’ billing accounts, and generated high-volume Gemini API usage.",
+     "what": "Attackers phished GCP users for credentials and MFA codes, then altered IAM and organization policies, added external accounts, linked attacker-controlled projects to victims’ billing accounts, enabled Gemini APIs, and generated service-account credentials. Wiz observed unauthorized Gemini usage producing charges of tens to hundreds of thousands of dollars within 24–48 hours.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -25121,6 +25197,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-30T22:25:52+00:00",
+ "last_added": "2026-10-31T05:51:58+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
