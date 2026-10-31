@@ -2159,16 +2159,194 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-10-31-evening",
+   "date": "2026-10-31",
+   "edition": "evening",
+   "published_at": "2026-10-31T21:43:52+00:00",
+   "generated_at": "2026-10-31T21:43:52+00:00",
+   "scheduled_for": "2026-10-31T21:00:00+00:00",
+   "window_start": "2026-10-31T12:42:24+00:00",
+   "window_end": "2026-10-31T21:43:52+00:00",
+   "sector_window_start": "2026-10-30T21:43:52+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "A cloud hosting breach led to confirmed misuse of customers’ artificial-intelligence access keys. No public-service outage or affected customer count has been reported.",
+    "items": [
+     {
+      "headline": "Cloud hosting breach leads to unauthorized use of customers’ AI keys",
+      "what_happened": "Northflank disclosed a breach discovered October 30. Attackers are believed to have accessed stored customer secrets, including environment variables and access keys. Customers have reported unauthorized use of artificial-intelligence service keys.",
+      "impact": "Customers could face unexpected AI charges or misuse of connected databases and cloud services. Northflank has not said how many customers were affected or whether other stored credentials were abused. No public outage was reported.",
+      "what_next": "Northflank is investigating with outside experts and helping customers review suspicious use. Further updates may clarify how attackers entered, which accounts were affected and whether data was accessed.",
+      "change": "New report",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+        "published": "2026-10-31T18:01:12+00:00"
+       }
+      ],
+      "incident_ids": [
+       "7538a47c398f6773"
+      ]
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "",
+     "items": []
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "A cloud hosting provider reported confirmed misuse of customer access keys after a breach.",
+     "items": [
+      {
+       "headline": "Cloud hosting breach exposes customers to unexpected AI charges",
+       "what_happened": "Northflank said attackers accessed secrets stored on its cloud application platform. Multiple customers then reported unauthorized use of their artificial-intelligence service keys.",
+       "impact": "Customers may see unexpected usage or bills for AI services. Stolen credentials could also be used against connected services, but no such wider compromise has been confirmed. The number of affected customers is unclear.",
+       "what_next": "The provider is investigating the entry point and scope. Customers may receive more information about affected accounts and any confirmed data or financial losses.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+         "published": "2026-10-31T18:01:12+00:00"
+        }
+       ],
+       "incident_ids": [
+        "7538a47c398f6773"
+       ]
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "A cloud platform breach affected customer secrets stored in a shared hosting service.",
+     "items": [
+      {
+       "headline": "Shared cloud platform breach leads to customer key misuse",
+       "what_happened": "Northflank, a platform used to run applications and databases, said attackers accessed customer secrets stored there. Reported misuse involved keys for artificial-intelligence services supplied by customers.",
+       "impact": "This is a confirmed compromise of a trusted service used by other organizations. Customers may face unauthorized AI use and charges; broader theft or disruption has not been confirmed.",
+       "what_next": "Northflank and outside investigators are determining how the platform was breached and whether credentials beyond AI keys were used.",
+       "change": "New report",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+         "published": "2026-10-31T18:01:12+00:00"
+        }
+       ],
+       "incident_ids": [
+        "7538a47c398f6773"
+       ]
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below."
+   ],
+   "sources": [
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 714
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 10,
+   "usage": {
+    "completion_tokens": 824,
+    "prompt_tokens": 16290,
+    "total_tokens": 17114,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 224,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 16287,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-10-31T12:42:24+00:00"
+  "checked_at": "2026-10-31T21:43:52+00:00"
  },
  "automatic_attempts": {
   "2026-10-31-morning": {
    "count": 1,
    "checked_at": "2026-10-31T12:42:24+00:00"
+  },
+  "2026-10-31-evening": {
+   "count": 1,
+   "checked_at": "2026-10-31T21:43:52+00:00"
   }
  }
 }
