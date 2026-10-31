@@ -1862,11 +1862,184 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-10-30-evening",
+   "date": "2026-10-30",
+   "edition": "evening",
+   "published_at": "2026-10-31T02:15:21+00:00",
+   "generated_at": "2026-10-31T02:15:21+00:00",
+   "scheduled_for": "2026-10-30T21:00:00+00:00",
+   "window_start": "2026-10-30T17:47:57+00:00",
+   "window_end": "2026-10-31T02:15:21+00:00",
+   "sector_window_start": "2026-10-30T02:15:21+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "A fashion retailer confirmed payment-card theft affecting customers in several U.S. states. Other fresh reporting concerns privacy questions around a chatbot company’s possible bankruptcy sale and a broader wave of attacks against AI developer platforms, but those reports do not confirm new widespread public-service disruption.",
+    "items": [
+     {
+      "headline": "Fashion retailer says hackers stole customers’ payment-card details",
+      "what_happened": "Revolve said attackers accessed several company systems and obtained names, contact details, payment-card numbers and expiration dates saved in online shopping accounts. The incident date and full number of affected customers are unclear. The company reported 127,200 affected people in Texas and 1,328 in Vermont.",
+      "impact": "Customers whose saved card information was taken face a risk of unauthorized charges or convincing fraud attempts. Revolve reported no disruption to its operations and said it expects no material financial impact.",
+      "what_next": "Revolve has notified federal authorities and hired outside investigators. Further state notices may clarify the total number of affected customers and whether fraudulent transactions occurred.",
+      "change": "New report",
+      "sectors": [
+       "finance",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards",
+        "published": "2026-10-30T19:00:00+00:00"
+       }
+      ],
+      "incident_ids": [
+       "d098d27b6b4f9769"
+      ]
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "A confirmed online retailer breach exposed saved payment-card information. No banking or payment-system outage was reported.",
+     "items": [
+      {
+       "headline": "Revolve reports stolen card information from online shoppers",
+       "what_happened": "Hackers accessed names, contact details, card numbers and expiration dates stored in Revolve shopping accounts. The incident date and total number affected are not yet known.",
+       "impact": "Some customers may see attempted fraudulent charges or targeted scams. The retailer said shopping continued normally and reported no operational disruption.",
+       "what_next": "Law-enforcement and outside investigations may establish the full scope and whether the stolen information has been misused.",
+       "change": "New report",
+       "sectors": [
+        "finance",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards",
+         "published": "2026-10-30T19:00:00+00:00"
+        }
+       ],
+       "incident_ids": [
+        "d098d27b6b4f9769"
+       ]
+      }
+     ]
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "A fashion retailer reported theft of customer payment information from its online shopping systems. No service outage was reported.",
+     "items": [
+      {
+       "headline": "Online fashion retailer reports theft of customer card details",
+       "what_happened": "Revolve said attackers used automated methods to obtain names, contact information, payment-card numbers and expiration dates from customers who had saved payment information online.",
+       "impact": "The confirmed effect is exposure of payment information. Revolve said its operations were not disrupted; the number of affected people outside the reported U.S. state notices remains unclear.",
+       "what_next": "The company’s investigation and regulatory filings may reveal more about the incident and any resulting fraud.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "finance"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards",
+         "published": "2026-10-30T19:00:00+00:00"
+        }
+       ],
+       "incident_ids": [
+        "d098d27b6b4f9769"
+       ]
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "",
+     "items": []
+    }
+   },
+   "warnings": [
+    "1 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 714
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 32,
+   "usage": {
+    "completion_tokens": 778,
+    "prompt_tokens": 36545,
+    "total_tokens": 37323,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 162,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 36542,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
-  "status": "failed",
-  "checked_at": "2026-10-31T00:35:00+00:00",
-  "error": "ValueError"
+  "status": "ok",
+  "checked_at": "2026-10-31T02:15:21+00:00"
  }
 }
