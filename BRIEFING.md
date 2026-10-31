@@ -43,3 +43,38 @@ Run `python -m unittest test_briefing test_site test_selection test_coverage` wi
 feedparser, requests, openai, trafilatura and jsonschema installed. Tests cover DST,
 late execution, evidence windows, repeated reports, material source revisions,
 invalid citations, failure retention, duplicate runs and published asset boundaries.
+
+## Missed-edition recovery
+
+In addition to the 8 a.m./5 p.m. targets, an off-hour hourly check and successful
+map refresh completion invoke the same catch-up path. This does not guarantee an
+exact delivery time: GitHub may delay all scheduled work. The page now identifies
+a missing expected edition after a 30-minute grace period, using New York calendar
+time and daylight saving rules rather than a 26-hour age threshold. It refreshes
+on reopening and every five minutes while open, retaining the loaded copy if a
+refresh fails. Historical views still show the current publication warning.
+
+Each automatic invocation generates at most one missing edition from the latest
+two due slots, oldest first. Empty archives start with the latest due slot. A
+newer published edition or opening brief covers earlier gaps; there is no unbounded
+historical backfill. Delayed editions retain their scheduled date and kind, disclose
+lateness, and use actual collection/publication times for their reporting window.
+An already published slot does not fetch feeds or call the model again.
+
+Automatic retries are limited to three attempts per slot, at least 45 minutes
+apart. Failed generation keeps prior editions. A manual edition run can retry
+an exhausted slot; editorial replacement remains an explicit manual option.
+The attempts are recorded in `briefings.json`, trimmed after three days.
+The existing shared writer lock now uses `queue: max` on both writers so retry
+triggers cannot replace a queued map update or correction. Checkouts happen after
+the serialized run starts and therefore read previously committed editions. A
+failed push or infrastructure crash before the attempt record reaches GitHub can
+still require manual recovery; this is not an exactly-once external API guarantee.
+
+Tests require no API key or paid calls:
+
+```
+python -m unittest test_briefing test_site test_selection test_coverage
+npm install --no-save --ignore-scripts jsdom@26.1.0
+node --test test_briefing_ui.cjs test_briefing_dom.cjs
+```
