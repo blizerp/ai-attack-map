@@ -132,15 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-10-31T05:51:58+00:00",
+  "checked": "2026-10-31T12:41:24+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Independent researcher evidence substantiates a distinct active campaign involving unauthorized GitHub-account and repository access, successful workflow execution, and secret exposure; it matches the already-tracked Gheist incident.",
+  "reason": "This is the same substantiated Gheist campaign already tracked under fdf212b3998ab3a2; the source provides additional researcher evidence of private-repository workflow execution and secret-exposure risk.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Independent researcher evidence substantiates a distinct active campaign involving unauthorized GitHub-account and repository access, successful workflow execution, and secret exposure; it matches the already-tracked Gheist incident.",
-    "title": "Gheist campaign abused stolen GitHub tokens across 850 accounts",
+    "reason": "This is the same substantiated Gheist campaign already tracked under fdf212b3998ab3a2; the source provides additional researcher evidence of private-repository workflow execution and secret-exposure risk.",
+    "title": "Gheist campaign planted secret-dumping workflows in private repositories",
     "incident_id": "fdf212b3998ab3a2"
    }
   ],
@@ -18493,16 +18493,16 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-10-31T05:51:58+00:00",
+  "checked": "2026-10-31T12:41:24+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz CIRT substantiated a distinct real-world AI-agent intrusion against an unnamed organization, including code execution, cloud and Kubernetes compromise, privileged access, and sensitive-data access. It matches the already tracked agentic cloud intrusion incident.",
+  "reason": "Credible incident-response research substantiates an actual AI-agent-operated intrusion with privileged access, persistence, production workload modification, and sensitive-data exfiltration; it is the same event already tracked under 896e03eaa790459b.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz CIRT substantiated a distinct real-world AI-agent intrusion against an unnamed organization, including code execution, cloud and Kubernetes compromise, privileged access, and sensitive-data access. It matches the already tracked agentic cloud intrusion incident.",
-    "title": "AI agent conducted multi-cloud intrusion at unnamed organization",
-    "incident_id": "d22f0579003d30c6"
+    "reason": "Credible incident-response research substantiates an actual AI-agent-operated intrusion with privileged access, persistence, production workload modification, and sensitive-data exfiltration; it is the same event already tracked under 896e03eaa790459b.",
+    "title": "Wiz observed AI agent conduct multi-cloud intrusion",
+    "incident_id": "ae8f3c2f8a5f5092"
    }
   ],
   "evidence": "article",
@@ -18986,15 +18986,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-10-31T05:51:58+00:00",
+  "checked": "2026-10-31T12:41:24+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated multi-victim cloud-account compromise with privileged access and material unauthorized AI charges; it duplicates the already tracked GCP/Gemini LLMjacking incident.",
+  "reason": "Wiz substantiated multiple real GCP compromises involving stolen credentials, privileged billing-account manipulation, and material unauthorized Gemini API charges; this is the already-tracked LLMjacking incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated multi-victim cloud-account compromise with privileged access and material unauthorized AI charges; it duplicates the already tracked GCP/Gemini LLMjacking incident.",
-    "title": "Phishing-led GCP intrusions abused victims’ Gemini billing accounts",
+    "reason": "Wiz substantiated multiple real GCP compromises involving stolen credentials, privileged billing-account manipulation, and material unauthorized Gemini API charges; this is the already-tracked LLMjacking incident.",
+    "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
   ],
@@ -19796,15 +19796,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-10-31T05:51:58+00:00",
+  "checked": "2026-10-31T12:41:24+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated production software and release-pipeline compromise with malicious packages distributed to downstream users; it is already tracked as the same LiteLLM supply-chain incident.",
+  "reason": "Confirmed production release and package-registry compromise with credential theft and downstream supply-chain exposure; this is the same LiteLLM compromise already tracked under e2e13fe6f7503c25.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated production software and release-pipeline compromise with malicious packages distributed to downstream users; it is already tracked as the same LiteLLM supply-chain incident.",
-    "title": "LiteLLM 1.107.0 supply-chain release stole credentials",
+    "reason": "Confirmed production release and package-registry compromise with credential theft and downstream supply-chain exposure; this is the same LiteLLM compromise already tracked under e2e13fe6f7503c25.",
+    "title": "LiteLLM 1.107.0 release backdoored to steal credentials",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -19822,15 +19822,15 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-10-31T05:51:58+00:00",
+  "checked": "2026-10-31T12:41:24+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without substantiated external victim harm. The LiteLLM supply-chain reference is incidental promotional/background material and is already tracked separately.",
+  "reason": "Exclude: vulnerability disclosure and research demonstration without a confirmed real-world compromise; the embedded LiteLLM reference duplicates an already-tracked incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without substantiated external victim harm. The LiteLLM supply-chain reference is incidental promotional/background material and is already tracked separately.",
-    "title": "PHP2Shell vulnerability demonstrated in controlled research"
+    "reason": "Exclude: vulnerability disclosure and research demonstration without a confirmed real-world compromise; the embedded LiteLLM reference duplicates an already-tracked incident.",
+    "title": "Wiz disclosed AI-assisted PHP vulnerabilities, not a confirmed attack"
    }
   ],
   "evidence": "article",
@@ -26320,6 +26320,133 @@
    "date": "2026-10-30",
    "source": "Wiz Research",
    "published_at": "2026-10-30T22:51:44+00:00"
+  }
+ },
+ "https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run/": {
+  "title": "Syrian Hacker Gets Prison Time in US After Over a Decade on the Run",
+  "source": "SecurityWeek",
+  "checked": "2026-10-31T12:41:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude as a court/sentencing-only recap with no substantive new incident facts.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude as a court/sentencing-only recap with no substantive new incident facts.",
+    "title": "Syrian Electronic Army hacker sentenced for historical intrusions"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "62d7d6b18b830b611ac4b199b451e4f1dc606ca79da4c9e95ab36ece1599e664",
+  "item": {
+   "id": "8426474406aa87ba",
+   "title": "Syrian Hacker Gets Prison Time in US After Over a Decade on the Run",
+   "url": "https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run/",
+   "date": "2026-10-31",
+   "source": "SecurityWeek",
+   "published_at": "2026-10-31T11:00:00+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html": {
+  "title": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3, Up 38%",
+  "source": "The Hacker News",
+  "checked": "2026-10-31T12:41:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is an aggregate quarterly DDoS statistic involving mitigated attacks, not a distinct substantiated incident with documented real-world victim consequences.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is an aggregate quarterly DDoS statistic involving mitigated attacks, not a distinct substantiated incident with documented real-world victim consequences.",
+    "title": "Cloudflare Q3 2026 DDoS attack statistics"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "59987535e368ab41ffb3d0aef90b088dc43173db572e78308e5311a1cf1ff767",
+  "item": {
+   "id": "6dcc2a14c65dc203",
+   "title": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3, Up 38%",
+   "url": "https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html",
+   "date": "2026-10-31",
+   "source": "The Hacker News",
+   "published_at": "2026-10-31T04:56:12+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html": {
+  "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
+  "source": "The Hacker News",
+  "checked": "2026-10-31T12:41:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The victim confirmed a real compromise of internal systems and customer data exposure, with source-supported AI use; it is not merely an attacker claim.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The victim confirmed a real compromise of internal systems and customer data exposure, with source-supported AI use; it is not merely an attacker claim.",
+    "title": "Chainalysis internal tools accessed and customer data exposed",
+    "incident_id": "e94efd15e11a3993"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "6b4d7183a97e2f00794ef33069da57f13b17c9ec20d8efdf6895c53c0e25bb8d",
+  "item": {
+   "id": "e94efd15e11a3993",
+   "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
+   "url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+   "date": "2026-10-31",
+   "source": "The Hacker News",
+   "published_at": "2026-10-31T12:01:56+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html": {
+  "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
+  "source": "The Hacker News",
+  "checked": "2026-10-31T12:41:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a confirmed real-world exploitation campaign involving Ivanti Connect Secure customers, root-level appliance compromise, and credential-related data collection; it duplicates the previously tracked Ivanti incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a confirmed real-world exploitation campaign involving Ivanti Connect Secure customers, root-level appliance compromise, and credential-related data collection; it duplicates the previously tracked Ivanti incident.",
+    "title": "Ivanti Connect Secure exploit chain enabled unauthenticated root access",
+    "incident_id": "2544e4d3fcebdd95"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "db101c43acee30318f25f360474afd7e6315618b17de9ec6b6e1aa5d9970d549",
+  "item": {
+   "id": "4beebd592a656cdb",
+   "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
+   "url": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
+   "date": "2026-10-31",
+   "source": "The Hacker News",
+   "published_at": "2026-10-31T08:27:43+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html": {
+  "title": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
+  "source": "The Hacker News",
+  "checked": "2026-10-31T12:41:24+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this was a controlled security demonstration and bug-bounty report with no established external victim harm or real-world exploitation.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this was a controlled security demonstration and bug-bounty report with no established external victim harm or real-world exploitation.",
+    "title": "ChatGPT shared-link sandbox escape demonstrated in controlled test"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "20f175a8d29f2a34e0ea8c076172fa194867f902a0d1f30f2d26d35a7aea60f1",
+  "item": {
+   "id": "01eb1c3b41efcbd5",
+   "title": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
+   "url": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
+   "date": "2026-10-31",
+   "source": "The Hacker News",
+   "published_at": "2026-10-31T05:33:41+00:00"
   }
  }
 }

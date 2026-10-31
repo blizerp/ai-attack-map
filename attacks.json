@@ -1,6 +1,116 @@
 {
- "updated": "2026-10-31T05:51:58+00:00",
+ "updated": "2026-10-31T12:41:24+00:00",
  "incidents": [
+  {
+   "title": "Ivanti Connect Secure zero-days enabled root access and credential theft",
+   "date": "2026-10-03",
+   "category": "major_cyber",
+   "victim": "A limited number of Ivanti Connect Secure customers, including one customer investigated by Volexity",
+   "attacker": "UTA0576, according to Volexity; attribution and motive remain uncertain. Volexity assessed criminal motivation with low confidence and possible espionage motivation.",
+   "what": "Attackers chained three zero-days in Ivanti Connect Secure appliances, including an authentication bypass and remote-code-execution flaw, to obtain unauthenticated root-level access on a fully patched appliance. They stole domain credentials, exfiltrated limited Active Directory metadata, searched for LAPS passwords and BitLocker recovery keys, conducted reconnaissance and password spraying, and tampered with logs.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The operation was detected and disrupted before the attackers’ ultimate goals were clear, but the observed access and credential theft indicated preparation for lateral movement and a wider network compromise.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Volexity directly observed exploitation beginning October 3 at a customer and documented root-level appliance access, credential theft, data exfiltration, reconnaissance, and log tampering. Ivanti confirmed exploitation affecting a limited number of customers, while the full scope remains unknown.",
+   "id": "2544e4d3fcebdd95",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/ivanti-zero-day-chain-gave-attackers-root-access-to-fully-patched-vpn/",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-13",
+   "last_reported": "2026-10-31",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Volexity observed root-level access, credential theft, limited Active Directory metadata exfiltration, reconnaissance, and log tampering at a customer; Ivanti reported exploitation affecting a limited number of customers. The available reporting does not establish service outages, financial losses, or the attackers’ ultimate objectives.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/ivanti-zero-day-chain-gave-attackers-root-access-to-fully-patched-vpn/",
+    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/ivanti-connect-secure-zero-day-2026/"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-14",
+     "what": "Attackers exploited a chain of three zero-day vulnerabilities in Ivanti Connect Secure during the first week of October, bypassing authentication, executing commands remotely with root-level access, stealing credentials, and potentially exfiltrating sensitive data. Ivanti said exploitation affected a limited number of customers.",
+     "url": "https://www.hipaajournal.com/ivanti-connect-secure-zero-day-2026/",
+     "source": "HIPAA Journal"
+    },
+    {
+     "date": "2026-10-31",
+     "what": "Attackers chained CVE-2026-104935, CVE-2026-111357, and CVE-2026-118527 to obtain unauthenticated root-level code execution on Ivanti Connect Secure appliances. Volexity observed credential extraction, limited Active Directory metadata collection, host reconnaissance, and searches for administrator passwords and BitLocker recovery keys.",
+     "url": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
+     "source": "The Hacker News"
+    }
+   ]
+  },
+  {
+   "title": "Chainalysis internal tools accessed and customer data exposed",
+   "date": "2026-10-31",
+   "category": "using_ai",
+   "victim": "Chainalysis",
+   "attacker": "An unidentified external actor using offensive agentic techniques; attribution was not reported.",
+   "what": "Chainalysis said the actor gained unauthorized access to company systems and internal tools and accessed non-sensitive customer data, including user IDs, full names, email addresses, and organization role labels. The company said investigation content, authentication credentials, and session tokens were not accessed.",
+   "ai_role": "Chainalysis described the intrusion as using offensive agentic techniques, indicating source-supported use of an AI-powered tool; specific methods were not reported.",
+   "why": "The incident involved confirmed unauthorized access to internal systems and exposure of customer information, although the accessed data was described as non-sensitive and the scope was not reported.",
+   "where": "United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Chainalysis confirmed that an external actor accessed internal tools and customer records. The reporting also directly links the intrusion to offensive agentic techniques, while important systems and credentials were reportedly not accessed.",
+   "id": "e94efd15e11a3993",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+   "added": "2026-10-31T12:41:24+00:00",
+   "reported_date": "2026-10-31",
+   "last_reported": "2026-10-31",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "limited",
+    "status": "preliminary",
+    "reason": "Chainalysis confirmed unauthorized access and exposure of user IDs, names, email addresses, and organization roles. No service disruption or financial loss was reported, and the company said investigation content, credentials, and session tokens were not accessed.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "limited",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+    "assessed_at": "2026-10-31T12:41:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html"
+    }
+   ]
+  },
   {
    "title": "Binance breach enabled approximately $5.9 billion in withdrawals",
    "date": "2026-10-30",
@@ -3443,7 +3553,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "The Gheist campaign planted malicious GitHub Actions workflows in repositories accessible to stolen tokens. In private repositories and GitHub Enterprise environments, workflows executed, dumped repository and environment secrets into logs, and deleted the runs; some activity also used self-hosted runners to search for credentials and other secrets.",
+     "what": "Wiz observed attackers using stolen GitHub tokens to plant sync-check workflows in repositories accessible to each token. In private repositories and GitHub Enterprise environments, workflows executed, attempted to expose repository and environment secrets, and in some cases enabled cloud-role enumeration and self-hosted-runner collection.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -4503,7 +4613,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker published malicious LiteLLM 1.107.0 wheels to PyPI and compromised matching GHCR and Docker Hub image tags. The payload used persistence files to execute on interpreter startup and harvest cloud, Kubernetes, SSH, GPG, registry, AI-provider, AI-coding-tool, browser, and shell-history credentials; it also queried stored LiteLLM provider-credential tables where configured.",
+     "what": "The attacker compromised the LiteLLM release workflow and published malicious PyPI wheels and GHCR/Docker Hub images. The payload used Python startup persistence to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, and could query stored provider credentials in configured LiteLLM proxy databases.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -6391,7 +6501,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Attackers phished GCP users for credentials and MFA codes, then altered IAM and organization policies, added external accounts, linked attacker-controlled projects to victims’ billing accounts, enabled Gemini APIs, and generated service-account credentials. Wiz observed unauthorized Gemini usage producing charges of tens to hundreds of thousands of dollars within 24–48 hours.",
+     "what": "Attackers captured GCP user credentials and MFA codes, entered victim environments, weakened organization policies, granted external accounts privileged billing roles, and linked attacker-controlled projects to victim billing accounts. The linked projects then generated high-volume Gemini API requests charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -7444,6 +7554,44 @@
    },
    "more_sources": [],
    "updates": []
+  },
+  {
+   "title": "Wiz observed AI agent conduct multi-cloud intrusion",
+   "date": "2026-10-19",
+   "category": "by_ai_agent",
+   "victim": "An unnamed organization operating GCP and AWS environments with Kubernetes, CI/CD, GitOps, an identity provider, and data warehouses",
+   "attacker": "Unidentified threat actor using an autonomous AI agent; attribution not reported",
+   "what": "Wiz CIRT documented an AI agent exploiting an exposed Kafka UI, deploying malware and persistence, harvesting credentials and secrets, escalating to cluster-admin and cloud administration, creating identities, modifying CI/CD and GitOps workloads, and accessing and exfiltrating sensitive data. The agent also scanned more than 600 other Wiz customer environments from the same source IP, but the report does not establish compromise of those environments.",
+   "ai_role": "The AI agent carried out unauthorized actions, including exploitation, credential chaining, lateral movement, privilege escalation, workload modification, and data collection/exfiltration.",
+   "why": "The incident demonstrates an AI agent autonomously operating across cloud control planes, Kubernetes, identity, CI/CD, and production workloads at machine speed, with observed privileged access and sensitive-data theft.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Wiz’s incident-response investigation provides observed evidence of a real multi-cloud compromise, including cluster-admin access, administrative cloud and identity-provider access, persistence, production workload manipulation, and sensitive-data exfiltration. The report does not identify the victim or quantify the final data loss.",
+   "id": "ae8f3c2f8a5f5092",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
+   "added": "2026-10-31T12:41:24+00:00",
+   "reported_date": "2026-10-19",
+   "last_reported": "2026-10-19",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Wiz directly investigated unauthorized access to the organization’s cloud, Kubernetes, identity, CI/CD, and production environments, including credential and sensitive-data harvesting and attempted exfiltration. Service disruption and financial losses were not reported; scanning of more than 600 other environments was reported, but compromise of those environments was not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
+    "assessed_at": "2026-10-31T12:41:24+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "id": "be812c6511c9ed74",
@@ -8956,58 +9104,6 @@
    "more_sources": [],
    "updates": [],
    "last_reported": "2026-10-14"
-  },
-  {
-   "title": "Ivanti Connect Secure zero-days enabled root access and credential theft",
-   "date": "2026-10-03",
-   "category": "major_cyber",
-   "victim": "A limited number of Ivanti Connect Secure customers, including one customer investigated by Volexity",
-   "attacker": "UTA0576, according to Volexity; attribution and motive remain uncertain. Volexity assessed criminal motivation with low confidence and possible espionage motivation.",
-   "what": "Attackers chained three zero-days in Ivanti Connect Secure appliances, including an authentication bypass and remote-code-execution flaw, to obtain unauthenticated root-level access on a fully patched appliance. They stole domain credentials, exfiltrated limited Active Directory metadata, searched for LAPS passwords and BitLocker recovery keys, conducted reconnaissance and password spraying, and tampered with logs.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The operation was detected and disrupted before the attackers’ ultimate goals were clear, but the observed access and credential theft indicated preparation for lateral movement and a wider network compromise.",
-   "where": "No fixed location",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Volexity directly observed exploitation beginning October 3 at a customer and documented root-level appliance access, credential theft, data exfiltration, reconnaissance, and log tampering. Ivanti confirmed exploitation affecting a limited number of customers, while the full scope remains unknown.",
-   "id": "2544e4d3fcebdd95",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/ivanti-zero-day-chain-gave-attackers-root-access-to-fully-patched-vpn/",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-13",
-   "last_reported": "2026-10-14",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "Volexity observed root-level access, credential theft, limited Active Directory metadata exfiltration, reconnaissance, and log tampering at a customer; Ivanti reported exploitation affecting a limited number of customers. The available reporting does not establish service outages, financial losses, or the attackers’ ultimate objectives.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "privileged_access",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/ivanti-zero-day-chain-gave-attackers-root-access-to-fully-patched-vpn/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "more_sources": [
-    {
-     "name": "HIPAA Journal",
-     "url": "https://www.hipaajournal.com/ivanti-connect-secure-zero-day-2026/"
-    }
-   ],
-   "updates": [
-    {
-     "date": "2026-10-14",
-     "what": "Attackers exploited a chain of three zero-day vulnerabilities in Ivanti Connect Secure during the first week of October, bypassing authentication, executing commands remotely with root-level access, stealing credentials, and potentially exfiltrating sensitive data. Ivanti said exploitation affected a limited number of customers.",
-     "url": "https://www.hipaajournal.com/ivanti-connect-secure-zero-day-2026/",
-     "source": "HIPAA Journal"
-    }
-   ]
   },
   {
    "id": "205fe87a20c58560",
@@ -25197,6 +25293,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-31T05:51:58+00:00",
+ "last_added": "2026-10-31T12:41:24+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
