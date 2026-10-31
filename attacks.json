@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T12:41:24+00:00",
+ "updated": "2026-10-31T21:41:09+00:00",
  "incidents": [
   {
    "title": "Ivanti Connect Secure zero-days enabled root access and credential theft",
@@ -110,6 +110,82 @@
      "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html"
     }
    ]
+  },
+  {
+   "title": "Northflank breach exposed customer secrets and AI API keys",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "Northflank and its customers",
+   "attacker": "Unknown; the intrusion was identified after a threat alert from Wiz.",
+   "what": "Northflank disclosed a security breach in which attackers apparently decrypted and stole customer environment variables and secrets stored on the platform. Customers subsequently reported unauthorized use of AI API keys stored there.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The exposed secrets could include database passwords, cloud credentials, authentication tokens, and AI API keys. Northflank required customers to rotate credentials and enabled audit logging, but did not disclose the number of affected customers or whether non-AI credentials were abused.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "A compromise of a cloud application-hosting provider exposed reusable customer credentials, including AI API keys, creating downstream access and unauthorized AI-usage risk across customer environments. Northflank confirmed reported unauthorized AI-key use, while overall scope and financial losses remain unknown.",
+   "id": "7538a47c398f6773",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+   "added": "2026-10-31T21:41:09+00:00",
+   "reported_date": "2026-10-31",
+   "last_reported": "2026-10-31",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Northflank warned that customer environment variables had been decrypted and stolen, and multiple customers reported unauthorized use of stored AI API keys. The number of affected customers, other credential abuse, and any resulting charges or data theft were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+    "assessed_at": "2026-10-31T21:41:09+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Chainalysis internal systems breached using agentic techniques",
+   "date": "2026-10-31",
+   "category": "using_ai",
+   "victim": "Chainalysis and organizations whose platform users' data was accessed",
+   "attacker": "External attackers; attribution and exact tools are not reported. Chainalysis described the activity as using “offensive agentic techniques.”",
+   "what": "Attackers gained unauthorized access to Chainalysis internal systems and tools earlier in October. Accessed data included some provisioned users’ names, email addresses, user IDs, and organizational role labels; the scope by organization remains under review.",
+   "ai_role": "Chainalysis described the intrusion as involving “offensive agentic techniques,” indicating attacker use of agentic methods, but did not establish whether custom AI agents or an existing framework was used.",
+   "why": "The incident affected a provider whose blockchain-investigation platform is used by law-enforcement, government, cryptocurrency, and financial organizations. Chainalysis reported no evidence so far that investigation content, authentication credentials, or session tokens were accessed.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Chainalysis confirmed unauthorized access to internal systems and tools, with customer-related identity and organizational data accessed. The compromise is operationally significant because the affected platform supports investigations and financial-crime monitoring, although sensitive investigation data and credentials were reportedly not evidenced as exposed.",
+   "id": "01fe05897c01bbe4",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/",
+   "added": "2026-10-31T21:41:09+00:00",
+   "reported_date": "2026-10-31",
+   "last_reported": "2026-10-31",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Chainalysis confirmed an intrusion and access to user identity and organizational-role data, but reported no evidence of access to investigation content, credentials, or session tokens. The number of affected organizations and any service disruption or financial loss were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "limited",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/",
+    "assessed_at": "2026-10-31T21:41:09+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "Binance breach enabled approximately $5.9 billion in withdrawals",
@@ -2334,6 +2410,54 @@
    ]
   },
   {
+   "title": "DHS employee database leaked online",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "U.S. Department of Homeland Security employees and contractors, including CBP, ICE, HSI, and CISA personnel",
+   "attacker": "Threat actor using the handle Department of Peace claimed responsibility; attribution and the original access method are unverified. DHS is investigating, while Okta said it had no evidence its systems were compromised.",
+   "what": "More than 41,000 records containing employee names, work contact details, job titles, office locations, and system/application access information were posted online. Distributed Denial of Secrets reportedly obtained a copy of the database, but the source and authenticity of all records remain under investigation.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The exposed access-mapping information could facilitate targeted phishing or follow-on intrusion against DHS personnel and sensitive operations. The reported dataset includes personnel involved in covert, undercover, rendition, and deportation programs, although the full scope and authenticity remain unresolved.",
+   "where": "United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "SecurityWeek reported that more than 41,000 DHS-related records were publicly leaked, and an independent organization reportedly obtained a copy. The records reportedly include sensitive personnel and system-access information, creating meaningful follow-on security risk.",
+   "id": "0e3249a520322cec",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/",
+   "added": "2026-10-31T21:41:09+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "under_investigation",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "A database containing tens of thousands of DHS employee and contractor records was reportedly leaked online, including system-access information. DHS described it as a potential breach and said it was responding; operational disruption and the complete scope were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/",
+    "assessed_at": "2026-10-31T21:41:09+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/"
+    }
+   ]
+  },
+  {
    "title": "UNM Health ransomware attack diverted ambulances",
    "date": "2026-10-26",
    "category": "major_cyber",
@@ -3553,7 +3677,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Wiz observed attackers using stolen GitHub tokens to plant sync-check workflows in repositories accessible to each token. In private repositories and GitHub Enterprise environments, workflows executed, attempted to expose repository and environment secrets, and in some cases enabled cloud-role enumeration and self-hosted-runner collection.",
+     "what": "The campaign planted malicious GitHub Actions workflows in repositories accessible to stolen tokens. In private repositories and GitHub Enterprise environments, workflows executed and dumped repository, environment, cloud, AI-provider, and other credentials into logs, which the operators retrieved and deleted.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -4613,7 +4737,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker compromised the LiteLLM release workflow and published malicious PyPI wheels and GHCR/Docker Hub images. The payload used Python startup persistence to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, and could query stored provider credentials in configured LiteLLM proxy databases.",
+     "what": "The attacker used stolen tokens to modify LiteLLM release infrastructure and publish malicious PyPI wheels and GHCR/Docker Hub images. The payload persisted through Python startup files and stole cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials before sending encrypted data to a lookalike domain.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -6501,7 +6625,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Attackers captured GCP user credentials and MFA codes, entered victim environments, weakened organization policies, granted external accounts privileged billing roles, and linked attacker-controlled projects to victim billing accounts. The linked projects then generated high-volume Gemini API requests charged to the victims.",
+     "what": "Attackers captured GCP credentials and MFA codes through fake Google login pages, then used privileged access to alter IAM and organization policies, add external accounts, and link attacker-controlled GCP projects to victims’ billing accounts. The external projects were used for high-volume Gemini API inference charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -7591,7 +7715,15 @@
     "source_url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
     "assessed_at": "2026-10-31T12:41:24+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-10-19",
+     "what": "Wiz reported a confirmed intrusion beginning through an exposed Kafka UI Java RCE. The AI agent deployed malware and backdoors, harvested credentials and secrets, escalated to cluster-admin and cloud administration, created identities and persistence, accessed sensitive data, and attempted exfiltration across GCP, AWS, Kubernetes, CI/CD, GitOps, databases, and the identity provider.",
+     "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
+     "source": "Wiz Research"
+    }
+   ]
   },
   {
    "id": "be812c6511c9ed74",
@@ -13470,6 +13602,70 @@
    ]
   },
   {
+   "title": "RemControl Android banking trojan targeted customers of more than 30 banks",
+   "date": "2026-09-25",
+   "category": "using_ai",
+   "victim": "Android users and customers of more than 30 banks in Western Europe, the Middle East, and Canada",
+   "attacker": "RemControl malware-as-a-service operators; attribution not reported",
+   "what": "RemControl spread through fake Google Play pages for the TVTap IPTV application. After Accessibility permissions were granted, it overlaid banking applications, streamed screens, logged keystrokes, and gave operators remote control of infected devices.",
+   "ai_role": "Group-IB found evidence that an AI assistant helped develop parts of the malware platform, reportedly under a disguised quiz and parental-monitoring prompt; the assistant response also appeared in one phishing overlay.",
+   "why": "The campaign enabled credential theft, surveillance, and remote control of banking devices across customers of more than 30 banks. The reporting does not establish a victim count or confirmed financial losses.",
+   "where": "Western Europe, the Middle East, and Canada",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Group-IB documented a functioning banking trojan campaign with remote device control and banking-app phishing across more than 30 institutions; AI use was reportedly involved in parts of its development.",
+   "id": "40d8eeb1267f4c72",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
+   "added": "2026-10-31T21:41:09+00:00",
+   "reported_date": "2026-09-25",
+   "last_reported": "2026-09-25",
+   "evidence_status": "confirmed",
+   "lat": 53.8603366,
+   "lon": 27.553006,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers documented malware capable of stealing keystrokes and banking credentials and controlling infected devices. Confirmed victim numbers and monetary losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
+    "assessed_at": "2026-10-31T21:41:09+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 53.8603366,
+     "lon": 27.553006,
+     "label": "Western Europe",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/"
+    },
+    {
+     "lat": 39.3014159,
+     "lon": -76.5888477,
+     "label": "Middle East",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/"
+    },
+    {
+     "lat": 61.0666922,
+     "lon": -107.991707,
+     "label": "Canada",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/"
+    }
+   ]
+  },
+  {
    "title": "Gastroenterology practice network breach exposed medical and identity data",
    "date": "2026-03-06",
    "category": "major_cyber",
@@ -14798,7 +14994,7 @@
    "updates": [
     {
      "date": "2026-08-14",
-     "what": "A small number of employee email accounts were accessed by an unauthorized third party. The accounts contained patient names, birth dates, contact information, Social Security numbers, health information, and health-insurance information.",
+     "what": "Suspicious activity was identified in the hospital's email system, and forensic investigators confirmed unauthorized access to a small number of employee email accounts. The accounts contained patient names, birth dates, contact details, Social Security numbers, health information, and insurance information; the affected count was not disclosed.",
      "url": "https://www.hipaajournal.com/boston-healthcare-homeless-program-mon-general-open-door-illinois-data-breaches/",
      "source": "HIPAA Journal"
     },
@@ -15613,6 +15809,54 @@
    },
    "more_sources": [],
    "updates": []
+  },
+  {
+   "title": "AI agent reportedly breached an unnamed Spanish organization",
+   "date": "2026-09-16",
+   "category": "by_ai_agent",
+   "victim": "An unnamed Spanish organization",
+   "attacker": "Unknown; the Spanish Data Protection Agency described third-party use of an AI agent, while the attack’s cause and provenance remain under investigation.",
+   "what": "According to details published by Spain’s AEPD, an attacker achieved a successful login, searched for vulnerabilities, modified personal data, and accessed invoices using an AI agent to chain attack phases.",
+   "ai_role": "An AI agent reportedly planned and executed multiple attack steps, including vulnerability searching and actions against the victim’s systems; the exact model and operating method are unknown.",
+   "why": "The report describes a consequential unauthorized access event involving personal data modification and invoice access, rather than merely a theoretical or blocked AI attack. The AEPD investigation and the incident’s precise circumstances remain open.",
+   "where": "Spain",
+   "major_impact": "critical_network_intrusion",
+   "significance": "A national data-protection authority reportedly documented an agentic attack that progressed from login to vulnerability discovery and unauthorized data actions. Exact data scope, attacker identity, and final consequences have not been established.",
+   "id": "03979d3e6a171134",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/",
+   "added": "2026-10-31T21:41:09+00:00",
+   "reported_date": "2026-09-16",
+   "last_reported": "2026-09-16",
+   "evidence_status": "under_investigation",
+   "lat": 39.3260685,
+   "lon": -4.8379791,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The reporting describes successful system access, personal-data modification, and invoice access at one unnamed organization. It does not establish service disruption, financial loss, or the amount and nature of data accessed.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/",
+    "assessed_at": "2026-10-31T21:41:09+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.3260685,
+     "lon": -4.8379791,
+     "label": "Spain",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/"
+    }
+   ]
   },
   {
    "title": "LHC Group vendor-platform breach exposed patient health data",
@@ -22319,7 +22563,7 @@
    "updates": [
     {
      "date": "2026-08-14",
-     "what": "A network security incident caused a network disruption, and independent cybersecurity investigators confirmed that an unauthorized party accessed the organization’s network and potentially viewed or obtained files. The exposed information included Social Security numbers, payment-card and financial data, medical records, and health-insurance information.",
+     "what": "A network security incident caused a disruption, and investigators confirmed that an unauthorized party accessed the network and potentially viewed or obtained files. Exposed data included Social Security numbers, payment-card and financial information, government IDs, medical information, health records, and insurance information; 201,260 individuals were affected.",
      "url": "https://www.hipaajournal.com/boston-healthcare-homeless-program-mon-general-open-door-illinois-data-breaches/",
      "source": "HIPAA Journal"
     }
@@ -25293,6 +25537,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-31T12:41:24+00:00",
+ "last_added": "2026-10-31T21:41:09+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
