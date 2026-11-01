@@ -132,15 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-11-01T06:15:49+00:00",
+  "checked": "2026-11-01T13:37:23+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is substantive researcher evidence of a distinct, ongoing campaign that compromised GitHub accounts and executed secret-dumping workflows. It duplicates the already-tracked Gheist campaign record.",
+  "reason": "This is a substantiated, ongoing multi-organization campaign involving confirmed unauthorized use of stolen GitHub tokens, execution of malicious workflows, and exposure of repository and environment secrets. It duplicates the already tracked Gheist incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is substantive researcher evidence of a distinct, ongoing campaign that compromised GitHub accounts and executed secret-dumping workflows. It duplicates the already-tracked Gheist campaign record.",
-    "title": "Gheist campaign stole secrets through compromised GitHub tokens",
+    "reason": "This is a substantiated, ongoing multi-organization campaign involving confirmed unauthorized use of stolen GitHub tokens, execution of malicious workflows, and exposure of repository and environment secrets. It duplicates the already tracked Gheist incident.",
+    "title": "Gheist campaign executed secret-dumping workflows in private repositories",
     "incident_id": "fdf212b3998ab3a2"
    }
   ],
@@ -18503,15 +18503,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-11-01T06:15:49+00:00",
+  "checked": "2026-11-01T13:37:23+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz’s incident-response team substantiated an actual multi-cloud compromise involving AI agents, privileged access, sensitive-data access, persistence, and attempted exfiltration; it is a duplicate of an already tracked incident.",
+  "reason": "Wiz’s incident-response investigation substantiates a consequential real-world intrusion operated by an AI agent, including administrative compromise, persistence, production-system changes, and sensitive-data access. It is the same unnamed-organization incident already tracked under ae8f3c2f8a5f5092.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz’s incident-response team substantiated an actual multi-cloud compromise involving AI agents, privileged access, sensitive-data access, persistence, and attempted exfiltration; it is a duplicate of an already tracked incident.",
-    "title": "Wiz observed AI agent conduct multi-cloud intrusion",
+    "reason": "Wiz’s incident-response investigation substantiates a consequential real-world intrusion operated by an AI agent, including administrative compromise, persistence, production-system changes, and sensitive-data access. It is the same unnamed-organization incident already tracked under ae8f3c2f8a5f5092.",
+    "title": "AI agent conducted multi-cloud intrusion at an unnamed organization",
     "incident_id": "ae8f3c2f8a5f5092"
    }
   ],
@@ -18996,15 +18996,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-11-01T06:15:49+00:00",
+  "checked": "2026-11-01T13:37:23+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz substantiated multiple consequential GCP compromises involving privileged access and material unauthorized AI charges; this is the same campaign already tracked under f58ed76ff84133f9.",
+  "reason": "Confirmed by Wiz CIRT as multiple real-world GCP intrusions with privileged access and documented material financial losses; this record duplicates the already-tracked incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz substantiated multiple consequential GCP compromises involving privileged access and material unauthorized AI charges; this is the same campaign already tracked under f58ed76ff84133f9.",
-    "title": "GCP account hijack funded unauthorized Gemini usage",
+    "reason": "Confirmed by Wiz CIRT as multiple real-world GCP intrusions with privileged access and documented material financial losses; this record duplicates the already-tracked incident.",
+    "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
   ],
@@ -19806,15 +19806,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-11-01T06:15:49+00:00",
+  "checked": "2026-11-01T13:37:23+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed supply-chain compromise of LiteLLM’s release infrastructure with malicious PyPI and container artifacts distributed to downstream users; this is the same incident already tracked under e2e13fe6f7503c25, with additional technical evidence.",
+  "reason": "Confirmed production software/release-infrastructure compromise with an active credential-stealing payload and downstream supply-chain exposure; this is the already-tracked LiteLLM supply-chain incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed supply-chain compromise of LiteLLM’s release infrastructure with malicious PyPI and container artifacts distributed to downstream users; this is the same incident already tracked under e2e13fe6f7503c25, with additional technical evidence.",
-    "title": "LiteLLM release pipeline compromised and malicious packages published",
+    "reason": "Confirmed production software/release-infrastructure compromise with an active credential-stealing payload and downstream supply-chain exposure; this is the already-tracked LiteLLM supply-chain incident.",
+    "title": "LiteLLM release pipeline compromised to distribute credential stealer",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -19832,14 +19832,14 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-11-01T06:15:49+00:00",
+  "checked": "2026-11-01T13:37:23+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without substantiated real-world victim compromise. The appended LiteLLM text is a brief reference to an already-tracked incident, not a substantive newly reported event.",
+  "reason": "This is a vulnerability disclosure and controlled research demonstration without evidence of a real external victim or consequential unauthorized compromise. The appended LiteLLM supply-chain paragraph is unrelated promotional/content material and corresponds to an already tracked incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without substantiated real-world victim compromise. The appended LiteLLM text is a brief reference to an already-tracked incident, not a substantive newly reported event.",
+    "reason": "This is a vulnerability disclosure and controlled research demonstration without evidence of a real external victim or consequential unauthorized compromise. The appended LiteLLM supply-chain paragraph is unrelated promotional/content material and corresponds to an already tracked incident.",
     "title": "Wiz disclosed PHP2Shell vulnerabilities after AI-assisted research"
    }
   ],
@@ -25371,15 +25371,16 @@
  "https://www.securityweek.com/drupal-commerce-core-vulnerability-exploited-against-online-stores/": {
   "title": "Drupal Commerce Core Vulnerability Exploited Against Online Stores",
   "source": "SecurityWeek",
-  "checked": "2026-10-30T13:03:35+00:00",
+  "checked": "2026-11-01T13:37:23+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Potentially meaningful exploitation is reported, but the source does not substantiate an actual consequential compromise or victim impact; defer pending evidence of affected stores or concrete consequences.",
+  "status": "include",
+  "reason": "Drupal confirmed active exploitation against real online-store deployments, making this a substantiated campaign despite unknown victims and final impact.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potentially meaningful exploitation is reported, but the source does not substantiate an actual consequential compromise or victim impact; defer pending evidence of affected stores or concrete consequences.",
-    "title": "Drupal Commerce Core exploitation reported against online stores"
+    "status": "include",
+    "reason": "Drupal confirmed active exploitation against real online-store deployments, making this a substantiated campaign despite unknown victims and final impact.",
+    "title": "Drupal Commerce access-bypass flaw exploited against online stores",
+    "incident_id": "76d68c45944a2559"
    }
   ],
   "evidence": "article",
@@ -26505,6 +26506,109 @@
    "date": "2026-10-31",
    "source": "BleepingComputer",
    "published_at": "2026-10-31T12:50:09+00:00"
+  }
+ },
+ "https://www.securityweek.com/northstar-security-exits-stealth-with-7m-to-expose-toxic-risk-combinations/": {
+  "title": "Northstar Security Exits Stealth With $7M to Expose Toxic Risk Combinations",
+  "source": "SecurityWeek",
+  "checked": "2026-11-01T13:37:23+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "This is a startup funding and product announcement rather than a substantive cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is a startup funding and product announcement rather than a substantive cyber incident.",
+    "title": "Northstar Security launches AI security startup"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "bd1b01693c3476ee81fc20978d446a5b844426b35c59ab328a2ea816ad564d11",
+  "item": {
+   "id": "1d241447123012b5",
+   "title": "Northstar Security Exits Stealth With $7M to Expose Toxic Risk Combinations",
+   "url": "https://www.securityweek.com/northstar-security-exits-stealth-with-7m-to-expose-toxic-risk-combinations/",
+   "date": "2026-11-01",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-01T11:15:00+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html": {
+  "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
+  "source": "The Hacker News",
+  "checked": "2026-11-01T13:37:23+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Kaspersky telemetry substantiates an actual malware infection on a government system, not merely targeting or exploit capability. This is the same NetamLoader incident already tracked under fcfc74f3570ba5e9.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Kaspersky telemetry substantiates an actual malware infection on a government system, not merely targeting or exploit capability. This is the same NetamLoader incident already tracked under fcfc74f3570ba5e9.",
+    "title": "NetamLoader infected a government Windows system in Asia",
+    "incident_id": "fcfc74f3570ba5e9"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "6511da72808ba8804f57b6c2b6972b1c006c0b58189fa0e200a6defb3ecddc03",
+  "item": {
+   "id": "20c70cb68edfed8f",
+   "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
+   "url": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
+   "date": "2026-11-01",
+   "source": "The Hacker News",
+   "published_at": "2026-11-01T07:02:58+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html": {
+  "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
+  "source": "The Hacker News",
+  "checked": "2026-11-01T13:37:23+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a substantive follow-up to the already tracked Polymarket/DebugBear compromise, adding confirmed financial theft, affected-wallet counts, blockchain evidence, and the response. It should remain one incident rather than a new record.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a substantive follow-up to the already tracked Polymarket/DebugBear compromise, adding confirmed financial theft, affected-wallet counts, blockchain evidence, and the response. It should remain one incident rather than a new record.",
+    "title": "Hijacked DebugBear script stole about $2.7 million from Polymarket traders",
+    "incident_id": "83273d8d85f8311b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "d821b4004c4bceda2aa90289af6a1191ec7923757689cb0510d1bf93dafafec8",
+  "item": {
+   "id": "a9f3deb62cf67cce",
+   "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
+   "url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+   "date": "2026-11-01",
+   "source": "The Hacker News",
+   "published_at": "2026-11-01T07:25:40+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html": {
+  "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
+  "source": "The Hacker News",
+  "checked": "2026-11-01T13:37:23+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is the already-tracked Binance theft, but the report adds official FBI attribution, a revised reported loss of $6.43 billion, and source-supported AI use in recruitment lures.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is the already-tracked Binance theft, but the report adds official FBI attribution, a revised reported loss of $6.43 billion, and source-supported AI use in recruitment lures.",
+    "title": "FBI attributes $6.43 billion Binance theft to TraderTraitor",
+    "incident_id": "0608e73237d158c5"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "fe0b4ee7667ec1e31f4e94566f8f892bf617709a4d77e6558daac9ff28d55e6a",
+  "item": {
+   "id": "32a2b95dc9da2118",
+   "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
+   "url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
+   "date": "2026-11-01",
+   "source": "The Hacker News",
+   "published_at": "2026-11-01T07:03:00+00:00"
   }
  }
 }
