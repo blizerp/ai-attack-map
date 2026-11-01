@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T21:41:09+00:00",
+ "updated": "2026-11-01T06:15:49+00:00",
  "incidents": [
   {
    "title": "Ivanti Connect Secure zero-days enabled root access and credential theft",
@@ -2458,6 +2458,44 @@
    ]
   },
   {
+   "title": "Yoba campaign disguised crypto miners as fake AI desktop apps",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Users who downloaded the malicious fake ChatGPT or Claude desktop applications; specific victims were not reported",
+   "attacker": "Unknown threat actors; attribution was not established. Check Point Research documented the campaign.",
+   "what": "Attackers created fake GitHub projects and websites for purported ChatGPT and Claude applications. Malicious YobaDropper and YobaLoader DLLs were sideloaded alongside signed OpenAI or Anthropic executables, established persistence, retrieved a payload, and injected it into svchost.exe to run an XMRig cryptocurrency miner.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign abused interest in AI tools and trusted signed executables and GitHub hosting to distribute malware, with anti-analysis measures intended to evade detection.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Check Point observed a real malware distribution campaign using fake AI applications, signed-executable DLL sideloading, persistence, and execution of a cryptocurrency miner. The reporting does not establish the number or identities of infected users.",
+   "id": "4c91d4cad21aadc8",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html",
+   "added": "2026-11-01T06:15:49+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "limited",
+    "status": "preliminary",
+    "reason": "Researchers documented malware that executes an XMRig miner on compromised systems. Victim count, operational disruption, and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "limited",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html",
+    "assessed_at": "2026-11-01T06:15:49+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
    "title": "UNM Health ransomware attack diverted ambulances",
    "date": "2026-10-26",
    "category": "major_cyber",
@@ -3213,19 +3251,19 @@
    "lat": 64.4459613,
    "lon": -149.680909,
    "severity": {
-    "level": "significant",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "Unauthorized network access was confirmed and affected files may have been accessed or acquired. The reported records included medical, financial, and identity information; operational and financial losses were not reported.",
+    "reason": "The investigation confirmed network access and exposure of sensitive records. Service disruption and direct financial losses were not reported.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
-     "reach": "single",
+     "reach": "multiple",
      "damage": "sensitive_data",
-     "essential": "unknown",
+     "essential": "none",
      "financial": "unknown"
     },
     "source_url": "https://www.hipaajournal.com/data-breach-paylogix-kenaitze-bone-joint-center-wichita-family-dental/",
-    "assessed_at": "2026-10-27T22:20:35+00:00",
+    "assessed_at": "2026-11-01T06:15:49+00:00",
     "method": "reported-impact-v1"
    },
    "locations": [
@@ -3236,6 +3274,14 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.hipaajournal.com/data-breach-paylogix-kenaitze-bone-joint-center-wichita-family-dental/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-27",
+     "what": "An unauthorized party accessed the tribe’s network. The investigation confirmed exposure of names, birth dates, Social Security numbers, driver’s-license or state-ID numbers, financial-account numbers, health-insurance information, and medical information affecting 9,319 individuals.",
+     "url": "https://www.hipaajournal.com/data-breach-paylogix-kenaitze-bone-joint-center-wichita-family-dental/",
+     "source": "HIPAA Journal"
     }
    ]
   },
@@ -3261,19 +3307,19 @@
    "lat": 37.6922361,
    "lon": -97.3375448,
    "severity": {
-    "level": "significant",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "Unauthorized email access and the types of data in the account were confirmed. No service disruption or financial loss was reported.",
+    "reason": "Unauthorized email access and the presence of sensitive patient records were confirmed. No service interruption or financial loss was reported.",
     "evidence": {
      "context": "real_world",
      "service": "none",
-     "reach": "single",
+     "reach": "multiple",
      "damage": "sensitive_data",
-     "essential": "unknown",
+     "essential": "none",
      "financial": "unknown"
     },
     "source_url": "https://www.hipaajournal.com/data-breach-paylogix-kenaitze-bone-joint-center-wichita-family-dental/",
-    "assessed_at": "2026-10-27T22:20:35+00:00",
+    "assessed_at": "2026-11-01T06:15:49+00:00",
     "method": "reported-impact-v1"
    },
    "locations": [
@@ -3292,6 +3338,14 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.hipaajournal.com/data-breach-paylogix-kenaitze-bone-joint-center-wichita-family-dental/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-27",
+     "what": "An employee email account was accessed without authorization. The account contained personal and protected health information for 1,273 individuals, including identity, payment, financial, insurance, and dental-record information.",
+     "url": "https://www.hipaajournal.com/data-breach-paylogix-kenaitze-bone-joint-center-wichita-family-dental/",
+     "source": "HIPAA Journal"
     }
    ]
   },
@@ -3540,6 +3594,90 @@
    }
   },
   {
+   "title": "Paylogix breach exposed sensitive records of at least 67,789 people",
+   "date": "2026-08-28",
+   "category": "major_cyber",
+   "victim": "Paylogix",
+   "attacker": "Akira ransomware group claimed responsibility; attribution is based on the reported claim.",
+   "what": "Attackers stole files from Paylogix’s network over several days in November. The files reportedly contained Social Security numbers, financial and health-insurance information, medical data, passport numbers, and taxpayer IDs.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident involved confirmed network compromise and theft of highly sensitive personal and medical information affecting at least 67,789 people.",
+   "where": "South Carolina, New Hampshire, and Vermont, United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Paylogix confirmed file theft involving medical, financial, identity, and tax information; at least 67,789 people were reported affected.",
+   "id": "84ac0d521e2631f7",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-08-28",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": 33.6874388,
+   "lon": -80.4363743,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Reported stolen files contained sensitive medical, financial, identity, and tax information affecting at least 67,789 people. Operational disruption and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/",
+    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 33.6874388,
+     "lon": -80.4363743,
+     "label": "South Carolina, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/"
+    },
+    {
+     "lat": 43.4849133,
+     "lon": -71.6553992,
+     "label": "New Hampshire, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/"
+    },
+    {
+     "lat": 44.5990718,
+     "lon": -72.5002608,
+     "label": "Vermont, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/data-breach-paylogix-kenaitze-bone-joint-center-wichita-family-dental/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-08-28",
+     "what": "Attackers stole files from Paylogix’s network over several days in November. The exposed information included Social Security numbers, financial and health-insurance information, medical data, passport numbers, and taxpayer IDs.",
+     "url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-10-27",
+     "what": "An unauthorized party accessed Paylogix’s network and copied files containing personal and protected health information. The exposed data included Social Security numbers, birth dates, benefit information, and, for some individuals, financial, medical, insurance, passport, tax, and access-credential information.",
+     "url": "https://www.hipaajournal.com/data-breach-paylogix-kenaitze-bone-joint-center-wichita-family-dental/",
+     "source": "HIPAA Journal"
+    }
+   ]
+  },
+  {
    "id": "293e0804b3f8eaff",
    "title": "University of Copenhagen breach exposed data of 525,000 people",
    "date": "2026-10-26",
@@ -3677,7 +3815,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "The campaign planted malicious GitHub Actions workflows in repositories accessible to stolen tokens. In private repositories and GitHub Enterprise environments, workflows executed and dumped repository, environment, cloud, AI-provider, and other credentials into logs, which the operators retrieved and deleted.",
+     "what": "Attackers used stolen GitHub tokens to plant workflows in repositories, execute them in private and enterprise environments, and extract repository, environment, cloud, CI/CD, and other secrets. Wiz recovered more than 13,500 planted branches and observed private-repository workflow execution and AWS role enumeration.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -4737,7 +4875,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker used stolen tokens to modify LiteLLM release infrastructure and publish malicious PyPI wheels and GHCR/Docker Hub images. The payload persisted through Python startup files and stole cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials before sending encrypted data to a lookalike domain.",
+     "what": "The attacker used stolen credentials to access LiteLLM’s release workflow, disable branch protection, and publish a malicious LiteLLM 1.107.0 release to PyPI plus tagged GHCR and Docker Hub images. The payload used persistence files that execute on Python interpreter startup and was designed to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, and coding-tool credentials, as well as credentials stored in LiteLLM proxy databases.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -6625,7 +6763,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Attackers captured GCP credentials and MFA codes through fake Google login pages, then used privileged access to alter IAM and organization policies, add external accounts, and link attacker-controlled GCP projects to victims’ billing accounts. The external projects were used for high-volume Gemini API inference charged to the victims.",
+     "what": "Attackers phished GCP users for credentials and MFA codes, gained privileged access, disabled organizational policy controls, added attacker-controlled accounts, and linked external GCP projects to victims’ billing accounts. They then generated large volumes of Gemini API usage charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -7719,7 +7857,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz reported a confirmed intrusion beginning through an exposed Kafka UI Java RCE. The AI agent deployed malware and backdoors, harvested credentials and secrets, escalated to cluster-admin and cloud administration, created identities and persistence, accessed sensitive data, and attempted exfiltration across GCP, AWS, Kubernetes, CI/CD, GitOps, databases, and the identity provider.",
+     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested credentials and secrets, moved across Kubernetes, GCP, AWS, CI/CD, GitOps, identity-provider and database systems, created privileged identities, and attempted data exfiltration.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -20745,79 +20883,6 @@
    "updates": []
   },
   {
-   "title": "Paylogix breach exposed sensitive records of at least 67,789 people",
-   "date": "2026-08-28",
-   "category": "major_cyber",
-   "victim": "Paylogix",
-   "attacker": "Akira ransomware group claimed responsibility; attribution is based on the reported claim.",
-   "what": "Attackers stole files from Paylogix’s network over several days in November. The files reportedly contained Social Security numbers, financial and health-insurance information, medical data, passport numbers, and taxpayer IDs.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The incident involved confirmed network compromise and theft of highly sensitive personal and medical information affecting at least 67,789 people.",
-   "where": "South Carolina, New Hampshire, and Vermont, United States",
-   "major_impact": "large_scale_data_theft",
-   "significance": "Paylogix confirmed file theft involving medical, financial, identity, and tax information; at least 67,789 people were reported affected.",
-   "id": "84ac0d521e2631f7",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-08-28",
-   "last_reported": "2026-08-28",
-   "evidence_status": "confirmed",
-   "lat": 33.6874388,
-   "lon": -80.4363743,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Reported stolen files contained sensitive medical, financial, identity, and tax information affecting at least 67,789 people. Operational disruption and financial losses were not reported.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 33.6874388,
-     "lon": -80.4363743,
-     "label": "South Carolina, United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/"
-    },
-    {
-     "lat": 43.4849133,
-     "lon": -71.6553992,
-     "label": "New Hampshire, United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/"
-    },
-    {
-     "lat": 44.5990718,
-     "lon": -72.5002608,
-     "label": "Vermont, United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/"
-    }
-   ],
-   "more_sources": [],
-   "updates": [
-    {
-     "date": "2026-08-28",
-     "what": "Attackers stole files from Paylogix’s network over several days in November. The exposed information included Social Security numbers, financial and health-insurance information, medical data, passport numbers, and taxpayer IDs.",
-     "url": "https://www.securityweek.com/in-other-news-log4j-rce-scare-minimus-shutdown-iranian-hacker-sanctions/",
-     "source": "SecurityWeek"
-    }
-   ]
-  },
-  {
    "title": "OpenAI agents exploited Linux flaw and gained root access",
    "date": "2026-07-19",
    "category": "by_ai_agent",
@@ -25537,6 +25602,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-10-31T21:41:09+00:00",
+ "last_added": "2026-11-01T06:15:49+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
