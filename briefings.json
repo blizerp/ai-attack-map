@@ -2333,11 +2333,133 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-01-morning",
+   "date": "2026-11-01",
+   "edition": "morning",
+   "published_at": "2026-11-01T13:38:38+00:00",
+   "generated_at": "2026-11-01T13:38:38+00:00",
+   "scheduled_for": "2026-11-01T13:00:00+00:00",
+   "window_start": "2026-10-31T21:43:52+00:00",
+   "window_end": "2026-11-01T13:38:38+00:00",
+   "sector_window_start": "2026-10-31T13:38:38+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh updates concern recovery from two previously reported cryptocurrency incidents. Binance has resumed limited withdrawals and received an official attribution. Polymarket has confirmed the number of affected wallets and its refund plan.",
+    "items": [
+     {
+      "headline": "Binance begins restoring withdrawals after record cryptocurrency theft",
+      "what_happened": "Binance says it has started restoring withdrawals in stages after attackers stole more than $6 billion in cryptocurrency on October 29. The FBI linked the theft to TraderTraitor, a North Korea-aligned group. Deposits remain available.",
+      "impact": "Withdrawals were temporarily unavailable but are now returning gradually. Binance says customer losses will be covered. Most frozen assets remain under investigation, so the final recovery is unclear.",
+      "what_next": "Binance will expand withdrawals after further checks. Investigators will continue tracing and freezing funds, and later updates may clarify the full loss and recovery.",
+      "change": "Recovery update",
+      "sectors": [
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
+        "published": "2026-11-01T07:03:00+00:00"
+       }
+      ],
+      "incident_ids": [
+       "0608e73237d158c5"
+      ]
+     },
+     {
+      "headline": "Polymarket will refund 726 traders after an outside script stole funds",
+      "what_happened": "Polymarket confirmed that harmful code supplied through its website-monitoring provider affected 726 wallets on October 29. The company is refunding about $2.7 million taken from traders and paying another $1.19 million for losses during the trading pause.",
+      "impact": "Trading was paused for about an hour and has since returned. By October 30, 689 wallets had been fully refunded; the remaining 37 were still being processed. The total planned reimbursement is $3.9 million.",
+      "what_next": "Polymarket is completing refunds and reviewing disputed amounts. The provider is investigating how its website address was taken over, while law enforcement examines the theft.",
+      "change": "Impact increased",
+      "sectors": [
+       "finance",
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+        "published": "2026-11-01T07:25:40+00:00"
+       }
+      ],
+      "incident_ids": [
+       "83273d8d85f8311b"
+      ]
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below."
+   ],
+   "sources": [
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 714
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 6,
+   "usage": {
+    "completion_tokens": 564,
+    "prompt_tokens": 12674,
+    "total_tokens": 13238,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 96,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 12671,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-10-31T21:43:52+00:00"
+  "checked_at": "2026-11-01T13:38:38+00:00"
  },
  "automatic_attempts": {
   "2026-10-31-morning": {
@@ -2347,6 +2469,10 @@
   "2026-10-31-evening": {
    "count": 1,
    "checked_at": "2026-10-31T21:43:52+00:00"
+  },
+  "2026-11-01-morning": {
+   "count": 1,
+   "checked_at": "2026-11-01T13:38:38+00:00"
   }
  }
 }
