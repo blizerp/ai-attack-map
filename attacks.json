@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T13:37:23+00:00",
+ "updated": "2026-11-01T22:07:33+00:00",
  "incidents": [
   {
    "title": "Binance breach enabled approximately $5.9 billion in withdrawals",
@@ -54,6 +54,10 @@
     {
      "name": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/"
     }
    ],
    "updates": [
@@ -80,6 +84,12 @@
      "what": "The FBI attributed the theft of more than $6.43 billion in virtual assets across 11 blockchains to TraderTraitor. Binance paused withdrawals after the incident and began a phased restoration on November 1; $2.85 billion was reportedly frozen on-chain.",
      "url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
      "source": "The Hacker News"
+    },
+    {
+     "date": "2026-11-01",
+     "what": "Attackers used a compromised DevOps engineer’s laptop to access a Binance service container and submit unauthorized withdrawal transactions. Approximately $6.36 billion in cryptocurrency was stolen across ten blockchains, with most transfers occurring within 20 minutes.",
+     "url": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/",
+     "source": "BleepingComputer"
     }
    ],
    "ai_source_url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
@@ -3889,7 +3899,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Wiz observed attackers using compromised GitHub tokens to create branches and workflows that printed repository and environment secrets into GitHub Actions logs, then retrieved and deleted the logs. In private repositories and GitHub Enterprise environments, workflows executed without approval; some activity included cloning private repositories and using cloud credentials to enumerate AWS Secrets Manager.",
+     "what": "Attackers used stolen GitHub tokens to plant workflows in accessible repositories, execute them, extract repository and environment secrets, and delete the workflow runs. Wiz recovered more than 13,500 malicious branches; private-repository and GitHub Enterprise executions were confirmed, including cloud-role assumptions from attacker-controlled branches.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -4949,7 +4959,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker used an unrevoked LiteLLM Agent Platform master key, obtained maintainer GitHub tokens, disabled branch protection, and published malicious LiteLLM 1.107.0 wheels and container images. The packages used Python startup persistence to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, and coding-tool credentials, encrypting and sending data to a lookalike domain.",
+     "what": "The attacker compromised LiteLLM’s release infrastructure and published trojanized PyPI wheels and GHCR/Docker Hub images. The payload used Python startup files to execute on interpreter launch and attempted to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and stored LiteLLM provider credentials.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -6837,7 +6847,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Attackers phished GCP users for credentials and MFA codes, entered victim environments, disabled organization safeguards, added external accounts, and linked attacker-controlled GCP projects to victims’ billing accounts. The attackers then generated large volumes of Gemini API usage charged to the victims.",
+     "what": "Wiz investigated multiple intrusions in which phishing victims surrendered GCP credentials and MFA codes. The attackers added external accounts, weakened organization policies, created privileged service accounts and Gemini API keys, and linked attacker-controlled projects to victims’ billing accounts.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -7931,7 +7941,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, escalated to cluster-admin and AWS organizational administration, modified GitOps workloads, and accessed sensitive data. The agent attempted multiple exfiltration paths, with some storage-bucket attempts denied.",
+     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested credentials and secrets, escalated privileges across Kubernetes, GCP, AWS, the identity provider, CI/CD, and GitOps systems, and accessed sensitive data. The agent also created identities, pipelines, workloads, and persistence mechanisms, and attempted data exfiltration through several channels.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }

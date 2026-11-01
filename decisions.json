@@ -132,15 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-11-01T13:37:23+00:00",
+  "checked": "2026-11-01T22:07:33+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated, ongoing multi-organization campaign involving confirmed unauthorized use of stolen GitHub tokens, execution of malicious workflows, and exposure of repository and environment secrets. It duplicates the already tracked Gheist incident.",
+  "reason": "This is a substantiated, ongoing campaign involving unauthorized access through stolen GitHub tokens, confirmed workflow execution, and theft of organizational secrets. It is already tracked as the Gheist campaign.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated, ongoing multi-organization campaign involving confirmed unauthorized use of stolen GitHub tokens, execution of malicious workflows, and exposure of repository and environment secrets. It duplicates the already tracked Gheist incident.",
-    "title": "Gheist campaign executed secret-dumping workflows in private repositories",
+    "reason": "This is a substantiated, ongoing campaign involving unauthorized access through stolen GitHub tokens, confirmed workflow execution, and theft of organizational secrets. It is already tracked as the Gheist campaign.",
+    "title": "Gheist campaign stole secrets from private GitHub repositories",
     "incident_id": "fdf212b3998ab3a2"
    }
   ],
@@ -18503,15 +18503,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-11-01T13:37:23+00:00",
+  "checked": "2026-11-01T22:07:33+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz’s incident-response investigation substantiates a consequential real-world intrusion operated by an AI agent, including administrative compromise, persistence, production-system changes, and sensitive-data access. It is the same unnamed-organization incident already tracked under ae8f3c2f8a5f5092.",
+  "reason": "Wiz’s incident-response team substantiated a consequential compromise of one organization’s live multi-cloud environment and confirmed autonomous AI-agent actions, making this a qualifying real-world incident. It duplicates the already tracked Wiz multi-cloud AI-agent intrusion.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz’s incident-response investigation substantiates a consequential real-world intrusion operated by an AI agent, including administrative compromise, persistence, production-system changes, and sensitive-data access. It is the same unnamed-organization incident already tracked under ae8f3c2f8a5f5092.",
-    "title": "AI agent conducted multi-cloud intrusion at an unnamed organization",
+    "reason": "Wiz’s incident-response team substantiated a consequential compromise of one organization’s live multi-cloud environment and confirmed autonomous AI-agent actions, making this a qualifying real-world incident. It duplicates the already tracked Wiz multi-cloud AI-agent intrusion.",
+    "title": "Wiz details AI agent’s multi-cloud intrusion into one organization",
     "incident_id": "ae8f3c2f8a5f5092"
    }
   ],
@@ -18996,14 +18996,14 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-11-01T13:37:23+00:00",
+  "checked": "2026-11-01T22:07:33+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed by Wiz CIRT as multiple real-world GCP intrusions with privileged access and documented material financial losses; this record duplicates the already-tracked incident.",
+  "reason": "This is a substantiated campaign involving unauthorized access to GCP billing and IAM controls and material financial loss. It duplicates the already-tracked Google Cloud phishing, takeover, and Gemini LLMjacking incident, while adding detailed evidence of the observed attack lifecycle and charges.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed by Wiz CIRT as multiple real-world GCP intrusions with privileged access and documented material financial losses; this record duplicates the already-tracked incident.",
+    "reason": "This is a substantiated campaign involving unauthorized access to GCP billing and IAM controls and material financial loss. It duplicates the already-tracked Google Cloud phishing, takeover, and Gemini LLMjacking incident, while adding detailed evidence of the observed attack lifecycle and charges.",
     "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
@@ -19806,15 +19806,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-11-01T13:37:23+00:00",
+  "checked": "2026-11-01T22:07:33+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed production software/release-infrastructure compromise with an active credential-stealing payload and downstream supply-chain exposure; this is the already-tracked LiteLLM supply-chain incident.",
+  "reason": "Confirmed production release-pipeline and package compromise with a credential-stealing payload; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed production software/release-infrastructure compromise with an active credential-stealing payload and downstream supply-chain exposure; this is the already-tracked LiteLLM supply-chain incident.",
-    "title": "LiteLLM release pipeline compromised to distribute credential stealer",
+    "reason": "Confirmed production release-pipeline and package compromise with a credential-stealing payload; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
+    "title": "LiteLLM 1.107.0 supply-chain release stole credentials",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -19832,15 +19832,15 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-11-01T13:37:23+00:00",
+  "checked": "2026-11-01T22:07:33+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "This is a vulnerability disclosure and controlled research demonstration without evidence of a real external victim or consequential unauthorized compromise. The appended LiteLLM supply-chain paragraph is unrelated promotional/content material and corresponds to an already tracked incident.",
+  "reason": "Exclude: this is vulnerability discovery and controlled exploit demonstration without evidence of a real external victim compromise. The separate LiteLLM supply-chain passage is unrelated background/content and is already tracked as incident e2e13fe6f7503c25.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "This is a vulnerability disclosure and controlled research demonstration without evidence of a real external victim or consequential unauthorized compromise. The appended LiteLLM supply-chain paragraph is unrelated promotional/content material and corresponds to an already tracked incident.",
-    "title": "Wiz disclosed PHP2Shell vulnerabilities after AI-assisted research"
+    "reason": "Exclude: this is vulnerability discovery and controlled exploit demonstration without evidence of a real external victim compromise. The separate LiteLLM supply-chain passage is unrelated background/content and is already tracked as incident e2e13fe6f7503c25.",
+    "title": "Wiz demonstrated PHP2Shell vulnerabilities in controlled testing"
    }
   ],
   "evidence": "article",
@@ -26609,6 +26609,82 @@
    "date": "2026-11-01",
    "source": "The Hacker News",
    "published_at": "2026-11-01T07:03:00+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/": {
+  "title": "FBI links $6.3 billion Binance crypto heist to North Korean hackers",
+  "source": "BleepingComputer",
+  "checked": "2026-11-01T22:07:33+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a confirmed, consequential Binance compromise with a material cryptocurrency theft. It is an update to the already-tracked Binance incident, adding FBI attribution and revised loss details, not a separate attack.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a confirmed, consequential Binance compromise with a material cryptocurrency theft. It is an update to the already-tracked Binance incident, adding FBI attribution and revised loss details, not a separate attack.",
+    "title": "FBI attributes Binance crypto theft to North Korean hackers",
+    "incident_id": "0608e73237d158c5"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "3bb2abb4da66548bfd573134c7823f1e103d11b6f551f8e85d9c922aa42c95ed",
+  "item": {
+   "id": "3737ce4777e5ae05",
+   "title": "FBI links $6.3 billion Binance crypto heist to North Korean hackers",
+   "url": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/",
+   "date": "2026-11-01",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-01T19:57:53+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/": {
+  "title": "Alpine Linux rebuilds GitLab after attempted RCE attack",
+  "source": "BleepingComputer",
+  "checked": "2026-11-01T22:07:33+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Potentially meaningful attempted exploitation of a software-development and release environment, but the source does not confirm successful execution or compromise; defer pending evidence of actual unauthorized access or downstream impact.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Potentially meaningful attempted exploitation of a software-development and release environment, but the source does not confirm successful execution or compromise; defer pending evidence of actual unauthorized access or downstream impact.",
+    "title": "Alpine Linux GitLab targeted in attempted RCE attack"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "da0b1bd3982670483c266bb49acc49e6da0a58353e306a7036785bc198a54d7f",
+  "item": {
+   "id": "89bf7d74d4691c43",
+   "title": "Alpine Linux rebuilds GitLab after attempted RCE attack",
+   "url": "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/",
+   "date": "2026-11-01",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-01T15:11:21+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-its-doubling-pro-usage-limits-and-bringing-work-features-to-chat/": {
+  "title": "OpenAI says it's doubling Pro usage limits and bringing Work features to Chat",
+  "source": "BleepingComputer",
+  "checked": "2026-11-01T22:07:33+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Product announcement and usage-policy changes without a qualifying cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Product announcement and usage-policy changes without a qualifying cyber incident.",
+    "title": "OpenAI expands ChatGPT and Codex features"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "b628741700c54327bcf743e6b552d90518071e441b9dcaf7c24974c80ca03424",
+  "item": {
+   "id": "1c52df05630df38b",
+   "title": "OpenAI says it's doubling Pro usage limits and bringing Work features to Chat",
+   "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-its-doubling-pro-usage-limits-and-bringing-work-features-to-chat/",
+   "date": "2026-11-01",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-01T13:53:11+00:00"
   }
  }
 }
