@@ -2455,11 +2455,218 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-01-evening",
+   "date": "2026-11-01",
+   "edition": "evening",
+   "published_at": "2026-11-01T22:08:15+00:00",
+   "generated_at": "2026-11-01T22:08:15+00:00",
+   "scheduled_for": "2026-11-01T22:00:00+00:00",
+   "window_start": "2026-11-01T13:38:38+00:00",
+   "window_end": "2026-11-01T22:08:15+00:00",
+   "sector_window_start": "2026-10-31T22:08:15+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "Fresh updates show Binance is restoring withdrawals after the October 29 theft, while Alpine Linux rebuilt a development server after a serious attempted attack. The Alpine investigation found no tampered releases, but could not prove the attackers failed to gain access.",
+    "items": [
+     {
+      "headline": "Binance restores withdrawals after the October 29 crypto theft",
+      "what_happened": "Binance has begun restoring withdrawals in stages after attackers stole more than $6 billion on October 29. The FBI now attributes the theft to TraderTraitor, a North Korea-aligned group. Binance says deposits remain available and it will cover customer losses.",
+      "impact": "Withdrawals were temporarily unavailable but are gradually returning. Binance says about 95% of the affected amount is covered and customer losses will not be passed on. The final recovery remains unclear.",
+      "what_next": "Binance will expand withdrawals after further checks. Investigators will trace the stolen funds and seek to freeze them. Later updates may clarify the remaining loss and recovery.",
+      "change": "Recovery update",
+      "sectors": [
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/",
+        "published": "2026-11-01T19:57:53+00:00"
+       }
+      ],
+      "incident_ids": [
+       "0608e73237d158c5"
+      ]
+     },
+     {
+      "headline": "Alpine Linux rebuilds its development server after an attempted attack",
+      "what_happened": "Attackers repeatedly tried to exploit a flaw in Alpine Linux’s GitLab development server on October 20–21. The attacks crashed processes and came close to succeeding. Alpine rebuilt the server because missing records meant it could not rule out access.",
+      "impact": "Alpine found no evidence that software packages, releases or code were changed. The incident did not confirm harm to people’s devices or services, but a successful compromise could have affected software distributed to downstream users.",
+      "what_next": "Alpine is investigating the missing evidence and has rebuilt the server. The project may provide more information about the attempted access and whether any development data was exposed.",
+      "change": "New report",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/",
+        "published": "2026-11-01T15:11:21+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "Binance is gradually restoring withdrawals after the October 29 cryptocurrency theft. The FBI has now publicly attributed the attack to a North Korea-aligned group.",
+     "items": [
+      {
+       "headline": "Binance restores withdrawals after the October 29 crypto theft",
+       "what_happened": "Binance has begun restoring withdrawals in stages after attackers stole more than $6 billion on October 29. The FBI now attributes the theft to TraderTraitor, a North Korea-aligned group.",
+       "impact": "Withdrawals were temporarily unavailable but are gradually returning. Binance says deposits remain available and customer losses will be covered. The final recovery remains unclear.",
+       "what_next": "Further checks will determine when all withdrawals can return. Investigators will continue tracing and freezing stolen funds.",
+       "change": "Recovery update",
+       "sectors": [
+        "finance"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/",
+         "published": "2026-11-01T19:57:53+00:00"
+        }
+       ],
+       "incident_ids": [
+        "0608e73237d158c5"
+       ]
+      }
+     ]
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "Alpine Linux rebuilt a development server after attackers attempted to exploit it. No altered releases or packages were found, but the project could not completely rule out access.",
+     "items": [
+      {
+       "headline": "Alpine Linux rebuilds its development server after an attempted attack",
+       "what_happened": "Attackers repeatedly tried to exploit Alpine Linux’s GitLab development server on October 20–21. The attacks crashed processes and came close to succeeding. Alpine rebuilt the server because missing records meant it could not rule out access.",
+       "impact": "No altered code, packages or releases were found. There was no reported public outage. A successful compromise could have affected software later used by other organizations.",
+       "what_next": "Alpine is investigating the incident and checking whether any development data was exposed. Its review may clarify whether attackers gained access.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/",
+         "published": "2026-11-01T15:11:21+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "Alpine Linux rebuilt a development server after a serious attempted attack because it could not prove that attackers failed to gain access. No tampered software releases have been found.",
+     "items": [
+      {
+       "headline": "Alpine Linux rebuilds its development server after an attempted attack",
+       "what_happened": "Attackers targeted Alpine Linux’s GitLab development server on October 20–21 using a flaw in widely used software. The attacks crashed processes and came close to succeeding, so Alpine rebuilt the server from scratch.",
+       "impact": "Alpine found no evidence that its code, packages or releases were changed. The wider software supply-chain impact is therefore unconfirmed, and no public service disruption was reported.",
+       "what_next": "The project is investigating the incomplete records and checking for any exposed development information. More findings could clarify whether downstream software was ever at risk.",
+       "change": "New report",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/",
+         "published": "2026-11-01T15:11:21+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    }
+   },
+   "warnings": [],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 714
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 7,
+   "usage": {
+    "completion_tokens": 1140,
+    "prompt_tokens": 13005,
+    "total_tokens": 14145,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 115,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 13002,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-01T13:38:38+00:00"
+  "checked_at": "2026-11-01T22:08:15+00:00"
  },
  "automatic_attempts": {
   "2026-10-31-morning": {
@@ -2473,6 +2680,10 @@
   "2026-11-01-morning": {
    "count": 1,
    "checked_at": "2026-11-01T13:38:38+00:00"
+  },
+  "2026-11-01-evening": {
+   "count": 1,
+   "checked_at": "2026-11-01T22:08:15+00:00"
   }
  }
 }
