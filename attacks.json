@@ -1,6 +1,44 @@
 {
- "updated": "2026-11-01T22:07:33+00:00",
+ "updated": "2026-11-02T06:17:33+00:00",
  "incidents": [
+  {
+   "title": "VOLTA infostealer uses AI to rank stolen victim data",
+   "date": "2026-11-02",
+   "category": "using_ai",
+   "victim": "Windows users targeted by VOLTA-AUTODOXER; specific victims were not reported",
+   "attacker": "Unknown malware operator; attribution was not reported. Cisco Talos researchers identified the malware.",
+   "what": "Cisco Talos researchers identified VOLTA-AUTODOXER, a Windows infostealer that harvests browser credentials and cookies, payment cards, cryptocurrency-wallet seed phrases, messaging and gaming sessions, OAuth tokens, SSH and cloud keys, Wi-Fi profiles, screenshots, and Gmail receipt data. The malware exfiltrates collected data and AI-generated assessments through Telegram.",
+   "ai_role": "VOLTA sends structured bundles of stolen victim data through OpenRouter to Claude Opus 4.6, with fallback to Kimi K2 and Gemini 2.5 Flash, to rank victims and monetizable assets. AI involvement is source-supported attacker use.",
+   "why": "The AI triage layer turns stolen credentials, financial information, private records, and access tokens into prioritized victim dossiers, potentially helping operators select high-value targets for further exploitation or extortion.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Researcher analysis documents a mature infostealer designed to collect sensitive data and transmit it for AI-based monetization assessment. The malware's collection and exfiltration capabilities include reusable credentials, payment information, wallet seed phrases, and cloud keys, although the report does not quantify confirmed victims or losses.",
+   "id": "09593b93c904f8b8",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
+   "added": "2026-11-02T06:17:33+00:00",
+   "reported_date": "2026-11-02",
+   "last_reported": "2026-11-02",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Cisco Talos observed and analyzed malware capable of stealing sensitive records, credentials, payment data, and cryptocurrency-wallet seed phrases, followed by exfiltration over Telegram. The available reporting does not establish the number of compromised victims or realized financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
+    "assessed_at": "2026-11-02T06:17:33+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
   {
    "title": "Binance breach enabled approximately $5.9 billion in withdrawals",
    "date": "2026-10-30",
@@ -81,15 +119,15 @@
     },
     {
      "date": "2026-11-01",
-     "what": "The FBI attributed the theft of more than $6.43 billion in virtual assets across 11 blockchains to TraderTraitor. Binance paused withdrawals after the incident and began a phased restoration on November 1; $2.85 billion was reportedly frozen on-chain.",
-     "url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
-     "source": "The Hacker News"
-    },
-    {
-     "date": "2026-11-01",
      "what": "Attackers used a compromised DevOps engineer’s laptop to access a Binance service container and submit unauthorized withdrawal transactions. Approximately $6.36 billion in cryptocurrency was stolen across ten blockchains, with most transfers occurring within 20 minutes.",
      "url": "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/",
      "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-01",
+     "what": "TraderTraitor stole approximately $6.43 billion in virtual assets across 11 blockchains. Binance paused and then progressively restored withdrawals; approximately $2.85 billion was reportedly frozen on-chain by several industry entities.",
+     "url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
+     "source": "The Hacker News"
     }
    ],
    "ai_source_url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
@@ -4953,13 +4991,13 @@
     },
     {
      "date": "2026-10-21",
-     "what": "A malicious LiteLLM version 1.107.0 was uploaded to PyPI and Docker. The package reportedly contained a credential stealer targeting browser, cloud, and AI secrets, plus dormant command-and-control capability.",
+     "what": "A malicious LiteLLM 1.107.0 release was uploaded to PyPI and Docker. It contained a credential stealer targeting browser, cloud, and AI secrets, plus a dormant command-and-control capability.",
      "url": "https://www.wiz.io/blog/php2shell-php-rce",
      "source": "Wiz Research"
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker compromised LiteLLM’s release infrastructure and published trojanized PyPI wheels and GHCR/Docker Hub images. The payload used Python startup files to execute on interpreter launch and attempted to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and stored LiteLLM provider credentials.",
+     "what": "The attacker published malicious LiteLLM 1.107.0 PyPI wheels and affected GHCR and Docker Hub images. The payload used Python startup files to execute on interpreter launch and was designed to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and proxy-database credentials. PyPI quarantined the release and the container tags were pulled the same day.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -6847,7 +6885,7 @@
    "updates": [
     {
      "date": "2026-10-20",
-     "what": "Wiz investigated multiple intrusions in which phishing victims surrendered GCP credentials and MFA codes. The attackers added external accounts, weakened organization policies, created privileged service accounts and Gemini API keys, and linked attacker-controlled projects to victims’ billing accounts.",
+     "what": "Attackers phished GCP credentials and MFA codes, then used privileged access to alter IAM and organizational policies, add external billing administrators, and link attacker-controlled projects to victims’ billing accounts. The linked projects generated large volumes of Gemini API requests charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -7941,7 +7979,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested credentials and secrets, escalated privileges across Kubernetes, GCP, AWS, the identity provider, CI/CD, and GitOps systems, and accessed sensitive data. The agent also created identities, pipelines, workloads, and persistence mechanisms, and attempted data exfiltration through several channels.",
+     "what": "Wiz CIRT investigated an intrusion that began through an exposed Kafka UI Java RCE and progressed across cloud providers, Kubernetes clusters, CI/CD and GitOps systems, the identity provider, secrets management, data warehouses, and internal applications. The agent deployed backdoors, harvested credentials and secrets, created administrative identities, obtained cluster-admin and cross-account administrative access, accessed sensitive data, and attempted exfiltration through multiple channels.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -25686,6 +25724,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-01T13:37:23+00:00",
+ "last_added": "2026-11-02T06:17:33+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }

@@ -132,16 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-11-01T22:07:33+00:00",
+  "checked": "2026-11-02T06:17:33+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated, ongoing campaign involving unauthorized access through stolen GitHub tokens, confirmed workflow execution, and theft of organizational secrets. It is already tracked as the Gheist campaign.",
+  "status": "exclude",
+  "reason": "This is an additional source for the already-tracked Gheist campaign incident fdf212b3998ab3a2, not a distinct new incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated, ongoing campaign involving unauthorized access through stolen GitHub tokens, confirmed workflow execution, and theft of organizational secrets. It is already tracked as the Gheist campaign.",
-    "title": "Gheist campaign stole secrets from private GitHub repositories",
-    "incident_id": "fdf212b3998ab3a2"
+    "status": "exclude",
+    "reason": "This is an additional source for the already-tracked Gheist campaign incident fdf212b3998ab3a2, not a distinct new incident.",
+    "title": "Gheist campaign abused stolen GitHub tokens in private repositories"
    }
   ],
   "evidence": "article",
@@ -18503,15 +18502,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-11-01T22:07:33+00:00",
+  "checked": "2026-11-02T06:17:33+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz’s incident-response team substantiated a consequential compromise of one organization’s live multi-cloud environment and confirmed autonomous AI-agent actions, making this a qualifying real-world incident. It duplicates the already tracked Wiz multi-cloud AI-agent intrusion.",
+  "reason": "Wiz CIRT substantiated a consequential compromise of an unnamed organization in which an AI agent performed unauthorized actions across multi-cloud production systems. This is the same incident already tracked under ae8f3c2f8a5f5092; the report adds detailed evidence of the attack path and impact.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz’s incident-response team substantiated a consequential compromise of one organization’s live multi-cloud environment and confirmed autonomous AI-agent actions, making this a qualifying real-world incident. It duplicates the already tracked Wiz multi-cloud AI-agent intrusion.",
-    "title": "Wiz details AI agent’s multi-cloud intrusion into one organization",
+    "reason": "Wiz CIRT substantiated a consequential compromise of an unnamed organization in which an AI agent performed unauthorized actions across multi-cloud production systems. This is the same incident already tracked under ae8f3c2f8a5f5092; the report adds detailed evidence of the attack path and impact.",
+    "title": "AI agent conducted multi-cloud intrusion and stole secrets",
     "incident_id": "ae8f3c2f8a5f5092"
    }
   ],
@@ -18996,15 +18995,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-11-01T22:07:33+00:00",
+  "checked": "2026-11-02T06:17:33+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated campaign involving unauthorized access to GCP billing and IAM controls and material financial loss. It duplicates the already-tracked Google Cloud phishing, takeover, and Gemini LLMjacking incident, while adding detailed evidence of the observed attack lifecycle and charges.",
+  "reason": "Confirmed by Wiz CIRT’s investigation of multiple real-world GCP compromises with privileged access and material unauthorized AI-service charges; this is the same campaign as the already-tracked GCP takeover and Gemini LLMjacking incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated campaign involving unauthorized access to GCP billing and IAM controls and material financial loss. It duplicates the already-tracked Google Cloud phishing, takeover, and Gemini LLMjacking incident, while adding detailed evidence of the observed attack lifecycle and charges.",
-    "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
+    "reason": "Confirmed by Wiz CIRT’s investigation of multiple real-world GCP compromises with privileged access and material unauthorized AI-service charges; this is the same campaign as the already-tracked GCP takeover and Gemini LLMjacking incident.",
+    "title": "GCP billing accounts hijacked to fund unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
   ],
@@ -19806,15 +19805,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-11-01T22:07:33+00:00",
+  "checked": "2026-11-02T06:17:33+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed production release-pipeline and package compromise with a credential-stealing payload; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
+  "reason": "Confirmed compromise of production release and distribution infrastructure with a malicious credential-stealing package; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed production release-pipeline and package compromise with a credential-stealing payload; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
-    "title": "LiteLLM 1.107.0 supply-chain release stole credentials",
+    "reason": "Confirmed compromise of production release and distribution infrastructure with a malicious credential-stealing package; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
+    "title": "LiteLLM release pipeline compromised and malicious package distributed",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -19832,15 +19831,21 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-11-01T22:07:33+00:00",
+  "checked": "2026-11-02T06:17:33+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: this is vulnerability discovery and controlled exploit demonstration without evidence of a real external victim compromise. The separate LiteLLM supply-chain passage is unrelated background/content and is already tracked as incident e2e13fe6f7503c25.",
+  "status": "include",
+  "reason": "Research demonstrations and vulnerability disclosure without established external victim harm are out of scope.; The malicious LiteLLM release was an actual supply-chain compromise and is the same incident already tracked under e2e13fe6f7503c25.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is vulnerability discovery and controlled exploit demonstration without evidence of a real external victim compromise. The separate LiteLLM supply-chain passage is unrelated background/content and is already tracked as incident e2e13fe6f7503c25.",
-    "title": "Wiz demonstrated PHP2Shell vulnerabilities in controlled testing"
+    "reason": "Research demonstrations and vulnerability disclosure without established external victim harm are out of scope.",
+    "title": "PHP2Shell vulnerabilities demonstrated in controlled research"
+   },
+   {
+    "status": "include",
+    "reason": "The malicious LiteLLM release was an actual supply-chain compromise and is the same incident already tracked under e2e13fe6f7503c25.",
+    "title": "Malicious LiteLLM 1.107.0 package uploaded to PyPI and Docker",
+    "incident_id": "e2e13fe6f7503c25"
    }
   ],
   "evidence": "article",
@@ -21956,25 +21961,25 @@
  "https://www.hipaajournal.com/denver-health-medical-plan-data-breach/": {
   "title": "Denver Health Medical Plan Discloses Vendor Breach Affecting 238K Members",
   "source": "HIPAA Journal",
-  "checked": "2026-10-30T22:25:52+00:00",
+  "checked": "2026-11-02T06:17:33+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "The vendor credential was publicly exposed and theoretically permitted read-only access to sensitive records, but the organization reported no evidence of unauthorized use. This is deferred under the rule for accidental exposure without evidence of unauthorized access.; This is the same Johns Hopkins Bayview incident already tracked under 20c556acc3a3d9a1.; This is the same BASS Medical Group incident already tracked under ee30a2cce26fa646.",
+  "reason": "Potentially meaningful exposure of protected health information, but the report expressly says there is no evidence the key was misused; defer pending evidence of unauthorized access.; This is already tracked as incident 20c556acc3a3d9a1; the report is additional coverage of the same Johns Hopkins Bayview event.; This is already tracked as incident ee30a2cce26fa646; the report provides additional details about the same BASS Medical Group intrusion.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "The vendor credential was publicly exposed and theoretically permitted read-only access to sensitive records, but the organization reported no evidence of unauthorized use. This is deferred under the rule for accidental exposure without evidence of unauthorized access.",
-    "title": "Denver Health Medical Plan vendor key exposed member health data"
+    "reason": "Potentially meaningful exposure of protected health information, but the report expressly says there is no evidence the key was misused; defer pending evidence of unauthorized access.",
+    "title": "Denver Health vendor key exposed member health data"
    },
    {
     "status": "exclude",
-    "reason": "This is the same Johns Hopkins Bayview incident already tracked under 20c556acc3a3d9a1.",
-    "title": "Johns Hopkins Bayview staff uploaded patient spreadsheet to public AI tool"
+    "reason": "This is already tracked as incident 20c556acc3a3d9a1; the report is additional coverage of the same Johns Hopkins Bayview event.",
+    "title": "Johns Hopkins Bayview patient spreadsheet uploaded to public AI tool"
    },
    {
     "status": "exclude",
-    "reason": "This is the same BASS Medical Group incident already tracked under ee30a2cce26fa646.",
-    "title": "BASS Medical Group confirms unauthorized network access"
+    "reason": "This is already tracked as incident ee30a2cce26fa646; the report provides additional details about the same BASS Medical Group intrusion.",
+    "title": "BASS Medical Group network intrusion exposed health information"
    }
   ],
   "evidence": "article",
@@ -22768,15 +22773,15 @@
  "https://www.darkreading.com/cloud-security/email-bombing-external-teams-chats-repeatable-access-path": {
   "title": "External Teams Chats Anchor 15-Minute Malware Delivery",
   "source": "Dark Reading",
-  "checked": "2026-10-30T22:25:52+00:00",
+  "checked": "2026-11-02T06:17:33+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful enterprise malware activity is reported, but the supplied article lacks verified victim or compromise consequences.",
+  "reason": "Potentially meaningful campaign, but the supplied report does not confirm a successful compromise, named victim, stolen data, or other consequence.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful enterprise malware activity is reported, but the supplied article lacks verified victim or compromise consequences.",
-    "title": "External Teams-chat campaign reportedly delivers malware"
+    "reason": "Potentially meaningful campaign, but the supplied report does not confirm a successful compromise, named victim, stolen data, or other consequence.",
+    "title": "External Teams chats used in malware-delivery campaign"
    }
   ],
   "evidence": "summary",
@@ -25971,15 +25976,15 @@
  "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/": {
   "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
   "source": "BleepingComputer",
-  "checked": "2026-10-30T22:25:52+00:00",
+  "checked": "2026-11-02T06:17:33+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful hardware supply-chain compromise, but the source states that the device has not been examined or confirmed and that no funds are known to have been stolen.",
+  "reason": "Potentially meaningful hardware supply-chain compromise, but the malicious implant and unauthorized activity remain unconfirmed because Trezor has not examined the device; no resulting theft was substantiated.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful hardware supply-chain compromise, but the source states that the device has not been examined or confirmed and that no funds are known to have been stolen.",
-    "title": "Suspected Trezor wallet implant reported by Indonesian buyer"
+    "reason": "Potentially meaningful hardware supply-chain compromise, but the malicious implant and unauthorized activity remain unconfirmed because Trezor has not examined the device; no resulting theft was substantiated.",
+    "title": "Suspected implant found in Trezor Safe 5 hardware wallet"
    }
   ],
   "evidence": "article",
@@ -26588,20 +26593,20 @@
  "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html": {
   "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
   "source": "The Hacker News",
-  "checked": "2026-11-01T13:37:23+00:00",
+  "checked": "2026-11-02T06:17:33+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is the already-tracked Binance theft, but the report adds official FBI attribution, a revised reported loss of $6.43 billion, and source-supported AI use in recruitment lures.",
+  "reason": "This is a substantive update to an already tracked, confirmed Binance compromise, adding official attribution, the revised $6.43 billion theft estimate, asset freezing, and AI-assisted social-engineering details.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is the already-tracked Binance theft, but the report adds official FBI attribution, a revised reported loss of $6.43 billion, and source-supported AI use in recruitment lures.",
-    "title": "FBI attributes $6.43 billion Binance theft to TraderTraitor",
+    "reason": "This is a substantive update to an already tracked, confirmed Binance compromise, adding official attribution, the revised $6.43 billion theft estimate, asset freezing, and AI-assisted social-engineering details.",
+    "title": "FBI attributes Binance crypto heist to TraderTraitor",
     "incident_id": "0608e73237d158c5"
    }
   ],
   "evidence": "article",
-  "summary_hash": "fe0b4ee7667ec1e31f4e94566f8f892bf617709a4d77e6558daac9ff28d55e6a",
+  "summary_hash": "f0e461828a613e55ba6eab37fc656bbc7ae19350543ab4eeed3c2680b573f78c",
   "item": {
    "id": "32a2b95dc9da2118",
    "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
@@ -26685,6 +26690,32 @@
    "date": "2026-11-01",
    "source": "BleepingComputer",
    "published_at": "2026-11-01T13:53:11+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html": {
+  "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value",
+  "source": "The Hacker News",
+  "checked": "2026-11-02T06:17:33+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Independent cybersecurity researchers substantiated a real malware campaign/tool that steals sensitive organizational and personal data and uses AI to prioritize victims. Exact victims, locations, and final impact were not reported.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Independent cybersecurity researchers substantiated a real malware campaign/tool that steals sensitive organizational and personal data and uses AI to prioritize victims. Exact victims, locations, and final impact were not reported.",
+    "title": "VOLTA infostealer uses AI to rank stolen victim data",
+    "incident_id": "09593b93c904f8b8"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "f857e1836a4be861bfd48f54afd377ac16aa167026b6b2ba9dad7198ff73a1e0",
+  "item": {
+   "id": "09593b93c904f8b8",
+   "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value",
+   "url": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
+   "date": "2026-11-02",
+   "source": "The Hacker News",
+   "published_at": "2026-11-02T05:51:07+00:00"
   }
  }
 }
