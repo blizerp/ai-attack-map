@@ -2662,11 +2662,189 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-02-morning",
+   "date": "2026-11-02",
+   "edition": "morning",
+   "published_at": "2026-11-02T18:28:22+00:00",
+   "generated_at": "2026-11-02T18:28:22+00:00",
+   "scheduled_for": "2026-11-02T13:00:00+00:00",
+   "window_start": "2026-11-01T22:08:15+00:00",
+   "window_end": "2026-11-02T18:28:22+00:00",
+   "sector_window_start": "2026-11-01T18:28:22+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting shows a large manufactured-device compromise was disrupted, supermarket refrigeration attacks spoiled food across Europe, and fake emergency alerts briefly reached people in Ukraine and Russia. Newly reported healthcare and retail data incidents add privacy risks, but no broad household internet, power or water outage is confirmed.",
+    "items": [
+     {
+      "headline": "Malware built into TV boxes reached more than 1.3 million devices",
+      "what_happened": "Google and partners say Videostrong deliberately built a hidden control mechanism into Android TV boxes over several years. The devices were used for advertising fraud, secret internet routing and additional malware. Disrupting the operators also cut access to at least 10 million other compromised devices.",
+      "impact": "Owners may have had internet traffic routed through their home connections without consent, while devices could download malware or expose personal information. Google did not report household outages or identify all affected models.",
+      "what_next": "Google and partners will continue investigating the manufacturer and related malware networks. Further notices may clarify which brands and models were involved and what owners should expect.",
+      "change": "New report",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/",
+        "published": "2026-11-02T18:16:34+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Hacked supermarket freezers spoiled food across six European countries",
+      "what_happened": "Attackers remotely changed refrigeration settings at more than 115 supermarkets and smaller food shops in Belgium, the Netherlands, Sweden, Luxembourg, Ireland and Estonia. Some freezers shut down, switched to defrosting or produced heat. The incident occurred overnight into Monday, November 2.",
+      "impact": "Stores discarded spoiled frozen food and managers had to intervene early. Most affected stores stayed open, but some stock was lost. No nationwide food shortage was reported.",
+      "what_next": "Retailers and refrigeration technicians are restoring affected equipment and investigating whether the incidents share one cause. More stores or product losses may be identified.",
+      "change": "New report",
+      "sectors": [
+       "food"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/",
+        "published": "2026-11-02T14:28:39+00:00"
+       },
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/cyberattack-grocery-freezers-europe",
+        "published": "2026-11-02T13:00:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Hackers sent fake nuclear and radiation warnings through emergency apps",
+      "what_happened": "On Sunday, compromised emergency-alert apps in Ukraine and Russia sent false warnings about radiation, chemical threats, fighting and nuclear attacks. Ukraine temporarily disabled alerts, while Russia said its main warning system was unaffected.",
+      "impact": "Millions of app users could have been frightened or misled. Ukraine gradually restored basic alerts, but its map remained partly disabled. Sirens, text messages, television and radio warnings continued normally in the affected countries.",
+      "what_next": "App developers and authorities are investigating and adding protections. Service availability and the reliability of supplementary app alerts may change as recovery continues.",
+      "change": "Recovery update",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/ukraine-hackers-russia-alert-system",
+        "published": "2026-11-02T14:30:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Connecticut Medicaid incident exposes records of 41,000 people",
+      "what_happened": "An unauthorized user accessed a Connecticut Medicaid provider-reimbursement account. The incident was reported in June and newly disclosed in this reporting window. Exposed information may include names, claim or payment identifiers, service dates, services received and payment details.",
+      "impact": "The state says medical records, Social Security numbers and financial information were not involved. Data theft could not be ruled out, creating possible identity-fraud or targeted-scam risks for affected Medicaid recipients.",
+      "what_next": "The provider portal has been secured. Affected people are being offered credit monitoring and identity-theft protection while officials continue reviewing the incident.",
+      "change": "New report",
+      "sectors": [
+       "healthcare"
+      ],
+      "sources": [
+       {
+        "name": "HIPAA Journal",
+        "url": "https://www.hipaajournal.com/connecticut-dhs-husky-data-security-incident/",
+        "published": "2026-11-02T16:09:39+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Revolve now reports at least 180,000 customers in payment-card breach",
+      "what_happened": "Revolve said attackers accessed its online shopping systems on September 11 and may have copied names, addresses, payment-card numbers and expiration dates saved in customer accounts. New state filings put the affected total at at least 179,259 people.",
+      "impact": "Customers may face unauthorized charges or convincing fraud attempts. Revolve says shopping service was not interrupted and has not reported fraudulent transactions.",
+      "what_next": "The company is notifying affected people and working with law enforcement and outside investigators. Further filings may change the total or explain whether card misuse occurred.",
+      "change": "Impact increased",
+      "sectors": [
+       "finance",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/revolve-data-breach-impacts-at-least-180000-people/",
+        "published": "2026-11-02T13:35:21+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "2 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 715
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 28,
+   "usage": {
+    "completion_tokens": 1202,
+    "prompt_tokens": 30249,
+    "total_tokens": 31451,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 232,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 30246,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-01T22:08:15+00:00"
+  "checked_at": "2026-11-02T18:28:22+00:00"
  },
  "automatic_attempts": {
   "2026-10-31-morning": {
@@ -2684,6 +2862,10 @@
   "2026-11-01-evening": {
    "count": 1,
    "checked_at": "2026-11-01T22:08:15+00:00"
+  },
+  "2026-11-02-morning": {
+   "count": 1,
+   "checked_at": "2026-11-02T18:28:22+00:00"
   }
  }
 }
