@@ -3203,23 +3203,283 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-08-evening",
+   "date": "2026-11-08",
+   "edition": "evening",
+   "published_at": "2026-11-09T07:40:30+00:00",
+   "generated_at": "2026-11-09T07:40:30+00:00",
+   "scheduled_for": "2026-11-08T22:00:00+00:00",
+   "window_start": "2026-11-06T07:40:30+00:00",
+   "window_end": "2026-11-09T07:40:30+00:00",
+   "sector_window_start": "2026-11-08T07:40:30+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "Fresh reporting confirms a wider risk to refrigeration systems, a major Japanese customer-data exposure, and suspected real-world attacks against SonicWall remote-access products. Public reporting does not confirm a broad power, water or household communications outage.",
+    "items": [
+     {
+      "headline": "Officials warn refrigeration attacks could spoil food and medicine",
+      "what_happened": "U.S. agencies say attackers are targeting internet-connected refrigeration and temperature-monitoring systems. Recent attacks changed settings at supermarkets across Europe. A French blood-storage provider also reported dangerously high temperatures at three sites.",
+      "impact": "Food has already been discarded in Europe. The French provider avoided losing blood products after detecting the change in time. The warning says similar attacks could cause spoilage, equipment damage or fire hazards, but no U.S. disruption is reported.",
+      "what_next": "Authorities and affected operators are investigating the campaign and its unknown perpetrators. More affected sites or product losses may be identified.",
+      "change": "Impact increased",
+      "sectors": [
+       "food",
+       "healthcare"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
+        "published": "2026-11-09T06:15:10+00:00"
+       }
+      ],
+      "incident_ids": [
+       "b7ab42f2ead925fd"
+      ]
+     },
+     {
+      "headline": "Japanese shopping platform says data of up to 7.7 million people was exposed",
+      "what_happened": "Iris Ohyama said an intruder accessed a third-party cloud service used by its Iris Plaza online store. Names, addresses, phone numbers, email addresses, birth dates and some account passwords may have been exposed.",
+      "impact": "The shopping site and related appliance-delivery systems were suspended from October 28. No payment-card data or financial loss has been reported, but affected people may face targeted scams.",
+      "what_next": "The company is determining the final number of affected records. Japanese police and the privacy regulator are investigating.",
+      "change": "New report",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/",
+        "published": "2026-11-08T15:43:08+00:00"
+       }
+      ],
+      "incident_ids": [
+       "ae8459967123c113"
+      ]
+     },
+     {
+      "headline": "SonicWall remote-access logins may have been bypassed in attacks",
+      "what_happened": "SonicWall and U.S. officials say a flaw in some firewalls may have been used in real attacks to bypass an extra login check for remote workers. No victims or stolen data were identified.",
+      "impact": "Organizations using the affected remote-access products could face unauthorized entry into business networks. The reports do not confirm a household outage or disruption to public services.",
+      "what_next": "SonicWall and authorities are investigating the reported attacks. Further reporting may identify affected organizations or confirm whether accounts were accessed.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html",
+        "published": "2026-11-09T06:05:24+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "Officials report that attacks on refrigeration systems have already spoiled food in Europe and put other temperature-sensitive goods at risk.",
+     "items": [
+      {
+       "headline": "Refrigeration attacks threaten food stocks and equipment",
+       "what_happened": "U.S. agencies warned that attackers are changing settings on internet-connected refrigeration and cold-chain systems. Recent attacks affected supermarkets and smaller food shops across Europe.",
+       "impact": "Stores discarded spoiled food, but no nationwide shortage was reported. The warning says future attacks could also damage equipment or create fire hazards.",
+       "what_next": "Investigations continue into the campaign and its unknown perpetrators. More affected stores or losses may be reported.",
+       "change": "Impact increased",
+       "sectors": [
+        "food"
+       ],
+       "sources": [
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
+         "published": "2026-11-09T06:15:10+00:00"
+        }
+       ],
+       "incident_ids": [
+        "b7ab42f2ead925fd"
+       ]
+      }
+     ]
+    },
+    "finance": {
+     "intro": "",
+     "items": []
+    },
+    "healthcare": {
+     "intro": "A government warning now includes medical cold-storage systems after a French blood-storage provider reported dangerously high temperatures.",
+     "items": [
+      {
+       "headline": "French blood-storage sites were hit by refrigeration setting changes",
+       "what_happened": "Attackers altered temperature and defrost settings at three facilities used to store blood plasma, according to the joint warning. Staff detected the problem and acted before products were lost.",
+       "impact": "No loss of blood products was confirmed. The incident shows that refrigeration attacks can affect medical supplies as well as food.",
+       "what_next": "Authorities and operators are assessing the wider campaign and whether other medical storage sites were targeted.",
+       "change": "New report",
+       "sectors": [
+        "healthcare"
+       ],
+       "sources": [
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
+         "published": "2026-11-09T06:15:10+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "internet": {
+     "intro": "A Japanese shopping platform suspended services after unauthorized access to a cloud provider, while officials warned of suspected attacks against some remote-access firewalls.",
+     "items": [
+      {
+       "headline": "Iris Plaza suspends shopping and delivery systems after cloud breach",
+       "what_happened": "Iris Ohyama said an intruder accessed customer information stored in a third-party cloud service used by Iris Plaza. The company suspended its online store and related appliance-delivery systems on October 28.",
+       "impact": "Up to 7.7 million current, former and non-member customers may be affected. No payment-card misuse or financial loss has been reported, but personal details and some encrypted passwords may be exposed.",
+       "what_next": "The company is reviewing the scope with Japanese police and the privacy regulator. The store’s restoration status and final affected count remain unclear.",
+       "change": "New report",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/",
+         "published": "2026-11-08T15:43:08+00:00"
+        }
+       ],
+       "incident_ids": [
+        "ae8459967123c113"
+       ]
+      },
+      {
+       "headline": "Suspected SonicWall attacks could affect business remote access",
+       "what_happened": "A flaw in certain SonicWall firewalls may let someone with alternate valid credentials bypass an extra login check on remote-access services. SonicWall says it investigated a report of possible exploitation, and U.S. officials list the flaw as exploited.",
+       "impact": "The risk is mainly to organizations using the affected products, not ordinary home internet users. No specific victim, data theft or public communications outage has been confirmed.",
+       "what_next": "The vendor and government agencies are investigating the suspected attacks. The scope may become clearer if affected organizations come forward.",
+       "change": "Newly confirmed",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html",
+         "published": "2026-11-09T06:05:24+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "A third-party cloud service used by a Japanese retailer was accessed, exposing customer information and interrupting connected shopping and delivery systems.",
+     "items": [
+      {
+       "headline": "Third-party cloud breach disrupts Iris Ohyama online services",
+       "what_happened": "An unauthorized party accessed customer data held in an external cloud service used by Iris Plaza, Iris Ohyama’s shopping platform. The retailer suspended the store and related appliance services.",
+       "impact": "Up to 7.7 million people may be affected. The company says payment-card information was not stored there, and no financial loss has been reported.",
+       "what_next": "The company is still determining the exact scope and working with Japanese authorities. Service restoration details remain unclear.",
+       "change": "New report",
+       "sectors": [
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/",
+         "published": "2026-11-08T15:43:08+00:00"
+        }
+       ],
+       "incident_ids": [
+        "ae8459967123c113"
+       ]
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "4 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 716
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 38,
+   "usage": {
+    "completion_tokens": 1562,
+    "prompt_tokens": 34955,
+    "total_tokens": 36517,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 184,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 81,
+     "cached_tokens": 34871
+    }
+   }
   }
  ],
  "last_attempt": {
-  "status": "failed",
-  "edition_id": "2026-11-08-evening",
-  "checked_at": "2026-11-09T01:31:49+00:00",
-  "error": "RateLimitError (HTTP 429)"
+  "status": "ok",
+  "checked_at": "2026-11-09T07:40:30+00:00"
  },
  "automatic_attempts": {
-  "2026-11-05-morning": {
-   "count": 3,
-   "checked_at": "2026-11-06T02:06:35+00:00"
-  },
-  "2026-11-05-evening": {
-   "count": 3,
-   "checked_at": "2026-11-06T19:52:37+00:00"
-  },
   "2026-11-06-morning": {
    "count": 3,
    "checked_at": "2026-11-07T01:44:00+00:00"
@@ -3241,8 +3501,8 @@
    "checked_at": "2026-11-09T00:57:50+00:00"
   },
   "2026-11-08-evening": {
-   "count": 1,
-   "checked_at": "2026-11-09T01:31:49+00:00"
+   "count": 2,
+   "checked_at": "2026-11-09T07:40:30+00:00"
   }
  }
 }
