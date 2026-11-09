@@ -3652,11 +3652,389 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-09-evening",
+   "date": "2026-11-09",
+   "edition": "evening",
+   "published_at": "2026-11-09T22:36:22+00:00",
+   "generated_at": "2026-11-09T22:36:22+00:00",
+   "scheduled_for": "2026-11-09T22:00:00+00:00",
+   "window_start": "2026-11-09T18:52:23+00:00",
+   "window_end": "2026-11-09T22:36:22+00:00",
+   "sector_window_start": "2026-11-08T22:36:22+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "Fresh reports cover a large gaming-newsletter data exposure, an ongoing outage at an IT management provider, and newly disclosed university and healthcare data theft. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "SEGA newsletter provider exposed 2.2 million email addresses",
+      "what_happened": "SEGA says a breach at newsletter provider ARARA exposed 2.2 million subscriber email addresses. Another 92,300 records may contain additional information, still under review. SEGA Account addresses were not affected.",
+      "impact": "People may receive convincing spam or scams. SEGA says names, addresses, payment details and account passwords were not included, and no misuse is confirmed.",
+      "what_next": "SEGA and ARARA are determining what the extra records contain. A separate SEGA arcade-network incident remains under investigation, with services still offline.",
+      "change": "New report",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
+        "published": "2026-11-09T22:09:33+00:00"
+       }
+      ],
+      "incident_ids": [
+       "7876325c28448436",
+       "c5ca2f12d572c177"
+      ]
+     },
+     {
+      "headline": "IT management platform outage affects service providers worldwide",
+      "what_happened": "N-able took its hosted N-central environments offline on November 9 after a researcher disclosed more than 30 serious flaws. Customers running the software themselves were also told to take their servers offline. N-able says it has seen no active exploitation.",
+      "impact": "Managed service providers and IT teams may temporarily lose remote monitoring and management of customer devices and networks. The company says it found no unauthorized data access.",
+      "what_next": "N-able is developing and testing a fix. N-central availability and the effect on customer services may change as recovery updates arrive.",
+      "change": "New report",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
+        "published": "2026-11-09T21:26:25+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "York University says attackers stole personal information from online forms",
+      "what_happened": "York University in Toronto found unauthorized access on October 25 to forms on 14 websites. The affected forms date from 2007 through 2026 and included contact, identification, health, academic and financial information for some people.",
+      "impact": "The number affected is unclear. Exposed details could support targeted scams or identity theft. The university says the forms are secure again.",
+      "what_next": "York is notifying people whose government ID or financial information was exposed and offering two years of credit and identity-theft protection.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "healthcare",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/york-university-breach-exposed-personal-information-dating-to-2007/",
+        "published": "2026-11-09T21:22:31+00:00"
+       }
+      ],
+      "incident_ids": [
+       "da5e61209ae69671"
+      ]
+     },
+     {
+      "headline": "Hearing-aid company reports health and identity data theft",
+      "what_happened": "Amplifon says attackers accessed U.S. company files between January 18 and February 8. Its notices identify about 86,831 people, while a separate filing reports 1,332,826 affected people; the company has not clarified the difference.",
+      "impact": "Exposed information may include medical and insurance details, government IDs, Social Security numbers and financial information. No fraudulent use has been reported.",
+      "what_next": "Amplifon is continuing notification and regulatory filings. Further company statements may settle the affected total and explain the support offered.",
+      "change": "New report",
+      "sectors": [
+       "healthcare",
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/amplifon-hearing-aid-company-data-breach",
+        "published": "2026-11-09T20:44:00+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/amplifon-americas-data-breach-impacts-1-3-million/",
+        "published": "2026-11-09T11:20:09+00:00"
+       }
+      ],
+      "incident_ids": [
+       "1af3648279c3691d"
+      ]
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "A newly disclosed healthcare-company breach may affect people whose financial information was held with their medical records.",
+     "items": [
+      {
+       "headline": "Amplifon reports possible exposure of financial information",
+       "what_happened": "Amplifon says attackers copied files containing some customers’ financial information, along with medical and identity details, during an intrusion earlier this year.",
+       "impact": "The company has not reported fraudulent use. The number affected remains unclear because two different totals have been reported.",
+       "what_next": "Amplifon’s continuing notifications and filings may clarify the final count and available protections.",
+       "change": "New report",
+       "sectors": [
+        "finance",
+        "healthcare"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/amplifon-hearing-aid-company-data-breach",
+         "published": "2026-11-09T20:44:00+00:00"
+        },
+        {
+         "name": "SecurityWeek",
+         "url": "https://www.securityweek.com/amplifon-americas-data-breach-impacts-1-3-million/",
+         "published": "2026-11-09T11:20:09+00:00"
+        }
+       ],
+       "incident_ids": [
+        "1af3648279c3691d"
+       ]
+      }
+     ]
+    },
+    "healthcare": {
+     "intro": "Two newly reported incidents involve medical or health-related information, without reported disruption to patient services.",
+     "items": [
+      {
+       "headline": "Amplifon says medical records and IDs were copied",
+       "what_happened": "The hearing-aid provider says attackers accessed files containing names, health information, insurance details and, for some people, government IDs, Social Security numbers and financial information.",
+       "impact": "No fraudulent use has been reported. The company has not resolved conflicting figures about how many people were affected.",
+       "what_next": "Further notices may clarify the affected population and the assistance available.",
+       "change": "New report",
+       "sectors": [
+        "healthcare",
+        "finance"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/amplifon-hearing-aid-company-data-breach",
+         "published": "2026-11-09T20:44:00+00:00"
+        },
+        {
+         "name": "SecurityWeek",
+         "url": "https://www.securityweek.com/amplifon-americas-data-breach-impacts-1-3-million/",
+         "published": "2026-11-09T11:20:09+00:00"
+        }
+       ],
+       "incident_ids": [
+        "1af3648279c3691d"
+       ]
+      },
+      {
+       "headline": "York University data theft included health information",
+       "what_happened": "An attacker accessed some online forms submitted to York University between 2007 and 2026. The exposed fields varied and could include health, government ID, academic and financial information.",
+       "impact": "The university has not given a number of affected people. It says the forms are secure and that some notified people will receive identity-theft protection.",
+       "what_next": "York is continuing individual notifications and its investigation into the stolen records.",
+       "change": "Newly confirmed",
+       "sectors": [
+        "healthcare",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/york-university-breach-exposed-personal-information-dating-to-2007/",
+         "published": "2026-11-09T21:22:31+00:00"
+        }
+       ],
+       "incident_ids": [
+        "da5e61209ae69671"
+       ]
+      }
+     ]
+    },
+    "internet": {
+     "intro": "Fresh internet-sector developments include a provider outage, a large newsletter exposure and a university data breach.",
+     "items": [
+      {
+       "headline": "N-central outage may interrupt remote IT support",
+       "what_happened": "N-able took hosted N-central offline worldwide after public disclosure of serious flaws. On-premises customers were also told to take their systems offline. N-able reports no evidence of active exploitation or unauthorized data access.",
+       "impact": "Some businesses that rely on outside IT providers may experience reduced monitoring or support. No public-service outage is reported.",
+       "what_next": "N-able is validating a fix and publishing recovery updates. Service availability may change as hosted environments return.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
+         "published": "2026-11-09T21:26:25+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "SEGA newsletter breach may bring targeted scam emails",
+       "what_happened": "SEGA says its newsletter provider exposed 2.2 million email addresses and 92,300 records whose contents are still being determined. SEGA Account email addresses were held separately.",
+       "impact": "Affected subscribers may see more convincing spam or impersonation attempts. SEGA says payment details and account passwords were not exposed.",
+       "what_next": "SEGA and ARARA are investigating the additional records and any misuse.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
+         "published": "2026-11-09T22:09:33+00:00"
+        }
+       ],
+       "incident_ids": [
+        "7876325c28448436",
+        "c5ca2f12d572c177"
+       ]
+      },
+      {
+       "headline": "York University confirms theft from older online forms",
+       "what_happened": "York University discovered unauthorized access to forms on 14 websites. The forms contained varying combinations of contact details, IDs, health information, academic history and financial status.",
+       "impact": "The number affected is unknown. The university says the forms are secure and is offering protection to people whose most sensitive information was exposed.",
+       "what_next": "Notifications and the university investigation are continuing.",
+       "change": "Newly confirmed",
+       "sectors": [
+        "internet",
+        "healthcare"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/york-university-breach-exposed-personal-information-dating-to-2007/",
+         "published": "2026-11-09T21:22:31+00:00"
+        }
+       ],
+       "incident_ids": [
+        "da5e61209ae69671"
+       ]
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "Two incidents involve outside providers or trusted software relationships: a newsletter service breach and an IT management platform outage.",
+     "items": [
+      {
+       "headline": "SEGA data was exposed through newsletter provider ARARA",
+       "what_happened": "ARARA, a third-party email distribution provider, suffered a breach that exposed SEGA newsletter addresses and possibly additional records.",
+       "impact": "The confirmed exposure is mainly email addresses, creating scam and spam risks. No payment or SEGA Account password exposure is reported.",
+       "what_next": "ARARA and SEGA are reviewing the affected records and investigating the breach.",
+       "change": "New report",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
+         "published": "2026-11-09T22:09:33+00:00"
+        }
+       ],
+       "incident_ids": [
+        "7876325c28448436",
+        "c5ca2f12d572c177"
+       ]
+      },
+      {
+       "headline": "N-able outage affects a tool used by IT service providers",
+       "what_happened": "N-able removed hosted N-central environments from service after public disclosure of serious flaws in the remote management platform. Customers using local installations were also told to take them offline.",
+       "impact": "IT providers may temporarily lose the ability to monitor and manage customer systems through N-central. No unauthorized access or data theft has been confirmed.",
+       "what_next": "N-able is testing a hotfix and assessing when the platform can safely return.",
+       "change": "New report",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
+         "published": "2026-11-09T21:26:25+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "3 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 717
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 39,
+   "usage": {
+    "completion_tokens": 1922,
+    "prompt_tokens": 37497,
+    "total_tokens": 39419,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 95,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 80,
+     "cached_tokens": 37414
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-09T18:52:23+00:00"
+  "checked_at": "2026-11-09T22:36:22+00:00"
  },
  "automatic_attempts": {
   "2026-11-06-morning": {
@@ -3686,6 +4064,10 @@
   "2026-11-09-morning": {
    "count": 1,
    "checked_at": "2026-11-09T18:52:23+00:00"
+  },
+  "2026-11-09-evening": {
+   "count": 1,
+   "checked_at": "2026-11-09T22:36:22+00:00"
   }
  }
 }
