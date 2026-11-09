@@ -3473,11 +3473,190 @@
      "cached_tokens": 34871
     }
    }
+  },
+  {
+   "id": "2026-11-09-morning",
+   "date": "2026-11-09",
+   "edition": "morning",
+   "published_at": "2026-11-09T18:52:23+00:00",
+   "generated_at": "2026-11-09T18:52:23+00:00",
+   "scheduled_for": "2026-11-09T13:00:00+00:00",
+   "window_start": "2026-11-09T07:40:30+00:00",
+   "window_end": "2026-11-09T18:52:23+00:00",
+   "sector_window_start": "2026-11-08T18:52:23+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting shows a major cloud-hosting recovery is still incomplete, France has blamed Iran for supermarket refrigeration attacks, and several large data exposures have expanded. A cryptocurrency wallet provider is securing affected funds, while no broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Russian cloud provider rebuilds after destructive attack cuts services",
+      "what_happened": "Beget said attackers reached its management systems on November 1 and erased data across its cloud infrastructure. The company disconnected servers and is rebuilding from scratch. More than 200,000 customers use its hosting, cloud and domain services.",
+      "impact": "About 60% of shared hosting and 40% of dedicated servers had been restored, but recovery remains incomplete. Some virtual-server data may be permanently lost, and online shops, media sites and schools may remain unavailable or impaired.",
+      "what_next": "Beget is checking roughly 1,000 servers before bringing them back. Further updates may show which customer data can be recovered and when remaining services return.",
+      "change": "Impact increased",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/russian-cloud-firm-beget-rebuilds-from-scratch-after-data-wiper-attack/",
+        "published": "2026-11-09T17:50:32+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "France blames Iran for supermarket attacks that spoiled food and sparked fires",
+      "what_happened": "France attributed October 11–12 attacks on refrigeration controls at about 700 stores and food businesses to an Iranian Revolutionary Guard cyber unit. Authorities say the attacks caused extensive food losses and at least 15 fires. The later November attacks remain unattributed.",
+      "impact": "French authorities estimate tens of millions of euros in food losses. Large chains, butchers, a slaughterhouse and food-processing sites were affected. Small hydroelectric sites were also targeted, with moderate disruption reported.",
+      "what_next": "France plans diplomatic action and possible European sanctions. A judicial investigation is opening, while authorities may identify more damage. The November wave is still under investigation.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "food"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/france-blames-iran-for-fridge-cyberattacks",
+        "published": "2026-11-09T18:45:00+00:00"
+       },
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/",
+        "published": "2026-11-09T18:32:42+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Qubole cloud access was used to enter customer accounts and copy data",
+      "what_happened": "An attacker used trusted access belonging to Qubole, a cloud data platform, to enter several customers’ Amazon cloud accounts between October 14 and 26. The attacker searched stored secrets and copied information from cloud storage.",
+      "impact": "Organizations connected to Qubole may have had passwords, access keys and stored business data exposed. The reports do not identify affected customers or show disruption to public services. The scale of the data loss is unclear.",
+      "what_next": "Qubole and its owner had not publicly explained the incident when reported. Further investigation may identify affected customers, the entry point and whether the activity has stopped.",
+      "change": "New report",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
+        "published": "2026-11-09T17:51:21+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Malicious Swarm software releases exposed users to wallet theft",
+      "what_happened": "Attackers used Ethersphere’s release process to publish two harmful versions of Swarm tools on November 9. The releases could steal wallet keys and install control software on Windows, Mac and Linux computers. Both releases were withdrawn within hours.",
+      "impact": "The number of infected computers is unknown. No stolen funds were reported, but a computer that ran the affected software may have exposed wallet keys and other information. The malicious desktop release reached at least 65 downloads, including researchers.",
+      "what_next": "The project released a clean replacement and is investigating the stolen release credentials. Users and organizations may receive more information about exposed keys, downloads and any confirmed theft.",
+      "change": "New report",
+      "sectors": [
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-compromise-etherspheres-bee-js.html",
+        "published": "2026-11-09T17:36:28+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Revolve says payment-card breach affected 1.5 million people",
+      "what_happened": "Revolve revised its estimate for the September 11 online-store intrusion to 1,515,073 people, up sharply from earlier state filings. Names, addresses and stored card numbers and expiration dates may have been copied.",
+      "impact": "Customers who saved payment cards may face unauthorized charges or targeted scams. Revolve has not reported fraudulent transactions, and shopping service was not interrupted.",
+      "what_next": "The company is notifying affected people and working with investigators. Further filings may refine the count or confirm whether stolen card details were misused.",
+      "change": "Impact increased",
+      "sectors": [
+       "finance",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/revolve-puts-data-breach-victim-count-at-1-5-million/",
+        "published": "2026-11-09T14:08:08+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "2 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 717
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 32,
+   "usage": {
+    "completion_tokens": 1095,
+    "prompt_tokens": 32286,
+    "total_tokens": 33381,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 94,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 32283,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-09T07:40:30+00:00"
+  "checked_at": "2026-11-09T18:52:23+00:00"
  },
  "automatic_attempts": {
   "2026-11-06-morning": {
@@ -3503,6 +3682,10 @@
   "2026-11-08-evening": {
    "count": 2,
    "checked_at": "2026-11-09T07:40:30+00:00"
+  },
+  "2026-11-09-morning": {
+   "count": 1,
+   "checked_at": "2026-11-09T18:52:23+00:00"
   }
  }
 }
