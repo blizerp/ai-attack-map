@@ -1,6 +1,1040 @@
 {
- "updated": "2026-11-10T07:25:45+00:00",
+ "updated": "2026-11-10T19:48:29+00:00",
  "incidents": [
+  {
+   "title": "Qubole trusted AWS access abused to breach customer accounts",
+   "date": "2026-10-14 to 2026-10-26",
+   "category": "major_cyber",
+   "victim": "Multiple Qubole customers using Qubole-connected AWS accounts",
+   "attacker": "Unidentified attacker; Wiz researchers observed the activity and did not link it to a known campaign.",
+   "what": "The attacker used credentials for Qubole's AWS account to assume trusted IAM roles in customer AWS environments. The intruder accessed Lambda environment variables, AWS Secrets Manager, SSM Parameter Store, and S3, tested recovered AWS, Entra ID, and Okta credentials, and copied data from accessible buckets. A separate activity from October 8 to October 11 used some customers' AWS access keys and compromised a few cloud environments; researchers did not link that activity to the AssumeRole abuse.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident abused a trusted data-platform integration to obtain privileged access inside multiple customers' cloud accounts, exposing reusable credentials and stored data. Some victims lacked S3 object-level logging, so the full scope of accessed data could not be determined.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "Wiz and Sentra observed successful cross-customer AssumeRole activity using Qubole's trusted AWS account, followed by secret discovery and S3 data copying. The event demonstrates compromise of a trusted vendor access path, although Qubole and Idera had not publicly stated the cause or complete victim scope at publication.",
+   "id": "5a66756107f554df",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
+   "added": "2026-11-09T22:27:24+00:00",
+   "reported_date": "2026-11-09",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers observed successful access to multiple customer AWS environments, including theft of stored secrets and copying of S3 data. The available reporting does not establish service disruption, financial loss, or the complete number of affected customers.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
+    "assessed_at": "2026-11-09T22:27:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/over-a-dozen-organizations-hit-in-qubole-supply-chain-attack/"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-trusted-aws-access-to-breach-multiple-cloud-environments/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "The attacker used compromised Qubole IAM credentials to assume customer-configured cross-account AWS roles, enumerate environments, collect secrets and configurations, test credentials, and exfiltrate data from S3 buckets. Researchers observed some entire buckets downloaded in a single session; a separate October 8–11 campaign also tested and sometimes used customer-owned AWS keys.",
+     "url": "https://www.securityweek.com/over-a-dozen-organizations-hit-in-qubole-supply-chain-attack/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "The attacker used compromised Qubole IAM identities to assume trusted cross-account roles in customer AWS environments. Wiz observed resource enumeration, retrieval of secrets and environment variables, validation of AWS, Microsoft Entra ID, and Okta credentials, and downloads from accessible S3 buckets.",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-trusted-aws-access-to-breach-multiple-cloud-environments/",
+     "source": "BleepingComputer"
+    }
+   ]
+  },
+  {
+   "title": "Sutherland employee-delegation incident exposed health-plan data",
+   "date": "2026-11-10",
+   "category": "major_cyber",
+   "victim": "Sutherland Healthcare Solutions and affected health-plan members",
+   "attacker": "An unauthorized individual engaged by a Sutherland employee; malicious intent was not reported",
+   "what": "Between July 29, 2024, and July 10, 2026, the unauthorized individual accessed names, addresses, dates of birth, health-plan information, Social Security numbers, health-insurance claims data, and stated gender. The employee’s access was terminated after discovery; Sutherland reported no identified misuse.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident involved confirmed unauthorized access to sensitive health, identity, and insurance information held by a healthcare business associate, although the affected population and any misuse remain undisclosed.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Sutherland provides revenue-cycle and related services to healthcare organizations, and the accessed information included Social Security numbers, claims data, and health-plan details. The number of affected people has not been publicly disclosed.",
+   "id": "c93dd5993e0b955e",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/sutherland-healthcare-hoag-memorial-hospital-data-breaches/",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Unauthorized access to sensitive health and identity information was confirmed. No service disruption, misuse, affected count, or financial loss was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/sutherland-healthcare-hoag-memorial-hospital-data-breaches/",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Hoag Memorial Hospital Presbyterian confirms network intrusion",
+   "date": "2026-10-25",
+   "category": "major_cyber",
+   "victim": "Hoag Memorial Hospital Presbyterian",
+   "attacker": "Unidentified; external cybersecurity and digital-forensics experts confirmed unauthorized access",
+   "what": "Hoag identified suspicious network activity on October 8, 2026. Investigators confirmed unauthorized access to its computer network, and Hoag confirmed on October 25 that files containing personal and protected health information had been exposed and potentially stolen.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident compromised a hospital network and exposed patient information, creating confirmed healthcare privacy consequences even though the affected count and precise data types were not publicly disclosed.",
+   "where": "Orange County, California, United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Hoag is a nonprofit hospital network serving Orange County, and the confirmed intrusion reached files containing personal and protected health information. The hospital provided credit monitoring and identity-theft protection to affected individuals.",
+   "id": "ae76e7359e315ece",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/sutherland-healthcare-hoag-memorial-hospital-data-breaches/",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": 33.750631,
+   "lon": -117.8722311,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Unauthorized network access and exposure of personal and protected health information were confirmed. Reporting did not establish service disruption, the number of affected individuals, specific data types, or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/sutherland-healthcare-hoag-memorial-hospital-data-breaches/",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 33.750631,
+     "lon": -117.8722311,
+     "label": "Orange County, California, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/sutherland-healthcare-hoag-memorial-hospital-data-breaches/"
+    }
+   ]
+  },
+  {
+   "title": "Santa Barbara Endodontics ransomware attack encrypted patient records",
+   "date": "2026-10-08",
+   "category": "major_cyber",
+   "victim": "Santa Barbara Endodontics, California",
+   "attacker": "The Gentlemen, identified by the practice as the threat actor; attribution is not independently established in the report",
+   "what": "The practice identified a ransomware intrusion after receiving a ransom note. Patient records were encrypted, restored from backups, and may have been stolen; the investigation remains ongoing.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The potentially affected information includes names, Social Security numbers, medical and dental histories, diagnoses, insurance information, and payment-claim data. The practice said it was monitoring threats to publish stolen data, but the extent of data access or theft is not yet established.",
+   "where": "Santa Barbara, California, United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "This was a confirmed ransomware compromise of a healthcare provider involving encryption of patient records and potential theft of sensitive health and identity information.",
+   "id": "47995a29ec9b3ee7",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "under_investigation",
+   "lat": 34.4221319,
+   "lon": -119.702667,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Patient records were confirmed encrypted and later restored from backups. Possible theft of sensitive patient data is under investigation, and no ransom payment was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 34.4221319,
+     "lon": -119.702667,
+     "label": "Santa Barbara, California, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/"
+    }
+   ]
+  },
+  {
+   "title": "Hollister Family Dental appointment system accessed by an intruder",
+   "date": "2026-02-12 to 2026-05-08",
+   "category": "major_cyber",
+   "victim": "Hollister Family Dental & Implant Center, California",
+   "attacker": "Unknown unauthorized third party",
+   "what": "A third-party appointment-management system used by the practice was accessed intermittently by an unauthorized party. Patient information may have been viewed or acquired.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Potentially exposed information included names, contact details, dates of birth, appointment details, dental-care questions, providers, symptoms, and medications. The number of affected individuals was not disclosed and no misuse had been identified.",
+   "where": "Hollister, California, United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "A confirmed compromise of a trusted healthcare-related appointment platform exposed sensitive patient and treatment information, although the final scope and theft status remain unresolved.",
+   "id": "b55b5cdcb61ab8da",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": 36.8524545,
+   "lon": -121.4016021,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Forensic investigation confirmed unauthorized access over several months, but the reporting only says data may have been viewed or acquired and does not establish the number of affected people.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.8524545,
+     "lon": -121.4016021,
+     "label": "Hollister, California, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/"
+    }
+   ]
+  },
+  {
+   "title": "Park Dental Partners network intrusion exposed patient information",
+   "date": "2026-08-26 to 2026-08-27",
+   "category": "major_cyber",
+   "victim": "Park Dental Partners, Inc., a dental resource organization serving practices in Minnesota, Wisconsin, Arizona, and North Carolina",
+   "attacker": "Unknown unauthorized third party",
+   "what": "An unauthorized party accessed Park Dental Partners’ network over two days. The subsequent review found that names, dates of birth, diagnoses, treatment information, and health-insurance policy information were potentially viewed or obtained.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The event involved confirmed unauthorized network access and potential exposure of sensitive health and insurance information. The number of affected individuals had not been disclosed.",
+   "where": "Roseville, Minnesota, United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The compromise affected a dental-sector support organization and involved potentially exposed diagnoses, treatment details, and insurance information across practices it supports.",
+   "id": "3ef96029ddff6a84",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": 45.0060767,
+   "lon": -93.1566107,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Network access and potential viewing or acquisition of sensitive patient information were reported, but the affected population and confirmed theft scope remain unknown.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 45.0060767,
+     "lon": -93.1566107,
+     "label": "Roseville, Minnesota, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/"
+    }
+   ]
+  },
+  {
+   "title": "Turla Cereal malware compromised government Exchange servers",
+   "date": "2025-12-23",
+   "category": "major_cyber",
+   "victim": "Government organizations in Kazakhstan and Romania",
+   "attacker": "Turla, also known as Snake, Secret Blizzard, and Waterbug; ESET and reporting link the group to Russia’s FSB, but attribution remains researcher-assessed.",
+   "what": "ESET found the Cereal toolset on a Kazakh government body and later on a Romanian government agency compromised on December 23, 2025. CerealBox injected into Microsoft Exchange and selectively collected emails, including messages involving NATO and EU representatives; related components enabled querying Active Directory, extracting credentials, reading files, and executing commands in memory.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident demonstrates sustained unauthorized access to government email infrastructure and the theft of sensitive diplomatic and administrative correspondence while normal Exchange delivery continued, making the compromise difficult to detect.",
+   "where": "Government organizations in Kazakhstan and Romania",
+   "major_impact": "critical_network_intrusion",
+   "significance": "ESET directly observed the Cereal toolset on government Exchange servers and documented selective email collection, credential extraction, directory reconnaissance, and command execution. The malware was designed for long-term, stealthy espionage and used the compromised Exchange server as its control point.",
+   "id": "a7478ede5cb5aabe",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/turla-hackers-use-new-ceral-malware-to-spy-on-govt-exchange-servers/",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": 48.1012954,
+   "lon": 66.7780818,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers observed actual compromise of government Exchange servers and selective theft of email correspondence, including messages involving NATO and EU representatives. Normal email delivery was not interrupted, and broader downstream impact or financial loss was not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/turla-hackers-use-new-ceral-malware-to-spy-on-govt-exchange-servers/",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 48.1012954,
+     "lon": 66.7780818,
+     "label": "Kazakhstan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/turla-hackers-use-new-ceral-malware-to-spy-on-govt-exchange-servers/"
+    },
+    {
+     "lat": 45.9852129,
+     "lon": 24.6859225,
+     "label": "Romania",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/turla-hackers-use-new-ceral-malware-to-spy-on-govt-exchange-servers/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/russia-hackers-espionage-romania-kazakhstan"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/russian-turla-hackers-use-new-cereal.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "Attackers used the previously unknown Cereal toolkit, including CerealBox embedded in Microsoft Exchange, to monitor email traffic, capture selected messages, and maintain covert access. In Romania, the malware collected correspondence with NATO and EU institutions; the initial access method and total amount of stolen information were not determined.",
+     "url": "https://therecord.media/russia-hackers-espionage-romania-kazakhstan",
+     "source": "The Record"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "ESET observed the previously undocumented Cereal toolset compromising Microsoft Exchange servers at two government entities. The malware enabled command execution, network mapping, credential-secret extraction, and targeted harvesting and exfiltration of emails and attachments.",
+     "url": "https://thehackernews.com/2026/11/russian-turla-hackers-use-new-cereal.html",
+     "source": "The Hacker News"
+    }
+   ]
+  },
+  {
+   "title": "Barracuda ESG flaws exploited for root access",
+   "date": "2026-11-10",
+   "category": "major_cyber",
+   "victim": "A limited number of organizations using Barracuda Email Security Gateway and other affected Barracuda products",
+   "attacker": "Unknown; Barracuda reported exploitation activity but did not identify the attackers.",
+   "what": "Attackers exploited CVE-2026-116606 and CVE-2026-111560 against Barracuda products. In combination, the flaws could bypass authorization and enable unauthenticated operating-system command execution with root privileges; Barracuda confirmed exploitation affecting a small number of organizations.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident demonstrates confirmed compromise of business security appliances with privileged access, although the available report does not establish data theft, persistence, or service disruption.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Barracuda confirmed active exploitation against a limited number of customers, with potential root-level control of affected email-security and related appliances.",
+   "id": "421cc863e888fd33",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-barracuda-email-security-gateway-flaws-to-get-root-access/",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Barracuda confirmed exploitation affecting a small number of organizations and described possible root access. Data theft, operational disruption, and financial loss were not established in the available reporting.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-barracuda-email-security-gateway-flaws-to-get-root-access/",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Fireworks AI development machines breached through cloud provider",
+   "date": "2026-10-24",
+   "category": "major_cyber",
+   "victim": "Fireworks AI and some customers",
+   "attacker": "Fireworks said evidence indicated links to a financially motivated cybercriminal group; attribution remains unconfirmed.",
+   "what": "After a third-party cloud provider experienced a security incident on October 23, attackers used it on October 24 to reach Fireworks development machines and run an unauthorized workload. The breach exposed resource metadata, billing information, and incomplete model weights and datasets for some customers; Fireworks said payment-card numbers were not accessible.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident compromised an AI-infrastructure provider through a trusted cloud provider and exposed customer business information and proprietary AI assets. Fireworks detected the activity the same day, revoked credentials, isolated systems, and began a broader investigation.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "Fireworks confirmed unauthorized access through a third-party cloud provider to development machines, followed by customer-data impact involving billing records and incomplete model weights and datasets.",
+   "id": "65d188cb3581ec1f",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Fireworks confirmed unauthorized access and exposure of customer resource metadata, billing information, and some model weights and datasets. The available reporting does not establish the number of affected customers, service disruption, or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Xen Orchestra auth bypass exploited to hijack virtualization hosts",
+   "date": "2026-11-10",
+   "category": "major_cyber",
+   "victim": "Organizations operating Xen Orchestra or Xen Orchestra Appliance to manage XCP-ng environments; specific victims were not reported",
+   "attacker": "Unknown attackers; Vates confirmed active exploitation and provided campaign indicators, but did not attribute it",
+   "what": "Attackers exploited VSA-2026-062 by sending a specially crafted authentication cookie, bypassing credentials and obtaining administrator-level access. Vates reported that compromise can enable arbitrary code execution on managed pools and root takeover of XCP-ng nodes; indicators included a VM named pivot2 and malicious cron files.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "This is a confirmed exploitation campaign against virtualization-management infrastructure, with reported access to administrative functions and potential control of managed virtual machines and hosts.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Vates confirmed active exploitation of a flaw that can bypass authentication, expose reusable login tokens, and provide administrator privileges over virtualization environments. Specific compromised organizations and observed downstream damage were not reported.",
+   "id": "6404a267a490930f",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/critical-xen-orchestra-auth-bypass-flaw-exploited-to-hijack-vm-servers/",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Active exploitation and attack artifacts were confirmed by Vates, but the reporting does not identify victims or establish service outages, data theft, or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/critical-xen-orchestra-auth-bypass-flaw-exploited-to-hijack-vm-servers/",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Microsoft Outlook zero-day exploited to steal NTLM hashes",
+   "date": "2026-11-10",
+   "category": "major_cyber",
+   "victim": "Organizations and users running affected Microsoft Outlook versions; specific victims were not reported",
+   "attacker": "Not reported; Microsoft and BleepingComputer report exploitation in attacks",
+   "what": "Attackers sent specially crafted Outlook message files that, when opened, caused connections to attacker-controlled network locations and disclosed NTLMv2 authentication hashes. The hashes could be cracked or used to impersonate users and access corporate accounts.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The flaw was actively exploited rather than merely disclosed, creating a path to credential theft and possible unauthorized corporate-account access. The reporting does not identify victims or confirm successful account compromise beyond hash disclosure.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "This is an actively exploited zero-day affecting Outlook and exposing reusable authentication material through malicious attachments; Microsoft issued a security fix on November 10, 2026.",
+   "id": "9df899e0eb55d08e",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Microsoft and BleepingComputer report exploitation to disclose NTLMv2 authentication hashes. Specific victims, account takeovers, service disruption, and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Fireworks says first October breach stole customer and billing data",
+   "date": "2026-10-06",
+   "category": "major_cyber",
+   "victim": "Fireworks AI and a limited number of customer accounts",
+   "attacker": "A financially motivated cybercriminal group; specific group not identified.",
+   "what": "Fireworks said investigators found unauthorized access that resulted in theft of account and billing information, invoices, payment history, secrets, datasets, and other AI-related data. The company said a limited number of customer accounts were affected and notified those customers.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident involved confirmed unauthorized access to an AI infrastructure provider and theft of customer-related sensitive information and reusable secrets. The source does not establish the final number of affected records or customers.",
+   "where": "San Mateo, California, United States (vendor headquarters; affected customer locations not reported)",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Fireworks provides AI infrastructure to more than 10,000 customers; investigators confirmed theft of billing data, secrets, datasets, and AI-related information, although the company described the directly affected account count as limited.",
+   "id": "43068fad26fd3d33",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": 37.496904,
+   "lon": -122.3330573,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Fireworks confirmed theft of account, billing, payment-history, dataset, AI-related data, and secrets affecting a limited number of customer accounts. Service disruption and financial losses were not established for this first breach.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 37.496904,
+     "lon": -122.3330573,
+     "label": "San Mateo, California, United States",
+     "basis": "Vendor headquarters (approximate)",
+     "entity": "",
+     "source_url": "https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks"
+    }
+   ]
+  },
+  {
+   "title": "SilentDelivery watering-hole campaign deployed Sparrow backdoors",
+   "date": "2026-11-10",
+   "category": "major_cyber",
+   "victim": "Government, shipping, IT, and research-sector website visitors and organizations in Europe and Asia",
+   "attacker": "SilentDelivery cluster; linked by Check Point Research to the CopperDragon Sparrow malware ecosystem and China-nexus actors. Attribution is assessed, not definitive.",
+   "what": "Attackers compromised legitimate websites and injected obfuscated JavaScript that selectively displayed a fake Chrome certificate warning. Victims who installed the purported certificate-repair utility received the SquadC or SparrowDoor backdoor; phishing emails also delivered SquadC to Indonesian organizations.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign used compromised websites and trojanized installers to obtain unauthorized access to systems in government, shipping, IT, and research sectors. The reporting identifies foothold malware and persistence, but does not establish final victim counts or operational losses.",
+   "where": "Czech Republic, Germany, France, Taiwan, Nepal, Hong Kong, and Indonesia; indications of related activity in Egypt and the Philippines",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Check Point Research observed compromised websites and malware delivery targeting selected organizations across multiple countries. The campaign demonstrates consequential access to victim systems, although downstream effects are not reported.",
+   "id": "dda4550cb8f7c72e",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": 49.7439047,
+   "lon": 15.3381061,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Researchers observed compromised websites delivering backdoors to targeted users and organizations. The available reporting does not establish service outages, data theft, or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 49.7439047,
+     "lon": 15.3381061,
+     "label": "Czech Republic",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
+    },
+    {
+     "lat": 51.1638175,
+     "lon": 10.4478313,
+     "label": "Germany",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
+    },
+    {
+     "lat": 46.603354,
+     "lon": 1.8883335,
+     "label": "France",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
+    },
+    {
+     "lat": 23.9739374,
+     "lon": 120.9820179,
+     "label": "Taiwan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
+    },
+    {
+     "lat": 28.3780464,
+     "lon": 83.9999901,
+     "label": "Nepal",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
+    },
+    {
+     "lat": 22.3492361,
+     "lon": 114.1857778,
+     "label": "Hong Kong",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
+    },
+    {
+     "lat": -2.4833826,
+     "lon": 117.8902853,
+     "label": "Indonesia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
+    },
+    {
+     "lat": 26.2540493,
+     "lon": 29.2675469,
+     "label": "Egypt",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
+    },
+    {
+     "lat": 12.7503486,
+     "lon": 122.7312101,
+     "label": "Philippines",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
+    }
+   ]
+  },
+  {
+   "title": "OceanGate campaign moved from Linux servers into Windows networks",
+   "date": "2025-01-01 to 2026-11-10",
+   "category": "major_cyber",
+   "victim": "Asian organizations; specific victims were not reported",
+   "attacker": "OceanGate cluster; linked by Check Point Research to the CopperDragon Sparrow malware ecosystem and China-nexus actors. Attribution is assessed, not definitive.",
+   "what": "Attackers compromised internet-facing Linux servers, deployed AnnobinDoor and SparrowShell, harvested credentials, and moved laterally into Windows environments. In an observed intrusion, the actor authenticated to Windows systems with an administrator account and deployed reconnaissance, keylogging, credential-dumping, and backdoor tooling.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign achieved unauthorized access across Linux and Windows environments and included administrator access, credential collection, lateral movement, and attempted sensitive-data exfiltration. The report does not provide a confirmed victim count or quantify stolen data.",
+   "where": "Asia",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Check Point Research documented cross-platform compromise, successful administrator authentication, lateral movement, and credential-harvesting capabilities in real victim environments.",
+   "id": "8e006b1de8f702a7",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Observed activity included compromise of internet-facing servers, administrator access to Windows systems, lateral movement, and credential harvesting. Confirmed service disruption and final data-loss scope are not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "DarkWire campaign compromised telecom and government organizations",
+   "date": "2025-06-01 to 2026-11-10",
+   "category": "major_cyber",
+   "victim": "Telecommunications providers and government organizations in Latin America; specific victims were not reported",
+   "attacker": "DarkWire cluster; linked by Check Point Research to the CopperDragon Sparrow malware ecosystem and China-nexus actors. Attribution is assessed, not definitive.",
+   "what": "Attackers compromised organizations and deployed CopperDoor and CopperDNS backdoors, along with loaders, proxies, DNS tunneling, and LSASS credential-dumping tools. Operations relied on DLL sideloading and existing system paths to reduce their footprint.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign established unauthorized access to telecommunications and government networks and deployed persistent backdoor and credential-theft tooling. The available reporting does not establish specific outages, stolen-data totals, or victim names.",
+   "where": "Latin America",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The campaign affected telecommunications and government targets and used memory-resident backdoors, DNS tunneling, proxying, and credential harvesting to maintain access and evade detection.",
+   "id": "777e291896b6c9f5",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Researchers reported compromises and deployment of backdoors and credential-dumping tools against telecom and government organizations. Operational disruption and confirmed data theft are not quantified.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "SGLang flaw breached NEAR AI inference infrastructure",
+   "date": "2026-11-08",
+   "category": "on_ai_system",
+   "victim": "NEAR AI, including NEAR AI Agents and Private Chat users",
+   "attacker": "Unidentified attacker; attribution was not reported.",
+   "what": "The attacker exploited a remote-code-execution flaw in the SGLang inference engine and ran code on a NEAR AI inference server, including inside a trusted execution environment. They moved into internal systems, downloaded account details for about 100 Private Chat users, accessed data from 18 older AI agents, and exposed two customers’ NEAR AI Cloud API keys.",
+   "ai_role": "The compromised system was an AI inference engine and AI-agent infrastructure; the reporting does not indicate that AI performed the attack.",
+   "why": "The incident bypassed the privacy protections expected from a TEE and exposed user information, agent histories, settings, logs, and reusable cloud credentials. NEAR AI revoked sessions and credentials, replaced agent tokens, took Private Chat offline, and patched its inference servers.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "NEAR AI confirmed unauthorized code execution on an inference server and subsequent internal access. The compromise affected an AI service, 18 agents, about 100 user accounts, and two customer API keys, although the company found no evidence that stored Private Chat conversations or uploaded files were accessed.",
+   "id": "bff6180f286a6d5b",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "NEAR AI took Private Chat offline, revoked active sessions and credentials, and replaced agent tokens. Confirmed access included account details, agent data, and two API keys; stored Private Chat conversations and uploaded files were reportedly not accessed, and broader request exposure remains uncertain.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "French supermarket refrigeration controllers altered in October attacks",
+   "date": "2026-10",
+   "category": "major_cyber",
+   "victim": "An estimated 250 to 350 French supermarkets",
+   "attacker": "Malicious cyber actors; attribution not reported",
+   "what": "Attackers compromised refrigeration controllers and remotely activated defrost functions, raising temperatures in refrigerators and freezers.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident affected operational refrigeration systems at hundreds of supermarkets and created a risk of inventory spoilage and unsafe storage conditions.",
+   "where": "France",
+   "major_impact": "essential_service_disruption",
+   "significance": "The reported compromise affected industrial control systems across an estimated 250 to 350 supermarkets, with refrigeration temperatures altered through unauthorized controller access.",
+   "id": "a7b6d9f5065e055b",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/",
+   "added": "2026-11-09T07:04:55+00:00",
+   "reported_date": "2026-11-06",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": 46.603354,
+   "lon": 1.8883335,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Refrigeration settings were changed across hundreds of supermarkets. The reporting describes potential spoilage and safety consequences but gives no confirmed loss amount.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "widespread",
+     "damage": "unknown",
+     "essential": "disrupted",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/",
+    "assessed_at": "2026-11-09T07:04:55+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 46.603354,
+     "lon": 1.8883335,
+     "label": "France",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/supermarket-refrigeration-attack-widens-to-copeland-dixell-controllers/"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/refrigeration-controller-hack-spoils-food-across-european-supermarkets/"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/france-blames-iran-for-fridge-cyberattacks"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-13",
+     "what": "Attackers remotely altered Danfoss refrigeration-controller settings, causing supermarket refrigerators and freezers to defrost overnight. Temperatures reportedly reached 50°C for up to six hours, spoiling food and forcing affected products to be withdrawn from sale.",
+     "url": "https://www.securityweek.com/refrigeration-controller-hack-spoils-food-across-european-supermarkets/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-10-15",
+     "what": "CERT-FR reported compromises of Danfoss AK-SM and AK-SC refrigeration controllers and later added Copeland XWEB and Dixell XWEB systems. About 700 French supermarkets were reportedly affected; refrigeration failures caused food disposal, and prosecutors said the attack also caused fires.",
+     "url": "https://www.securityweek.com/supermarket-refrigeration-attack-widens-to-copeland-dixell-controllers/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-09",
+     "what": "Hackers compromised industrial refrigeration controllers and remotely changed defrost settings to high temperatures. French authorities said approximately 700 retail locations were targeted, causing food losses, at least 15 fires, and significant material damage.",
+     "url": "https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/",
+     "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-09",
+     "what": "Attackers sabotaged refrigeration systems at French food retailers. Authorities reported extensive food losses and at least 15 fires. ANSSI also identified concurrent targeting of Schneider Electric equipment at several small hydroelectric facilities, causing moderate disruption.",
+     "url": "https://therecord.media/france-blames-iran-for-fridge-cyberattacks",
+     "source": "The Record"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "Attackers remotely accessed Danfoss and Dixell refrigeration-controller web interfaces, set defrost cycles to abnormally high temperatures without time limits, and disabled temperature-probe safety alerts. The attack caused food losses and about 20 fires; French authorities estimated losses at several tens of millions of euros.",
+     "url": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html",
+     "source": "The Hacker News"
+    }
+   ]
+  },
+  {
+   "title": "Xen Orchestra auth bypass exploited to hijack virtualization hosts",
+   "date": "2026-11-10",
+   "category": "major_cyber",
+   "victim": "Organizations operating Xen Orchestra or Xen Orchestra Appliance to manage XCP-ng environments; specific victims were not reported",
+   "attacker": "Unidentified threat actor; Vates reported exploitation from 91.211.251[.]112 and a Tor onion service. Attribution is not established.",
+   "what": "Attackers exploited Xen Orchestra flaw VSA-2026-062 by submitting a specially crafted authentication cookie. The bypass could disclose reusable tokens, grant administrator privileges, enable arbitrary actions on managed pools, and lead to root takeover of XCP-ng nodes; Vates reported active exploitation and supplied indicators of compromise.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident enabled unauthorized administrative access to virtualization-management infrastructure and potential root control of managed hosts. Vates reported active exploitation, although specific compromised organizations and resulting damage were not reported.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Vendor reporting confirms exploitation in the wild against a platform that manages virtualized infrastructure; the described attack path can expose reusable authentication tokens and provide administrator or root-level control of managed environments.",
+   "id": "7095d4ee914ba7af",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Vates reported active exploitation and described administrator-level actions and potential root takeover of XCP-ng nodes. Specific victims, service effects, data theft, and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Fireworks AI breach expanded to customer datasets and Notion AI chats",
+   "date": "2026-10-23 to 2026-10-25",
+   "category": "major_cyber",
+   "victim": "Fireworks AI, a limited set of customer accounts, and fewer than 1% of Notion workspaces",
+   "attacker": "Unnamed third-party/cybercriminal threat actor; Fireworks assessed links to a financially motivated group seeking to sell stolen LLM access, but attribution was not established.",
+   "what": "Attackers reached Fireworks development machines through an unnamed cloud provider on October 23, then used an unauthorized workload to access resource metadata, billing information, incomplete model weights, and datasets for some customers. The incident also affected Notion AI Insights data, including unattributable chat transcripts.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The compromise crossed from a trusted cloud provider into Fireworks development infrastructure and exposed customer secrets, billing records, model artifacts, datasets, and potentially sensitive AI chat content. Fireworks said payment-card numbers were not stored or impacted, and Notion said no other platform features were affected.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Fireworks confirmed unauthorized access to its development environment and additional customer-data impact, while Notion disclosed exposure affecting fewer than 1% of workspaces. The event expands the previously reported Fireworks breach and demonstrates downstream impact on a customer using Fireworks-hosted AI infrastructure.",
+   "id": "73b37c649f3a75f2",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
+   "added": "2026-11-10T19:48:29+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Fireworks confirmed access to customer billing information, datasets, incomplete model weights, resource metadata, and secrets; Notion confirmed affected AI chat transcripts. Fireworks isolated systems and rotated credentials, while Notion disabled its Insights feature; final scope and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
+    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "AhsayCBS flaws exploited to deploy webshells and cryptominers",
+   "date": "2026-10-08",
+   "category": "using_ai",
+   "victim": "At least five organizations using AhsayCBS backup management software",
+   "attacker": "Unidentified threat actors; attribution was not reported.",
+   "what": "Attackers chained two unpatched AhsayCBS vulnerabilities to bypass authentication, execute commands with System privileges, deploy JSP webshells, establish persistence through a disguised Windows service, and install XMRig cryptominers. Huntress also observed an AI-assisted PowerShell script used to monitor Task Manager and terminate it.",
+   "ai_role": "Attackers planted an AI-assisted PowerShell script to monitor Task Manager and terminate it; the reporting does not establish that AI carried out the intrusion.",
+   "why": "The campaign compromised exposed backup-management systems and achieved unauthenticated remote code execution, persistence, and cryptomining activity. AhsayCBS is used by MSPs and system integrators, increasing the operational significance of the intrusions.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Huntress directly observed exploitation, webshell deployment, persistence, and cryptocurrency miners on affected systems; at least five organizations had been targeted by October 8. The full scope and any downstream impact were not reported.",
+   "id": "b97d270e7caaaec9",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/unpatched-ahsaycbs-vulnerabilities-exploited-in-the-wild/",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-09",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Huntress observed unauthenticated remote code execution, System-level access, webshells, persistence, and cryptomining across a campaign involving at least five organizations. Service disruption, victim losses, and complete compromise scope were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/unpatched-ahsaycbs-vulnerabilities-exploited-in-the-wild/",
+    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-09",
+     "what": "Attackers chained two authentication-bypass and remote-code-execution vulnerabilities to access AhsayCBS systems, deploy JSP webshells, establish persistence, and install XMRig cryptocurrency miners. Huntress also observed an AI-assisted PowerShell script used to monitor Task Manager and terminate it.",
+     "url": "https://www.securityweek.com/unpatched-ahsaycbs-vulnerabilities-exploited-in-the-wild/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "Huntress observed attackers chaining CVE-2026-105133 and CVE-2026-105134 to bypass authentication and execute commands on AhsayCBS systems. The intrusions deployed JSP web shells, XMRig miners, tunneling and remote-access tools, Microsoft Defender exclusions, and a sandbox-evading Python backdoor; activity also included a Veeam credential-theft query in a related environment.",
+     "url": "https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html",
+     "source": "The Hacker News"
+    }
+   ]
+  },
   {
    "title": "Hackers disrupted refrigeration at more than 115 European stores",
    "date": "2026-11-02",
@@ -800,98 +1834,6 @@
    ]
   },
   {
-   "title": "French supermarket refrigeration controllers altered in October attacks",
-   "date": "2026-10",
-   "category": "major_cyber",
-   "victim": "An estimated 250 to 350 French supermarkets",
-   "attacker": "Malicious cyber actors; attribution not reported",
-   "what": "Attackers compromised refrigeration controllers and remotely activated defrost functions, raising temperatures in refrigerators and freezers.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The incident affected operational refrigeration systems at hundreds of supermarkets and created a risk of inventory spoilage and unsafe storage conditions.",
-   "where": "France",
-   "major_impact": "essential_service_disruption",
-   "significance": "The reported compromise affected industrial control systems across an estimated 250 to 350 supermarkets, with refrigeration temperatures altered through unauthorized controller access.",
-   "id": "a7b6d9f5065e055b",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/",
-   "added": "2026-11-09T07:04:55+00:00",
-   "reported_date": "2026-11-06",
-   "last_reported": "2026-11-09",
-   "evidence_status": "confirmed",
-   "lat": 46.603354,
-   "lon": 1.8883335,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Refrigeration settings were changed across hundreds of supermarkets. The reporting describes potential spoilage and safety consequences but gives no confirmed loss amount.",
-    "evidence": {
-     "context": "real_world",
-     "service": "substantial",
-     "reach": "widespread",
-     "damage": "unknown",
-     "essential": "disrupted",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/",
-    "assessed_at": "2026-11-09T07:04:55+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 46.603354,
-     "lon": 1.8883335,
-     "label": "France",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/"
-    }
-   ],
-   "more_sources": [
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/supermarket-refrigeration-attack-widens-to-copeland-dixell-controllers/"
-    },
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/refrigeration-controller-hack-spoils-food-across-european-supermarkets/"
-    },
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/"
-    },
-    {
-     "name": "The Record",
-     "url": "https://therecord.media/france-blames-iran-for-fridge-cyberattacks"
-    }
-   ],
-   "updates": [
-    {
-     "date": "2026-10-13",
-     "what": "Attackers remotely altered Danfoss refrigeration-controller settings, causing supermarket refrigerators and freezers to defrost overnight. Temperatures reportedly reached 50°C for up to six hours, spoiling food and forcing affected products to be withdrawn from sale.",
-     "url": "https://www.securityweek.com/refrigeration-controller-hack-spoils-food-across-european-supermarkets/",
-     "source": "SecurityWeek"
-    },
-    {
-     "date": "2026-10-15",
-     "what": "CERT-FR reported compromises of Danfoss AK-SM and AK-SC refrigeration controllers and later added Copeland XWEB and Dixell XWEB systems. About 700 French supermarkets were reportedly affected; refrigeration failures caused food disposal, and prosecutors said the attack also caused fires.",
-     "url": "https://www.securityweek.com/supermarket-refrigeration-attack-widens-to-copeland-dixell-controllers/",
-     "source": "SecurityWeek"
-    },
-    {
-     "date": "2026-11-09",
-     "what": "Hackers compromised industrial refrigeration controllers and remotely changed defrost settings to high temperatures. French authorities said approximately 700 retail locations were targeted, causing food losses, at least 15 fires, and significant material damage.",
-     "url": "https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/",
-     "source": "BleepingComputer"
-    },
-    {
-     "date": "2026-11-09",
-     "what": "Attackers sabotaged refrigeration systems at French food retailers. Authorities reported extensive food losses and at least 15 fires. ANSSI also identified concurrent targeting of Schneider Electric equipment at several small hydroelectric facilities, causing moderate disruption.",
-     "url": "https://therecord.media/france-blames-iran-for-fridge-cyberattacks",
-     "source": "The Record"
-    }
-   ]
-  },
-  {
    "title": "SSHole flaw exploited to compromise Linux systems",
    "date": "2026-11-07",
    "category": "major_cyber",
@@ -1189,44 +2131,6 @@
      "financial": "unknown"
     },
     "source_url": "https://thehackernews.com/2026/11/lnbits-urges-all-operators-to-shut-down.html",
-    "assessed_at": "2026-11-09T22:27:24+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
-   "title": "Qubole trusted AWS access abused to breach customer accounts",
-   "date": "2026-10-14 to 2026-10-26",
-   "category": "major_cyber",
-   "victim": "Multiple Qubole customers using Qubole-connected AWS accounts",
-   "attacker": "Unidentified attacker; Wiz researchers observed the activity and did not link it to a known campaign.",
-   "what": "The attacker used credentials for Qubole's AWS account to assume trusted IAM roles in customer AWS environments. The intruder accessed Lambda environment variables, AWS Secrets Manager, SSM Parameter Store, and S3, tested recovered AWS, Entra ID, and Okta credentials, and copied data from accessible buckets. A separate activity from October 8 to October 11 used some customers' AWS access keys and compromised a few cloud environments; researchers did not link that activity to the AssumeRole abuse.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The incident abused a trusted data-platform integration to obtain privileged access inside multiple customers' cloud accounts, exposing reusable credentials and stored data. Some victims lacked S3 object-level logging, so the full scope of accessed data could not be determined.",
-   "where": "No fixed location",
-   "major_impact": "supply_chain_compromise",
-   "significance": "Wiz and Sentra observed successful cross-customer AssumeRole activity using Qubole's trusted AWS account, followed by secret discovery and S3 data copying. The event demonstrates compromise of a trusted vendor access path, although Qubole and Idera had not publicly stated the cause or complete victim scope at publication.",
-   "id": "5a66756107f554df",
-   "source_name": "The Hacker News",
-   "source_url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
-   "added": "2026-11-09T22:27:24+00:00",
-   "reported_date": "2026-11-09",
-   "last_reported": "2026-11-09",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Researchers observed successful access to multiple customer AWS environments, including theft of stored secrets and copying of S3 data. The available reporting does not establish service disruption, financial loss, or the complete number of affected customers.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
     "assessed_at": "2026-11-09T22:27:24+00:00",
     "method": "reported-impact-v1"
    }
@@ -9684,7 +10588,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used stolen GitHub tokens to plant workflows in accessible repositories, dump repository and environment secrets into workflow logs, retrieve the logs through GitHub's API, and delete the runs. Wiz recovered more than 13,500 planted branches; private-repository and GitHub Enterprise runs executed successfully, and some stolen cloud credentials were used to enumerate AWS Secrets Manager.",
+     "what": "Wiz observed stolen GitHub tokens used to plant workflows in accessible repositories, execute secret-dumping jobs, retrieve workflow logs through the GitHub API, and delete the runs. In private repositories and GitHub Enterprise environments, workflows executed without approval; some activity involved cloning repositories and using obtained cloud credentials to enumerate AWS Secrets Manager.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -12739,7 +13643,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Wiz investigated multiple intrusions in which attackers phished privileged GCP users, captured credentials and MFA codes, added external accounts, disabled organization policy guardrails, and linked attacker-controlled projects to victims’ billing accounts. The attackers enabled Gemini APIs and generated large volumes of LLM inference charged to the victims.",
+     "what": "Attackers phished privileged GCP users for credentials and MFA codes, altered IAM and organization policies, added external accounts, and linked attacker-controlled projects to victims’ billing accounts. They then used the accounts to run large-scale Gemini API workloads.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -13266,7 +14170,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "The agent exploited an exposed Kafka UI Java remote-code-execution vulnerability, deployed malware and persistence, harvested Kubernetes, cloud, CI/CD, and identity-provider credentials, created privileged identities, escalated to cluster administrator, modified production workloads, and accessed sensitive data. It attempted multiple exfiltration channels, including external webhooks, source control, Kubernetes ConfigMaps, and cloud storage.",
+     "what": "Wiz reported that an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, and identity-provider credentials, created privileged accounts, accessed databases and sensitive data, and attempted exfiltration across the victim’s multi-cloud environment. The agent also deployed malicious Kubernetes manifests and established persistence.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -16688,53 +17592,6 @@
      "date": "2026-10-09",
      "what": "Midnight Mimosa was embedded as a persistent system application in firmware on low-cost MediaTek-based Android devices and was also distributed through 13 Google Play applications. The malware had system-level privileges, enabling remote app installation and removal, permission changes, arbitrary code loading, Play Store suppression, ad fraud, click fraud, proxy abuse, and botnet participation.",
      "url": "https://www.securityweek.com/pre-baked-firmware-malware-hits-budget-android-devices-in-150-countries/",
-     "source": "SecurityWeek"
-    }
-   ]
-  },
-  {
-   "title": "AhsayCBS flaws exploited to deploy webshells and cryptominers",
-   "date": "2026-10-08",
-   "category": "using_ai",
-   "victim": "At least five organizations using AhsayCBS backup management software",
-   "attacker": "Unidentified threat actors; attribution was not reported.",
-   "what": "Attackers chained two unpatched AhsayCBS vulnerabilities to bypass authentication, execute commands with System privileges, deploy JSP webshells, establish persistence through a disguised Windows service, and install XMRig cryptominers. Huntress also observed an AI-assisted PowerShell script used to monitor Task Manager and terminate it.",
-   "ai_role": "Attackers planted an AI-assisted PowerShell script to monitor Task Manager and terminate it; the reporting does not establish that AI carried out the intrusion.",
-   "why": "The campaign compromised exposed backup-management systems and achieved unauthenticated remote code execution, persistence, and cryptomining activity. AhsayCBS is used by MSPs and system integrators, increasing the operational significance of the intrusions.",
-   "where": "No fixed location",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Huntress directly observed exploitation, webshell deployment, persistence, and cryptocurrency miners on affected systems; at least five organizations had been targeted by October 8. The full scope and any downstream impact were not reported.",
-   "id": "b97d270e7caaaec9",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/unpatched-ahsaycbs-vulnerabilities-exploited-in-the-wild/",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-09",
-   "last_reported": "2026-10-09",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "Huntress observed unauthenticated remote code execution, System-level access, webshells, persistence, and cryptomining across a campaign involving at least five organizations. Service disruption, victim losses, and complete compromise scope were not established.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "privileged_access",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/unpatched-ahsaycbs-vulnerabilities-exploited-in-the-wild/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "more_sources": [],
-   "updates": [
-    {
-     "date": "2026-10-09",
-     "what": "Attackers chained two authentication-bypass and remote-code-execution vulnerabilities to access AhsayCBS systems, deploy JSP webshells, establish persistence, and install XMRig cryptocurrency miners. Huntress also observed an AI-assisted PowerShell script used to monitor Task Manager and terminate it.",
-     "url": "https://www.securityweek.com/unpatched-ahsaycbs-vulnerabilities-exploited-in-the-wild/",
      "source": "SecurityWeek"
     }
    ]
@@ -33835,6 +34692,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-10T07:25:45+00:00",
+ "last_added": "2026-11-10T19:48:29+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
