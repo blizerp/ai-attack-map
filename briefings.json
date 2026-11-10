@@ -4030,21 +4030,202 @@
      "cached_tokens": 37414
     }
    }
+  },
+  {
+   "id": "2026-11-10-morning",
+   "date": "2026-11-10",
+   "edition": "morning",
+   "published_at": "2026-11-10T17:54:53+00:00",
+   "generated_at": "2026-11-10T17:54:53+00:00",
+   "scheduled_for": "2026-11-10T13:00:00+00:00",
+   "window_start": "2026-11-09T22:36:22+00:00",
+   "window_end": "2026-11-10T17:54:53+00:00",
+   "sector_window_start": "2026-11-09T17:54:53+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting shows a cloud-service breach affected more than a dozen organizations, an artificial-intelligence company found additional customer data exposure, and a university is investigating a serious attack claim. A browser attack is also being used in the wild. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Qubole breach exposed data from more than a dozen organizations",
+      "what_happened": "Attackers used stolen access belonging to Qubole, a cloud data provider, to enter customer cloud accounts between October 14 and 26. They collected stored passwords and other secrets, then copied data from more than a dozen companies’ cloud storage.",
+      "impact": "Affected organizations may have lost business data or access credentials. The reports do not identify the companies or show disruption to public services. The total amount and sensitivity of copied data remain unclear.",
+      "what_next": "Researchers and Qubole customers are investigating which accounts and data were reached. Further notices could identify affected organizations and clarify whether copied credentials were misused.",
+      "change": "Impact increased",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/over-a-dozen-organizations-hit-in-qubole-supply-chain-attack/",
+        "published": "2026-11-10T13:27:44+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Fireworks AI breach expanded to customer billing and project data",
+      "what_happened": "Fireworks said a second October incident, through a hacked cloud provider, reached development systems and affected a limited number of customer accounts. Exposed information may include billing records, account details, incomplete artificial-intelligence models, datasets and access secrets.",
+      "impact": "Affected customers may face targeted scams, unauthorized use of their accounts or loss of confidential project material. Fireworks says payment-card numbers were not stored there and were not exposed. No continuing access to customer-facing systems has been confirmed.",
+      "what_next": "Fireworks and outside investigators are determining the full scope. Customers whose information was affected have been notified, and later updates may clarify data loss and any fraudulent charges.",
+      "change": "Impact increased",
+      "sectors": [
+       "supply_chain",
+       "internet",
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks",
+        "published": "2026-11-10T16:08:00+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
+        "published": "2026-11-10T15:33:59+00:00"
+       },
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/",
+        "published": "2026-11-10T07:49:58+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Vanderbilt investigates an attack while data-theft claims remain unconfirmed",
+      "what_happened": "Vanderbilt University said Monday that an active cyber incident may affect university devices, systems and online services. A ransomware group claims it encrypted databases and stole student, employee and research information, but the university has not confirmed the group’s role, encryption or data theft.",
+      "impact": "Students and staff may experience interruptions to university services while the investigation continues. The alleged exposure of Social Security numbers and other records is not confirmed, so the number affected and privacy risk are unclear.",
+      "what_next": "The university is investigating and containing the incident. Further updates may say whether systems were restored, whether data was taken and which people or services were affected.",
+      "change": "New report",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/",
+        "published": "2026-11-09T23:52:12+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "A Chrome browser attack is being used before many users receive a fix",
+      "what_happened": "Google disclosed that attackers are using a newly found flaw in Chrome’s webpage-handling code. The flaw can potentially let a malicious webpage run unwanted code on a device. Google released an update, but rollout may take days or weeks.",
+      "impact": "People using an unupdated Chrome browser could face device compromise simply by visiting a harmful webpage. Google has not said who was targeted, how many people were affected or whether personal data was stolen.",
+      "what_next": "Google is limiting technical details while users receive the update. Further reporting may explain the attacks and whether other browsers using the same underlying technology are affected.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/google-patches-eighth-chrome-zero-day-exploited-in-attacks-this-year/",
+        "published": "2026-11-10T08:51:25+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
+        "published": "2026-11-10T06:52:54+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Virtual-machine management software was used to take over servers",
+      "what_happened": "Attackers are actively exploiting a flaw in Xen Orchestra, software used to manage virtual machines and servers. The flaw can let them bypass the login process and gain administrator-level control of managed systems.",
+      "impact": "Organizations using the affected software could lose control of servers and the services running on them. No specific victims, outages or stolen data have been identified in the reporting.",
+      "what_next": "The software maker is investigating the attack campaign and has released corrected versions. Further reporting may identify affected organizations or show whether attackers changed or stole data.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/critical-xen-orchestra-auth-bypass-flaw-exploited-to-hijack-vm-servers/",
+        "published": "2026-11-10T16:17:16+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "1 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 719
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 35,
+   "usage": {
+    "completion_tokens": 1148,
+    "prompt_tokens": 38352,
+    "total_tokens": 39500,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 132,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 38349,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-09T22:36:22+00:00"
+  "checked_at": "2026-11-10T17:54:53+00:00"
  },
  "automatic_attempts": {
-  "2026-11-06-morning": {
-   "count": 3,
-   "checked_at": "2026-11-07T01:44:00+00:00"
-  },
-  "2026-11-06-evening": {
-   "count": 3,
-   "checked_at": "2026-11-07T17:57:57+00:00"
-  },
   "2026-11-07-morning": {
    "count": 3,
    "checked_at": "2026-11-08T01:12:33+00:00"
@@ -4068,6 +4249,10 @@
   "2026-11-09-evening": {
    "count": 1,
    "checked_at": "2026-11-09T22:36:22+00:00"
+  },
+  "2026-11-10-morning": {
+   "count": 1,
+   "checked_at": "2026-11-10T17:54:53+00:00"
   }
  }
 }
