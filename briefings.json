@@ -4219,11 +4219,326 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-10-evening",
+   "date": "2026-11-10",
+   "edition": "evening",
+   "published_at": "2026-11-10T23:28:01+00:00",
+   "generated_at": "2026-11-10T23:28:01+00:00",
+   "scheduled_for": "2026-11-10T22:00:00+00:00",
+   "window_start": "2026-11-10T17:54:53+00:00",
+   "window_end": "2026-11-10T23:28:01+00:00",
+   "sector_window_start": "2026-11-09T23:28:01+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "Fresh reporting confirms a large Japanese retailer data exposure, a cloud-hosting breach that created major unauthorized AI charges, and a limited breach at an artificial-intelligence provider. A separate attack exposed some AI service users and agents. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Japanese retailer says up to 37.6 million customer records may have leaked",
+      "what_happened": "Nitori detected unauthorized access on November 6 and says the intruder may have reached its systems since mid-October. Potentially exposed records include names, addresses, phone numbers, email addresses, birth dates and order details for customers and corporate members.",
+      "impact": "Nitori says passwords and credit-card information were not exposed. Affected people may face convincing scam messages using purchase or contact details. The company blocked the access and is notifying customers.",
+      "what_next": "Nitori, police and Japan’s privacy regulator are investigating. The final number of affected records and the exact information taken remain unclear.",
+      "change": "New report",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/",
+        "published": "2026-11-10T20:54:55+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Cloud-hosting breach led to $740,000 in unauthorized AI charges",
+      "what_happened": "Attackers entered Railway’s internal systems on October 20 through weaknesses in its build infrastructure. They reached stored customer secrets for at most about 100,000 workspaces and used stolen credentials to generate roughly $740,000 in unauthorized AI usage.",
+      "impact": "Customers may have had access keys exposed and may have received unexpected AI bills. Railway says it will cover charges that AI providers do not refund. It found no evidence that customer code repositories or databases were downloaded.",
+      "what_next": "Railway says the attackers were removed on October 21 and the weaknesses were fixed. Investigators are determining which workspaces and credentials were actually affected.",
+      "change": "New report",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+        "published": "2026-11-10T22:20:19+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "AI provider confirms limited exposure of user accounts and private requests",
+      "what_happened": "An attacker used a flaw in software running on one NEAR AI server and then reached an older internal service. NEAR AI confirmed access to account details for about 100 users, data from 18 AI agents, and two customers’ service keys.",
+      "impact": "Exposed information included names, email addresses, agent settings, chat history and logs. NEAR AI found no sign that stored Private Chat conversations or uploaded files were accessed. Its cloud service has been restored.",
+      "what_next": "NEAR AI says it completed a forensic review and contacted confirmed affected users. It remains unclear whether confidential requests processed by the server were viewed.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
+        "published": "2026-11-10T19:19:39+00:00"
+       }
+      ],
+      "incident_ids": [
+       "bff6180f286a6d5b"
+      ]
+     },
+     {
+      "headline": "N-able keeps remote-management service offline during recovery work",
+      "what_happened": "N-able continued taking its hosted N-central environments offline after more than 30 serious flaws were publicly disclosed. The company says it has seen scanning and testing activity but no successful compromise of customer environments.",
+      "impact": "Managed service providers cannot use the affected hosted service, and some customers using their own installations may also be unable to monitor or manage devices remotely. Other N-able services remain available.",
+      "what_next": "N-able is validating a fix and preparing recovery. Service availability and the effect on customer networks may change as the company completes its investigation.",
+      "change": "Recovery update",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/patch-tuesday-microsoft-1000-bugs-again",
+        "published": "2026-11-10T20:55:00+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html",
+        "published": "2026-11-10T06:44:36+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "",
+     "items": []
+    },
+    "healthcare": {
+     "intro": "A newly reported dental ransomware incident involved encrypted patient records, but the practice restored them from backups. No patient-care outage was reported.",
+     "items": [
+      {
+       "headline": "California dental practice restores records after ransomware attack",
+       "what_happened": "Santa Barbara Endodontics found encrypted patient records on October 8. The practice says the records were restored from backups without paying, but patient information may have been stolen.",
+       "impact": "Potentially exposed information includes medical and dental histories, diagnoses, insurance details and, for some patients, Social Security numbers. The practice has not determined how many people were affected.",
+       "what_next": "The practice and outside investigators are reviewing the incident. Law enforcement has been notified, and the practice is monitoring for any release of stolen records.",
+       "change": "New report",
+       "sectors": [
+        "healthcare"
+       ],
+       "sources": [
+        {
+         "name": "HIPAA Journal",
+         "url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
+         "published": "2026-11-10T16:35:32+00:00"
+        }
+       ],
+       "incident_ids": [
+        "3ef96029ddff6a84",
+        "47995a29ec9b3ee7",
+        "b55b5cdcb61ab8da"
+       ]
+      }
+     ]
+    },
+    "internet": {
+     "intro": "New reporting includes major customer-data exposure at a Japanese retailer, unauthorized AI charges after a cloud-hosting breach, and continued disruption at an IT management provider.",
+     "items": [
+      {
+       "headline": "Japanese retailer says up to 37.6 million customer records may have leaked",
+       "what_happened": "Nitori detected unauthorized access on November 6 and says the intruder may have been present since mid-October. Names, contact details, birth dates and order information may have been exposed.",
+       "impact": "Passwords and payment-card information were not exposed, according to Nitori. Customers may face targeted scams. The retailer blocked access and is notifying affected people.",
+       "what_next": "Police, the privacy regulator and Nitori are investigating. The final number of affected records remains unclear.",
+       "change": "New report",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/",
+         "published": "2026-11-10T20:54:55+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Cloud-hosting breach created $740,000 in unauthorized AI usage",
+       "what_happened": "Railway says attackers reached stored customer secrets and used some credentials to generate unauthorized AI usage. At most about 100,000 workspaces may have had secrets exposed, though the confirmed number is lower and unclear.",
+       "impact": "Some customers may face fraudulent AI charges or misuse of access keys. Railway says it will cover charges that providers do not refund and found no evidence of customer code or databases being downloaded.",
+       "what_next": "Railway is determining which workspaces were actually affected and whether exposed credentials were misused.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+         "published": "2026-11-10T22:20:19+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "N-able service remains unavailable while the company validates a fix",
+       "what_happened": "N-able kept hosted N-central environments offline after public disclosure of more than 30 flaws. It has observed scanning activity but says there is no evidence that customer environments were successfully compromised.",
+       "impact": "IT service providers may temporarily lose remote monitoring and management of customer devices and networks. Other N-able services remain online.",
+       "what_next": "N-able is continuing validation and recovery work. Availability may change when the fix is ready.",
+       "change": "Recovery update",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/patch-tuesday-microsoft-1000-bugs-again",
+         "published": "2026-11-10T20:55:00+00:00"
+        },
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html",
+         "published": "2026-11-10T06:44:36+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "Two incidents involved trusted technology providers: Railway’s cloud-hosting environment and N-able’s remote-management platform. Their effects include possible credential exposure, unauthorized charges or temporary loss of business-management services.",
+     "items": [
+      {
+       "headline": "Railway breach reached customer secrets and caused fraudulent AI usage",
+       "what_happened": "Attackers compromised Railway’s infrastructure and accessed decrypted customer environment variables for no more than about 1.85% of workspaces. Stolen credentials were used to create roughly $740,000 in unauthorized AI usage.",
+       "impact": "Customers may have had business credentials exposed and may face unexpected charges. No customer repositories or databases were found to have been downloaded.",
+       "what_next": "Railway is investigating the affected workspaces and says the attackers were removed and the exploited weaknesses fixed.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+         "published": "2026-11-10T22:20:19+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "N-able management platform stays offline after public flaw disclosures",
+       "what_happened": "N-able took hosted N-central environments offline after a researcher disclosed more than 30 flaws. The company says it has seen scanning linked to the disclosures but no successful customer compromise.",
+       "impact": "Service providers may be unable to remotely monitor or manage customer systems through N-central. This could delay routine support work, but no wider public-service outage is reported.",
+       "what_next": "N-able is validating and preparing a fix before restoring service. The company’s investigation is ongoing.",
+       "change": "Recovery update",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html",
+         "published": "2026-11-10T06:44:36+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "6 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 719
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 45,
+   "usage": {
+    "completion_tokens": 2026,
+    "prompt_tokens": 44404,
+    "total_tokens": 46430,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 257,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 44401,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-10T17:54:53+00:00"
+  "checked_at": "2026-11-10T23:28:01+00:00"
  },
  "automatic_attempts": {
   "2026-11-07-morning": {
@@ -4253,6 +4568,10 @@
   "2026-11-10-morning": {
    "count": 1,
    "checked_at": "2026-11-10T17:54:53+00:00"
+  },
+  "2026-11-10-evening": {
+   "count": 1,
+   "checked_at": "2026-11-10T23:28:01+00:00"
   }
  }
 }
