@@ -169,6 +169,28 @@ class CatchupTests(unittest.TestCase):
             self.assertEqual(data['editions'][-1]['id'],'2026-10-28-morning')
             self.assertTrue(data['editions'][-1]['warnings'])
 
+    def test_external_push_uses_catchup_without_cron_or_manual_inputs(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, {
+                'BRIEF_CATCH_UP':'true', 'BRIEF_SCHEDULE':'',
+                'BRIEF_EDITION':'auto', 'BRIEF_REPLACE_LATEST':'false'}):
+            root=Path(tmp)
+            b.atomic(root/'briefings.json',{'editions':[self.prior()]})
+            gather=unittest.mock.Mock(return_value=([],[],0))
+            now=b.parse('2026-10-28T12:00:00Z')
+            self.assertEqual(b.run(root,now,object(),gather),0)
+            self.assertEqual(b.run(root,now+timedelta(minutes=1),object(),gather),0)
+            saved=b.read(root/'briefings.json',{})
+            self.assertEqual(saved['editions'][-1]['id'],'2026-10-28-morning')
+            self.assertEqual(saved['automatic_attempts']['2026-10-28-morning']['count'],1)
+            self.assertEqual(gather.call_count,1)
+
+    def test_external_marker_trigger_is_narrow_and_automatic(self):
+        workflow=(Path(__file__).resolve().parent/'.github/workflows/briefing.yml').read_text()
+        self.assertIn("  push:\n    branches: [main]\n    paths: ['.github/briefing-trigger.json']\n",workflow)
+        self.assertIn("BRIEF_CATCH_UP: ${{ github.event_name != 'workflow_dispatch' && 'true' || 'false' }}",workflow)
+        self.assertIn("BRIEF_REPLACE_LATEST: ${{ inputs.replace_latest && 'true' || 'false' }}",workflow)
+        self.assertIn('  group: update-map\n  cancel-in-progress: false\n  queue: max',workflow)
+
     def test_failure_backoff_and_three_attempt_budget_then_manual_retry(self):
         with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ,{'BRIEF_CATCH_UP':'true','BRIEF_REPLACE_LATEST':'false','BRIEF_EDITION':'morning','BRIEF_SCHEDULE':''}):
             root=Path(tmp);prior=self.prior();b.atomic(root/'briefings.json',{'editions':[prior]})
