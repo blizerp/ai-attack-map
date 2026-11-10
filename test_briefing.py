@@ -184,6 +184,23 @@ class CatchupTests(unittest.TestCase):
             self.assertEqual(saved['automatic_attempts']['2026-10-28-morning']['count'],1)
             self.assertEqual(gather.call_count,1)
 
+    def test_evening_external_ticks_can_catch_up_both_missing_slots(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, {
+                'BRIEF_CATCH_UP':'true', 'BRIEF_SCHEDULE':'',
+                'BRIEF_EDITION':'auto', 'BRIEF_REPLACE_LATEST':'false'}):
+            root=Path(tmp)
+            b.atomic(root/'briefings.json',{'editions':[self.prior()]})
+            gather=unittest.mock.Mock(return_value=([],[],0))
+            now=b.parse('2026-10-28T21:00:00Z')
+            self.assertEqual(b.run(root,now,object(),gather),0)
+            self.assertEqual(b.read(root/'briefings.json',{})['editions'][-1]['id'],
+                             '2026-10-28-morning')
+            self.assertEqual(b.run(root,now+timedelta(hours=1),object(),gather),0)
+            self.assertEqual(b.read(root/'briefings.json',{})['editions'][-1]['id'],
+                             '2026-10-28-evening')
+            self.assertEqual(b.run(root,now+timedelta(hours=2),object(),gather),0)
+            self.assertEqual(gather.call_count,2)
+
     def test_external_marker_trigger_is_narrow_and_automatic(self):
         workflow=(Path(__file__).resolve().parent/'.github/workflows/briefing.yml').read_text()
         self.assertIn("  push:\n    branches: [main]\n    paths: ['.github/briefing-trigger.json']\n",workflow)

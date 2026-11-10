@@ -92,10 +92,14 @@ The external clock targets 08:00 and 17:00 America/New_York, with checks at
 09:00/10:00 and 18:00/19:00 only for an edition that is still missing. It must
 read current `briefings.json` and the marker before writing. Skip a published or
 covered slot, an exhausted attempt budget, or a recent attempt still in cooldown.
-Use a deterministic request ID `DATE-EDITION-attempt-N` and the marker's current
-blob SHA for optimistic concurrency. If that request ID already exists, inspect
-its workflow run rather than writing the same request again. An uncertain write
-must be read back before any retry.
+Use a deterministic hourly tick ID `YYYY-MM-DD-HH-America_New_York` and the
+marker's current blob SHA for optimistic concurrency. If that tick ID already
+exists, inspect its workflow run rather than writing the same request again.
+Do not key requests only by the expected edition or its attempt count: an evening
+trigger can publish a missing morning first. The next scheduled check needs a new
+tick ID to allow the evening to follow. Reassess the actual edition after each run.
+An uncertain write must be read back before any retry; never issue a fresh tick
+just to retry an uncertain write.
 
 After a marker write, verify the push-triggered `Publish Daily Threat Brief`
 run, the resulting edition ID in `briefings.json`, and the subsequent
