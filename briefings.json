@@ -4725,11 +4725,297 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-11-evening",
+   "date": "2026-11-11",
+   "edition": "evening",
+   "published_at": "2026-11-11T22:00:49+00:00",
+   "generated_at": "2026-11-11T22:00:49+00:00",
+   "scheduled_for": "2026-11-11T22:00:00+00:00",
+   "window_start": "2026-11-11T15:19:25+00:00",
+   "window_end": "2026-11-11T22:00:49+00:00",
+   "sector_window_start": "2026-11-10T22:00:49+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "Fresh reporting expands the known impact of a certificate-authority incident, confirms limited exposure of Notion AI conversations, and reports a breach at a Maersk legacy system. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "More website and code-signing certificates revoked after eMudhra review",
+      "what_happened": "eMudhra revoked eight more certificate-authority certificates on November 7 after finding that a key-transfer script handled their private keys outside required protections. Six supported website certificates and two supported code signing. The earlier eight certificates had already been weakened.",
+      "impact": "The affected customer certificates have been replaced or moved to another provider. Browsers and operating systems already block the first compromised group. eMudhra says it has found no evidence of malicious use, so no forged websites or signed malware are confirmed.",
+      "what_next": "An independent review is due by December 4. eMudhra plans to stop issuing certificates under its remaining hierarchy by November 16, while its full key inventory is due November 30.",
+      "change": "Impact increased",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/emudhra-revokes-8-more-ca-certificates-after-private-key-mishap/",
+        "published": "2026-11-11T21:27:40+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Notion says a small number of AI chats were exposed through Fireworks",
+      "what_happened": "Notion found that Fireworks AI, its outside AI infrastructure provider, exposed chat transcripts from the Insights feature during an October breach. The chats were mostly unattributed, meaning they were not linked to a person or workspace in the exposed data.",
+      "impact": "Less than 1% of Notion users are reported to be affected. The disclosure adds private workplace conversation content to the customer and project information already known to have been reached at Fireworks. Notion says its cloud service remains available.",
+      "what_next": "Notion has disabled the Insights dataset and notified affected workspace owners. Its investigation and customer review may clarify which conversations were included.",
+      "change": "Impact increased",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/",
+        "published": "2026-11-11T20:54:20+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Maersk confirms a breach of an older logistics system, with no service disruption reported",
+      "what_happened": "Maersk said attackers entered a local system belonging to a company it acquired and took data. A ransomware group claims it stole about 100 gigabytes, but Maersk has not confirmed those details or said what information was taken.",
+      "impact": "Maersk says the incident is isolated and has not affected bookings, shipment management, connected customer systems or normal operations. No sensitive data has been publicly confirmed as released.",
+      "what_next": "The investigation is continuing. Maersk may notify customers if it confirms affected records or a wider impact. Unexpected messages about the incident could be scams.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
+        "published": "2026-11-11T16:24:18+00:00"
+       }
+      ],
+      "incident_ids": [
+       "b10ac27ab4a29d7a"
+      ]
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "",
+     "items": []
+    },
+    "healthcare": {
+     "intro": "New reporting adds a separate patient-data incident at a behavioral-health provider, but no care disruption is reported.",
+     "items": [
+      {
+       "headline": "Telecare reports unauthorized access to patient information",
+       "what_happened": "Telecare said it found unauthorized network access in January and completed its data review in September. The exposed information may include identity details, diagnoses, treatments, laboratory results, medicines and insurance information.",
+       "impact": "The number affected is not public. No misuse has been identified, and the report does not describe cancelled care, unavailable clinics or other service disruption.",
+       "what_next": "Telecare is notifying affected people and offering credit and identity-theft protection. Further notices may establish the affected total.",
+       "change": "New report",
+       "sectors": [
+        "healthcare"
+       ],
+       "sources": [
+        {
+         "name": "HIPAA Journal",
+         "url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/",
+         "published": "2026-11-11T11:00:08+00:00"
+        }
+       ],
+       "incident_ids": [
+        "d5c547d7ce8cca59"
+       ]
+      }
+     ]
+    },
+    "internet": {
+     "intro": "Online public services remain disrupted in Poland, while new reporting adds exposure of AI conversations and a confirmed but contained shipping-system breach.",
+     "items": [
+      {
+       "headline": "Poland’s online government platform remains offline during investigation",
+       "what_happened": "Poland shut down ePUAP after detecting and stopping an attack. The platform handles official messages, government applications and digital signatures. Officials have not confirmed unauthorized access or stolen information.",
+       "impact": "Citizens and businesses cannot use ePUAP electronic mailboxes. Trusted Profile and electronic-signature services may also be temporarily affected. No restoration time has been announced.",
+       "what_next": "Security specialists are investigating and working toward restoration. Updates may confirm when services return and whether any data was accessed.",
+       "change": "Developing",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/poland-shuts-down-government-services-platform-cyberattack",
+         "published": "2026-11-11T13:18:00+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Notion reports limited exposure of AI workplace conversations",
+       "what_happened": "Notion said a breach at Fireworks AI exposed transcripts used for its Insights feature in a small number of workspaces. Most exposed chats were not labeled with the author or workspace.",
+       "impact": "Less than 1% of Notion users are affected according to the report. Notion says its service is operating, and there is no report of a broad customer outage.",
+       "what_next": "Affected workspace owners are being notified while Notion continues reviewing the exposed dataset.",
+       "change": "Impact increased",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/",
+         "published": "2026-11-11T20:54:20+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "New reporting identifies additional trusted-provider exposure in certificate services, AI infrastructure and shipping logistics.",
+     "items": [
+      {
+       "headline": "eMudhra revokes eight more certificates after key-handling failure",
+       "what_happened": "A script used to move certificate keys between secure devices also handled eight RSA keys in computer memory. eMudhra could not show that the keys met its security rules and revoked the certificates.",
+       "impact": "The certificates supported websites and code signing, but customer replacements have been completed or are underway. No malicious use has been detected.",
+       "what_next": "KPMG’s independent review is due December 4. eMudhra’s remaining public certificate business is being wound down.",
+       "change": "Impact increased",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/emudhra-revokes-8-more-ca-certificates-after-private-key-mishap/",
+         "published": "2026-11-11T21:27:40+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Fireworks breach exposed Notion AI chat transcripts",
+       "what_happened": "Notion confirmed that its outside AI provider, Fireworks, exposed transcripts from the Insights feature during a breach. This is an additional affected customer relationship beyond the provider’s previously reported billing and project-data exposure.",
+       "impact": "Less than 1% of Notion users are reported to be affected. The chats were mostly unattributed, and no continuing Notion service outage is reported.",
+       "what_next": "Notion has stopped using the affected dataset and is notifying affected workspace owners. Further review may identify the exact conversations involved.",
+       "change": "Impact increased",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/",
+         "published": "2026-11-11T20:54:20+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Maersk confirms data theft from a system it inherited through acquisition",
+       "what_happened": "Maersk said attackers breached a local system belonging to former LF Logistics, which Maersk acquired, and stole data. The claimed 100-gigabyte haul and detailed record types have not been confirmed by the company.",
+       "impact": "Maersk reports no effect on shipping bookings, shipment management, customer connections or operations. No sensitive data release is confirmed.",
+       "what_next": "Maersk is investigating and may notify customers if the scope expands. The ransomware group’s data claims remain unverified.",
+       "change": "Newly confirmed",
+       "sectors": [
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
+         "published": "2026-11-11T16:24:18+00:00"
+        }
+       ],
+       "incident_ids": [
+        "b10ac27ab4a29d7a"
+       ]
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "3 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 720
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 34,
+   "usage": {
+    "completion_tokens": 1694,
+    "prompt_tokens": 37099,
+    "total_tokens": 38793,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 96,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 37096,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-11T15:19:25+00:00"
+  "checked_at": "2026-11-11T22:00:49+00:00"
  },
  "automatic_attempts": {
   "2026-11-08-morning": {
@@ -4759,6 +5045,10 @@
   "2026-11-11-morning": {
    "count": 1,
    "checked_at": "2026-11-11T15:19:25+00:00"
+  },
+  "2026-11-11-evening": {
+   "count": 1,
+   "checked_at": "2026-11-11T22:00:49+00:00"
   }
  }
 }
