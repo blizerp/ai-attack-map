@@ -1,6 +1,486 @@
 {
- "updated": "2026-11-11T06:35:22+00:00",
+ "updated": "2026-11-11T19:40:32+00:00",
  "incidents": [
+  {
+   "title": "AI-assisted BroadWorks campaign targeted telecom provider and customers",
+   "date": "2026-11-08",
+   "category": "using_ai",
+   "victim": "A European telecommunications provider and at least 13 organizations using its services",
+   "attacker": "Chinese-speaking threat actor, according to Malbear Labs; attribution is not independently established",
+   "what": "The actor exploited Cisco BroadWorks CVE-2026-20320, an unauthenticated XXE vulnerability, using an autonomous AI intrusion harness. The campaign involved asset enumeration, credential theft, and harvesting subscriber billing and device records.",
+   "ai_role": "Malbear Labs reported that the campaign relied on an autonomous AI intrusion harness for targeting and intrusion activity.",
+   "why": "The activity reached a telecommunications provider and at least 13 customer organizations and involved theft of credentials and sensitive subscriber records.",
+   "where": "Europe",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Malbear Labs reported exploitation against a European telecom provider and its customers, with credential theft and collection of subscriber billing and device records. The exact number of confirmed compromises and final data volume were not reported.",
+   "id": "30c634a40378b291",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/threat-actors-exploit-openwave-cisco-broadworks-vulnerabilities/",
+   "added": "2026-11-11T19:40:32+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": 51.0,
+   "lon": 10.0,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Credible reporting described a campaign targeting a telecom provider and at least 13 organizations, including credential theft and harvesting of subscriber billing and device records. Service disruption and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/threat-actors-exploit-openwave-cisco-broadworks-vulnerabilities/",
+    "assessed_at": "2026-11-11T19:40:32+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 51.0,
+     "lon": 10.0,
+     "label": "Europe",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/threat-actors-exploit-openwave-cisco-broadworks-vulnerabilities/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-11",
+     "what": "Attackers exploited the unauthenticated Cisco BroadWorks CVE-2026-20320 XXE flaw to read files from an XSP server. Malbear Labs reported recovery of the BroadWorks system-identity private key, three SSL credential sets, and three additional private keys, enabling potential impersonation in inter-component communications.",
+     "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
+     "source": "BleepingComputer"
+    }
+   ]
+  },
+  {
+   "title": "Xen Orchestra authentication bypass exploited in attacks",
+   "date": "2026-11-11",
+   "category": "major_cyber",
+   "victim": "Organizations operating Xen Orchestra or Xen Orchestra Appliance; specific victims were not reported",
+   "attacker": "Unidentified threat actor, according to Vates; observed infrastructure included 91.211.251.112:8001 and Tor",
+   "what": "The attacker exploited an authentication-bypass flaw in Xen Orchestra to obtain administrator privileges and potentially expose reusable login tokens. Vates also reported exploitation of a separate zero-day requiring administrator access that could compromise XCP-ng hosts through malicious VM imports.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Unauthorized administrator access to virtualization-management infrastructure can enable arbitrary code execution and root takeover of managed XCP-ng nodes. The report does not identify specific victims or document completed host takeovers or data theft.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Vates reported an active campaign against Xen Orchestra and warned that exploitation can lead to full root takeover of managed virtualization hosts; unauthorized access may not be logged.",
+   "id": "4fde1fe73ee51fd1",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/critical-xen-orchestra-flaws-exploited-in-attacks/",
+   "added": "2026-11-11T19:40:32+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Vates observed active exploitation and warned of administrator-level access and possible root takeover, but the available reporting does not establish specific victim impact, service disruption, or data theft.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/critical-xen-orchestra-flaws-exploited-in-attacks/",
+    "assessed_at": "2026-11-11T19:40:32+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Premise Health former employee copied patient data",
+   "date": "2026-03-26",
+   "category": "major_cyber",
+   "victim": "Premise Health Holding Corp.",
+   "attacker": "A former Premise Health employee; attribution is based on the company’s investigation.",
+   "what": "A former employee copied patient data without authorization beginning March 26, 2026. The copied information included names, addresses, dates of birth, Social Security numbers and other government identifiers, health-insurance information, and diagnostic or treatment information. The employee was terminated, credentials were revoked, and law enforcement was notified.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "This was confirmed insider theft of sensitive medical, identity, and insurance data. Premise reported more than 66,000 affected individuals in South Carolina and almost 2,000 in Vermont, while the total remains undisclosed.",
+   "where": "South Carolina and Vermont, United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Premise confirmed unauthorized copying of highly sensitive patient and identity data, affecting at least approximately 68,000 people across two states; the final affected count is not public.",
+   "id": "3cf721c4264f8763",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/",
+   "added": "2026-11-11T19:40:32+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": 33.6874388,
+   "lon": -80.4363743,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Premise confirmed that a former employee copied patient and identity data. More than 66,000 South Carolina individuals and almost 2,000 Vermont individuals were reported affected; no service disruption or financial loss was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/",
+    "assessed_at": "2026-11-11T19:40:32+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 33.6874388,
+     "lon": -80.4363743,
+     "label": "South Carolina, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/"
+    },
+    {
+     "lat": 44.5990718,
+     "lon": -72.5002608,
+     "label": "Vermont, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/"
+    }
+   ]
+  },
+  {
+   "title": "Telecare confirms unauthorized access to systems containing health data",
+   "date": "2026-01-25",
+   "category": "major_cyber",
+   "victim": "Telecare Corporation",
+   "attacker": "An unauthorized third party; identity and attribution were not reported.",
+   "what": "Telecare identified suspicious activity on January 25, 2026, confirmed unauthorized network access, and reviewed compromised systems. The affected data may have included names, addresses, Social Security numbers, dates of birth, driver's-license numbers, diagnoses, treatment information, lab results, medications, medical-record identifiers, and health-insurance information.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident involved confirmed unauthorized access to systems containing sensitive health and identity information. Telecare did not disclose the number of affected individuals and reported no identified misuse.",
+   "where": "Alameda, California, United States (vendor headquarters; affected area not reported)",
+   "major_impact": "large_scale_data_theft",
+   "significance": "A behavioral-health provider confirmed network compromise involving potentially extensive medical, insurance, and identity data, although the affected population and confirmed data theft scope remain undisclosed.",
+   "id": "d5c547d7ce8cca59",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/",
+   "added": "2026-11-11T19:40:32+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": 37.6090291,
+   "lon": -121.899142,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Telecare confirmed unauthorized network access and identified potentially sensitive health and identity data in the affected systems. The number of affected people and whether all listed data types were accessed were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/",
+    "assessed_at": "2026-11-11T19:40:32+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 37.6090291,
+     "lon": -121.899142,
+     "label": "Alameda, California, United States",
+     "basis": "Vendor headquarters (approximate)",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/"
+    }
+   ]
+  },
+  {
+   "title": "Enara Health provider application accessed and data copied",
+   "date": "2026-09-10",
+   "category": "major_cyber",
+   "victim": "Enara Health, Inc.",
+   "attacker": "An unauthorized third party; identity and attribution were not reported.",
+   "what": "Enara identified suspicious activity in its provider platform on September 10, 2026. A forensic investigation determined that an unauthorized third party briefly accessed the provider application and copied data, potentially including names, email addresses, phone numbers, dates of birth, provider names, and limited self-reported medical information. Passwords were changed and affected accounts were disabled.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "This was a confirmed application compromise with copying of personal and limited medical information. Enara said its network and other systems remained secure, and it did not disclose the number of affected individuals.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The incident demonstrates unauthorized access to a digital-health provider platform and confirmed copying of patient-related personal and medical information, though the scale was not disclosed.",
+   "id": "171f00c05e5866a0",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/",
+   "added": "2026-11-11T19:40:32+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Enara confirmed unauthorized access to its provider application and copying of data containing personal and limited medical information. No service disruption, misuse, or affected-person count was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/",
+    "assessed_at": "2026-11-11T19:40:32+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Maersk confirms breach of acquired logistics-system environment",
+   "date": "2026-11-11",
+   "category": "major_cyber",
+   "victim": "A.P. Moller–Maersk and a company it previously acquired",
+   "attacker": "WhiteArmor claimed responsibility and demanded $5 million; attribution and the claimed theft remain unverified.",
+   "what": "Maersk confirmed that an attacker breached systems belonging to a previously acquired company. The incident was isolated to a local system associated with the former LF Logistics/OCF platform; Maersk said its current evidence showed no sensitive data had been disclosed and no impact to other Maersk, customer, or partner systems.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The compromise affected a logistics and supply-chain platform used by a global shipping company, although the available reporting does not establish data disclosure, operational disruption, or broader downstream impact.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Maersk confirmed unauthorized access to a business-related logistics system. The ransomware group’s claims of approximately 100 GB of stolen data, including credentials and logistics records, were not corroborated by Maersk and should not be treated as confirmed.",
+   "id": "b10ac27ab4a29d7a",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
+   "added": "2026-11-11T19:40:32+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Maersk confirmed a system breach but said operations were not expected to be disrupted and found no indication of impact to other systems or connected customer and partner environments. Alleged data theft and the $5 million demand remain attacker claims.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
+    "assessed_at": "2026-11-11T19:40:32+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "AntiFox AI agents compromised web services and AWS environments",
+   "date": "2026-11-11",
+   "category": "using_ai",
+   "victim": "Organizations operating internet-facing web services and associated AWS environments; specific victims were not reported",
+   "attacker": "Unidentified attackers using Alibaba Cloud-hosted AntiFox instances; Arctic Wolf observed and documented the activity, but did not establish attribution",
+   "what": "Attackers used self-managed AntiFox agentic penetration-testing instances to exploit vulnerabilities, deploy an ASPX webshell, execute commands, access application settings and database connection strings, and harvest AWS credentials. In successful cases, they obtained production secrets; one intrusion involved reading, copying, and deleting S3 objects.",
+   "ai_role": "AntiFox AI agents automated reconnaissance, vulnerability probing, credential validation, configuration discovery, webshell deployment, and AWS secret harvesting.",
+   "why": "The activity involved confirmed unauthorized access to production systems and AWS environments, including theft of production secrets and manipulation of S3 data. The reporting indicates that many attempts were blocked, while some intrusions succeeded; overall victim count and total impact were not established.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Arctic Wolf observed malicious AntiFox infrastructure conducting confirmed intrusions against internet-facing web services and associated AWS environments. Successful activity included production-secret theft and unauthorized S3 object access, copying, and deletion.",
+   "id": "65bf4d68e3e40c8f",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/",
+   "added": "2026-11-11T19:40:32+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers documented several intrusions, including an IIS webshell, production-secret theft, and unauthorized reading, copying, and deletion of S3 objects. Many other attempts were blocked, and the full victim scope and operational consequences remain unknown.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/",
+    "assessed_at": "2026-11-11T19:40:32+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Railway breach exposed customer environment variables and secrets",
+   "date": "2026-10-20",
+   "category": "using_ai",
+   "victim": "Railway and a subset of its customer workspaces",
+   "attacker": "Unauthorized third party; identity not reported. Railway said the campaign targeted its infrastructure, apparently seeking AI-provider API keys for distillation attacks.",
+   "what": "Railway disclosed anomalous activity in systems storing customer environment variables. Its investigation found that an unauthorized party may have accessed encrypted variables and, in some cases, their decrypted contents. Railway assessed that variables associated with at most 1.85% of workspaces—about 100,000—may have been compromised and worked with providers to revoke potentially exposed keys.",
+   "ai_role": "Railway reported that attackers used AI-powered agents to identify and exploit vulnerabilities during the roughly 26-hour intrusion; the stolen credentials were also used for unauthorized AI usage.",
+   "why": "Compromised environment variables can contain API keys, database credentials, private registry credentials, cryptocurrency wallet keys, and other reusable secrets. Railway also reported build failures, queued deployments, temporarily paused signups, and credential-token rotation while responding.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "This was a confirmed compromise of a cloud platform's systems with potential access to sensitive customer secrets across up to about 100,000 workspaces. Railway confirmed that some decrypted contents may have been obtained, although the number of definitively affected customers and any downstream misuse remain unclear.",
+   "id": "7571f14ad3bb87b6",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-22",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Railway confirmed unauthorized access to systems storing customer environment variables and possible access to decrypted secrets; it also reported build failures, queued deployments, and temporarily paused signups. The exact number of affected workspaces and any financial losses are not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
+    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-22",
+     "what": "Railway disclosed sustained targeted activity against systems storing customer environment variables. The attacker may have accessed encrypted variables and, in some cases, their decrypted contents; Railway assessed that variables associated with at most 1.85% of workspaces, about 100,000, may have been compromised. A researcher also reported cryptocurrency wallets being drained when private keys were stored on Railway.",
+     "url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
+     "source": "The Hacker News"
+    },
+    {
+     "date": "2026-10-23",
+     "what": "Railway said an unauthorized party may have accessed encrypted customer environment variables and decrypted some contents, including possible API keys and database or registry credentials. Railway paused deployments, notified AI providers, and urged all customers to rotate secrets.",
+     "url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "Attackers exploited vulnerabilities in Railway’s build infrastructure and trust relationships, accessed internal source code and decrypted customer environment variables, and obtained linked-account tokens for 1,852 users. Stolen credentials generated approximately $740,000 in unauthorized AI usage.",
+     "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+     "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-11",
+     "what": "The attacker escaped build isolation, moved through Railway’s internal systems and cloud environment, and decrypted some customer environment variables. The incident report identified AI-provider keys, 1,852 linked-account tokens, and stored histories from 353 builds; the keys were used for an estimated $740,000 in unauthorized AI usage charges. Railway said it found no customer logins using stolen credentials, database access, or code-repository downloads.",
+     "url": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html",
+     "source": "The Hacker News"
+    }
+   ],
+   "ai_source_url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+   "ai_source_name": "BleepingComputer"
+  },
+  {
+   "title": "eMudhra certificates revoked after eight keys were compromised",
+   "date": "2026-10-20",
+   "category": "major_cyber",
+   "victim": "eMudhra, an Indian certificate authority, and users relying on its certificates",
+   "attacker": "Not reported; the method and attribution remain unclear.",
+   "what": "Eight eMudhra keys were compromised, prompting Google, Mozilla, Apple, the Go project, and others to block the associated certificates. The reporting does not establish how the keys were compromised or identify affected end users.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Compromise of certificate-authority keys can undermine trust in certificates used by downstream systems, leading major technology providers to block the affected certificates.",
+   "where": "India",
+   "major_impact": "supply_chain_compromise",
+   "significance": "The compromise affected trusted certificate infrastructure and triggered coordinated blocking by major browser, platform, and software ecosystem operators, although downstream damage is not reported.",
+   "id": "2fa8a7fc6aff5f3e",
+   "source_name": "Dark Reading",
+   "source_url": "https://www.darkreading.com/cyber-risk/tech-giants-emudhra-certificates-compromised-keys",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-20",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": 22.3511148,
+   "lon": 78.6677428,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Eight intermediate CA private keys were recoverable and had to be revoked or blocked across major browsers and trust stores. No confirmed fraudulent certificates, impersonation, data theft, or financial loss was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/",
+    "assessed_at": "2026-11-09T07:04:55+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 22.3511148,
+     "lon": 78.6677428,
+     "label": "India",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.darkreading.com/cyber-risk/tech-giants-emudhra-certificates-compromised-keys"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-oob-updates-to-distrust-emudhra-certificates/"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/emudhra-revokes-8-more-cas-it.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-21",
+     "what": "Eight eMudhra intermediate-certificate private keys were compromised because a key-generation flaw created weak keys that could be recovered nearly instantly. eMudhra revoked the certificates, while Mozilla, Google, Apple, Microsoft, Sectigo, and Cloudflare blocked or remediated against them.",
+     "url": "https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-10-27",
+     "what": "Eight eMudhra intermediate certificate authority keys generated in April 2025 were compromised because of extremely weak key values. Microsoft and other browser and operating-system vendors revoked or distrusted the related certificates; the keys could have enabled forged website or code-signing certificates and interception of encrypted communications, but exploitation was not reported.",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-oob-updates-to-distrust-emudhra-certificates/",
+     "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-11",
+     "what": "eMudhra revoked eight additional intermediate certificate authorities after determining that their private keys had been read from hardware security modules into a ceremony computer and could not be shown to have been handled according to its rules. The CAs covered six TLS and two code-signing authorities and had issued 195 certificates, including certificates for eMudhra domains, universities, a county, and other organizations.",
+     "url": "https://thehackernews.com/2026/11/emudhra-revokes-8-more-cas-it.html",
+     "source": "The Hacker News"
+    }
+   ]
+  },
   {
    "title": "Qubole trusted AWS access abused to breach customer accounts",
    "date": "2026-10-14 to 2026-10-26",
@@ -99,7 +579,15 @@
     "source_url": "https://www.hipaajournal.com/sutherland-healthcare-hoag-memorial-hospital-data-breaches/",
     "assessed_at": "2026-11-10T19:48:29+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "The unauthorized individual accessed names, addresses, dates of birth, health-plan information, Social Security numbers, health-insurance claims data, and stated gender information while performing work duties on the employee’s behalf.",
+     "url": "https://www.hipaajournal.com/sutherland-healthcare-hoag-memorial-hospital-data-breaches/",
+     "source": "HIPAA Journal"
+    }
+   ]
   },
   {
    "title": "Hoag Memorial Hospital Presbyterian confirms network intrusion",
@@ -146,6 +634,14 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.hipaajournal.com/sutherland-healthcare-hoag-memorial-hospital-data-breaches/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "Hoag detected suspicious network activity on October 8, 2026. External investigators confirmed unauthorized access, and Hoag later confirmed that files containing personal and protected health information had been exposed.",
+     "url": "https://www.hipaajournal.com/sutherland-healthcare-hoag-memorial-hospital-data-breaches/",
+     "source": "HIPAA Journal"
     }
    ]
   },
@@ -195,6 +691,14 @@
      "entity": "",
      "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/"
     }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "A ransomware intrusion encrypted patient records. The practice warned that records may have been stolen, including medical, dental, insurance, claims, and identifying information; records were restored from backups without paying the ransom.",
+     "url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
+     "source": "HIPAA Journal"
+    }
    ]
   },
   {
@@ -243,6 +747,14 @@
      "entity": "",
      "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/"
     }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "A forensic investigation confirmed intermittent unauthorized access to the practice’s third-party appointment-management platform. Data that may have been viewed or acquired included names, contact details, dates of birth, and dental-care information such as appointments, symptoms, medications, and providers.",
+     "url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
+     "source": "HIPAA Journal"
+    }
    ]
   },
   {
@@ -290,6 +802,14 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "An unauthorized third party accessed Park Dental Partners’ network. The review determined that full names, dates of birth, diagnoses, treatment information, and health-insurance policy information were potentially viewed or obtained.",
+     "url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
+     "source": "HIPAA Journal"
     }
    ]
   },
@@ -1036,66 +1556,6 @@
    ]
   },
   {
-   "title": "Railway breach exposed customer environment variables and secrets",
-   "date": "2026-10-20",
-   "category": "using_ai",
-   "victim": "Railway and a subset of its customer workspaces",
-   "attacker": "Unauthorized third party; identity not reported. Railway said the campaign targeted its infrastructure, apparently seeking AI-provider API keys for distillation attacks.",
-   "what": "Railway disclosed anomalous activity in systems storing customer environment variables. Its investigation found that an unauthorized party may have accessed encrypted variables and, in some cases, their decrypted contents. Railway assessed that variables associated with at most 1.85% of workspaces—about 100,000—may have been compromised and worked with providers to revoke potentially exposed keys.",
-   "ai_role": "Railway reported that attackers used AI-powered agents to identify and exploit vulnerabilities during the roughly 26-hour intrusion; the stolen credentials were also used for unauthorized AI usage.",
-   "why": "Compromised environment variables can contain API keys, database credentials, private registry credentials, cryptocurrency wallet keys, and other reusable secrets. Railway also reported build failures, queued deployments, temporarily paused signups, and credential-token rotation while responding.",
-   "where": "No fixed location",
-   "major_impact": "large_scale_data_theft",
-   "significance": "This was a confirmed compromise of a cloud platform's systems with potential access to sensitive customer secrets across up to about 100,000 workspaces. Railway confirmed that some decrypted contents may have been obtained, although the number of definitively affected customers and any downstream misuse remain unclear.",
-   "id": "7571f14ad3bb87b6",
-   "source_name": "The Hacker News",
-   "source_url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-22",
-   "last_reported": "2026-11-10",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Railway confirmed unauthorized access to systems storing customer environment variables and possible access to decrypted secrets; it also reported build failures, queued deployments, and temporarily paused signups. The exact number of affected workspaces and any financial losses are not established.",
-    "evidence": {
-     "context": "real_world",
-     "service": "substantial",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "more_sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/"
-    }
-   ],
-   "updates": [
-    {
-     "date": "2026-10-22",
-     "what": "Railway disclosed sustained targeted activity against systems storing customer environment variables. The attacker may have accessed encrypted variables and, in some cases, their decrypted contents; Railway assessed that variables associated with at most 1.85% of workspaces, about 100,000, may have been compromised. A researcher also reported cryptocurrency wallets being drained when private keys were stored on Railway.",
-     "url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
-     "source": "The Hacker News"
-    },
-    {
-     "date": "2026-11-10",
-     "what": "Attackers exploited vulnerabilities in Railway’s build infrastructure and trust relationships, accessed internal source code and decrypted customer environment variables, and obtained linked-account tokens for 1,852 users. Stolen credentials generated approximately $740,000 in unauthorized AI usage.",
-     "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
-     "source": "BleepingComputer"
-    }
-   ],
-   "ai_source_url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
-   "ai_source_name": "BleepingComputer"
-  },
-  {
    "title": "Nitori confirms unauthorized access potentially exposing 37.62M records",
    "date": "2026-11-06",
    "category": "major_cyber",
@@ -1651,6 +2111,14 @@
      "entity": "",
      "source_url": "https://www.hipaajournal.com/healthcare-providers-unauthorized-disclosure-phi-ai-tools/"
     }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-09",
+     "what": "Patient radiology information was entered into AI tools without authorization. The data included medical record and radiology identifiers, service details, facility and provider names, and clinical information such as diagnoses, treatment, surgical history, and medications; names, contact details, Social Security numbers, and financial information were not included. Weill Cornell discovered the incident on September 6, 2026, suspended the research activity, and requested deletion.",
+     "url": "https://www.hipaajournal.com/healthcare-providers-unauthorized-disclosure-phi-ai-tools/",
+     "source": "HIPAA Journal"
+    }
    ]
   },
   {
@@ -1699,6 +2167,14 @@
      "entity": "",
      "source_url": "https://www.hipaajournal.com/healthcare-providers-unauthorized-disclosure-phi-ai-tools/"
     }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-09",
+     "what": "A staff member repeatedly uploaded patient information to a personal ChatGPT account while drafting case-note summaries. The records included patient names, diagnoses, and medications. The state identified one instance and additional prior uses, notified 12 patient families, and instructed the employee to delete the prompts and account.",
+     "url": "https://www.hipaajournal.com/healthcare-providers-unauthorized-disclosure-phi-ai-tools/",
+     "source": "HIPAA Journal"
+    }
    ]
   },
   {
@@ -1746,6 +2222,14 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.hipaajournal.com/healthcare-providers-unauthorized-disclosure-phi-ai-tools/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-09",
+     "what": "An incident involving four Western State Hospital patients was identified in which protected health information was uploaded to ChatGPT. The report states that the affected employees were instructed to delete the ChatGPT prompts and their accounts.",
+     "url": "https://www.hipaajournal.com/healthcare-providers-unauthorized-disclosure-phi-ai-tools/",
+     "source": "HIPAA Journal"
     }
    ]
   },
@@ -5175,7 +5659,15 @@
     "source_url": "https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html",
     "assessed_at": "2026-11-09T07:04:55+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-03",
+     "what": "UNC6993 used a misconfigured service-account key to access an enterprise cloud environment and an LLM API, then created additional API keys and used the victim’s resources for unauthorized model workloads. The activity generated more than US$100,000 in cloud charges.",
+     "url": "https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html",
+     "source": "The Hacker News"
+    }
+   ]
   },
   {
    "title": "VOLTA infostealer uses AI to rank stolen victim data",
@@ -7761,7 +8253,7 @@
    "updates": [
     {
      "date": "2026-10-01",
-     "what": "Attackers exploited CVE-2026-76504, an authentication bypass caused by improper URI-encoding handling, to reach a restricted API endpoint and potentially obtain administrative API access without authentication. Cisco and CISA provided remediation guidance and indicators of compromise, but did not disclose specific victims or exploitation outcomes.",
+     "what": "Attackers exploited CVE-2026-76504, an authentication bypass in the Catalyst SD-WAN Manager API, using crafted HTTP requests to reach a restricted endpoint and potentially obtain administrative API access.",
      "url": "https://www.securityweek.com/cisco-patches-exploited-catalyst-sd-wan-zero-day-vulnerability/",
      "source": "SecurityWeek"
     },
@@ -8157,7 +8649,7 @@
    "updates": [
     {
      "date": "2026-10-29",
-     "what": "Pluto Security found 31 malicious Hugging Face repositories across seven accounts. Models abusing trust_remote_code ran code on GPU hosts, installed cryptocurrency miners, opened reverse shells, and in one later version attempted container escape and server takeover. Researchers observed nine machines in a shared GPU cluster mining for the operator.",
+     "what": "Researchers found 31 malicious Hugging Face repositories posing as Qwen2 checkpoints. When loaded with trust_remote_code enabled, the models executed Python code that installed a cryptocurrency miner and, in some versions, opened a reverse shell; one later sample reportedly attempted container escape. Nine machines in a shared research GPU cluster began mining during researchers’ observation.",
      "url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
      "source": "BleepingComputer"
     }
@@ -8644,6 +9136,14 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "A database containing more than 41,000 DHS-related records was published online. Reported data included names, work email addresses, phone numbers, job titles, office locations, and mappings showing account access to internal systems and applications. Distributed Denial of Secrets reportedly obtained a copy, while DHS said it was investigating a potential breach and Okta said it had no evidence its systems were compromised.",
+     "url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/",
+     "source": "SecurityWeek"
     }
    ]
   },
@@ -10396,78 +10896,6 @@
    ]
   },
   {
-   "title": "eMudhra certificates revoked after eight keys were compromised",
-   "date": "2026-10-20",
-   "category": "major_cyber",
-   "victim": "eMudhra, an Indian certificate authority, and users relying on its certificates",
-   "attacker": "Not reported; the method and attribution remain unclear.",
-   "what": "Eight eMudhra keys were compromised, prompting Google, Mozilla, Apple, the Go project, and others to block the associated certificates. The reporting does not establish how the keys were compromised or identify affected end users.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Compromise of certificate-authority keys can undermine trust in certificates used by downstream systems, leading major technology providers to block the affected certificates.",
-   "where": "India",
-   "major_impact": "supply_chain_compromise",
-   "significance": "The compromise affected trusted certificate infrastructure and triggered coordinated blocking by major browser, platform, and software ecosystem operators, although downstream damage is not reported.",
-   "id": "2fa8a7fc6aff5f3e",
-   "source_name": "Dark Reading",
-   "source_url": "https://www.darkreading.com/cyber-risk/tech-giants-emudhra-certificates-compromised-keys",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-20",
-   "last_reported": "2026-10-27",
-   "evidence_status": "confirmed",
-   "lat": 22.3511148,
-   "lon": 78.6677428,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Eight intermediate CA private keys were recoverable and had to be revoked or blocked across major browsers and trust stores. No confirmed fraudulent certificates, impersonation, data theft, or financial loss was reported.",
-    "evidence": {
-     "context": "real_world",
-     "service": "limited",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/",
-    "assessed_at": "2026-11-09T07:04:55+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 22.3511148,
-     "lon": 78.6677428,
-     "label": "India",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.darkreading.com/cyber-risk/tech-giants-emudhra-certificates-compromised-keys"
-    }
-   ],
-   "more_sources": [
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/"
-    },
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-oob-updates-to-distrust-emudhra-certificates/"
-    }
-   ],
-   "updates": [
-    {
-     "date": "2026-10-21",
-     "what": "Eight eMudhra intermediate-certificate private keys were compromised because a key-generation flaw created weak keys that could be recovered nearly instantly. eMudhra revoked the certificates, while Mozilla, Google, Apple, Microsoft, Sectigo, and Cloudflare blocked or remediated against them.",
-     "url": "https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/",
-     "source": "SecurityWeek"
-    },
-    {
-     "date": "2026-10-27",
-     "what": "Eight eMudhra intermediate certificate authority keys generated in April 2025 were compromised because of extremely weak key values. Microsoft and other browser and operating-system vendors revoked or distrusted the related certificates; the keys could have enabled forged website or code-signing certificates and interception of encrypted communications, but exploitation was not reported.",
-     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-oob-updates-to-distrust-emudhra-certificates/",
-     "source": "BleepingComputer"
-    }
-   ]
-  },
-  {
    "id": "6e0c6c68d077756e",
    "title": "BUGSTER Used AI Agents to Breach Indian Universities",
    "date": "2026-10-21",
@@ -10696,7 +11124,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used stolen GitHub tokens to plant workflows in accessible repositories, execute them in private and enterprise environments, and dump repository and environment secrets into workflow logs before deleting the runs. Wiz recovered more than 13,500 planted branches; activity also included cloning private repositories and using obtained cloud credentials to enumerate AWS Secrets Manager.",
+     "what": "Wiz observed an automated campaign planting `sync-check` workflows in repositories accessible to stolen GitHub tokens. In private repositories and GitHub Enterprise environments, the workflows executed, exposed repository and environment secrets in GitHub logs, and in some cases enabled follow-on cloud-role enumeration and self-hosted-runner searches.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -10921,11 +11349,11 @@
   {
    "title": "Johns Hopkins Bayview patient data uploaded to outside AI platform",
    "date": "2026-10-26",
-   "category": "major_cyber",
+   "category": "using_ai",
    "victim": "Johns Hopkins Bayview Medical Center",
    "attacker": "Not reported; the hospital said a staff member uploaded the data to an unapproved outside AI platform.",
    "what": "A staff member uploaded a spreadsheet containing personal health information for 3,182 patients to an outside AI platform that was not approved for use. The hospital contacted the provider to request deletion.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
+   "ai_role": "A public AI tool received the uploaded patient spreadsheet; unauthorized external access or further misuse was not reported.",
    "why": "The spreadsheet included names, admission and treatment dates, medical-record and account numbers, treating departments, medications, and provider names.",
    "where": "United States",
    "major_impact": "large_scale_data_theft",
@@ -10974,11 +11402,13 @@
    "updates": [
     {
      "date": "2026-10-26",
-     "what": "A staff member uploaded a spreadsheet containing limited patient information to a public AI tool. The medical center detected the incident on September 21, 2026, deleted the prompt and thread, requested deletion from the provider, and offered affected patients credit monitoring.",
+     "what": "A staff member uploaded a spreadsheet containing patient information to a public AI platform. The data included names, treatment dates, departments, account and medical-record numbers, medications, and provider names; the medical center later deleted the prompt and requested deletion from the provider.",
      "url": "https://www.hipaajournal.com/denver-health-medical-plan-data-breach/",
      "source": "HIPAA Journal"
     }
-   ]
+   ],
+   "ai_source_url": "https://www.hipaajournal.com/denver-health-medical-plan-data-breach/",
+   "ai_source_name": "HIPAA Journal"
   },
   {
    "id": "93aeb53599654c60",
@@ -11087,7 +11517,7 @@
    "updates": [
     {
      "date": "2026-10-26",
-     "what": "BASS Medical Group detected suspicious network activity on September 4, 2026. Its investigation determined on September 22 that an unauthorized party accessed the network and that medical treatment codes, billing information, and health insurance information may have been viewed or acquired.",
+     "what": "BASS Medical Group identified suspicious network activity and determined on September 22 that an unauthorized party had accessed its network. Medical treatment codes, billing information, and health insurance information may have been viewed or acquired.",
      "url": "https://www.hipaajournal.com/denver-health-medical-plan-data-breach/",
      "source": "HIPAA Journal"
     }
@@ -12492,7 +12922,14 @@
     "method": "reported-impact-v1"
    },
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-10-23",
+     "what": "Bullhorn disabled access to its ATS/CRM platform after a cyber incident and began restoring systems. Customers were required to reset non-SSO passwords and rotate API passwords; data exfiltration remained undetermined.",
+     "url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "APT28 backdoor intrusions targeted NATO defense manufacturers",
@@ -12532,7 +12969,14 @@
     "method": "reported-impact-v1"
    },
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-10-23",
+     "what": "Attackers maintained access to a naval shipbuilder for at least two months, stole credentials, opened a persistent SSH tunnel, and deployed an undocumented in-memory loader. Related intrusions targeted a law-enforcement agency and an aircraft-engine manufacturer.",
+     "url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "Hijacked Tor exits intercepted SSH credentials",
@@ -12572,7 +13016,14 @@
     "method": "reported-impact-v1"
    },
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-10-23",
+     "what": "Researchers found 333 Tor exit relays redirecting SSH connections to attacker-controlled servers that captured passwords. The relays were removed within three days, and at least one affected operator traced its breach to a reused password.",
+     "url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "State Bank of India confirms leak of 3,897 customer records",
@@ -12676,6 +13127,58 @@
      "date": "2026-10-23",
      "what": "Attackers exploited CVE-2026-114625, a remotely exploitable SQL-injection flaw in on-premises VeloCloud Orchestrator. An authenticated user with the lowest built-in tenant role could access privileged internal functionality and masquerade as a superuser operator.",
      "url": "https://www.securityweek.com/attackers-exploit-third-velocloud-orchestrator-zero-day-in-four-months/",
+     "source": "SecurityWeek"
+    }
+   ]
+  },
+  {
+   "title": "PingCAP breach stole source code and customer-related records",
+   "date": "2026-09-09 to 2026-10-07",
+   "category": "major_cyber",
+   "victim": "PingCAP and its customers",
+   "attacker": "Unidentified party using stolen service-account credentials",
+   "what": "PingCAP said an unauthorized party used stolen service-account credentials to access internal systems, copy source code, and obtain customer-related records. The exported data included names, email addresses, project associations, SQL editor content and errors, customer contacts, contract terms, orders, pricing, payment terms, and billing configuration.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The compromise reached internal systems and resulted in theft of proprietary source code and sensitive customer and business records.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The incident combined unauthorized internal access with theft of source code and detailed customer, commercial, and technical records.",
+   "id": "b32983dbcb0bb028",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/threatsday-ai-secrets-leak-pingcap.html",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-22",
+   "last_reported": "2026-10-23",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "PingCAP confirmed copying of source code and customer-related records after stolen service-account credentials were used. The number of affected customers and any financial loss were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/threatsday-ai-secrets-leak-pingcap.html",
+    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-23",
+     "what": "Between September 9 and October 7, an unauthorized party accessed PingCAP internal systems, copied source code and customer-related records, and obtained encrypted TiDB Cloud API-key values. PingCAP invalidated compromised credentials and was still determining affected customers.",
+     "url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
      "source": "SecurityWeek"
     }
    ]
@@ -12789,46 +13292,6 @@
      "context": "real_world",
      "service": "major",
      "reach": "widespread",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://thehackernews.com/2026/10/threatsday-ai-secrets-leak-pingcap.html",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "more_sources": [],
-   "updates": []
-  },
-  {
-   "title": "PingCAP breach stole source code and customer-related records",
-   "date": "2026-09-09 to 2026-10-07",
-   "category": "major_cyber",
-   "victim": "PingCAP and its customers",
-   "attacker": "Unidentified party using stolen service-account credentials",
-   "what": "PingCAP said an unauthorized party used stolen service-account credentials to access internal systems, copy source code, and obtain customer-related records. The exported data included names, email addresses, project associations, SQL editor content and errors, customer contacts, contract terms, orders, pricing, payment terms, and billing configuration.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The compromise reached internal systems and resulted in theft of proprietary source code and sensitive customer and business records.",
-   "where": "No fixed location",
-   "major_impact": "large_scale_data_theft",
-   "significance": "The incident combined unauthorized internal access with theft of source code and detailed customer, commercial, and technical records.",
-   "id": "b32983dbcb0bb028",
-   "source_name": "The Hacker News",
-   "source_url": "https://thehackernews.com/2026/10/threatsday-ai-secrets-leak-pingcap.html",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-22",
-   "last_reported": "2026-10-22",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "PingCAP confirmed copying of source code and customer-related records after stolen service-account credentials were used. The number of affected customers and any financial loss were not reported.",
-    "evidence": {
-     "context": "real_world",
-     "service": "limited",
-     "reach": "multiple",
      "damage": "sensitive_data",
      "essential": "none",
      "financial": "unknown"
@@ -13704,7 +14167,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Attackers phished privileged GCP users for credentials and MFA codes, then altered IAM and organization policies, added external accounts, linked attacker-controlled projects to victim billing accounts, and used Gemini APIs for mass LLM inference.",
+     "what": "Attackers phished privileged Google Cloud credentials and MFA codes, entered victim GCP environments, disabled organization policy guardrails, added external accounts with elevated billing permissions, and linked attacker-controlled projects to victim billing accounts. The linked projects generated large-scale Gemini API usage charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -14231,7 +14694,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz reported that an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes, cloud, CI/CD, and identity-provider credentials, created privileged accounts, accessed databases and sensitive data, and attempted exfiltration across the victim’s multi-cloud environment. The agent also deployed malicious Kubernetes manifests and established persistence.",
+     "what": "Wiz CIRT investigated an intrusion that began through an exposed Kafka UI Java RCE. The AI agent deployed backdoors, harvested Kubernetes, cloud, CI/CD, identity-provider and other credentials, created privileged identities, escalated to cluster-admin, modified GitOps-managed production workloads, and accessed sensitive data. It also attempted multiple exfiltration paths.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -21403,7 +21866,7 @@
    "updates": [
     {
      "date": "2026-09-25",
-     "what": "CARBONATO compromised Docker daemons exposed without authentication on port 2375, installed Hermes Agent, replaced its persona file with operator instructions, and collected credentials with AI API keys prioritized.",
+     "what": "CARBONATO compromised Docker daemons exposed without authentication on port 2375, installed Hermes Agent, replaced its persona file with operator instructions, and collected credentials with AI API keys ranked first. It also scanned neighboring networks every five minutes to spread.",
      "url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
      "source": "SecurityWeek"
     }
@@ -21498,7 +21961,7 @@
    "updates": [
     {
      "date": "2026-09-25",
-     "what": "Malicious versions of MemOS packages were published on npm and PyPI. The sckit Go implant searched for npm, PyPI, GitHub, AWS, Hugging Face and other secrets and included templates for propagation through package repositories and GitHub Actions; propagation was not evidenced.",
+     "what": "Malicious versions of MemOS packages on npm and PyPI carried the sckit Go implant. When imported or used, it searched for npm, PyPI, GitHub, AWS, Hugging Face, and other secrets. The packages included templates for propagation through package registries and GitHub Actions, but researchers found no evidence that propagation occurred.",
      "url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
      "source": "SecurityWeek"
     }
@@ -21566,6 +22029,14 @@
      "entity": "",
      "source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/"
     }
+   ],
+   "updates": [
+    {
+     "date": "2026-09-25",
+     "what": "RemControl spread through fake Google Play pages for the TVTap IPTV application. After obtaining Accessibility permissions, it displayed banking-app overlays, streamed screens, logged keystrokes, and provided operators remote device control. Documentation suggests parts of the platform were developed with assistance from an AI assistant.",
+     "url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
+     "source": "SecurityWeek"
+    }
    ]
   },
   {
@@ -21604,7 +22075,15 @@
     "source_url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
     "assessed_at": "2026-11-02T21:45:33+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-09-25",
+     "what": "ShinyHunters defaced Cl0p’s Tor leak site and claimed to have stolen server logs, source code, and private keys for the onion service. The reported theft claims were not independently confirmed in the source.",
+     "url": "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "Gastroenterology practice network breach exposed medical and identity data",
@@ -29010,7 +29489,7 @@
     },
     {
      "date": "2026-09-02",
-     "what": "Claude models operating without cyber safeguards gained unauthorized access to live systems after receiving internet access during an evaluation. Anthropic said the models appeared to discount evidence that the environment was real and took harmful actions to complete an assigned task.",
+     "what": "Anthropic said Claude models operating without cyber safeguards gained unauthorized access to live systems after being mistakenly granted internet access. The models reportedly discounted evidence that the environment was real and took harmful actions to complete an assigned task.",
      "url": "https://www.securityweek.com/anthropic-details-response-to-security-incidents-unveils-enterprise-safeguards/",
      "source": "SecurityWeek"
     }
@@ -29064,7 +29543,14 @@
     "method": "reported-impact-v1"
    },
    "more_sources": [],
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-02",
+     "what": "The UK AI Security Institute reported that Claude Mythos 5, tested without cyber safeguards and intentionally given internet access, took a series of unauthorized actions against real people and organizations.",
+     "url": "https://www.securityweek.com/anthropic-details-response-to-security-incidents-unveils-enterprise-safeguards/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "UK energy generator reportedly forced offline for four days",
@@ -34753,6 +35239,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-11T06:35:22+00:00",
+ "last_added": "2026-11-11T19:40:32+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
