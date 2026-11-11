@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T19:48:29+00:00",
+ "updated": "2026-11-11T06:35:22+00:00",
  "incidents": [
   {
    "title": "Qubole trusted AWS access abused to breach customer accounts",
@@ -1032,6 +1032,114 @@
      "what": "Huntress observed attackers chaining CVE-2026-105133 and CVE-2026-105134 to bypass authentication and execute commands on AhsayCBS systems. The intrusions deployed JSP web shells, XMRig miners, tunneling and remote-access tools, Microsoft Defender exclusions, and a sandbox-evading Python backdoor; activity also included a Veeam credential-theft query in a related environment.",
      "url": "https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html",
      "source": "The Hacker News"
+    }
+   ]
+  },
+  {
+   "title": "Railway breach exposed customer environment variables and secrets",
+   "date": "2026-10-20",
+   "category": "using_ai",
+   "victim": "Railway and a subset of its customer workspaces",
+   "attacker": "Unauthorized third party; identity not reported. Railway said the campaign targeted its infrastructure, apparently seeking AI-provider API keys for distillation attacks.",
+   "what": "Railway disclosed anomalous activity in systems storing customer environment variables. Its investigation found that an unauthorized party may have accessed encrypted variables and, in some cases, their decrypted contents. Railway assessed that variables associated with at most 1.85% of workspaces—about 100,000—may have been compromised and worked with providers to revoke potentially exposed keys.",
+   "ai_role": "Railway reported that attackers used AI-powered agents to identify and exploit vulnerabilities during the roughly 26-hour intrusion; the stolen credentials were also used for unauthorized AI usage.",
+   "why": "Compromised environment variables can contain API keys, database credentials, private registry credentials, cryptocurrency wallet keys, and other reusable secrets. Railway also reported build failures, queued deployments, temporarily paused signups, and credential-token rotation while responding.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "This was a confirmed compromise of a cloud platform's systems with potential access to sensitive customer secrets across up to about 100,000 workspaces. Railway confirmed that some decrypted contents may have been obtained, although the number of definitively affected customers and any downstream misuse remain unclear.",
+   "id": "7571f14ad3bb87b6",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-22",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Railway confirmed unauthorized access to systems storing customer environment variables and possible access to decrypted secrets; it also reported build failures, queued deployments, and temporarily paused signups. The exact number of affected workspaces and any financial losses are not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
+    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-22",
+     "what": "Railway disclosed sustained targeted activity against systems storing customer environment variables. The attacker may have accessed encrypted variables and, in some cases, their decrypted contents; Railway assessed that variables associated with at most 1.85% of workspaces, about 100,000, may have been compromised. A researcher also reported cryptocurrency wallets being drained when private keys were stored on Railway.",
+     "url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
+     "source": "The Hacker News"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "Attackers exploited vulnerabilities in Railway’s build infrastructure and trust relationships, accessed internal source code and decrypted customer environment variables, and obtained linked-account tokens for 1,852 users. Stolen credentials generated approximately $740,000 in unauthorized AI usage.",
+     "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+     "source": "BleepingComputer"
+    }
+   ],
+   "ai_source_url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+   "ai_source_name": "BleepingComputer"
+  },
+  {
+   "title": "Nitori confirms unauthorized access potentially exposing 37.62M records",
+   "date": "2026-11-06",
+   "category": "major_cyber",
+   "victim": "Nitori Co., Ltd., a Japanese furniture and home-accessories retailer",
+   "attacker": "Unidentified third party; attribution was not reported.",
+   "what": "Nitori confirmed unauthorized access to a company-managed system on November 6, 2026. Its investigation found the attacker may have accessed the system since mid-October, and up to 37.62 million records may have been leaked, including names, addresses, telephone numbers, dates of birth, membership details, and order information. Passwords and credit-card information were reportedly not exposed.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident potentially exposed a very large volume of customer and corporate-member personal information, creating phishing and fraud risks. Nitori blocked access and notified Japanese authorities; the cause, whether ransomware was involved, and the number of affected customers remain under investigation.",
+   "where": "Japan",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Nitori confirmed a real unauthorized system intrusion and reported that up to 37.62 million personal-information records may have been leaked. The scale is widespread, although the final number of affected customers and confirmed exfiltration remain unresolved.",
+   "id": "a4e66664d946cd4a",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/",
+   "added": "2026-11-11T06:35:22+00:00",
+   "reported_date": "2026-11-10",
+   "last_reported": "2026-11-10",
+   "evidence_status": "under_investigation",
+   "lat": 36.5748441,
+   "lon": 139.2394179,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Nitori confirmed unauthorized access and reported potential external leakage of up to 37.62 million records containing personal, corporate-member, and order information. No service outage or financial loss was reported, and the company had not confirmed the final affected count or whether all potentially exposed data was exfiltrated.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/",
+    "assessed_at": "2026-11-11T06:35:22+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/"
     }
    ]
   },
@@ -9255,15 +9363,15 @@
    "updates": [
     {
      "date": "2026-10-21",
-     "what": "The attacker used stolen internal and maintainer credentials to compromise the LiteLLM release workflow and publish malicious PyPI wheels and container images. The payload persisted through Python startup files and harvested cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials; it could also query stored provider-credential tables.",
-     "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
+     "what": "A malicious LiteLLM version, 1.107.0, was uploaded to PyPI and Docker. It contained a credential stealer targeting browser, cloud, and AI secrets, plus dormant command-and-control capability.",
+     "url": "https://www.wiz.io/blog/php2shell-php-rce",
      "source": "Wiz Research"
     },
     {
      "date": "2026-10-21",
-     "what": "Attackers used compromised GitHub accounts to publish a malicious LiteLLM 1.107.0 release through PyPI wheels and Docker images. The release contained a credential stealer and backdoor capable of collecting cloud credentials, private keys, browser data, AI-tool credentials, environment variables, and LiteLLM proxy configuration, and of executing attacker-supplied Python code.",
-     "url": "https://thehackernews.com/2026/10/litellm-compromised-in-supply-chain.html",
-     "source": "The Hacker News"
+     "what": "The attacker published malicious LiteLLM 1.107.0 PyPI wheels and corresponding GHCR and Docker Hub images. The packages installed persistence files that executed at interpreter startup and collected cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials; the data was encrypted and sent to a lookalike domain. PyPI quarantined the release and the container tags were pulled the same day.",
+     "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
+     "source": "Wiz Research"
     },
     {
      "date": "2026-10-22",
@@ -10588,7 +10696,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Wiz observed stolen GitHub tokens used to plant workflows in accessible repositories, execute secret-dumping jobs, retrieve workflow logs through the GitHub API, and delete the runs. In private repositories and GitHub Enterprise environments, workflows executed without approval; some activity involved cloning repositories and using obtained cloud credentials to enumerate AWS Secrets Manager.",
+     "what": "Attackers used stolen GitHub tokens to plant workflows in accessible repositories, execute them in private and enterprise environments, and dump repository and environment secrets into workflow logs before deleting the runs. Wiz recovered more than 13,500 planted branches; activity also included cloning private repositories and using obtained cloud credentials to enumerate AWS Secrets Manager.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -12573,53 +12681,6 @@
    ]
   },
   {
-   "title": "Railway breach exposed customer environment variables and secrets",
-   "date": "2026-10-20",
-   "category": "major_cyber",
-   "victim": "Railway and a subset of its customer workspaces",
-   "attacker": "Unauthorized third party; identity not reported. Railway said the campaign targeted its infrastructure, apparently seeking AI-provider API keys for distillation attacks.",
-   "what": "Railway disclosed anomalous activity in systems storing customer environment variables. Its investigation found that an unauthorized party may have accessed encrypted variables and, in some cases, their decrypted contents. Railway assessed that variables associated with at most 1.85% of workspaces—about 100,000—may have been compromised and worked with providers to revoke potentially exposed keys.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Compromised environment variables can contain API keys, database credentials, private registry credentials, cryptocurrency wallet keys, and other reusable secrets. Railway also reported build failures, queued deployments, temporarily paused signups, and credential-token rotation while responding.",
-   "where": "No fixed location",
-   "major_impact": "large_scale_data_theft",
-   "significance": "This was a confirmed compromise of a cloud platform's systems with potential access to sensitive customer secrets across up to about 100,000 workspaces. Railway confirmed that some decrypted contents may have been obtained, although the number of definitively affected customers and any downstream misuse remain unclear.",
-   "id": "7571f14ad3bb87b6",
-   "source_name": "The Hacker News",
-   "source_url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-22",
-   "last_reported": "2026-10-22",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Railway confirmed unauthorized access to systems storing customer environment variables and possible access to decrypted secrets; it also reported build failures, queued deployments, and temporarily paused signups. The exact number of affected workspaces and any financial losses are not established.",
-    "evidence": {
-     "context": "real_world",
-     "service": "substantial",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
-    "method": "reported-impact-v1"
-   },
-   "more_sources": [],
-   "updates": [
-    {
-     "date": "2026-10-22",
-     "what": "Railway disclosed sustained targeted activity against systems storing customer environment variables. The attacker may have accessed encrypted variables and, in some cases, their decrypted contents; Railway assessed that variables associated with at most 1.85% of workspaces, about 100,000, may have been compromised. A researcher also reported cryptocurrency wallets being drained when private keys were stored on Railway.",
-     "url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
-     "source": "The Hacker News"
-    }
-   ]
-  },
-  {
    "title": "Phishing attack compromised more than 4,500 Bluesky accounts",
    "date": "2026-10-22",
    "category": "major_cyber",
@@ -13643,7 +13704,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Attackers phished privileged GCP users for credentials and MFA codes, altered IAM and organization policies, added external accounts, and linked attacker-controlled projects to victims’ billing accounts. They then used the accounts to run large-scale Gemini API workloads.",
+     "what": "Attackers phished privileged GCP users for credentials and MFA codes, then altered IAM and organization policies, added external accounts, linked attacker-controlled projects to victim billing accounts, and used Gemini APIs for mass LLM inference.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -14723,7 +14784,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz reported a confirmed intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and persistence, harvested credentials and secrets, escalated across Kubernetes, GCP, AWS, the identity provider, CI/CD and GitOps systems, created administrative identities, and accessed sensitive data. The agent also attempted continuous exfiltration through multiple channels.",
+     "what": "Wiz CIRT investigated an AI agent that gained code execution through an exposed Kafka UI, deployed malware and backdoors, harvested Kubernetes and cloud credentials, escalated privileges, created identities and CI/CD workloads, accessed sensitive data, and attempted to exfiltrate it through repositories, webhooks, ConfigMaps, and cloud storage.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -34692,6 +34753,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-10T19:48:29+00:00",
+ "last_added": "2026-11-11T06:35:22+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }

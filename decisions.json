@@ -132,15 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-11-10T19:48:29+00:00",
+  "checked": "2026-11-11T06:35:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated, consequential campaign involving compromised GitHub credentials, unauthorized production-relevant workflow execution, and exposure of organizational secrets; it is already tracked as the same Gheist incident.",
+  "reason": "This is the same confirmed Gheist campaign already tracked under fdf212b3998ab3a2; the report substantiates large-scale unauthorized repository access and secret exposure, so it is retained as a duplicate rather than a new incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated, consequential campaign involving compromised GitHub credentials, unauthorized production-relevant workflow execution, and exposure of organizational secrets; it is already tracked as the same Gheist incident.",
-    "title": "Gheist campaign abused stolen GitHub tokens",
+    "reason": "This is the same confirmed Gheist campaign already tracked under fdf212b3998ab3a2; the report substantiates large-scale unauthorized repository access and secret exposure, so it is retained as a duplicate rather than a new incident.",
+    "title": "Gheist campaign stole secrets through compromised GitHub tokens",
     "incident_id": "fdf212b3998ab3a2"
    }
   ],
@@ -18386,16 +18386,16 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-11-10T19:48:29+00:00",
+  "checked": "2026-11-11T06:35:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz independently substantiated a consequential compromise of an unnamed organization in which an AI agent autonomously gained code execution, escalated privileges, moved across cloud and production systems, and accessed sensitive data. This is the same incident already tracked as the Wiz multi-cloud AI-agent intrusion.",
+  "reason": "Wiz CIRT substantiated a consequential real-world intrusion in which an AI agent autonomously gained privileged access, harvested secrets, accessed sensitive data, and established persistence. This is the same incident already tracked under ae8f3c2f8a5f5092.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz independently substantiated a consequential compromise of an unnamed organization in which an AI agent autonomously gained code execution, escalated privileges, moved across cloud and production systems, and accessed sensitive data. This is the same incident already tracked as the Wiz multi-cloud AI-agent intrusion.",
-    "title": "Wiz observes AI agent conduct multi-cloud intrusion",
-    "incident_id": "896e03eaa7904596"
+    "reason": "Wiz CIRT substantiated a consequential real-world intrusion in which an AI agent autonomously gained privileged access, harvested secrets, accessed sensitive data, and established persistence. This is the same incident already tracked under ae8f3c2f8a5f5092.",
+    "title": "Wiz documents autonomous multi-cloud intrusion",
+    "incident_id": "ae8f3c2f8a5f5092"
    }
   ],
   "evidence": "article",
@@ -18880,15 +18880,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-11-10T19:48:29+00:00",
+  "checked": "2026-11-11T06:35:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz substantiates multiple real GCP compromises with privileged access and material unauthorized Gemini billing. This is an update to the already tracked GCP takeover/LLMjacking campaign, adding direct incident-response evidence and confirmed financial impact.",
+  "reason": "Credible incident-response research substantiates multiple unauthorized GCP compromises and material fraudulent AI-usage charges; this is a duplicate of an already tracked incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz substantiates multiple real GCP compromises with privileged access and material unauthorized Gemini billing. This is an update to the already tracked GCP takeover/LLMjacking campaign, adding direct incident-response evidence and confirmed financial impact.",
-    "title": "Phishing campaign hijacked GCP billing for unauthorized Gemini use",
+    "reason": "Credible incident-response research substantiates multiple unauthorized GCP compromises and material fraudulent AI-usage charges; this is a duplicate of an already tracked incident.",
+    "title": "Phishing-led GCP takeover funded unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
   ],
@@ -19690,15 +19690,16 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-11-10T19:48:29+00:00",
+  "checked": "2026-11-11T06:35:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is the same LiteLLM supply-chain compromise already tracked under incident e2e13fe6f7503c25; the supplied sources provide additional detail rather than a distinct incident.",
+  "status": "include",
+  "reason": "Confirmed compromise of LiteLLM's package and container release infrastructure with a credential-stealing payload; this is already tracked as the same incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is the same LiteLLM supply-chain compromise already tracked under incident e2e13fe6f7503c25; the supplied sources provide additional detail rather than a distinct incident.",
-    "title": "LiteLLM release compromised to steal credentials"
+    "status": "include",
+    "reason": "Confirmed compromise of LiteLLM's package and container release infrastructure with a credential-stealing payload; this is already tracked as the same incident.",
+    "title": "LiteLLM 1.107.0 release compromised to steal credentials",
+    "incident_id": "e2e13fe6f7503c25"
    }
   ],
   "evidence": "feed_full_text",
@@ -19715,15 +19716,21 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-11-10T19:48:29+00:00",
+  "checked": "2026-11-11T06:35:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude the PHP2Shell research demonstrations because no external victim compromise is substantiated. The separately mentioned malicious LiteLLM package is a duplicate of already-tracked incident e2e13fe6f7503c25, not a new incident.",
+  "status": "include",
+  "reason": "This is a confirmed software-supply-chain compromise involving a malicious LiteLLM release, and it duplicates the already tracked LiteLLM compromise incident.; This is a research disclosure and controlled exploit demonstration, not a substantiated real-world cyber incident.",
   "decisions": [
    {
+    "status": "include",
+    "reason": "This is a confirmed software-supply-chain compromise involving a malicious LiteLLM release, and it duplicates the already tracked LiteLLM compromise incident.",
+    "title": "Malicious LiteLLM 1.107.0 package uploaded to PyPI and Docker",
+    "incident_id": "e2e13fe6f7503c25"
+   },
+   {
     "status": "exclude",
-    "reason": "Exclude the PHP2Shell research demonstrations because no external victim compromise is substantiated. The separately mentioned malicious LiteLLM package is a duplicate of already-tracked incident e2e13fe6f7503c25, not a new incident.",
-    "title": "Wiz disclosed PHP vulnerabilities; no real-world exploitation reported"
+    "reason": "This is a research disclosure and controlled exploit demonstration, not a substantiated real-world cyber incident.",
+    "title": "Wiz disclosed PHP2Shell vulnerabilities after AI-assisted research"
    }
   ],
   "evidence": "article",
@@ -32357,19 +32364,19 @@
  "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html": {
   "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
   "source": "The Hacker News",
-  "checked": "2026-11-10T07:25:45+00:00",
+  "checked": "2026-11-11T06:35:22+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful active exploitation is reported, but there is insufficient evidence of an actual consequential cyber incident involving identified or substantiated victim compromise.",
+  "reason": "Potentially meaningful active exploitation is reported, but the source does not substantiate an actual victim compromise or consequences; defer pending incident evidence.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful active exploitation is reported, but there is insufficient evidence of an actual consequential cyber incident involving identified or substantiated victim compromise.",
+    "reason": "Potentially meaningful active exploitation is reported, but the source does not substantiate an actual victim compromise or consequences; defer pending incident evidence.",
     "title": "Chrome CVE-2026-125350 exploited in the wild"
    }
   ],
   "evidence": "article",
-  "summary_hash": "610bb01b9be3ec46c6d8cb0aca75dfaab55bbd9dc09e87b35a74b4f032bb0b55",
+  "summary_hash": "25af612f0f439c1c2077266f37f89d86a3ec23ff8489fd60c5611400f330b130",
   "item": {
    "id": "3cd42ce0a8c8c9c0",
    "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
@@ -33379,5 +33386,236 @@
    "published_at": "2026-11-09T23:06:22+00:00"
   },
   "retrieval_warning": "HTTPError"
+ },
+ "https://www.hipaajournal.com/osha-medical-courier-training-online/": {
+  "title": "OSHA Medical Courier Training Online",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-11T06:35:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "The source contains product and training information only and reports no substantive cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The source contains product and training information only and reports no substantive cyber incident.",
+    "title": "No cyber incident reported in OSHA courier training article"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "d163097c23d38c3a1ac05bc0fbfd074deafb6313273e887e6a7abeaf0f2f2fd0",
+  "item": {
+   "id": "41639988ce6d68b4",
+   "title": "OSHA Medical Courier Training Online",
+   "url": "https://www.hipaajournal.com/osha-medical-courier-training-online/",
+   "date": "2026-11-11",
+   "source": "HIPAA Journal",
+   "published_at": "2026-11-11T00:00:08+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html": {
+  "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
+  "source": "The Hacker News",
+  "checked": "2026-11-11T06:35:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is a vulnerability/KEV notice without evidence of a specific consequential compromise or documented victim impact.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is a vulnerability/KEV notice without evidence of a specific consequential compromise or documented victim impact.",
+    "title": "Cisco BroadWorks and Openwave flaws added to exploitation catalog"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "7b0ee5657d5344b284586e09ea822bb128d9d2f7d7e94b6fd59df12db79e8514",
+  "item": {
+   "id": "f5a3cdc2ccdcb90d",
+   "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
+   "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
+   "date": "2026-11-11",
+   "source": "The Hacker News",
+   "published_at": "2026-11-11T06:04:02+00:00"
+  }
+ },
+ "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves": {
+  "title": "November Patch Tuesday: An Overflowing Cornucopia of CVEs",
+  "source": "Dark Reading",
+  "checked": "2026-11-11T06:35:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Duplicate of an already-tracked Outlook zero-day incident; the article is primarily a patch-roundup and adds no distinct substantive incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Duplicate of an already-tracked Outlook zero-day incident; the article is primarily a patch-roundup and adds no distinct substantive incident.",
+    "title": "Microsoft Outlook zero-day exploitation already tracked"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "edf31ba95d7e61dbcb56f738e0eb57e58ddbfc0397bb46d2015f1236488d73d9",
+  "item": {
+   "id": "06c7a667ec455b96",
+   "title": "November Patch Tuesday: An Overflowing Cornucopia of CVEs",
+   "url": "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves",
+   "date": "2026-11-10",
+   "source": "Dark Reading",
+   "published_at": "2026-11-10T22:26:51+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/cybersecurity-careers/checkmarx-appoints-kobi-sivilya-chief-information-security-officer": {
+  "title": "Checkmarx Appoints Kobi Sivilya as Chief Information Security Officer",
+  "source": "Dark Reading",
+  "checked": "2026-11-11T06:35:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "The source reports a CISO appointment and general commentary about AI, not an actual cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The source reports a CISO appointment and general commentary about AI, not an actual cyber incident.",
+    "title": "Checkmarx appoints a chief information security officer"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "fc43bef86b007c2e35cba9a91174c6add6386ba875d96d1dd770233bc7a7a5a1",
+  "item": {
+   "id": "cc887fe1f4a1b8ed",
+   "title": "Checkmarx Appoints Kobi Sivilya as Chief Information Security Officer",
+   "url": "https://www.darkreading.com/cybersecurity-careers/checkmarx-appoints-kobi-sivilya-chief-information-security-officer",
+   "date": "2026-11-10",
+   "source": "Dark Reading",
+   "published_at": "2026-11-10T20:35:34+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/cyberattacks-data-breaches/artex-ai-pen-test-tool-hackers-weapon": {
+  "title": "Artex: The AI Pen-Test Tool Hackers Turned Into a Weapon",
+  "source": "Dark Reading",
+  "checked": "2026-11-11T06:35:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Capability discussion without a distinct, substantiated new compromise or consequence; it does not qualify as a new incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Capability discussion without a distinct, substantiated new compromise or consequence; it does not qualify as a new incident.",
+    "title": "Artex framework weaponization capabilities described"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "b2e9c25d0d70934c29de812e1c7ed6bd2a658fd6070648259d4138a0c19751cf",
+  "item": {
+   "id": "9176e54cd747e529",
+   "title": "Artex: The AI Pen-Test Tool Hackers Turned Into a Weapon",
+   "url": "https://www.darkreading.com/cyberattacks-data-breaches/artex-ai-pen-test-tool-hackers-weapon",
+   "date": "2026-11-10",
+   "source": "Dark Reading",
+   "published_at": "2026-11-10T21:01:14+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/application-security/f-secure-26-ways-ai-harm-consumers-where-to-stop-them": {
+  "title": "F-Secure Identifies 26 Ways AI Can Harm Consumers, and Where to Stop Them",
+  "source": "Dark Reading",
+  "checked": "2026-11-11T06:35:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is an AI harms taxonomy and policy/commentary report, not a substantive documented cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is an AI harms taxonomy and policy/commentary report, not a substantive documented cyber incident.",
+    "title": "F-Secure AI harms taxonomy report"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "f985c267c7efa906c98e91bd9151c0f050eef3e763576daddf25ba6ad67f9869",
+  "item": {
+   "id": "5302b0f7a3d46d11",
+   "title": "F-Secure Identifies 26 Ways AI Can Harm Consumers, and Where to Stop Them",
+   "url": "https://www.darkreading.com/application-security/f-secure-26-ways-ai-harm-consumers-where-to-stop-them",
+   "date": "2026-11-10",
+   "source": "Dark Reading",
+   "published_at": "2026-11-10T20:41:45+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/": {
+  "title": "Japanese furniture giant Nitori says hackers stole 37.6M customer records",
+  "source": "BleepingComputer",
+  "checked": "2026-11-11T06:35:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The company confirmed unauthorized access to an organizational system and potential exposure of tens of millions of sensitive records; the unresolved scope does not negate the substantiated incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The company confirmed unauthorized access to an organizational system and potential exposure of tens of millions of sensitive records; the unresolved scope does not negate the substantiated incident.",
+    "title": "Nitori confirms unauthorized access potentially exposing 37.62M records",
+    "incident_id": "a4e66664d946cd4a"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "2701262d544562b5af8557220277c89d073062f0397fd8071c65ed0b3ee8ff73",
+  "item": {
+   "id": "a4e66664d946cd4a",
+   "title": "Japanese furniture giant Nitori says hackers stole 37.6M customer records",
+   "url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/",
+   "date": "2026-11-10",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-10T20:54:55+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/": {
+  "title": "Railway breach leads to $740,000 in fraudulent AI charges",
+  "source": "BleepingComputer",
+  "checked": "2026-11-11T06:35:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is the previously tracked Railway incident with newly substantiated impact: confirmed internal and customer-secret access, 1,852 exposed linked-account tokens, and approximately $740,000 in fraudulent AI usage. The report also supports attacker AI use, so the incident category is updated to using_ai.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is the previously tracked Railway incident with newly substantiated impact: confirmed internal and customer-secret access, 1,852 exposed linked-account tokens, and approximately $740,000 in fraudulent AI usage. The report also supports attacker AI use, so the incident category is updated to using_ai.",
+    "title": "Railway breach exposed secrets and caused $740,000 in AI charges",
+    "incident_id": "7571f14ad3bb87b6"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "3ff84f59e9a02e8d9ccf86ad8a297c037b38aecf5ec505ffd658aa79926f0658",
+  "item": {
+   "id": "64ec678a355a7134",
+   "title": "Railway breach leads to $740,000 in fraudulent AI charges",
+   "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+   "date": "2026-11-10",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-10T22:20:19+00:00"
+  }
+ },
+ "https://therecord.media/patch-tuesday-microsoft-1000-bugs-again": {
+  "title": "Microsoft’s Patch Tuesday surpasses 1,000 bugs for second month in a row",
+  "source": "The Record",
+  "checked": "2026-11-11T06:35:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude as a vulnerability/patch roundup containing already-tracked Outlook and Barracuda incidents and an explicitly unconfirmed N-able exploitation report.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude as a vulnerability/patch roundup containing already-tracked Outlook and Barracuda incidents and an explicitly unconfirmed N-able exploitation report.",
+    "title": "Patch Tuesday roundup reports exploited flaws, no new distinct incident"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "d1d00c25a1b74caa86f796bb1304043a250d30315a96a3f2ad8fa93605c7e4a6",
+  "item": {
+   "id": "d1bfb083ab4ff044",
+   "title": "Microsoft’s Patch Tuesday surpasses 1,000 bugs for second month in a row",
+   "url": "https://therecord.media/patch-tuesday-microsoft-1000-bugs-again",
+   "date": "2026-11-10",
+   "source": "The Record",
+   "published_at": "2026-11-10T20:55:00+00:00"
+  }
  }
 }
