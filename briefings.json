@@ -4534,21 +4534,204 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-11-morning",
+   "date": "2026-11-11",
+   "edition": "morning",
+   "published_at": "2026-11-11T15:19:25+00:00",
+   "generated_at": "2026-11-11T15:19:25+00:00",
+   "scheduled_for": "2026-11-11T13:00:00+00:00",
+   "window_start": "2026-11-10T23:28:01+00:00",
+   "window_end": "2026-11-11T15:19:25+00:00",
+   "sector_window_start": "2026-11-10T15:19:25+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting confirms a temporary shutdown of Poland’s main online government-services platform and active attacks on communications systems. Researchers also documented successful cloud-account access and a newly reported healthcare data theft. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Poland takes online government-services platform offline after attack",
+      "what_happened": "Poland detected and stopped an attack against ePUAP, the platform used to submit official documents, contact government agencies and complete administrative procedures online. Officials shut it down as a precaution. They have not confirmed unauthorized access or stolen information.",
+      "impact": "Citizens and businesses cannot use ePUAP electronic mailboxes. The Trusted Profile digital identity and electronic-signature services may also be temporarily affected. The government has not given a restoration time.",
+      "what_next": "Security specialists are investigating and working toward restoration. Updates may clarify when public services return and whether any data was accessed.",
+      "change": "New report",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/poland-shuts-down-government-services-platform-cyberattack",
+        "published": "2026-11-11T13:18:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Attackers steal telecom records through an actively exploited flaw",
+      "what_happened": "Attackers exploited a Cisco BroadWorks flaw in a campaign against a European telecom provider and 13 organizations using its infrastructure. Researchers say they obtained credentials and copied thousands of subscriber billing and device records. U.S. authorities have confirmed the flaw is being exploited.",
+      "impact": "The reported theft could expose telecom customer and business records. No household phone or internet outage is confirmed, and the affected provider and customers have not been named.",
+      "what_next": "Telecom providers and authorities are investigating the campaign’s scope. Further reports may identify affected organizations and whether stolen credentials were misused.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
+        "published": "2026-11-11T10:12:08+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/threat-actors-exploit-openwave-cisco-broadworks-vulnerabilities/",
+        "published": "2026-11-11T09:01:07+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
+        "published": "2026-11-11T06:04:02+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Cloud-account attacks expose business data and access credentials",
+      "what_happened": "Attackers used compromised access belonging to Qubole, a cloud data provider, to enter customer cloud accounts between October 14 and 26. Researchers say they reached dozens of victims, collected passwords and other access keys, and copied millions of files from at least one customer. Separate reporting found successful AWS secret theft through AntiFox-linked infrastructure.",
+      "impact": "Affected organizations may face stolen business data, exposed credentials and follow-on account misuse. No public-service outage or affected customer list has been confirmed.",
+      "what_next": "Qubole customers and investigators are determining which accounts and records were reached. Later notices may clarify the number of victims and whether copied credentials were used.",
+      "change": "Impact increased",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-trusted-aws-access-to-breach-multiple-cloud-environments/",
+        "published": "2026-11-10T19:31:11+00:00"
+       },
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/",
+        "published": "2026-11-11T15:12:59+00:00"
+       }
+      ],
+      "incident_ids": [
+       "5a66756107f554df"
+      ]
+     },
+     {
+      "headline": "Healthcare provider reports former employee copied patient information",
+      "what_happened": "Premise Health found that a former employee copied patient data without authorization over several months. The information may include names, addresses, birth dates, government identification numbers, insurance details and medical treatment information. The company has notified affected people and contacted law enforcement.",
+      "impact": "More than 66,000 people in South Carolina and almost 2,000 in Vermont are known to be affected, but the total is not public. No misuse has been identified. The exposed details could support identity theft or targeted scams.",
+      "what_next": "Premise Health is completing notifications and continuing its investigation. Further reporting may establish the full number affected and whether the copied data was used.",
+      "change": "New report",
+      "sectors": [
+       "healthcare"
+      ],
+      "sources": [
+       {
+        "name": "HIPAA Journal",
+        "url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/",
+        "published": "2026-11-11T11:00:08+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Backup servers were compromised in attacks on Ahsay software",
+      "what_happened": "Researchers reported attacks observed in October against AhsayCBS backup servers. Attackers gained control of some systems, installed hidden control software and cryptocurrency miners, and investigated nearby backup infrastructure. The attacks used flaws that Ahsay patched in October.",
+      "impact": "Organizations using affected backup systems could face service disruption, stolen credentials or loss of access to backup environments. The reporting does not identify victims or confirm destroyed backups.",
+      "what_next": "Investigators are assessing how widely the attacks spread and whether backup credentials were taken. Ahsay has issued further hardened software, and more victim notifications may follow.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html",
+        "published": "2026-11-10T16:00:55+00:00"
+       }
+      ],
+      "incident_ids": [
+       "b97d270e7caaaec9"
+      ]
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 719
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 29,
+   "usage": {
+    "completion_tokens": 1160,
+    "prompt_tokens": 34486,
+    "total_tokens": 35646,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 160,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 34483,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-10T23:28:01+00:00"
+  "checked_at": "2026-11-11T15:19:25+00:00"
  },
  "automatic_attempts": {
-  "2026-11-07-morning": {
-   "count": 3,
-   "checked_at": "2026-11-08T01:12:33+00:00"
-  },
-  "2026-11-07-evening": {
-   "count": 3,
-   "checked_at": "2026-11-08T17:06:06+00:00"
-  },
   "2026-11-08-morning": {
    "count": 3,
    "checked_at": "2026-11-09T00:57:50+00:00"
@@ -4572,6 +4755,10 @@
   "2026-11-10-evening": {
    "count": 1,
    "checked_at": "2026-11-10T23:28:01+00:00"
+  },
+  "2026-11-11-morning": {
+   "count": 1,
+   "checked_at": "2026-11-11T15:19:25+00:00"
   }
  }
 }
