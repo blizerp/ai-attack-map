@@ -214,9 +214,13 @@ layout: null
     .legend { font-size: 0.85rem; }
   }
 
-  .leaflet-top.leaflet-right { top: calc(12px + env(safe-area-inset-top, 0px)); right: 8px; }
+  .leaflet-top.leaflet-right { top: calc(12px + env(safe-area-inset-top, 0px)); right: 12px; }
   .leaflet-top.leaflet-right .leaflet-control { margin: 0; }
-  .threat-brief { right: 60px; }
+  .leaflet-control-zoom { display:flex; }
+  .leaflet-control-zoom a { border-bottom:0; }
+  .leaflet-control-zoom a:first-child { border-right:1px solid var(--rule); border-radius:4px 0 0 4px; }
+  .leaflet-control-zoom a:last-child { border-radius:0 4px 4px 0; }
+  @media(min-width:681px) { .threat-brief { top:calc(62px + env(safe-area-inset-top, 0px)); right:12px; } }
   .trend-panel { position:absolute; z-index:999; bottom:22px; left:12px; right:12px; background:#141C26F5; border:1px solid var(--rule); border-radius:8px; padding:8px 12px; }
   .trend-panel summary { cursor:pointer; font:600 .88rem var(--body); }
   #trend-chart svg { width:100%; height:100px; display:block; }
@@ -224,7 +228,7 @@ layout: null
   .global-strip { bottom:210px; }
   .panel:not(.collapsed) { max-height:calc(100dvh - 240px); }
   @media(max-width:680px) {
-    .panel, .panel.collapsed { max-width:calc(100vw - 68px); min-width:0; }
+    .panel, .panel.collapsed { max-width:calc(100vw - 100px); min-width:0; }
     .trend-panel { left:8px; right:8px; padding:7px 9px; }
     #trend-chart svg { height:80px; }
     .global-strip { bottom:210px; }
@@ -259,7 +263,7 @@ layout: null
   <p class="meta" id="updated">Loading incidents…</p>
   <details class="severity-key"><summary>Glow intensity = reported impact</summary>
     <p>Limited: soft. Significant: normal. Severe: strong. Critical: strongest. Unknown: faint and steady. Extra red eye glow marks Severe and Critical incidents.</p>
-    <p>Severe and Critical pins stay outside clusters. Nearby pins are spread with lines to their reported locations; map filters still apply. Preliminary ratings use reported disruption, affected victims, data damage, financial losses, and essential-service impact. Unknown is not low severity. Research-only and unverified impact stay Unknown. Target counts and possible harm do not count as confirmed damage.</p>
+    <p>Only Critical pins stay outside clusters. Severe pins cluster normally. Nearby pins are spread with lines to their reported locations; map filters still apply. Preliminary ratings use reported disruption, affected victims, data damage, financial losses, and essential-service impact. Unknown is not low severity. Research-only and unverified impact stay Unknown. Target counts and possible harm do not count as confirmed damage.</p>
   </details>
   <p class="meta">Auto-summarized from public reporting. Pins mark reported affected areas or labeled company-location fallbacks. Some campaigns have multiple pins. Numbered circles group nearby pins; tap a number to spread its skulls without changing zoom. Unlocated incidents appear in the global strip.</p>
   </div>
@@ -397,7 +401,7 @@ const cluster = L.markerClusterGroup({
   iconCreateFunction: c => L.divIcon({ html: `<div class="cluster">${c.getChildCount()}</div>`, className: "", iconSize: [25.5, 25.5] }),
 });
 map.addLayer(cluster);
-// Severe/Critical pins never enter a cluster. Spread nearby pins in screen space,
+// Only Critical pins never enter a cluster. Spread nearby pins in screen space,
 // with leader lines back to the actual supported locations.
 const priorityLayer = L.layerGroup().addTo(map);
 let priorityPins = [];
@@ -497,7 +501,7 @@ function render() {
     for (const location of locations) {
       const icon = L.divIcon({ className: "", iconSize: [27, 33], iconAnchor: [13.5, 16.5], popupAnchor: [0, -16.5],
         html: skullHtml(i) });
-      if (['severe', 'critical'].includes(severityLevel(i))) {
+      if (severityLevel(i) === 'critical') {
         priorityPins.push({incident:i, location, icon});
         continue;
       }
