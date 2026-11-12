@@ -263,7 +263,7 @@ layout: null
   <p class="meta" id="updated">Loading incidents…</p>
   <details class="severity-key"><summary>Glow intensity = reported impact</summary>
     <p>Limited: soft. Significant: normal. Severe: strong. Critical: strongest. Unknown: faint and steady. Extra red eye glow marks Severe and Critical incidents.</p>
-    <p>Only Critical pins stay outside clusters. Severe pins cluster normally. Nearby pins are spread with lines to their reported locations; map filters still apply. Preliminary ratings use reported disruption, affected victims, data damage, financial losses, and essential-service impact. Unknown is not low severity. Research-only and unverified impact stay Unknown. Target counts and possible harm do not count as confirmed damage.</p>
+    <p>Severe and Critical pins stay outside clusters. Lower severity pins cluster normally. Nearby pins are spread with lines to their reported locations; map filters still apply. Preliminary ratings use reported disruption, affected victims, data damage, financial losses, and essential-service impact. Unknown is not low severity. Research-only and unverified impact stay Unknown. Target counts and possible harm do not count as confirmed damage.</p>
   </details>
   <p class="meta">Auto-summarized from public reporting. Pins mark reported affected areas or labeled company-location fallbacks. Some campaigns have multiple pins. Numbered circles group nearby pins; tap a number to spread its skulls without changing zoom. Unlocated incidents appear in the global strip.</p>
   </div>
@@ -401,7 +401,7 @@ const cluster = L.markerClusterGroup({
   iconCreateFunction: c => L.divIcon({ html: `<div class="cluster">${c.getChildCount()}</div>`, className: "", iconSize: [25.5, 25.5] }),
 });
 map.addLayer(cluster);
-// Only Critical pins never enter a cluster. Spread nearby pins in screen space,
+// Severe and Critical pins never enter a cluster. Spread nearby pins in screen space,
 // with leader lines back to the actual supported locations.
 const priorityLayer = L.layerGroup().addTo(map);
 let priorityPins = [];
@@ -501,7 +501,7 @@ function render() {
     for (const location of locations) {
       const icon = L.divIcon({ className: "", iconSize: [27, 33], iconAnchor: [13.5, 16.5], popupAnchor: [0, -16.5],
         html: skullHtml(i) });
-      if (severityLevel(i) === 'critical') {
+      if (['severe', 'critical'].includes(severityLevel(i))) {
         priorityPins.push({incident:i, location, icon});
         continue;
       }
