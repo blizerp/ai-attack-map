@@ -33,3 +33,7 @@ Run `python -m unittest test_selection test_coverage test_site` before deploymen
 Pages deploys explicitly after every updater completion (including failed collections, to show their health) and normal pushes to `main`. The deployment checks out the latest committed data and embeds its actual Git revision for client refresh detection. This avoids relying on a bot commit to trigger a branch-based Pages build, which GitHub does not support.
 
 The initial backfill searches a 90-day publication window; it cannot establish exhaustive worldwide coverage. Publishers can block article retrieval, disclose incidents late, omit locations, or revise reports. Review decisions and add reliable sources when a meaningful incident is missed.
+
+## Daily chart
+
+The bottom chart counts distinct incident IDs by exact ISO incident/disclosure date, from August 1, 2026 through the current UTC day. Multiple locations and later reports do not multiply incident counts. Imprecise dates are excluded and disclosed; missing bars mean no dated records in this collection, not no real-world attacks. Historical collection is incomplete and changes with backfill. The current day is partial. The chart uses all categories independently of map filters and refreshes with the existing data deployment checks. Severe and Critical pins stay outside clustering; nearby high-impact pins are spread with leader lines to their supported locations. Category and time filters still apply.

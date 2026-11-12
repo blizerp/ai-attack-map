@@ -12,6 +12,7 @@ class SiteTests(unittest.TestCase):
             root.joinpath('attacks.json').write_text('{"incidents":[]}')
             root.joinpath('briefings.json').write_text('{"editions":[]}')
             root.joinpath('briefing.js').write_text('// briefing UI')
+            root.joinpath('map-trends.js').write_text('// chart UI')
             root.joinpath('briefing.css').write_text('/* briefing styles */')
             root.joinpath('brief_state.json').write_text('{"seen":{}}')
             root.joinpath('feed_status.json').write_text('{"status":"failed"}')
@@ -26,6 +27,7 @@ class SiteTests(unittest.TestCase):
             self.assertTrue(out.joinpath('briefings.json').exists())
             self.assertTrue(out.joinpath('briefing.js').exists())
             self.assertTrue(out.joinpath('briefing.css').exists())
+            self.assertTrue(out.joinpath('map-trends.js').exists())
             self.assertFalse(out.joinpath('brief_state.json').exists())
 
 

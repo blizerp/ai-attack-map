@@ -213,10 +213,27 @@ layout: null
     .sub { display: none; }
     .legend { font-size: 0.85rem; }
   }
+
+  .leaflet-top.leaflet-right { top: calc(12px + env(safe-area-inset-top, 0px)); right: 8px; }
+  .leaflet-top.leaflet-right .leaflet-control { margin: 0; }
+  .threat-brief { right: 60px; }
+  .trend-panel { position:absolute; z-index:999; bottom:22px; left:12px; right:12px; background:#141C26F5; border:1px solid var(--rule); border-radius:8px; padding:8px 12px; }
+  .trend-panel summary { cursor:pointer; font:600 .88rem var(--body); }
+  #trend-chart svg { width:100%; height:100px; display:block; }
+  #trend-note { font-size:.7rem; color:var(--slate); margin:4px 0 0; }
+  .global-strip { bottom:210px; }
+  .panel:not(.collapsed) { max-height:calc(100dvh - 240px); }
+  @media(max-width:680px) {
+    .panel, .panel.collapsed { max-width:calc(100vw - 68px); min-width:0; }
+    .trend-panel { left:8px; right:8px; padding:7px 9px; }
+    #trend-chart svg { height:80px; }
+    .global-strip { bottom:210px; }
+  }
 </style>
 </head>
 <body>
 <div id="map" aria-label="World map of incidents"></div>
+<details class="trend-panel" open><summary>Recorded incidents / day · August to today</summary><div id="trend-chart"></div><p id="trend-note">Loading recorded incident history…</p></details>
 
 <section class="panel collapsed" id="controls-panel" aria-label="Map controls">
   <header class="panel-header">
@@ -242,7 +259,7 @@ layout: null
   <p class="meta" id="updated">Loading incidents…</p>
   <details class="severity-key"><summary>Glow intensity = reported impact</summary>
     <p>Limited: soft. Significant: normal. Severe: strong. Critical: strongest. Unknown: faint and steady. Extra red eye glow marks Severe and Critical incidents.</p>
-    <p>Preliminary ratings use reported disruption, affected victims, data damage, financial losses, and essential-service impact. Unknown is not low severity. Research-only and unverified impact stay Unknown. Target counts and possible harm do not count as confirmed damage.</p>
+    <p>Severe and Critical pins stay outside clusters. Nearby pins are spread with lines to their reported locations; map filters still apply. Preliminary ratings use reported disruption, affected victims, data damage, financial losses, and essential-service impact. Unknown is not low severity. Research-only and unverified impact stay Unknown. Target counts and possible harm do not count as confirmed damage.</p>
   </details>
   <p class="meta">Auto-summarized from public reporting. Pins mark reported affected areas or labeled company-location fallbacks. Some campaigns have multiple pins. Numbered circles group nearby pins; tap a number to spread its skulls without changing zoom. Unlocated incidents appear in the global strip.</p>
   </div>
@@ -347,6 +364,7 @@ layout: null
   checkForUpdate();
 })();
 </script>
+<script src="map-trends.js?v={{ site.github.build_revision }}"></script>
 <script>
 const CATS = {
   using_ai:     { label: "Attackers used AI",        color: "#D7263D" },
@@ -367,7 +385,7 @@ function compareGlobalSeverity(a, b) {
 const state = { days: 7, cats: new Set(Object.keys(CATS)), incidents: [] };
 
 const map = L.map("map", { worldCopyJump: true, zoomControl: false, minZoom: 2 }).setView([39, -98], 2);
-L.control.zoom({ position: "bottomright" }).addTo(map);
+L.control.zoom({ position: "topright" }).addTo(map);
 L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=cb1_4u4v_1_1dfd481a718ad664f12b6beb", {
   maxZoom: 18, subdomains: "abcd",
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -379,6 +397,28 @@ const cluster = L.markerClusterGroup({
   iconCreateFunction: c => L.divIcon({ html: `<div class="cluster">${c.getChildCount()}</div>`, className: "", iconSize: [25.5, 25.5] }),
 });
 map.addLayer(cluster);
+// Severe/Critical pins never enter a cluster. Spread nearby pins in screen space,
+// with leader lines back to the actual supported locations.
+const priorityLayer = L.layerGroup().addTo(map);
+let priorityPins = [];
+function layoutPriorityPins() {
+  priorityLayer.clearLayers();
+  const placed = [];
+  for (const {incident, location, icon} of priorityPins) {
+    const origin = map.latLngToLayerPoint([location.lat, location.lon]);
+    let point = origin;
+    for (let n = 0; n < 2000; n++) {
+      const radius = 34 * Math.sqrt(n), angle = n * 2.399963;
+      point = L.point(origin.x + radius * Math.cos(angle), origin.y + radius * Math.sin(angle));
+      if (!placed.some(p => p.distanceTo(point) < 34)) break;
+    }
+    placed.push(point);
+    const target = map.layerPointToLatLng(point);
+    if (origin.distanceTo(point) > 1) L.polyline([[location.lat, location.lon], target], {color:'#A7B4C2', weight:1, opacity:.6, interactive:false}).addTo(priorityLayer);
+    L.marker(target, {icon, title:incident.title, zIndexOffset:2000}).on('click', () => openIncident(incident, location)).addTo(priorityLayer);
+  }
+}
+map.on('zoomend', layoutPriorityPins);
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
 const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "#";
@@ -448,6 +488,7 @@ function skullHtml(i) {
 function render() {
   const list = visible();
   cluster.clearLayers();
+  priorityPins = [];
   const markers = [];
   const global = [];
   for (const i of list) {
@@ -456,10 +497,16 @@ function render() {
     for (const location of locations) {
       const icon = L.divIcon({ className: "", iconSize: [27, 33], iconAnchor: [13.5, 16.5], popupAnchor: [0, -16.5],
         html: skullHtml(i) });
+      if (['severe', 'critical'].includes(severityLevel(i))) {
+        priorityPins.push({incident:i, location, icon});
+        continue;
+      }
       markers.push(L.marker([location.lat, location.lon], { icon, title: i.title }).on("click", () => openIncident(i, location)));
     }
   }
   cluster.addLayers(markers);
+  priorityPins.sort((a,b) => compareGlobalSeverity(a.incident,b.incident));
+  layoutPriorityPins();
 
   for (const k of Object.keys(CATS)) {
     const n = state.incidents.filter(i => i.category === k && (!state.days || Date.parse(i.last_reported || i.reported_date || i.date) >= Date.now() - state.days * 864e5)).length;
@@ -567,6 +614,8 @@ fetch("attacks.json?v=" + Date.now())
   .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(data => {
     state.incidents = data.incidents || [];
+    MapTrends.renderTrend(state.incidents, data.updated);
+    setInterval(() => MapTrends.renderTrend(state.incidents, data.updated), 60000);
     const u = data.updated ? new Date(data.updated).toLocaleString() : "not yet";
     document.getElementById("updated").textContent = `${state.incidents.length} incidents tracked. Last successful collection ${u}.`;
     render();
@@ -581,6 +630,7 @@ fetch("attacks.json?v=" + Date.now())
     }).catch(() => {});
   })
   .catch(() => {
+    document.getElementById("trend-note").textContent = "Incident history unavailable. Refresh to retry.";
     document.getElementById("updated").textContent = "Couldn't load incident data. Refresh the page to try again.";
   });
 </script>
