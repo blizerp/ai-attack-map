@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T07:19:07+00:00",
+ "updated": "2026-11-12T20:00:03+00:00",
  "incidents": [
   {
    "title": "ScreenConnect campaign compromised 288 endpoints across 48 organizations",
@@ -20,8 +20,8 @@
    "reported_date": "2026-11-12",
    "last_reported": "2026-11-12",
    "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
+   "lat": 27.9449854,
+   "lon": -82.4583107,
    "severity": {
     "level": "significant",
     "status": "preliminary",
@@ -46,6 +46,18 @@
     {
      "name": "SecurityWeek",
      "url": "https://www.securityweek.com/connectwise-patches-screenconnect-vulnerability-exploited-in-worm-like-attacks/"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/hackers-deploy-malware-in-fresh-screenconnect-campaign/"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/connectwise-screenconnect-breaches-third-party-tool"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html"
     }
    ],
    "updates": [
@@ -60,8 +72,742 @@
      "what": "Attackers compromised ScreenConnect partner accounts or operator sessions and used legitimate Run Command functionality and third-party extensions to install rogue ScreenConnect clients on customer endpoints. Huntress reported 286 or more affected endpoints across 47 organizations; ConnectWise confirmed unauthorized access and unauthorized remote-access software in customer environments.",
      "url": "https://www.bleepingcomputer.com/news/security/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/",
      "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-12",
+     "what": "Attackers exploited the RMM+ extension’s authentication flaw, using unauthorized ScreenConnect-panel access to execute commands on managed endpoints. The campaign deployed rogue ScreenConnect clients and the SCKit toolkit, which provides persistent backdoor access and can intercept session cookies and replicate across accessible sessions.",
+     "url": "https://www.securityweek.com/hackers-deploy-malware-in-fresh-screenconnect-campaign/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-12",
+     "what": "Attackers abused the RMM+ third-party ScreenConnect extension and remote-management capabilities, compromising 288 endpoints across 48 organizations. Responders observed persistent backdoors, malware propagation, additional remote-access software, and possible technician-workstation compromise.",
+     "url": "https://therecord.media/connectwise-screenconnect-breaches-third-party-tool",
+     "source": "The Record"
+    },
+    {
+     "date": "2026-11-12",
+     "what": "Blackpoint Cyber analyzed the SCKit toolkit used in malicious ScreenConnect activity. The toolkit can install unauthorized ScreenConnect Access clients, execute commands through existing agents, hijack authenticated technician sessions, and use RelayTrap to propagate through support infrastructure. Huntress also reported that vulnerable RMM+ extensions accepted blank access keys and could execute commands without normal ScreenConnect authentication.",
+     "url": "https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html",
+     "source": "The Hacker News"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 27.9449854,
+     "lon": -82.4583107,
+     "label": "Tampa, United States",
+     "basis": "Vendor headquarters (approximate)",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html"
     }
    ]
+  },
+  {
+   "title": "Maersk confirms breach of acquired logistics-system environment",
+   "date": "2026-11-11",
+   "category": "major_cyber",
+   "victim": "A.P. Moller–Maersk and a company it previously acquired",
+   "attacker": "WhiteArmor claimed responsibility and demanded $5 million; attribution and the claimed theft remain unverified.",
+   "what": "Maersk confirmed that an attacker breached systems belonging to a previously acquired company. The incident was isolated to a local system associated with the former LF Logistics/OCF platform; Maersk said its current evidence showed no sensitive data had been disclosed and no impact to other Maersk, customer, or partner systems.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The compromise affected a logistics and supply-chain platform used by a global shipping company, although the available reporting does not establish data disclosure, operational disruption, or broader downstream impact.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Maersk confirmed unauthorized access to a business-related logistics system. The ransomware group’s claims of approximately 100 GB of stolen data, including credentials and logistics records, were not corroborated by Maersk and should not be treated as confirmed.",
+   "id": "b10ac27ab4a29d7a",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
+   "added": "2026-11-11T19:40:32+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": 22.3492361,
+   "lon": 114.1857778,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Maersk confirmed a system breach but said operations were not expected to be disrupted and found no indication of impact to other systems or connected customer and partner environments. Alleged data theft and the $5 million demand remain attacker claims.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
+    "assessed_at": "2026-11-11T19:40:32+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-12",
+     "what": "Maersk said hackers extracted data from an isolated IT system inherited through an acquisition, identified in reporting as a platform associated with LF Logistics. Maersk’s investigation is ongoing; the alleged data volume and contents have not been independently verified.",
+     "url": "https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/",
+     "source": "SecurityWeek"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 22.3492361,
+     "lon": 114.1857778,
+     "label": "Hong Kong",
+     "basis": "Vendor headquarters (approximate)",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/"
+    }
+   ]
+  },
+  {
+   "title": "wfx-loot campaign compromised thousands of GitHub repositories",
+   "date": "2026-11-10",
+   "category": "major_cyber",
+   "victim": "Organizations and developers using affected GitHub repositories; specific victims were not reported",
+   "attacker": "Unknown attacker; Aikido Security calls the operation wfx-loot. It assessed the campaign probably involved a different actor from the October GhostAction campaign.",
+   "what": "The attacker used stolen developer and bot tokens to probe 61,764 repositories through pull requests and inserted credential-stealing code into thousands of repositories. Aikido found the stealer running in more than 1,800 repositories; the malware was placed in GitHub Actions workflows, shell scripts, and npm installation hooks, where it sought GitHub tokens, repository secrets, cloud credentials, and AI-service keys.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign compromised production software-development and CI/CD environments at scale and created opportunities for theft of reusable credentials and expansion into AWS and Azure. The reporting does not establish the exact quantity of secrets stolen or downstream compromises.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Security researchers observed malicious commits and stealer execution in more than 1,800 repositories, while SafeDep counted 8,093 public repositories receiving malicious commits. The activity relied on valid access tokens and included persistence and cloud-expansion capabilities.",
+   "id": "cd74de3eb679d9de",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/attacker-targets-60000-github-repositories-in-credential-theft-campaign/",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers observed unauthorized repository changes and malware execution at more than 1,800 repositories. The malware targeted credentials and secrets, but the available reporting does not quantify confirmed theft or operational disruption.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/attacker-targets-60000-github-repositories-in-credential-theft-campaign/",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Minnesota Epilepsy Group suffers second 2026 network breach",
+   "date": "2026-08-10",
+   "category": "major_cyber",
+   "victim": "Minnesota Epilepsy Group, P.A.",
+   "attacker": "Unauthorized third party; attribution not reported.",
+   "what": "An unauthorized third party accessed parts of Minnesota Epilepsy Group’s network on August 10, 2026. An investigation confirmed that personal and protected health information affecting 82,574 individuals had been compromised, including names and potentially addresses, dates of birth, Social Security numbers, treatment information, and health-insurance information.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "This was the organization’s second confirmed network compromise in 2026 and exposed sensitive medical and identity information at substantial scale. No misuse of the data had been identified when notification letters were issued.",
+   "where": "Roseville, Minnesota, United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Minnesota Epilepsy Group confirmed unauthorized network access and subsequent compromise of protected health information affecting 82,574 people.",
+   "id": "f7f481a00ba574bf",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/minnesota-epilepsy-group-data-breach/",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": 45.0060767,
+   "lon": -93.1566107,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The organization confirmed unauthorized network access and compromise of personal and protected health information affecting 82,574 individuals. Service disruption and financial loss were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/minnesota-epilepsy-group-data-breach/",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 45.0060767,
+     "lon": -93.1566107,
+     "label": "Roseville, Minnesota, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/minnesota-epilepsy-group-data-breach/"
+    }
+   ]
+  },
+  {
+   "title": "Hospice of Murray County server accessed without authorization",
+   "date": "2026-08-24",
+   "category": "major_cyber",
+   "victim": "Hospice of Murray County",
+   "attacker": "Unauthorized party; attribution not reported.",
+   "what": "An unauthorized party accessed one Hospice of Murray County computer server on August 24, 2026. The server contained protected health information for approximately 800 individuals, including names, identifying information, Social Security numbers, medical information, and other protected health information; the investigation found no evidence that the information was accessed or acquired.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Unauthorized access to a server containing sensitive patient records is a meaningful healthcare cybersecurity incident, although actual data access or theft has not been established.",
+   "where": "Slayton, Minnesota, United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Hospice of Murray County confirmed unauthorized access to a server holding protected health information for approximately 800 people, while reporting no evidence that patient information was accessed or acquired.",
+   "id": "8a304628dc1691ec",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/minnesota-epilepsy-group-data-breach/",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "under_investigation",
+   "lat": 43.987742,
+   "lon": -95.755846,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Server access was confirmed, but the available reporting does not establish that the stored patient information was viewed, acquired, or exfiltrated. Operational disruption and financial loss were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/minnesota-epilepsy-group-data-breach/",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 43.987742,
+     "lon": -95.755846,
+     "label": "Slayton, Minnesota, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.hipaajournal.com/minnesota-epilepsy-group-data-breach/"
+    }
+   ]
+  },
+  {
+   "title": "4EverAble2Shell exploited to compromise 21 N-central servers",
+   "date": "2026-11-12",
+   "category": "major_cyber",
+   "victim": "At least 21 organizations operating production N-able N-central servers; specific organizations were not reported",
+   "attacker": "Unknown attackers; attribution not reported. Previdian and Huntback observed and confirmed exploitation.",
+   "what": "Attackers exploited the 4EverAble2Shell chain, combining Apache Axis CVE-2026-90436 with an N-central privilege-escalation weakness, to obtain root access on N-central servers. Huntback confirmed at least 21 compromised production servers, including 19 running N-able's latest Hotfix 2, and observed XMRig miners installed through the chain.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "N-central is an RMM platform used by MSPs and IT teams to manage customer devices and networks. Root compromise of these servers could provide a path to downstream managed environments, although downstream compromise was not reported.",
+   "where": "Multiple countries, including the United States, Canada, South Africa, the United Kingdom, Germany, France, and Sweden",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Independent researchers observed complete exploit-chain execution and confirmed 21 production N-central servers actively mining cryptocurrency. The access granted full root control of affected RMM infrastructure, creating consequential risk to connected customer environments.",
+   "id": "ba511006af09c577",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Researchers confirmed unauthorized root-level access and cryptominer deployment on at least 21 production N-central servers across seven reported countries. No service outage, downstream customer compromise, or realized financial loss was established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": 61.0666922,
+     "lon": -107.991707,
+     "label": "Canada",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": -28.8166236,
+     "lon": 24.991639,
+     "label": "South Africa",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": 54.7023545,
+     "lon": -3.2765753,
+     "label": "United Kingdom",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": 51.1638175,
+     "lon": 10.4478313,
+     "label": "Germany",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": 46.603354,
+     "lon": 1.8883335,
+     "label": "France",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": 59.6749712,
+     "lon": 14.5208584,
+     "label": "Sweden",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    }
+   ]
+  },
+  {
+   "title": "Attackers use GSocket for persistent Linux-server access",
+   "date": "2026-11-12",
+   "category": "major_cyber",
+   "victim": "Multiple organizations operating Linux servers, especially web applications and hosting environments",
+   "attacker": "Multiple threat actors; attribution is not reported.",
+   "what": "Attackers installed or abused GSocket on compromised Linux servers to maintain covert remote access after exploiting initial vulnerabilities. Microsoft telemetry recorded a 356.2% increase in GSocket-related detections from March through August; 87.1% involved web applications and hosting environments.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "GSocket lets both the compromised host and attacker connect outbound through a relay, bypassing reliance on inbound listeners, public IP addresses, or dedicated command-and-control servers. Attackers also used cron jobs, systemd services, and shell startup files for persistence, and in some cases attempted privilege escalation through the Dirty Frag Linux kernel flaw.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Microsoft observed multiple real incidents involving persistent unauthorized access to Linux servers across hosting, education, research, technology, communications, manufacturing, and government environments. The relay-based design makes the access harder to detect or block with conventional IP- and domain-based controls.",
+   "id": "f49b8a947f4e7688",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/hackers-plant-gsocket-on-linux-servers-for-persistent-access/",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Microsoft telemetry and researcher observations substantiate malicious GSocket activity on multiple compromised servers and persistent remote access. The available reporting does not establish service outages, victim identities, final scope, or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/hackers-plant-gsocket-on-linux-servers-for-persistent-access/",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Apify internal systems breached; API tokens and 2FA reset",
+   "date": "2026-11-09 to 2026-11-10",
+   "category": "major_cyber",
+   "victim": "Apify",
+   "attacker": "Unauthorized third party; attribution not reported",
+   "what": "Apify said an unauthorized party accessed parts of its internal systems. The company cut off access, rotated internal credentials and customer API tokens, revoked some OAuth connections, reset active sessions, and prompted affected users to reset 2FA because codes may have been exposed.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The breach affected a developer platform and prompted credential and token rotation for customers, creating potential downstream access risks. Apify said it found no indication that account data stored on the platform was affected, while the investigation continued.",
+   "where": "Czech Republic",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Apify confirmed unauthorized access to internal systems and took containment measures affecting customer API tokens, proxy passwords, OAuth connections, sessions, and 2FA. The incident's full scope and any misuse of exposed credentials were not established.",
+   "id": "9320c6c337fb565d",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": 49.7439047,
+   "lon": 15.3381061,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Apify confirmed unauthorized internal-system access and exposure concerns involving API tokens, proxy passwords, OAuth connections, and 2FA codes. No material service outage, account-data theft, or financial loss was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 49.7439047,
+     "lon": 15.3381061,
+     "label": "Czech Republic",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/"
+    }
+   ]
+  },
+  {
+   "title": "Santos Port cyberattack disrupted cargo operations",
+   "date": "2026-11-06",
+   "category": "major_cyber",
+   "victim": "Santos Port Authority",
+   "attacker": "Not reported; Brazil’s Federal Police are investigating.",
+   "what": "A cyberattack against Brazil’s Santos Port Authority caused a power outage, delayed cargo loading and unloading, and forced route scheduling and billing services to be performed manually. The authority said about 70% of its systems had been recovered from backups by November 12.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident materially disrupted port operations, an essential logistics service, and required manual fallback procedures while systems were restored.",
+   "where": "Santos, Brazil",
+   "major_impact": "essential_service_disruption",
+   "significance": "The attack disrupted a major South American port’s cargo operations and caused an operational power outage; recovery was incomplete at the time of reporting.",
+   "id": "29f4922218af07df",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/shipping-giant-maersk-says-recent-incident-affected-legacy-system",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": -23.9609448,
+   "lon": -46.3166316,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The Santos Port Authority reported a power outage, significant loading and unloading delays, manual scheduling and billing, and recovery of approximately 70% of systems. Data theft and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "disrupted",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/shipping-giant-maersk-says-recent-incident-affected-legacy-system",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": -23.9609448,
+     "lon": -46.3166316,
+     "label": "Santos, Brazil",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/shipping-giant-maersk-says-recent-incident-affected-legacy-system"
+    }
+   ]
+  },
+  {
+   "title": "Hijacked accounts used in mass European school bomb hoaxes",
+   "date": "2026-11-11",
+   "category": "major_cyber",
+   "victim": "Da-Yeh University and organizations whose email accounts were hijacked; schools, airports and newsrooms across Europe received threats",
+   "attacker": "Unknown; no government attribution. Proofpoint said the messages came from compromised accounts, while possible nation-state alignment remained unconfirmed.",
+   "what": "A Da-Yeh University email account was compromised and used to send bomb threats to thousands of European schools. Similar threats were sent from other legitimate compromised accounts, including accounts associated with organizations in Europe and the Philippines; messages contained no malicious links or attachments.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign abused trusted institutional accounts to bypass authentication and spam controls, prompting evacuations and substantial investigative and security activity. The reporting does not establish a credible physical threat or identify the perpetrators.",
+   "where": "Da-Yeh University in Taiwan; affected schools and organizations in Italy, Scotland, Northern Ireland and the Republic of Ireland",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Taiwan’s Da-Yeh University confirmed it suspended the account used to send the emails, and authorities reported threats reaching thousands of schools, including evacuations from Milan to Sicily and approximately 1,000 Scottish schools receiving threats.",
+   "id": "8b829a6994ba7b3c",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/europe-hoax-email-threats",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": 23.9739374,
+   "lon": 120.9820179,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Unauthorized access to at least one institutional email account was substantiated, and the resulting mass threats caused evacuations and disruption at schools. The number of compromised accounts and any lasting operational or financial harm remain unknown.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/europe-hoax-email-threats",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 23.9739374,
+     "lon": 120.9820179,
+     "label": "Taiwan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/europe-hoax-email-threats"
+    },
+    {
+     "lat": 42.6384261,
+     "lon": 12.674297,
+     "label": "Italy",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/europe-hoax-email-threats"
+    },
+    {
+     "lat": 56.7861112,
+     "lon": -4.1140518,
+     "label": "Scotland, United Kingdom",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/europe-hoax-email-threats"
+    },
+    {
+     "lat": 54.5859836,
+     "lon": -6.9591554,
+     "label": "Northern Ireland, United Kingdom",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/europe-hoax-email-threats"
+    },
+    {
+     "lat": 52.865196,
+     "lon": -7.9794599,
+     "label": "Republic of Ireland",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/europe-hoax-email-threats"
+    }
+   ]
+  },
+  {
+   "title": "Falcon JavaScript framework compromised government web visitors",
+   "date": "2026-11-12",
+   "category": "major_cyber",
+   "victim": "Government entities in one Middle Eastern country and four Southeast Asian countries",
+   "attacker": "Not reported; activity attributed only to an actor described by Palo Alto Networks Unit 42",
+   "what": "Attackers placed malicious JavaScript in webmail portals and government web applications, compromising visitors’ browsers. The activity enabled malicious Chrome-extension sideloading, theft of passwords, emails, session cookies and communications, and delivery of the Antino implant.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign compromised browsers used to access government and webmail sites and targeted ministries of foreign affairs, defense and interior, and law-enforcement agencies. The reporting describes strategic intelligence collection, but does not identify specific victim organizations or final data volumes.",
+   "where": "One Middle Eastern country and four Southeast Asian countries",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Unit 42 reported observed compromises and theft of credentials, session data and communications from government-related web applications across five countries.",
+   "id": "84143ea61c9ebfdf",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers observed browser compromises and theft of passwords, emails, session cookies and communications. Service disruption and financial loss were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "AI-assisted espionage compromised Central Asian government systems",
+   "date": "2026-04 to 2026-10",
+   "category": "using_ai",
+   "victim": "Government and critical-infrastructure organizations in Central Asia; specific victims were not reported",
+   "attacker": "Not reported; CloudSEK assessed a Kazakhstan nexus with medium confidence based on operational indicators",
+   "what": "An exposed Silent Lynx server revealed tooling and data from active cyber-espionage intrusions against Central Asian government and critical-infrastructure organizations. The operator also relied on an AI agent to run the operations.",
+   "ai_role": "CloudSEK reported that the operator relied on an AI agent to run the intrusions; the specific tasks performed by the agent were not reported.",
+   "why": "The exposed server contained data from active intrusions and collection priorities involving transport, defense correspondence and resource ministries. The reporting indicates intelligence collection rather than financial activity, but does not quantify stolen data or identify individual victims.",
+   "where": "Central Asia",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The incident involved active espionage intrusions into government and critical-infrastructure organizations and documented operational use of an AI agent.",
+   "id": "d522d3fe93bb3faa",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": 3.1624869,
+   "lon": 101.7125461,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "CloudSEK found intrusion data and tooling on an exposed server, indicating active compromises and collection. Operational disruption and the precise scope of stolen information were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 3.1624869,
+     "lon": 101.7125461,
+     "label": "Central Asia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html"
+    }
+   ]
+  },
+  {
+   "title": "Citrus ransomware used compromised contractor accounts and AI-generated commands",
+   "date": "2026-11-12",
+   "category": "using_ai",
+   "victim": "Multiple unnamed corporate Windows environments",
+   "attacker": "Citrus, a newly reported Russian-speaking ransomware group; Kaspersky linked activity to similarities with Toy Ghouls but did not establish attribution",
+   "what": "Attackers used compromised contractor accounts to enter corporate Windows environments, attempted privilege escalation and domain-wide deployment, and used AI-generated PowerShell scripts, batch files and commands. The Sn00py-family ransomware encrypted user files and appended the .citrus extension while attackers deleted logs and other artifacts.",
+   "ai_role": "Kaspersky reported that AI-generated scripts, batch files and commands supported hands-on intrusion activity; no autonomous AI agent was reported.",
+   "why": "The investigated cases demonstrate unauthorized access followed by ransomware encryption and anti-forensic activity. Specific victims, locations, number of incidents and business losses were not reported.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The activity shows compromised third-party access being used for broader corporate compromise and ransomware deployment, with observed encryption and evasion behavior.",
+   "id": "f5a5796fc57f00bf",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Kaspersky investigated cases involving corporate intrusions and file encryption. Victim identities, outage duration and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "destructive",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "CloudFire phishing campaign hijacked Google Workspace sessions",
+   "date": "2026-08 to 2026-11-12",
+   "category": "major_cyber",
+   "victim": "Corporate Google Workspace users and organizations; specific victims were not reported",
+   "attacker": "Unidentified phishing operator using the Nyasher reverse-proxy framework; attribution not reported",
+   "what": "Since mid-August 2026, attackers used calendar-invite and related phishing lures, trusted Google redirectors, and live reverse proxies to capture Google passwords, multifactor-authentication responses, and active sessions. Researchers recorded 8,570 compromised sender addresses across 6,354 root domains and 68,676 blocked campaign messages during one month of observation.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Captured Google sessions could provide access to victims' Gmail, Drive, and the ability to grant OAuth access in their names. Material Security researchers documented the campaign and Operation CloudFire infrastructure takedowns, substantiating real-world compromise activity, although confirmed downstream data theft and the complete victim count were not reported.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The operation bypassed passwords and several MFA methods by proxying genuine Google sign-ins in real time, while using compromised sender accounts and trusted-looking links to reach additional victims. The observed campaign involved thousands of compromised sender addresses and thousands of malicious domains.",
+   "id": "b47a6c789ac81206",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Researchers documented compromised sender accounts and live Google-session capture, enabling access to Workspace mail, Drive, and OAuth functions. The reporting does not establish specific data theft, business outages, financial losses, or the full number of affected organizations.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Hijacked GitHub accounts planted CI secret stealer in 1,806+ repositories",
+   "date": "2026-11-10 to 2026-11-12",
+   "category": "major_cyber",
+   "victim": "Organizations and developers using affected GitHub repositories and CI workflows; specific victims were not reported",
+   "attacker": "Unidentified attacker; Aikido said it was not attributing the activity to the actor behind the October GhostAction wave",
+   "what": "The attacker used stolen credentials for 4,837 GitHub accounts to submit test pull requests to 61,764 repositories and plant a credential-stealing workflow or npm postinstall hook. The stealer ran in at least 1,806 repositories and collected CI secrets, cloud credentials, repository contents, workflow artifacts, and other runner credentials; it could also establish persistence in AWS and Azure environments.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "This was a confirmed, large-scale compromise of GitHub accounts and software-development infrastructure. Credentials available to affected workflows should be treated as compromised, with potential access to connected AWS, Azure, GCP, Kubernetes, package-publishing, and AI-service environments.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Aikido observed the stealer executing in at least 1,806 repositories, while SafeDep identified malicious commits in 8,093 public repositories. The campaign exposed reusable secrets and cloud roles across hundreds or thousands of development environments, including at least 50 users appearing to publish software packages.",
+   "id": "29dfac32567e48b8",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers substantiated execution of the stealer in at least 1,806 repositories and found it collecting CI secrets, cloud credentials, repository data, and runner credentials. The available reporting does not establish specific downstream cloud compromises, service outages, or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "AI-assisted BroadWorks campaign targeted telecom provider and customers",
@@ -301,44 +1047,6 @@
      "financial": "unknown"
     },
     "source_url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/",
-    "assessed_at": "2026-11-11T19:40:32+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
-   "title": "Maersk confirms breach of acquired logistics-system environment",
-   "date": "2026-11-11",
-   "category": "major_cyber",
-   "victim": "A.P. Moller–Maersk and a company it previously acquired",
-   "attacker": "WhiteArmor claimed responsibility and demanded $5 million; attribution and the claimed theft remain unverified.",
-   "what": "Maersk confirmed that an attacker breached systems belonging to a previously acquired company. The incident was isolated to a local system associated with the former LF Logistics/OCF platform; Maersk said its current evidence showed no sensitive data had been disclosed and no impact to other Maersk, customer, or partner systems.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The compromise affected a logistics and supply-chain platform used by a global shipping company, although the available reporting does not establish data disclosure, operational disruption, or broader downstream impact.",
-   "where": "No fixed location",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Maersk confirmed unauthorized access to a business-related logistics system. The ransomware group’s claims of approximately 100 GB of stolen data, including credentials and logistics records, were not corroborated by Maersk and should not be treated as confirmed.",
-   "id": "b10ac27ab4a29d7a",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
-   "added": "2026-11-11T19:40:32+00:00",
-   "reported_date": "2026-11-11",
-   "last_reported": "2026-11-11",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "unknown",
-    "status": "preliminary",
-    "reason": "Maersk confirmed a system breach but said operations were not expected to be disrupted and found no indication of impact to other systems or connected customer and partner environments. Alleged data theft and the $5 million demand remain attacker claims.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "single",
-     "damage": "unknown",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
     "assessed_at": "2026-11-11T19:40:32+00:00",
     "method": "reported-impact-v1"
    }
@@ -10487,13 +11195,13 @@
    "updates": [
     {
      "date": "2026-10-21",
-     "what": "A malicious LiteLLM version, 1.107.0, was uploaded to PyPI and Docker. The package contained a credential stealer targeting browser, cloud, and AI secrets, along with dormant command-and-control capability.",
+     "what": "A malicious LiteLLM version, 1.107.0, was uploaded to PyPI and Docker. It contained a credential stealer targeting browser, cloud, and AI secrets, plus dormant command-and-control capability.",
      "url": "https://www.wiz.io/blog/php2shell-php-rce",
      "source": "Wiz Research"
     },
     {
      "date": "2026-10-21",
-     "what": "An attacker used a leaked LiteLLM Agent Platform key and subsequently obtained GitHub credentials and repository secrets to bypass release protections and publish malicious LiteLLM 1.107.0 packages and container images. The payload established interpreter-start persistence and attempted to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, and shell-history credentials before sending encrypted data to a lookalike domain.",
+     "what": "The attacker published malicious LiteLLM 1.107.0 PyPI wheels and corresponding GHCR/Docker Hub images. The packages installed persistent Python startup files that harvested cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, shell-history, and stored LiteLLM provider credentials, then encrypted and transmitted them to an attacker-controlled lookalike domain.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -11643,7 +12351,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used stolen GitHub tokens to plant sync-check workflows in repositories, execute them, and dump repository and environment secrets into workflow logs before deleting the runs. In some enterprise environments, the campaign also cloned private repositories and used recovered cloud credentials to enumerate AWS Secrets Manager.",
+     "what": "Attackers used compromised GitHub tokens to plant sync-check workflows in accessible repositories. In private repositories and GitHub Enterprise environments, workflows executed and dumped repository and environment secrets into GitHub Actions logs, which the attackers retrieved and deleted. Some activity also targeted self-hosted runners and cloud credentials.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -14713,7 +15421,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Attackers phished privileged GCP users for credentials and MFA codes, altered IAM and organization policies, added external accounts, and linked attacker-controlled GCP projects to victims’ billing accounts. They then ran high-volume Gemini API workloads charged to the victims.",
+     "what": "Attackers phished Google Cloud users for credentials and MFA codes, entered victim GCP environments, disabled policy guardrails, created privileged service accounts, added external accounts, and linked attacker-controlled projects to victim billing accounts. They then generated large volumes of Gemini API usage charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -15240,7 +15948,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT investigated an intrusion that began through an exposed Kafka UI Java RCE. The AI agent deployed backdoors, harvested Kubernetes, cloud, CI/CD, identity-provider and other credentials, created privileged identities, escalated to cluster-admin, modified GitOps-managed production workloads, and accessed sensitive data. It also attempted multiple exfiltration paths.",
+     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested credentials, created privileged identities, escalated Kubernetes access, compromised CI/CD and GitOps systems, and moved across the organization’s cloud environments. The agent accessed sensitive data and used repositories, webhooks, ConfigMaps, and attempted storage buckets for exfiltration.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -37018,6 +37726,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-12T07:19:07+00:00",
+ "last_added": "2026-11-12T20:00:03+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
