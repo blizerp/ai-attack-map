@@ -1,0 +1,23 @@
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const {JSDOM}=require('jsdom');
+test('priority pins never cluster, overlapping pins spread, filters and zoom work',async()=>{
+ const html=fs.readFileSync('index.html','utf8');
+ const dom=new JSDOM(html.replace(/<script[\s\S]*?<\/script>/g,''),{runScripts:'outside-only',url:'https://example.org/',pretendToBeVisual:true});
+ const w=dom.window;
+ Object.defineProperty(w.HTMLElement.prototype,'clientWidth',{get(){return 393}});
+ Object.defineProperty(w.HTMLElement.prototype,'clientHeight',{get(){return 851}});
+ w.fetch=()=>new Promise(()=>{});
+ w.eval(fs.readFileSync(require.resolve('leaflet/dist/leaflet-src.js'),'utf8'));
+ w.eval(fs.readFileSync(require.resolve('leaflet.markercluster/dist/leaflet.markercluster-src.js'),'utf8'));
+ w.eval(fs.readFileSync('map-trends.js','utf8'));
+ const script=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(x=>x[1]).find(x=>x.includes('const CATS'));
+ const data=['severe','critical','significant','limited'].map((level,id)=>({id,title:level,category:'major_cyber',date:new Date().toISOString().slice(0,10),severity:{level},locations:[{lat:40,lon:-75}]}));
+ w.eval(script+`\nstate.incidents=${JSON.stringify(data)};render();window.inspect=()=>({priority:priorityPins.length,cluster:cluster.getLayers().length,positions:priorityLayer.getLayers().filter(x=>x instanceof L.Marker).map(x=>x.getLatLng()),zoom:map.zoomControl,control:document.querySelector('.leaflet-top.leaflet-right .leaflet-control-zoom')!==null});window.zoomTest=()=>map.setZoom(4);window.filterTest=()=>{state.cats.clear();render()};`);
+ let result=w.inspect();assert.equal(result.priority,2);assert.equal(result.cluster,2);assert.equal(result.control,true);assert.notDeepEqual(result.positions[0],result.positions[1]);
+ w.zoomTest();result=w.inspect();assert.equal(result.priority,2);assert.notDeepEqual(result.positions[0],result.positions[1]);
+ w.filterTest();assert.equal(w.inspect().priority,0);assert.equal(w.inspect().cluster,0);
+ w.MapTrends.renderTrend(data,new Date().toISOString());assert.ok(w.document.querySelectorAll('#trend-chart rect').length>100);
+ dom.window.close();
+});

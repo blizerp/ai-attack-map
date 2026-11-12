@@ -12,7 +12,7 @@ def build(root, revision, destination):
     document = document.replace('{{ site.github.build_revision }}', revision)
     (destination / 'index.html').write_text(document)
     for name in ['attacks.json', 'feed_status.json', 'skull-marker.png',
-                 'decisions.json', 'backfill_progress.json', 'briefings.json', 'briefing.js', 'briefing.css']:
+                 'decisions.json', 'backfill_progress.json', 'briefings.json', 'briefing.js', 'briefing.css', 'map-trends.js']:
         if (root / name).exists():
             shutil.copy2(root / name, destination / name)
 

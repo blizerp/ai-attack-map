@@ -19,6 +19,6 @@ jobs:
           node-version: '22'
       - run: pip install 'feedparser==6.0.11' 'requests>=2.31,<3' 'openai>=1.40,<3' 'trafilatura>=2,<3' 'jsonschema>=4,<5'
       - run: python -m unittest test_briefing test_site test_selection test_coverage
-      - run: npm install --no-save --ignore-scripts jsdom@26.1.0
-      - run: node --test test_briefing_ui.cjs test_briefing_dom.cjs
+      - run: npm install --no-save --ignore-scripts jsdom@26.1.0 leaflet@1.9.4 leaflet.markercluster@1.5.3
+      - run: node --test test_briefing_ui.cjs test_briefing_dom.cjs test_map_trends.cjs test_map_ui.cjs
       - run: python build_site.py
