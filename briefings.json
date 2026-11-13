@@ -5688,11 +5688,332 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-13-evening",
+   "date": "2026-11-13",
+   "edition": "evening",
+   "published_at": "2026-11-13T22:41:56+00:00",
+   "generated_at": "2026-11-13T22:41:56+00:00",
+   "scheduled_for": "2026-11-13T22:00:00+00:00",
+   "window_start": "2026-11-13T16:29:47+00:00",
+   "window_end": "2026-11-13T22:41:56+00:00",
+   "sector_window_start": "2026-11-12T22:41:56+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "Fresh reporting confirms a nationwide U.S. flight disruption caused by air-traffic communications problems, a large email exposure affecting Osaka residents, and compromised cryptocurrency wallets sold through one reseller. A defense-software update server was also breached, and a U.S. university confirmed stolen personal data. No broad power, water or household internet outage is confirmed.",
+    "items": [
+     {
+      "headline": "U.S. flights halted nationwide after air-traffic communications failure",
+      "what_happened": "The Federal Aviation Administration halted departing flights at U.S. airports Friday after a communications problem affected all air-route traffic-control centers. The cause is unclear, and officials have not said it was a cyberattack. International arrivals were being handled case by case.",
+      "impact": "Travelers may face delays, cancellations and difficulty getting reliable flight updates. The disruption affects air travel, not household communications. Its duration and total number of affected flights are unclear.",
+      "what_next": "FAA technicians are investigating and are expected to provide updates. Flight operations may change as communications are restored.",
+      "change": "New report",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/faa-ground-stop-issued-due-to-extraordinary-circumstances/",
+        "published": "2026-11-13T21:33:27+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Osaka warns that more than one million city email addresses were exposed",
+      "what_happened": "Hackers accessed Arara, an email-distribution service used by contractor TKC for Osaka’s online administrative platform. Email addresses of people who received city messages between July and October 31 were exposed. The wider Arara attack affected many customers and reportedly exposed 77 million addresses.",
+      "impact": "Affected residents may receive convincing fake messages pretending to come from Osaka, banks or card companies. No loss of city services was reported, but the city says all 2.8 million residents should be cautious about suspicious messages.",
+      "what_next": "Osaka and the service providers are investigating. More affected organizations and misuse of the exposed addresses may be identified.",
+      "change": "New report",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/city-of-osaka-japan-email-data-breach",
+        "published": "2026-11-13T19:43:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Three cryptocurrency wallets sold by one reseller had hidden data-stealing parts",
+      "what_happened": "Trezor confirmed that three Safe 5 wallets sold by Southeast Asian reseller CryptoBilis contained hidden circuit boards. The parts could copy wallet recovery phrases shown on the screen and send them over mobile networks. The devices were bought between August 20 and September 23.",
+      "impact": "No owner has reported lost funds, but a stolen recovery phrase could let criminals take cryptocurrency. Trezor says the confirmed implants were limited to this reseller and model so far.",
+      "what_next": "Trezor is examining other reported devices and offering replacements to people who bought from CryptoBilis since March. Its investigation may reveal more affected wallets or any stolen funds.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "finance",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
+        "published": "2026-11-13T19:38:36+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
+        "published": "2026-11-13T13:54:20+00:00"
+       }
+      ],
+      "incident_ids": [
+       "e9ba6f2b40b4d6cf"
+      ]
+     },
+     {
+      "headline": "Drone maker’s update system was breached, disrupting German military operations",
+      "what_happened": "German defense company Quantum Systems confirmed a cyberattack in late October. Reports say attackers used a malicious update through the company’s QBase mission-planning software. German military drones were reportedly grounded as a precaution, though the number that installed the update is unclear.",
+      "impact": "Drone operations were temporarily disrupted while the company and authorities checked the software. The reporting does not confirm that attackers controlled deployed drones or caused physical harm.",
+      "what_next": "German authorities and the company are investigating the update server and its customers. They may clarify how many systems received the update and when operations fully resume.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
+        "published": "2026-11-13T17:31:56+00:00"
+       }
+      ],
+      "incident_ids": [
+       "bcfb3c38e8a21867"
+      ]
+     },
+     {
+      "headline": "Texas university confirms hackers stole personal information",
+      "what_happened": "The University of Texas at Arlington said hackers breached its systems last month and stole personal information. The university has not yet said what data was taken or how many people were affected. An online form service used for registrations, requests and surveys remains offline.",
+      "impact": "Students and employees may face delays using that service. The university serves more than 41,000 students, but it has not confirmed how many people are in the stolen data or reported disruption to classes or core services.",
+      "what_next": "The university is identifying affected people and reviewing the impact on other systems. It says it will contact people directly when the review is complete.",
+      "change": "Newly confirmed",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/university-of-texas-arlington-warns-data-breach",
+        "published": "2026-11-13T17:26:00+00:00"
+       }
+      ],
+      "incident_ids": [
+       "6a649ecc738f3069"
+      ]
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "A confirmed supply-chain incident affects a limited group of cryptocurrency-wallet buyers. No ordinary banking or card-payment disruption was reported.",
+     "items": [
+      {
+       "headline": "Hidden parts found in three cryptocurrency wallets from one reseller",
+       "what_happened": "Trezor confirmed that three Safe 5 wallets sold by CryptoBilis contained implants able to copy recovery phrases from the screen. All three owners bought the devices between August 20 and September 23.",
+       "impact": "No stolen funds have been reported, but captured recovery phrases could allow cryptocurrency theft. Trezor says no other reseller or model has been confirmed affected.",
+       "what_next": "Trezor is examining more devices and offering replacements to eligible CryptoBilis buyers. The investigation may establish whether more wallets or funds were affected.",
+       "change": "Newly confirmed",
+       "sectors": [
+        "finance",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
+         "published": "2026-11-13T19:38:36+00:00"
+        },
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
+         "published": "2026-11-13T13:54:20+00:00"
+        }
+       ],
+       "incident_ids": [
+        "e9ba6f2b40b4d6cf"
+       ]
+      }
+     ]
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "A major air-travel communications failure and a large city email exposure were newly reported. Neither report confirms a broad household internet outage.",
+     "items": [
+      {
+       "headline": "FAA communications failure stopped departing U.S. flights",
+       "what_happened": "The FAA issued a nationwide ground stop Friday after communications problems affected all air-route traffic-control centers. Officials have not identified the cause or linked it to a cyberattack.",
+       "impact": "Travelers may experience widespread delays or cancellations. International arrivals were handled individually, and the restoration time was unclear.",
+       "what_next": "FAA technicians are investigating and will provide updates as flight operations change.",
+       "change": "New report",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "SecurityWeek",
+         "url": "https://www.securityweek.com/faa-ground-stop-issued-due-to-extraordinary-circumstances/",
+         "published": "2026-11-13T21:33:27+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Osaka email exposure could bring fake city messages",
+       "what_happened": "Hackers accessed Arara, a third-party email service used for Osaka’s administrative messages. More than one million addresses tied to people who received city emails were exposed.",
+       "impact": "Residents could receive targeted scam emails using the city’s name. No interruption to Osaka’s administrative services was reported.",
+       "what_next": "The city and its providers are investigating the wider breach and may identify more affected customers or misuse of the addresses.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/city-of-osaka-japan-email-data-breach",
+         "published": "2026-11-13T19:43:00+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "Two trusted-provider incidents were newly confirmed: a compromised drone-software update system and hidden hardware implants in wallets sold through one reseller.",
+     "items": [
+      {
+       "headline": "Compromised drone update server led to precautionary grounding",
+       "what_happened": "Quantum Systems confirmed an attack involving its QBase mission-planning software. Reports say an unauthorized update was delivered through the company’s update server, prompting checks and precautionary grounding of some German military drones.",
+       "impact": "Drone operations were disrupted temporarily. It is unclear how many customers installed the update, and no physical damage or attacker control of drones was confirmed.",
+       "what_next": "The company and German authorities are investigating the update distribution system and customer exposure.",
+       "change": "Newly confirmed",
+       "sectors": [
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
+         "published": "2026-11-13T17:31:56+00:00"
+        }
+       ],
+       "incident_ids": [
+        "bcfb3c38e8a21867"
+       ]
+      },
+      {
+       "headline": "Hidden implants found in wallets sold by CryptoBilis",
+       "what_happened": "Trezor found hidden circuit boards in three Safe 5 wallets sold by CryptoBilis. The implants could capture recovery phrases displayed during wallet setup or restoration and transmit them over mobile networks.",
+       "impact": "No funds have been reported stolen. People who bought through that reseller may face cryptocurrency theft if a recovery phrase was captured.",
+       "what_next": "Trezor is testing more devices, offering replacements to eligible buyers and investigating how the implants entered the reseller supply chain.",
+       "change": "Newly confirmed",
+       "sectors": [
+        "finance",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
+         "published": "2026-11-13T19:38:36+00:00"
+        },
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
+         "published": "2026-11-13T13:54:20+00:00"
+        }
+       ],
+       "incident_ids": [
+        "e9ba6f2b40b4d6cf"
+       ]
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "2 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 722
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 33,
+   "usage": {
+    "completion_tokens": 1929,
+    "prompt_tokens": 37458,
+    "total_tokens": 39387,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 145,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 37455,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-13T16:29:47+00:00"
+  "checked_at": "2026-11-13T22:41:56+00:00"
  },
  "automatic_attempts": {
   "2026-11-10-morning": {
@@ -5722,6 +6043,10 @@
   "2026-11-13-morning": {
    "count": 1,
    "checked_at": "2026-11-13T16:29:47+00:00"
+  },
+  "2026-11-13-evening": {
+   "count": 1,
+   "checked_at": "2026-11-13T22:41:56+00:00"
   }
  }
 }
