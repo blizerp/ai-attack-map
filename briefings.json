@@ -5011,13 +5011,224 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-12-morning",
+   "date": "2026-11-12",
+   "edition": "morning",
+   "published_at": "2026-11-13T01:09:17+00:00",
+   "generated_at": "2026-11-13T01:09:17+00:00",
+   "scheduled_for": "2026-11-12T13:00:00+00:00",
+   "window_start": "2026-11-11T22:00:49+00:00",
+   "window_end": "2026-11-13T01:09:17+00:00",
+   "sector_window_start": "2026-11-12T01:09:17+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting confirms a large Microsoft 365 outage, expands the known impact of attacks using ScreenConnect remote-support systems, and documents a major GitHub credential-theft campaign. U.S. authorities also seized part of the cryptocurrency stolen from Binance. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Microsoft 365 outage disrupts email and workplace services worldwide",
+      "what_happened": "Microsoft reported a widespread service failure beginning Thursday, November 12. Outlook, Exchange Online, Teams, SharePoint, Copilot and other services were affected after servers unexpectedly became unavailable. Microsoft says it has found no evidence of a cyberattack.",
+      "impact": "People and businesses may be unable to read or send email, join Teams conversations, access files or use some workplace tools. Microsoft reported limited recovery, but has not given a full restoration time.",
+      "what_next": "Microsoft is returning servers to service and shifting traffic to other systems. Service availability may improve gradually while the company investigates the cause.",
+      "change": "New report",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/microsoft-365-outage-disrupts-outlook-exchange-online-and-teams/",
+        "published": "2026-11-12T20:55:30+00:00"
+       },
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/microsoft/massive-microsoft-365-outage-disrupts-outlook-teams-copilot-worldwide/",
+        "published": "2026-11-12T20:15:16+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "ScreenConnect attacks reached 288 devices across 48 organizations",
+      "what_happened": "Investigators found that attackers used compromised ScreenConnect management panels to install unauthorized remote-access software on customer devices. The malware also tried to spread through support sessions to technicians’ computers and other customer networks.",
+      "impact": "At least 288 devices in 48 organizations were affected, including systems managed by service providers. The campaign could give attackers continuing access to business computers and networks. The exact number of wider victims is still unclear.",
+      "what_next": "ConnectWise is investigating how the attackers first entered and has disabled related third-party extensions in about 400 partner environments. Investigators may identify more affected organizations and confirm how far the malware spread.",
+      "change": "Impact increased",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+        "published": "2026-11-12T22:53:10+00:00"
+       },
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/connectwise-screenconnect-breaches-third-party-tool",
+        "published": "2026-11-12T16:16:00+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html",
+        "published": "2026-11-12T13:08:28+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/hackers-deploy-malware-in-fresh-screenconnect-campaign/",
+        "published": "2026-11-12T10:39:34+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html",
+        "published": "2026-11-12T04:39:48+00:00"
+       }
+      ],
+      "incident_ids": [
+       "cf4df74da740c268"
+      ]
+     },
+     {
+      "headline": "Attackers stole cloud credentials through thousands of GitHub projects",
+      "what_happened": "Attackers used stolen access to 4,837 GitHub accounts to test more than 61,000 repositories. In at least 1,806 repositories, they inserted code into automated build jobs that collected cloud, developer and artificial-intelligence service credentials.",
+      "impact": "Organizations whose automated jobs ran the code may have lost access keys and private project information. Some affected accounts belonged to major companies and public institutions. The campaign also caused malicious changes to be published in some software packages.",
+      "what_next": "Researchers are still determining the full reach of the campaign. Further notices may identify additional affected repositories, software releases and organizations whose credentials were taken.",
+      "change": "New report",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+        "published": "2026-11-12T22:25:30+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/attacker-targets-60000-github-repositories-in-credential-theft-campaign/",
+        "published": "2026-11-12T13:39:03+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
+        "published": "2026-11-12T06:42:47+00:00"
+       }
+      ],
+      "incident_ids": [
+       "29dfac32567e48b8",
+       "cd74de3eb679d9de"
+      ]
+     },
+     {
+      "headline": "U.S. authorities seize $1.2 billion linked to Binance cryptocurrency theft",
+      "what_happened": "The U.S. Justice Department obtained court approval to seize or restrain more than $1.2 billion in cryptocurrency stolen from Binance last month. Several cryptocurrency platforms have frozen about $2.7 billion in total.",
+      "impact": "The action may prevent a substantial part of the stolen funds from being laundered or moved. It does not restore all losses, and the theft itself remains under investigation. Binance customers’ normal service impact was not reported.",
+      "what_next": "Authorities and cryptocurrency companies are continuing to trace, freeze and seize the remaining funds. The investigation may clarify how much money can ultimately be recovered.",
+      "change": "Recovery update",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/stolen-binance-crypto-recovered-doj-facestealer-disrupted",
+        "published": "2026-11-12T21:42:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Attackers are probing N-able servers after new flaws were disclosed",
+      "what_happened": "Researchers observed attempts to exploit newly disclosed flaws in N-able’s N-central remote-management software, including systems that had received the previous emergency update. The reported activity involved probing and attempted attacks; confirmed compromise of customer systems remains unclear.",
+      "impact": "Organizations using exposed N-central servers could lose control of systems used to manage customer devices. N-able’s hosted environments had already been taken offline earlier in the week, so some service providers may still have reduced remote-management capability.",
+      "what_next": "N-able is adding protective restrictions and investigating the reports. Further updates may confirm whether the observed attacks succeeded and when normal service can safely return.",
+      "change": "Impact increased",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+        "published": "2026-11-12T19:51:16+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html",
+        "published": "2026-11-12T11:51:43+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/hackers-target-n-central-zero-days-as-n-able-rushes-patches/",
+        "published": "2026-11-12T09:39:55+00:00"
+       }
+      ],
+      "incident_ids": [
+       "ba511006af09c577"
+      ]
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "5 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 721
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 46,
+   "usage": {
+    "completion_tokens": 1128,
+    "prompt_tokens": 45218,
+    "total_tokens": 46346,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 61,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 45215,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
-  "status": "failed",
-  "edition_id": "2026-11-12-morning",
-  "checked_at": "2026-11-12T20:03:59+00:00",
-  "error": "ValueError"
+  "status": "ok",
+  "checked_at": "2026-11-13T01:09:17+00:00"
  },
  "automatic_attempts": {
   "2026-11-09-morning": {
@@ -5045,8 +5256,8 @@
    "checked_at": "2026-11-11T22:00:49+00:00"
   },
   "2026-11-12-morning": {
-   "count": 1,
-   "checked_at": "2026-11-12T20:03:59+00:00"
+   "count": 2,
+   "checked_at": "2026-11-13T01:09:17+00:00"
   }
  }
 }
