@@ -5502,21 +5502,199 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-13-morning",
+   "date": "2026-11-13",
+   "edition": "morning",
+   "published_at": "2026-11-13T16:29:47+00:00",
+   "generated_at": "2026-11-13T16:29:47+00:00",
+   "scheduled_for": "2026-11-13T13:00:00+00:00",
+   "window_start": "2026-11-13T02:29:05+00:00",
+   "window_end": "2026-11-13T16:29:47+00:00",
+   "sector_window_start": "2026-11-12T16:29:47+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting confirms a ransomware outage at a Belarusian cloud provider, destructive attacks on Check Point gateways, and an international takedown of major criminal malware networks. Newly reported healthcare and customer-data breaches also affect specific groups. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Belarusian cloud attack disrupted business websites and email for days",
+      "what_happened": "ActiveCloud said ransomware encrypted parts of its infrastructure earlier this week. The attack disrupted cloud hosting, virtual servers, corporate email and customer support for businesses in Belarus. The company says its main services were restored Friday, but some customers are still recovering their systems.",
+      "impact": "Businesses using ActiveCloud may still have trouble reaching websites, email or virtual machines. A news site and the Belarusian Domino’s website were among services reported as affected. ActiveCloud says it has found no evidence that customer data was stolen.",
+      "what_next": "ActiveCloud is continuing recovery for individual customers and investigating how the attackers entered. Service availability may improve, but some virtual servers may take longer to restore.",
+      "change": "New report",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/belarus-cloud-provider-activecloud-ransomware-attack",
+        "published": "2026-11-13T14:28:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Destructive attacks wiped data after Check Point gateways were breached",
+      "what_happened": "Attacks began October 30 against Israeli organizations and expanded internationally on November 2. Attackers entered some Check Point gateways through flaws in widely used website software, gained deeper control, and in some cases moved to VMware servers to delete data. The second wave was not reported to include wiping.",
+      "impact": "Organizations hit in the destructive wave could lose files and disrupt services running on affected servers. Check Point said the attacks reached a couple dozen customers, but the number with deleted data is unclear. No specific public-service outage is confirmed.",
+      "what_next": "Investigators are assessing the victims and the attackers’ broader actions. Attribution remains uncertain, and later findings may clarify whether the destructive activity was the main goal or a diversion.",
+      "change": "Newly confirmed",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/",
+        "published": "2026-11-13T16:21:43+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
+        "published": "2026-11-13T08:05:49+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/php2shell-exploited-in-destructive-check-point-gateway-attacks/",
+        "published": "2026-11-13T07:39:04+00:00"
+       },
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
+        "published": "2026-11-13T10:44:22+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Police seize criminal servers and millions of stolen logins",
+      "what_happened": "An international operation seized 235 servers and 257 domains linked to Gootloader, CastleRAT and StealC. These criminal tools infected computers, stole passwords and helped ransomware gangs reach victims. Authorities identified about 6.4 million stolen login details linked to more than 40,000 victims.",
+      "impact": "The takedown disrupts services used to infect computers and sell stolen access. It does not guarantee that criminals no longer possess the stolen logins or that infected devices are clean. Gootloader was linked to at least 44 U.S. ransomware victims and about $28.8 million in losses.",
+      "what_next": "Authorities and internet providers are notifying possible victims and sharing stolen-login data with checking services. Further notifications and investigations may identify additional infected computers or misuse of the stolen credentials.",
+      "change": "Recovery update",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/gootloader-ransomware-doj-details",
+        "published": "2026-11-13T15:59:00+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
+        "published": "2026-11-13T10:55:03+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/law-enforcement-disrupts-gootloader-castlerat-and-stealc-infrastructure/",
+        "published": "2026-11-13T10:48:40+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Healthcare software breach exposed records for 58,000 patients",
+      "what_happened": "Dorsata, a healthcare technology company, newly reported that attackers exploited a previously unknown flaw in its Metabase reporting software between August 10 and 12. The attackers reached a database containing patient information belonging to healthcare-provider customers.",
+      "impact": "About 58,249 people are affected. Exposed records may include names, addresses, birth dates, medical histories, treatment details, medicines, vaccinations and insurance information. No misuse of the information has been found, and the incident date is earlier than this report.",
+      "what_next": "Dorsata and its partners are notifying affected people and continuing the investigation. Further notices may clarify which patients and healthcare providers were involved.",
+      "change": "Newly confirmed",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "HIPAA Journal",
+        "url": "https://www.hipaajournal.com/data-breaches-dorsata-bay-area-psychological-consultants-lansing-urgent-care/",
+        "published": "2026-11-13T12:23:46+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Apify says attackers accessed some customer accounts and stored data",
+      "what_happened": "Apify, a web-automation company, said attackers entered its internal systems on November 9 and 10 using a compromised credential. The company confirmed that some customer personal information or stored data was accessed, though it has not given a victim count.",
+      "impact": "Affected customers may have had names, email addresses, billing details, account activity, phone numbers, password hashes, extra-login recovery codes and sign-in tokens exposed. Full payment-card numbers and security codes were not exposed, according to the reported notification. Service disruption was not reported.",
+      "what_next": "Apify is contacting affected customers and continuing its investigation. The scope may grow as the company identifies which accounts and stored data were reached.",
+      "change": "New report",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/",
+        "published": "2026-11-13T12:41:01+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "1 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 721
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 30,
+   "usage": {
+    "completion_tokens": 1197,
+    "prompt_tokens": 35406,
+    "total_tokens": 36603,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 86,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 35403,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-13T02:29:05+00:00"
+  "checked_at": "2026-11-13T16:29:47+00:00"
  },
  "automatic_attempts": {
-  "2026-11-09-morning": {
-   "count": 1,
-   "checked_at": "2026-11-09T18:52:23+00:00"
-  },
-  "2026-11-09-evening": {
-   "count": 1,
-   "checked_at": "2026-11-09T22:36:22+00:00"
-  },
   "2026-11-10-morning": {
    "count": 1,
    "checked_at": "2026-11-10T17:54:53+00:00"
@@ -5540,6 +5718,10 @@
   "2026-11-12-evening": {
    "count": 1,
    "checked_at": "2026-11-13T02:29:05+00:00"
+  },
+  "2026-11-13-morning": {
+   "count": 1,
+   "checked_at": "2026-11-13T16:29:47+00:00"
   }
  }
 }
