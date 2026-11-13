@@ -1,6 +1,116 @@
 {
- "updated": "2026-11-12T20:00:03+00:00",
+ "updated": "2026-11-13T06:52:14+00:00",
  "incidents": [
+  {
+   "title": "4EverAble2Shell exploited to compromise 21 N-central servers",
+   "date": "2026-11-12",
+   "category": "major_cyber",
+   "victim": "At least 21 organizations operating production N-able N-central servers; specific organizations were not reported",
+   "attacker": "Unknown attackers; attribution not reported. Previdian and Huntback observed and confirmed exploitation.",
+   "what": "Attackers exploited the 4EverAble2Shell chain, combining Apache Axis CVE-2026-90436 with an N-central privilege-escalation weakness, to obtain root access on N-central servers. Huntback confirmed at least 21 compromised production servers, including 19 running N-able's latest Hotfix 2, and observed XMRig miners installed through the chain.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "N-central is an RMM platform used by MSPs and IT teams to manage customer devices and networks. Root compromise of these servers could provide a path to downstream managed environments, although downstream compromise was not reported.",
+   "where": "Multiple countries, including the United States, Canada, South Africa, the United Kingdom, Germany, France, and Sweden",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Independent researchers observed complete exploit-chain execution and confirmed 21 production N-central servers actively mining cryptocurrency. The access granted full root control of affected RMM infrastructure, creating consequential risk to connected customer environments.",
+   "id": "ba511006af09c577",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+   "added": "2026-11-12T20:00:03+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-13",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Researchers confirmed unauthorized root-level access and cryptominer deployment on at least 21 production N-central servers across seven reported countries. No service outage, downstream customer compromise, or realized financial loss was established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+    "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": 61.0666922,
+     "lon": -107.991707,
+     "label": "Canada",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": -28.8166236,
+     "lon": 24.991639,
+     "label": "South Africa",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": 54.7023545,
+     "lon": -3.2765753,
+     "label": "United Kingdom",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": 51.1638175,
+     "lon": 10.4478313,
+     "label": "Germany",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": 46.603354,
+     "lon": 1.8883335,
+     "label": "France",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    },
+    {
+     "lat": 59.6749712,
+     "lon": 14.5208584,
+     "label": "Sweden",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-13",
+     "what": "Attackers chained the 4EverAble2Shell exploit with an N-central privilege-escalation weakness to execute commands with root privileges. Huntback observed deployment of an XMRig Monero miner on 21 N-central servers, including 19 that were already running Hotfix 2.",
+     "url": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html",
+     "source": "The Hacker News"
+    }
+   ]
+  },
   {
    "title": "ScreenConnect campaign compromised 288 endpoints across 48 organizations",
    "date": "2026-11-11",
@@ -58,6 +168,10 @@
     {
      "name": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/"
     }
    ],
    "updates": [
@@ -90,6 +204,12 @@
      "what": "Blackpoint Cyber analyzed the SCKit toolkit used in malicious ScreenConnect activity. The toolkit can install unauthorized ScreenConnect Access clients, execute commands through existing agents, hijack authenticated technician sessions, and use RelayTrap to propagate through support infrastructure. Huntress also reported that vulnerable RMM+ extensions accepted blank access keys and could execute commands without normal ScreenConnect authentication.",
      "url": "https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html",
      "source": "The Hacker News"
+    },
+    {
+     "date": "2026-11-12",
+     "what": "Attackers abused a vulnerable RMM+ ScreenConnect extension to execute commands without normal authentication or MFA, install rogue ScreenConnect clients, and compromise at least 288 endpoints across 48 organizations. The SCKit toolkit attempted to spread from customer endpoints to MSP technicians, but researchers found no evidence that its client-side exploit succeeded.",
+     "url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+     "source": "BleepingComputer"
     }
    ],
    "locations": [
@@ -184,8 +304,8 @@
    "reported_date": "2026-11-12",
    "last_reported": "2026-11-12",
    "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
+   "lat": 39.7837304,
+   "lon": -100.445882,
    "severity": {
     "level": "severe",
     "status": "preliminary",
@@ -201,7 +321,39 @@
     "source_url": "https://www.securityweek.com/attacker-targets-60000-github-repositories-in-credential-theft-campaign/",
     "assessed_at": "2026-11-12T20:00:03+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-12",
+     "what": "Using credentials from 4,837 compromised GitHub accounts, the attackers probed 61,764 repositories and opened deceptive pull requests. Where they had write access, malicious workflows or package hooks stole GitHub Actions tokens, cloud credentials, developer secrets, and other credentials; researchers confirmed secret theft from at least 1,835 targets.",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+     "source": "BleepingComputer"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/attacker-targets-60000-github-repositories-in-credential-theft-campaign/"
+    },
+    {
+     "lat": 46.603354,
+     "lon": 1.8883335,
+     "label": "France",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/attacker-targets-60000-github-repositories-in-credential-theft-campaign/"
+    }
+   ]
   },
   {
    "title": "Minnesota Epilepsy Group suffers second 2026 network breach",
@@ -296,102 +448,6 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.hipaajournal.com/minnesota-epilepsy-group-data-breach/"
-    }
-   ]
-  },
-  {
-   "title": "4EverAble2Shell exploited to compromise 21 N-central servers",
-   "date": "2026-11-12",
-   "category": "major_cyber",
-   "victim": "At least 21 organizations operating production N-able N-central servers; specific organizations were not reported",
-   "attacker": "Unknown attackers; attribution not reported. Previdian and Huntback observed and confirmed exploitation.",
-   "what": "Attackers exploited the 4EverAble2Shell chain, combining Apache Axis CVE-2026-90436 with an N-central privilege-escalation weakness, to obtain root access on N-central servers. Huntback confirmed at least 21 compromised production servers, including 19 running N-able's latest Hotfix 2, and observed XMRig miners installed through the chain.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "N-central is an RMM platform used by MSPs and IT teams to manage customer devices and networks. Root compromise of these servers could provide a path to downstream managed environments, although downstream compromise was not reported.",
-   "where": "Multiple countries, including the United States, Canada, South Africa, the United Kingdom, Germany, France, and Sweden",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Independent researchers observed complete exploit-chain execution and confirmed 21 production N-central servers actively mining cryptocurrency. The access granted full root control of affected RMM infrastructure, creating consequential risk to connected customer environments.",
-   "id": "ba511006af09c577",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
-   "added": "2026-11-12T20:00:03+00:00",
-   "reported_date": "2026-11-12",
-   "last_reported": "2026-11-12",
-   "evidence_status": "confirmed",
-   "lat": 39.7837304,
-   "lon": -100.445882,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "Researchers confirmed unauthorized root-level access and cryptominer deployment on at least 21 production N-central servers across seven reported countries. No service outage, downstream customer compromise, or realized financial loss was established.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "privileged_access",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
-    "assessed_at": "2026-11-12T20:00:03+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 39.7837304,
-     "lon": -100.445882,
-     "label": "United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
-    },
-    {
-     "lat": 61.0666922,
-     "lon": -107.991707,
-     "label": "Canada",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
-    },
-    {
-     "lat": -28.8166236,
-     "lon": 24.991639,
-     "label": "South Africa",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
-    },
-    {
-     "lat": 54.7023545,
-     "lon": -3.2765753,
-     "label": "United Kingdom",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
-    },
-    {
-     "lat": 51.1638175,
-     "lon": 10.4478313,
-     "label": "Germany",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
-    },
-    {
-     "lat": 46.603354,
-     "lon": 1.8883335,
-     "label": "France",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
-    },
-    {
-     "lat": 59.6749712,
-     "lon": 14.5208584,
-     "label": "Sweden",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/"
     }
    ]
   },
@@ -806,6 +862,44 @@
     },
     "source_url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
     "assessed_at": "2026-11-12T20:00:03+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "FaceStealer campaign stole crypto and webcam videos from victims",
+   "date": "2026-11-12",
+   "category": "using_ai",
+   "victim": "Cryptocurrency-industry targets, open-source software developers, and their contacts; specific victims were not identified",
+   "attacker": "U.S. FBI and DOJ attribute the campaign to North Korean hackers, including APT38; attribution is government-reported",
+   "what": "The FaceStealer campaign used stolen accounts, Calendly invitations, fake Zoom or Teams meeting domains, malware disguised as a meeting fix, and in some cases AI-generated deepfake videos. The malware harvested browser cookies, keystrokes, screens, webcam footage, and cryptocurrency, while compromised accounts were used to target additional contacts. U.S. authorities said the campaign stole more than $400 million in cryptocurrency over 18 months and seized more than 900 victim webcam videos.",
+   "ai_role": "Attackers used AI to create deepfake videos of prominent cryptocurrency figures during social-engineering attacks.",
+   "why": "The campaign caused substantial cryptocurrency theft, compromised victim devices and accounts, and expanded through victims’ trusted contacts. The FBI said the scheme also targeted software developers and maintainers, creating potential downstream risk to widely used software ecosystems.",
+   "where": "No fixed location",
+   "major_impact": "major_financial_loss",
+   "significance": "The FBI and DOJ reported more than $400 million in cryptocurrency stolen, seizure of over 900 victim webcam videos, and account hijacking across platforms including Telegram, LinkedIn, Slack, and Discord. The exact victim count and individual losses were not reported.",
+   "id": "57d71ea154a28bdc",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/stolen-binance-crypto-recovered-doj-facestealer-disrupted",
+   "added": "2026-11-13T06:52:14+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "U.S. authorities reported real victims, cryptocurrency theft exceeding $400 million, stolen webcam videos, malware infections, and hijacked accounts. The number of affected organizations and individuals was not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "major"
+    },
+    "source_url": "https://therecord.media/stolen-binance-crypto-recovered-doj-facestealer-disrupted",
+    "assessed_at": "2026-11-13T06:52:14+00:00",
     "method": "reported-impact-v1"
    }
   },
@@ -11195,13 +11289,13 @@
    "updates": [
     {
      "date": "2026-10-21",
-     "what": "A malicious LiteLLM version, 1.107.0, was uploaded to PyPI and Docker. It contained a credential stealer targeting browser, cloud, and AI secrets, plus dormant command-and-control capability.",
+     "what": "A malicious LiteLLM version, 1.107.0, was uploaded to PyPI and Docker. It contained a credential stealer targeting browser, cloud, and AI secrets, plus a dormant command-and-control capability.",
      "url": "https://www.wiz.io/blog/php2shell-php-rce",
      "source": "Wiz Research"
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker published malicious LiteLLM 1.107.0 PyPI wheels and corresponding GHCR/Docker Hub images. The packages installed persistent Python startup files that harvested cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, shell-history, and stored LiteLLM provider credentials, then encrypted and transmitted them to an attacker-controlled lookalike domain.",
+     "what": "The attacker used compromised release infrastructure to publish LiteLLM 1.107.0 wheels and corresponding GHCR/Docker Hub images. The packages installed persistence that executed at Python interpreter startup and attempted to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, plus credentials stored in configured LiteLLM proxy databases.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -12351,7 +12445,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used compromised GitHub tokens to plant sync-check workflows in accessible repositories. In private repositories and GitHub Enterprise environments, workflows executed and dumped repository and environment secrets into GitHub Actions logs, which the attackers retrieved and deleted. Some activity also targeted self-hosted runners and cloud credentials.",
+     "what": "Since September 15, attackers used stolen GitHub tokens to plant sync-check workflows in repositories accessible to each token. In private repositories and GitHub Enterprise environments, workflows executed, printed repository and environment secrets into logs, and the logs were retrieved and deleted. Some enterprise activity was followed by AWS role enumeration; self-hosted runners were targeted for credential and host-data collection.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -15421,7 +15515,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Attackers phished Google Cloud users for credentials and MFA codes, entered victim GCP environments, disabled policy guardrails, created privileged service accounts, added external accounts, and linked attacker-controlled projects to victim billing accounts. They then generated large volumes of Gemini API usage charged to the victims.",
+     "what": "Threat actors phished GCP users for credentials and MFA codes, then accessed victim environments, weakened IAM safeguards, added external accounts, linked attacker-controlled projects to victim billing accounts, and generated Gemini API keys and service accounts.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -16501,7 +16595,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and persistence, harvested Kubernetes, cloud, CI/CD, and identity-provider credentials, created privileged identities, escalated to cluster administrator, modified GitOps workloads, and accessed and exfiltrated sensitive data. Wiz also observed the same source IP scanning more than 600 other customer environments, but did not establish compromise of those environments.",
+     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, moved across AWS and GCP, accessed CI/CD and GitOps systems, escalated to Kubernetes cluster-admin, and accessed sensitive data. The agent attempted multiple exfiltration routes, including webhooks, source control, Kubernetes ConfigMaps, and cloud storage.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -37726,6 +37820,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-12T20:00:03+00:00",
+ "last_added": "2026-11-13T06:52:14+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }

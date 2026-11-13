@@ -132,14 +132,14 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-11-12T20:00:03+00:00",
+  "checked": "2026-11-13T06:52:14+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz substantiates a distinct scaled campaign compromising GitHub accounts and executing secret-dumping workflows in private and enterprise repositories; it duplicates the already tracked Gheist incident.",
+  "reason": "This is a substantiated, multi-organization campaign involving unauthorized GitHub access, execution of malicious workflows, and theft of sensitive organizational credentials. It matches the already-tracked Gheist campaign record.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz substantiates a distinct scaled campaign compromising GitHub accounts and executing secret-dumping workflows in private and enterprise repositories; it duplicates the already tracked Gheist incident.",
+    "reason": "This is a substantiated, multi-organization campaign involving unauthorized GitHub access, execution of malicious workflows, and theft of sensitive organizational credentials. It matches the already-tracked Gheist campaign record.",
     "title": "Gheist campaign exfiltrated secrets from private GitHub repositories",
     "incident_id": "fdf212b3998ab3a2"
    }
@@ -18758,16 +18758,16 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-11-12T20:00:03+00:00",
+  "checked": "2026-11-13T06:52:14+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz’s incident-response investigation substantiates an unauthorized compromise of a real organization, including AI-agent execution, privileged access, production-system compromise, and sensitive-data access; it is a duplicate of the already tracked incident.",
+  "reason": "Wiz CIRT provides researcher evidence of a real unauthorized intrusion with AI agents carrying out compromise, privilege escalation, sensitive-data access, and exfiltration activity. This is the same incident already tracked as ae8f3c2f8a5f5092.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz’s incident-response investigation substantiates an unauthorized compromise of a real organization, including AI-agent execution, privileged access, production-system compromise, and sensitive-data access; it is a duplicate of the already tracked incident.",
-    "title": "AI agent breached unnamed organization’s multi-cloud environment",
-    "incident_id": "896e03eaa7904596"
+    "reason": "Wiz CIRT provides researcher evidence of a real unauthorized intrusion with AI agents carrying out compromise, privilege escalation, sensitive-data access, and exfiltration activity. This is the same incident already tracked as ae8f3c2f8a5f5092.",
+    "title": "Wiz observes autonomous multi-cloud intrusion into one organization",
+    "incident_id": "ae8f3c2f8a5f5092"
    }
   ],
   "evidence": "article",
@@ -19250,15 +19250,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-11-12T20:00:03+00:00",
+  "checked": "2026-11-13T06:52:14+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz substantiated multiple real GCP compromises with privileged access and material unauthorized AI-service charges; this is the same incident already tracked under f58ed76ff84133f9.",
+  "reason": "This is a substantiated multi-organization cloud-account compromise with demonstrated privileged access and substantial unauthorized charges for AI usage; it is a duplicate of an already tracked incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz substantiated multiple real GCP compromises with privileged access and material unauthorized AI-service charges; this is the same incident already tracked under f58ed76ff84133f9.",
-    "title": "Phishing campaign hijacked GCP billing for Gemini LLMjacking",
+    "reason": "This is a substantiated multi-organization cloud-account compromise with demonstrated privileged access and substantial unauthorized charges for AI usage; it is a duplicate of an already tracked incident.",
+    "title": "Phishing campaign hijacked GCP billing for Gemini LLM usage",
     "incident_id": "f58ed76ff84133f9"
    }
   ],
@@ -20060,15 +20060,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-11-12T20:00:03+00:00",
+  "checked": "2026-11-13T06:52:14+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed production release and package-registry compromise with downstream credential-stealing impact; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
+  "reason": "Confirmed compromise of LiteLLM's production package and container release infrastructure with downstream credential-stealing payloads; this is the same incident as the already-tracked LiteLLM supply-chain compromise.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed production release and package-registry compromise with downstream credential-stealing impact; this is the same LiteLLM supply-chain incident already tracked under e2e13fe6f7503c25.",
-    "title": "LiteLLM 1.107.0 release compromised to steal credentials",
+    "reason": "Confirmed compromise of LiteLLM's production package and container release infrastructure with downstream credential-stealing payloads; this is the same incident as the already-tracked LiteLLM supply-chain compromise.",
+    "title": "LiteLLM release and container images compromised with credential stealer",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -20086,14 +20086,19 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-11-12T20:00:03+00:00",
+  "checked": "2026-11-13T06:52:14+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The source reports an actual malicious LiteLLM package release through PyPI and Docker, constituting a software supply-chain compromise; it appears to be the same LiteLLM incident already tracked under e2e13fe6f7503c25.",
+  "reason": "This is vulnerability research and controlled exploitation, not a substantiated real-world cyber incident.; This is a confirmed production-package supply-chain compromise and matches the already-tracked LiteLLM incident.",
   "decisions": [
    {
+    "status": "exclude",
+    "reason": "This is vulnerability research and controlled exploitation, not a substantiated real-world cyber incident.",
+    "title": "PHP2Shell vulnerabilities disclosed after AI-assisted research"
+   },
+   {
     "status": "include",
-    "reason": "The source reports an actual malicious LiteLLM package release through PyPI and Docker, constituting a software supply-chain compromise; it appears to be the same LiteLLM incident already tracked under e2e13fe6f7503c25.",
+    "reason": "This is a confirmed production-package supply-chain compromise and matches the already-tracked LiteLLM incident.",
     "title": "Malicious LiteLLM 1.107.0 package uploaded to PyPI and Docker",
     "incident_id": "e2e13fe6f7503c25"
    }
@@ -32679,15 +32684,15 @@
  "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html": {
   "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
   "source": "The Hacker News",
-  "checked": "2026-11-11T06:35:22+00:00",
+  "checked": "2026-11-13T06:52:14+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Potentially meaningful active exploitation is reported, but the source does not substantiate an actual victim compromise or consequences; defer pending incident evidence.",
+  "status": "exclude",
+  "reason": "Exploitation capability and active exploitation alone do not establish a qualifying compromise or meaningful consequence to an actual victim.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potentially meaningful active exploitation is reported, but the source does not substantiate an actual victim compromise or consequences; defer pending incident evidence.",
-    "title": "Chrome CVE-2026-125350 exploited in the wild"
+    "status": "exclude",
+    "reason": "Exploitation capability and active exploitation alone do not establish a qualifying compromise or meaningful consequence to an actual victim.",
+    "title": "Chrome zero-day actively exploited, with no confirmed victim compromise"
    }
   ],
   "evidence": "article",
@@ -36253,6 +36258,237 @@
    "date": "2026-11-12",
    "source": "The Hacker News",
    "published_at": "2026-11-12T15:15:40+00:00"
+  }
+ },
+ "https://www.securityweek.com/fbi-says-us-seized-1-2-billion-worth-of-cryptocurrency-stolen-from-binance/": {
+  "title": "FBI Says US Seized $1.2 Billion Worth of Cryptocurrency Stolen From Binance",
+  "source": "SecurityWeek",
+  "checked": "2026-11-13T06:52:14+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Court-authorized seizure and forfeiture reporting is a follow-up to the already-tracked Binance theft, while the separate FaceStealer item is only an aggregate campaign statistic.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Court-authorized seizure and forfeiture reporting is a follow-up to the already-tracked Binance theft, while the separate FaceStealer item is only an aggregate campaign statistic.",
+    "title": "FBI cryptocurrency seizure tied to previously reported Binance theft"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "30ae544c23d3d4e0b5d0fbcba25cf925f9e621537865c47fb8db18ee85c038f7",
+  "item": {
+   "id": "f4e984ed82aa9ab1",
+   "title": "FBI Says US Seized $1.2 Billion Worth of Cryptocurrency Stolen From Binance",
+   "url": "https://www.securityweek.com/fbi-says-us-seized-1-2-billion-worth-of-cryptocurrency-stolen-from-binance/",
+   "date": "2026-11-13",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-13T02:28:21+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html": {
+  "title": "Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2",
+  "source": "The Hacker News",
+  "checked": "2026-11-13T06:52:14+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is additional reporting on the already tracked 4EverAble2Shell campaign, substantiating active exploitation, root-level access, and cryptocurrency-miner deployment on 21 production N-central servers.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is additional reporting on the already tracked 4EverAble2Shell campaign, substantiating active exploitation, root-level access, and cryptocurrency-miner deployment on 21 production N-central servers.",
+    "title": "4EverAble2Shell compromised 21 N-central servers",
+    "incident_id": "ba511006af09c577"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "f172ba0cb82bf4799c11f8d06fb5716da245d260ebdc4addde11b6ea0d91a11f",
+  "item": {
+   "id": "1d7c4fcf3a4a044b",
+   "title": "Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2",
+   "url": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html",
+   "date": "2026-11-13",
+   "source": "The Hacker News",
+   "published_at": "2026-11-13T05:43:28+00:00"
+  }
+ },
+ "https://www.securityweek.com/microsoft-365-outage-disrupts-outlook-exchange-online-and-teams/": {
+  "title": "Microsoft 365 Outage Disrupts Outlook, Exchange Online and Teams",
+  "source": "SecurityWeek",
+  "checked": "2026-11-13T06:52:14+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: this is a substantiated cloud-service outage, but the report expressly says Microsoft disclosed no evidence of a cyberattack or unauthorized activity.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: this is a substantiated cloud-service outage, but the report expressly says Microsoft disclosed no evidence of a cyberattack or unauthorized activity.",
+    "title": "Microsoft 365 outage disrupted Exchange Online, Teams and Outlook"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "9d5a0a78320400720cf035ece3dbb88e6e1dce5f0bc8d7e52791fff895957380",
+  "item": {
+   "id": "6e09d4b59005eee5",
+   "title": "Microsoft 365 Outage Disrupts Outlook, Exchange Online and Teams",
+   "url": "https://www.securityweek.com/microsoft-365-outage-disrupts-outlook-exchange-online-and-teams/",
+   "date": "2026-11-12",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-12T20:55:30+00:00"
+  }
+ },
+ "https://www.darkreading.com/data-privacy/extortion-luna-moth-law-firms-second-time": {
+  "title": "Extortion Group Luna Moth Flits Into Law Firms a Second Time",
+  "source": "Dark Reading",
+  "checked": "2026-11-13T06:52:14+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "The report describes a social-engineering con aimed at stealing access tokens but provides no evidence of a successful compromise or consequential harm.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The report describes a social-engineering con aimed at stealing access tokens but provides no evidence of a successful compromise or consequential harm.",
+    "title": "Luna Moth reportedly retargeted law firms with token-theft scams"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "11de1e1f4a87bbcaa978eeb0a0f0eed28052f5f8cbe9c525d740e2e22dddab1c",
+  "item": {
+   "id": "7c722cec3dd30188",
+   "title": "Extortion Group Luna Moth Flits Into Law Firms a Second Time",
+   "url": "https://www.darkreading.com/data-privacy/extortion-luna-moth-law-firms-second-time",
+   "date": "2026-11-12",
+   "source": "Dark Reading",
+   "published_at": "2026-11-12T20:09:41+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/cybersecurity-operations/cyber-experts-fight-artex-antifox": {
+  "title": "Cyber Experts Weigh In: How to Fight Artex & AntiFox",
+  "source": "Dark Reading",
+  "checked": "2026-11-13T06:52:14+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "The supplied article is general commentary about Artex and AntiFox and does not substantiate a distinct incident; any underlying campaigns are not newly documented here.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The supplied article is general commentary about Artex and AntiFox and does not substantiate a distinct incident; any underlying campaigns are not newly documented here.",
+    "title": "Dark Reading commentary on Artex and AntiFox defenses"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "3731fcb28fa484e4f4c11ef523de432f9efa9e03e28b4fe942cef502912b11bb",
+  "item": {
+   "id": "13a7c8ef64f1ccbf",
+   "title": "Cyber Experts Weigh In: How to Fight Artex & AntiFox",
+   "url": "https://www.darkreading.com/cybersecurity-operations/cyber-experts-fight-artex-antifox",
+   "date": "2026-11-12",
+   "source": "Dark Reading",
+   "published_at": "2026-11-12T21:18:52+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/": {
+  "title": "New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks",
+  "source": "BleepingComputer",
+  "checked": "2026-11-13T06:52:14+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is additional reporting on the already-tracked ScreenConnect campaign, with independently substantiated compromise of 288 endpoints across 48 organizations; it is not a new distinct incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is additional reporting on the already-tracked ScreenConnect campaign, with independently substantiated compromise of 288 endpoints across 48 organizations; it is not a new distinct incident.",
+    "title": "ScreenConnect campaign compromised 288 endpoints across 48 organizations",
+    "incident_id": "cf4df74da740c268"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "f36c1fa11a8e5e79b3305e4e4ddcd51a3f505f8f828f0dac113d08058010a9c5",
+  "item": {
+   "id": "1295be46dd0262f5",
+   "title": "New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks",
+   "url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+   "date": "2026-11-12",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-12T22:53:10+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/": {
+  "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
+  "source": "BleepingComputer",
+  "checked": "2026-11-13T06:52:14+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "This is a substantiated campaign involving compromised GitHub accounts, unauthorized repository changes, and confirmed theft of sensitive credentials from at least 1,835 targets; it is a duplicate of the already tracked wfx-loot incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This is a substantiated campaign involving compromised GitHub accounts, unauthorized repository changes, and confirmed theft of sensitive credentials from at least 1,835 targets; it is a duplicate of the already tracked wfx-loot incident.",
+    "title": "wfx-loot campaign stole secrets from at least 1,835 GitHub targets",
+    "incident_id": "cd74de3eb679d9de"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "d1531ae016c9813625b68a815f661a73b47165e26f3e6eac559b93bf5f300356",
+  "item": {
+   "id": "3f9b017a91089352",
+   "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+   "date": "2026-11-12",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-12T22:25:30+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/microsoft/massive-microsoft-365-outage-disrupts-outlook-teams-copilot-worldwide/": {
+  "title": "Massive Microsoft 365 outage disrupts Outlook, Teams, Copilot worldwide",
+  "source": "BleepingComputer",
+  "checked": "2026-11-13T06:52:14+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude: the substantiated event is a non-cyber Microsoft infrastructure outage, with no reported compromise, unauthorized access or malicious activity.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude: the substantiated event is a non-cyber Microsoft infrastructure outage, with no reported compromise, unauthorized access or malicious activity.",
+    "title": "Microsoft 365 outage disrupted Outlook, Teams and Copilot"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e7ad55c92464d3cc5c1b07e30eb687e1f6f8c8fb4949371e4c3bb56f4059f14a",
+  "item": {
+   "id": "a3aa73f0af39d5ab",
+   "title": "Massive Microsoft 365 outage disrupts Outlook, Teams, Copilot worldwide",
+   "url": "https://www.bleepingcomputer.com/news/microsoft/massive-microsoft-365-outage-disrupts-outlook-teams-copilot-worldwide/",
+   "date": "2026-11-12",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-12T20:15:16+00:00"
+  }
+ },
+ "https://therecord.media/stolen-binance-crypto-recovered-doj-facestealer-disrupted": {
+  "title": "Feds announce seizure of $1.2 billion from Binance theft; also takedown of ‘FaceStealer’ tools",
+  "source": "The Record",
+  "checked": "2026-11-13T06:52:14+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Independent FBI and DOJ statements reported a real, multi-victim campaign involving malware compromises, account hijacking, webcam-data seizure, and more than $400 million in cryptocurrency theft; AI-generated deepfakes were specifically reported.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Independent FBI and DOJ statements reported a real, multi-victim campaign involving malware compromises, account hijacking, webcam-data seizure, and more than $400 million in cryptocurrency theft; AI-generated deepfakes were specifically reported.",
+    "title": "FaceStealer campaign stole crypto and webcam videos from victims",
+    "incident_id": "57d71ea154a28bdc"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "5fd046a5c816d5cef40168d2e4f1dda17748a64b78f30e2530585a3ac6bb8e8e",
+  "item": {
+   "id": "57d71ea154a28bdc",
+   "title": "Feds announce seizure of $1.2 billion from Binance theft; also takedown of ‘FaceStealer’ tools",
+   "url": "https://therecord.media/stolen-binance-crypto-recovered-doj-facestealer-disrupted",
+   "date": "2026-11-12",
+   "source": "The Record",
+   "published_at": "2026-11-12T21:42:00+00:00"
   }
  }
 }
