@@ -5224,11 +5224,289 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-12-evening",
+   "date": "2026-11-12",
+   "edition": "evening",
+   "published_at": "2026-11-13T02:29:05+00:00",
+   "generated_at": "2026-11-13T02:29:05+00:00",
+   "scheduled_for": "2026-11-12T22:00:00+00:00",
+   "window_start": "2026-11-13T01:09:17+00:00",
+   "window_end": "2026-11-13T02:29:05+00:00",
+   "sector_window_start": "2026-11-12T02:29:05+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "Microsoft 365 remains the main fresh service disruption. Microsoft has provided more detail about the cause and reports limited recovery. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Microsoft 365 outage is slowly recovering after server failures",
+      "what_happened": "The outage began Thursday, November 12. Microsoft says many servers became unavailable, overwhelming a process that handles secure connections. It is rolling back a recent network change and returning servers to service. Microsoft says it has found no evidence of a cyberattack.",
+      "impact": "People and businesses may still have trouble with Outlook email, Teams, SharePoint files, Copilot and related services. Recovery may be gradual, and full restoration was not yet confirmed.",
+      "what_next": "Microsoft is monitoring restarted servers, shifting traffic and testing workarounds. Further updates should show whether service returns fully and confirm the underlying cause.",
+      "change": "Recovery update",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/microsoft-365-outage-disrupts-outlook-exchange-online-and-teams/",
+        "published": "2026-11-12T20:55:30+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "",
+     "items": []
+    },
+    "healthcare": {
+     "intro": "A newly reported healthcare breach involves patient information, but no misuse or care disruption is confirmed.",
+     "items": [
+      {
+       "headline": "Minnesota epilepsy provider reports a second 2026 data breach",
+       "what_happened": "Minnesota Epilepsy Group says an August 10 incident exposed personal and health information belonging to about 82,574 people. Data may include names, birth dates, Social Security numbers, treatment details and insurance information.",
+       "impact": "No misuse has been identified. People whose information was exposed may face identity theft or targeted scams. The report does not describe disruption to medical care.",
+       "what_next": "The provider has begun notifications and is offering identity-theft protection when Social Security numbers were involved. It remains unclear whether this incident is connected to the group’s earlier 2026 breach.",
+       "change": "New report",
+       "sectors": [
+        "healthcare"
+       ],
+       "sources": [
+        {
+         "name": "HIPAA Journal",
+         "url": "https://www.hipaajournal.com/minnesota-epilepsy-group-data-breach/",
+         "published": "2026-11-12T15:24:33+00:00"
+        }
+       ],
+       "incident_ids": [
+        "f7f481a00ba574bf"
+       ]
+      }
+     ]
+    },
+    "internet": {
+     "intro": "Internet and workplace services saw one major outage and continuing attacks on remote-support systems. The confirmed effects are mainly service access and business-network exposure, not household connectivity loss.",
+     "items": [
+      {
+       "headline": "Microsoft 365 outage is slowly recovering after server failures",
+       "what_happened": "Microsoft reported that servers became unavailable on November 12, causing failures across Outlook, Teams, SharePoint and other services. It is rolling back a recent network change and restarting servers.",
+       "impact": "Users may still be unable to send email, join Teams conversations or open workplace files. Microsoft has not confirmed full recovery.",
+       "what_next": "Microsoft is monitoring the restarted servers and shifting traffic to alternate systems while investigating the cause.",
+       "change": "Recovery update",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "SecurityWeek",
+         "url": "https://www.securityweek.com/microsoft-365-outage-disrupts-outlook-exchange-online-and-teams/",
+         "published": "2026-11-12T20:55:30+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "ScreenConnect attacks spread through managed business computers",
+       "what_happened": "Investigators say attackers reached at least 288 devices in 48 organizations through ScreenConnect environments used by IT service providers. The attackers installed unauthorized remote-access software and designed malware to spread through technician support sessions.",
+       "impact": "Affected businesses could lose control of work computers and networks. The campaign may also reach other customers managed by the same provider. No household phone or internet outage is reported.",
+       "what_next": "ConnectWise is investigating the entry point and has disabled related outside extensions in about 400 partner environments. The number of affected organizations could rise as investigations continue.",
+       "change": "Impact increased",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+         "published": "2026-11-12T22:53:10+00:00"
+        },
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/connectwise-screenconnect-breaches-third-party-tool",
+         "published": "2026-11-12T16:16:00+00:00"
+        },
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html",
+         "published": "2026-11-12T04:39:48+00:00"
+        }
+       ],
+       "incident_ids": [
+        "cf4df74da740c268"
+       ]
+      },
+      {
+       "headline": "Apify investigates unauthorized access affecting some customer credentials",
+       "what_happened": "Apify, a web-scraping and browser-automation service, found unauthorized access to parts of its internal systems between November 9 and 10. It rotated some customer access tokens and proxy passwords and asked some users to reset extra login checks.",
+       "impact": "Affected customers may temporarily lose access to connected services or need to reconnect integrations. Apify says it has found no sign that stored account data was affected, but the full scope remains under review.",
+       "what_next": "Apify is investigating and will contact affected customers when integrations can safely be reconnected. Further notices may clarify whether customer information was accessed.",
+       "change": "New report",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/",
+         "published": "2026-11-12T14:36:47+00:00"
+        }
+       ],
+       "incident_ids": [
+        "9320c6c337fb565d"
+       ]
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "Attacks involving trusted software and developer services affected downstream organizations. Confirmed consequences include compromised business devices and stolen development credentials; broader effects remain under investigation.",
+     "items": [
+      {
+       "headline": "ScreenConnect attacks used trusted support tools to reach customers",
+       "what_happened": "Attackers abused a third-party extension connected to ConnectWise ScreenConnect, a remote-support platform used by IT providers. They reached at least 288 devices across 48 organizations and installed unauthorized remote-access software.",
+       "impact": "Businesses managed through affected providers could face continuing access by attackers or spread to additional systems. The presence of the extension alone does not prove compromise.",
+       "what_next": "ConnectWise and investigators are identifying the entry point and reviewing the wider customer impact. More affected organizations may be identified.",
+       "change": "Impact increased",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/connectwise-screenconnect-breaches-third-party-tool",
+         "published": "2026-11-12T16:16:00+00:00"
+        },
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+         "published": "2026-11-12T22:53:10+00:00"
+        }
+       ],
+       "incident_ids": [
+        "cf4df74da740c268"
+       ]
+      },
+      {
+       "headline": "GitHub campaign stole credentials from development projects",
+       "what_happened": "Attackers used 4,837 stolen GitHub accounts to test more than 61,000 projects. Malicious code ran in at least 1,806 projects and collected cloud, developer and artificial-intelligence service credentials. Some altered software packages were published.",
+       "impact": "Organizations may have lost private project information or access keys. Developers who downloaded affected packages could have received altered software, but the full list of downstream users is unclear.",
+       "what_next": "Researchers are still measuring the campaign’s reach and which software releases carried the changes. Further notices may identify more affected projects and organizations.",
+       "change": "New report",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+         "published": "2026-11-12T22:25:30+00:00"
+        },
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
+         "published": "2026-11-12T06:42:47+00:00"
+        },
+        {
+         "name": "SecurityWeek",
+         "url": "https://www.securityweek.com/attacker-targets-60000-github-repositories-in-credential-theft-campaign/",
+         "published": "2026-11-12T13:39:03+00:00"
+        }
+       ],
+       "incident_ids": [
+        "29dfac32567e48b8",
+        "cd74de3eb679d9de"
+       ]
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "3 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 721
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 42,
+   "usage": {
+    "completion_tokens": 1452,
+    "prompt_tokens": 43948,
+    "total_tokens": 45400,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 125,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 43945,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-13T01:09:17+00:00"
+  "checked_at": "2026-11-13T02:29:05+00:00"
  },
  "automatic_attempts": {
   "2026-11-09-morning": {
@@ -5258,6 +5536,10 @@
   "2026-11-12-morning": {
    "count": 2,
    "checked_at": "2026-11-13T01:09:17+00:00"
+  },
+  "2026-11-12-evening": {
+   "count": 1,
+   "checked_at": "2026-11-13T02:29:05+00:00"
   }
  }
 }
