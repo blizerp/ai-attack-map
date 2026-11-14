@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T19:48:17+00:00",
+ "updated": "2026-11-14T06:34:05+00:00",
  "incidents": [
   {
    "title": "4EverAble2Shell exploited to compromise 21 N-central servers",
@@ -664,15 +664,13 @@
     {
      "name": "Dark Reading",
      "url": "https://www.darkreading.com/cybersecurity-operations/attackers-binance-breach-targeted-weakness-missing-controls"
+    },
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://theblock.co/news/business/2026-11-03-binance-hack-incident-report-north-korea-fake-job-interview-ai-tool-432406"
     }
    ],
    "updates": [
-    {
-     "date": "2026-11-01",
-     "what": "The FBI said TraderTraitor stole more than $6.43 billion in virtual assets from Binance across 11 blockchains. Binance paused and then progressively restored withdrawals; $2.85 billion was reportedly frozen on-chain by several organizations.",
-     "url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
-     "source": "The Hacker News"
-    },
     {
      "date": "2026-11-02",
      "what": "Attackers emptied Binance hot wallets across multiple blockchains and moved most funds within roughly 20 minutes. Binance later identified additional breach points and a self-destruct mechanism, but has not yet published a technical post-mortem.",
@@ -696,6 +694,12 @@
      "what": "Attackers used a trojanized Homebrew installer, recruitment-themed social engineering, malware on two engineers’ computers, compromised internal AI tooling, stolen credentials and a deployment token, and a malicious container script. They then accessed Binance’s wallet-signing service and initiated transactions outside the normal withdrawal process.",
      "url": "https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html",
      "source": "The Hacker News"
+    },
+    {
+     "date": "2026-11-03",
+     "what": "Binance said a multi-stage campaign used compromised engineers’ systems and an internal AI tool to reach wallet engineers, then used a stolen container-deployment token to deploy transactions outside the normal withdrawal process. The reported theft was approximately $6.34 billion, with reports ranging from $6.3 billion to $6.43 billion.",
+     "url": "https://theblock.co/news/business/2026-11-03-binance-hack-incident-report-north-korea-fake-job-interview-ai-tool-432406",
+     "source": "AI agent attack tracker"
     },
     {
      "date": "2026-11-04",
@@ -1196,9 +1200,19 @@
     {
      "name": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html"
+    },
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://www.ic3.gov/CSA/2026/261112.pdf"
     }
    ],
    "updates": [
+    {
+     "date": "2026-11-12",
+     "what": "Hijacked Telegram and similar accounts invited contacts to fake Zoom or Teams meetings using prerecorded webcam footage and deepfake participants. A simulated audio problem led victims to a ClickFix-style malware installation, and the campaign reportedly used ChatGPT, Google, Grok, and Wondershare tools to create synthetic media; the FBI seized infrastructure and more than 900 webcam recordings.",
+     "url": "https://www.ic3.gov/CSA/2026/261112.pdf",
+     "source": "AI agent attack tracker"
+    },
     {
      "date": "2026-11-13",
      "what": "Attackers used compromised trusted accounts, recorded webcam footage, deepfake videos, and fake Zoom or Teams meeting lures to persuade targets to install malware or execute commands. The FBI said the scheme stole more than $400 million in cryptocurrency over the previous 18 months, and more than 900 victim webcam recordings were seized.",
@@ -1304,6 +1318,106 @@
      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html"
     }
    ]
+  },
+  {
+   "title": "ARARA newsletter breach exposed 2.2 million SEGA addresses",
+   "date": "2026-11-02",
+   "category": "major_cyber",
+   "victim": "SEGA and SEGA Fave newsletter subscribers; ARARA email-distribution service",
+   "attacker": "Unknown; ARARA said the intrusion method and timing remain under investigation.",
+   "what": "A breach of third-party newsletter provider ARARA exposed 2.2 million email addresses associated with 11 SEGA and SEGA Fave newsletters, including 92,300 records with additional information still being determined. ARARA said the broader incident affected 77 million addresses from nearly 380 corporate clients and attackers used the service to send more than 7 million impersonation emails.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident compromised a trusted service provider and exposed a large volume of subscriber data across many corporate clients. SEGA said names, addresses, payment details, passwords, and other listed account information were not included, and no misuse was confirmed.",
+   "where": "Japan",
+   "major_impact": "supply_chain_compromise",
+   "significance": "SEGA confirmed that its newsletter data was exposed through ARARA, while ARARA disclosed compromise affecting 77 million email addresses and nearly 380 clients.",
+   "id": "c5ca2f12d572c177",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
+   "added": "2026-11-09T22:27:24+00:00",
+   "reported_date": "2026-11-09",
+   "last_reported": "2026-11-13",
+   "evidence_status": "confirmed",
+   "lat": 36.5748441,
+   "lon": 139.2394179,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The breach exposed 2.2 million SEGA-related email addresses and a broader 77 million addresses across ARARA clients. Reporting says names, payment data, passwords, and other specified personal details were not exposed, and confirmed misuse was not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "widespread",
+     "damage": "limited",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
+    "assessed_at": "2026-11-09T22:27:24+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/city-of-osaka-japan-email-data-breach"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-13",
+     "what": "A breach of Arara, a third-party email-distribution provider, exposed more than 1 million email addresses associated with people who received Osaka city emails between July and October 31, 2026. Arara said the November 2 attack exposed 77 million addresses from nearly 400 customers and was used to send malicious impersonation emails.",
+     "url": "https://therecord.media/city-of-osaka-japan-email-data-breach",
+     "source": "The Record"
+    }
+   ]
+  },
+  {
+   "title": "ArcticRAT malware uses AI to profile victims’ finances",
+   "date": "2026-11-13",
+   "category": "using_ai",
+   "victim": "Android-device users; specific victims were not reported",
+   "attacker": "ArcticRAT cybercrime gang, as identified by Dark Reading; attribution details were not reported",
+   "what": "Dark Reading reports that ArcticRAT Android malware expanded from crypto theft to full device control and that its operators use advanced AI-assisted analysis to profile stolen information, including victims’ finances.",
+   "ai_role": "The attackers reportedly use AI to analyze stolen information and profile victims’ finances; no autonomous AI-agent activity was reported.",
+   "why": "The campaign combines unauthorized Android-device control with cryptocurrency theft and analysis of sensitive financial information.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The reporting describes real malware activity involving device takeover and crypto theft, with AI used to prioritize or analyze victim financial information. Specific victims, scale, losses, and locations were not reported.",
+   "id": "d8e1662b5557568e",
+   "source_name": "Dark Reading",
+   "source_url": "https://www.darkreading.com/mobile-security/arcticrat-cybercrime-gang-profiles-victim-finances-ai",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-13",
+   "last_reported": "2026-11-13",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The source reports crypto theft, full device control, and analysis of stolen financial information, but does not provide a victim count or verified loss amount.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.darkreading.com/mobile-security/arcticrat-cybercrime-gang-profiles-victim-finances-ai",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "ScreenConnect campaign compromised 288 endpoints across 48 organizations",
@@ -1520,6 +1634,10 @@
     {
      "name": "BleepingComputer",
      "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/"
+    },
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://www.endorlabs.com/learn/github-actions-supply-chain-attack-targeting-ci-secrets-at-scale"
     }
    ],
    "updates": [
@@ -1528,6 +1646,12 @@
      "what": "Using credentials from 4,837 compromised GitHub accounts, the attackers probed 61,764 repositories and opened deceptive pull requests. Where they had write access, malicious workflows or package hooks stole GitHub Actions tokens, cloud credentials, developer secrets, and other credentials; researchers confirmed secret theft from at least 1,835 targets.",
      "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
      "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-12",
+     "what": "Endor Labs observed stolen GitHub credentials used to inject the wfx secret stealer into more than 8,900 repositories. The malware ran in GitHub Actions, stole repository, cloud, package-registry and AI-provider credentials, and in some cases attempted cloud persistence; at least 1,806 repositories had confirmed credential theft.",
+     "url": "https://www.endorlabs.com/learn/github-actions-supply-chain-attack-targeting-ci-secrets-at-scale",
+     "source": "AI agent attack tracker"
     }
    ],
    "locations": [
@@ -2012,6 +2136,62 @@
    }
   },
   {
+   "title": "Cairn agents breached 10 of 19 targeted organizations",
+   "date": "August–September 2026",
+   "category": "by_ai_agent",
+   "victim": "At least 19 semiconductor, defense-policy, and civil-society organizations; specific victims were not fully identified",
+   "attacker": "China-nexus CL-STA-1238, assessed with moderate confidence by Unit 42; Chinese-speaking operators used Zhipu GLM and DeepSeek models",
+   "what": "Attackers used a customized Cairn AI penetration-testing framework to autonomously conduct 25 operations. Unit 42 confirmed unauthorized access or data retrieval at 10 organizations, including access to more than one million member records at one organization, military and government identities, employee and student data, internal documents, credentials, and persistent administrator accounts.",
+   "ai_role": "AI agents planned and executed reconnaissance, exploitation, credential collection, privilege escalation, lateral movement, and persistence with limited human tasking. The agents were operated using Zhipu GLM and DeepSeek models.",
+   "why": "The campaign demonstrated real autonomous intrusions across multiple organizations, with confirmed sensitive-data access and production-system persistence. The activity affected semiconductor supply-chain, defense-policy, and civil-society targets and materially expanded the number of simultaneous operations attackers could conduct.",
+   "where": "Organizations in the United States and Canada were explicitly reported; other victim locations were not fully identified",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Unit 42 directly observed confirmed access or data retrieval at 10 targets, including more than one million member records, roughly 31,000 CRM contacts, staff password hashes, defense-policy user records, and persistent production administrator accounts.",
+   "id": "541bf08e14054fb6",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Unit 42 reported confirmed unauthorized access or data retrieval at 10 organizations, including mass access to more than one million member records, credentials, identities, internal documents, and production-system administrator accounts. Operational service disruption and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/"
+    },
+    {
+     "lat": 61.0666922,
+     "lon": -107.991707,
+     "label": "Canada",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/"
+    }
+   ]
+  },
+  {
    "title": "AI-assisted BroadWorks campaign targeted telecom provider and customers",
    "date": "2026-11-08",
    "category": "using_ai",
@@ -2062,9 +2242,19 @@
     {
      "name": "BleepingComputer",
      "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/"
+    },
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html"
     }
    ],
    "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "The agent exploited an unauthenticated Cisco BroadWorks XXE vulnerability, enumerated hundreds of assets, recovered system and SSL private keys, extracted dozens of credential sets, and exfiltrated thousands of subscriber billing and device-record rows. It also used Sliver, Chisel, and Behinder web shells for post-exploitation and persistence.",
+     "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
+     "source": "AI agent attack tracker"
+    },
     {
      "date": "2026-11-11",
      "what": "Attackers exploited the unauthenticated Cisco BroadWorks CVE-2026-20320 XXE flaw to read files from an XSP server. Malbear Labs reported recovery of the BroadWorks system-identity private key, three SSL credential sets, and three additional private keys, enabling potential impersonation in inter-component communications.",
@@ -2319,7 +2509,15 @@
     "source_url": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/",
     "assessed_at": "2026-11-11T19:40:32+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-11",
+     "what": "Arctic Wolf observed AntiFox-linked infrastructure exploiting internet-facing services, deploying an ASPX webshell, executing commands, accessing application settings and database connection strings, and harvesting AWS credentials and production secrets. In a separate incident, attackers used a valid AWS identity to read, copy, and delete S3 objects.",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/",
+     "source": "AI agent attack tracker"
+    }
+   ]
   },
   {
    "title": "Railway breach exposed customer environment variables and secrets",
@@ -2387,9 +2585,9 @@
     },
     {
      "date": "2026-11-10",
-     "what": "Attackers exploited vulnerabilities in Railway’s build infrastructure and trust relationships, accessed internal source code and decrypted customer environment variables, and obtained linked-account tokens for 1,852 users. Stolen credentials generated approximately $740,000 in unauthorized AI usage.",
+     "what": "Attackers escaped Railway build-environment filesystem isolation, obtained an internal credential, accessed source code and build histories, and exploited a misconfigured trust relationship to obtain credentials decrypting customer environment variables. Railway said up to approximately 100,000 workspaces could have been potentially impacted, 1,852 linked-account tokens were exposed, and stolen credentials generated approximately $740,000 in unauthorized AI usage.",
      "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
-     "source": "BleepingComputer"
+     "source": "AI agent attack tracker"
     },
     {
      "date": "2026-11-11",
@@ -2530,6 +2728,12 @@
    "ai_source_name": "BleepingComputer",
    "updates": [
     {
+     "date": "2026-11-10",
+     "what": "Attackers reached Fireworks AI development machines through an unnamed third-party cloud provider and ran an unauthorized workload. The incident exposed resource metadata, billing information, some incomplete model weights and datasets, environment secrets, and Notion AI chat transcripts used for the Insights feature.",
+     "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
+     "source": "AI agent attack tracker"
+    },
+    {
      "date": "2026-11-11",
      "what": "An attacker accessed Fireworks AI's development environment through a third-party cloud provider and obtained customer datasets. Fireworks later confirmed that an exposed dataset included Notion AI chat transcripts used for the Insights feature.",
      "url": "https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/",
@@ -2621,7 +2825,211 @@
     "source_url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
     "assessed_at": "2026-11-13T19:48:17+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "Claroc found 35,578 of 37,571 Grok-built apps accessible without sign-in. Exposed material included confidential business plans, a hospital employee directory, an intensive-care briefing about one patient, a fire-department live shift board, and plaintext employee passwords in source code. Researchers also demonstrated unauthorized viewing, editing, and deletion in two test applications, but did not test whether the discovered third-party apps allowed those actions.",
+     "url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
+     "source": "AI agent attack tracker"
+    }
+   ]
+  },
+  {
+   "title": "Silent Lynx compromised Tajikistan Railway network",
+   "date": "2026-08 to 2026-10",
+   "category": "using_ai",
+   "victim": "Tajikistan Railway",
+   "attacker": "Silent Lynx, based on CloudSEK’s high-confidence assessment from implant markers and build paths; Kazakhstan nexus assessed with medium confidence",
+   "what": "The operator maintained domain-level access to the railway network, enumerated internal hosts, obtained administrator access, created credential dumps containing Administrator and krbtgt accounts, copied operational reports and correspondence, harvested upstream-ISP credentials, and deployed an ASP.NET webshell. A Hermes AI agent running through Telegram handled reconnaissance, collection support, reporting, and log cleanup; the reporting does not establish that the agent independently performed every intrusion action.",
+   "ai_role": "A self-hosted Hermes agent using DeepSeek models processed reconnaissance, supported collection, generated an access handoff, and performed cleanup actions under operator direction.",
+   "why": "The compromise reached a national transport operator’s internal network and exposed privileged credentials, operational documents, and upstream ISP access. CloudSEK observed a live tunnel through a railway host for nearly two months and evidence of persistent access.",
+   "where": "Tajikistan",
+   "major_impact": "critical_network_intrusion",
+   "significance": "CloudSEK reported direct evidence from the exposed operator directory, including a live railway tunnel, credential dumps, copied railway documents, and webshell deployment. Final downstream effects and the full scope of stolen data were not reported.",
+   "id": "9e2577dde70bedd5",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": 38.6281733,
+   "lon": 70.8156541,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The railway network was actually accessed and operational reports, correspondence, credentials, and credential dumps were collected. Service disruption was not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 38.6281733,
+     "lon": 70.8156541,
+     "label": "Tajikistan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server"
+    }
+   ]
+  },
+  {
+   "title": "Silent Lynx collected Tajik government correspondence",
+   "date": "2026-08 to 2026-10",
+   "category": "using_ai",
+   "victim": "Tajikistan’s national electronic document management platform and participating government ministries and state bodies",
+   "attacker": "Silent Lynx, based on CloudSEK’s high-confidence technical assessment; attribution remains an assessment rather than a confirmed government identity",
+   "what": "Using credentials from a railway employee, the operator accessed the government SSO and collected more than 2,000 documents through weak authorization and unauthenticated attachment access. The collection included Ministry of Defence, National Guard, State Committee for National Security, and State Investment Committee material, along with identity documents and a directory of government organizations and users.",
+   "ai_role": "A self-hosted Hermes AI agent supported high-concurrency document collection, progress tracking through Telegram, and operational cleanup; the reporting does not show that the agent alone initiated the access.",
+   "why": "A single compromised employee account enabled collection beyond the railway’s own scope, exposing sensitive defence, government, personnel, procurement, finance, and identity records at scale.",
+   "where": "Tajikistan",
+   "major_impact": "large_scale_data_theft",
+   "significance": "CloudSEK examined the collected files and described thousands of government documents, including defence correspondence and passport or national-ID scans. The exact number of affected people and the complete collection volume were not established.",
+   "id": "5c5663b52012eebf",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": 38.6281733,
+   "lon": 70.8156541,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "CloudSEK reported observed collection of thousands of government documents and identity records across multiple Tajik state bodies. Service disruption and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 38.6281733,
+     "lon": 70.8156541,
+     "label": "Tajikistan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server"
+    }
+   ]
+  },
+  {
+   "title": "Silent Lynx gained host execution at Uzbekistan Smart Forestry",
+   "date": "2026-05 to 2026-10",
+   "category": "using_ai",
+   "victim": "Uzbekistan Smart Forestry GeoServer and its underlying host",
+   "attacker": "Silent Lynx, based on CloudSEK’s technical assessment linking the tooling to the group; attribution is not independently confirmed by the victim",
+   "what": "The operator deployed malicious WAR files and a webshell to the GeoServer, obtained PostgreSQL superuser access, used database command execution to open a reverse shell, and established cron-based callbacks. The access provided control of the forestry database and data served or stored by the GeoServer; root access was not obtained.",
+   "ai_role": "A Hermes AI agent was used by the operator for reconnaissance, operational tasking, collection support, and cleanup across the campaign; autonomous completion of this specific intrusion was not established.",
+   "why": "The compromise reached host-level command execution and database superuser access on a government geospatial platform, creating consequential unauthorized control over its data and service environment.",
+   "where": "Uzbekistan",
+   "major_impact": "critical_network_intrusion",
+   "significance": "CloudSEK reconstructed the access chain from the web application to the database and host, and observed persistence at the time of exposure. The report did not establish service outage, data destruction, or the final amount of data accessed.",
+   "id": "2a71a0c075696809",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": 41.32373,
+   "lon": 63.9528098,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Observed evidence showed webshell persistence, PostgreSQL superuser access, reverse-shell execution, and cron callbacks. No confirmed outage, destruction, or quantified data theft was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 41.32373,
+     "lon": 63.9528098,
+     "label": "Uzbekistan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server"
+    }
+   ]
+  },
+  {
+   "title": "ARTEX agents breached cloud environments and validated client secrets",
+   "date": "2026-11-11",
+   "category": "using_ai",
+   "victim": "Multiple unnamed organizations and customer cloud environments worldwide, including retail and consulting sectors",
+   "attacker": "Unidentified attackers using ARTEX and related AI-enabled penetration-testing tools; Unit 42 attributed the activity to automated agentic tooling but did not identify the operators",
+   "what": "Unit 42 investigated multiple intrusions in which attackers used ARTEX consoles or associated infrastructure. The observed activity reached exposed identity workflows and APIs, validated more than 200 client secrets in about three minutes, searched CloudWatch logs for AWS keys, and pursued cloud access across multiple organizations.",
+   "ai_role": "Attackers used ARTEX, an AI-enabled multi-agent penetration-testing framework, to adapt requests, validate credentials, follow exposed API specifications, and automate multi-stage intrusion activity. Human involvement remained possible for sensitive steps.",
+   "why": "The reporting substantiates unauthorized intrusion activity and cloud-credential validation across multiple organizations, rather than merely scanning or a controlled demonstration. Exact victims, data accessed, and downstream losses were not reported.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Unit 42 observed attackers using AI agents to move from exposed workflows and stolen credentials toward cloud access, with more than 200 secrets validated in approximately three minutes and parallel attacks against identity, VPN, storage, NAS, and cloud-related services.",
+   "id": "06d8f39d3cddb50f",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://unit42.paloaltonetworks.com/artex-and-ai-powered-red-teaming-tools/",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-11",
+   "last_reported": "2026-11-11",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Microsoft reported confirmed compromise of multiple customer tenants and observed exfiltration of credentials and organizational data from Azure Key Vaults and Storage Accounts, along with SharePoint, OneDrive, and mailbox access. Operational outages and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-05",
+     "what": "Microsoft observed ARTEX agents searching public GitHub repositories for secrets, abusing leaked application credentials to access multiple Azure and Entra ID tenants, enumerating cloud resources, and exfiltrating credentials and data from Azure Key Vaults and Storage Accounts. In one case, the agent progressed from GitHub secret discovery to Azure Key Vault exfiltration within five minutes.",
+     "url": "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/",
+     "source": "AI agent attack tracker"
+    }
+   ]
   },
   {
    "title": "Qubole trusted AWS access abused to breach customer accounts",
@@ -3459,7 +3867,15 @@
     "source_url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
     "assessed_at": "2026-11-10T19:48:29+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-08",
+     "what": "The attacker exploited a remote-code-execution flaw in SGLang running on a NEAR AI inference server and reached systems behind the service. Data from 18 older NEAR AI Agents, including chat history, settings and logs, was taken; account details for about 100 Private Chat users were downloaded, and two customers’ Cloud API keys were exposed in logs.",
+     "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
+     "source": "AI agent attack tracker"
+    }
+   ]
   },
   {
    "title": "French supermarket refrigeration controllers altered in October attacks",
@@ -4406,54 +4822,6 @@
    ]
   },
   {
-   "title": "ARARA newsletter breach exposed 2.2 million SEGA addresses",
-   "date": "2026-11-02",
-   "category": "major_cyber",
-   "victim": "SEGA and SEGA Fave newsletter subscribers; ARARA email-distribution service",
-   "attacker": "Unknown; ARARA said the intrusion method and timing remain under investigation.",
-   "what": "A breach of third-party newsletter provider ARARA exposed 2.2 million email addresses associated with 11 SEGA and SEGA Fave newsletters, including 92,300 records with additional information still being determined. ARARA said the broader incident affected 77 million addresses from nearly 380 corporate clients and attackers used the service to send more than 7 million impersonation emails.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The incident compromised a trusted service provider and exposed a large volume of subscriber data across many corporate clients. SEGA said names, addresses, payment details, passwords, and other listed account information were not included, and no misuse was confirmed.",
-   "where": "Japan",
-   "major_impact": "supply_chain_compromise",
-   "significance": "SEGA confirmed that its newsletter data was exposed through ARARA, while ARARA disclosed compromise affecting 77 million email addresses and nearly 380 clients.",
-   "id": "c5ca2f12d572c177",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
-   "added": "2026-11-09T22:27:24+00:00",
-   "reported_date": "2026-11-09",
-   "last_reported": "2026-11-09",
-   "evidence_status": "confirmed",
-   "lat": 36.5748441,
-   "lon": 139.2394179,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "The breach exposed 2.2 million SEGA-related email addresses and a broader 77 million addresses across ARARA clients. Reporting says names, payment data, passwords, and other specified personal details were not exposed, and confirmed misuse was not established.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "widespread",
-     "damage": "limited",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
-    "assessed_at": "2026-11-09T22:27:24+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 36.5748441,
-     "lon": 139.2394179,
-     "label": "Japan",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/"
-    }
-   ]
-  },
-  {
    "title": "SEGA Fave arcade network breached and taken offline",
    "date": "2026-11-02",
    "category": "major_cyber",
@@ -4810,6 +5178,20 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://thehackernews.com/2026/11/taiwan-based-hacker-used-bossai-ai.html"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://www.acronis.com/en/tru/posts/bossai-inside-the-ai-attack-mesh-that-targeted-taiwans-emergency-services/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-09",
+     "what": "Acronis reported that BOSSAI agents conducted attacks against hundreds of organizations in eleven countries. Confirmed breaches included emergency services and universities, with confirmed exfiltration of medical data and personally identifiable information; the agents used reconnaissance, vulnerability exploitation, credential extraction, and database-dumping workflows.",
+     "url": "https://www.acronis.com/en/tru/posts/bossai-inside-the-ai-attack-mesh-that-targeted-taiwans-emergency-services/",
+     "source": "AI agent attack tracker"
     }
    ]
   },
@@ -5529,7 +5911,15 @@
     "source_url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
     "assessed_at": "2026-11-09T07:04:55+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-06",
+     "what": "The ARTEX agent accessed WorkOS's internet-exposed internal sales application using a predictable production credential and rapidly downloaded customer records because of permissive access controls and absent rate limiting. Exposed information included business contact details, account histories, product-usage data, and excerpts from sales calls, support discussions, and customer Slack conversations.",
+     "url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
+     "source": "AI agent attack tracker"
+    }
+   ]
   },
   {
    "title": "MetaMask staking systems accessed and rewards diverted",
@@ -5766,6 +6156,44 @@
    ]
   },
   {
+   "title": "Storm-3358 used ARTEX against Southeast Asian financial firms",
+   "date": "2026-10",
+   "category": "using_ai",
+   "victim": "Financial-sector organizations in Southeast Asia and a smaller number of large financial organizations globally; specific victims were not reported",
+   "attacker": "Storm-3358, a financially motivated Cambodia-based intrusion cluster, according to Microsoft; attribution is based on Microsoft threat intelligence",
+   "what": "Microsoft observed Storm-3358 use ARTEX with automated tools to scan internet-connected systems, exploit web-application flaws, install WISP, vshell, and AdaptixC2 RATs, and use web shells and compromised credentials for persistence and lateral movement. The activity included compromises of systems and cloud identities, with data exfiltration described in the recent attacks.",
+   "ai_role": "Storm-3358 used the agentic AI offensive framework ARTEX to automate scanning, exploitation, credential compromise, lateral movement, and data-exfiltration activity.",
+   "why": "The campaign demonstrates confirmed unauthorized access to financial-sector systems using AI-enabled offensive tooling and conventional RATs, while the reporting does not identify specific victims or quantify data theft or operational losses.",
+   "where": "Southeast Asia and, to a smaller extent, globally",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Microsoft reported observed exploitation of web applications, installation of persistent RATs, compromised credentials and cloud identities, and lateral movement against financial-sector organizations. Specific organizations, countries, and final consequences were not reported.",
+   "id": "214a00245b8cf3e9",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-06",
+   "last_reported": "2026-11-06",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Microsoft reported actual system compromise, RAT installation, web-shell persistence, credential compromise, and cloud-identity abuse across multiple financial-sector targets. Service disruption, confirmed sensitive-data theft, and financial losses were not quantified.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
    "title": "ZyXEL switches compromised in attacks across 48 countries",
    "date": "August 2026",
    "category": "major_cyber",
@@ -5980,11 +6408,11 @@
   {
    "title": "Chainalysis breach exposed user credentials, tokens and customer data",
    "date": "2026-11-05",
-   "category": "major_cyber",
+   "category": "using_ai",
    "victim": "Chainalysis and its users, including law-enforcement, national-security, cryptocurrency, finance and regulatory organizations",
    "attacker": "Unidentified malicious actor; Chainalysis said an external actor used 'offensive agentic techniques,' but did not confirm AI-agent involvement or identify the perpetrator.",
    "what": "Chainalysis reported that names, usernames, password hashes and live tokens for all users were exposed. Some Know Your Transaction accounts appeared to have been accessed, and the company took KYT, Address Screening, login and other products offline during the investigation.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
+   "ai_role": "The reporting supports attacker use of AI tools and \"offensive agentic techniques\"; it does not establish that an autonomous AI agent independently carried out the entire intrusion.",
    "why": "The incident exposed reusable authentication material and disrupted tools used for cryptocurrency transaction monitoring and investigations. Chainalysis said it had no evidence that investigation data was accessed or attribution data manipulated, but required password resets and API-key rotation.",
    "where": "No fixed location",
    "major_impact": "large_scale_data_theft",
@@ -6013,7 +6441,23 @@
     "source_url": "https://therecord.media/chainalysis-all-users-hit-by-agentic-cyberattack",
     "assessed_at": "2026-11-09T07:04:55+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers"
+    }
+   ],
+   "ai_source_url": "https://bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers",
+   "ai_source_name": "AI agent attack tracker",
+   "updates": [
+    {
+     "date": "2026-10-30",
+     "what": "Attackers breached Chainalysis systems and internal tools in an on-path attack, exposing names, usernames, password hashes, and live tokens for all Chainalysis users. Chainalysis found no evidence that investigative graph data was accessed or attribution repositories were altered.",
+     "url": "https://bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers",
+     "source": "AI agent attack tracker"
+    }
+   ]
   },
   {
    "title": "DreamHost File Manager breach exposed user credentials",
@@ -6333,7 +6777,183 @@
      "entity": "",
      "source_url": "https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html"
     }
+   ],
+   "more_sources": [
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://badbyte.io/artex-backdoor-docker-image/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-04",
+     "what": "Researchers found that the Docker images tomicdd/artex and congdonglinux/artex contained a backdoor that executed unauthenticated commands as root before login validation. At least 62 internet-facing consoles served the backdoored build, and the image recorded more than 9,000 pulls before removal.",
+     "url": "https://badbyte.io/artex-backdoor-docker-image/",
+     "source": "AI agent attack tracker"
+    }
    ]
+  },
+  {
+   "title": "Crafty Falcon AI-assisted attacks hit Indian financial entities",
+   "date": "2026-11-05",
+   "category": "using_ai",
+   "victim": "Indian banks, non-bank financial companies, fintech entities, payment providers, aggregators, and cryptocurrency exchanges; specific victims were not identified",
+   "attacker": "CERT-In attributes the campaign to the threat actor it designated “Crafty Falcon”; attribution and the full victim set were not independently detailed",
+   "what": "CERT-In reported successful attacks in an active campaign that abused cloud services, exposed non-production environments, altered application packages, and payment or disbursement APIs to initiate unauthorized transactions. The advisory also reports cryptocurrency wallet-key theft and funds siphoning, and identifies use of ARTEX, PentAGI, Cairn, and CyberStrikeAI.",
+   "ai_role": "The campaign used AI-driven offensive tools, including LLM-based and autonomous multi-agent systems, to survey targets, generate and adapt attack scripts, and execute attack chains at machine speed.",
+   "why": "The campaign targeted financial transaction infrastructure and cryptocurrency wallets, with repeated attacks against entities that had already remediated earlier incidents. CERT-In reported successful attacks and unauthorized fund-transfer activity rather than merely describing exploit capability.",
+   "where": "India",
+   "major_impact": "major_financial_loss",
+   "significance": "CERT-In, India’s national incident-response authority, reported successful compromises involving payment and disbursement APIs and stated that cryptocurrency wallets were siphoned. Exact victims, transaction amounts, and aggregate losses were not reported.",
+   "id": "80979d4eb0c3cac2",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES02&VLCODE=CIAD-2026-0058",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-05",
+   "last_reported": "2026-11-05",
+   "evidence_status": "confirmed",
+   "lat": 22.3511148,
+   "lon": 78.6677428,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "CERT-In reported successful attacks, unauthorized fund transfers, wallet-key theft, and cryptocurrency funds siphoning across multiple BFSI entities. The advisory did not provide a verified aggregate loss or document service outages.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES02&VLCODE=CIAD-2026-0058",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 22.3511148,
+     "lon": 78.6677428,
+     "label": "India",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES02&VLCODE=CIAD-2026-0058"
+    }
+   ]
+  },
+  {
+   "title": "ARTEX agents stole Apple signing certificates from 10 shops",
+   "date": "2026-10-14 to 2026-10-29",
+   "category": "by_ai_agent",
+   "victim": "Ten gray-market Apple code-signing shops; specific organizations were not reported",
+   "attacker": "An unidentified ARTEX operator; Check Point observed the operator’s consoles and agent activity",
+   "what": "The operator directed two ARTEX consoles to compromise signing shops. Agents exploited web and server weaknesses, obtained more than 300 .p12 certificates and plaintext passwords, and validated three certificates as usable for signing arbitrary iOS applications.",
+   "ai_role": "ARTEX agents autonomously conducted vulnerability exploitation, privilege escalation, certificate discovery, and validation after the operator supplied the initial objective.",
+   "why": "The incident compromised trusted iOS application-signing credentials and produced three certificates that could enable malicious app distribution or sideloading.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "Check Point reported successful unauthorized access to 10 signing shops and recovery of more than 300 certificate-password pairs, including three certificates that passed validation for arbitrary iOS signing.",
+   "id": "095ce1e6ac2f4401",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-05",
+   "last_reported": "2026-11-05",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Agents obtained signing certificates and passwords from multiple real organizations. The reporting does not establish that the certificates were subsequently used to distribute malware or that customers were harmed.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "ARTEX agents harvested about 6,000 valid game accounts",
+   "date": "2026-10",
+   "category": "by_ai_agent",
+   "victim": "Thirteen Chinese mobile-gaming credential sites and approximately 6,000 still-valid game accounts; specific organizations and account holders were not reported",
+   "attacker": "An unidentified ARTEX operator; Check Point observed the operator’s consoles and agent activity",
+   "what": "ARTEX agents compromised backend credential sites and recovered more than 190,000 Honor of Kings account records from an exposed plaintext file. Sampling indicated that about 3.3%, or approximately 6,000, remained valid; tested accounts exposed game-profile and account-related information.",
+   "ai_role": "The agents autonomously reverse-engineered related mobile apps, searched the targeted sites, identified exposed credential stores, extracted records, and tested account validity.",
+   "why": "The campaign resulted in verified theft of a large credential database and access to thousands of active gaming accounts.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Check Point reported a 21.5 MB plaintext credential store, more than 190,000 recovered account sets, and an estimated 6,000 valid credentials based on sampling.",
+   "id": "4643c116713e48fb",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-05",
+   "last_reported": "2026-11-05",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "A large credential collection was recovered and sampling found active accounts. The report does not establish account monetization, financial theft, or broader downstream effects.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "ARTEX agents overwrote a crypto service’s production app bucket",
+   "date": "2026-10",
+   "category": "by_ai_agent",
+   "victim": "An unnamed cryptocurrency service and users installing its iOS applications; specific organization and users were not reported",
+   "attacker": "An unidentified ARTEX operator; Check Point observed the operator’s consoles and agent activity",
+   "what": "During an ARTEX campaign against cryptocurrency services, agents used leaked AWS credentials to obtain write access to an S3 bucket hosting production iOS app landing pages and installation files. The agents overwrote production content and verified the compromise chain; the original manifest was later restored by the bucket owners.",
+   "ai_role": "ARTEX agents autonomously found the exposed API, obtained the AWS credentials, validated bucket write access, and executed the production-content overwrite after receiving the initial targeting objective.",
+   "why": "Unauthorized write access to a live distribution bucket created a demonstrated supply-chain compromise path for replacing applications or redirecting users to phishing content.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "Check Point reported that the bucket served the current production installation path to users, had full overwrite permission, and was successfully modified by the agents.",
+   "id": "41fadba2b179e7e0",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-05",
+   "last_reported": "2026-11-05",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Production distribution infrastructure was successfully overwritten, but the source says the manifest was later restored and provides no evidence that malicious applications were installed or funds were stolen.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "Malicious cPGuard updates compromised 2,950 servers",
@@ -6419,19 +7039,19 @@
    "lat": null,
    "lon": null,
    "severity": {
-    "level": "significant",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "The reported compromise exposed customer account information and may have exposed node credentials. Service disruption and financial losses were not reported.",
+    "reason": "Chainstack confirmed access to customer account records, password hashes, and systems holding node credentials. It reported no evidence that node credentials were read, and the available reporting does not establish service disruption or financial loss.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
-     "reach": "single",
+     "reach": "multiple",
      "damage": "sensitive_data",
      "essential": "unknown",
      "financial": "unknown"
     },
-    "source_url": "https://www.securityweek.com/ai-linked-breaches-mount-as-workos-northflank-trigger-dev-disclose-hacks/",
-    "assessed_at": "2026-11-09T07:04:55+00:00",
+    "source_url": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
     "method": "reported-impact-v1"
    },
    "more_sources": [
@@ -6443,9 +7063,9 @@
    "updates": [
     {
      "date": "2026-11-03",
-     "what": "The attacker entered Chainstack’s development environment through a third-party component on October 26, escalated into parts of production, and was detected and cut off on October 31. The attacker accessed customer account information, including organization and account-holder names, member email addresses, and password hashes; systems holding node credentials were also accessible, although Chainstack found no evidence they were read.",
+     "what": "The attacker entered a Chainstack development environment through a third-party component on October 26, escalated into parts of production, and accessed a database containing organization names, account-holder names, member email addresses, and password hashes. Systems holding node credentials were also accessed; Chainstack said it had no evidence the credentials were read but treated them as exposed.",
      "url": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
-     "source": "The Hacker News"
+     "source": "AI agent attack tracker"
     }
    ]
   },
@@ -7475,25 +8095,29 @@
    "lat": 54.7023545,
    "lon": -3.2765753,
    "severity": {
-    "level": "significant",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "The school estate experienced confirmed credential theft, privilege escalation, backup deletion, financial-data theft, and successful ransomware encryption of 37 machines. The reporting does not establish the extent of operational or financial loss.",
+    "reason": "Bitdefender observed unauthorized access, credential theft, creation of administrator accounts, domain-trust changes, defense impairment, and execution of the ThreeAM encryptor across the school estate. The available reporting does not quantify downtime, financial loss, or the exact number of systems encrypted.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
      "reach": "single",
      "damage": "destructive",
-     "essential": "unknown",
+     "essential": "disrupted",
      "financial": "unknown"
     },
-    "source_url": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/",
-    "assessed_at": "2026-11-09T07:04:55+00:00",
+    "source_url": "https://www.bitdefender.com/en-us/blog/businessinsights/3am-ransomware-hybrid-ai-attack",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
     "method": "reported-impact-v1"
    },
    "more_sources": [
     {
      "name": "BleepingComputer",
      "url": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/"
+    },
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://www.bitdefender.com/en-us/blog/businessinsights/3am-ransomware-hybrid-ai-attack"
     }
    ],
    "updates": [
@@ -7502,6 +8126,12 @@
      "what": "The attacker reached nearly 50 machines from an unmanaged host and successfully encrypted about 37. They extracted credentials from Veeam servers, copied a Chrome credential database, dumped LSASS memory, created two domain-administrator backdoors, altered Active Directory trusts, deleted system-state backups, and stole financial data.",
      "url": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/",
      "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-03",
+     "what": "The affiliate accessed the school estate, harvested backup and browser credentials, created domain-administrator accounts, established trusts between separate school domains, removed or attempted to bypass defenses, and deployed the ThreeAM encryptor. Bitdefender observed command content strongly consistent with language-model generation and retry behavior consistent with an agentic loop, but could not establish whether a model directly selected commands or whether a person copied and pasted them.",
+     "url": "https://www.bitdefender.com/en-us/blog/businessinsights/3am-ransomware-hybrid-ai-attack",
+     "source": "AI agent attack tracker"
     }
    ],
    "locations": [
@@ -7968,6 +8598,44 @@
      "source": "HIPAA Journal"
     }
    ]
+  },
+  {
+   "title": "Cobalt Strike actor compromised private computers using dual-use tools",
+   "date": "2026-11-03",
+   "category": "major_cyber",
+   "victim": "Various private computers of Chinese-speaking individuals; specific victims were not identified",
+   "attacker": "Unidentified threat actor observed by Check Point Research; attribution not reported",
+   "what": "Check Point Research found an exposed Cobalt Strike server whose logs showed the operator compromising various private computers. The same server hosted the Haiou Codex jailbreak bundle, VulnClaw agent, and Ladon framework, but the report does not establish that AI carried out the compromises.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The evidence indicates real-world unauthorized compromises rather than a merely theoretical tool demonstration, although the victims, intrusion methods, dates, and consequences are not detailed.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Researcher-observed Cobalt Strike logs documented compromises of multiple private computers. The Haiou bundle is relevant as an AI-agent manipulation tool present in the actor’s toolkit, but its role in the intrusions remains unproven.",
+   "id": "a7015e7c42728896",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://research.checkpoint.com/2026/free-the-model-sell-the-gateway-prompt-adware-hidden-in-jailbreak-bundles/",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-03",
+   "last_reported": "2026-11-03",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Check Point reported logs showing compromises of various private computers, but did not establish service disruption, data theft, privilege level, or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://research.checkpoint.com/2026/free-the-model-sell-the-gateway-prompt-adware-hidden-in-jailbreak-bundles/",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "VOLTA infostealer uses AI to rank stolen victim data",
@@ -8653,9 +9321,9 @@
    "updates": [
     {
      "date": "2026-11-02",
-     "what": "Vapor Panda used ARTEX AI together with DeepSeek and another commercial language model to coordinate simultaneous intrusions. The agents performed reconnaissance, vulnerability exploitation, web-shell deployment, credential theft, and alternative attack-path selection; one Greek government intrusion involved forged administrator tokens and mailbox access.",
+     "what": "Vapor Panda used ARTEX AI agents, DeepSeek, and another commercial language model in simultaneous intrusions. The agents performed reconnaissance, vulnerability exploitation, web-shell deployment, credential theft, and alternative attack-path selection; at least nine organizations were compromised, while 12 other targets experienced password spraying or credential scanning.",
      "url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/",
-     "source": "BleepingComputer"
+     "source": "AI agent attack tracker"
     }
    ]
   },
@@ -9152,6 +9820,92 @@
      "source": "SecurityWeek"
     }
    ]
+  },
+  {
+   "title": "ARTEX AI agent breached Dutch vulnerability-disclosure institute",
+   "date": "2026-09",
+   "category": "by_ai_agent",
+   "victim": "Dutch Institute for Vulnerability Disclosure (DIVD)",
+   "attacker": "Not independently attributed beyond DIVD's attribution of the attack to an ARTEX AI agent; broader campaign attribution was not reported",
+   "what": "An ARTEX AI agent breached DIVD, chained a Zammad zero-day with a second local-privilege-escalation zero-day, and reached root privileges in 12 minutes. It read a compromised mailbox, scanned the internal network, extracted login tokens, and attempted password resets; DIVD recorded more than 450,000 requests and 2,500 associated scripts.",
+   "ai_role": "The ARTEX AI agent acted autonomously and performed the intrusion, privilege escalation, internal scanning, token extraction, mailbox access, and password-reset attempts.",
+   "why": "The incident demonstrates an AI agent carrying out a complete real-world intrusion against an organizational network, including root-level access and attempted account-control actions.",
+   "where": "Netherlands",
+   "major_impact": "critical_network_intrusion",
+   "significance": "DIVD reported rapid escalation from initial access to root privileges and extensive automated activity, providing concrete evidence of autonomous AI-agent behavior during an actual organizational compromise.",
+   "id": "21e424a5156eabc6",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-02",
+   "last_reported": "2026-11-02",
+   "evidence_status": "confirmed",
+   "lat": 52.2434979,
+   "lon": 5.6343227,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "DIVD reported root access, mailbox and token access, internal scanning, and attempted password resets. The available reporting does not establish data theft, service disruption, or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 52.2434979,
+     "lon": 5.6343227,
+     "label": "Netherlands",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/"
+    }
+   ]
+  },
+  {
+   "title": "LLM mixer used stolen API keys to incur nearly $1M in charges",
+   "date": "2026-11-02",
+   "category": "major_cyber",
+   "victim": "An unnamed organization whose third-party LLM API keys were stolen",
+   "attacker": "Unattributed threat actor; Google Threat Intelligence Group observed the activity",
+   "what": "The threat actor used stolen third-party API keys to execute more than 500,000 LLM API calls in under eight hours through the Jet Night token-routing service. The activity passed nearly US$1 million in token costs to the victim organization.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "This was a confirmed compromise of organizational LLM access that caused substantial unauthorized cloud expenditure and demonstrated downstream resale of stolen model capacity.",
+   "where": "No fixed location",
+   "major_impact": "major_financial_loss",
+   "significance": "GTIG directly observed the API abuse and reported nearly US$1 million in charges, showing that compromised LLM credentials can create rapid, material financial losses.",
+   "id": "f7b70729752da721",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-02",
+   "last_reported": "2026-11-02",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "GTIG observed more than 500,000 unauthorized LLM API calls in less than eight hours and nearly US$1 million in token costs charged to the victim. The victim’s identity, location, and any data access were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "substantial"
+    },
+    "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "NetamLoader infected a government Windows system in Asia",
@@ -10166,6 +10920,62 @@
    "evidence_status": "confirmed"
   },
   {
+   "title": "UNC7228 used ARTEX in rapid intrusions against US and European firms",
+   "date": "Late August to October 2026",
+   "category": "by_ai_agent",
+   "victim": "Multiple organizations in the United States and Europe, including enterprise software, industrial automation, semiconductor manufacturing and design, and telecommunications companies",
+   "attacker": "UNC7228, which Mandiant says overlaps with Microsoft-tracked PRC-nexus actor STORM-0940; attribution remains assessed rather than definitive",
+   "what": "Mandiant and Google Threat Intelligence Group observed UNC7228 using the ARTEX agentic offensive framework with compromised credentials to conduct reconnaissance, lateral movement, privilege escalation, database exploitation, and data-theft preparation. In one case, ARTEX moved from an initial compromised account to deep system access in about 15 minutes; the campaign otherwise typically took about four hours.",
+   "ai_role": "ARTEX’s multi-agent LLM-driven tooling autonomously executed multiple intrusion stages, adapted to errors, and chained attack paths with limited human interaction.",
+   "why": "The reporting documents successful real-world compromises and data theft affecting multiple organizations, while demonstrating that agentic tooling substantially accelerated post-compromise operations.",
+   "where": "United States and Europe",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Mandiant incident-response investigations observed compromised organizations, lateral movement, privilege escalation, database exploitation, and preparation for exfiltration. Activity bursts included 27 AWS-permission-probing events in 23 seconds and rapid webshell deployment attempts.",
+   "id": "9789dba6cb9b5c5d",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Mandiant and GTIG reported actual intrusions affecting multiple organizations and data theft, including access to enterprise systems and preparation for exfiltration. The available reporting does not establish service outages, financial losses, or the final volume of stolen data.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks"
+    },
+    {
+     "lat": 51.0,
+     "lon": 10.0,
+     "label": "Europe",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks"
+    }
+   ]
+  },
+  {
    "title": "Volt Typhoon used Silent Train in zero-day intrusions",
    "date": "2026-10-28",
    "category": "major_cyber",
@@ -10771,19 +11581,19 @@
    "lat": null,
    "lon": null,
    "severity": {
-    "level": "significant",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "Wiz described a real investigated intrusion involving RCE, cloud-credential and Kubernetes-token theft, persistence, and bulk secret exfiltration. Service disruption and financial loss were not reported.",
+    "reason": "Wiz reported actual compromises involving multiple organizations, cloud credentials, Kubernetes tokens, and bulk secret exfiltration. Operational disruption, financial loss, and the complete victim count were not established.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
-     "reach": "single",
+     "reach": "multiple",
      "damage": "sensitive_data",
      "essential": "unknown",
      "financial": "unknown"
     },
     "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
-    "assessed_at": "2026-10-29T22:49:24+00:00",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
     "method": "reported-impact-v1"
    },
    "more_sources": [
@@ -10798,6 +11608,12 @@
      "what": "Wiz CIRT documented an AI agent exploiting an exposed Kafka UI for Java remote code execution, deploying malware and backdoors, harvesting credentials, escalating to cluster and cloud administration, creating an administrator identity, modifying GitOps and CI/CD systems, and accessing sensitive data. The agent also attempted to exfiltrate data through webhooks, source control, Kubernetes ConfigMaps, and cloud storage.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
+    },
+    {
+     "date": "2026-10-29",
+     "what": "Wiz reported in-the-wild intrusions in which agentic tooling mass-exploited exposed Flowise services and other workloads, then adapted through cloud and Kubernetes environments. Observed actions included chained RCE, credential and token theft, lateral movement, persistence, and bulk secret exfiltration; one case involved roughly 25 target organizations, according to the report.",
+     "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+     "source": "AI agent attack tracker"
     }
    ]
   },
@@ -13485,7 +14301,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Since September 15, attackers used stolen GitHub tokens to plant sync-check workflows in repositories accessible to each token. In private repositories and GitHub Enterprise environments, workflows executed, printed repository and environment secrets into logs, and the logs were retrieved and deleted. Some enterprise activity was followed by AWS role enumeration; self-hosted runners were targeted for credential and host-data collection.",
+     "what": "Wiz observed the campaign planting secret-dumping GitHub Actions workflows in repositories accessible to stolen tokens. In private repositories and GitHub Enterprise environments, workflows executed, printed repository and environment secrets into logs, and the logs were downloaded and deleted; some activity also reached self-hosted runners and cloud-role credentials.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -16555,7 +17371,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Attackers phished privileged Google Cloud users for credentials and MFA codes, then altered IAM and organization policies, created privileged service accounts, and linked attacker-controlled GCP projects to victims’ billing accounts. The linked projects used Gemini APIs for high-volume LLM inference charged to the victims.",
+     "what": "Attackers phished privileged Google Cloud credentials and MFA codes, altered IAM and organization policies, added external accounts, and linked attacker-controlled GCP projects to victims’ billing accounts. The linked projects then generated large volumes of Gemini API requests charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -38812,6 +39628,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-13T19:48:17+00:00",
+ "last_added": "2026-11-14T06:34:05+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
