@@ -6009,21 +6009,130 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-14-morning",
+   "date": "2026-11-14",
+   "edition": "morning",
+   "published_at": "2026-11-14T17:11:38+00:00",
+   "generated_at": "2026-11-14T17:11:38+00:00",
+   "scheduled_for": "2026-11-14T13:00:00+00:00",
+   "window_start": "2026-11-13T22:41:56+00:00",
+   "window_end": "2026-11-14T17:11:38+00:00",
+   "sector_window_start": "2026-11-13T17:11:38+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting provides a recovery and investigation update on the U.S. flight disruption and confirms active attacks against UnrealIRCd servers. No new broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "U.S. flights resume after nationwide air-traffic communications failure",
+      "what_happened": "The FAA lifted Friday’s nationwide flight stoppage after more than four hours. Thousands of flights were disrupted. Officials found no evidence of hacking so far, while the FBI examines whether a software update and older equipment caused the failure.",
+      "impact": "Departures have resumed, but travelers should expect delays for several days. The outage affected air travel, not household communications. The final cause remains unconfirmed.",
+      "what_next": "Federal agencies are continuing the investigation. Further findings may confirm whether the update, network equipment or another failure triggered the outage.",
+      "change": "Recovery update",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/",
+        "published": "2026-11-14T08:40:22+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/faa-ground-stop-issued-due-to-extraordinary-circumstances/",
+        "published": "2026-11-13T21:33:27+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Attackers are exploiting a flaw in UnrealIRCd chat servers",
+      "what_happened": "Attackers began exploiting a newly fixed flaw in UnrealIRCd, an open-source chat-server program, shortly after the fix was released on November 7. The flaw can give attackers high-level control of affected servers, but their goals and confirmed victims are unknown.",
+      "impact": "Organizations running exposed UnrealIRCd servers could face unauthorized access or service disruption. No specific victim, stolen data or outage has been confirmed.",
+      "what_next": "The project maintainer and U.S. authorities are tracking the activity. Further reporting may show whether attackers gained control of servers or used them for broader attacks.",
+      "change": "Newly confirmed",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
+        "published": "2026-11-14T12:38:35+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below."
+   ],
+   "sources": [
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 722
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    }
+   ],
+   "reviewed_reports": 5,
+   "usage": {
+    "completion_tokens": 534,
+    "prompt_tokens": 12924,
+    "total_tokens": 13458,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 93,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 12921,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-13T22:41:56+00:00"
+  "checked_at": "2026-11-14T17:11:38+00:00"
  },
  "automatic_attempts": {
-  "2026-11-10-morning": {
-   "count": 1,
-   "checked_at": "2026-11-10T17:54:53+00:00"
-  },
-  "2026-11-10-evening": {
-   "count": 1,
-   "checked_at": "2026-11-10T23:28:01+00:00"
-  },
   "2026-11-11-morning": {
    "count": 1,
    "checked_at": "2026-11-11T15:19:25+00:00"
@@ -6047,6 +6156,10 @@
   "2026-11-13-evening": {
    "count": 1,
    "checked_at": "2026-11-13T22:41:56+00:00"
+  },
+  "2026-11-14-morning": {
+   "count": 1,
+   "checked_at": "2026-11-14T17:11:38+00:00"
   }
  }
 }
