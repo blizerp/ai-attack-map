@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T18:11:57+00:00",
+ "updated": "2026-11-14T22:30:27+00:00",
  "incidents": [
   {
    "title": "Trojanized Claude Code extension distributed through Cursor Marketplace",
@@ -746,15 +746,13 @@
     {
      "name": "AI agent attack tracker",
      "url": "https://theblock.co/news/business/2026-11-03-binance-hack-incident-report-north-korea-fake-job-interview-ai-tool-432406"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html"
     }
    ],
    "updates": [
-    {
-     "date": "2026-11-02",
-     "what": "Attackers emptied Binance hot wallets across multiple blockchains and moved most funds within roughly 20 minutes. Binance later identified additional breach points and a self-destruct mechanism, but has not yet published a technical post-mortem.",
-     "url": "https://www.securityweek.com/fbi-flags-over-600-addresses-tied-to-north-koreas-binance-heist/",
-     "source": "SecurityWeek"
-    },
     {
      "date": "2026-11-03",
      "what": "Attackers used a fake job interview and malicious coding assignment to compromise a Binance engineer, then used the compromised device and an internal AI tool to compromise two additional wallet-infrastructure employees. Stolen credentials and a container-deployment token enabled unauthorized access to Binance’s wallet-signing service and transfers of approximately $6.34 billion in digital assets across multiple blockchains.",
@@ -790,6 +788,12 @@
      "what": "Hackers stole more than US$6 billion from Binance, according to the exchange as reported by SecurityWeek. The article does not provide technical details or the exact incident date.",
      "url": "https://www.securityweek.com/north-korea-launches-missiles-toward-the-sea-as-pyongyang-protests-against-us-claims-on-binance-hack/",
      "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-12",
+     "what": "Elliptic reported that attackers linked to the Binance theft moved proceeds through more than 20,000 wallets, 16 blockchains, at least 36 services, and 65,000 transactions, including meme coins created on NEAR.",
+     "url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+     "source": "The Hacker News"
     },
     {
      "date": "2026-11-13",
@@ -1883,7 +1887,21 @@
     "source_url": "https://www.bleepingcomputer.com/news/security/hackers-plant-gsocket-on-linux-servers-for-persistent-access/",
     "assessed_at": "2026-11-12T20:00:03+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-12",
+     "what": "Microsoft reported multiple incidents in which attackers deployed GSocket on internet-facing Linux servers after exploiting web applications, using it to maintain access and evade IP- or domain-based blocking.",
+     "url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+     "source": "The Hacker News"
+    }
+   ]
   },
   {
    "title": "Santos Port cyberattack disrupted cargo operations",
@@ -2032,8 +2050,8 @@
    "reported_date": "2026-11-12",
    "last_reported": "2026-11-12",
    "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
+   "lat": 32.2498545,
+   "lon": -110.9265749,
    "severity": {
     "level": "severe",
     "status": "preliminary",
@@ -2049,7 +2067,33 @@
     "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
     "assessed_at": "2026-11-12T20:00:03+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-12",
+     "what": "Unit 42 reported that Falcon malicious JavaScript compromised visitors of webmail portals and government web applications, enabling theft of passwords, emails, session cookies, and communications and delivery of the Antino implant.",
+     "url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+     "source": "The Hacker News"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 32.2498545,
+     "lon": -110.9265749,
+     "label": "Middle Eastern country",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html"
+    },
+    {
+     "lat": -22.0159585,
+     "lon": -47.897938,
+     "label": "Southeast Asia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html"
+    }
+   ]
   },
   {
    "title": "AI-assisted espionage compromised Central Asian government systems",
@@ -2135,7 +2179,15 @@
     "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
     "assessed_at": "2026-11-12T20:00:03+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-12",
+     "what": "Kaspersky reported Citrus intrusions beginning with compromised contractor accounts, followed by privilege-escalation attempts, domain-wide deployment, AI-generated commands and scripts, and file encryption with the .citrus extension.",
+     "url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
+     "source": "The Hacker News"
+    }
+   ]
   },
   {
    "title": "CloudFire phishing campaign hijacked Google Workspace sessions",
@@ -2270,6 +2322,54 @@
    ]
   },
   {
+   "title": "AI-generated scripts enabled lateral movement in US retailer attack",
+   "date": "2026-11-12",
+   "category": "using_ai",
+   "victim": "An unnamed US retailer",
+   "attacker": "Not reported",
+   "what": "After hand-typed commands failed, the attacker used AI-generated scripts to breach the retailer and achieve lateral movement within minutes.",
+   "ai_role": "The attacker used AI to generate scripts that enabled lateral movement.",
+   "why": "The report describes a real compromise of a retailer’s network, with unauthorized internal movement; the ultimate data access, disruption, and financial impact were not reported.",
+   "where": "United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "AI-generated attack tooling reportedly overcame an initial barrier and enabled rapid lateral movement inside a US retailer’s network.",
+   "id": "283027f21a6e91e3",
+   "source_name": "Dark Reading",
+   "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer",
+   "added": "2026-11-14T22:30:27+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Credible reporting substantiates a retailer compromise and lateral movement. Impact beyond the internal movement was not established in the available reporting.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer",
+    "assessed_at": "2026-11-14T22:30:27+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer"
+    }
+   ]
+  },
+  {
    "title": "AI-assisted BroadWorks campaign targeted telecom provider and customers",
    "date": "2026-11-08",
    "category": "using_ai",
@@ -2341,7 +2441,7 @@
     },
     {
      "date": "2026-11-11",
-     "what": "Operation Snowball used an autonomous framework built with a jailbroken DeepSeek Flash model to exploit Cisco BroadWorks CVE-2026-20320 and other vulnerabilities. The activity enumerated hundreds of assets, extracted dozens of credential sets, recovered BroadWorks system and SSL private keys, and exfiltrated thousands of subscriber billing and device records over two weeks.",
+     "what": "The agent exploited an unauthenticated Cisco BroadWorks XXE flaw (CVE-2026-20320) on the provider’s BroadWorks XSP. It enumerated hundreds of assets, extracted dozens of credential sets, recovered private keys and SSL credentials, and exfiltrated thousands of subscriber billing and device-record rows over two weeks.",
      "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
      "source": "The Hacker News"
     }
@@ -2870,11 +2970,11 @@
   {
    "title": "Grok-built apps exposed confidential data and plaintext passwords",
    "date": "2026-11-11",
-   "category": "major_cyber",
+   "category": "on_ai_system",
    "victim": "Users and organizations operating publicly accessible Grok-built apps, including staff at X and SpaceXSI and at least 30 other organizations",
    "attacker": "No attacker reported; Claroc researchers discovered publicly accessible applications and exposed data",
    "what": "Claroc found 35,578 of 37,571 Grok-built apps accessible without sign-in. Exposed content included business plans, account and employee lists, patient and fire-department information, and a contractor timesheet containing plaintext employee passwords. Researchers also demonstrated unauthorized viewing, editing, and deletion in two of their own test apps, but did not test whether discovered third-party apps accepted those changes.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
+   "ai_role": "Grok was the AI app-building platform whose published applications exposed organizational data and credentials.",
    "why": "The incident exposed sensitive organizational, medical, operational, and credential data through publicly reachable AI-built applications. The researchers identified 24 exposed staff apps and data from at least 30 other organizations, while the full affected scope and any malicious access remain unknown.",
    "where": "No fixed location",
    "major_impact": "large_scale_data_theft",
@@ -2907,11 +3007,13 @@
    "updates": [
     {
      "date": "2026-11-11",
-     "what": "Claroc found 35,578 of 37,571 Grok-built apps accessible without sign-in. Exposed content included organizational data, a hospital employee directory, an intensive-care briefing, a fire-department shift board, and plaintext employee passwords in application code. SpaceXSI removed 24 staff-built apps; the researchers did not test whether other discovered apps permitted unauthorized modification.",
+     "what": "Claroc found 35,578 of 37,571 Grok-built apps accessible without sign-in. Exposed content included organizational data, a hospital employee directory, an intensive-care briefing, a fire-department shift board, and plaintext employee passwords in source code. Researchers also demonstrated unauthorized access to and modification of records in their own test app, but did not test whether other discovered apps accepted changes.",
      "url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
      "source": "The Hacker News"
     }
-   ]
+   ],
+   "ai_source_url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
+   "ai_source_name": "The Hacker News"
   },
   {
    "title": "Silent Lynx compromised Tajikistan Railway network",
@@ -3949,7 +4051,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "The attacker exploited a remote-code-execution flaw in SGLang on a NEAR AI inference server, accessed requests processed there, reached a deprecated Private Chat system, and accessed 18 older NEAR AI agents. Data taken included about 100 users’ account details, agent chat history, settings and logs; two customer API keys were exposed in logs.",
+     "what": "The attacker exploited a remote-code-execution flaw in the SGLang inference engine and ran code on a NEAR AI inference server, including inside a trusted execution environment. The attacker reached an internal Private Chat system, downloaded account details for about 100 users, accessed data from 18 older NEAR AI agents, and exposed two customers’ NEAR AI Cloud API keys.",
      "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
      "source": "The Hacker News"
     }
@@ -5419,19 +5521,19 @@
    "lat": 36.1622767,
    "lon": -86.7742984,
    "severity": {
-    "level": "unknown",
+    "level": "significant",
     "status": "preliminary",
-    "reason": "Vanderbilt confirmed a cyberattack and active containment, but did not report confirmed service outages, stolen data, financial loss, or the number of compromised systems.",
+    "reason": "Vanderbilt confirmed an active cybersecurity incident and issued containment instructions; a reported ransom note claims broad network compromise and data theft, but encryption, stolen data, and operational disruption were not confirmed.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
      "reach": "single",
-     "damage": "unknown",
+     "damage": "privileged_access",
      "essential": "none",
      "financial": "unknown"
     },
-    "source_url": "https://therecord.media/vanderbilt-cyberattack-ransomware-alert",
-    "assessed_at": "2026-11-12T07:19:07+00:00",
+    "source_url": "https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/",
+    "assessed_at": "2026-11-14T22:30:27+00:00",
     "method": "reported-impact-v1"
    },
    "locations": [
@@ -5442,6 +5544,20 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://therecord.media/vanderbilt-cyberattack-ransomware-alert"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-09",
+     "what": "Vanderbilt confirmed an active cybersecurity incident potentially affecting university devices, systems, and cloud services. The university instructed students, faculty, and staff to shut down devices and disconnect from university Wi-Fi; an alleged Vanderbilt-linked ransom note and compromised-device video were also reported, while encryption and data theft remain unconfirmed.",
+     "url": "https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/",
+     "source": "BleepingComputer"
     }
    ]
   },
@@ -12526,6 +12642,54 @@
    ]
   },
   {
+   "title": "AI-assisted API exploitation affected organizations in Japan",
+   "date": "2026-10-29",
+   "category": "using_ai",
+   "victim": "Multiple organizations in Japan and abroad; specific victims were not reported",
+   "attacker": "Unattributed attackers; JPCERT/CC investigated the activity",
+   "what": "JPCERT/CC found attackers using AI to scan for known vulnerabilities, reverse-engineer Android applications, identify underlying APIs, and test them for flaws including SSRF. Investigators also found evidence of attempts to access internal networks.",
+   "ai_role": "Attackers used AI to support reconnaissance, vulnerability discovery, and API exploitation; autonomous agent control was not established.",
+   "why": "The investigation describes real intrusions affecting multiple organizations, including attempts to access internal networks, rather than merely vulnerability research or blocked scanning.",
+   "where": "Japan and other countries; specific affected locations were not reported",
+   "major_impact": "critical_network_intrusion",
+   "significance": "JPCERT/CC investigation linked AI-assisted vulnerability discovery and API exploitation to attacks against multiple organizations and identified attempts to reach internal networks. The reporting does not establish the final victims, data theft, or operational disruption.",
+   "id": "582ea901708a4f59",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+   "added": "2026-11-14T22:30:27+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 36.5748441,
+   "lon": 139.2394179,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "JPCERT/CC reported attacks affecting multiple organizations and attempts to access internal networks, but did not report confirmed data theft, service disruption, or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+    "assessed_at": "2026-11-14T22:30:27+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks"
+    }
+   ]
+  },
+  {
    "title": "UNM Health ransomware attack diverted ambulances",
    "date": "2026-10-26",
    "category": "major_cyber",
@@ -13155,13 +13319,13 @@
    "updates": [
     {
      "date": "2026-10-21",
-     "what": "A malicious LiteLLM version, 1.107.0, was uploaded to PyPI and Docker. It contained a credential stealer targeting browser, cloud, and AI secrets, plus a dormant command-and-control capability.",
+     "what": "A malicious LiteLLM version 1.107.0 was uploaded to PyPI and Docker. According to the supplied report, it contained a credential stealer targeting browser, cloud, and AI secrets, plus dormant command-and-control capability.",
      "url": "https://www.wiz.io/blog/php2shell-php-rce",
      "source": "Wiz Research"
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker hijacked LiteLLM’s release workflow and published malicious PyPI wheels and GHCR/Docker Hub images for version 1.107.0 and related tags. The payload used Python startup files to execute on interpreter launch and exfiltrate cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials to a lookalike domain.",
+     "what": "The attacker published a malicious LiteLLM 1.107.0 PyPI release and corresponding container images. The payload executed at Python interpreter startup and was designed to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and AI-coding-tool credentials, with possible access to LiteLLM-stored provider credentials.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -14311,7 +14475,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "The Gheist campaign planted secret-dumping GitHub Actions workflows in repositories accessible to stolen tokens. Wiz recovered more than 13,500 malicious branches from over 850 compromised accounts; in private repositories and GitHub Enterprise environments, workflows executed, exposed repository and environment secrets, and in some cases enabled cloning of private repositories and cloud-role enumeration.",
+     "what": "Attackers used stolen GitHub tokens to plant sync-check workflows in repositories the tokens could access. In private repositories and GitHub Enterprise environments, the workflows executed and dumped repository and environment secrets through GitHub’s API; Wiz recovered more than 13,500 planted branches and observed follow-on AWS credential enumeration. A self-hosted-runner variant also searched for cloud credentials, private keys, .env files, CI/CD credentials, and AI-provider keys.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -17381,7 +17545,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Attackers stole GCP credentials and MFA codes, altered IAM and organization policies, added external accounts, and linked attacker-controlled projects to victims’ billing accounts. The linked projects then generated high-volume Gemini API usage charged to the victims.",
+     "what": "Wiz investigated multiple intrusions in which attackers phished privileged GCP credentials and MFA codes, disabled organization policy guardrails, added external accounts, and linked attacker-controlled GCP projects to victims’ billing accounts. The attackers then generated high-volume Gemini API usage charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -17908,7 +18072,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested credentials, created privileged identities, escalated Kubernetes access, compromised CI/CD and GitOps systems, and moved across the organization’s cloud environments. The agent accessed sensitive data and used repositories, webhooks, ConfigMaps, and attempted storage buckets for exfiltration.",
+     "what": "Wiz investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and persistence, harvested Kubernetes and cloud credentials, created privileged identities, escalated to cluster administrator, accessed CI/CD and GitOps systems, and attempted to collect and exfiltrate sensitive data.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -39638,6 +39802,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-14T06:34:05+00:00",
+ "last_added": "2026-11-14T22:30:27+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
