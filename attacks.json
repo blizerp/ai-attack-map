@@ -1,6 +1,84 @@
 {
- "updated": "2026-11-14T06:34:05+00:00",
+ "updated": "2026-11-14T18:11:57+00:00",
  "incidents": [
+  {
+   "title": "Trojanized Claude Code extension distributed through Cursor Marketplace",
+   "date": "2026-10-29",
+   "category": "on_ai_system",
+   "victim": "Users who installed Claude Code extension version 2.1.313 through the Cursor Marketplace; at most 5,000 users",
+   "attacker": "Unknown; the method used to introduce the unauthorized update remains unclear.",
+   "what": "Attackers distributed a modified version of Anthropic's Claude Code extension under its legitimate publisher identity and extension ID. The update added an SSH key, attempted persistence through scheduled tasks, crontab, and LaunchAgent, created a reverse tunnel, and sent host reconnaissance data to attacker-controlled infrastructure.",
+   "ai_role": "The compromised package was Anthropic's Claude Code extension, an AI coding tool; reporting does not establish that AI was used by the attacker.",
+   "why": "The extension could provide persistent access to developer systems and expose information about usernames, hosts, Git configuration, and credential-related environment variables. Cursor shut down its marketplace, removed the malicious version, and Anthropic released version 2.1.314.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "A legitimate AI coding-extension update was compromised in a software-distribution marketplace and reached up to 5,000 users. Researchers observed persistence, reverse-tunnel functionality, and reconnaissance collection, although successful SSH access was constrained on many Windows and macOS systems by administrative requirements.",
+   "id": "e3ed66e626b0480b",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+   "added": "2026-10-30T13:03:35+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-11-14",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Cursor confirmed internal and customer-data access, including unredacted API credentials, and potentially up to 5,000 recipients of malicious extensions. Cursor temporarily disabled some services as a precaution; actual successful backdoor installations and final data impact were not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+    "assessed_at": "2026-11-14T18:11:57+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/malicious-claude-code-extension-served-in-cursor-supply-chain-attack/"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-30",
+     "what": "A trojanized Claude Code extension distributed for about 11 hours installed persistence, attempted to add an attacker-controlled SSH key and establish a reverse tunnel, and sent host reconnaissance including usernames, hostnames, public IPs, Git email addresses, and environment-variable names. Researchers found coding errors likely prevented remote SSH access on many Windows and macOS systems, although persistence and reconnaissance still functioned.",
+     "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
+     "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-10-30",
+     "what": "A tampered Claude Code extension distributed through Cursor's marketplace inserted an SSH key, attempted to enable SSH and establish a reverse tunnel, installed persistence, and sent host reconnaissance data. Cursor removed the versions, rebuilt the marketplace, rotated keys, and took the attack server offline; the incident affected at most 5,000 users.",
+     "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+     "source": "The Hacker News"
+    },
+    {
+     "date": "2026-11-02",
+     "what": "A tampered copy of Anthropic’s Claude Code extension was published in the Cursor VS Code Extension Marketplace for about 11 hours. Its JavaScript attempted host reconnaissance, file and OS-command execution, SSH-key installation, reverse tunneling, and persistence on macOS and Windows systems.",
+     "url": "https://www.securityweek.com/malicious-claude-code-extension-served-in-cursor-supply-chain-attack/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-14",
+     "what": "Attackers accessed Cursor through a compromised Fireworks AI key, copied historical coding-agent traces, extracted credentials, accessed Cursor internal SaaS data, and used a stolen marketplace credential to publish malicious Claude Code extension versions 2.1.312 and 2.1.313. The extensions were available for about 11 hours and attempted to install persistent SSH backdoors.",
+     "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+     "source": "BleepingComputer"
+    }
+   ]
+  },
   {
    "title": "4EverAble2Shell exploited to compromise 21 N-central servers",
    "date": "2026-11-12",
@@ -2250,12 +2328,6 @@
    ],
    "updates": [
     {
-     "date": "2026-11-10",
-     "what": "The agent exploited an unauthenticated Cisco BroadWorks XXE vulnerability, enumerated hundreds of assets, recovered system and SSL private keys, extracted dozens of credential sets, and exfiltrated thousands of subscriber billing and device-record rows. It also used Sliver, Chisel, and Behinder web shells for post-exploitation and persistence.",
-     "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
-     "source": "AI agent attack tracker"
-    },
-    {
      "date": "2026-11-11",
      "what": "Attackers exploited the unauthenticated Cisco BroadWorks CVE-2026-20320 XXE flaw to read files from an XSP server. Malbear Labs reported recovery of the BroadWorks system-identity private key, three SSL credential sets, and three additional private keys, enabling potential impersonation in inter-component communications.",
      "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
@@ -2266,6 +2338,12 @@
      "what": "The actor exploited the Cisco BroadWorks CVE-2026-20320 vulnerability in a campaign using an autonomous AI intrusion harness. The campaign involved asset enumeration, credential theft, and attempted harvesting of subscriber billing and device records.",
      "url": "https://www.securityweek.com/threat-actors-exploit-openwave-cisco-broadworks-vulnerabilities/",
      "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-11",
+     "what": "Operation Snowball used an autonomous framework built with a jailbroken DeepSeek Flash model to exploit Cisco BroadWorks CVE-2026-20320 and other vulnerabilities. The activity enumerated hundreds of assets, extracted dozens of credential sets, recovered BroadWorks system and SSL private keys, and exfiltrated thousands of subscriber billing and device records over two weeks.",
+     "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
+     "source": "The Hacker News"
     }
    ]
   },
@@ -2729,9 +2807,9 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "Attackers reached Fireworks AI development machines through an unnamed third-party cloud provider and ran an unauthorized workload. The incident exposed resource metadata, billing information, some incomplete model weights and datasets, environment secrets, and Notion AI chat transcripts used for the Insights feature.",
+     "what": "Attackers reached Fireworks AI development machines through an unnamed third-party cloud provider and ran an unauthorized workload. The incident exposed resource metadata, billing information, incomplete model weights and datasets for certain customers, and Notion AI chat transcripts used for the Insights feature.",
      "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
-     "source": "AI agent attack tracker"
+     "source": "The Hacker News"
     },
     {
      "date": "2026-11-11",
@@ -2828,10 +2906,10 @@
    },
    "updates": [
     {
-     "date": "2026-11-10",
-     "what": "Claroc found 35,578 of 37,571 Grok-built apps accessible without sign-in. Exposed material included confidential business plans, a hospital employee directory, an intensive-care briefing about one patient, a fire-department live shift board, and plaintext employee passwords in source code. Researchers also demonstrated unauthorized viewing, editing, and deletion in two test applications, but did not test whether the discovered third-party apps allowed those actions.",
+     "date": "2026-11-11",
+     "what": "Claroc found 35,578 of 37,571 Grok-built apps accessible without sign-in. Exposed content included organizational data, a hospital employee directory, an intensive-care briefing, a fire-department shift board, and plaintext employee passwords in application code. SpaceXSI removed 24 staff-built apps; the researchers did not test whether other discovered apps permitted unauthorized modification.",
      "url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
-     "source": "AI agent attack tracker"
+     "source": "The Hacker News"
     }
    ]
   },
@@ -3870,10 +3948,10 @@
    },
    "updates": [
     {
-     "date": "2026-11-08",
-     "what": "The attacker exploited a remote-code-execution flaw in SGLang running on a NEAR AI inference server and reached systems behind the service. Data from 18 older NEAR AI Agents, including chat history, settings and logs, was taken; account details for about 100 Private Chat users were downloaded, and two customers’ Cloud API keys were exposed in logs.",
+     "date": "2026-11-10",
+     "what": "The attacker exploited a remote-code-execution flaw in SGLang on a NEAR AI inference server, accessed requests processed there, reached a deprecated Private Chat system, and accessed 18 older NEAR AI agents. Data taken included about 100 users’ account details, agent chat history, settings and logs; two customer API keys were exposed in logs.",
      "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
-     "source": "AI agent attack tracker"
+     "source": "The Hacker News"
     }
    ]
   },
@@ -9754,74 +9832,6 @@
    ]
   },
   {
-   "title": "Trojanized Claude Code extension distributed through Cursor Marketplace",
-   "date": "2026-10-29",
-   "category": "on_ai_system",
-   "victim": "Users who installed Claude Code extension version 2.1.313 through the Cursor Marketplace; at most 5,000 users",
-   "attacker": "Unknown; the method used to introduce the unauthorized update remains unclear.",
-   "what": "Attackers distributed a modified version of Anthropic's Claude Code extension under its legitimate publisher identity and extension ID. The update added an SSH key, attempted persistence through scheduled tasks, crontab, and LaunchAgent, created a reverse tunnel, and sent host reconnaissance data to attacker-controlled infrastructure.",
-   "ai_role": "The compromised package was Anthropic's Claude Code extension, an AI coding tool; reporting does not establish that AI was used by the attacker.",
-   "why": "The extension could provide persistent access to developer systems and expose information about usernames, hosts, Git configuration, and credential-related environment variables. Cursor shut down its marketplace, removed the malicious version, and Anthropic released version 2.1.314.",
-   "where": "No fixed location",
-   "major_impact": "supply_chain_compromise",
-   "significance": "A legitimate AI coding-extension update was compromised in a software-distribution marketplace and reached up to 5,000 users. Researchers observed persistence, reverse-tunnel functionality, and reconnaissance collection, although successful SSH access was constrained on many Windows and macOS systems by administrative requirements.",
-   "id": "e3ed66e626b0480b",
-   "source_name": "The Hacker News",
-   "source_url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
-   "added": "2026-10-30T13:03:35+00:00",
-   "reported_date": "2026-10-30",
-   "last_reported": "2026-11-02",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "The malicious update was distributed to at most 5,000 users and was observed adding an attacker SSH key, installing persistence, and transmitting host details. The reporting does not establish confirmed follow-on commands, file theft, or operational outages.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "privileged_access",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
-    "assessed_at": "2026-10-30T13:03:35+00:00",
-    "method": "reported-impact-v1"
-   },
-   "more_sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/"
-    },
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/malicious-claude-code-extension-served-in-cursor-supply-chain-attack/"
-    }
-   ],
-   "updates": [
-    {
-     "date": "2026-10-30",
-     "what": "A trojanized Claude Code extension distributed for about 11 hours installed persistence, attempted to add an attacker-controlled SSH key and establish a reverse tunnel, and sent host reconnaissance including usernames, hostnames, public IPs, Git email addresses, and environment-variable names. Researchers found coding errors likely prevented remote SSH access on many Windows and macOS systems, although persistence and reconnaissance still functioned.",
-     "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
-     "source": "BleepingComputer"
-    },
-    {
-     "date": "2026-10-30",
-     "what": "A tampered Claude Code extension distributed through Cursor's marketplace inserted an SSH key, attempted to enable SSH and establish a reverse tunnel, installed persistence, and sent host reconnaissance data. Cursor removed the versions, rebuilt the marketplace, rotated keys, and took the attack server offline; the incident affected at most 5,000 users.",
-     "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
-     "source": "The Hacker News"
-    },
-    {
-     "date": "2026-11-02",
-     "what": "A tampered copy of Anthropic’s Claude Code extension was published in the Cursor VS Code Extension Marketplace for about 11 hours. Its JavaScript attempted host reconnaissance, file and OS-command execution, SSH-key installation, reverse tunneling, and persistence on macOS and Windows systems.",
-     "url": "https://www.securityweek.com/malicious-claude-code-extension-served-in-cursor-supply-chain-attack/",
-     "source": "SecurityWeek"
-    }
-   ]
-  },
-  {
    "title": "ARTEX AI agent breached Dutch vulnerability-disclosure institute",
    "date": "2026-09",
    "category": "by_ai_agent",
@@ -13151,7 +13161,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker hijacked LiteLLM’s release workflow and published malicious PyPI wheels and GHCR/Docker Hub images. The payload used Python startup files to execute on interpreter launch and was designed to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials; it also queried stored provider-credential tables where configured.",
+     "what": "The attacker hijacked LiteLLM’s release workflow and published malicious PyPI wheels and GHCR/Docker Hub images for version 1.107.0 and related tags. The payload used Python startup files to execute on interpreter launch and exfiltrate cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials to a lookalike domain.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -14301,7 +14311,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Wiz observed the campaign planting secret-dumping GitHub Actions workflows in repositories accessible to stolen tokens. In private repositories and GitHub Enterprise environments, workflows executed, printed repository and environment secrets into logs, and the logs were downloaded and deleted; some activity also reached self-hosted runners and cloud-role credentials.",
+     "what": "The Gheist campaign planted secret-dumping GitHub Actions workflows in repositories accessible to stolen tokens. Wiz recovered more than 13,500 malicious branches from over 850 compromised accounts; in private repositories and GitHub Enterprise environments, workflows executed, exposed repository and environment secrets, and in some cases enabled cloning of private repositories and cloud-role enumeration.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -14579,7 +14589,7 @@
    "updates": [
     {
      "date": "2026-10-26",
-     "what": "A staff member uploaded a spreadsheet containing patient information to a public AI platform. The data included names, treatment dates, departments, account and medical-record numbers, medications, and provider names; the medical center later deleted the prompt and requested deletion from the provider.",
+     "what": "A staff member uploaded a spreadsheet containing limited patient information to a public AI tool. The data included names, admission and treatment dates, department information, account and medical-record numbers, medications, and treating-provider names; the medical center later deleted the prompt and requested deletion from the provider.",
      "url": "https://www.hipaajournal.com/denver-health-medical-plan-data-breach/",
      "source": "HIPAA Journal"
     }
@@ -14694,7 +14704,7 @@
    "updates": [
     {
      "date": "2026-10-26",
-     "what": "BASS Medical Group identified suspicious network activity and determined on September 22 that an unauthorized party had accessed its network. Medical treatment codes, billing information, and health insurance information may have been viewed or acquired.",
+     "what": "BASS Medical Group identified suspicious network activity on September 4, 2026. Its investigation determined on September 22 that an unauthorized party accessed the network and that medical treatment codes, billing information, and health-insurance information may have been viewed or acquired.",
      "url": "https://www.hipaajournal.com/denver-health-medical-plan-data-breach/",
      "source": "HIPAA Journal"
     }
@@ -17371,7 +17381,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Attackers phished privileged Google Cloud credentials and MFA codes, altered IAM and organization policies, added external accounts, and linked attacker-controlled GCP projects to victims’ billing accounts. The linked projects then generated large volumes of Gemini API requests charged to the victims.",
+     "what": "Attackers stole GCP credentials and MFA codes, altered IAM and organization policies, added external accounts, and linked attacker-controlled projects to victims’ billing accounts. The linked projects then generated high-volume Gemini API usage charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -18451,7 +18461,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz reported that an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, accessed AWS and GCP environments, escalated to Kubernetes cluster-admin, modified GitOps-managed production workloads, and collected sensitive data. The agent also attempted multiple exfiltration routes.",
+     "what": "The agent exploited an exposed Kafka UI Java remote-code-execution vulnerability, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, accessed AWS and GCP control planes, modified GitOps and production workloads, and attempted to collect and exfiltrate secrets and sensitive database data. Wiz also observed the same source IP scanning more than 600 other customer environments during the attack window.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -27294,7 +27304,7 @@
    "updates": [
     {
      "date": "2026-09-17",
-     "what": "A malicious cyber actor accessed the tanker’s onboard IT and other systems while it was reportedly passing through the Strait of Gibraltar. Crew-member reporting alleged interference with engine-room coolant flow, engine speed, fuel delivery, navigation, cargo systems, and communications; Coast Guard investigators confirmed evidence of a malicious actor but did not publicly confirm every alleged effect.",
+     "what": "A cyber intrusion reportedly reached onboard engine-room, navigation, cargo, fuel-delivery, and communications systems while the tanker was sailing toward the United States. Investigators found evidence of a malicious cyber actor after reviewing the vessel’s IT and onboard systems, while the specific technical effects remain partly based on Iranian media reporting.",
      "url": "https://www.securityweek.com/cyberattacks-on-two-oil-tankers-prompt-coast-guard-fbi-to-board-vessels/",
      "source": "SecurityWeek"
     }
@@ -27469,7 +27479,7 @@
     },
     {
      "date": "2026-09-17",
-     "what": "Revolut notified potentially affected users that personal, passport, contact, and financial information had been compromised after the company received fraudulent requests appearing to come from a government agency over roughly five months.",
+     "what": "Attackers posed as a government agency and sent fraudulent legal requests to Revolut for roughly five months. Revolut reportedly supplied customer information, including personal, passport, email, phone and financial data; a $3 million ransom demand was later made publicly.",
      "url": "https://www.securityweek.com/revolut-data-breach-5-months-680-high-profile-accounts-3m-ransom/",
      "source": "SecurityWeek"
     }
@@ -35596,7 +35606,7 @@
    "updates": [
     {
      "date": "2026-08-19",
-     "what": "Attackers exploited CVE-2026-33824, a remotely exploitable Windows IKE Service Extension flaw, in an AI-enabled campaign that also involved manual exploitation.",
+     "what": "Attackers exploited CVE-2026-33824 in the Windows Internet Key Exchange Service Extension for remote, unauthenticated code execution. The campaign used AI-enabled autonomous hacking alongside manual exploitation.",
      "url": "https://www.securityweek.com/cisa-urges-immediate-patching-of-exploited-microsoft-vmware-apple-vulnerabilities/",
      "source": "SecurityWeek"
     }
