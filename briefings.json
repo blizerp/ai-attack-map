@@ -6126,11 +6126,185 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-14-evening",
+   "date": "2026-11-14",
+   "edition": "evening",
+   "published_at": "2026-11-14T22:32:25+00:00",
+   "generated_at": "2026-11-14T22:32:25+00:00",
+   "scheduled_for": "2026-11-14T22:00:00+00:00",
+   "window_start": "2026-11-14T17:11:38+00:00",
+   "window_end": "2026-11-14T22:32:25+00:00",
+   "sector_window_start": "2026-11-13T22:32:25+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "A newly reported breach at AI coding platform Cursor exposed some developer data and briefly distributed malicious software through its extension marketplace. No broad household internet outage is confirmed.",
+    "items": [
+     {
+      "headline": "Malicious coding extension reached up to 5,000 Cursor users",
+      "what_happened": "Cursor said attackers used a stolen key from its AI provider, Fireworks, to access internal data and publish altered copies of Anthropic’s Claude Code extension on October 29. The extensions were available for about 11 hours and attempted to install hidden remote access on developers’ computers.",
+      "impact": "Up to 5,000 developers may have received the altered extensions. Some historical coding conversations contained exposed credentials. Cursor says fewer than 0.05% of users had traces exposed and fewer than 0.01% had API credentials compromised. The legitimate Anthropic extension was not affected.",
+      "what_next": "Cursor says it removed the extensions, rebuilt its marketplace and moved AI processing away from Fireworks. Its investigation and customer notices may clarify which users installed the altered versions and whether the hidden access worked.",
+      "change": "New report",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+        "published": "2026-11-14T17:27:25+00:00"
+       }
+      ],
+      "incident_ids": [
+       "e3ed66e626b0480b"
+      ]
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "",
+     "items": []
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "A developer platform breach briefly affected software distributed through Cursor’s extension marketplace.",
+     "items": [
+      {
+       "headline": "Malicious coding extension reached up to 5,000 Cursor users",
+       "what_happened": "Cursor said attackers used a stolen key from Fireworks, an outside AI provider, to access internal data and publish altered Claude Code extensions on October 29. The extensions were available for about 11 hours and attempted to install hidden remote access.",
+       "impact": "Up to 5,000 developers may have received the altered extensions. Some historical coding conversations contained exposed credentials. No broad internet outage was reported.",
+       "what_next": "Cursor says it removed the extensions, rebuilt its marketplace and moved AI processing away from Fireworks. The investigation may identify which users installed the altered versions and whether the hidden access worked.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+         "published": "2026-11-14T17:27:25+00:00"
+        }
+       ],
+       "incident_ids": [
+        "e3ed66e626b0480b"
+       ]
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "A compromised outside AI provider helped attackers reach a software marketplace and distribute altered developer software.",
+     "items": [
+      {
+       "headline": "Fireworks breach helped attackers distribute altered developer software",
+       "what_happened": "Attackers used a stolen access key from Fireworks, an outside AI infrastructure provider, to reach Cursor data and later publish malicious copies of Claude Code through Cursor’s marketplace.",
+       "impact": "Up to 5,000 developers may have received the altered extensions. The incident shows how a breach at an outside provider can affect software and data handled by another company. No compromise of Anthropic’s legitimate extension was reported.",
+       "what_next": "Cursor has moved AI processing away from Fireworks and rebuilt its marketplace. Further investigation may clarify the full chain of access and the number of developers who installed the altered software.",
+       "change": "New report",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+         "published": "2026-11-14T17:27:25+00:00"
+        }
+       ],
+       "incident_ids": [
+        "e3ed66e626b0480b"
+       ]
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below."
+   ],
+   "sources": [
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 722
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 5,
+   "usage": {
+    "completion_tokens": 876,
+    "prompt_tokens": 12718,
+    "total_tokens": 13594,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 175,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 12715,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-14T17:11:38+00:00"
+  "checked_at": "2026-11-14T22:32:25+00:00"
  },
  "automatic_attempts": {
   "2026-11-11-morning": {
@@ -6160,6 +6334,10 @@
   "2026-11-14-morning": {
    "count": 1,
    "checked_at": "2026-11-14T17:11:38+00:00"
+  },
+  "2026-11-14-evening": {
+   "count": 1,
+   "checked_at": "2026-11-14T22:32:25+00:00"
   }
  }
 }
