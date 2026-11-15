@@ -6300,21 +6300,125 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-15-morning",
+   "date": "2026-11-15",
+   "edition": "morning",
+   "published_at": "2026-11-15T17:14:47+00:00",
+   "generated_at": "2026-11-15T17:14:47+00:00",
+   "scheduled_for": "2026-11-15T13:00:00+00:00",
+   "window_start": "2026-11-14T22:32:25+00:00",
+   "window_end": "2026-11-15T17:14:47+00:00",
+   "sector_window_start": "2026-11-14T17:14:47+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting identifies the outside provider involved in the Cursor breach and confirms a separate Uber data incident linked to the same provider. TSMC also reported employee data exposed from a cloud provider. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Cloud-provider breach exposed TSMC employee data",
+      "what_happened": "TSMC confirmed that current and former employee information appeared online after a breach at a cloud provider it uses. The company says its own systems were not compromised. The data reportedly includes personal, contact and banking information, but the full leak remains unconfirmed.",
+      "impact": "Employees may face targeted scams, identity theft or financial fraud. TSMC says production and customer operations are not affected. The reported dataset allegedly covers about 46,000 records, but that figure comes from the attacker and is not independently confirmed.",
+      "what_next": "TSMC is notifying affected staff, offering support and using an outside security firm. The company and investigators may clarify the provider involved, the full data scope and whether more records are released.",
+      "change": "New report",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
+        "published": "2026-11-15T15:23:48+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Cursor breach also exposed data from Uber and coding customers",
+      "what_happened": "Cursor said the stolen Fireworks AI provider key allowed attackers to reach limited internal data before they planted a malicious coding extension on October 29. Cursor now says the breach also exposed some support data, source code and credentials. Uber separately confirmed attackers used the provider’s compromised credentials to access Uber data.",
+      "impact": "Some Cursor users may have had coding conversations or credentials exposed, while up to 5,000 users may have received the altered extension. Uber has not said how many people were affected; reports say drivers’ license information was stolen. Cursor temporarily disabled some services during containment.",
+      "what_next": "Cursor says no additional malicious activity has been found since November 1 and is notifying affected users. Cursor, Uber and other provider customers may disclose more about affected records and recovery.",
+      "change": "Impact increased",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+        "published": "2026-11-15T08:22:04+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below."
+   ],
+   "sources": [
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 722
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 3,
+   "usage": {
+    "completion_tokens": 622,
+    "prompt_tokens": 10060,
+    "total_tokens": 10682,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 109,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 10057,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-14T22:32:25+00:00"
+  "checked_at": "2026-11-15T17:14:47+00:00"
  },
  "automatic_attempts": {
-  "2026-11-11-morning": {
-   "count": 1,
-   "checked_at": "2026-11-11T15:19:25+00:00"
-  },
-  "2026-11-11-evening": {
-   "count": 1,
-   "checked_at": "2026-11-11T22:00:49+00:00"
-  },
   "2026-11-12-morning": {
    "count": 2,
    "checked_at": "2026-11-13T01:09:17+00:00"
@@ -6338,6 +6442,10 @@
   "2026-11-14-evening": {
    "count": 1,
    "checked_at": "2026-11-14T22:32:25+00:00"
+  },
+  "2026-11-15-morning": {
+   "count": 1,
+   "checked_at": "2026-11-15T17:14:47+00:00"
   }
  }
 }
