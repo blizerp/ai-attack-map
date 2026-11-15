@@ -132,16 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated multi-organization campaign involving compromised GitHub accounts, private repositories, workflow execution, and credential-access activity; it is already tracked under the same Gheist campaign.",
+  "status": "exclude",
+  "reason": "This is an additional source describing the already-tracked Gheist campaign; it should not create a duplicate incident record.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated multi-organization campaign involving compromised GitHub accounts, private repositories, workflow execution, and credential-access activity; it is already tracked under the same Gheist campaign.",
-    "title": "Gheist campaign compromised more than 850 GitHub accounts",
-    "incident_id": "fdf212b3998ab3a2"
+    "status": "exclude",
+    "reason": "This is an additional source describing the already-tracked Gheist campaign; it should not create a duplicate incident record.",
+    "title": "Gheist campaign abused stolen GitHub tokens"
    }
   ],
   "evidence": "article",
@@ -18753,15 +18752,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz independently substantiated an actual AI-operated compromise with privileged access, production-workload modification, and sensitive-data access; this is the same investigation already tracked under ae8f3c2f8a5f5092.",
+  "reason": "Wiz CIRT substantiated an actual AI-agent-driven intrusion against a real organization, with privileged access, production-environment compromise, and sensitive-data access. This is the same incident already tracked under ae8f3c2f8a5f5092.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz independently substantiated an actual AI-operated compromise with privileged access, production-workload modification, and sensitive-data access; this is the same investigation already tracked under ae8f3c2f8a5f5092.",
-    "title": "AI agent conducted multi-cloud intrusion into one organization",
+    "reason": "Wiz CIRT substantiated an actual AI-agent-driven intrusion against a real organization, with privileged access, production-environment compromise, and sensitive-data access. This is the same incident already tracked under ae8f3c2f8a5f5092.",
+    "title": "Wiz observes AI agent conduct multi-cloud intrusion",
     "incident_id": "ae8f3c2f8a5f5092"
    }
   ],
@@ -19245,15 +19244,16 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is a substantive, corroborated cloud-AI billing-abuse incident, but it duplicates the already-tracked f58ed76ff84133f9 record covering GCP takeover and Gemini LLMjacking.",
+  "status": "include",
+  "reason": "Wiz independently substantiated multiple cloud-account compromises and consequential unauthorized AI charges; this is the same campaign already tracked under the supplied duplicate ID.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is a substantive, corroborated cloud-AI billing-abuse incident, but it duplicates the already-tracked f58ed76ff84133f9 record covering GCP takeover and Gemini LLMjacking.",
-    "title": "Phished GCP accounts abused for Gemini LLM usage"
+    "status": "include",
+    "reason": "Wiz independently substantiated multiple cloud-account compromises and consequential unauthorized AI charges; this is the same campaign already tracked under the supplied duplicate ID.",
+    "title": "Phishing-led GCP account hijacking funded unauthorized Gemini usage",
+    "incident_id": "f58ed76ff84133f9"
    }
   ],
   "evidence": "article",
@@ -20054,15 +20054,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a confirmed software supply-chain compromise with observed malicious releases, credential theft, and release-pipeline takeover; it is already tracked as the same LiteLLM incident.",
+  "reason": "Confirmed production release-infrastructure and package compromise with a credential-stealing payload; this is a more detailed report of the already-tracked LiteLLM supply-chain incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a confirmed software supply-chain compromise with observed malicious releases, credential theft, and release-pipeline takeover; it is already tracked as the same LiteLLM incident.",
-    "title": "LiteLLM release compromised to steal credentials",
+    "reason": "Confirmed production release-infrastructure and package compromise with a credential-stealing payload; this is a more detailed report of the already-tracked LiteLLM supply-chain incident.",
+    "title": "LiteLLM 1.107.0 release compromised to steal credentials",
     "incident_id": "e2e13fe6f7503c25"
    }
   ],
@@ -20080,15 +20080,15 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: vulnerability disclosure and research demonstrations without substantiated real-world compromise. No confirmed victim, unauthorized access, or operational consequence is reported.",
+  "reason": "Vulnerability disclosure and controlled exploit demonstration only; no confirmed external compromise or consequential victim impact is reported.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: vulnerability disclosure and research demonstrations without substantiated real-world compromise. No confirmed victim, unauthorized access, or operational consequence is reported.",
-    "title": "Wiz discloses PHP2Shell vulnerabilities and exploit demonstrations"
+    "reason": "Vulnerability disclosure and controlled exploit demonstration only; no confirmed external compromise or consequential victim impact is reported.",
+    "title": "PHP2Shell research disclosed PHP vulnerabilities"
    }
   ],
   "evidence": "article",
@@ -24886,15 +24886,15 @@
  "https://www.wiz.io/blog/the-rise-of-agentic-attacks": {
   "title": "The Rise of Agentic Attacks: What They Look Like, and Where They're Headed",
   "source": "Wiz Research",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Retrospective overview; the substantive cases described are already represented in the tracking list and should not be duplicated.",
+  "reason": "Exclude as a retrospective roundup of incidents already represented in the tracking set; it does not substantively establish a distinct new event.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Retrospective overview; the substantive cases described are already represented in the tracking list and should not be duplicated.",
-    "title": "Wiz summarizes previously tracked agentic intrusions"
+    "reason": "Exclude as a retrospective roundup of incidents already represented in the tracking set; it does not substantively establish a distinct new event.",
+    "title": "Wiz roundup revisits previously tracked agentic intrusions"
    }
   ],
   "evidence": "article",
@@ -26511,15 +26511,42 @@
  "https://www.wiz.io/blog/black-october-for-ai-developer-platforms": {
   "title": "“Black October” for AI Developer Platforms",
   "source": "Wiz Research",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "No distinct new incident can be extracted: substantive events are duplicates of already-tracked Fireworks, NEAR AI, and stolen-key abuse incidents, while other mentions lack corroborated impact or technical detail.",
+  "status": "defer",
+  "reason": "A public incident disclosure is mentioned, but the supplied source provides no substantiated compromise or consequence details.; The source mentions a public disclosure without substantive incident facts.; Insufficient incident facts beyond the existence of a disclosure.; Attacker or third-party claims are not corroborated by victim confirmation or independent technical evidence in the source.; Wiz provides direct researcher evidence of unauthorized credential use and substantial downstream cloud-model consumption; this is the same two-key abuse already represented by incidents 75a9abb54aa30128 and d7a97f151e81f660.; This is substantive new impact information for an already tracked Fireworks incident; it should be retained as an update rather than treated as a new incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "No distinct new incident can be extracted: substantive events are duplicates of already-tracked Fireworks, NEAR AI, and stolen-key abuse incidents, while other mentions lack corroborated impact or technical detail.",
-    "title": "Wiz update adds no distinct untracked incident"
+    "status": "defer",
+    "reason": "A public incident disclosure is mentioned, but the supplied source provides no substantiated compromise or consequence details.",
+    "title": "Brev disclosed an incident at NVIDIA-hosted developer platform"
+   },
+   {
+    "status": "defer",
+    "reason": "The source mentions a public disclosure without substantive incident facts.",
+    "title": "Trigger.dev disclosed a security incident"
+   },
+   {
+    "status": "defer",
+    "reason": "Insufficient incident facts beyond the existence of a disclosure.",
+    "title": "kernel.sh disclosed an incident affecting its platform"
+   },
+   {
+    "status": "defer",
+    "reason": "Attacker or third-party claims are not corroborated by victim confirmation or independent technical evidence in the source.",
+    "title": "RunPod incident reported through social media"
+   },
+   {
+    "status": "include",
+    "reason": "Wiz provides direct researcher evidence of unauthorized credential use and substantial downstream cloud-model consumption; this is the same two-key abuse already represented by incidents 75a9abb54aa30128 and d7a97f151e81f660.",
+    "title": "Stolen AI credentials abused for large-scale Bedrock calls",
+    "incident_id": "2155809c34b42e35"
+   },
+   {
+    "status": "include",
+    "reason": "This is substantive new impact information for an already tracked Fireworks incident; it should be retained as an update rather than treated as a new incident.",
+    "title": "Fireworks AI breach led to downstream Notion AI exposure",
+    "incident_id": "65d188cb3581ec1f"
    }
   ],
   "evidence": "article",
@@ -33432,14 +33459,14 @@
  "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html": {
   "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
   "source": "The Hacker News",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The source substantiates a real compromise of NEAR AI infrastructure with unauthorized code execution, internal-system access, and confirmed data and credential exposure. This is the same incident as the already-tracked NEAR AI SGLang breach.",
+  "reason": "The report substantiates a real compromise of AI inference infrastructure with unauthorized code execution, internal access, data theft, credential exposure, and service containment. It is already tracked as the same NEAR AI SGLang incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The source substantiates a real compromise of NEAR AI infrastructure with unauthorized code execution, internal-system access, and confirmed data and credential exposure. This is the same incident as the already-tracked NEAR AI SGLang breach.",
+    "reason": "The report substantiates a real compromise of AI inference infrastructure with unauthorized code execution, internal access, data theft, credential exposure, and service containment. It is already tracked as the same NEAR AI SGLang incident.",
     "title": "SGLang exploit breached NEAR AI inference infrastructure",
     "incident_id": "bff6180f286a6d5b"
    }
@@ -33561,15 +33588,15 @@
  "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html": {
   "title": "Fireworks AI Confirms Wider Breach Affecting Customer Datasets, Model Weights and Notion AI Chats",
   "source": "The Hacker News",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated expansion of the already tracked Fireworks AI incident, with confirmed access to customer datasets, model artifacts, billing information, secrets, and Notion AI chats.",
+  "reason": "This is a substantive update to the already tracked Fireworks AI incident, confirming broader unauthorized access and customer-data impact, including Notion AI chats.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated expansion of the already tracked Fireworks AI incident, with confirmed access to customer datasets, model artifacts, billing information, secrets, and Notion AI chats.",
-    "title": "Fireworks AI breach exposed customer data and Notion AI chats",
+    "reason": "This is a substantive update to the already tracked Fireworks AI incident, confirming broader unauthorized access and customer-data impact, including Notion AI chats.",
+    "title": "Fireworks AI breach exposed customer datasets and Notion AI chats",
     "incident_id": "73b37c649f3a75f2"
    }
   ],
@@ -33714,15 +33741,15 @@
  "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html": {
   "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
   "source": "The Hacker News",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated real-world intrusion involving an autonomous AI agent, a telecom provider and 13 hosted organizations, with confirmed credential/private-key theft and data exfiltration. It is the same Operation Snowball campaign already tracked under 30c634a40378b291, with later reporting establishing the agent’s operational role.",
+  "reason": "This is the same substantively documented Operation Snowball/BroadWorks campaign already tracked under 30c634a40378b291, with additional reporting on the exploited vulnerability, AI-agent actions, credentials, keys, and exfiltrated records.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated real-world intrusion involving an autonomous AI agent, a telecom provider and 13 hosted organizations, with confirmed credential/private-key theft and data exfiltration. It is the same Operation Snowball campaign already tracked under 30c634a40378b291, with later reporting establishing the agent’s operational role.",
-    "title": "Operation Snowball breached telecom infrastructure and customer networks",
+    "reason": "This is the same substantively documented Operation Snowball/BroadWorks campaign already tracked under 30c634a40378b291, with additional reporting on the exploited vulnerability, AI-agent actions, credentials, keys, and exfiltrated records.",
+    "title": "AI agent breached European telecom provider and 13 hosted companies",
     "incident_id": "30c634a40378b291"
    }
   ],
@@ -34413,15 +34440,15 @@
  "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html": {
   "title": "Over 35,000 Grok-Built Apps Exposed Online, Some Leaking Confidential Data and Passwords",
   "source": "The Hacker News",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Credible researcher evidence substantiates consequential exposure of sensitive organizational data and credentials through compromised access controls in a real AI app platform; this is the same incident already tracked under 63d30948b67e033c.",
+  "reason": "This is a substantiated compromise/exposure of an AI application platform involving sensitive organizational records and plaintext passwords, and it is the same event already tracked under the supplied incident ID.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Credible researcher evidence substantiates consequential exposure of sensitive organizational data and credentials through compromised access controls in a real AI app platform; this is the same incident already tracked under 63d30948b67e033c.",
-    "title": "Grok-built apps exposed confidential data and passwords",
+    "reason": "This is a substantiated compromise/exposure of an AI application platform involving sensitive organizational records and plaintext passwords, and it is the same event already tracked under the supplied incident ID.",
+    "title": "Grok-built apps exposed confidential data and plaintext passwords",
     "incident_id": "63d30948b67e033c"
    }
   ],
@@ -34439,14 +34466,14 @@
  "https://thehackernews.com/2026/11/microsoft-researchers-show-ai-agents.html": {
   "title": "Microsoft Researchers Show AI Agents Can Be Backdoored by Editing Fewer Than 10 Neurons",
   "source": "The Hacker News",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: this is a controlled research demonstration of a possible attack technique, with Microsoft reporting no observed threat-actor use and no real external victim compromise.",
+  "reason": "Exclude: controlled research demonstration and threat assessment without an established external victim or real-world cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is a controlled research demonstration of a possible attack technique, with Microsoft reporting no observed threat-actor use and no real external victim compromise.",
+    "reason": "Exclude: controlled research demonstration and threat assessment without an established external victim or real-world cyber incident.",
     "title": "Researchers demonstrate neuron-level backdoors in AI agents"
    }
   ],
@@ -36214,14 +36241,14 @@
  "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html": {
   "title": "186 Fake AI Domains Redirect Users to ClickFix Lures, Browser Malware, and Search Hijackers",
   "source": "The Hacker News",
-  "checked": "2026-11-15T06:42:38+00:00",
+  "checked": "2026-11-15T18:55:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Independent researchers substantiated an active multi-victim malware and browser-hijacking campaign using 186 lookalike AI domains and malicious extensions. The observed unauthorized browser-control capabilities and broad declared user base make this a meaningful cyber incident, despite unknown confirmed victim count and final data impact.",
+  "reason": "Independent researchers substantiated a live campaign distributing browser-hijacking malware and malicious extensions through 186 fake AI-tool domains; this is the same campaign already tracked under the supplied incident ID.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Independent researchers substantiated an active multi-victim malware and browser-hijacking campaign using 186 lookalike AI domains and malicious extensions. The observed unauthorized browser-control capabilities and broad declared user base make this a meaningful cyber incident, despite unknown confirmed victim count and final data impact.",
+    "reason": "Independent researchers substantiated a live campaign distributing browser-hijacking malware and malicious extensions through 186 fake AI-tool domains; this is the same campaign already tracked under the supplied incident ID.",
     "title": "TypoPrompting campaign abused 186 fake AI-tool domains",
     "incident_id": "50a60ce1a92ef06f"
    }
@@ -38277,6 +38304,108 @@
    "date": "2026-11-14",
    "source": "The Hacker News",
    "published_at": "2026-11-14T12:38:35+00:00"
+  }
+ },
+ "https://www.securityweek.com/pentagon-renames-cdao-super-intelligence-office/": {
+  "title": "Pentagon Renames CDAO ‘Super Intelligence Office’",
+  "source": "SecurityWeek",
+  "checked": "2026-11-15T18:55:28+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Policy and organizational announcement without evidence of a meaningful cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Policy and organizational announcement without evidence of a meaningful cyber incident.",
+    "title": "Pentagon renames CDAO as Super Intelligence Office"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "1b9eae343bbb932640fa9646dc2f5a05cfb4036b084f56554f3c7c433d9781dd",
+  "item": {
+   "id": "b3a1d5bfa580648f",
+   "title": "Pentagon Renames CDAO ‘Super Intelligence Office’",
+   "url": "https://www.securityweek.com/pentagon-renames-cdao-super-intelligence-office/",
+   "date": "2026-11-15",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-15T12:51:33+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/": {
+  "title": "TSMC employee data breach linked to cloud provider",
+  "source": "BleepingComputer",
+  "checked": "2026-11-15T18:55:28+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "TSMC confirmed that sensitive employee data was leaked and matched records held by an external cloud provider; this is the already-tracked TSMC cloud-provider breach.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "TSMC confirmed that sensitive employee data was leaked and matched records held by an external cloud provider; this is the already-tracked TSMC cloud-provider breach.",
+    "title": "TSMC employee data leaked through breached cloud provider",
+    "incident_id": "75ed755b0255baa6"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e81e9623bd33e80e1d11d3bbfd62083eff28f6e89083dfe56103ee5ca8b04a3b",
+  "item": {
+   "id": "23c8f5807322b69b",
+   "title": "TSMC employee data breach linked to cloud provider",
+   "url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
+   "date": "2026-11-15",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-15T15:23:48+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/": {
+  "title": "FBI warns ARTEX AI hacking tool is powering global cyberattacks",
+  "source": "BleepingComputer",
+  "checked": "2026-11-15T18:55:28+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Exclude as a recap of incidents already tracked, including the ConnectWise campaign, South Korean bank attacks, the over-90-organization campaign, and Vapor Panda activity; no distinct newly reported incident is substantiated.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Exclude as a recap of incidents already tracked, including the ConnectWise campaign, South Korean bank attacks, the over-90-organization campaign, and Vapor Panda activity; no distinct newly reported incident is substantiated.",
+    "title": "FBI warning recaps previously tracked ARTEX attacks"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "343ffc07cfed0fbf8e3002ad62823206c21af1b06fb4f2e8119357f2cc515c75",
+  "item": {
+   "id": "7a13ce26cfc41d15",
+   "title": "FBI warns ARTEX AI hacking tool is powering global cyberattacks",
+   "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
+   "date": "2026-11-15",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-15T18:29:53+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html": {
+  "title": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident",
+  "source": "The Hacker News",
+  "checked": "2026-11-15T18:55:28+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Uber confirmed a consequential unauthorized access and sensitive-data theft event through a compromised service provider. It is distinct from the already-tracked Cursor extension incident, although both were linked to the Fireworks AI breach.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Uber confirmed a consequential unauthorized access and sensitive-data theft event through a compromised service provider. It is distinct from the already-tracked Cursor extension incident, although both were linked to the Fireworks AI breach.",
+    "title": "Fireworks-linked breach exposed thousands of Uber drivers’ license data",
+    "incident_id": "cb677e5a1956753b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "eadef72fd6a05e7da3a17e176cbc77c5b6e145d54e30ff7b2bb575621faa73b3",
+  "item": {
+   "id": "cb677e5a1956753b",
+   "title": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident",
+   "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+   "date": "2026-11-15",
+   "source": "The Hacker News",
+   "published_at": "2026-11-15T08:22:04+00:00"
   }
  }
 }

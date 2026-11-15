@@ -1,6 +1,96 @@
 {
- "updated": "2026-11-15T06:42:38+00:00",
+ "updated": "2026-11-15T18:55:28+00:00",
  "incidents": [
+  {
+   "title": "TSMC employee data stolen through breached cloud provider",
+   "date": "2026-11-13",
+   "category": "major_cyber",
+   "victim": "Taiwan Semiconductor Manufacturing Company (TSMC) and current and former employees",
+   "attacker": "Unknown; a cybercriminal forum user claimed to possess and sell the data, but attribution was not reported.",
+   "what": "TSMC disclosed that an unnamed cloud service provider was breached and that stolen information was verified to match data held in the provider’s systems. The data reportedly concerns current and former employees and may include contact, identification, and banking information.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident compromised sensitive employee records held by a trusted cloud provider, although TSMC said its own systems, operations, and customer-related data were not compromised.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "TSMC confirmed a real breach of a cloud service provider involving employee information, demonstrating consequential compromise of sensitive organizational records through a supplier. The provider was not named and the full scope of stolen data remains under investigation.",
+   "id": "75ed755b0255baa6",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/tsmc-confirms-employee-data-breach-cloud-provider",
+   "added": "2026-11-13T19:48:17+00:00",
+   "reported_date": "2026-11-13",
+   "last_reported": "2026-11-15",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "TSMC confirmed unauthorized publication of current and former employee data, including a verified sample, but reported no operational or customer impact. The full dataset size and any financial loss remain unconfirmed.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
+    "assessed_at": "2026-11-15T18:55:28+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-15",
+     "what": "TSMC confirmed that employee data published online matched information stored by a cloud service provider it uses. A threat actor advertised a purported 6.9GB dataset, while a 499-row sample was posted; the reported data included national ID numbers, addresses, contact details, and banking information.",
+     "url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
+     "source": "BleepingComputer"
+    }
+   ]
+  },
+  {
+   "title": "Fireworks-linked breach exposed thousands of Uber drivers’ license data",
+   "date": "2026-10-09 to 2026-10-13",
+   "category": "major_cyber",
+   "victim": "Uber and thousands of its drivers",
+   "attacker": "Unknown unauthorized third party; Uber said compromised service-provider credentials were used to access Uber data. TechCrunch identified the provider as Fireworks AI, but attribution was not reported.",
+   "what": "A service provider notified Uber on October 9 that its internal credentials had been compromised. Uber determined on October 13 that the credentials were used to access Uber data connected to the provider, including thousands of drivers’ license information.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident demonstrates downstream compromise through a trusted service provider and theft of sensitive identity documents. Uber had not disclosed the number of affected users.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "Uber confirmed unauthorized access and theft of thousands of drivers’ license information through a compromised service provider; the provider was reported as Fireworks AI, whose breach also affected other customers.",
+   "id": "cb677e5a1956753b",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+   "added": "2026-11-15T18:55:28+00:00",
+   "reported_date": "2026-11-15",
+   "last_reported": "2026-11-15",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Uber confirmed that compromised provider credentials were used to access Uber data and that thousands of drivers’ license information was stolen. Service disruption and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+    "assessed_at": "2026-11-15T18:55:28+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
   {
    "title": "Trojanized Claude Code extension distributed through Cursor Marketplace",
    "date": "2026-10-29",
@@ -1204,44 +1294,6 @@
    ]
   },
   {
-   "title": "TSMC employee data stolen through breached cloud provider",
-   "date": "2026-11-13",
-   "category": "major_cyber",
-   "victim": "Taiwan Semiconductor Manufacturing Company (TSMC) and current and former employees",
-   "attacker": "Unknown; a cybercriminal forum user claimed to possess and sell the data, but attribution was not reported.",
-   "what": "TSMC disclosed that an unnamed cloud service provider was breached and that stolen information was verified to match data held in the provider’s systems. The data reportedly concerns current and former employees and may include contact, identification, and banking information.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The incident compromised sensitive employee records held by a trusted cloud provider, although TSMC said its own systems, operations, and customer-related data were not compromised.",
-   "where": "No fixed location",
-   "major_impact": "supply_chain_compromise",
-   "significance": "TSMC confirmed a real breach of a cloud service provider involving employee information, demonstrating consequential compromise of sensitive organizational records through a supplier. The provider was not named and the full scope of stolen data remains under investigation.",
-   "id": "75ed755b0255baa6",
-   "source_name": "The Record",
-   "source_url": "https://therecord.media/tsmc-confirms-employee-data-breach-cloud-provider",
-   "added": "2026-11-13T19:48:17+00:00",
-   "reported_date": "2026-11-13",
-   "last_reported": "2026-11-13",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "TSMC confirmed that information in the breached provider’s systems matched current and former employee data and said it was notifying affected personnel. TSMC reported no compromise of its own systems or operational/customer data; the alleged 6.9 GB volume and ransom demand were not independently confirmed.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "single",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://therecord.media/tsmc-confirms-employee-data-breach-cloud-provider",
-    "assessed_at": "2026-11-13T19:48:17+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
    "title": "FaceStealer campaign stole crypto and webcam videos from victims",
    "date": "2026-11-12",
    "category": "using_ai",
@@ -2405,7 +2457,15 @@
     "source_url": "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html",
     "assessed_at": "2026-11-15T06:42:38+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-12",
+     "what": "Researchers found 186 domains impersonating 27 AI brands. The domains directed visitors to ClickFix lures, Net Guard browser-hijacking malware, or 16 Chrome extensions that altered search settings and routed searches to a third party. The extensions collectively declared 972,000 users as of November 3, 2026.",
+     "url": "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html",
+     "source": "The Hacker News"
+    }
+   ]
   },
   {
    "title": "AI-assisted BroadWorks campaign targeted telecom provider and customers",
@@ -2479,7 +2539,7 @@
     },
     {
      "date": "2026-11-11",
-     "what": "The AI agent exploited an unauthenticated Cisco BroadWorks XXE vulnerability against the provider’s BroadWorks XSP. It enumerated hundreds of assets, extracted dozens of credential sets, recovered private keys and SSL credentials, and exfiltrated thousands of subscriber billing and device-record rows over two weeks.",
+     "what": "During a two-week campaign, an autonomous framework based on a jailbroken DeepSeek Flash model exploited Cisco BroadWorks CVE-2026-20320 and other vulnerabilities. Researchers reported asset enumeration, extraction of dozens of credential sets, recovery of BroadWorks system and SSL private keys, and exfiltration of thousands of subscriber billing and device records.",
      "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
      "source": "The Hacker News"
     }
@@ -2945,7 +3005,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "Attackers reached Fireworks AI development machines through an unnamed third-party cloud provider and ran an unauthorized workload. The incident exposed resource metadata, billing information, incomplete model weights, datasets, secrets, and Notion AI chat transcripts from affected workspaces.",
+     "what": "Attackers reached Fireworks AI development machines through an unnamed third-party cloud provider and ran an unauthorized workload. The activity exposed resource metadata, billing information, secrets, incomplete model weights and datasets for certain Fireworks customers, and Notion AI chat transcripts used for its Insights feature.",
      "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
      "source": "The Hacker News"
     },
@@ -3045,7 +3105,7 @@
    "updates": [
     {
      "date": "2026-11-11",
-     "what": "Claroc found 35,578 of 37,571 Grok-built apps accessible without sign-in. Exposed content included confidential business data, hospital and fire-department information, and plaintext employee passwords; researchers also accessed and modified records in their own test apps through an uninvited account.",
+     "what": "Claroc researchers found 35,578 of 37,571 Grok-built apps accessible without sign-in. About one in ten reportedly contained internal business or personal data, including hospital employee information, a patient ICU briefing, a fire-department shift board, confidential business documents, and plaintext employee passwords in source code. Researchers demonstrated unauthorized viewing and modification of data in their own test apps, but did not test whether the identified third-party apps accepted changes.",
      "url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
      "source": "The Hacker News"
     }
@@ -3702,11 +3762,11 @@
   {
    "title": "Fireworks AI development machines breached through cloud provider",
    "date": "2026-10-24",
-   "category": "major_cyber",
+   "category": "on_ai_system",
    "victim": "Fireworks AI and some customers",
    "attacker": "Fireworks said evidence indicated links to a financially motivated cybercriminal group; attribution remains unconfirmed.",
    "what": "After a third-party cloud provider experienced a security incident on October 23, attackers used it on October 24 to reach Fireworks development machines and run an unauthorized workload. The breach exposed resource metadata, billing information, and incomplete model weights and datasets for some customers; Fireworks said payment-card numbers were not accessible.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
+   "ai_role": "The source discusses agent-swarm activity and AI credentials, but does not confirm that AI systems carried out the intrusion.",
    "why": "The incident compromised an AI-infrastructure provider through a trusted cloud provider and exposed customer business information and proprietary AI assets. Fireworks detected the activity the same day, revoked credentials, isolated systems, and began a broader investigation.",
    "where": "No fixed location",
    "major_impact": "supply_chain_compromise",
@@ -3735,7 +3795,23 @@
     "source_url": "https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/",
     "assessed_at": "2026-11-10T19:48:29+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "Wiz Research",
+     "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms"
+    }
+   ],
+   "ai_source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+   "ai_source_name": "Wiz Research",
+   "updates": [
+    {
+     "date": "2026-10-30",
+     "what": "Fireworks updated its disclosure concerning an October 24 breach involving its development machines and downstream customer datasets. Notion separately notified potentially affected workspaces because Fireworks-related access extended to Notion AI chats.",
+     "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+     "source": "Wiz Research"
+    }
+   ]
   },
   {
    "title": "Xen Orchestra auth bypass exploited to hijack virtualization hosts",
@@ -4089,7 +4165,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "The attacker exploited a remote-code-execution flaw in SGLang and ran code on a NEAR AI inference server inside a trusted execution environment. The attacker then reached an internal Private Chat system and 18 older NEAR AI agents, downloading account details for about 100 users and agent chat history, settings, and logs; two customer API keys found in logs were revoked.",
+     "what": "The attacker executed code on a NEAR AI inference server, potentially viewing requests processed there, then reached an internal Private Chat system and 18 older NEAR AI Agents. NEAR AI confirmed downloads of account details for about 100 users, agent chat history, settings and logs, and exposure of two customers’ Cloud API keys.",
      "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
      "source": "The Hacker News"
     }
@@ -11140,6 +11216,44 @@
    ]
   },
   {
+   "title": "Stolen AI credentials abused for large-scale Bedrock calls",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "Two unnamed organizations whose AI-service credentials were stolen",
+   "attacker": "Unidentified actors and apparent LLM-resale operators; Wiz observed the abuse but could not definitively link the operators to the initial compromises.",
+   "what": "Wiz observed stolen credentials from two vendor breaches being tested and then used for approximately 800,000 and 1.7 million Amazon Bedrock calls. More than one million calls in the second case succeeded; the first case involved about 90% successful calls.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The activity demonstrates downstream unauthorized use of compromised AI-service credentials and likely incurred more than US$100,000 in usage across the two cases, although the exact victim allocation and final billing losses were not established.",
+   "where": "No fixed location",
+   "major_impact": "major_financial_loss",
+   "significance": "Wiz directly observed stolen organizational credentials being validated, enumerated, and used for high-volume model calls, showing material downstream impact from the AI-platform breach cluster.",
+   "id": "2155809c34b42e35",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+   "added": "2026-11-15T18:55:28+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Compromised credentials were used for roughly 2.5 million Bedrock calls, with over a million successful in one case and likely usage exceeding US$100,000. The source does not establish theft of the organizations' underlying data.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "substantial"
+    },
+    "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+    "assessed_at": "2026-11-15T18:55:28+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
    "title": "Volt Typhoon used Silent Train in zero-day intrusions",
    "date": "2026-10-28",
    "category": "major_cyber",
@@ -13363,7 +13477,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker compromised LiteLLM version 1.107.0 and associated container tags. The releases installed persistence that executed at interpreter startup and harvested cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, with additional queries of stored LiteLLM provider credentials.",
+     "what": "The attacker hijacked LiteLLM’s release process and published malicious PyPI wheels and GHCR/Docker Hub images. The payload used Python startup persistence to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, then encrypted and sent data to a lookalike domain. PyPI quarantined the release and affected container tags were pulled the same day.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -17583,7 +17697,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Wiz investigated multiple intrusions in which attackers phished privileged GCP credentials and MFA codes, disabled organization policy guardrails, added external accounts, and linked attacker-controlled GCP projects to victims’ billing accounts. The attackers then generated high-volume Gemini API usage charged to the victims.",
+     "what": "Attackers used Google Search-ad phishing to steal privileged GCP credentials and MFA codes, altered IAM and organizational policies, added attacker-controlled accounts, and linked external GCP projects to victims’ billing accounts. The attackers then ran high-volume Gemini API workloads charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -18663,7 +18777,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz observed an AI agent exploit an exposed Kafka UI Java RCE, deploy malware and backdoors, harvest Kubernetes and cloud credentials, create privileged identities, access AWS and GCP environments, escalate to cluster-admin, modify production workloads, and access sensitive data. The agent also attempted to exfiltrate data and secrets through webhooks, source control, Kubernetes ConfigMaps, and cloud storage.",
+     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, moved across GCP and AWS, compromised CI/CD and GitOps systems, deployed cluster-admin workloads, accessed sensitive data, and attempted exfiltration.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -39840,6 +39954,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-15T06:42:38+00:00",
+ "last_added": "2026-11-15T18:55:28+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
