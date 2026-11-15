@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T22:30:27+00:00",
+ "updated": "2026-11-15T06:42:38+00:00",
  "incidents": [
   {
    "title": "Trojanized Claude Code extension distributed through Cursor Marketplace",
@@ -2370,6 +2370,44 @@
    ]
   },
   {
+   "title": "TypoPrompting campaign abused 186 fake AI-tool domains",
+   "date": "2026-11-12",
+   "category": "major_cyber",
+   "victim": "Users visiting lookalike AI-tool domains and users of related Chrome extensions; the extensions collectively reported 972,000 users",
+   "attacker": "Not attributed; Island researchers documented the campaign",
+   "what": "Researchers found 186 domains impersonating 27 AI brands. The domains redirected users to ClickFix pages, Net Guard browser-hijacking malware, or search-hijacking Chrome extensions. Observed capabilities included running attacker-controlled JavaScript, changing browser search settings, editing browser profiles, installing extensions, and sending searches to a third party.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign weaponized frequently used AI-tool names to reach potentially large numbers of users. The browser-hijacking route could expose workplace search queries such as internal hostnames, customer names, and project details, although specific victim organizations and confirmed data theft were not reported.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Island researchers verified the malicious delivery infrastructure and analyzed the browser-control and search-hijacking behavior. The campaign spanned 186 bogus domains, while the associated extension family had 972,000 declared users as of November 3, 2026; declared users are not necessarily confirmed victims.",
+   "id": "50a60ce1a92ef06f",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html",
+   "added": "2026-11-15T06:42:38+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-12",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers observed active delivery of ClickFix lures, browser-hijacking software, and search-hijacking extensions. The reporting does not establish how many users installed the malicious components or confirm theft of particular records, credentials, or funds.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html",
+    "assessed_at": "2026-11-15T06:42:38+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
    "title": "AI-assisted BroadWorks campaign targeted telecom provider and customers",
    "date": "2026-11-08",
    "category": "using_ai",
@@ -2441,7 +2479,7 @@
     },
     {
      "date": "2026-11-11",
-     "what": "The agent exploited an unauthenticated Cisco BroadWorks XXE flaw (CVE-2026-20320) on the provider’s BroadWorks XSP. It enumerated hundreds of assets, extracted dozens of credential sets, recovered private keys and SSL credentials, and exfiltrated thousands of subscriber billing and device-record rows over two weeks.",
+     "what": "The AI agent exploited an unauthenticated Cisco BroadWorks XXE vulnerability against the provider’s BroadWorks XSP. It enumerated hundreds of assets, extracted dozens of credential sets, recovered private keys and SSL credentials, and exfiltrated thousands of subscriber billing and device-record rows over two weeks.",
      "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
      "source": "The Hacker News"
     }
@@ -2907,7 +2945,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "Attackers reached Fireworks AI development machines through an unnamed third-party cloud provider and ran an unauthorized workload. The incident exposed resource metadata, billing information, incomplete model weights and datasets for certain customers, and Notion AI chat transcripts used for the Insights feature.",
+     "what": "Attackers reached Fireworks AI development machines through an unnamed third-party cloud provider and ran an unauthorized workload. The incident exposed resource metadata, billing information, incomplete model weights, datasets, secrets, and Notion AI chat transcripts from affected workspaces.",
      "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
      "source": "The Hacker News"
     },
@@ -3007,7 +3045,7 @@
    "updates": [
     {
      "date": "2026-11-11",
-     "what": "Claroc found 35,578 of 37,571 Grok-built apps accessible without sign-in. Exposed content included organizational data, a hospital employee directory, an intensive-care briefing, a fire-department shift board, and plaintext employee passwords in source code. Researchers also demonstrated unauthorized access to and modification of records in their own test app, but did not test whether other discovered apps accepted changes.",
+     "what": "Claroc found 35,578 of 37,571 Grok-built apps accessible without sign-in. Exposed content included confidential business data, hospital and fire-department information, and plaintext employee passwords; researchers also accessed and modified records in their own test apps through an uninvited account.",
      "url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
      "source": "The Hacker News"
     }
@@ -4051,7 +4089,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "The attacker exploited a remote-code-execution flaw in the SGLang inference engine and ran code on a NEAR AI inference server, including inside a trusted execution environment. The attacker reached an internal Private Chat system, downloaded account details for about 100 users, accessed data from 18 older NEAR AI agents, and exposed two customers’ NEAR AI Cloud API keys.",
+     "what": "The attacker exploited a remote-code-execution flaw in SGLang and ran code on a NEAR AI inference server inside a trusted execution environment. The attacker then reached an internal Private Chat system and 18 older NEAR AI agents, downloading account details for about 100 users and agent chat history, settings, and logs; two customer API keys found in logs were revoked.",
      "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
      "source": "The Hacker News"
     }
@@ -13325,7 +13363,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker published a malicious LiteLLM 1.107.0 PyPI release and corresponding container images. The payload executed at Python interpreter startup and was designed to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and AI-coding-tool credentials, with possible access to LiteLLM-stored provider credentials.",
+     "what": "The attacker compromised LiteLLM version 1.107.0 and associated container tags. The releases installed persistence that executed at interpreter startup and harvested cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, with additional queries of stored LiteLLM provider credentials.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -14475,7 +14513,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Attackers used stolen GitHub tokens to plant sync-check workflows in repositories the tokens could access. In private repositories and GitHub Enterprise environments, the workflows executed and dumped repository and environment secrets through GitHub’s API; Wiz recovered more than 13,500 planted branches and observed follow-on AWS credential enumeration. A self-hosted-runner variant also searched for cloud credentials, private keys, .env files, CI/CD credentials, and AI-provider keys.",
+     "what": "Wiz observed an automated campaign using compromised GitHub tokens to plant secret-dumping workflows in repositories accessible to the tokens. More than 13,500 planted branches were recovered, and private-repository and GitHub Enterprise workflow runs successfully executed; some self-hosted-runner jobs searched for credentials and cloud metadata.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -18625,7 +18663,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "The agent exploited an exposed Kafka UI Java remote-code-execution vulnerability, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, accessed AWS and GCP control planes, modified GitOps and production workloads, and attempted to collect and exfiltrate secrets and sensitive database data. Wiz also observed the same source IP scanning more than 600 other customer environments during the attack window.",
+     "what": "Wiz observed an AI agent exploit an exposed Kafka UI Java RCE, deploy malware and backdoors, harvest Kubernetes and cloud credentials, create privileged identities, access AWS and GCP environments, escalate to cluster-admin, modify production workloads, and access sensitive data. The agent also attempted to exfiltrate data and secrets through webhooks, source control, Kubernetes ConfigMaps, and cloud storage.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -39802,6 +39840,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-14T22:30:27+00:00",
+ "last_added": "2026-11-15T06:42:38+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
