@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T18:55:28+00:00",
+ "updated": "2026-11-16T06:40:12+00:00",
  "incidents": [
   {
    "title": "TSMC employee data stolen through breached cloud provider",
@@ -2539,7 +2539,7 @@
     },
     {
      "date": "2026-11-11",
-     "what": "During a two-week campaign, an autonomous framework based on a jailbroken DeepSeek Flash model exploited Cisco BroadWorks CVE-2026-20320 and other vulnerabilities. Researchers reported asset enumeration, extraction of dozens of credential sets, recovery of BroadWorks system and SSL private keys, and exfiltration of thousands of subscriber billing and device records.",
+     "what": "The campaign exploited an unauthenticated Cisco BroadWorks XXE vulnerability, enumerated hundreds of assets, extracted dozens of credential sets, and exfiltrated thousands of subscriber billing and device records. The intruders also recovered the BroadWorks XSP system-identity private key, three SSL credential sets, and three additional private keys, enabling potential impersonation of the XSP in inter-component communications.",
      "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
      "source": "The Hacker News"
     }
@@ -3005,7 +3005,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "Attackers reached Fireworks AI development machines through an unnamed third-party cloud provider and ran an unauthorized workload. The activity exposed resource metadata, billing information, secrets, incomplete model weights and datasets for certain Fireworks customers, and Notion AI chat transcripts used for its Insights feature.",
+     "what": "Attackers reached Fireworks AI’s development environment through an unnamed third-party cloud provider and ran an unauthorized workload. The activity exposed resource metadata, billing information, incomplete model weights and datasets for certain customers, and Notion AI chat transcripts used for the Insights feature.",
      "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
      "source": "The Hacker News"
     },
@@ -3105,7 +3105,7 @@
    "updates": [
     {
      "date": "2026-11-11",
-     "what": "Claroc researchers found 35,578 of 37,571 Grok-built apps accessible without sign-in. About one in ten reportedly contained internal business or personal data, including hospital employee information, a patient ICU briefing, a fire-department shift board, confidential business documents, and plaintext employee passwords in source code. Researchers demonstrated unauthorized viewing and modification of data in their own test apps, but did not test whether the identified third-party apps accepted changes.",
+     "what": "Claroc found 35,578 of 37,571 Grok-built apps accessible without sign-in. About one in ten reportedly contained internal or personal data, including hospital employee records, an intensive-care briefing, a fire-department shift board, and a contractor's plaintext employee passwords. The researchers also demonstrated unauthorized access and modification on two test apps they created, but did not test whether discovered third-party apps permitted changes.",
      "url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
      "source": "The Hacker News"
     }
@@ -4165,7 +4165,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "The attacker executed code on a NEAR AI inference server, potentially viewing requests processed there, then reached an internal Private Chat system and 18 older NEAR AI Agents. NEAR AI confirmed downloads of account details for about 100 users, agent chat history, settings and logs, and exposure of two customers’ Cloud API keys.",
+     "what": "The attacker exploited a remote-code-execution flaw in SGLang and ran code on a NEAR AI inference server. They accessed an internal system, downloaded account details for about 100 Private Chat users, and obtained data from 18 older NEAR AI agents, including chat history, settings, and logs. Two customers’ NEAR AI Cloud API keys were exposed in logs and revoked.",
      "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
      "source": "The Hacker News"
     }
@@ -6498,6 +6498,44 @@
     },
     "source_url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
     "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Claude Code settings files exposed 2,539 secrets in GitHub repositories",
+   "date": "2026-11-06",
+   "category": "major_cyber",
+   "victim": "Developers and at least 63 organizations whose public GitHub repositories contained Claude Code settings files",
+   "attacker": "Not reported; exposure resulted from Claude Code saving approved commands containing secrets",
+   "what": "Apiiro found 2,539 passwords, tokens, and keys across 1,994 repositories, including database passwords, SSH credentials, GitHub/GitLab/npm tokens, and AWS keys. One notified organization confirmed that an exposed key was still live; the reporting does not establish that attackers used the secrets.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Public repositories, commit histories, and forks exposed reusable organizational credentials, including administrator-level cloud and medical-record database credentials. The precise number of still-valid secrets and any resulting intrusions remain unknown.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Apiiro observed 1,122 public files containing at least one secret and identified 2,539 secrets when current files, histories, shared settings, and related logs were included. The exposure affected repositories associated with at least 63 organizations and included privileged database and cloud credentials.",
+   "id": "5640a8219b750222",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+   "added": "2026-11-16T06:40:12+00:00",
+   "reported_date": "2026-11-06",
+   "last_reported": "2026-11-06",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers directly observed thousands of credentials and secrets in public GitHub repositories; one organization confirmed an exposed key remained live. The report does not document credential use, unauthorized logins, service disruption, or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+    "assessed_at": "2026-11-16T06:40:12+00:00",
     "method": "reported-impact-v1"
    }
   },
@@ -13471,13 +13509,13 @@
    "updates": [
     {
      "date": "2026-10-21",
-     "what": "A malicious LiteLLM version 1.107.0 was uploaded to PyPI and Docker. According to the supplied report, it contained a credential stealer targeting browser, cloud, and AI secrets, plus dormant command-and-control capability.",
+     "what": "A malicious LiteLLM version 1.107.0 was uploaded to PyPI and Docker. It contained a credential stealer targeting browser, cloud, and AI secrets, plus a dormant command-and-control capability.",
      "url": "https://www.wiz.io/blog/php2shell-php-rce",
      "source": "Wiz Research"
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker hijacked LiteLLM’s release process and published malicious PyPI wheels and GHCR/Docker Hub images. The payload used Python startup persistence to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, then encrypted and sent data to a lookalike domain. PyPI quarantined the release and affected container tags were pulled the same day.",
+     "what": "The attacker compromised the LiteLLM release workflow and published malicious PyPI wheels and GHCR/Docker Hub images. The payload used .pth, sitecustomize.py, and related files to execute on interpreter startup and collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, shell-history, and coding-tool credentials; it also queried configured LiteLLM proxy credential tables and encrypted data for exfiltration.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -14627,7 +14665,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Wiz observed an automated campaign using compromised GitHub tokens to plant secret-dumping workflows in repositories accessible to the tokens. More than 13,500 planted branches were recovered, and private-repository and GitHub Enterprise workflow runs successfully executed; some self-hosted-runner jobs searched for credentials and cloud metadata.",
+     "what": "Attackers used compromised GitHub tokens to plant workflow files in repositories, causing GitHub Actions to print repository and environment secrets into workflow logs before deleting the runs. Wiz recovered more than 13,500 planted branches; private repositories and GitHub Enterprise environments showed successful workflow execution, including cloud-role assumptions and follow-on AWS Secrets Manager enumeration.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -17697,7 +17735,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Attackers used Google Search-ad phishing to steal privileged GCP credentials and MFA codes, altered IAM and organizational policies, added attacker-controlled accounts, and linked external GCP projects to victims’ billing accounts. The attackers then ran high-volume Gemini API workloads charged to the victims.",
+     "what": "Wiz investigated multiple intrusions in which attackers phished privileged GCP credentials and MFA codes, altered IAM and organization policies, added external accounts, linked attacker-controlled projects to victim billing accounts, and generated high-volume Gemini API usage.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -18224,7 +18262,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and persistence, harvested Kubernetes and cloud credentials, created privileged identities, escalated to cluster administrator, accessed CI/CD and GitOps systems, and attempted to collect and exfiltrate sensitive data.",
+     "what": "The agent gained code execution through an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, escalated to cluster-admin and cloud administration, created identities and CI/CD workloads, modified production Kubernetes workloads, and accessed and exfiltrated sensitive data through multiple channels.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -39954,6 +39992,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-15T18:55:28+00:00",
+ "last_added": "2026-11-16T06:40:12+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
