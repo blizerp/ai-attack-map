@@ -6412,11 +6412,179 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-15-evening",
+   "date": "2026-11-15",
+   "edition": "evening",
+   "published_at": "2026-11-16T01:41:59+00:00",
+   "generated_at": "2026-11-16T01:41:59+00:00",
+   "scheduled_for": "2026-11-15T22:00:00+00:00",
+   "window_start": "2026-11-15T17:14:47+00:00",
+   "window_end": "2026-11-16T01:41:59+00:00",
+   "sector_window_start": "2026-11-15T01:41:59+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "The FBI has newly described a tool used in attacks against organizations worldwide. It links the activity to an October breach of a cloud backup supplier that exposed some Microsoft 365 customer environments. No new broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "FBI links automated attacks to a cloud backup supplier breach",
+      "what_happened": "The FBI says attackers have used an artificial-intelligence-powered hacking framework since at least August to target organizations. It links the framework to an October breach of ConnectWise’s cloud backup service, through which attackers reached Microsoft 365 customer environments. At least 162 customer accounts were reportedly compromised.",
+      "impact": "Affected organizations may have had email, files or other Microsoft 365 data accessed. The FBI says attackers attempted to sign in to more than 2,250 downstream customer environments, but the full number of successful compromises and affected people is unclear.",
+      "what_next": "The FBI and affected companies are investigating the campaign. Further findings may identify more compromised customer environments and clarify what information attackers accessed.",
+      "change": "New report",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
+        "published": "2026-11-15T18:29:53+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "",
+     "items": []
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "The FBI has newly reported a campaign affecting online services and Microsoft 365 customer environments.",
+     "items": [
+      {
+       "headline": "FBI warns automated attacks reached Microsoft 365 customers",
+       "what_happened": "The FBI says attackers used an artificial-intelligence-powered framework to automate break-ins and linked it to an October breach of ConnectWise’s cloud backup service. At least 162 Microsoft 365 customer environments were reportedly compromised, while attackers tried to reach more than 2,250.",
+       "impact": "Some organizations may have had business email, files or other cloud data accessed. The full number of affected users and the data taken are not confirmed.",
+       "what_next": "Investigators may identify additional affected organizations and clarify whether customer services or data were altered.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
+         "published": "2026-11-15T18:29:53+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "A newly reported breach involved a trusted cloud backup provider and its downstream Microsoft 365 customers.",
+     "items": [
+      {
+       "headline": "Cloud backup supplier breach exposed downstream Microsoft 365 accounts",
+       "what_happened": "The FBI says attackers compromised application identities used by ConnectWise’s cloud backup service in October. Those identities had access to customer Microsoft 365 environments, allowing attackers to attempt access across many downstream organizations.",
+       "impact": "At least 162 customer environments were reportedly compromised. Other customers were targeted but may not have been entered. The report does not establish a broad outage or confirm the amount of data taken.",
+       "what_next": "ConnectWise, Microsoft and investigators may disclose more about affected customers and the scope of any data access.",
+       "change": "New report",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
+         "published": "2026-11-15T18:29:53+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 722
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 4,
+   "usage": {
+    "completion_tokens": 847,
+    "prompt_tokens": 9837,
+    "total_tokens": 10684,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 186,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 9834,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-15T17:14:47+00:00"
+  "checked_at": "2026-11-16T01:41:59+00:00"
  },
  "automatic_attempts": {
   "2026-11-12-morning": {
@@ -6446,6 +6614,10 @@
   "2026-11-15-morning": {
    "count": 1,
    "checked_at": "2026-11-15T17:14:47+00:00"
+  },
+  "2026-11-15-evening": {
+   "count": 1,
+   "checked_at": "2026-11-16T01:41:59+00:00"
   }
  }
 }
