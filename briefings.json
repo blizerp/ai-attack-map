@@ -6886,21 +6886,177 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-17-morning",
+   "date": "2026-11-17",
+   "edition": "morning",
+   "published_at": "2026-11-17T13:32:32+00:00",
+   "generated_at": "2026-11-17T13:32:32+00:00",
+   "scheduled_for": "2026-11-17T13:00:00+00:00",
+   "window_start": "2026-11-16T22:27:33+00:00",
+   "window_end": "2026-11-17T13:32:32+00:00",
+   "sector_window_start": "2026-11-16T13:32:32+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting confirms a website-service breach that exposed visitors to payment-stealing code, gives a nearly 150,000-person count for the Uber provider breach, and reports continuing attacks on remote-support systems. A large dental-data breach was also newly disclosed. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Website service breach sent card-stealing code to major sites",
+      "what_happened": "Attackers exploited Optimizely, a website testing service, and altered scripts used by at least 178 organizations, including CNN, BBC and Zoom. The code could replace cryptocurrency addresses, capture payment-card details and try to target iPhones and iPads. Optimizely removed the code and blocked the vulnerable path.",
+      "impact": "Visitors may have had card details, cookies or page information exposed. About $7,000 in cryptocurrency reached the attackers’ wallets, although the stolen amount is unclear. No successful iPhone takeover has been confirmed. Affected websites were not necessarily hacked themselves.",
+      "what_next": "Optimizely and affected customers are investigating the scope. Further findings may show how many payment details were captured and whether any downstream device attacks succeeded.",
+      "change": "Impact increased",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/",
+        "published": "2026-11-17T02:12:17+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
+        "published": "2026-11-17T07:12:13+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/optimizely-vulnerability-exploited-to-serve-malware-on-major-websites/",
+        "published": "2026-11-17T10:22:20+00:00"
+       }
+      ],
+      "incident_ids": [
+       "6957eb85cb7f4003"
+      ]
+     },
+     {
+      "headline": "Uber says nearly 150,000 drivers had data exposed through a provider",
+      "what_happened": "Uber notified 149,346 drivers that attackers accessed data through a compromised third-party service provider. Exposed information includes names, driver’s license numbers, birth dates and addresses. The incident occurred in October and was linked in reporting to the Fireworks provider breach already covered.",
+      "impact": "Affected drivers face a higher risk of identity theft and targeted scams. The report does not describe a ride-service outage or stolen passenger data.",
+      "what_next": "Uber has cut the affected data connection and is investigating. Additional notices may clarify support for affected drivers and whether other records were accessed.",
+      "change": "Impact increased",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
+        "published": "2026-11-17T08:35:42+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Remote-support attacks could spread from technicians to customers",
+      "what_happened": "Attackers have targeted ScreenConnect systems used by managed service providers since at least October 20. Huntress saw 688,000 attempts against 42 provider servers, while a separate wave affected 205 computers across 41 organizations. The attacks can place harmful files on a technician’s computer during a remote session.",
+      "impact": "If a provider’s technician computer is compromised, attackers could potentially reach multiple customer networks. The reports do not confirm a broad customer outage or how many customer systems were successfully taken over.",
+      "what_next": "ConnectWise says attacks continue against some older installations and is investigating affected environments. Further reporting may identify additional providers or customer networks involved.",
+      "change": "Impact increased",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/msp-screenconnect-servers-targeted-in-month-long-campaign/",
+        "published": "2026-11-17T13:24:43+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html",
+        "published": "2026-11-17T06:29:27+00:00"
+       }
+      ],
+      "incident_ids": [
+       "cf4df74da740c268"
+      ]
+     },
+     {
+      "headline": "Dental provider reports personal and medical data breach affecting 341,049",
+      "what_happened": "Access Dental Management, which provides care in Texas and several other states, newly reported that attackers accessed its network from May 1 to May 4. The exposed information may include names, addresses, birth dates, Social Security numbers, medical details and insurance information.",
+      "impact": "People included in the confirmed count could face identity theft, fraud or targeted medical scams. The provider reported 341,049 affected people, while a larger possible total has not been confirmed. No care disruption was reported.",
+      "what_next": "Access Dental Management is sending notices and reviewing the incident. More information may clarify whether the affected total exceeds the currently reported count.",
+      "change": "New report",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/",
+        "published": "2026-11-17T12:59:04+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "1 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 723
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 20,
+   "usage": {
+    "completion_tokens": 948,
+    "prompt_tokens": 21472,
+    "total_tokens": 22420,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 79,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 21469,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-16T22:27:33+00:00"
+  "checked_at": "2026-11-17T13:32:32+00:00"
  },
  "automatic_attempts": {
-  "2026-11-13-morning": {
-   "count": 1,
-   "checked_at": "2026-11-13T16:29:47+00:00"
-  },
-  "2026-11-13-evening": {
-   "count": 1,
-   "checked_at": "2026-11-13T22:41:56+00:00"
-  },
   "2026-11-14-morning": {
    "count": 1,
    "checked_at": "2026-11-14T17:11:38+00:00"
@@ -6924,6 +7080,10 @@
   "2026-11-16-evening": {
    "count": 1,
    "checked_at": "2026-11-16T22:27:33+00:00"
+  },
+  "2026-11-17-morning": {
+   "count": 1,
+   "checked_at": "2026-11-17T13:32:32+00:00"
   }
  }
 }
