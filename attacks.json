@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T08:00:37+00:00",
+ "updated": "2026-11-17T21:00:10+00:00",
  "incidents": [
   {
    "title": "Fireworks-linked breach exposed thousands of Uber drivers’ license data",
@@ -46,6 +46,10 @@
     {
      "name": "The Record",
      "url": "https://therecord.media/uber-says-150000-impacted-third-party-breach"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/"
     }
    ],
    "updates": [
@@ -54,6 +58,12 @@
      "what": "Attackers used compromised provider credentials on October 7 to access Uber-shared data in an environment managed by Uber’s Cloud Security team. Exposed information included driver-license images, names, addresses, dates of birth, license numbers, and government-issued identification numbers. Uber said the credentials did not provide access to other Uber systems.",
      "url": "https://www.securityweek.com/uber-data-breach-impacts-150000-people/",
      "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-17",
+     "what": "Attackers used compromised third-party service-provider credentials to access Uber data connected to the provider. Exposed information included drivers’ names, driver’s-license numbers, dates of birth, and addresses.",
+     "url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
+     "source": "BleepingComputer"
     },
     {
      "date": "2026-11-18",
@@ -114,6 +124,10 @@
     {
      "name": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/optimizely-vulnerability-exploited-to-serve-malware-on-major-websites/"
     }
    ],
    "updates": [
@@ -122,6 +136,12 @@
      "what": "The attacker exploited Optimizely Web Experimentation to inject malicious Project JavaScript into customer snippets served from cdn.optimizely.com. The loader swapped cryptocurrency addresses, captured card numbers, expiry dates and CVVs, collected some cookies and screenshots, and conditionally delivered iOS exploit-kit code. Report URI found malicious code in 188 snippets belonging to 178 organizations; Optimizely said it fixed the flaw and removed the code.",
      "url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
      "source": "The Hacker News"
+    },
+    {
+     "date": "2026-11-17",
+     "what": "Attackers exploited an Optimizely Experimentation vulnerability to inject malicious JavaScript into customer projects. Report URI identified 188 infected scripts belonging to 178 organizations; the scripts could swap cryptocurrency addresses, skim payment-card details, and collect cookies or screenshots.",
+     "url": "https://www.securityweek.com/optimizely-vulnerability-exploited-to-serve-malware-on-major-websites/",
+     "source": "SecurityWeek"
     }
    ]
   },
@@ -232,6 +252,10 @@
     {
      "name": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/n-able-kills-legacy-apis-patches-17-n-central-zero-days/"
     }
    ],
    "updates": [
@@ -252,6 +276,12 @@
      "what": "Attackers exploited the 4EverAble2Shell vulnerabilities in N-able N-central to gain unauthorized access and deploy cryptocurrency miners on vulnerable servers. N-able subsequently removed legacy APIs and issued additional security fixes.",
      "url": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
      "source": "The Hacker News"
+    },
+    {
+     "date": "2026-11-17",
+     "what": "Threat actors used the 4EverAble2Shell exploit chain against N-central deployments with legacy APIs enabled, executing shell scripts with root privileges and deploying cryptocurrency miners. N-able subsequently blocked the legacy APIs and issued patches.",
+     "url": "https://www.securityweek.com/n-able-kills-legacy-apis-patches-17-n-central-zero-days/",
+     "source": "SecurityWeek"
     }
    ]
   },
@@ -320,6 +350,10 @@
     {
      "name": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/msp-screenconnect-servers-targeted-in-month-long-campaign/"
     }
    ],
    "updates": [
@@ -361,7 +395,13 @@
     },
     {
      "date": "2026-11-17",
-     "what": "Huntress detected a November 13 spike in SCKit activity affecting 205 hosts across 41 organizations. The campaign exploited ScreenConnect-related authentication weaknesses and deployed components capable of unauthorized command execution and persistence; ConnectWise disabled five extensions across 400 partner environments.",
+     "what": "Attackers exploited CVE-2026-84869 to push batch files through ScreenConnect guest sessions. Huntress observed at least 688,000 requests against 42 MSP ScreenConnect servers from 29 IP addresses; in one confirmed case, a rogue ScreenConnect client disguised as Windows Update was installed, and another attack caused a script to be placed in a technician workstation’s Startup folder.",
+     "url": "https://www.securityweek.com/msp-screenconnect-servers-targeted-in-month-long-campaign/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-17",
+     "what": "Huntress detected a new spike of SCKit-related activity affecting 205 hosts across 41 organizations. The toolkit used unauthorized ScreenConnect access and established persistence on at least one host; ConnectWise disabled five third-party extensions across 400 partner environments, while noting that extension presence alone did not prove compromise.",
      "url": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html",
      "source": "The Hacker News"
     }
@@ -374,6 +414,212 @@
      "basis": "Vendor headquarters (approximate)",
      "entity": "",
      "source_url": "https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html"
+    }
+   ]
+  },
+  {
+   "title": "Fandango checkout skimmer exposed payment-card details",
+   "date": "2026-10-08 to 2026-10-11",
+   "category": "major_cyber",
+   "victim": "Fandango Media customers who made purchases through Fandango’s official website",
+   "attacker": "Unknown; an unauthorized party injected card-skimming code, according to Fandango",
+   "what": "Malicious code on Fandango’s checkout page intercepted payment-card numbers, CVVs, expiration dates, billing ZIP codes, and email addresses, sending the data to hackers. Fandango said names, government-issued IDs, Social Security numbers, and other account information were not exposed.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The stolen card details could enable unauthorized online purchases. Fandango fixed the checkout issue and said it was unaware of fraud linked to the data; the number of affected customers was not reported.",
+   "where": "United States",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Fandango confirmed unauthorized interception of payment-card data from its production checkout page over multiple days, affecting customers of a major U.S. ticketing platform. The final number of affected customers and any resulting fraud remain unknown.",
+   "id": "99f0173ac25a10d9",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
+   "added": "2026-11-16T22:12:47+00:00",
+   "reported_date": "2026-11-16",
+   "last_reported": "2026-11-17",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Fandango confirmed that payment-card details and associated email addresses entered during transactions were exposed. No customer count or fraud losses were reported, and the company said it was unaware of fraud using the stolen data.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "unknown",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
+    "assessed_at": "2026-11-16T22:12:47+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/fandango-warns-ticket-buyers-of-payment-card-data-exposure/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-17",
+     "what": "Fandango said an unauthorized party could access payment-card numbers, CVV codes, expiration dates, billing ZIP codes, and email addresses associated with certain transactions. The company fixed the issue and said names, Social Security numbers, government IDs, and other account data were not affected.",
+     "url": "https://www.securityweek.com/fandango-warns-ticket-buyers-of-payment-card-data-exposure/",
+     "source": "SecurityWeek"
+    }
+   ]
+  },
+  {
+   "title": "Ipsos investigates breach of internal information system",
+   "date": "2026-11-16",
+   "category": "major_cyber",
+   "victim": "Ipsos",
+   "attacker": "Not reported; no cybercrime group has claimed responsibility.",
+   "what": "Ipsos disclosed unauthorized access to an internal information system and launched containment and an investigation with outside security experts. The affected system, intrusion method, and whether data was accessed or stolen remain unknown.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The confirmed breach affected an organizational internal system, although Ipsos reported no disruption to operations and has not established data theft or other losses.",
+   "where": "France",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Ipsos confirmed a breach of an internal information system at a company operating across 90 markets and serving 5,000 clients. The incident’s scope and any effect on client, project, or business-partner information remain under investigation.",
+   "id": "2f723fa0ad81a604",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/market-research-giant-ipsos-investigating-breach-of-internal-system/",
+   "added": "2026-11-17T21:00:10+00:00",
+   "reported_date": "2026-11-17",
+   "last_reported": "2026-11-17",
+   "evidence_status": "under_investigation",
+   "lat": 46.603354,
+   "lon": 1.8883335,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Ipsos confirmed an internal-system breach but said it had no operational impact. The company has not determined whether information was accessed or stolen, and no financial loss was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/market-research-giant-ipsos-investigating-breach-of-internal-system/",
+    "assessed_at": "2026-11-17T21:00:10+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 46.603354,
+     "lon": 1.8883335,
+     "label": "France",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/market-research-giant-ipsos-investigating-breach-of-internal-system/"
+    }
+   ]
+  },
+  {
+   "title": "Exploit_agent framework compromised French websites",
+   "date": "2026-11-17",
+   "category": "using_ai",
+   "victim": "French media, entertainment, and education websites; specific victims were not reported",
+   "attacker": "Threat actors using the exploit_agent multi-agent framework; attribution was not reported",
+   "what": "Google Threat Intelligence Group found an exposed staging server containing exploit_agent, stolen victim data, and post-compromise scripts. The framework autonomously compared patched and unpatched web code, identified flaws, developed exploits, and executed attacks; evidence indicated targeting of French media, entertainment, and education websites.",
+   "ai_role": "The exploit_agent framework autonomously performed vulnerability discovery, exploit development, exploitation, reconnaissance, and webshell deployment.",
+   "why": "The reporting substantiates real compromises and stolen victim data, while demonstrating AI-assisted exploitation operating with little or no human intervention. Exact victims, scope, and final consequences were not reported.",
+   "where": "France",
+   "major_impact": "critical_network_intrusion",
+   "significance": "GTIG observed stolen data and post-compromise webshell-deployment scripts on the attackers’ server, with evidence of compromises involving French websites. This is a distinct example of an AI framework automating both vulnerability discovery and exploitation in real attacks.",
+   "id": "1b7653b5c795308c",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/ai-framework-autonomously-weaponized-flaws-in-real-attacks-google-says/",
+   "added": "2026-11-17T21:00:10+00:00",
+   "reported_date": "2026-11-17",
+   "last_reported": "2026-11-17",
+   "evidence_status": "confirmed",
+   "lat": 46.603354,
+   "lon": 1.8883335,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "GTIG observed data stolen from victims and evidence of multiple compromised French websites, but the reporting does not establish service disruption, financial loss, or the precise number of victims.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/ai-framework-autonomously-weaponized-flaws-in-real-attacks-google-says/",
+    "assessed_at": "2026-11-17T21:00:10+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 46.603354,
+     "lon": 1.8883335,
+     "label": "France",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/ai-framework-autonomously-weaponized-flaws-in-real-attacks-google-says/"
+    }
+   ]
+  },
+  {
+   "title": "Access Dental Management breach affected 341,049 people",
+   "date": "2026-05-01 to 2026-05-04",
+   "category": "major_cyber",
+   "victim": "Access Dental Management (ADM) and affected patients",
+   "attacker": "Not confirmed; WorldLeaks claimed responsibility, but the claim is unverified",
+   "what": "Hackers accessed ADM’s network and viewed or copied data. The compromised information included names, addresses, dates of birth, Social Security numbers, medical information, and health-insurance information.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "ADM discovered the intrusion on May 5, and its investigation identified 341,049 affected individuals; the total may later exceed 455,000.",
+   "where": "Texas, United States; ADM also provides care in Illinois, Indiana, and New Mexico, but the report does not state that affected individuals were located there.",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The incident involved confirmed unauthorized network access and theft or viewing of sensitive personal, medical, insurance, and Social Security information affecting more than 341,000 people.",
+   "id": "c489a3786b630063",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/",
+   "added": "2026-11-17T21:00:10+00:00",
+   "reported_date": "2026-11-17",
+   "last_reported": "2026-11-17",
+   "evidence_status": "confirmed",
+   "lat": 31.2638905,
+   "lon": -98.5456116,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "ADM confirmed that hackers accessed its network and viewed or copied sensitive data affecting 341,049 people. Service disruption and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/",
+    "assessed_at": "2026-11-17T21:00:10+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 31.2638905,
+     "lon": -98.5456116,
+     "label": "Texas, United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/"
     }
    ]
   },
@@ -394,7 +640,7 @@
    "source_url": "https://www.securityweek.com/tor-updates-dos-defenses-again-as-relay-attacks-continue/",
    "added": "2026-11-16T22:12:47+00:00",
    "reported_date": "2026-11-16",
-   "last_reported": "2026-11-16",
+   "last_reported": "2026-11-17",
    "evidence_status": "confirmed",
    "lat": null,
    "lon": null,
@@ -413,7 +659,21 @@
     "source_url": "https://www.securityweek.com/tor-updates-dos-defenses-again-as-relay-attacks-continue/",
     "assessed_at": "2026-11-16T22:12:47+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/tor-releases-emergency-update-amid-ongoing-ddos-attack/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-17",
+     "what": "A massive flood of client circuits overwhelmed Tor relays and affected most relay operators. Tor released version 0.4.9.17 with defenses for relay denial-of-service attacks, including an IPv6-related fix.",
+     "url": "https://www.bleepingcomputer.com/news/security/tor-releases-emergency-update-amid-ongoing-ddos-attack/",
+     "source": "BleepingComputer"
+    }
+   ]
   },
   {
    "title": "Trojanized Claude Code extension distributed through Cursor Marketplace",
@@ -432,7 +692,7 @@
    "source_url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
    "added": "2026-10-30T13:03:35+00:00",
    "reported_date": "2026-10-30",
-   "last_reported": "2026-11-16",
+   "last_reported": "2026-11-17",
    "evidence_status": "confirmed",
    "lat": null,
    "lon": null,
@@ -468,6 +728,10 @@
     {
      "name": "SecurityWeek",
      "url": "https://www.securityweek.com/cursor-supply-chain-attack-started-at-fireworks/"
+    },
+    {
+     "name": "Dark Reading",
+     "url": "https://www.darkreading.com/application-security/cursor-malicious-claude-code-extension-third-party-breach"
     }
    ],
    "updates": [
@@ -500,6 +764,304 @@
      "what": "Attackers used compromised Fireworks and Cursor credentials and secrets to access selected Cursor repositories and data, then placed modified Claude Code extension versions 2.1.312 and 2.1.313 on Cursor’s cached marketplace. The tampered extensions were available for roughly 11 hours and may have reached at most 5,000 users.",
      "url": "https://www.securityweek.com/cursor-supply-chain-attack-started-at-fireworks/",
      "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-17",
+     "what": "Dark Reading reports that a compromised key issued to AI infrastructure provider Fireworks was used to access Cursor data and credentials. The reporting links this access to the malicious Claude Code extension distributed through the Cursor Marketplace.",
+     "url": "https://www.darkreading.com/application-security/cursor-malicious-claude-code-extension-third-party-breach",
+     "source": "Dark Reading"
+    }
+   ]
+  },
+  {
+   "title": "RIKEN takes Fugaku offline after servers breached",
+   "date": "2026-11-10 to 2026-11-13",
+   "category": "major_cyber",
+   "victim": "RIKEN Center for Computational Science, including the Fugaku and Rikyu supercomputers",
+   "attacker": "Unauthorized party; attribution was not reported.",
+   "what": "The attacker exploited Fugaku’s public operational-status dashboard to access multiple internal servers and plant malware targeting user data. RIKEN confirmed compromise of names, email addresses, user IDs, SSH private and access keys, and research data files stored on users’ computers; some access keys were used in attempted connections to additional systems.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The breach affected a major shared research-computing environment used by academic and industry researchers, exposed reusable credentials and research data, and forced RIKEN to disable login keys and take Fugaku offline.",
+   "where": "Japan",
+   "major_impact": "large_scale_data_theft",
+   "significance": "RIKEN confirmed unauthorized server access, malware placement, and compromise of data associated with 4,222 Fugaku users and 375 Rikyu users. Fugaku supports drug discovery, severe-weather forecasting, and other high-performance research, and remained offline pending remediation.",
+   "id": "c26df8cba3eb73e6",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
+   "added": "2026-11-17T21:00:10+00:00",
+   "reported_date": "2026-11-17",
+   "last_reported": "2026-11-17",
+   "evidence_status": "confirmed",
+   "lat": 36.5748441,
+   "lon": 139.2394179,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "RIKEN took Fugaku offline on November 14 and disabled user login keys after confirming unauthorized access and malware placement. The reporting does not establish further unauthorized access or theft of research results.",
+    "evidence": {
+     "context": "real_world",
+     "service": "major",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
+    "assessed_at": "2026-11-17T21:00:10+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/"
+    }
+   ]
+  },
+  {
+   "title": "Modified Claude Code delivered SOMBERMEME to crypto firms",
+   "date": "2026-11-16",
+   "category": "using_ai",
+   "victim": "Cryptocurrency firms in North America and Europe; specific victims were not reported",
+   "attacker": "UNC6836, an activity cluster suspected by Google to be linked to Midnight Neptune",
+   "what": "After an initial compromise, attackers modified the Claude Code application’s settings so that launching it downloaded the SOMBERMEME backdoor.",
+   "ai_role": "Attackers used a modified Claude Code application in the post-compromise attack flow; the reporting does not establish that an autonomous AI agent carried out the unauthorized actions.",
+   "why": "The report describes an actual initial compromise and malware delivery affecting cryptocurrency-sector organizations, with attribution explicitly uncertain.",
+   "where": "North America and Europe",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The incident shows attackers weaponizing a legitimate AI coding tool after compromise to establish backdoor delivery across cryptocurrency-sector targets. Specific victims, stolen data, and downstream effects were not reported.",
+   "id": "15a5e55032017ca5",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/",
+   "added": "2026-11-16T22:12:47+00:00",
+   "reported_date": "2026-11-16",
+   "last_reported": "2026-11-17",
+   "evidence_status": "confirmed",
+   "lat": 51.0000002,
+   "lon": -109.0,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Google reported an initial compromise and modification of Claude Code settings to download a backdoor, but did not report confirmed data theft, service interruption, or financial loss.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/",
+    "assessed_at": "2026-11-16T22:12:47+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 51.0000002,
+     "lon": -109.0,
+     "label": "North America",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/"
+    },
+    {
+     "lat": 51.0,
+     "lon": 10.0,
+     "label": "Europe",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-17",
+     "what": "Google reported that North Korean actors used fake recruiter profiles and ClickFix attacks to breach cryptocurrency companies, pivot into internal code repositories, and modify code so Claude Code downloaded the SOMBERMEME backdoor.",
+     "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage",
+     "source": "The Record"
+    }
+   ]
+  },
+  {
+   "title": "Cairn agents breached 10 of 19 targeted organizations",
+   "date": "August–September 2026",
+   "category": "by_ai_agent",
+   "victim": "At least 19 semiconductor, defense-policy, and civil-society organizations; specific victims were not fully identified",
+   "attacker": "China-nexus CL-STA-1238, assessed with moderate confidence by Unit 42; Chinese-speaking operators used Zhipu GLM and DeepSeek models",
+   "what": "Attackers used a customized Cairn AI penetration-testing framework to autonomously conduct 25 operations. Unit 42 confirmed unauthorized access or data retrieval at 10 organizations, including access to more than one million member records at one organization, military and government identities, employee and student data, internal documents, credentials, and persistent administrator accounts.",
+   "ai_role": "AI agents planned and executed reconnaissance, exploitation, credential collection, privilege escalation, lateral movement, and persistence with limited human tasking. The agents were operated using Zhipu GLM and DeepSeek models.",
+   "why": "The campaign demonstrated real autonomous intrusions across multiple organizations, with confirmed sensitive-data access and production-system persistence. The activity affected semiconductor supply-chain, defense-policy, and civil-society targets and materially expanded the number of simultaneous operations attackers could conduct.",
+   "where": "Organizations in the United States and Canada were explicitly reported; other victim locations were not fully identified",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Unit 42 directly observed confirmed access or data retrieval at 10 targets, including more than one million member records, roughly 31,000 CRM contacts, staff password hashes, defense-policy user records, and persistent production administrator accounts.",
+   "id": "541bf08e14054fb6",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/",
+   "added": "2026-11-14T06:34:05+00:00",
+   "reported_date": "2026-11-12",
+   "last_reported": "2026-11-17",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Unit 42 reported confirmed unauthorized access or data retrieval at 10 organizations, including mass access to more than one million member records, credentials, identities, internal documents, and production-system administrator accounts. Operational service disruption and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/",
+    "assessed_at": "2026-11-14T06:34:05+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/"
+    },
+    {
+     "lat": 61.0666922,
+     "lon": -107.991707,
+     "label": "Canada",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-17",
+     "what": "Google said it observed CAIRN AI agents used in intrusions against U.S. aerospace companies, collaborating across intrusion stages from target identification toward an operational objective.",
+     "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage",
+     "source": "The Record"
+    }
+   ]
+  },
+  {
+   "title": "Trigram campaign used trojanized code and infostealers against developers",
+   "date": "2026-11-17",
+   "category": "using_ai",
+   "victim": "Developers and professionals in AI, blockchain, logistics, finance, cryptocurrency, education, and technology sectors; specific victims were not reported",
+   "attacker": "UNK_DeadDrop cluster; Stormshield assessed with high confidence that the campaign continues UNK_DeadDrop. Reporting noted similarities to North Korea-linked Kimsuky, but technique overlap does not prove attribution.",
+   "what": "Trigram impersonated about 50 brands and used fake recruitment, conference, package-tracking, software-supply-chain, and trojanized-repository scenarios to induce targets to execute loaders. The malware harvested browser passwords, cookies, keychains, cryptocurrency wallets, SSH keys, and .env files, and installed the Overlord remote-access framework. A related Kimsuky activity used local Ollama and GPT4All environments to generate decoy documents.",
+   "ai_role": "The reporting states that a related Kimsuky branch used local LLM environments, including Ollama and GPT4All, to generate decoy documents. AI use in the primary Trigram delivery chain was not otherwise established.",
+   "why": "The campaign involved actual malicious payload delivery and credential/data-theft capability against developers and other organizations, rather than merely impersonating brands or scanning targets. The final number of compromised systems and confirmed theft totals were not reported.",
+   "where": "Europe and the United States",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Stormshield documented an industrialized campaign with a management and victim-tracking platform, automated phishing infrastructure, trojanized repositories, and infostealers targeting reusable secrets and cryptocurrency wallets. The campaign converged on real delivery infrastructure and malware payloads, although its final victim count and losses remain unknown.",
+   "id": "8a3c99e5d2fbec45",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
+   "added": "2026-11-17T21:00:10+00:00",
+   "reported_date": "2026-11-17",
+   "last_reported": "2026-11-17",
+   "evidence_status": "confirmed",
+   "lat": 51.0,
+   "lon": 10.0,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The reporting documents malware delivery and payloads designed to steal credentials, wallets, SSH keys, and sensitive files and to install remote access. It does not quantify confirmed victims, stolen records, or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
+    "assessed_at": "2026-11-17T21:00:10+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 51.0,
+     "lon": 10.0,
+     "label": "Europe",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html"
+    },
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html"
+    }
+   ]
+  },
+  {
+   "title": "GitDoor and GraphDoor backdoors targeted a Taiwanese organization",
+   "date": "2026-11-17",
+   "category": "major_cyber",
+   "victim": "An unspecified Taiwanese organization",
+   "attacker": "Unknown; Kaspersky observed possible overlap with China-nexus activity, including Bronze Sandcastle, FamousSparrow, and CopperTurtle/BlackTech, but attribution is unconfirmed.",
+   "what": "Operation ShadowCloud used a MeshCentral Agent to deploy the GitDoor and GraphDoor backdoors. The malware used GitHub, Microsoft SharePoint, and Ably for command-and-control and supported shell commands, keylogging, screenshots, credential and cookie theft, process injection, and data collection.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Kaspersky identified an active intrusion in which systems at an unspecified Taiwanese organization were infected with previously undocumented backdoors. The implants provided consequential access and surveillance capabilities, although the reporting does not establish the final scope of data theft or operational disruption.",
+   "where": "Taiwan",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Independent researcher evidence described infected victim systems and active backdoors capable of command execution, credential theft, keylogging, screenshots, and covert C2 through trusted cloud services. The specific victim and ultimate consequences remain undisclosed.",
+   "id": "78b225d1a5aa2686",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html",
+   "added": "2026-11-17T21:00:10+00:00",
+   "reported_date": "2026-11-17",
+   "last_reported": "2026-11-17",
+   "evidence_status": "confirmed",
+   "lat": 23.9739374,
+   "lon": 120.9820179,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Kaspersky reported that an unspecified Taiwanese organization was targeted and that GitDoor and GraphDoor backdoors were deployed. The malware's access and collection capabilities are documented, but actual theft, disruption, or financial loss was not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html",
+    "assessed_at": "2026-11-17T21:00:10+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 23.9739374,
+     "lon": 120.9820179,
+     "label": "Taiwan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"
     }
    ]
   },
@@ -806,110 +1368,6 @@
    ]
   },
   {
-   "title": "Modified Claude Code delivered SOMBERMEME to crypto firms",
-   "date": "2026-11-16",
-   "category": "using_ai",
-   "victim": "Cryptocurrency firms in North America and Europe; specific victims were not reported",
-   "attacker": "UNC6836, an activity cluster suspected by Google to be linked to Midnight Neptune",
-   "what": "After an initial compromise, attackers modified the Claude Code application’s settings so that launching it downloaded the SOMBERMEME backdoor.",
-   "ai_role": "Attackers used a modified Claude Code application in the post-compromise attack flow; the reporting does not establish that an autonomous AI agent carried out the unauthorized actions.",
-   "why": "The report describes an actual initial compromise and malware delivery affecting cryptocurrency-sector organizations, with attribution explicitly uncertain.",
-   "where": "North America and Europe",
-   "major_impact": "critical_network_intrusion",
-   "significance": "The incident shows attackers weaponizing a legitimate AI coding tool after compromise to establish backdoor delivery across cryptocurrency-sector targets. Specific victims, stolen data, and downstream effects were not reported.",
-   "id": "15a5e55032017ca5",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/",
-   "added": "2026-11-16T22:12:47+00:00",
-   "reported_date": "2026-11-16",
-   "last_reported": "2026-11-16",
-   "evidence_status": "confirmed",
-   "lat": 51.0000002,
-   "lon": -109.0,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "Google reported an initial compromise and modification of Claude Code settings to download a backdoor, but did not report confirmed data theft, service interruption, or financial loss.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "privileged_access",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/",
-    "assessed_at": "2026-11-16T22:12:47+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 51.0000002,
-     "lon": -109.0,
-     "label": "North America",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/"
-    },
-    {
-     "lat": 51.0,
-     "lon": 10.0,
-     "label": "Europe",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/"
-    }
-   ]
-  },
-  {
-   "title": "Fandango checkout skimmer exposed payment-card details",
-   "date": "2026-10-08 to 2026-10-11",
-   "category": "major_cyber",
-   "victim": "Fandango Media customers who made purchases through Fandango’s official website",
-   "attacker": "Unknown; an unauthorized party injected card-skimming code, according to Fandango",
-   "what": "Malicious code on Fandango’s checkout page intercepted payment-card numbers, CVVs, expiration dates, billing ZIP codes, and email addresses, sending the data to hackers. Fandango said names, government-issued IDs, Social Security numbers, and other account information were not exposed.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The stolen card details could enable unauthorized online purchases. Fandango fixed the checkout issue and said it was unaware of fraud linked to the data; the number of affected customers was not reported.",
-   "where": "United States",
-   "major_impact": "large_scale_data_theft",
-   "significance": "Fandango confirmed unauthorized interception of payment-card data from its production checkout page over multiple days, affecting customers of a major U.S. ticketing platform. The final number of affected customers and any resulting fraud remain unknown.",
-   "id": "99f0173ac25a10d9",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
-   "added": "2026-11-16T22:12:47+00:00",
-   "reported_date": "2026-11-16",
-   "last_reported": "2026-11-16",
-   "evidence_status": "confirmed",
-   "lat": 39.7837304,
-   "lon": -100.445882,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "Fandango confirmed that payment-card details and associated email addresses entered during transactions were exposed. No customer count or fraud losses were reported, and the company said it was unaware of fraud using the stolen data.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "unknown",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
-    "assessed_at": "2026-11-16T22:12:47+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 39.7837304,
-     "lon": -100.445882,
-     "label": "United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/"
-    }
-   ]
-  },
-  {
    "title": "Turla Cereal malware compromised government Exchange servers",
    "date": "2025-12-23",
    "category": "major_cyber",
@@ -981,13 +1439,13 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "Attackers used the previously unknown Cereal toolkit, including CerealBox embedded in Microsoft Exchange, to monitor email traffic, capture selected messages, and maintain covert access. In Romania, the malware collected correspondence with NATO and EU institutions; the initial access method and total amount of stolen information were not determined.",
+     "what": "Attackers compromised Microsoft Exchange servers using the previously unknown Cereal toolkit. CerealBox was embedded in an Exchange service to identify and capture selected messages, including correspondence with NATO and EU institutions, while the servers were also used to manage the intrusion.",
      "url": "https://therecord.media/russia-hackers-espionage-romania-kazakhstan",
      "source": "The Record"
     },
     {
      "date": "2026-11-10",
-     "what": "ESET observed the previously undocumented Cereal toolset compromising Microsoft Exchange servers at two government entities. The malware enabled command execution, network mapping, credential-secret extraction, and targeted harvesting and exfiltration of emails and attachments.",
+     "what": "Turla used the previously undocumented Cereal toolset to compromise Microsoft Exchange servers, execute commands in memory, map networks, and harvest targeted emails. In the Romanian case, the malware collected messages involving NATO and European Union addresses.",
      "url": "https://thehackernews.com/2026/11/russian-turla-hackers-use-new-cereal.html",
      "source": "The Hacker News"
     },
@@ -3144,62 +3602,6 @@
    }
   },
   {
-   "title": "Cairn agents breached 10 of 19 targeted organizations",
-   "date": "August–September 2026",
-   "category": "by_ai_agent",
-   "victim": "At least 19 semiconductor, defense-policy, and civil-society organizations; specific victims were not fully identified",
-   "attacker": "China-nexus CL-STA-1238, assessed with moderate confidence by Unit 42; Chinese-speaking operators used Zhipu GLM and DeepSeek models",
-   "what": "Attackers used a customized Cairn AI penetration-testing framework to autonomously conduct 25 operations. Unit 42 confirmed unauthorized access or data retrieval at 10 organizations, including access to more than one million member records at one organization, military and government identities, employee and student data, internal documents, credentials, and persistent administrator accounts.",
-   "ai_role": "AI agents planned and executed reconnaissance, exploitation, credential collection, privilege escalation, lateral movement, and persistence with limited human tasking. The agents were operated using Zhipu GLM and DeepSeek models.",
-   "why": "The campaign demonstrated real autonomous intrusions across multiple organizations, with confirmed sensitive-data access and production-system persistence. The activity affected semiconductor supply-chain, defense-policy, and civil-society targets and materially expanded the number of simultaneous operations attackers could conduct.",
-   "where": "Organizations in the United States and Canada were explicitly reported; other victim locations were not fully identified",
-   "major_impact": "large_scale_data_theft",
-   "significance": "Unit 42 directly observed confirmed access or data retrieval at 10 targets, including more than one million member records, roughly 31,000 CRM contacts, staff password hashes, defense-policy user records, and persistent production administrator accounts.",
-   "id": "541bf08e14054fb6",
-   "source_name": "AI agent attack tracker",
-   "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/",
-   "added": "2026-11-14T06:34:05+00:00",
-   "reported_date": "2026-11-12",
-   "last_reported": "2026-11-12",
-   "evidence_status": "confirmed",
-   "lat": 39.7837304,
-   "lon": -100.445882,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Unit 42 reported confirmed unauthorized access or data retrieval at 10 organizations, including mass access to more than one million member records, credentials, identities, internal documents, and production-system administrator accounts. Operational service disruption and financial losses were not reported.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/",
-    "assessed_at": "2026-11-14T06:34:05+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 39.7837304,
-     "lon": -100.445882,
-     "label": "United States",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/"
-    },
-    {
-     "lat": 61.0666922,
-     "lon": -107.991707,
-     "label": "Canada",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/"
-    }
-   ]
-  },
-  {
    "title": "AI-generated scripts enabled lateral movement in US retailer attack",
    "date": "2026-11-12",
    "category": "using_ai",
@@ -3287,7 +3689,7 @@
    "updates": [
     {
      "date": "2026-11-12",
-     "what": "Lookalike domains impersonating 27 AI brands redirected visitors to ClickFix pages, Net Guard browser-hijacking malware, or search-hijacking Chrome extensions. The extension family had 16 live listings and 972,000 declared users as of November 3, 2026; the reported capabilities included changing browser search settings, running attacker-controlled scripts, and sending searches to a third party.",
+     "what": "Researchers found 186 lookalike domains spanning 27 AI brands. The domains delivered ClickFix lures, Net Guard browser-hijacking malware, or extensions that changed browser search settings and redirected searches; 16 related Chrome Web Store listings reported 972,000 users.",
      "url": "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html",
      "source": "The Hacker News"
     }
@@ -3407,7 +3809,31 @@
     "source_url": "https://www.securityweek.com/critical-xen-orchestra-flaws-exploited-in-attacks/",
     "assessed_at": "2026-11-11T19:40:32+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/critical-xen-orchestra-auth-bypass-flaw-exploited-to-hijack-vm-servers/"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "Attackers exploited VSA-2026-062 by sending a crafted authentication cookie, bypassing login and obtaining administrator privileges. Indicators included a malicious VM named pivot2, altered VM configurations, and persistence files on XCP-ng hosts.",
+     "url": "https://www.bleepingcomputer.com/news/security/critical-xen-orchestra-auth-bypass-flaw-exploited-to-hijack-vm-servers/",
+     "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "Attackers exploited Xen Orchestra flaw VSA-2026-062 to bypass authentication, obtain reusable login tokens, act with Admin privileges, and potentially execute code and take over managed XCP-ng nodes as root. Vates also reported exploitation of related flaw VSA-2026-063 to import malicious virtual machines and compromise hosts.",
+     "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
+     "source": "The Hacker News"
+    }
+   ]
   },
   {
    "title": "Premise Health former employee copied patient data",
@@ -4191,13 +4617,13 @@
     },
     {
      "date": "2026-11-10",
-     "what": "The attacker used compromised Qubole IAM credentials to assume customer-configured cross-account AWS roles, enumerate environments, collect secrets and configurations, test credentials, and exfiltrate data from S3 buckets. Researchers observed some entire buckets downloaded in a single session; a separate October 8–11 campaign also tested and sometimes used customer-owned AWS keys.",
+     "what": "The attacker used compromised Qubole AWS IAM credentials to assume dormant cross-account roles in more than a dozen customer environments. Researchers observed resource enumeration, secret and configuration collection, credential testing, and data exfiltration from S3 buckets; some roles remained active after customers stopped using Qubole.",
      "url": "https://www.securityweek.com/over-a-dozen-organizations-hit-in-qubole-supply-chain-attack/",
      "source": "SecurityWeek"
     },
     {
      "date": "2026-11-10",
-     "what": "The attacker used compromised Qubole IAM identities to assume trusted cross-account roles in customer AWS environments. Wiz observed resource enumeration, retrieval of secrets and environment variables, validation of AWS, Microsoft Entra ID, and Okta credentials, and downloads from accessible S3 buckets.",
+     "what": "The attacker assumed trusted cross-account IAM roles in customer AWS environments, retrieved secrets and environment variables, validated cloud credentials, and downloaded data from accessible S3 buckets. Sentra confirmed dozens of victims, while the exact victim count remains unknown.",
      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-trusted-aws-access-to-breach-multiple-cloud-environments/",
      "source": "BleepingComputer"
     }
@@ -4509,7 +4935,15 @@
     "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-barracuda-email-security-gateway-flaws-to-get-root-access/",
     "assessed_at": "2026-11-10T19:48:29+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "Barracuda confirmed exploitation of two recently patched vulnerabilities affecting ESG and other products. In combination, the flaws could bypass authorization controls and execute commands with root privileges; exploitation affected a small number of organizations.",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-barracuda-email-security-gateway-flaws-to-get-root-access/",
+     "source": "BleepingComputer"
+    }
+   ]
   },
   {
    "title": "Fireworks AI development machines breached through cloud provider",
@@ -4530,8 +4964,8 @@
    "reported_date": "2026-11-10",
    "last_reported": "2026-11-10",
    "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
+   "lat": 37.496904,
+   "lon": -122.3330573,
    "severity": {
     "level": "severe",
     "status": "preliminary",
@@ -4552,6 +4986,10 @@
     {
      "name": "Wiz Research",
      "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks"
     }
    ],
    "ai_source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
@@ -4562,6 +5000,28 @@
      "what": "Fireworks updated its disclosure concerning an October 24 breach involving its development machines and downstream customer datasets. Notion separately notified potentially affected workspaces because Fireworks-related access extended to Notion AI chats.",
      "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
      "source": "Wiz Research"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "Attackers breached a third-party cloud provider hosting Fireworks R&D machines, reached Fireworks development machines, and ran an unauthorized workload. The incident exposed resource metadata, billing information, and incomplete model weights and datasets for some customers.",
+     "url": "https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/",
+     "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "Fireworks said a third-party cloud provider hosting its R&D machines was attacked on October 23. On October 24, an unauthorized party used that provider to reach Fireworks development machines and run an unauthorized workload, causing additional customer-data impact.",
+     "url": "https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks",
+     "source": "The Record"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 37.496904,
+     "lon": -122.3330573,
+     "label": "San Mateo, California, United States",
+     "basis": "Vendor headquarters (approximate)",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/"
     }
    ]
   },
@@ -4639,16 +5099,36 @@
     "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
     "assessed_at": "2026-11-10T19:48:29+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/exploited-outlook-zero-day-among-1094-flaws-patched-by-microsoft/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "Attackers sent specially crafted Outlook message files that, when opened, caused Outlook to connect to an attacker-controlled network location and disclose the victim’s NTLMv2 hash without the usual warning. The vulnerability was tracked as CVE-2026-124194.",
+     "url": "https://www.securityweek.com/exploited-outlook-zero-day-among-1094-flaws-patched-by-microsoft/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "Attackers sent specially crafted message files that caused Outlook to connect to an attacker-controlled network location when opened, disclosing NTLM authentication hashes.",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
+     "source": "BleepingComputer"
+    }
+   ]
   },
   {
    "title": "Fireworks says first October breach stole customer and billing data",
    "date": "2026-10-06",
-   "category": "major_cyber",
+   "category": "on_ai_system",
    "victim": "Fireworks AI and a limited number of customer accounts",
    "attacker": "A financially motivated cybercriminal group; specific group not identified.",
    "what": "Fireworks said investigators found unauthorized access that resulted in theft of account and billing information, invoices, payment history, secrets, datasets, and other AI-related data. The company said a limited number of customer accounts were affected and notified those customers.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
+   "ai_role": "The incident affected an AI infrastructure company and AI-related datasets, but attacker use of AI was not reported.",
    "why": "The incident involved confirmed unauthorized access to an AI infrastructure provider and theft of customer-related sensitive information and reusable secrets. The source does not establish the final number of affected records or customers.",
    "where": "San Mateo, California, United States (vendor headquarters; affected customer locations not reported)",
    "major_impact": "large_scale_data_theft",
@@ -4686,6 +5166,16 @@
      "basis": "Vendor headquarters (approximate)",
      "entity": "",
      "source_url": "https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks"
+    }
+   ],
+   "ai_source_url": "https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks",
+   "ai_source_name": "The Record",
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "Fireworks said attackers accessed internal data, billing information, invoices, payment history, datasets, AI-related data, account information and secrets. A limited number of customer accounts were affected and notified.",
+     "url": "https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks",
+     "source": "The Record"
     }
    ]
   },
@@ -4799,6 +5289,14 @@
      "entity": "",
      "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
     }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "Attackers compromised legitimate websites in the Czech Republic, Germany, France, Taiwan, Nepal, Hong Kong, and Indonesia, using fake Chrome certificate warnings to distribute SquadC or SparrowDoor backdoors. The reporting also cites indications of targeting in Egypt and the Philippines.",
+     "url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+     "source": "The Hacker News"
+    }
    ]
   },
   {
@@ -4820,24 +5318,42 @@
    "reported_date": "2026-11-10",
    "last_reported": "2026-11-10",
    "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
+   "lat": 51.2086975,
+   "lon": 89.2343748,
    "severity": {
-    "level": "significant",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "Observed activity included compromise of internet-facing servers, administrator access to Windows systems, lateral movement, and credential harvesting. Confirmed service disruption and final data-loss scope are not reported.",
+    "reason": "Observed activity included administrator access, keylogging, password and token collection, and data exfiltration; victim count and service disruption were not reported.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
      "reach": "multiple",
-     "damage": "privileged_access",
+     "damage": "sensitive_data",
      "essential": "unknown",
      "financial": "unknown"
     },
     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
-    "assessed_at": "2026-11-10T19:48:29+00:00",
+    "assessed_at": "2026-11-17T21:00:10+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "Attackers compromised internet-facing Linux servers, harvested credentials, moved laterally into Windows environments, authenticated with an administrator account, and deployed backdoors and tools for reconnaissance, keylogging, credential collection, persistence, and data exfiltration.",
+     "url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+     "source": "The Hacker News"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 51.2086975,
+     "lon": 89.2343748,
+     "label": "Asia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
+    }
+   ]
   },
   {
    "title": "DarkWire campaign compromised telecom and government organizations",
@@ -4858,8 +5374,8 @@
    "reported_date": "2026-11-10",
    "last_reported": "2026-11-10",
    "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
+   "lat": 33.9709393,
+   "lon": -117.3198639,
    "severity": {
     "level": "significant",
     "status": "preliminary",
@@ -4875,7 +5391,25 @@
     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
     "assessed_at": "2026-11-10T19:48:29+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "Attackers compromised telecommunications and government organizations and deployed CopperDoor, CopperDNS, CopperProxy, PyProxy, and CopperLsass for persistent access, DNS tunneling, proxying, and credential harvesting.",
+     "url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
+     "source": "The Hacker News"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 33.9709393,
+     "lon": -117.3198639,
+     "label": "Latin America",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html"
+    }
+   ]
   },
   {
    "title": "SGLang flaw breached NEAR AI inference infrastructure",
@@ -5039,15 +5573,15 @@
     },
     {
      "date": "2026-11-10",
-     "what": "Attackers remotely accessed Danfoss and Dixell refrigeration-controller web interfaces, set defrost cycles to abnormally high temperatures without time limits, and disabled temperature-probe safety alerts. The attack caused food losses and about 20 fires; French authorities estimated losses at several tens of millions of euros.",
-     "url": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html",
-     "source": "The Hacker News"
-    },
-    {
-     "date": "2026-11-10",
      "what": "Attackers remotely controlled refrigeration systems, raising temperatures to about 50°C for roughly six hours. Stores discarded fresh and frozen goods.",
      "url": "https://www.securityweek.com/france-blames-iran-for-a-cyberattack-that-heated-supermarket-refrigerators/",
      "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "Attackers remotely accessed Danfoss and Dixell refrigeration controllers through web interfaces, set abnormal unlimited defrost cycles, and disabled high-temperature safety alerts. The changes caused food losses and approximately 20 fires, according to French authorities.",
+     "url": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html",
+     "source": "The Hacker News"
     }
    ]
   },
@@ -5141,7 +5675,7 @@
     },
     {
      "date": "2026-11-10",
-     "what": "Huntress observed attackers chaining CVE-2026-105133 and CVE-2026-105134 to bypass authentication and execute commands on AhsayCBS systems. The intrusions deployed JSP web shells, XMRig miners, tunneling and remote-access tools, Microsoft Defender exclusions, and a sandbox-evading Python backdoor; activity also included a Veeam credential-theft query in a related environment.",
+     "what": "Attackers exploited CVE-2026-105133 and CVE-2026-105134 as zero-days to bypass authentication and execute commands on AhsayCBS servers. Huntress observed multiple JSP web shells, two XMRig miners, tunneling and remote-access tools, a sandbox-evading Python backdoor, and activity consistent with attempts to recover credentials from a related Veeam server.",
      "url": "https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html",
      "source": "The Hacker News"
     }
@@ -5192,6 +5726,58 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/"
+    }
+   ]
+  },
+  {
+   "title": "Claude Code settings files exposed 2,539 secrets in GitHub repositories",
+   "date": "2026-11-06",
+   "category": "major_cyber",
+   "victim": "Developers and at least 63 organizations whose public GitHub repositories contained Claude Code settings files",
+   "attacker": "Not reported; exposure resulted from Claude Code saving approved commands containing secrets",
+   "what": "Apiiro found 2,539 passwords, tokens, and keys across 1,994 repositories, including database passwords, SSH credentials, GitHub/GitLab/npm tokens, and AWS keys. One notified organization confirmed that an exposed key was still live; the reporting does not establish that attackers used the secrets.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Public repositories, commit histories, and forks exposed reusable organizational credentials, including administrator-level cloud and medical-record database credentials. The precise number of still-valid secrets and any resulting intrusions remain unknown.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Apiiro observed 1,122 public files containing at least one secret and identified 2,539 secrets when current files, histories, shared settings, and related logs were included. The exposure affected repositories associated with at least 63 organizations and included privileged database and cloud credentials.",
+   "id": "5640a8219b750222",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+   "added": "2026-11-16T06:40:12+00:00",
+   "reported_date": "2026-11-06",
+   "last_reported": "2026-11-10",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers directly observed thousands of credentials and secrets in public GitHub repositories; one organization confirmed an exposed key remained live. The report does not document credential use, unauthorized logins, service disruption, or financial losses.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+    "assessed_at": "2026-11-16T06:40:12+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "Dark Reading",
+     "url": "https://www.darkreading.com/cyber-risk/ai-coding-agents-leak-secrets-github"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "Claude Code inadvertently saved files containing credentials and other sensitive data to public GitHub repositories. The reporting describes thousands of exposed secrets affecting at least 63 organizations.",
+     "url": "https://www.darkreading.com/cyber-risk/ai-coding-agents-leak-secrets-github",
+     "source": "Dark Reading"
     }
    ]
   },
@@ -7950,44 +8536,6 @@
     },
     "source_url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
     "assessed_at": "2026-11-14T06:34:05+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
-   "title": "Claude Code settings files exposed 2,539 secrets in GitHub repositories",
-   "date": "2026-11-06",
-   "category": "major_cyber",
-   "victim": "Developers and at least 63 organizations whose public GitHub repositories contained Claude Code settings files",
-   "attacker": "Not reported; exposure resulted from Claude Code saving approved commands containing secrets",
-   "what": "Apiiro found 2,539 passwords, tokens, and keys across 1,994 repositories, including database passwords, SSH credentials, GitHub/GitLab/npm tokens, and AWS keys. One notified organization confirmed that an exposed key was still live; the reporting does not establish that attackers used the secrets.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Public repositories, commit histories, and forks exposed reusable organizational credentials, including administrator-level cloud and medical-record database credentials. The precise number of still-valid secrets and any resulting intrusions remain unknown.",
-   "where": "No fixed location",
-   "major_impact": "large_scale_data_theft",
-   "significance": "Apiiro observed 1,122 public files containing at least one secret and identified 2,539 secrets when current files, histories, shared settings, and related logs were included. The exposure affected repositories associated with at least 63 organizations and included privileged database and cloud credentials.",
-   "id": "5640a8219b750222",
-   "source_name": "AI agent attack tracker",
-   "source_url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
-   "added": "2026-11-16T06:40:12+00:00",
-   "reported_date": "2026-11-06",
-   "last_reported": "2026-11-06",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Researchers directly observed thousands of credentials and secrets in public GitHub repositories; one organization confirmed an exposed key remained live. The report does not document credential use, unauthorized logins, service disruption, or financial losses.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "widespread",
-     "damage": "sensitive_data",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
-    "assessed_at": "2026-11-16T06:40:12+00:00",
     "method": "reported-impact-v1"
    }
   },
@@ -15763,13 +16311,13 @@
    "updates": [
     {
      "date": "2026-10-21",
-     "what": "A malicious LiteLLM version, 1.107.0, was uploaded to PyPI and Docker. It contained a credential stealer targeting browser, cloud, and AI secrets, plus a dormant command-and-control capability.",
+     "what": "A malicious LiteLLM version 1.107.0 was uploaded to PyPI and Docker. The package included a credential stealer targeting browser, cloud, and AI secrets, plus dormant command-and-control capability.",
      "url": "https://www.wiz.io/blog/php2shell-php-rce",
      "source": "Wiz Research"
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker used a leaked internal Agent Platform key and subsequently obtained maintainer credentials and repository secrets, then published malicious LiteLLM 1.107.0 PyPI wheels and container images. The payload persisted through Python startup files and targeted cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, shell-history, and stored LiteLLM provider credentials.",
+     "what": "The attacker published malicious LiteLLM 1.107.0 wheels and matching GHCR/Docker Hub images. The payload used Python startup persistence to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, shell-history, and stored LiteLLM provider credentials, then attempted to send them to a lookalike domain. PyPI quarantined the release and the affected Docker tags were pulled the same day; no second-stage payload was populated.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -17103,7 +17651,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Since September 15, 2026, attackers used stolen GitHub tokens to plant secret-dumping GitHub Actions workflows in repositories the tokens could access. Wiz recovered more than 13,500 planted branches from over 850 compromised accounts; workflows successfully executed in private repositories and GitHub Enterprise environments, exposing repository and environment secrets. In some cases, cloud credentials were then used to enumerate AWS Secrets Manager.",
+     "what": "Wiz observed an automated campaign using stolen GitHub tokens to plant sync-check workflows in accessible repositories and print repository and environment secrets into workflow logs. In private repositories and GitHub Enterprise environments, workflows executed without approval; some activity involved cloning private repositories and using cloud credentials to enumerate AWS Secrets Manager. Wiz recovered more than 13,500 planted branches from over 850 compromised accounts.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -20183,7 +20731,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Attackers phished GCP users for credentials and MFA codes, then accessed victim environments, disabled organization policies, created privileged service accounts, added external accounts, and linked attacker-controlled GCP projects to victim billing accounts. The linked projects generated high-volume Gemini API requests charged to the victims.",
+     "what": "Attackers phished GCP users for credentials and MFA codes, gained privileged access, disabled organization guardrails, added external accounts, and linked attacker-controlled GCP projects to victims’ billing accounts. The linked projects then generated large volumes of Gemini API requests charged to the victims.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -21263,7 +21811,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT documented an AI agent exploiting an exposed Kafka UI Java RCE, deploying malware and backdoors, harvesting Kubernetes and cloud credentials, creating privileged identities, escalating to cluster-admin, modifying GitOps workloads, and accessing sensitive data. The agent attempted multiple exfiltration paths, including webhooks, source control, Kubernetes ConfigMaps, and cloud storage.",
+     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, accessed AWS and GCP environments, escalated to cluster-admin, modified production workloads, and attempted to collect and exfiltrate sensitive data and secrets.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -42326,6 +42874,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-17T08:00:37+00:00",
+ "last_added": "2026-11-17T21:00:10+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
