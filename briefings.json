@@ -7050,11 +7050,298 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-17-evening",
+   "date": "2026-11-17",
+   "edition": "evening",
+   "published_at": "2026-11-17T22:27:39+00:00",
+   "generated_at": "2026-11-17T22:27:39+00:00",
+   "scheduled_for": "2026-11-17T22:00:00+00:00",
+   "window_start": "2026-11-17T13:32:32+00:00",
+   "window_end": "2026-11-17T22:27:39+00:00",
+   "sector_window_start": "2026-11-16T22:27:39+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "Fresh reports describe a Japanese research supercomputer outage after a breach, a continuing attack on the Tor privacy network, and active exploitation of N-central systems. Google also reports that attackers are using artificial intelligence to speed up real intrusions. No broad household power, water or communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Japan takes Fugaku supercomputer offline after a data breach",
+      "what_happened": "The breach occurred between November 10 and 13. RIKEN says an intruder reached several Fugaku servers and planted malware targeting user data. Names and login details for 4,222 Fugaku users and 375 Rikyu users were exposed, along with some stored access keys and research files.",
+      "impact": "Fugaku has been offline since November 14, so researchers cannot use it for work such as drug discovery, weather forecasting and scientific simulations. RIKEN found no confirmed theft of research results or further unauthorized access.",
+      "what_next": "RIKEN is investigating how the intruder entered and will restore service only after safety checks. Affected users may receive further information about exposed data and access keys.",
+      "change": "New report",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
+        "published": "2026-11-17T20:51:21+00:00"
+       }
+      ],
+      "incident_ids": [
+       "c26df8cba3eb73e6"
+      ]
+     },
+     {
+      "headline": "Ongoing attack slows the Tor privacy network",
+      "what_happened": "The Tor Project says a large flood of connection requests has overwhelmed most network relays. It released an emergency update to improve defenses, but did not identify the attacker or say when the attack began.",
+      "impact": "People using Tor may experience slower connections or difficulty reaching websites. The report does not describe a general internet outage or evidence that users’ identities were exposed.",
+      "what_next": "Tor says it is working on more defenses and expects additional updates. The network’s availability and performance may continue to change while the attack continues.",
+      "change": "New report",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/tor-releases-emergency-update-amid-ongoing-ddos-attack/",
+        "published": "2026-11-17T18:04:15+00:00"
+       }
+      ],
+      "incident_ids": [
+       "25b65a4de6ac0829"
+      ]
+     },
+     {
+      "headline": "Attackers exploit N-central flaws to install cryptocurrency miners",
+      "what_happened": "Attackers began using earlier N-central flaws after technical details were published, placing cryptocurrency-mining software on vulnerable servers. N-able has now blocked the older access route and issued a broader security update for its remote-management platform.",
+      "impact": "Organizations using affected N-central systems could face unauthorized computing use, slower systems or follow-on compromise. The supplied reports do not identify affected organizations or any household service outage.",
+      "what_next": "N-able says hosted systems were updated and is investigating the active attacks. Further reports may clarify how many customer environments were reached and whether other harmful activity occurred.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
+        "published": "2026-11-17T05:00:34+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/n-able-kills-legacy-apis-patches-17-n-central-zero-days/",
+        "published": "2026-11-17T12:28:45+00:00"
+       }
+      ],
+      "incident_ids": [
+       "ba511006af09c577"
+      ]
+     },
+     {
+      "headline": "Google reports faster, more automated attacks against real organizations",
+      "what_happened": "Google says criminal and government-backed groups are using artificial-intelligence tools to scan targets, find weaknesses and carry out parts of intrusions automatically. It observed these tools in attacks involving aerospace companies and organizations in Asia, while Chinese groups are developing similar systems.",
+      "impact": "The tools may shorten the time between a software flaw becoming public and attackers using it. No specific household outage, stolen-customer count or confirmed harm to the public is reported in this update.",
+      "what_next": "Google expects attackers to automate more stages of intrusions. Investigations may identify additional affected organizations and clarify how much activity was successful rather than attempted.",
+      "change": "New report",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage",
+        "published": "2026-11-17T18:50:00+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/ai-framework-autonomously-weaponized-flaws-in-real-attacks-google-says/",
+        "published": "2026-11-17T18:16:17+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "",
+     "items": []
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "Internet-related developments include a research supercomputer outage, continuing disruption to the Tor privacy network, active attacks on remote-management systems and faster automated intrusions.",
+     "items": [
+      {
+       "headline": "Japan takes Fugaku supercomputer offline after a data breach",
+       "what_happened": "RIKEN says an intruder accessed internal servers between November 10 and 13, planted malware and exposed information linked to 4,222 Fugaku users and 375 Rikyu users.",
+       "impact": "Fugaku has been offline since November 14. No confirmed theft of research results or further unauthorized access was reported.",
+       "what_next": "RIKEN is investigating and will restore service after safety checks. More information may clarify the exposed files and access keys.",
+       "change": "New report",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
+         "published": "2026-11-17T20:51:21+00:00"
+        }
+       ],
+       "incident_ids": [
+        "c26df8cba3eb73e6"
+       ]
+      },
+      {
+       "headline": "Ongoing attack slows the Tor privacy network",
+       "what_happened": "Tor says a large flood of connection requests has overwhelmed most relays and affected network performance.",
+       "impact": "Tor users may see slower or unavailable connections. No broad internet outage or identity exposure was reported.",
+       "what_next": "Tor is developing more defenses and expects additional updates while the attack continues.",
+       "change": "New report",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/tor-releases-emergency-update-amid-ongoing-ddos-attack/",
+         "published": "2026-11-17T18:04:15+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Automated attacks are speeding up real intrusions, Google says",
+       "what_happened": "Google observed criminal and government-backed groups using artificial intelligence to scan targets, find weaknesses and automate parts of attacks.",
+       "impact": "Organizations may have less time to respond when new software weaknesses become known. No public household impact was confirmed.",
+       "what_next": "Google expects further automation and may identify more affected organizations as investigations continue.",
+       "change": "New report",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/chinese-state-group-developing-automated-attack-tool-espionage",
+         "published": "2026-11-17T18:50:00+00:00"
+        },
+        {
+         "name": "SecurityWeek",
+         "url": "https://www.securityweek.com/ai-framework-autonomously-weaponized-flaws-in-real-attacks-google-says/",
+         "published": "2026-11-17T18:16:17+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "A remote-management software ecosystem is facing active exploitation, with potential reach across organizations served by technology providers.",
+     "items": [
+      {
+       "headline": "N-central attacks could reach organizations through remote-management providers",
+       "what_happened": "Attackers used earlier flaws in N-able’s N-central platform to install cryptocurrency miners on vulnerable servers. N-able has issued an update and removed the older access route.",
+       "impact": "Organizations relying on affected remote-management systems could face unauthorized computing use or further intrusion. No customer count or broad service outage was reported.",
+       "what_next": "N-able is investigating the active attacks. Further findings may show whether customer environments beyond the reported servers were affected.",
+       "change": "Newly confirmed",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
+         "published": "2026-11-17T05:00:34+00:00"
+        },
+        {
+         "name": "SecurityWeek",
+         "url": "https://www.securityweek.com/n-able-kills-legacy-apis-patches-17-n-central-zero-days/",
+         "published": "2026-11-17T12:28:45+00:00"
+        }
+       ],
+       "incident_ids": [
+        "ba511006af09c577"
+       ]
+      }
+     ]
+    }
+   },
+   "warnings": [
+    "3 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 723
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 37,
+   "usage": {
+    "completion_tokens": 1540,
+    "prompt_tokens": 35825,
+    "total_tokens": 37365,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 161,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 35822,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-17T13:32:32+00:00"
+  "checked_at": "2026-11-17T22:27:39+00:00"
  },
  "automatic_attempts": {
   "2026-11-14-morning": {
@@ -7084,6 +7371,10 @@
   "2026-11-17-morning": {
    "count": 1,
    "checked_at": "2026-11-17T13:32:32+00:00"
+  },
+  "2026-11-17-evening": {
+   "count": 1,
+   "checked_at": "2026-11-17T22:27:39+00:00"
   }
  }
 }
