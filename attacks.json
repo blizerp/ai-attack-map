@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T21:00:10+00:00",
+ "updated": "2026-11-18T07:37:34+00:00",
  "incidents": [
   {
    "title": "Fireworks-linked breach exposed thousands of Uber drivers’ license data",
@@ -84,6 +84,96 @@
    ]
   },
   {
+   "title": "Cold Relic breached two U.S. organizations through cloud identity abuse",
+   "date": "2026",
+   "category": "major_cyber",
+   "victim": "Two unnamed U.S.-based organizations",
+   "attacker": "Cold Relic, also known as COLDRIVER, UNC4057, Callisto, Gossamer Bear, and Star Blizzard; attribution and Russian-government links were reported by Google/Mandiant as assessed associations",
+   "what": "Cold Relic used stolen Google Workspace data, employee identities, phishing, MFA push fatigue, and attacker-registered MFA devices or passkeys to compromise cloud accounts at two U.S. organizations. In the first intrusion, a compromised Super Admin account enabled bulk theft of the organization's cloud-drive contents, employee lists, and domain-wide data; in the second, the attackers compromised an Entra ID account federated to Google Workspace and bulk-downloaded accessible files.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The intrusions demonstrate a linked cloud-identity compromise in which stolen organizational data and trusted professional relationships were used to reach a subsequent organization. Attackers also accessed security logs and altered or deleted alerts to reduce forensic visibility, then continued impersonation-based targeting after removal.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Google/Mandiant reported observed compromise of two real U.S. organizations, including bulk cloud-data theft, Super Admin access, persistent attacker-enrolled authentication methods, and follow-on targeting of employees and professional contacts.",
+   "id": "d71f76de489e4c83",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
+   "added": "2026-11-18T07:37:34+00:00",
+   "reported_date": "2026-11-18",
+   "last_reported": "2026-11-18",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Google/Mandiant reported confirmed unauthorized access to two organizations, theft of an entire cloud storage drive and other organizational data, and bulk downloading from the second victim. Operational disruption and financial losses were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
+    "assessed_at": "2026-11-18T07:37:34+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Malicious Microsoft Agent Framework PyPI releases stole cloud credentials",
+   "date": "2026-11-17",
+   "category": "on_ai_system",
+   "victim": "Microsoft Agent Framework users and organizations that installed PyPI versions 1.26.1 or 1.26.2",
+   "attacker": "Threat actors; attribution and the method used to obtain PyPI publishing access were not reported.",
+   "what": "Attackers compromised Microsoft’s agent-framework Python package and published versions 1.26.1 and 1.26.2. The releases installed .pth startup hooks that harvested environment variables, credential files, Azure DevOps and GitHub Actions OIDC tokens, Azure managed-identity tokens, and cloud metadata, then sent collected data to a hard-coded webhook.",
+   "ai_role": "The compromised package is an open-source framework for building and orchestrating AI agents; the reporting does not establish that AI was used by the attackers.",
+   "why": "This was a trusted-package supply-chain compromise affecting developer and CI environments, with access to reusable cloud credentials and identity tokens. The package reportedly attracts about 190,000 downloads per month, although the number of affected installations and confirmed victim losses were not established.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "Security researchers from Aikido, Endor Labs, OX Security, SafeDep, Socket, StepSecurity, and Wiz identified malicious published releases that executed automatically whenever Python started. PyPI quarantined both versions, but the reporting did not establish how many environments executed the stealer or what credentials were ultimately abused.",
+   "id": "8b71dc35fd91ecd8",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+   "added": "2026-11-18T07:37:34+00:00",
+   "reported_date": "2026-11-18",
+   "last_reported": "2026-11-18",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "The package and its malicious releases were confirmed compromised, and the code was designed to collect and exfiltrate credentials and cloud identity material. Confirmed downstream credential theft, service disruption, and financial losses were not established in the available reporting.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "unknown",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+    "assessed_at": "2026-11-18T07:37:34+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "Wiz Research",
+     "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-17",
+     "what": "Attackers uploaded malicious versions 1.26.1 and 1.26.2 of Microsoft Agent Framework to PyPI. The packages used Python .pth persistence to execute on interpreter startup, collect Azure, Azure DevOps, GitHub Actions, cloud, registry, and other credentials, and send the data to a webhook.site endpoint. Wiz confirmed the attacker-controlled endpoint was on the free tier and captured up to 50 requests.",
+     "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
+     "source": "Wiz Research"
+    }
+   ]
+  },
+  {
    "title": "Optimizely supply-chain attack infected scripts on major websites",
    "date": "2026-11-16",
    "category": "major_cyber",
@@ -102,8 +192,8 @@
    "reported_date": "2026-11-17",
    "last_reported": "2026-11-17",
    "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
+   "lat": 39.294076,
+   "lon": 35.2316631,
    "severity": {
     "level": "severe",
     "status": "preliminary",
@@ -128,6 +218,14 @@
     {
      "name": "SecurityWeek",
      "url": "https://www.securityweek.com/optimizely-vulnerability-exploited-to-serve-malware-on-major-websites/"
+    },
+    {
+     "name": "Dark Reading",
+     "url": "https://www.darkreading.com/cyber-risk/optimizely-malware-attacks-third-party-vendor-risks"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/optimizely-malicious-code-customer-sites"
     }
    ],
    "updates": [
@@ -142,6 +240,28 @@
      "what": "Attackers exploited an Optimizely Experimentation vulnerability to inject malicious JavaScript into customer projects. Report URI identified 188 infected scripts belonging to 178 organizations; the scripts could swap cryptocurrency addresses, skim payment-card details, and collect cookies or screenshots.",
      "url": "https://www.securityweek.com/optimizely-vulnerability-exploited-to-serve-malware-on-major-websites/",
      "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-17",
+     "what": "A compromise of a third-party Optimizely platform caused websites to expose visitors to hydra-like malware. The source reports at least 178 affected organizations.",
+     "url": "https://www.darkreading.com/cyber-risk/optimizely-malware-attacks-third-party-vendor-risks",
+     "source": "Dark Reading"
+    },
+    {
+     "date": "2026-11-17",
+     "what": "A vulnerability in Optimizely’s Experimentation platform allowed attackers to inject malicious JavaScript into customer websites. The code swapped cryptocurrency addresses, skimmed payment-card forms, stole cookies and screenshots, and delivered Coruna and DarkSword iOS exploit kits; Report URI verified at least $7,000 in stolen cryptocurrency.",
+     "url": "https://therecord.media/optimizely-malicious-code-customer-sites",
+     "source": "The Record"
+    }
+   ],
+   "locations": [
+    {
+     "lat": 39.294076,
+     "lon": 35.2316631,
+     "label": "Turkey",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/"
     }
    ]
   },
@@ -4942,6 +5062,18 @@
      "what": "Barracuda confirmed exploitation of two recently patched vulnerabilities affecting ESG and other products. In combination, the flaws could bypass authorization controls and execute commands with root privileges; exploitation affected a small number of organizations.",
      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-barracuda-email-security-gateway-flaws-to-get-root-access/",
      "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "Two vulnerabilities affecting Barracuda email-security products were exploited. CISA directed federal agencies to patch them and investigate possible compromises.",
+     "url": "https://therecord.media/patch-tuesday-microsoft-1000-bugs-again",
+     "source": "The Record"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/patch-tuesday-microsoft-1000-bugs-again"
     }
    ]
   },
@@ -5104,6 +5236,10 @@
     {
      "name": "SecurityWeek",
      "url": "https://www.securityweek.com/exploited-outlook-zero-day-among-1094-flaws-patched-by-microsoft/"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/patch-tuesday-microsoft-1000-bugs-again"
     }
    ],
    "updates": [
@@ -5118,6 +5254,12 @@
      "what": "Attackers sent specially crafted message files that caused Outlook to connect to an attacker-controlled network location when opened, disclosing NTLM authentication hashes.",
      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
      "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-10",
+     "what": "A specially crafted message file could cause Outlook to connect to an attacker-controlled network location when opened, potentially disclosing authentication information. Microsoft reported the vulnerability as exploited in the wild.",
+     "url": "https://therecord.media/patch-tuesday-microsoft-1000-bugs-again",
+     "source": "The Record"
     }
    ]
   },
@@ -5699,7 +5841,7 @@
    "added": "2026-11-11T06:35:22+00:00",
    "reported_date": "2026-11-10",
    "last_reported": "2026-11-10",
-   "evidence_status": "under_investigation",
+   "evidence_status": "confirmed",
    "lat": 36.5748441,
    "lon": 139.2394179,
    "severity": {
@@ -5726,6 +5868,14 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-10",
+     "what": "An attacker accessed a Nitori-managed system, apparently beginning in mid-October. Nitori blocked the access on November 6 and said up to 37.62 million records may have been leaked, including names, addresses, phone numbers, email addresses, dates of birth, gender, membership details, and order information. Passwords and credit-card information were reportedly not exposed.",
+     "url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/",
+     "source": "BleepingComputer"
     }
    ]
   },
@@ -14653,7 +14803,7 @@
     },
     {
      "date": "2026-10-29",
-     "what": "Wiz investigated an intrusion that used hundreds of adaptive steps to probe cloud metadata services, Kubernetes APIs, internal services, and credentials. The activity included attempts to obtain cloud and cluster credentials and investigate privilege escalation, but the source does not identify the victim or establish the final extent of data access.",
+     "what": "Wiz documented a chained cloud intrusion involving remote code execution, cloud metadata credential theft, Kubernetes service-account access, enumeration of cluster permissions, and attempts to access secrets and internal services.",
      "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
      "source": "Wiz Research"
     }
@@ -15517,7 +15667,15 @@
     "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
     "assessed_at": "2026-11-16T22:12:47+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Wiz described an agentic operation that tested exposed Flowise services, adapted exploit methods to target configurations, and achieved remote code execution against targets. The tooling included persistence and lateral-movement steps.",
+     "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+     "source": "Wiz Research"
+    }
+   ]
   },
   {
    "title": "Agentic intrusion targeted crypto and fintech organizations",
@@ -15541,21 +15699,29 @@
    "lat": null,
    "lon": null,
    "severity": {
-    "level": "significant",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "Wiz documented active intrusion tooling directed at approximately 25 organizations and described credential, cluster, database, and storage access attempts. Confirmed victim-level data theft or operational disruption was not established.",
+    "reason": "Wiz documented compromised environments and bulk data/secret collection, including a referenced 600,000-row dump; direct financial theft and service disruption were not reported.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
      "reach": "multiple",
-     "damage": "privileged_access",
+     "damage": "sensitive_data",
      "essential": "unknown",
      "financial": "unknown"
     },
     "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
-    "assessed_at": "2026-11-16T22:12:47+00:00",
+    "assessed_at": "2026-11-18T07:37:34+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Wiz described an agentic campaign that operated against roughly 25 cryptocurrency exchanges and fintech organizations, using numerous adaptive scripts for reconnaissance, cloud and Kubernetes access, lateral movement, and bulk secret or data collection.",
+     "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+     "source": "Wiz Research"
+    }
+   ]
   },
   {
    "title": "PHP2Shell exploited to root 25 Palo Alto management servers",
@@ -16317,7 +16483,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker published malicious LiteLLM 1.107.0 wheels and matching GHCR/Docker Hub images. The payload used Python startup persistence to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, shell-history, and stored LiteLLM provider credentials, then attempted to send them to a lookalike domain. PyPI quarantined the release and the affected Docker tags were pulled the same day; no second-stage payload was populated.",
+     "what": "The attacker compromised the LiteLLM release workflow and published a malicious PyPI 1.107.0 release and affected GHCR/Docker Hub images. The payload used Python startup persistence to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, and could query LiteLLM-stored provider credentials.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -17651,7 +17817,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Wiz observed an automated campaign using stolen GitHub tokens to plant sync-check workflows in accessible repositories and print repository and environment secrets into workflow logs. In private repositories and GitHub Enterprise environments, workflows executed without approval; some activity involved cloning private repositories and using cloud credentials to enumerate AWS Secrets Manager. Wiz recovered more than 13,500 planted branches from over 850 compromised accounts.",
+     "what": "Since September 15, 2026, the campaign planted secret-dumping GitHub Actions workflows in repositories reachable by stolen tokens. Wiz recovered more than 13,500 malicious branches from over 850 compromised accounts; private-repository workflows executed, and cloud credentials from one organization were used to enumerate AWS Secrets Manager.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -20731,7 +20897,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Attackers phished GCP users for credentials and MFA codes, gained privileged access, disabled organization guardrails, added external accounts, and linked attacker-controlled GCP projects to victims’ billing accounts. The linked projects then generated large volumes of Gemini API requests charged to the victims.",
+     "what": "Wiz investigated intrusions in which attackers phished GCP credentials and MFA codes, obtained privileged access, disabled organizational policy controls, added attacker-controlled accounts, linked external GCP projects to victims’ billing accounts, and generated high-volume Gemini API usage.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -21811,7 +21977,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "Wiz CIRT investigated an intrusion in which an AI agent exploited an exposed Kafka UI Java RCE, deployed malware and backdoors, harvested Kubernetes and cloud credentials, created privileged identities, accessed AWS and GCP environments, escalated to cluster-admin, modified production workloads, and attempted to collect and exfiltrate sensitive data and secrets.",
+     "what": "The AI agent gained code execution through an exposed Kafka UI Java RCE, deployed malware and persistence, harvested Kubernetes and cloud credentials, escalated to cluster-admin and cloud administration, created identities and CI/CD pipelines, modified GitOps workloads, accessed databases and sensitive data, and attempted exfiltration.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -42874,6 +43040,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-17T21:00:10+00:00",
+ "last_added": "2026-11-18T07:37:34+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }

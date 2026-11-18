@@ -132,15 +132,15 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-11-17T21:00:10+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz substantiated a distinct multi-victim campaign that compromised GitHub accounts and executed secret-dumping workflows in private and enterprise repositories, with meaningful credential exposure. This is the same campaign as the already-tracked Gheist incident, so it is linked as a duplicate.",
+  "reason": "This is a substantiated, large-scale campaign involving stolen GitHub tokens, unauthorized workflow execution, and exposure of organizational secrets. It duplicates the already-tracked Gheist campaign record but adds detailed researcher evidence.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz substantiated a distinct multi-victim campaign that compromised GitHub accounts and executed secret-dumping workflows in private and enterprise repositories, with meaningful credential exposure. This is the same campaign as the already-tracked Gheist incident, so it is linked as a duplicate.",
-    "title": "Gheist campaign executed secret-dumping workflows in private repositories",
+    "reason": "This is a substantiated, large-scale campaign involving stolen GitHub tokens, unauthorized workflow execution, and exposure of organizational secrets. It duplicates the already-tracked Gheist campaign record but adds detailed researcher evidence.",
+    "title": "Gheist campaign exposed secrets from private GitHub repositories",
     "incident_id": "fdf212b3998ab3a2"
    }
   ],
@@ -13781,15 +13781,15 @@
  "https://www.gadgetreview.com/?p=418206": {
   "title": "A Read-Only Grok Bot \"CFO\" Agent Posted a CEO's Bank Balances to the Company Slack",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful AI-agent data disclosure, but the source explicitly says the incident has not been independently verified; the event is already tracked under the cited incident ID.",
+  "reason": "Potentially meaningful AI-agent disclosure of sensitive financial data, but the source explicitly says the incident has not been independently verified. It corresponds to an already-tracked report of the same alleged event.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful AI-agent data disclosure, but the source explicitly says the incident has not been independently verified; the event is already tracked under the cited incident ID.",
-    "title": "Grok agent reportedly posted CEO’s bank details in Slack"
+    "reason": "Potentially meaningful AI-agent disclosure of sensitive financial data, but the source explicitly says the incident has not been independently verified. It corresponds to an already-tracked report of the same alleged event.",
+    "title": "Grok agent reportedly posted CEO’s bank details in company Slack"
    }
   ],
   "evidence": "article",
@@ -17097,7 +17097,7 @@
  "https://www.darkreading.com/cyberattacks-data-breaches/russian-influence-operation-targeting-latin-america": {
   "title": "Russian Influence Operation Widely Targets Latin America",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -17105,7 +17105,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Russian influence operation targets Latin America"
+    "title": "Russian influence operation reportedly targeted Latin America"
    }
   ],
   "evidence": "summary",
@@ -17122,7 +17122,7 @@
  "https://www.darkreading.com/threat-intelligence/new-anthropic-sneakpeek-silent-zero-click-threat": {
   "title": "Anthropic 'SneakPeek' Flaw Is a Silent Zero-Click Threat",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -17130,7 +17130,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Anthropic SneakPeek flaw reported without confirmed exploitation"
+    "title": "Anthropic SneakPeek flaw reported as zero-click threat"
    }
   ],
   "evidence": "summary",
@@ -17494,7 +17494,7 @@
  "https://www.darkreading.com/cybersecurity-operations/sector-2026-reveals-a-rapidly-shifting-cybersecurity-landscape": {
   "title": "SecTor 2026 Reveals a Rapidly Shifting Cybersecurity Landscape",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -17502,7 +17502,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "SecTor 2026 cybersecurity conference overview"
+    "title": "SecTor 2026 cybersecurity landscape article"
    }
   ],
   "evidence": "summary",
@@ -17519,7 +17519,7 @@
  "https://www.darkreading.com/cybersecurity-operations/vulnerability-management-isnt-about-the-score-its-about-how-it-applies-to-you": {
   "title": "Vulnerability Management Isn't About the Score — It's About How It Applies to You",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -17527,7 +17527,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Dark Reading vulnerability-management commentary"
+    "title": "Vulnerability-management commentary without a reported incident"
    }
   ],
   "evidence": "summary",
@@ -17544,7 +17544,7 @@
  "https://www.darkreading.com/threat-intelligence/ai-slop-ruining-cyberattacks": {
   "title": "AI Slop Isn't Just for Social Media; It's Ruining Cyberattacks, Too",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -17552,7 +17552,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Dark Reading commentary on AI-generated cyberattack content"
+    "title": "Dark Reading article provides no extractable incident"
    }
   ],
   "evidence": "summary",
@@ -17875,7 +17875,7 @@
  "https://www.darkreading.com/application-security/fake-claude-chatgpt-attacks-developers-risk": {
   "title": "Fake Claude, ChatGPT Attacks Surge, Putting Developers at Risk",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -17883,7 +17883,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Fake Claude and ChatGPT attacks discussed in aggregate"
+    "title": "Dark Reading reports surge in fake AI-tool attacks"
    }
   ],
   "evidence": "summary",
@@ -17900,7 +17900,7 @@
  "https://www.darkreading.com/cyber-risk/enterprise-ai-risk-management-phase-security-concerns-rise": {
   "title": "Enterprise AI Enters Risk Management Phase as Security Concerns Rise",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -17908,7 +17908,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Enterprise AI risk-management commentary"
+    "title": "Dark Reading enterprise AI risk-management commentary"
    }
   ],
   "evidence": "summary",
@@ -17925,7 +17925,7 @@
  "https://www.darkreading.com/cyber-risk/when-your-ransomware-negotiator-works-other-side": {
   "title": "When Your Ransomware Negotiator Works for the Other Side",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -17933,7 +17933,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Ransomware negotiator allegedly worked for opposing side"
+    "title": "Ransomware negotiator allegedly worked for attackers"
    }
   ],
   "evidence": "summary",
@@ -17950,7 +17950,7 @@
  "https://www.darkreading.com/endpoint-security/beyondtrust-remote-support-exploited-edge-bugs": {
   "title": "BeyondTrust Remote Support Zero-Day Continues Trend of Exploited Edge Bugs",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -17958,7 +17958,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "BeyondTrust Remote Support zero-day exploitation reported"
+    "title": "BeyondTrust Remote Support zero-day exploitation recap"
    }
   ],
   "evidence": "summary",
@@ -17999,7 +17999,7 @@
  "https://www.darkreading.com/insider-threats/ai-agents-breaches-humans-liable": {
   "title": "When AI Agents Commit Breaches, Humans May Not Be Held Liable",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -18399,7 +18399,7 @@
  "https://www.darkreading.com/data-privacy/adfection-online-ads-spyware-delivery": {
   "title": "'AdFection' Turns Ad Impressions Into Zero-Click Spyware Delivery",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -18407,7 +18407,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "AdFection campaign reportedly delivered zero-click spyware through ads"
+    "title": "AdFection spyware delivery campaign"
    }
   ],
   "evidence": "summary",
@@ -18424,7 +18424,7 @@
  "https://www.darkreading.com/vulnerabilities-threats/cybersecurity-lexicon-vulnerability-discovery-resilience": {
   "title": "The Evolving Cybersecurity Lexicon: Vulnerability Discovery to Resilience",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -18432,7 +18432,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Cybersecurity lexicon article"
+    "title": "Dark Reading cybersecurity lexicon article"
    }
   ],
   "evidence": "summary",
@@ -18449,7 +18449,7 @@
  "https://www.darkreading.com/vulnerabilities-threats/onlyfans-copyright-takedowns-expose-compromised-websites": {
   "title": "OnlyFans Copyright Takedowns Expose Compromised Websites",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -18457,7 +18457,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "OnlyFans copyright takedowns reportedly expose compromised websites"
+    "title": "OnlyFans copyright takedowns reportedly exposed compromised websites"
    }
   ],
   "evidence": "summary",
@@ -18789,15 +18789,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-11-17T21:00:10+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz directly substantiated a meaningful real-world AI-agent intrusion involving unauthorized access, privilege escalation, production workload changes, credential theft, and attempted sensitive-data exfiltration. It is the same incident already tracked as the Wiz-observed multi-cloud intrusion.",
+  "reason": "Wiz independently substantiated a consequential compromise of a real organization, including unauthorized administrative access, sensitive-data access, persistence, and production-environment manipulation. This is the same multi-cloud AI-agent intrusion already tracked.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz directly substantiated a meaningful real-world AI-agent intrusion involving unauthorized access, privilege escalation, production workload changes, credential theft, and attempted sensitive-data exfiltration. It is the same incident already tracked as the Wiz-observed multi-cloud intrusion.",
-    "title": "AI agent breached unnamed organization’s multi-cloud environment",
+    "reason": "Wiz independently substantiated a consequential compromise of a real organization, including unauthorized administrative access, sensitive-data access, persistence, and production-environment manipulation. This is the same multi-cloud AI-agent intrusion already tracked.",
+    "title": "Wiz reports AI agent-driven multi-cloud intrusion",
     "incident_id": "ae8f3c2f8a5f5092"
    }
   ],
@@ -18865,7 +18865,7 @@
  "https://www.darkreading.com/application-security/close-identity-gaps-sdlc-before-ai": {
   "title": "Close Identity Gaps in Software Development Before Unleashing AI",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -18873,7 +18873,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Dark Reading article discusses software-development identity risks"
+    "title": "Dark Reading commentary on identity gaps in AI development"
    }
   ],
   "evidence": "summary",
@@ -18890,7 +18890,7 @@
  "https://www.darkreading.com/cyber-risk/tech-giants-emudhra-certificates-compromised-keys": {
   "title": "Tech Giants Block eMudhra Certificates Tied to 8 Compromised Keys",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -18898,7 +18898,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "eMudhra certificates revoked after eight signing keys compromised"
+    "title": "Tech giants block certificates tied to compromised eMudhra keys"
    }
   ],
   "evidence": "summary",
@@ -18915,7 +18915,7 @@
  "https://www.darkreading.com/cyberattacks-data-breaches/hackers-abuse-ai-pen-test-tool-cairn": {
   "title": "Hackers Abuse AI Pen-Test Tool Cairn to Automate Massive Attack Spree",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -18923,7 +18923,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Hackers abused Cairn AI pen-test tool in large attack campaign"
+    "title": "Hackers abused Cairn AI pen-test tool in attack spree"
    }
   ],
   "evidence": "summary",
@@ -18940,7 +18940,7 @@
  "https://www.darkreading.com/insider-threats/ex-openai-engineer-secret-recorder-saudi-ties": {
   "title": "Ex-OpenAI Engineer Detained After Planting Secret Recorder at HQ",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -19280,15 +19280,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-11-17T21:00:10+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Wiz substantiated multiple GCP compromises involving privileged-account takeover and unauthorized Gemini usage that caused substantial billing losses; this is the same incident/campaign already tracked under f58ed76ff84133f9.",
+  "reason": "Wiz provides researcher evidence of multiple actual GCP compromises involving privileged access and substantial unauthorized AI-service charges; this is the same campaign/event already tracked under f58ed76ff84133f9.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Wiz substantiated multiple GCP compromises involving privileged-account takeover and unauthorized Gemini usage that caused substantial billing losses; this is the same incident/campaign already tracked under f58ed76ff84133f9.",
-    "title": "Phishing campaign hijacked GCP billing for unauthorized Gemini use",
+    "reason": "Wiz provides researcher evidence of multiple actual GCP compromises involving privileged access and substantial unauthorized AI-service charges; this is the same campaign/event already tracked under f58ed76ff84133f9.",
+    "title": "GCP billing accounts hijacked for unauthorized Gemini usage",
     "incident_id": "f58ed76ff84133f9"
    }
   ],
@@ -20088,14 +20088,14 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-11-17T21:00:10+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed malicious production releases and release-infrastructure compromise constitute a meaningful AI-software supply-chain incident; this record duplicates the already-tracked LiteLLM compromise.",
+  "reason": "This is a substantiated production release and package-registry compromise with a credential-stealing payload; it is the same LiteLLM supply-chain incident already tracked under e2e13be789221612.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed malicious production releases and release-infrastructure compromise constitute a meaningful AI-software supply-chain incident; this record duplicates the already-tracked LiteLLM compromise.",
+    "reason": "This is a substantiated production release and package-registry compromise with a credential-stealing payload; it is the same LiteLLM supply-chain incident already tracked under e2e13be789221612.",
     "title": "LiteLLM 1.107.0 release compromised to steal credentials",
     "incident_id": "e2e13fe6f7503c25"
    }
@@ -20114,21 +20114,15 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-11-17T21:00:10+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without substantiated real-world unauthorized victim harm.; Include as a confirmed software supply-chain compromise, while linking it to the already-tracked LiteLLM incident.",
+  "status": "exclude",
+  "reason": "Exclude: this is a vulnerability disclosure and controlled research demonstration without a confirmed real-world compromise. The incidental LiteLLM package statement lacks evidence of installation or victim impact.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is vulnerability research and controlled exploit demonstration without substantiated real-world unauthorized victim harm.",
-    "title": "Wiz disclosed AI-assisted PHP vulnerabilities"
-   },
-   {
-    "status": "include",
-    "reason": "Include as a confirmed software supply-chain compromise, while linking it to the already-tracked LiteLLM incident.",
-    "title": "Malicious LiteLLM 1.107.0 package published to PyPI and Docker",
-    "incident_id": "e2e13fe6f7503c25"
+    "reason": "Exclude: this is a vulnerability disclosure and controlled research demonstration without a confirmed real-world compromise. The incidental LiteLLM package statement lacks evidence of installation or victim impact.",
+    "title": "PHP2Shell vulnerabilities disclosed without confirmed real-world exploitation"
    }
   ],
   "evidence": "article",
@@ -23054,7 +23048,7 @@
  "https://www.darkreading.com/cloud-security/email-bombing-external-teams-chats-repeatable-access-path": {
   "title": "External Teams Chats Anchor 15-Minute Malware Delivery",
   "source": "Dark Reading",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -23062,7 +23056,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "External Teams chats used for rapid malware delivery"
+    "title": "External Teams chats used in malware-delivery technique"
    }
   ],
   "evidence": "summary",
@@ -23316,15 +23310,15 @@
  "https://therecord.media/malicious-apps-russian-anxiety-gas-prices-drone-strikes": {
   "title": "Malicious apps prey on Russians’ anxiety about fuel prices, drone strikes",
   "source": "The Record",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful malware campaign with researcher-confirmed distribution, but the report does not substantiate actual victim compromise or consequences.",
+  "reason": "Potentially meaningful Android malware campaign, but the supplied report does not substantiate that users actually installed the apps or that organizational, sensitive-data, or financial harm occurred.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful malware campaign with researcher-confirmed distribution, but the report does not substantiate actual victim compromise or consequences.",
-    "title": "Fake Russian fuel and drone apps distributed ZloyRAT"
+    "reason": "Potentially meaningful Android malware campaign, but the supplied report does not substantiate that users actually installed the apps or that organizational, sensitive-data, or financial harm occurred.",
+    "title": "ZloyRAT apps targeted Russian drivers"
    }
   ],
   "evidence": "article",
@@ -24949,25 +24943,28 @@
  "https://www.wiz.io/blog/the-rise-of-agentic-attacks": {
   "title": "The Rise of Agentic Attacks: What They Look Like, and Where They're Headed",
   "source": "Wiz Research",
-  "checked": "2026-11-17T21:00:10+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Substantive incident is already tracked as e94c45d738bc9b03; this source supplies additional detail on the same Wiz-observed agentic Flowise exploitation.; This Wiz case study is already tracked as d22f0579003d30c6, the agentic cloud intrusion with bulk secret theft.; This case is already tracked as 7954b8c30e7bed5c, the agentic intrusion targeting approximately 25 cryptocurrency exchanges and fintech organizations.",
+  "status": "include",
+  "reason": "This is a substantiated real-world agentic exploitation case and matches the already tracked Flowise agentic-exploitation incident.; The source substantiates a real cloud intrusion with credential and secret access; it is the already tracked Wiz-observed agentic cloud intrusion.; This is a substantiated multi-victim agentic intrusion campaign and matches the already tracked campaign against approximately 25 crypto and fintech organizations.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Substantive incident is already tracked as e94c45d738bc9b03; this source supplies additional detail on the same Wiz-observed agentic Flowise exploitation.",
-    "title": "Wiz-observed agentic exploitation of exposed Flowise services"
+    "status": "include",
+    "reason": "This is a substantiated real-world agentic exploitation case and matches the already tracked Flowise agentic-exploitation incident.",
+    "title": "Agentic attacks compromised exposed Flowise services",
+    "incident_id": "e94c45d738bc9b03"
    },
    {
-    "status": "exclude",
-    "reason": "This Wiz case study is already tracked as d22f0579003d30c6, the agentic cloud intrusion with bulk secret theft.",
-    "title": "Wiz-observed agentic cloud intrusion with bulk secret theft"
+    "status": "include",
+    "reason": "The source substantiates a real cloud intrusion with credential and secret access; it is the already tracked Wiz-observed agentic cloud intrusion.",
+    "title": "Agentic cloud intrusion stole credentials and cluster secrets",
+    "incident_id": "d22f0579003d30c6"
    },
    {
-    "status": "exclude",
-    "reason": "This case is already tracked as 7954b8c30e7bed5c, the agentic intrusion targeting approximately 25 cryptocurrency exchanges and fintech organizations.",
-    "title": "Agentic intrusions targeted crypto exchanges and fintech firms"
+    "status": "include",
+    "reason": "This is a substantiated multi-victim agentic intrusion campaign and matches the already tracked campaign against approximately 25 crypto and fintech organizations.",
+    "title": "Agentic campaign targeted crypto exchanges and fintechs",
+    "incident_id": "7954b8c30e7bed5c"
    }
   ],
   "evidence": "article",
@@ -25348,15 +25345,15 @@
  "https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/": {
   "title": "Binance probes potential $5.8 billion crypto-theft hack",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Binance confirmed an investigation, but had not verified that a breach or theft occurred. This is a developing report about the same suspected Binance incident already tracked under 0608e73237d158c5.",
+  "reason": "Potentially meaningful financial compromise, but the source reports an ongoing investigation and unverified theft claims rather than a confirmed Binance breach.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Binance confirmed an investigation, but had not verified that a breach or theft occurred. This is a developing report about the same suspected Binance incident already tracked under 0608e73237d158c5.",
-    "title": "Binance investigates suspected crypto-wallet breach"
+    "reason": "Potentially meaningful financial compromise, but the source reports an ongoing investigation and unverified theft claims rather than a confirmed Binance breach.",
+    "title": "Binance investigates suspected multibillion-dollar crypto theft"
    }
   ],
   "evidence": "article",
@@ -26038,15 +26035,15 @@
  "https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html": {
   "title": "Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw",
   "source": "The Hacker News",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful exploitation is reported, but no specific successful compromise or consequence is substantiated; the event is also already tracked as 76d68c45944a2559.",
+  "reason": "Potentially meaningful exploitation is reported, but the source gives no substantiated victim compromise or consequences; defer pending evidence of actual affected organizations or systems.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful exploitation is reported, but no specific successful compromise or consequence is substantiated; the event is also already tracked as 76d68c45944a2559.",
-    "title": "Drupal Commerce authorization-bypass flaw actively exploited"
+    "reason": "Potentially meaningful exploitation is reported, but the source gives no substantiated victim compromise or consequences; defer pending evidence of actual affected organizations or systems.",
+    "title": "Drupal Commerce Core flaw reportedly exploited in the wild"
    }
   ],
   "evidence": "article",
@@ -26305,15 +26302,15 @@
  "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/": {
   "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful hardware supply-chain tampering was reported, but Trezor had not examined the device and the implant and resulting compromise were unconfirmed. This is an earlier report about the same Trezor/CryptoBilis event later tracked as e9ba6f2b40b4d6cf.",
+  "reason": "Potentially meaningful hardware supply-chain compromise, but the available report relies on an unexamined customer device and does not substantiate a malicious implant or unauthorized theft. It also appears to concern the already-tracked CryptoBilis/Trezor implant incident.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful hardware supply-chain tampering was reported, but Trezor had not examined the device and the implant and resulting compromise were unconfirmed. This is an earlier report about the same Trezor/CryptoBilis event later tracked as e9ba6f2b40b4d6cf.",
-    "title": "Trezor investigates suspected implant in Safe 5 wallet"
+    "reason": "Potentially meaningful hardware supply-chain compromise, but the available report relies on an unexamined customer device and does not substantiate a malicious implant or unauthorized theft. It also appears to concern the already-tracked CryptoBilis/Trezor implant incident.",
+    "title": "Trezor investigates suspected CryptoBilis wallet implant"
    }
   ],
   "evidence": "article",
@@ -26583,15 +26580,15 @@
  "https://www.wiz.io/blog/black-october-for-ai-developer-platforms": {
   "title": "“Black October” for AI Developer Platforms",
   "source": "Wiz Research",
-  "checked": "2026-11-17T21:00:10+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "No new distinct incident should be created: the detailed credential-abuse cases duplicate already-tracked incidents, and the other named platform events are already tracked. The RunPod item is only a social-media report without sufficient corroboration.",
+  "reason": "All substantive incidents and the two detailed Bedrock credential-abuse cases are already represented in the supplied tracking list; this source adds corroboration and technical detail rather than a new incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "No new distinct incident should be created: the detailed credential-abuse cases duplicate already-tracked incidents, and the other named platform events are already tracked. The RunPod item is only a social-media report without sufficient corroboration.",
-    "title": "Wiz report adds evidence to already tracked AI-platform incidents"
+    "reason": "All substantive incidents and the two detailed Bedrock credential-abuse cases are already represented in the supplied tracking list; this source adds corroboration and technical detail rather than a new incident.",
+    "title": "Wiz report adds no distinct untracked incident"
    }
   ],
   "evidence": "article",
@@ -27496,15 +27493,15 @@
  "https://www.bleepingcomputer.com/news/security/fintech-platform-sageworks-taken-offline-after-suspected-cyberattack/": {
   "title": "Fintech platform Sageworks taken offline after suspected cyberattack",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful fintech-sector incident with confirmed operational disruption, but the company had not established whether a cyber compromise occurred. The prior attacker claim is unverified and cannot support inclusion as a confirmed incident.",
+  "reason": "Potentially meaningful financial-sector cyber incident because a business-critical lending platform was taken offline after suspicious activity, but the provider had not confirmed a compromise and the nature and impact remained under investigation.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful fintech-sector incident with confirmed operational disruption, but the company had not established whether a cyber compromise occurred. The prior attacker claim is unverified and cannot support inclusion as a confirmed incident.",
-    "title": "Sageworks fintech application taken offline after irregular activity"
+    "reason": "Potentially meaningful financial-sector cyber incident because a business-critical lending platform was taken offline after suspicious activity, but the provider had not confirmed a compromise and the nature and impact remained under investigation.",
+    "title": "Sageworks taken offline after suspicious activity"
    }
   ],
   "evidence": "article",
@@ -27636,14 +27633,14 @@
  "https://therecord.media/michigan-state-university-byod-gang-cyber-incident": {
   "title": "Michigan State cyber incident claimed by ransomware gang behind recent hospital attack",
   "source": "The Record",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "The university confirmed suspicious activity and a potential credential-compromise event, but explicitly reported no evidence of successful compromise or data theft; the ransomware gang's claim alone is insufficient to confirm a qualifying compromise.",
+  "reason": "Potentially meaningful university credential-compromise activity was reported, but the only asserted data theft comes from an unverified ransomware claim and the university reports no evidence of successful compromise or theft.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "The university confirmed suspicious activity and a potential credential-compromise event, but explicitly reported no evidence of successful compromise or data theft; the ransomware gang's claim alone is insufficient to confirm a qualifying compromise.",
+    "reason": "Potentially meaningful university credential-compromise activity was reported, but the only asserted data theft comes from an unverified ransomware claim and the university reports no evidence of successful compromise or theft.",
     "title": "Michigan State investigates suspected credential compromise"
    }
   ],
@@ -27661,15 +27658,15 @@
  "https://therecord.media/hackers-ukraine-belarus-russia": {
   "title": "Russia's statistics agency confirms cyberattack claimed by Belarusian and Ukrainian hackers",
   "source": "The Record",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful government cyber incident, but the only reported claims of compromise, data theft, destruction, and disruption are unverified and contradicted in part by Rosstat’s statement.",
+  "reason": "Potentially meaningful government cyber incident, but attacker claims about successful compromise and consequences could not be independently verified and the victim reported no evidence of protected-information leakage or database compromise.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful government cyber incident, but the only reported claims of compromise, data theft, destruction, and disruption are unverified and contradicted in part by Rosstat’s statement.",
-    "title": "Rosstat confirms cyberattack while disputing breach claims"
+    "reason": "Potentially meaningful government cyber incident, but attacker claims about successful compromise and consequences could not be independently verified and the victim reported no evidence of protected-information leakage or database compromise.",
+    "title": "Rosstat confirms cyberattack but disputes breach claims"
    }
   ],
   "evidence": "article",
@@ -28712,15 +28709,15 @@
  "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html": {
   "title": "CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation",
   "source": "The Hacker News",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Potential exploitation is reported, but actual unauthorized access or victim impact is not substantiated. Defer pending confirmed incident evidence.",
+  "status": "exclude",
+  "reason": "Mere vulnerability coverage and reports of possible exploitation do not establish an actual compromise or meaningful consequence. This is not a new incident record.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potential exploitation is reported, but actual unauthorized access or victim impact is not substantiated. Defer pending confirmed incident evidence.",
-    "title": "SonicWall SonicOS MFA-bypass exploitation remains unconfirmed"
+    "status": "exclude",
+    "reason": "Mere vulnerability coverage and reports of possible exploitation do not establish an actual compromise or meaningful consequence. This is not a new incident record.",
+    "title": "SonicWall SonicOS MFA-bypass flaw reportedly possibly exploited"
    }
   ],
   "evidence": "article",
@@ -33901,15 +33898,15 @@
  "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves": {
   "title": "November Patch Tuesday: An Overflowing Cornucopia of CVEs",
   "source": "Dark Reading",
-  "checked": "2026-11-11T06:35:22+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Duplicate of an already-tracked Outlook zero-day incident; the article is primarily a patch-roundup and adds no distinct substantive incident.",
+  "reason": "Exclude: patch roundup and vulnerability coverage without a newly substantiated compromise or documented consequence; the Outlook exploitation is already represented by the tracked incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Duplicate of an already-tracked Outlook zero-day incident; the article is primarily a patch-roundup and adds no distinct substantive incident.",
-    "title": "Microsoft Outlook zero-day exploitation already tracked"
+    "reason": "Exclude: patch roundup and vulnerability coverage without a newly substantiated compromise or documented consequence; the Outlook exploitation is already represented by the tracked incident.",
+    "title": "November Patch Tuesday vulnerability roundup"
    }
   ],
   "evidence": "summary",
@@ -33927,15 +33924,15 @@
  "https://www.darkreading.com/cybersecurity-careers/checkmarx-appoints-kobi-sivilya-chief-information-security-officer": {
   "title": "Checkmarx Appoints Kobi Sivilya as Chief Information Security Officer",
   "source": "Dark Reading",
-  "checked": "2026-11-11T06:35:22+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source reports a CISO appointment and general commentary about AI, not an actual cyber incident.",
+  "reason": "The report concerns a CISO appointment and provides no evidence of an actual cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source reports a CISO appointment and general commentary about AI, not an actual cyber incident.",
-    "title": "Checkmarx appoints a chief information security officer"
+    "reason": "The report concerns a CISO appointment and provides no evidence of an actual cyber incident.",
+    "title": "Checkmarx appoints new chief information security officer"
    }
   ],
   "evidence": "summary",
@@ -33953,15 +33950,15 @@
  "https://www.darkreading.com/cyberattacks-data-breaches/artex-ai-pen-test-tool-hackers-weapon": {
   "title": "Artex: The AI Pen-Test Tool Hackers Turned Into a Weapon",
   "source": "Dark Reading",
-  "checked": "2026-11-11T06:35:22+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Capability discussion without a distinct, substantiated new compromise or consequence; it does not qualify as a new incident.",
+  "reason": "Excludes a capability-focused report because it does not document an actual compromise or meaningful real-world consequence.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Capability discussion without a distinct, substantiated new compromise or consequence; it does not qualify as a new incident.",
-    "title": "Artex framework weaponization capabilities described"
+    "reason": "Excludes a capability-focused report because it does not document an actual compromise or meaningful real-world consequence.",
+    "title": "Artex tool capabilities reported without a specific compromise"
    }
   ],
   "evidence": "summary",
@@ -33979,15 +33976,15 @@
  "https://www.darkreading.com/application-security/f-secure-26-ways-ai-harm-consumers-where-to-stop-them": {
   "title": "F-Secure Identifies 26 Ways AI Can Harm Consumers, and Where to Stop Them",
   "source": "Dark Reading",
-  "checked": "2026-11-11T06:35:22+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: this is an AI harms taxonomy and policy/commentary report, not a substantive documented cyber incident.",
+  "reason": "This is a taxonomy and policy-oriented analysis of potential AI harms, not a documented cyber incident with actual external compromise or consequences.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is an AI harms taxonomy and policy/commentary report, not a substantive documented cyber incident.",
-    "title": "F-Secure AI harms taxonomy report"
+    "reason": "This is a taxonomy and policy-oriented analysis of potential AI harms, not a documented cyber incident with actual external compromise or consequences.",
+    "title": "F-Secure publishes taxonomy of AI consumer harms"
    }
   ],
   "evidence": "summary",
@@ -34005,20 +34002,20 @@
  "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/": {
   "title": "Japanese furniture giant Nitori says hackers stole 37.6M customer records",
   "source": "BleepingComputer",
-  "checked": "2026-11-11T06:35:22+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The company confirmed unauthorized access to an organizational system and potential exposure of tens of millions of sensitive records; the unresolved scope does not negate the substantiated incident.",
+  "reason": "Nitori confirmed a real unauthorized system compromise with potential exposure of up to 37.62 million private records; this is a distinct substantive incident already tracked under the supplied duplicate ID.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The company confirmed unauthorized access to an organizational system and potential exposure of tens of millions of sensitive records; the unresolved scope does not negate the substantiated incident.",
-    "title": "Nitori confirms unauthorized access potentially exposing 37.62M records",
+    "reason": "Nitori confirmed a real unauthorized system compromise with potential exposure of up to 37.62 million private records; this is a distinct substantive incident already tracked under the supplied duplicate ID.",
+    "title": "Nitori confirms unauthorized access exposing up to 37.62M records",
     "incident_id": "a4e66664d946cd4a"
    }
   ],
   "evidence": "article",
-  "summary_hash": "2701262d544562b5af8557220277c89d073062f0397fd8071c65ed0b3ee8ff73",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "a4e66664d946cd4a",
    "title": "Japanese furniture giant Nitori says hackers stole 37.6M customer records",
@@ -34056,19 +34053,31 @@
  "https://therecord.media/patch-tuesday-microsoft-1000-bugs-again": {
   "title": "Microsoft’s Patch Tuesday surpasses 1,000 bugs for second month in a row",
   "source": "The Record",
-  "checked": "2026-11-11T06:35:22+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude as a vulnerability/patch roundup containing already-tracked Outlook and Barracuda incidents and an explicitly unconfirmed N-able exploitation report.",
+  "status": "include",
+  "reason": "The report confirms real-world exploitation of an Outlook vulnerability; this is the same incident already tracked under the existing Outlook zero-day record.; The report contains confirmed exploitation of Barracuda product vulnerabilities and corresponds to an already tracked Barracuda incident.; The source reports scanning and precautionary shutdowns, while N-able said there was no evidence of successful exploitation; this does not meet the actual-compromise threshold.",
   "decisions": [
    {
+    "status": "include",
+    "reason": "The report confirms real-world exploitation of an Outlook vulnerability; this is the same incident already tracked under the existing Outlook zero-day record.",
+    "title": "Microsoft Outlook zero-day exploited to disclose authentication information",
+    "incident_id": "9df899e0eb55d08e"
+   },
+   {
+    "status": "include",
+    "reason": "The report contains confirmed exploitation of Barracuda product vulnerabilities and corresponds to an already tracked Barracuda incident.",
+    "title": "Barracuda Email Security Gateway flaws exploited in attacks",
+    "incident_id": "421cc863e888fd33"
+   },
+   {
     "status": "exclude",
-    "reason": "Exclude as a vulnerability/patch roundup containing already-tracked Outlook and Barracuda incidents and an explicitly unconfirmed N-able exploitation report.",
-    "title": "Patch Tuesday roundup reports exploited flaws, no new distinct incident"
+    "reason": "The source reports scanning and precautionary shutdowns, while N-able said there was no evidence of successful exploitation; this does not meet the actual-compromise threshold.",
+    "title": "N-able takes hosted N-central environments offline after PoC release"
    }
   ],
   "evidence": "article",
-  "summary_hash": "d1d00c25a1b74caa86f796bb1304043a250d30315a96a3f2ad8fa93605c7e4a6",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "d1bfb083ab4ff044",
    "title": "Microsoft’s Patch Tuesday surpasses 1,000 bugs for second month in a row",
@@ -36359,16 +36368,15 @@
  "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html": {
   "title": "186 Fake AI Domains Redirect Users to ClickFix Lures, Browser Malware, and Search Hijackers",
   "source": "The Hacker News",
-  "checked": "2026-11-17T21:00:10+00:00",
+  "checked": "2026-11-18T07:37:34+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Researchers substantiated an active multi-user malware and browser-hijacking campaign, rather than merely reporting fake domains or blocked attempts. This is the same campaign already tracked under 50a60ce1a92ef06f.",
+  "status": "exclude",
+  "reason": "This is the same TypoPrompting campaign already tracked under incident 50a60ce1a92ef06f; it should not create a duplicate record.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Researchers substantiated an active multi-user malware and browser-hijacking campaign, rather than merely reporting fake domains or blocked attempts. This is the same campaign already tracked under 50a60ce1a92ef06f.",
-    "title": "TypoPrompting campaign abused 186 fake AI-tool domains",
-    "incident_id": "50a60ce1a92ef06f"
+    "status": "exclude",
+    "reason": "This is the same TypoPrompting campaign already tracked under incident 50a60ce1a92ef06f; it should not create a duplicate record.",
+    "title": "TypoPrompting campaign used 186 fake AI-tool domains"
    }
   ],
   "evidence": "article",
@@ -40314,6 +40322,188 @@
    "date": "2026-11-17",
    "source": "The Hacker News",
    "published_at": "2026-11-17T11:07:31+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html": {
+  "title": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
+  "source": "The Hacker News",
+  "checked": "2026-11-18T07:37:34+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Credible Google/Mandiant reporting substantiates consequential compromise of two organizations, privileged cloud access, persistent identity abuse, and substantial sensitive-data theft; this is not merely an attacker claim or a vulnerability report.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Credible Google/Mandiant reporting substantiates consequential compromise of two organizations, privileged cloud access, persistent identity abuse, and substantial sensitive-data theft; this is not merely an attacker claim or a vulnerability report.",
+    "title": "Cold Relic breached two U.S. organizations through cloud identity abuse",
+    "incident_id": "d71f76de489e4c83"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "1b3e8d66b82cf26a02d5d560bf9ac9f9a07e18c33fa7eb7f2d8048a5e47e5e01",
+  "item": {
+   "id": "d71f76de489e4c83",
+   "title": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
+   "url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
+   "date": "2026-11-18",
+   "source": "The Hacker News",
+   "published_at": "2026-11-18T05:58:04+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html": {
+  "title": "Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
+  "source": "The Hacker News",
+  "checked": "2026-11-18T07:37:34+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "A trusted Microsoft-related PyPI package was actually compromised and distributed credential-stealing code capable of harvesting cloud identities and secrets; this is a substantive software supply-chain incident, not merely a vulnerability or blocked attempt.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "A trusted Microsoft-related PyPI package was actually compromised and distributed credential-stealing code capable of harvesting cloud identities and secrets; this is a substantive software supply-chain incident, not merely a vulnerability or blocked attempt.",
+    "title": "Malicious Microsoft Agent Framework PyPI releases stole cloud credentials",
+    "incident_id": "8b71dc35fd91ecd8"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "088cb62180aff29a239f7772202108b3e5bb767fcf7fe9d426db9dc66778abe4",
+  "item": {
+   "id": "8b71dc35fd91ecd8",
+   "title": "Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
+   "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+   "date": "2026-11-18",
+   "source": "The Hacker News",
+   "published_at": "2026-11-18T06:45:26+00:00"
+  }
+ },
+ "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi": {
+  "title": "Microsoft agent-framework Compromised: Credential Stealer Targets Azure and CI Pipelines",
+  "source": "Wiz Research",
+  "checked": "2026-11-18T07:37:34+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Confirmed malicious releases in a trusted PyPI package executed credential-stealing code and transmitted collected data; this is a substantive supply-chain compromise, and it duplicates the already-tracked incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Confirmed malicious releases in a trusted PyPI package executed credential-stealing code and transmitted collected data; this is a substantive supply-chain compromise, and it duplicates the already-tracked incident.",
+    "title": "Malicious Microsoft Agent Framework releases stole cloud credentials",
+    "incident_id": "8b71dc35fd91ecd8"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "8aefb4ae6a45a1d9ce84fc8fab9f2c576dce214843f15be9830ff38268cc66da",
+  "item": {
+   "id": "7f6138f6420f7f97",
+   "title": "Microsoft agent-framework Compromised: Credential Stealer Targets Azure and CI Pipelines",
+   "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
+   "date": "2026-11-17",
+   "source": "Wiz Research",
+   "published_at": "2026-11-17T22:03:37+00:00"
+  }
+ },
+ "https://www.darkreading.com/perimeter/themailer-phishing-kit-ai-drivers-seat": {
+  "title": "'TheMailer' Phishing Kit Puts AI in the Driver's Seat",
+  "source": "Dark Reading",
+  "checked": "2026-11-18T07:37:34+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Excludes capability and targeting reporting without substantiated unauthorized access or victim consequences.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Excludes capability and targeting reporting without substantiated unauthorized access or victim consequences.",
+    "title": "TheMailer phishing kit uses AI to personalize lures"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "2549aa2bca39d3dd58687c4b9b0457f32b1246f5fc71ff271c5dd1e73c6862c7",
+  "item": {
+   "id": "3e87f985eddd1684",
+   "title": "'TheMailer' Phishing Kit Puts AI in the Driver's Seat",
+   "url": "https://www.darkreading.com/perimeter/themailer-phishing-kit-ai-drivers-seat",
+   "date": "2026-11-17",
+   "source": "Dark Reading",
+   "published_at": "2026-11-17T20:58:13+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/cyber-risk/optimizely-malware-attacks-third-party-vendor-risks": {
+  "title": "Optimizely Malware Attacks Highlight Third-Party Vendor Risks",
+  "source": "Dark Reading",
+  "checked": "2026-11-18T07:37:34+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Substantive reporting of the already-tracked Optimizely supply-chain compromise; retained as a duplicate source record rather than a new incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Substantive reporting of the already-tracked Optimizely supply-chain compromise; retained as a duplicate source record rather than a new incident.",
+    "title": "Optimizely third-party platform exposed visitors to malware",
+    "incident_id": "6957eb85cb7f4003"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "d32ebe9c31f6bd6ed36bb0ebb7e640102988810d82160058167739af3b36b24e",
+  "item": {
+   "id": "42bdc9a47dfbd0d9",
+   "title": "Optimizely Malware Attacks Highlight Third-Party Vendor Risks",
+   "url": "https://www.darkreading.com/cyber-risk/optimizely-malware-attacks-third-party-vendor-risks",
+   "date": "2026-11-17",
+   "source": "Dark Reading",
+   "published_at": "2026-11-17T22:34:22+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/": {
+  "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
+  "source": "BleepingComputer",
+  "checked": "2026-11-18T07:37:34+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "Controlled honeypot research experiment without established external victim harm; it demonstrates attack behavior rather than documenting a qualifying real-world cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Controlled honeypot research experiment without established external victim harm; it demonstrates attack behavior rather than documenting a qualifying real-world cyber incident.",
+    "title": "Researchers observed rapid theft of secrets from honeypot images"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "ee9b1a193ba2c3b6dd7c3c7e582aad7aca3af6e4e12f05dcf05cd95405659943",
+  "item": {
+   "id": "11fbfc838acdb842",
+   "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
+   "url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/",
+   "date": "2026-11-17",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-17T21:27:17+00:00"
+  }
+ },
+ "https://therecord.media/optimizely-malicious-code-customer-sites": {
+  "title": "Website management platform Optimizely confirms hackers put malicious code into customer sites",
+  "source": "The Record",
+  "checked": "2026-11-18T07:37:34+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Optimizely confirmed a platform compromise that injected malicious code into numerous real customer websites, with observed cryptocurrency theft and broader payment, session, and malware-delivery consequences. This is the already-tracked Optimizely supply-chain incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Optimizely confirmed a platform compromise that injected malicious code into numerous real customer websites, with observed cryptocurrency theft and broader payment, session, and malware-delivery consequences. This is the already-tracked Optimizely supply-chain incident.",
+    "title": "Optimizely platform injected malicious code into 178 customer websites",
+    "incident_id": "6957eb85cb7f4003"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "36c349db194ce5e36223834b3860eded01f79f86d530dda299765b0b19866ab0",
+  "item": {
+   "id": "ae97d9389d1d9931",
+   "title": "Website management platform Optimizely confirms hackers put malicious code into customer sites",
+   "url": "https://therecord.media/optimizely-malicious-code-customer-sites",
+   "date": "2026-11-17",
+   "source": "The Record",
+   "published_at": "2026-11-17T21:20:00+00:00"
   }
  }
 }
