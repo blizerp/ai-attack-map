@@ -7337,13 +7337,206 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-18-morning",
+   "date": "2026-11-18",
+   "edition": "morning",
+   "published_at": "2026-11-18T20:42:01+00:00",
+   "generated_at": "2026-11-18T20:42:01+00:00",
+   "scheduled_for": "2026-11-18T13:00:00+00:00",
+   "window_start": "2026-11-17T22:27:39+00:00",
+   "window_end": "2026-11-18T20:42:01+00:00",
+   "sector_window_start": "2026-11-17T20:42:01+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting confirms a major credit-union data exposure, a compromised Microsoft developer package, and active attacks against business software. A Russian espionage campaign also shows how stolen cloud data was used to target a second organization. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Credit-union supplier breach exposed members’ payee information",
+      "what_happened": "Wellington IT, a supplier to about 50 credit unions, was attacked between October 2 and 4. Officials say data from about 40 Irish credit unions was exposed. The attacker accessed saved payee records using valid credentials. The supplier reportedly lacked logs showing exactly whose data was taken.",
+      "impact": "The number of affected people is unknown. Exposed records may include payee names, bank account numbers, international account numbers, addresses and payment references. Passwords, payment cards, account credentials and funds were not affected according to the reported notices. Members face phishing, impersonation and fraud risks.",
+      "what_next": "Credit unions and investigators may clarify the affected records and number of people. Further notices could explain support for members and whether individual accounts need additional protection.",
+      "change": "New report",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/",
+        "published": "2026-11-18T19:39:33+00:00"
+       }
+      ],
+      "incident_ids": [
+       "44fa9d7e476f2142"
+      ]
+     },
+     {
+      "headline": "Malicious Microsoft package may have stolen developers’ cloud credentials",
+      "what_happened": "Attackers uploaded two harmful versions of Microsoft’s Agent Framework package to the Python Package Index on November 17. The package ran credential-stealing code whenever Python started, even if the framework was not used. The releases were later quarantined.",
+      "impact": "Developers who installed either version may have exposed cloud, source-code and service credentials. The package has about 190,000 to 200,000 monthly downloads, but the number of affected users and confirmed thefts is unclear. This was a compromise of a trusted software distribution channel, not a reported consumer outage.",
+      "what_next": "Microsoft and package researchers are investigating how publishing access was obtained and whether credentials were used. Further findings may identify affected development environments or downstream services.",
+      "change": "Newly confirmed",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/",
+        "published": "2026-11-18T16:58:42+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/microsoft-agent-framework-releases-poisoned-with-credential-stealer/",
+        "published": "2026-11-18T11:05:39+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+        "published": "2026-11-18T06:45:26+00:00"
+       }
+      ],
+      "incident_ids": [
+       "8b71dc35fd91ecd8"
+      ]
+     },
+     {
+      "headline": "Attackers are exploiting a flaw in Apache Roller blogging servers",
+      "what_happened": "The Apache Software Foundation says attackers are actively exploiting a flaw in Apache Roller versions 4.0.0 through 6.1.4. The flaw can let an unauthenticated attacker take control of a vulnerable server. Apache has not said who is behind the attacks or how many servers were compromised.",
+      "impact": "Organizations running affected Roller servers could face website changes, data theft or wider network compromise. No specific affected organizations, public outage or confirmed stolen data was reported.",
+      "what_next": "Apache and affected organizations may disclose more about the attacks and compromised servers. The scale of the campaign remains unclear.",
+      "change": "Newly confirmed",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
+        "published": "2026-11-18T17:10:45+00:00"
+       },
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/",
+        "published": "2026-11-18T10:35:05+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Attackers are using a Puppet management flaw to reach managed systems",
+      "what_happened": "A critical flaw in Perforce Puppet has been exploited against enterprise management servers. Puppet can control software and settings across many devices, so a compromised server may be used to alter systems it manages. The flaw was fixed on November 3 and was added to the U.S. exploited-vulnerability list on November 17.",
+      "impact": "Organizations using vulnerable, misconfigured Puppet systems could face mass unauthorized software changes, data theft or ransomware. The reports do not identify victims or confirm disruption to public services or household products.",
+      "what_next": "Perforce and investigators may clarify how widely the flaw was exploited and whether attackers changed managed systems. The related OpenVox platform was also affected, according to the reports.",
+      "change": "Newly confirmed",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/critical-perforce-puppet-rce-exploited-in-attacks/",
+        "published": "2026-11-18T10:37:08+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html",
+        "published": "2026-11-18T08:24:31+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Stolen cloud data helped Russian hackers target a second organization",
+      "what_happened": "Google reported that the Russia-linked Cold Relic group used employee lists, messages and other information stolen from a U.S. organization in late 2025. The group impersonated an employee when approaching a second U.S. organization and then stole data from that organization’s cloud storage.",
+      "impact": "The organizations were not named, and the stolen information was not described. The incident shows that a breach at one organization can make convincing scams against its employees, partners and contacts more likely. No public service outage was reported.",
+      "what_next": "Google and affected organizations may identify the victims and explain what data was accessed. Further investigations could reveal additional organizations targeted through the stolen relationships.",
+      "change": "New report",
+      "sectors": [],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/russia-cyber-espionage-google",
+        "published": "2026-11-18T15:15:00+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/russian-apt-poses-as-employee-of-hacked-firm-to-breach-another-us-organization/",
+        "published": "2026-11-18T13:33:47+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
+        "published": "2026-11-18T05:58:04+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "2 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 726
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 30,
+   "usage": {
+    "completion_tokens": 1195,
+    "prompt_tokens": 32110,
+    "total_tokens": 33305,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 86,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 32107,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
-  "status": "failed",
-  "edition_id": "2026-11-18-morning",
-  "checked_at": "2026-11-18T14:08:22+00:00",
-  "error": "ValueError"
+  "status": "ok",
+  "checked_at": "2026-11-18T20:42:01+00:00"
  },
  "automatic_attempts": {
   "2026-11-15-morning": {
@@ -7371,8 +7564,8 @@
    "checked_at": "2026-11-17T22:27:39+00:00"
   },
   "2026-11-18-morning": {
-   "count": 1,
-   "checked_at": "2026-11-18T14:08:22+00:00"
+   "count": 2,
+   "checked_at": "2026-11-18T20:42:01+00:00"
   }
  }
 }
