@@ -1,0 +1,21 @@
+name: One-shot source schema smoke test
+on:
+  push:
+    branches: ['fix/briefing-source-schema-20261118']
+    paths: ['.github/source-schema-smoke.py']
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install 'feedparser==6.0.11' 'requests>=2.31,<3' 'openai>=1.40,<3' 'trafilatura>=2,<3' 'jsonschema>=4,<5'
+      - run: python .github/source-schema-smoke.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
