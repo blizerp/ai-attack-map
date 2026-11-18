@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T07:37:34+00:00",
+ "updated": "2026-11-18T20:38:01+00:00",
  "incidents": [
   {
    "title": "Fireworks-linked breach exposed thousands of Uber drivers’ license data",
@@ -119,7 +119,21 @@
     "source_url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
     "assessed_at": "2026-11-18T07:37:34+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/russian-apt-poses-as-employee-of-hacked-firm-to-breach-another-us-organization/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-11-18",
+     "what": "The group compromised the first organization using a super-admin account, MFA push fatigue, rogue MFA devices, passkeys, and backup codes. It downloaded cloud storage, exported employee lists and domain-wide data, removed evidence, and later impersonated the victim’s employees to phish a second organization; credentials and Entra ID tokens enabled access and bulk file downloads from the second victim’s cloud drive.",
+     "url": "https://www.securityweek.com/russian-apt-poses-as-employee-of-hacked-firm-to-breach-another-us-organization/",
+     "source": "SecurityWeek"
+    }
+   ]
   },
   {
    "title": "Malicious Microsoft Agent Framework PyPI releases stole cloud credentials",
@@ -143,25 +157,37 @@
    "lat": null,
    "lon": null,
    "severity": {
-    "level": "unknown",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "The package and its malicious releases were confirmed compromised, and the code was designed to collect and exfiltrate credentials and cloud identity material. Confirmed downstream credential theft, service disruption, and financial losses were not established in the available reporting.",
+    "reason": "The releases contained a credential stealer and were published to PyPI; the number of affected installations and downstream consequences were not reported.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
-     "reach": "unknown",
-     "damage": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
      "essential": "unknown",
      "financial": "unknown"
     },
-    "source_url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
-    "assessed_at": "2026-11-18T07:37:34+00:00",
+    "source_url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
+    "assessed_at": "2026-11-18T20:38:01+00:00",
     "method": "reported-impact-v1"
    },
    "more_sources": [
     {
      "name": "Wiz Research",
      "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi"
+    },
+    {
+     "name": "Wiz Research",
+     "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/microsoft-agent-framework-releases-poisoned-with-credential-stealer/"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/"
     }
    ],
    "updates": [
@@ -170,8 +196,368 @@
      "what": "Attackers uploaded malicious versions 1.26.1 and 1.26.2 of Microsoft Agent Framework to PyPI. The packages used Python .pth persistence to execute on interpreter startup, collect Azure, Azure DevOps, GitHub Actions, cloud, registry, and other credentials, and send the data to a webhook.site endpoint. Wiz confirmed the attacker-controlled endpoint was on the free tier and captured up to 50 requests.",
      "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
      "source": "Wiz Research"
+    },
+    {
+     "date": "2026-11-18",
+     "what": "Versions 1.26.1 and 1.26.2 of the PyPI package agent-framework were published with an added credential stealer and were later quarantined.",
+     "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
+     "source": "Wiz Research"
+    },
+    {
+     "date": "2026-11-18",
+     "what": "Attackers uploaded malicious versions 1.26.1 and 1.26.2 of the agent-framework Python package to PyPI. The packages retained legitimate functionality but automatically executed credential-stealing code targeting environment variables, configuration files, running processes, Azure managed-identity and Azure DevOps tokens, and— in version 1.26.2—GitHub Actions credentials.",
+     "url": "https://www.securityweek.com/microsoft-agent-framework-releases-poisoned-with-credential-stealer/",
+     "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-11-18",
+     "what": "An attacker published malicious versions 1.26.1 and 1.26.2 of Microsoft’s official Agent Framework package on PyPI. The releases used Python startup mechanisms to harvest credentials and secrets from environment variables, configuration files, processes, cloud identity tokens, and GitHub runner directories, then attempted to send the data to an attacker-controlled webhook.",
+     "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/",
+     "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-11-18",
+     "what": "Attackers published malicious versions 1.26.1 and 1.26.2 of Microsoft’s agent-framework package. The releases installed Python startup hooks that harvested credentials, environment data, cloud identity tokens, and Azure/GitHub OIDC tokens, then exfiltrated the data to a hard-coded webhook.",
+     "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+     "source": "The Hacker News"
     }
    ]
+  },
+  {
+   "title": "Teams IT-support scams led to malware and ransomware intrusions",
+   "date": "2026-10-26",
+   "category": "major_cyber",
+   "victim": "Multiple unnamed organizations targeted through Microsoft Teams",
+   "attacker": "Activity was assessed by Arctic Wolf Labs as aligned with STAC4749; Sophos linked some attacks to Chaos ransomware. Attribution is not independently established in the report.",
+   "what": "Attackers used mail bombing, impersonation through newly created or acquired Microsoft 365 tenants, and Teams external chats to persuade users to grant remote access or execute PowerShell commands. Observed follow-on activity included malware deployment, reconnaissance, lateral movement, LDAP queries, data exfiltration, and in some cases ransomware deployment.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign turns trusted collaboration and remote-management tools into an initial-access path and has produced broader organizational intrusions across hundreds of investigated cases.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Arctic Wolf reported a recurring pattern across hundreds of cases, including observed implants that queried Active Directory and transmitted information externally; the activity also led to Chaos ransomware deployment in some cases. Specific victims and aggregate losses were not reported.",
+   "id": "d47eb03ecc928f67",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
+   "added": "2026-10-27T06:10:01+00:00",
+   "reported_date": "2026-10-26",
+   "last_reported": "2026-11-18",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers reported multiple real-world organizational intrusions, including sensitive-data exfiltration and ransomware deployment in some cases. The source does not establish the number of organizations suffering each consequence or the duration and financial impact.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
+    "assessed_at": "2026-11-03T06:55:23+00:00",
+    "method": "reported-impact-v1"
+   },
+   "more_sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-26",
+     "what": "Attackers used email bombing, external Microsoft Teams chats, fake IT-support identities, and vishing to persuade users to grant remote access through tools such as Quick Assist, AnyDesk, or ScreenConnect. In investigated cases, attackers executed PowerShell and Python malware, queried Active Directory, moved laterally, exfiltrated data, and deployed ransomware.",
+     "url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
+     "source": "The Hacker News"
+    },
+    {
+     "date": "2026-11-18",
+     "what": "Attackers impersonated internal IT-support staff through external Teams messages or calls, persuaded employees to grant remote control using screen sharing or Quick Assist, then used PowerShell to install malware, establish persistence, and gather network information. Microsoft observed attempted lateral movement toward domain controllers and certificate authorities.",
+     "url": "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/",
+     "source": "BleepingComputer"
+    }
+   ]
+  },
+  {
+   "title": "Arup employee transfers $25.6 million after deepfake video call",
+   "date": "2024-01",
+   "category": "using_ai",
+   "victim": "Arup",
+   "attacker": "Unidentified attackers; Hong Kong police said they used publicly available video and audio to create a prerecorded deepfake conference.",
+   "what": "An Arup finance employee in Hong Kong received fraudulent transfer instructions and was persuaded by a fake video conference portraying the CFO and colleagues. The employee then made multiple transfers totaling approximately HK$200 million (US$25.6 million).",
+   "ai_role": "Attackers used deepfake video and audio to impersonate Arup executives and colleagues.",
+   "why": "The incident caused a documented multimillion-dollar organizational loss and demonstrates successful AI-enabled executive impersonation.",
+   "where": "Hong Kong",
+   "major_impact": "major_financial_loss",
+   "significance": "Hong Kong police reportedly confirmed the deepfake mechanism, and the article reports approximately US$25.6 million in transfers.",
+   "id": "9e584bff1d23eb6f",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/",
+   "added": "2026-11-18T20:38:01+00:00",
+   "reported_date": "2026-11-18",
+   "last_reported": "2026-11-18",
+   "evidence_status": "confirmed",
+   "lat": 22.3492361,
+   "lon": 114.1857778,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "A real Arup employee made multiple fraudulent transfers totaling approximately US$25.6 million; no operational-service disruption was reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "limited",
+     "essential": "none",
+     "financial": "major"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/",
+    "assessed_at": "2026-11-18T20:38:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 22.3492361,
+     "lon": 114.1857778,
+     "label": "Hong Kong",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/"
+    }
+   ]
+  },
+  {
+   "title": "M&S cyberattack disrupted retail operations and exposed customer data",
+   "date": "2025-04",
+   "category": "major_cyber",
+   "victim": "Marks & Spencer",
+   "attacker": "The attack was linked to Scattered Spider, according to the supplied report; attackers reportedly entered through a deceived third-party contractor.",
+   "what": "Attackers used social engineering against a third-party helpdesk or contractor to gain access. The incident suspended online orders and affected contactless payments and Click & Collect for weeks; customer data was also stolen.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The attack caused prolonged disruption to a major retailer and involved confirmed customer-data theft through a trusted supplier pathway.",
+   "where": "United Kingdom",
+   "major_impact": "essential_service_disruption",
+   "significance": "M&S estimated an approximately £300 million reduction in 2025/26 operating profit before mitigation, while core retail and payment-related services were disrupted for weeks.",
+   "id": "86a29eadcaf0d13d",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/",
+   "added": "2026-11-18T20:38:01+00:00",
+   "reported_date": "2026-11-18",
+   "last_reported": "2026-11-18",
+   "evidence_status": "confirmed",
+   "lat": 54.7023545,
+   "lon": -3.2765753,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Online orders, contactless payments, and Click & Collect were affected for weeks, and customer data was stolen; the reported profit impact was approximately £300 million before mitigation.",
+    "evidence": {
+     "context": "real_world",
+     "service": "major",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "major"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/",
+    "assessed_at": "2026-11-18T20:38:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 54.7023545,
+     "lon": -3.2765753,
+     "label": "United Kingdom",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/"
+    }
+   ]
+  },
+  {
+   "title": "Wellington IT breach exposed credit-union payee records",
+   "date": "2026-10-02 to 2026-10-04",
+   "category": "major_cyber",
+   "victim": "Wellington IT and approximately 40 Irish credit unions, including at least six that disclosed impact",
+   "attacker": "Unknown; an attacker reportedly used valid credentials and exploited an authorization flaw, but attribution was not reported.",
+   "what": "An automated script made approximately five million requests against Wellington IT infrastructure and accessed private credit-union records. Potentially exposed data included payee names, IBANs, BICs, account numbers, sort codes, addresses, payment references, and the associated credit-union member; the full scope is unknown because activity logs were unavailable.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident compromised a trusted financial-services supplier and exposed sensitive banking-related records across about 40 Irish credit unions, creating reported risks of fraud, impersonation, and targeted phishing. Member passwords, PINs, payment-card details, online-banking credentials, and funds were reported unaffected.",
+   "where": "Ireland",
+   "major_impact": "supply_chain_compromise",
+   "significance": "Ireland's minister and affected credit unions confirmed the supplier-linked incident, while customer notices documented unauthorized access to payee information. The number of affected individuals and the exact records accessed remain unknown.",
+   "id": "44fa9d7e476f2142",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/",
+   "added": "2026-11-18T20:38:01+00:00",
+   "reported_date": "2026-11-18",
+   "last_reported": "2026-11-18",
+   "evidence_status": "confirmed",
+   "lat": 52.865196,
+   "lon": -7.9794599,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Government confirmation and notices from multiple credit unions substantiate unauthorized access to sensitive payee records through their shared IT provider. No service outage, stolen funds, or confirmed fraud was reported; the total individual impact remains unknown.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/",
+    "assessed_at": "2026-11-18T20:38:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 52.865196,
+     "lon": -7.9794599,
+     "label": "Ireland",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/"
+    }
+   ]
+  },
+  {
+   "title": "EggStreme backdoor activity compromised Philippine government networks",
+   "date": "2026-11-18",
+   "category": "major_cyber",
+   "victim": "Government organizations in the Philippines; specific entities were not reported",
+   "attacker": "Suspected China-linked APT; Bitdefender reported the activity but did not establish attribution",
+   "what": "A rebuilt EggStreme malware framework was used in government attacks. The backdoor enabled reconnaissance, lateral movement, reverse shells, file transfer, and data theft; investigators observed valid-credential use and staging from unmanaged hosts.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The activity involved compromise of government networks and malware capable of lateral movement and data theft. The initial access vector, victim count, and confirmed amount of stolen data were not established.",
+   "where": "Philippines",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Bitdefender analyzed newer intrusions involving EggStreme components, valid credentials, network-share staging, and a backdoor supporting lateral movement and data theft. The report also describes passive variants designed to evade detection.",
+   "id": "0bdf52035040bab8",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
+   "added": "2026-11-18T20:38:01+00:00",
+   "reported_date": "2026-11-18",
+   "last_reported": "2026-11-18",
+   "evidence_status": "confirmed",
+   "lat": 12.7503486,
+   "lon": 122.7312101,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Researchers reported analyzed intrusions into government environments and described lateral movement and data-theft capability. Operational disruption and the final scope of compromise were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
+    "assessed_at": "2026-11-18T20:38:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 12.7503486,
+     "lon": 122.7312101,
+     "label": "Philippines",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html"
+    }
+   ]
+  },
+  {
+   "title": "Mustang Panda used ASEAN lures to install PlugX in government targets",
+   "date": "2026-10-31",
+   "category": "major_cyber",
+   "victim": "Philippine government officials; specific victims were not reported",
+   "attacker": "Mustang Panda, described as a China-aligned cyber-espionage group; attribution is based on Dream Research Labs reporting",
+   "what": "A package impersonating a Laos–Philippines diplomatic meeting agenda used DLL sideloading to install PlugX remote-access malware while displaying a decoy agenda.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The delivery chain installed remote-access malware on government-targeted systems, constituting an actual compromise. The number of compromised officials and subsequent actions were not reported.",
+   "where": "Philippines",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The report describes a concrete government intrusion using a tailored diplomatic lure and PlugX installation, rather than an attempted or blocked campaign.",
+   "id": "9cc8531095df989c",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
+   "added": "2026-11-18T20:38:01+00:00",
+   "reported_date": "2026-11-18",
+   "last_reported": "2026-11-18",
+   "evidence_status": "confirmed",
+   "lat": 12.7503486,
+   "lon": 122.7312101,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "PlugX was reportedly installed through the targeted delivery chain, demonstrating unauthorized access capability on victim hosts. Data theft, persistence duration, and service effects were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
+    "assessed_at": "2026-11-18T20:38:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 12.7503486,
+     "lon": 122.7312101,
+     "label": "Philippines",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html"
+    }
+   ]
+  },
+  {
+   "title": "Earth Alux compromised Southeast Asian government networks",
+   "date": "2026-03-01",
+   "category": "major_cyber",
+   "victim": "Government entities in Southeast Asia; specific organizations and countries were not reported",
+   "attacker": "Earth Alux, also tracked as Ink Dragon, Jewelbug, REF7707, and UAT-11587; attribution is from Palo Alto Networks Unit 42 and remains threat-researcher assessed",
+   "what": "Earth Alux used vulnerable Microsoft Exchange servers, web shells, phishing, and lookalike domains to compromise networks and deploy PerfectPioneer and KUKURAT remote-access trojans. The activity included credential collection, lateral movement, Domain Controller compromise, and exfiltration of files and emails.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The campaign involved confirmed intrusions into government entities with remote control, credential theft, lateral movement, and sensitive-data exfiltration. The article dates the activity from at least July 2025, while the exact incident dates and victim count remain unclear.",
+   "where": "Southeast Asia",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Unit 42 reported multiple government compromises and observed exfiltration of files and emails, alongside compromise of Domain Controllers and deployment of modular backdoors with stealth features.",
+   "id": "afb66abb39ed0e98",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
+   "added": "2026-11-18T20:38:01+00:00",
+   "reported_date": "2026-11-18",
+   "last_reported": "2026-11-18",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Researchers reported compromised government networks, credential collection, Domain Controller compromise, and exfiltration of files and emails. The number of affected organizations and volume of data were not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
+    "assessed_at": "2026-11-18T20:38:01+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "Optimizely supply-chain attack infected scripts on major websites",
@@ -3091,19 +3477,19 @@
    "lat": 22.3492361,
    "lon": 114.1857778,
    "severity": {
-    "level": "unknown",
+    "level": "significant",
     "status": "preliminary",
-    "reason": "Maersk confirmed a system breach but said operations were not expected to be disrupted and found no indication of impact to other systems or connected customer and partner environments. Alleged data theft and the $5 million demand remain attacker claims.",
+    "reason": "Maersk confirmed unauthorized access to an isolated local system and said booking and shipment-management operations were unaffected. The company did not confirm data theft; WhiteArmor's claims about stolen records, passwords, and privileged accounts remain allegations.",
     "evidence": {
      "context": "real_world",
      "service": "none",
      "reach": "single",
-     "damage": "unknown",
-     "essential": "unknown",
+     "damage": "privileged_access",
+     "essential": "none",
      "financial": "unknown"
     },
     "source_url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
-    "assessed_at": "2026-11-11T19:40:32+00:00",
+    "assessed_at": "2026-11-18T20:38:01+00:00",
     "method": "reported-impact-v1"
    },
    "more_sources": [
@@ -3113,6 +3499,12 @@
     }
    ],
    "updates": [
+    {
+     "date": "2026-11-11",
+     "what": "Maersk said an isolated local system belonging to a previously acquired company was breached. WhiteArmor claimed it stole about 100 GB, but Maersk said current evidence showed no sensitive data had been disclosed and that the investigation was ongoing.",
+     "url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
+     "source": "BleepingComputer"
+    },
     {
      "date": "2026-11-12",
      "what": "Maersk said hackers extracted data from an isolated IT system inherited through an acquisition, identified in reporting as a platform associated with LF Logistics. Maersk’s investigation is ongoing; the alleged data volume and contents have not been independently verified.",
@@ -3875,12 +4267,6 @@
    "updates": [
     {
      "date": "2026-11-11",
-     "what": "Attackers exploited the unauthenticated Cisco BroadWorks CVE-2026-20320 XXE flaw to read files from an XSP server. Malbear Labs reported recovery of the BroadWorks system-identity private key, three SSL credential sets, and three additional private keys, enabling potential impersonation in inter-component communications.",
-     "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
-     "source": "BleepingComputer"
-    },
-    {
-     "date": "2026-11-11",
      "what": "The actor exploited the Cisco BroadWorks CVE-2026-20320 vulnerability in a campaign using an autonomous AI intrusion harness. The campaign involved asset enumeration, credential theft, and attempted harvesting of subscriber billing and device records.",
      "url": "https://www.securityweek.com/threat-actors-exploit-openwave-cisco-broadworks-vulnerabilities/",
      "source": "SecurityWeek"
@@ -3890,6 +4276,12 @@
      "what": "An autonomous framework built with a jailbroken DeepSeek Flash model exploited Cisco BroadWorks CVE-2026-20320 and other vulnerabilities. The operation enumerated hundreds of assets, extracted dozens of credential sets, recovered private keys, and exfiltrated thousands of subscriber billing and device-record rows over two weeks.",
      "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
      "source": "The Hacker News"
+    },
+    {
+     "date": "2026-11-11",
+     "what": "Attackers exploited Cisco BroadWorks CVE-2026-20320, an unauthenticated XXE flaw, to read files from an exposed BroadWorks system. Malbear Labs reported that a jailbroken DeepSeek Flash model helped conduct the attack and that the actor obtained a BroadWorks system-identity private key, three SSL credential sets, and three additional private keys.",
+     "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
+     "source": "BleepingComputer"
     }
    ]
   },
@@ -3952,6 +4344,12 @@
      "what": "Attackers exploited Xen Orchestra flaw VSA-2026-062 to bypass authentication, obtain reusable login tokens, act with Admin privileges, and potentially execute code and take over managed XCP-ng nodes as root. Vates also reported exploitation of related flaw VSA-2026-063 to import malicious virtual machines and compromise hosts.",
      "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
      "source": "The Hacker News"
+    },
+    {
+     "date": "2026-11-11",
+     "what": "The attacker exploited an authentication-bypass flaw in Xen Orchestra releases before 6.9.2 and 6.10.1 to obtain reusable login tokens and administrator privileges. Vates also reported exploitation of a separate administrator-level zero-day involving malicious VM imports that could compromise XCP-ng hosts.",
+     "url": "https://www.securityweek.com/critical-xen-orchestra-flaws-exploited-in-attacks/",
+     "source": "SecurityWeek"
     }
    ]
   },
@@ -4164,6 +4562,18 @@
      "what": "Arctic Wolf observed AntiFox-linked infrastructure exploiting internet-facing services, deploying an ASPX webshell, executing commands, accessing application settings and database connection strings, and harvesting AWS credentials and production secrets. In a separate incident, attackers used a valid AWS identity to read, copy, and delete S3 objects.",
      "url": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/",
      "source": "AI agent attack tracker"
+    },
+    {
+     "date": "2026-11-11",
+     "what": "Attackers compromised at least one IIS application, deployed an ASPX web shell, executed operating-system commands, extracted application configuration and database credentials, and used valid AWS identities to enumerate services. In at least some cases, attackers successfully retrieved a production secret with AWS Secrets Manager and performed S3 discovery and object operations.",
+     "url": "https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html",
+     "source": "The Hacker News"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html"
     }
    ]
   },
@@ -4239,7 +4649,7 @@
     },
     {
      "date": "2026-11-11",
-     "what": "The attacker escaped build isolation, moved through Railway’s internal systems and cloud environment, and decrypted some customer environment variables. The incident report identified AI-provider keys, 1,852 linked-account tokens, and stored histories from 353 builds; the keys were used for an estimated $740,000 in unauthorized AI usage charges. Railway said it found no customer logins using stolen credentials, database access, or code-repository downloads.",
+     "what": "The attacker escaped build isolation, obtained internal credentials, moved through Railway systems, and decrypted customer environment variables. Railway said the exposed data included AI-provider keys, 1,852 linked-account tokens, and histories from 353 builds; the stolen AI keys generated an estimated $740,000 in unauthorized usage charges. Railway found no evidence that customer databases or code repositories were accessed or downloaded.",
      "url": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html",
      "source": "The Hacker News"
     }
@@ -4323,7 +4733,7 @@
     },
     {
      "date": "2026-11-11",
-     "what": "eMudhra revoked eight additional intermediate certificate authorities after determining that their private keys had been read from hardware security modules into a ceremony computer and could not be shown to have been handled according to its rules. The CAs covered six TLS and two code-signing authorities and had issued 195 certificates, including certificates for eMudhra domains, universities, a county, and other organizations.",
+     "what": "During an April 30, 2025 key ceremony, eMudhra's script read private key material from HSMs into ceremony-computer memory. Eight additional RSA CA keys were later deemed noncompliant because eMudhra could not reliably establish how the key material was handled, and eight ECDSA keys had previously been truncated to one byte. The affected CAs had issued 195 certificates, including TLS and code-signing certificates, which were revoked or replaced.",
      "url": "https://thehackernews.com/2026/11/emudhra-revokes-8-more-cas-it.html",
      "source": "The Hacker News"
     }
@@ -4789,7 +5199,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "The unauthorized individual accessed names, addresses, dates of birth, health-plan information, Social Security numbers, health-insurance claims data, and stated gender information while performing work duties on the employee’s behalf.",
+     "what": "The unauthorized individual accessed Sutherland information during work performed on the employee’s behalf, including names, addresses, dates of birth, health-plan information, Social Security numbers, claims data, and stated gender.",
      "url": "https://www.hipaajournal.com/sutherland-healthcare-hoag-memorial-hospital-data-breaches/",
      "source": "HIPAA Journal"
     }
@@ -4845,7 +5255,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "Hoag detected suspicious network activity on October 8, 2026. External investigators confirmed unauthorized access, and Hoag later confirmed that files containing personal and protected health information had been exposed.",
+     "what": "Hoag detected suspicious network activity on October 8, 2026. Investigators confirmed unauthorized network access, and Hoag confirmed on October 25 that personal and protected health information had been exposed.",
      "url": "https://www.hipaajournal.com/sutherland-healthcare-hoag-memorial-hospital-data-breaches/",
      "source": "HIPAA Journal"
     }
@@ -4869,7 +5279,7 @@
    "added": "2026-11-10T19:48:29+00:00",
    "reported_date": "2026-11-10",
    "last_reported": "2026-11-10",
-   "evidence_status": "under_investigation",
+   "evidence_status": "confirmed",
    "lat": 34.4221319,
    "lon": -119.702667,
    "severity": {
@@ -4901,7 +5311,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "A ransomware intrusion encrypted patient records. The practice warned that records may have been stolen, including medical, dental, insurance, claims, and identifying information; records were restored from backups without paying the ransom.",
+     "what": "The practice identified a ransomware intrusion after receiving a ransom note. Patient records were encrypted, restored from backups, and may have been stolen; the investigation has not established the scope or initial access date.",
      "url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
      "source": "HIPAA Journal"
     }
@@ -4957,7 +5367,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "A forensic investigation confirmed intermittent unauthorized access to the practice’s third-party appointment-management platform. Data that may have been viewed or acquired included names, contact details, dates of birth, and dental-care information such as appointments, symptoms, medications, and providers.",
+     "what": "A forensic investigation found that the practice’s third-party appointment-management platform was accessed intermittently by an unauthorized party between February 12 and May 8, 2026. Data may have been viewed or acquired, including patient contact, birth-date, appointment, symptom, medication, and dental-care information.",
      "url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
      "source": "HIPAA Journal"
     }
@@ -5013,7 +5423,7 @@
    "updates": [
     {
      "date": "2026-11-10",
-     "what": "An unauthorized third party accessed Park Dental Partners’ network. The review determined that full names, dates of birth, diagnoses, treatment information, and health-insurance policy information were potentially viewed or obtained.",
+     "what": "An unauthorized third party accessed Park Dental Partners’ network on August 26–27, 2026. The review completed October 7 found that names, dates of birth, diagnoses, treatment information, and health-insurance policy information were potentially viewed or obtained.",
      "url": "https://www.hipaajournal.com/cybercriminals-hit-two-california-dental-practices/",
      "source": "HIPAA Journal"
     }
@@ -6459,7 +6869,7 @@
    "updates": [
     {
      "date": "2026-11-09",
-     "what": "Patient radiology information was entered into AI tools without authorization. The data included medical record and radiology identifiers, service details, facility and provider names, and clinical information such as diagnoses, treatment, surgical history, and medications; names, contact details, Social Security numbers, and financial information were not included. Weill Cornell discovered the incident on September 6, 2026, suspended the research activity, and requested deletion.",
+     "what": "Protected health information, including medical record and radiology identifiers, service details, facility and provider names, and clinical radiology information, was entered into AI and machine-learning tools without authorization. The activity was discovered on September 6, 2026; the research was suspended and a deletion request was submitted.",
      "url": "https://www.hipaajournal.com/healthcare-providers-unauthorized-disclosure-phi-ai-tools/",
      "source": "HIPAA Journal"
     }
@@ -6515,7 +6925,7 @@
    "updates": [
     {
      "date": "2026-11-09",
-     "what": "A staff member repeatedly uploaded patient information to a personal ChatGPT account while drafting case-note summaries. The records included patient names, diagnoses, and medications. The state identified one instance and additional prior uses, notified 12 patient families, and instructed the employee to delete the prompts and account.",
+     "what": "A staff member uploaded patient information, including names, diagnoses, medications, and case-note details, to ChatGPT while preparing case summaries. The state identified multiple uses and wrote to 12 affected families; employees were instructed to delete the prompts and accounts.",
      "url": "https://www.hipaajournal.com/healthcare-providers-unauthorized-disclosure-phi-ai-tools/",
      "source": "HIPAA Journal"
     }
@@ -6571,7 +6981,7 @@
    "updates": [
     {
      "date": "2026-11-09",
-     "what": "An incident involving four Western State Hospital patients was identified in which protected health information was uploaded to ChatGPT. The report states that the affected employees were instructed to delete the ChatGPT prompts and their accounts.",
+     "what": "A similar unauthorized AI-use incident affected four Western State Hospital patients. Patient PHI was uploaded to ChatGPT in connection with generating case summaries, and employees were directed to delete the prompts before deleting their accounts.",
      "url": "https://www.hipaajournal.com/healthcare-providers-unauthorized-disclosure-phi-ai-tools/",
      "source": "HIPAA Journal"
     }
@@ -7914,6 +8324,44 @@
      "source_url": "https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html"
     }
    ]
+  },
+  {
+   "title": "PJ&A breach exfiltrated health data of 13.3 million people",
+   "date": "2023-03-27 to 2023-04-19",
+   "category": "major_cyber",
+   "victim": "Perry Johnson & Associates, Inc. (PJ&A) and related companies",
+   "attacker": "Unidentified threat actor; used stolen credentials belonging to a PJ&A coding employee",
+   "what": "The attacker accessed PJ&A's network beginning March 27, 2023, harvested passwords, and exfiltrated database files containing names, addresses, dates of birth, Social Security numbers, diagnoses, health-insurance information, lab results, medications, and transcription data. The stolen data was later leaked after PJ&A did not pay a ransom.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The incident affected approximately 13.3 million individuals and involved confirmed theft and disclosure of medical and identity information from a healthcare technology provider.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "A healthcare-sector provider suffered a confirmed intrusion and exfiltration of approximately 13.3 million people’s protected health and identity data. The multi-state investigation found that stolen credentials, absent multifactor authentication, password harvesting, and unencrypted files enabled the compromise.",
+   "id": "9b5f0c79b0560f83",
+   "source_name": "HIPAA Journal",
+   "source_url": "https://www.hipaajournal.com/pja-multi-state-settlement-hipaa/",
+   "added": "2026-11-18T20:38:01+00:00",
+   "reported_date": "2026-11-09",
+   "last_reported": "2026-11-09",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Investigators confirmed exfiltration and subsequent leakage of sensitive medical and identity records affecting approximately 13.3 million people. The reported settlement penalties are not treated as incident losses, and service disruption was not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.hipaajournal.com/pja-multi-state-settlement-hipaa/",
+    "assessed_at": "2026-11-18T20:38:01+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "SonicOS SSL-VPN MFA-bypass flaw exploited in attacks",
@@ -11449,7 +11897,7 @@
    "updates": [
     {
      "date": "2026-11-03",
-     "what": "UNC6993 used a misconfigured service-account key to access an enterprise cloud environment and an LLM API, then created additional API keys and used the victim’s resources for unauthorized model workloads. The activity generated more than US$100,000 in cloud charges.",
+     "what": "UNC6993 allegedly used a misconfigured cloud service-account key to access an LLM API, created additional API keys, and used the victim’s cloud project for unauthorized model consumption and related activity.",
      "url": "https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html",
      "source": "The Hacker News"
     }
@@ -13647,7 +14095,15 @@
     "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
     "assessed_at": "2026-10-31T05:51:58+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-10-30",
+     "what": "Wiz observed validation and quota-enumeration activity followed by approximately 800,000 Amazon Bedrock calls over more than 30 hours; about 90% succeeded. The key was remediated afterward.",
+     "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+     "source": "Wiz Research"
+    }
+   ]
   },
   {
    "title": "Stolen restricted AI key abused for over one million calls",
@@ -13685,7 +14141,15 @@
     "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
     "assessed_at": "2026-10-31T05:51:58+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-10-30",
+     "what": "Wiz observed permission checks, model and quota enumeration, and then approximately 1.7 million Bedrock calls from one hosting address over 13 hours; more than one million calls succeeded before remediation.",
+     "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+     "source": "Wiz Research"
+    }
+   ]
   },
   {
    "title": "Drupal Commerce access-bypass flaw exploited against online stores",
@@ -14975,7 +15439,7 @@
    "updates": [
     {
      "date": "2026-10-29",
-     "what": "Researchers found 31 malicious Hugging Face repositories posing as Qwen2 checkpoints. When loaded with trust_remote_code enabled, the models executed Python code that installed a cryptocurrency miner and, in some versions, opened a reverse shell; one later sample reportedly attempted container escape. Nine machines in a shared research GPU cluster began mining during researchers’ observation.",
+     "what": "Researchers found 31 malicious Hugging Face repositories posing as Qwen2 test checkpoints. When loaded with trust_remote_code enabled, their Python code installed a cryptocurrency miner and, in some versions, a reverse shell; nine machines apparently belonging to a shared research GPU cluster began mining.",
      "url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
      "source": "BleepingComputer"
     }
@@ -15153,7 +15617,15 @@
     "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
     "assessed_at": "2026-10-29T22:49:24+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Hudson Rock identified 975 additional domains and 40,573 exposed secrets, including local-user records and Active Directory LDAP bind records, in 1,703 FortiGate source files associated with 1,689 host identifiers.",
+     "url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+     "source": "The Hacker News"
+    }
+   ]
   },
   {
    "title": "Attackers hijacked DNS for school and government domains",
@@ -15200,6 +15672,14 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Attackers gained unauthorized DNS-administration access, created CNAME records or delegated subzones, and used legitimate school and government namespaces to host or redirect to illegal gambling content.",
+     "url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+     "source": "The Hacker News"
     }
    ]
   },
@@ -15249,6 +15729,14 @@
      "entity": "",
      "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html"
     }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "The attackers maintained access to the organization’s network over several days. The embassy did not disclose what data may have been accessed.",
+     "url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+     "source": "The Hacker News"
+    }
    ]
   },
   {
@@ -15287,7 +15775,15 @@
     "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
     "assessed_at": "2026-10-29T22:49:24+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Attackers abused the legitimate WpcMon.exe component to sideload malicious DLLs, establish outbound connections, and breach enterprise networks through compromised camera-management software.",
+     "url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+     "source": "The Hacker News"
+    }
+   ]
   },
   {
    "title": "Philippine agency lost 68 GB of case-management data",
@@ -15335,6 +15831,14 @@
      "entity": "",
      "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html"
     }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "The attacker copied 68 GB of data, including 27 SQL Server backups whose filenames corresponded to case-management systems, and left the transfer log and attack tooling exposed online.",
+     "url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+     "source": "The Hacker News"
+    }
    ]
   },
   {
@@ -15373,7 +15877,15 @@
     "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
     "assessed_at": "2026-10-29T22:49:24+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Attackers hijacked repositories and used malicious packages, execution hooks, and CI workflows to steal credentials, propagate to additional repositories, publish further releases, and deploy a wiper that could delete a victim’s home directory after token revocation.",
+     "url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+     "source": "The Hacker News"
+    }
+   ]
   },
   {
    "title": "MR ROBOT banking trojan infected 153 Android devices",
@@ -15420,6 +15932,14 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Affiliates distributed customized Android banking trojans through fake app pages and messaging lures. One affiliate intercepted 5,407 text messages from 153 infected devices and targeted OTPs, card details, UPI PINs, and credentials.",
+     "url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+     "source": "The Hacker News"
     }
    ]
   },
@@ -15808,6 +16328,70 @@
      "what": "The attacker used custom PHP2Shell exploits with the Fragnesia Linux-kernel privilege-escalation flaw to obtain root access on 25 servers in the United States, Japan, Taiwan, and South Korea. The operation planted web shells, established a reverse SSH tunnel into a U.S. government-affiliated internal network, accessed Active Directory, extracted credentials, enumerated users, and attempted password spraying and creation of backdoor accounts.",
      "url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
      "source": "The Hacker News"
+    }
+   ]
+  },
+  {
+   "title": "n0n ransomware workspace reveals active multi-country intrusions",
+   "date": "2026-09",
+   "category": "using_ai",
+   "victim": "At least 23 organizations in 14 countries, including a U.S. sports retailer, cloud provider, teachers’ union, Venezuelan ISP, Argentine ministry, and pharmaceutical subsidiary",
+   "attacker": "n0n ransomware group; SOCRadar attributed the exposed workspace and described the attribution as tied to the group.",
+   "what": "SOCRadar found an exposed attacker workspace containing an AI coding agent configured with about 150 models and evidence of entry through FortiGate SSL-VPN credential stuffing, exposed AWS keys, weak RDP/WinRM credentials, and compromised hosting-management portals.",
+   "ai_role": "The actor used an AI coding agent and multiple models to produce attack scripts; the reporting does not establish that an AI agent independently carried out the unauthorized actions.",
+   "why": "The exposed operational workspace documented an active ransomware operation and identified at least 23 organizations across 14 countries. The report did not establish which named organizations were successfully compromised or quantify resulting losses.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The evidence exposed a functioning ransomware workflow, access methods, and multiple identified organizational targets, while also documenting attacker use of AI-assisted scripting.",
+   "id": "f7aba984aa5c7c01",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+   "added": "2026-11-18T20:38:01+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The workspace documented intrusion entry points and at least 23 identified organizations, but the available reporting does not confirm the compromise outcome or operational impact for each organization.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
+    "assessed_at": "2026-11-18T20:38:01+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html"
+    },
+    {
+     "lat": 8.0018709,
+     "lon": -66.1109318,
+     "label": "Venezuela",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html"
+    },
+    {
+     "lat": -34.9964963,
+     "lon": -64.9672817,
+     "label": "Argentina",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html"
     }
    ]
   },
@@ -16483,7 +17067,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker compromised the LiteLLM release workflow and published a malicious PyPI 1.107.0 release and affected GHCR/Docker Hub images. The payload used Python startup persistence to steal cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, and could query LiteLLM-stored provider credentials.",
+     "what": "The attacker hijacked LiteLLM’s release workflow and published malicious PyPI wheels and GHCR/Docker Hub images. The payload used Python startup persistence to collect cloud, Kubernetes, SSH, GPG, registry, AI-provider, coding-tool, browser, and shell-history credentials, plus credentials stored in LiteLLM proxy databases, and POSTed encrypted data to a lookalike domain.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
@@ -17721,53 +18305,6 @@
    }
   },
   {
-   "title": "Teams IT-support scams led to malware and ransomware intrusions",
-   "date": "2026-10-26",
-   "category": "major_cyber",
-   "victim": "Multiple unnamed organizations targeted through Microsoft Teams",
-   "attacker": "Activity was assessed by Arctic Wolf Labs as aligned with STAC4749; Sophos linked some attacks to Chaos ransomware. Attribution is not independently established in the report.",
-   "what": "Attackers used mail bombing, impersonation through newly created or acquired Microsoft 365 tenants, and Teams external chats to persuade users to grant remote access or execute PowerShell commands. Observed follow-on activity included malware deployment, reconnaissance, lateral movement, LDAP queries, data exfiltration, and in some cases ransomware deployment.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The campaign turns trusted collaboration and remote-management tools into an initial-access path and has produced broader organizational intrusions across hundreds of investigated cases.",
-   "where": "No fixed location",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Arctic Wolf reported a recurring pattern across hundreds of cases, including observed implants that queried Active Directory and transmitted information externally; the activity also led to Chaos ransomware deployment in some cases. Specific victims and aggregate losses were not reported.",
-   "id": "d47eb03ecc928f67",
-   "source_name": "The Hacker News",
-   "source_url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
-   "added": "2026-10-27T06:10:01+00:00",
-   "reported_date": "2026-10-26",
-   "last_reported": "2026-10-26",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Researchers reported multiple real-world organizational intrusions, including sensitive-data exfiltration and ransomware deployment in some cases. The source does not establish the number of organizations suffering each consequence or the duration and financial impact.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "unknown",
-     "financial": "unknown"
-    },
-    "source_url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
-    "assessed_at": "2026-11-03T06:55:23+00:00",
-    "method": "reported-impact-v1"
-   },
-   "more_sources": [],
-   "updates": [
-    {
-     "date": "2026-10-26",
-     "what": "Attackers used email bombing, external Microsoft Teams chats, fake IT-support identities, and vishing to persuade users to grant remote access through tools such as Quick Assist, AnyDesk, or ScreenConnect. In investigated cases, attackers executed PowerShell and Python malware, queried Active Directory, moved laterally, exfiltrated data, and deployed ransomware.",
-     "url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
-     "source": "The Hacker News"
-    }
-   ]
-  },
-  {
    "title": "Gheist campaign stole secrets through compromised GitHub tokens",
    "date": "2026-09-15",
    "category": "major_cyber",
@@ -17817,7 +18354,7 @@
    "updates": [
     {
      "date": "2026-10-25",
-     "what": "Since September 15, 2026, the campaign planted secret-dumping GitHub Actions workflows in repositories reachable by stolen tokens. Wiz recovered more than 13,500 malicious branches from over 850 compromised accounts; private-repository workflows executed, and cloud credentials from one organization were used to enumerate AWS Secrets Manager.",
+     "what": "Since September 15, attackers used stolen GitHub tokens to plant secret-dumping workflows in repositories accessible to each token. Wiz recovered more than 13,500 malicious branches; workflows successfully ran in private repositories and GitHub Enterprise environments, while some associated cloud credentials were used to enumerate AWS Secrets Manager.",
      "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
      "source": "Wiz Research"
     },
@@ -20897,7 +21434,7 @@
     },
     {
      "date": "2026-10-20",
-     "what": "Wiz investigated intrusions in which attackers phished GCP credentials and MFA codes, obtained privileged access, disabled organizational policy controls, added attacker-controlled accounts, linked external GCP projects to victims’ billing accounts, and generated high-volume Gemini API usage.",
+     "what": "Wiz investigated intrusions in which phishing kits stole privileged GCP credentials and MFA codes. Attackers disabled organization safeguards, added external accounts with billing-admin privileges, linked attacker-controlled GCP projects to victims’ billing accounts, and used those accounts to run large-scale Gemini API workloads.",
      "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
      "source": "Wiz Research"
     }
@@ -21977,7 +22514,7 @@
    "updates": [
     {
      "date": "2026-10-19",
-     "what": "The AI agent gained code execution through an exposed Kafka UI Java RCE, deployed malware and persistence, harvested Kubernetes and cloud credentials, escalated to cluster-admin and cloud administration, created identities and CI/CD pipelines, modified GitOps workloads, accessed databases and sensitive data, and attempted exfiltration.",
+     "what": "The agent exploited an exposed Kafka UI Java RCE, deployed malware and persistence, harvested Kubernetes and cloud credentials, escalated to cluster and cloud administration, created privileged identities, accessed CI/CD and GitOps systems, and accessed sensitive data. It attempted multiple exfiltration routes, some of which were denied.",
      "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
      "source": "Wiz Research"
     }
@@ -43040,6 +43577,6 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-18T07:37:34+00:00",
+ "last_added": "2026-11-18T20:38:01+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00"
 }
