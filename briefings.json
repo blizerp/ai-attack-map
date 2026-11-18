@@ -7532,11 +7532,157 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-18-evening",
+   "date": "2026-11-18",
+   "edition": "evening",
+   "published_at": "2026-11-18T22:02:05+00:00",
+   "generated_at": "2026-11-18T22:02:05+00:00",
+   "scheduled_for": "2026-11-18T22:00:00+00:00",
+   "window_start": "2026-11-18T20:42:01+00:00",
+   "window_end": "2026-11-18T22:02:05+00:00",
+   "sector_window_start": "2026-11-17T22:02:05+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "A cryptocurrency scam used a fake livestream and an AI-generated celebrity video to persuade people to send money. Coinbase says it stopped most attempted transfers, but some funds may still have reached the scammers. No broad power, water or communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Fake Elon Musk livestream prompts millions in attempted crypto transfers",
+      "what_happened": "During a fake Tesla livestream, scammers used an AI-generated video of Elon Musk and promised to double any cryptocurrency sent to a displayed wallet. Coinbase says hundreds of customers tried to transfer millions of dollars over about two hours.",
+      "impact": "Coinbase blocked about $4.7 million, or 91% of attempted transfers. The amount that reached scammers and the number of affected customers are unclear. Cryptocurrency transfers are usually difficult to reverse.",
+      "what_next": "Coinbase may clarify how much cryptocurrency was successfully received by the scammers. The incident could lead to more warnings about deepfake videos, fake livestreams and QR-code giveaway scams.",
+      "change": "New report",
+      "sectors": [
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam/",
+        "published": "2026-11-18T20:49:32+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "A cryptocurrency exchange says it blocked most transfers linked to a fake celebrity giveaway, though the final loss remains unclear.",
+     "items": [
+      {
+       "headline": "Coinbase blocks most transfers in fake celebrity crypto giveaway",
+       "what_happened": "Scammers used an AI-generated Elon Musk video in a fake Tesla livestream to promise viewers double their cryptocurrency. Hundreds of Coinbase customers attempted transfers during the roughly two-hour scam.",
+       "impact": "Coinbase says it stopped $4.7 million in attempted transfers. Some cryptocurrency may have reached the scammers, but the total is not known. No customer account takeover was reported; people sent the money themselves after being deceived.",
+       "what_next": "Coinbase may report the amount that was not blocked. The exchange and other services may continue investigating similar deepfake promotions tied to live events.",
+       "change": "New report",
+       "sectors": [
+        "finance"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam/",
+         "published": "2026-11-18T20:49:32+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "",
+     "items": []
+    },
+    "supply_chain": {
+     "intro": "",
+     "items": []
+    }
+   },
+   "warnings": [
+    "4 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 726
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 34,
+   "usage": {
+    "completion_tokens": 610,
+    "prompt_tokens": 35787,
+    "total_tokens": 36397,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 126,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 35784,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-18T20:42:01+00:00"
+  "checked_at": "2026-11-18T22:02:05+00:00"
  },
  "automatic_attempts": {
   "2026-11-15-morning": {
@@ -7566,6 +7712,10 @@
   "2026-11-18-morning": {
    "count": 2,
    "checked_at": "2026-11-18T20:42:01+00:00"
+  },
+  "2026-11-18-evening": {
+   "count": 1,
+   "checked_at": "2026-11-18T22:02:05+00:00"
   }
  }
 }
