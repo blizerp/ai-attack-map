@@ -78,3 +78,40 @@ python -m unittest test_briefing test_site test_selection test_coverage
 npm install --no-save --ignore-scripts jsdom@26.1.0
 node --test test_briefing_ui.cjs test_briefing_dom.cjs
 ```
+
+## Independent clock trigger
+
+An external scheduler can update only `.github/briefing-trigger.json` on `main`
+using the connected GitHub integration. That path-filtered push starts the existing
+automatic catch-up path. The marker is an audit receipt, not executable input:
+its contents cannot select an edition, replace a published edition, reset the
+attempt budget, or bypass the 45-minute cooldown. No new API token is stored in
+this repository. GitHub's scheduled checks remain as backup.
+
+The external clock targets 08:00 and 17:00 America/New_York, with checks at
+09:00/10:00 and 18:00/19:00 only for an edition that is still missing. It must
+read current `briefings.json` and the marker before writing. Skip a published or
+covered slot, an exhausted attempt budget, or a recent attempt still in cooldown.
+Use a deterministic hourly tick ID `YYYY-MM-DD-HH-America_New_York` and the
+marker's current blob SHA for optimistic concurrency. If that tick ID already
+exists, inspect its workflow run rather than writing the same request again.
+Do not key requests only by the expected edition or its attempt count: an evening
+trigger can publish a missing morning first. The next scheduled check needs a new
+tick ID to allow the evening to follow. Reassess the actual edition after each run.
+An uncertain write must be read back before any retry; never issue a fresh tick
+just to retry an uncertain write.
+
+After a marker write, verify the push-triggered `Publish Daily Threat Brief`
+run, the resulting edition ID in `briefings.json`, and the subsequent
+`Deploy attack map` result and live JSON. A successful trigger alone is not a
+successful publication. Report actionable failures; do not keep retriggering an
+exhausted slot or bypass safeguards with manual dispatch or editorial replacement.
+A delayed external automation can still publish late, and all execution and
+deployment continue to depend on GitHub Actions.
+
+Only the marker path triggers this push route. Briefing/data output commits do
+not match it, and the shared `update-map` concurrency group still serializes
+writers. Optimistic marker writes preserve unrelated files if map updates race
+with the scheduler. The Pages workflow may deploy once for the marker push and
+again after generation; publication verification must check the latter and the
+edition ID, not just any successful deployment.

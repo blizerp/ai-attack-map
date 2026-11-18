@@ -1,6 +1,10 @@
 name: Publish Daily Threat Brief
 
 on:
+  # Independent scheduler writes only this marker; output commits do not retrigger.
+  push:
+    branches: [main]
+    paths: ['.github/briefing-trigger.json']
   schedule:
     - cron: '0 8 * * *'
       timezone: America/New_York
