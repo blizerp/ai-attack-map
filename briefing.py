@@ -3,6 +3,7 @@
 Uses the existing API secret/model; one bounded generation per edition. The
 browser only reads the resulting public JSON. Failed generation keeps old editions.
 """
+import copy
 import concurrent.futures
 import hashlib
 import json
@@ -296,10 +297,32 @@ def validate(result, reports, incidents, sectors_enabled):
             section['items'] = kept
     return result
 
+def source_schema(candidates):
+    """Constrain generation without replacing independent evidence validation."""
+    schema = copy.deepcopy(SCHEMA)
+    ids = list(dict.fromkeys(r['id'] for r in candidates))
+    if not ids:
+        raise ValueError('Cannot build source schema without candidates')
+    def constrain(node):
+        if isinstance(node, dict):
+            props = node.get('properties', {})
+            if 'source_ids' in props:
+                props['source_ids'] = {'type': 'array', 'minItems': 1,
+                                       'items': {'type': 'string', 'enum': ids}}
+            for value in node.values():
+                constrain(value)
+        elif isinstance(node, list):
+            for value in node:
+                constrain(value)
+    constrain(schema)
+    return schema
+
+
 def generate(client, candidates, previous, sectors_enabled, incidents):
     if not candidates:
         return {'overview': {'intro': '', 'items': []}, 'sectors': {s: {'intro': '', 'items': []} for s in SECTORS}}, {}
     from jsonschema.exceptions import ValidationError as SchemaValidationError
+    output_schema = source_schema(candidates)
     data = {'sectors_enabled': sectors_enabled, 'prior_overviews': previous, 'reports': candidates}
     base_messages = [{'role': 'system', 'content': PROMPT},
                      {'role': 'user', 'content': json.dumps(data, ensure_ascii=False)}]
@@ -310,7 +333,7 @@ def generate(client, candidates, previous, sectors_enabled, incidents):
             model=os.environ.get('OPENAI_MODEL') or u.MODEL, reasoning_effort='low',
             max_completion_tokens=14000, messages=messages,
             response_format={'type': 'json_schema',
-                             'json_schema': {'name': 'daily_threat_brief', 'strict': True, 'schema': SCHEMA}})
+                             'json_schema': {'name': 'daily_threat_brief', 'strict': True, 'schema': output_schema}})
         choice = response.choices[0]
         if choice.message.refusal:
             raise ValueError('Refused briefing')
