@@ -278,7 +278,7 @@ def extract(client, item, tracked):
             f"URL: {item['url']}\n\n{item['text']}")
     resp = client.chat.completions.create(
         model=MODEL,
-        reasoning_effort="low",
+        # Omit reasoning_effort: the configured model may not support it.
         messages=[{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": user}],
         response_format={"type": "json_schema",
                          "json_schema": {"name": "incident", "strict": True, "schema": {"type":"object","additionalProperties":False,"properties":{"incidents":{"type":"array","items":SCHEMA}},"required":["incidents"]}}},
