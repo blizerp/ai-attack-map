@@ -32,7 +32,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           # Separate inexpensive classification from the briefing model.
           OPENAI_INGEST_MODEL: "gpt-4o-mini"
-          MAX_NEW_ITEMS: "20"
+          MAX_NEW_ITEMS: "100"
       - name: Commit new data
         if: always()
         run: |
