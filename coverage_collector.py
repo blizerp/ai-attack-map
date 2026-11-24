@@ -199,7 +199,23 @@ def merge_record(u, data, item, rec, geo, now):
     id_match = by_id.get(item['id'])
     if id_match and id_match['victim'].casefold() != rec.get('victim', id_match['victim']).casefold():
         id_match = None
-    dup = by_id.get(rec.get('duplicate_of')) or source_match or id_match
+    # Deterministic backstop for repeated reports with nearly identical titles.
+    # Do not collapse different victims in multi-event roundups.
+    def words(value):
+        return set(re.findall(r"[a-z0-9]+", str(value).casefold())) - {"the","a","an","and","of","in","to","by","for","at"}
+    def similarity(a, b):
+        a, b = words(a), words(b)
+        return len(a & b) / max(1, len(a | b))
+    def strong_match(i):
+        title_sim = similarity(i.get('title',''), rec.get('title',''))
+        victim_sim = similarity(i.get('victim',''), rec.get('victim',''))
+        same_date = i.get('date') == rec.get('date')
+        same_source = i in source_records
+        return ((same_source and title_sim >= .75 and victim_sim >= .5)
+                or (same_date and title_sim >= .8 and victim_sim >= .65))
+    strong = [i for i in data['incidents'] if strong_match(i)]
+    deterministic = strong[0] if len(strong) == 1 else None
+    dup = by_id.get(rec.get('duplicate_of')) or source_match or id_match or deterministic
     reported = item.get('date') or now[:10]
     queries = rec.get('location_queries') or ([{'query':rec['geocode_query'], 'basis':'Reported affected area'}] if rec.get('geocode_query') else [])
     if dup:
@@ -326,6 +342,8 @@ def run(u):
                             result, incident_id = merge_record(u, data, event_item, rec, geo, now)
                             status[result] += 1
                             detail['incident_id'] = incident_id
+                            if rec.get('_evidence'):
+                                detail['direct_evidence'] = rec['_evidence']
                             print(f'{result}: {rec["title"]}', flush=True)
                         outcomes.append(detail)
                     overall = 'defer' if any(x['status']=='defer' for x in outcomes) else ('include' if any(x['status']=='include' for x in outcomes) else 'exclude')

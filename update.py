@@ -318,7 +318,7 @@ def extract(client, item, tracked):
     resp = client.chat.completions.create(
         model=MODEL,
         # Omit reasoning_effort: the configured model may not support it.
-        messages=[{"role": "system", "content": SYSTEM_PROMPT + "\nFor each include decision, evidence_quote must be a verbatim passage from the supplied article body, not known-incident context or headline, establishing actual compromise or a confirmed consequential cybersecurity event. Exclude unrelated background links, product announcements, and navigation. Defer if direct evidence is absent. Match likely duplicates even when victim names or dates differ. Independently classify actual_outcome based on what happened, not the capabilities described: a controlled research demonstration, failed attack, mere vulnerable exposure, possible impact, or background anecdote must never be a confirmed_compromise. For AI categories require the same observed, consequential outcome as conventional attacks. Never attribute AI use unless directly supported. Do not inflate a campaign into multiple overlapping records. For confirmed consequential events the evidence quote must establish a real affected organization or a documented affected population and actual unauthorized access, theft, service disruption, or another qualifying observed effect."}, {"role": "user", "content": user}],
+        messages=[{"role": "system", "content": SYSTEM_PROMPT + "\nFor each include decision, evidence_quote must be a verbatim passage from the supplied article body, not known-incident context or headline, establishing actual compromise or a confirmed consequential cybersecurity event. Exclude unrelated background links, product announcements, and navigation. Defer if direct evidence is absent. Match likely duplicates even when victim names or dates differ. Independently classify actual_outcome based on what happened, not the capabilities described: a controlled research demonstration, failed attack, mere vulnerable exposure, possible impact, or background anecdote must never be a confirmed_compromise. For AI categories require the same observed, consequential outcome as conventional attacks. Never attribute AI use unless directly supported. Do not inflate a campaign into multiple overlapping records. A vendor breach affecting several customers is one underlying incident unless the article establishes independent compromises. A warning, study, advisory, sentencing report, or precautionary shutdown is not a separate incident if it merely describes previously reported events or hypothetical risk. Compare the actual intrusion, victim, product, and event date rather than the report publication date. For confirmed consequential events the evidence quote must establish a real affected organization or a documented affected population and actual unauthorized access, theft, service disruption, or another qualifying observed effect."}, {"role": "user", "content": user}],
         response_format={"type": "json_schema",
                          "json_schema": {"name": "incident", "strict": True, "schema": {"type":"object","additionalProperties":False,"properties":{"incidents":{"type":"array","items":extraction_schema}},"required":["incidents"]}}},
     )
@@ -328,7 +328,9 @@ def extract(client, item, tracked):
         if rec.get("decision") == "include" and not direct_incident_evidence(rec, quote, item.get("text", "")):
             rec.update(relevant=False, decision="defer",
                        decision_reason="Direct evidence does not establish a qualifying real-world outcome.")
-        rec.pop("actual_outcome", None)
+        actual_outcome = rec.pop("actual_outcome", None)
+        if rec.get("decision") == "include":
+            rec["_evidence"] = {"outcome": actual_outcome, "quote_sha256": hashlib.sha256(quote.encode("utf-8")).hexdigest(), "excerpt": " ".join(quote.split()[:20])}
     return records
 
 

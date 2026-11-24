@@ -121,5 +121,16 @@ class CoverageTests(unittest.TestCase):
         self.assertNotEqual(new_id,'roundup')
         self.assertEqual(data['incidents'][0]['victim'],'Hospital A')
 
+    def test_paraphrased_same_event_merges_without_model_duplicate(self):
+        from test_selection import record
+        original={'id':'original','title':'Hospital A data breach reported','victim':'Hospital A','date':'2026-10-20','category':'major_cyber','source_url':'https://example.com/original'}
+        data={'incidents':[original]}
+        item={'id':'new','url':'https://example.com/followup','source':'Test','date':'2026-10-26'}
+        rec=record(victim='Hospital A',title='Hospital A data breach',date='2026-10-20')
+        with patch.object(u,'geocode',return_value=None):
+            result, incident_id=c.merge_record(u,data,item,rec,{},'2026-10-27T00:00:00+00:00')
+        self.assertEqual((result,incident_id),('merged','original'))
+        self.assertEqual(len(data['incidents']),1)
+
 if __name__=='__main__':
     unittest.main()
