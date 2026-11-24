@@ -1,0 +1,147 @@
+[
+  {
+    "url": "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/",
+    "records": [
+      {
+        "relevant": true,
+        "category": "major_cyber",
+        "attacker": "Unattributed attackers",
+        "ai_role": "F6 found comments suggesting an AI assistant was used while editing attacker scripts; autonomous AI involvement not established.",
+        "why": "Not reported",
+        "where": "Russia (organization; precise site not reported)",
+        "major_impact": "critical_network_intrusion",
+        "impact_substantiated": true,
+        "geocode_query": "Russia",
+        "duplicate_of": null,
+        "location_queries": [
+          {
+            "query": "Russia",
+            "basis": "Reported affected area"
+          }
+        ],
+        "decision": "include",
+        "decision_reason": "Researcher-documented unauthorized access to operational systems.",
+        "evidence_status": "confirmed",
+        "severity_evidence": {
+          "context": "real_world",
+          "service": "unknown",
+          "reach": "single",
+          "damage": "privileged_access",
+          "essential": "unknown",
+          "financial": "unknown",
+          "reason": "Root-level compromise of Cisco Expressway devices and internal cluster access; exfiltration not established."
+        },
+        "title": "Cisco Expressway devices compromised at Russian organization",
+        "date": "2026-11-19",
+        "victim": "Unnamed Russian organization",
+        "what": "F6 reported compromise of two internet-exposed Cisco Expressway devices and lateral access to internal cluster nodes, with root privileges and reconnaissance tooling.",
+        "significance": "Privileged access to collaboration gateways and internal nodes; tools prepared to seek credentials and move laterally."
+      }
+    ]
+  },
+  {
+    "url": "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/",
+    "records": [
+      {
+        "relevant": true,
+        "category": "major_cyber",
+        "attacker": "Armory Castle (Mandiant attribution; suspected China-linked)",
+        "ai_role": "AI involvement not confirmed in the reporting.",
+        "why": "Not reported",
+        "where": "No fixed location",
+        "major_impact": "critical_network_intrusion",
+        "impact_substantiated": true,
+        "geocode_query": null,
+        "duplicate_of": null,
+        "location_queries": [],
+        "decision": "include",
+        "decision_reason": "Researcher-documented unauthorized access to operational systems.",
+        "evidence_status": "confirmed",
+        "severity_evidence": {
+          "context": "real_world",
+          "service": "unknown",
+          "reach": "multiple",
+          "damage": "sensitive_data",
+          "essential": "unknown",
+          "financial": "unknown",
+          "reason": "Multiple investigated intrusions with stolen credentials, keys, and backdoors; service disruption not reported."
+        },
+        "title": "China-linked group exploited VMware vCenter zero-day",
+        "date": "2026-09-01",
+        "victim": "Multiple unnamed organizations",
+        "what": "Mandiant documented exploitation of CVE-2026-123890 to obtain vCenter administrative access, extract signing material and credentials, deploy backdoors, and reach ESXi infrastructure.",
+        "significance": "Confirmed enterprise virtualization compromise and theft of authentication material across multiple investigations."
+      }
+    ]
+  },
+  {
+    "url": "https://www.securityweek.com/php-patches-seven-critical-rce-vulnerabilities/",
+    "records": [
+      {
+        "relevant": false,
+        "category": "major_cyber",
+        "attacker": "Not reported",
+        "ai_role": "AI involvement not confirmed in the reporting.",
+        "why": "Not reported",
+        "where": "No fixed location",
+        "major_impact": "none",
+        "impact_substantiated": false,
+        "geocode_query": null,
+        "duplicate_of": null,
+        "location_queries": [],
+        "decision": "exclude",
+        "decision_reason": "Patch advisory describes potential exploitation, not a confirmed victim compromise.",
+        "evidence_status": "unverified",
+        "severity_evidence": {
+          "context": "unknown",
+          "service": "unknown",
+          "reach": "unknown",
+          "damage": "unknown",
+          "essential": "unknown",
+          "financial": "unknown",
+          "reason": "No substantiated compromise reported."
+        },
+        "title": "PHP patches seven critical vulnerabilities",
+        "date": "2026-11-19",
+        "victim": "Not reported",
+        "what": "Not a substantiated incident.",
+        "significance": "Not reported"
+      }
+    ]
+  },
+  {
+    "url": "https://www.securityweek.com/nvidia-responds-to-gentlemen-ransomware-claim/",
+    "records": [
+      {
+        "relevant": false,
+        "category": "major_cyber",
+        "attacker": "Not reported",
+        "ai_role": "AI involvement not confirmed in the reporting.",
+        "why": "Not reported",
+        "where": "No fixed location",
+        "major_impact": "none",
+        "impact_substantiated": false,
+        "geocode_query": null,
+        "duplicate_of": null,
+        "location_queries": [],
+        "decision": "exclude",
+        "decision_reason": "Attacker claim unverified; Nvidia reports no indication of compromise.",
+        "evidence_status": "unverified",
+        "severity_evidence": {
+          "context": "unknown",
+          "service": "unknown",
+          "reach": "unknown",
+          "damage": "unknown",
+          "essential": "unknown",
+          "financial": "unknown",
+          "reason": "No substantiated compromise reported."
+        },
+        "title": "Nvidia responds to unverified ransomware claim",
+        "date": "2026-11-19",
+        "victim": "Not reported",
+        "what": "Not a substantiated incident.",
+        "significance": "Not reported"
+      }
+    ]
+  }
+]
