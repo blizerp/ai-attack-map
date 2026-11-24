@@ -19838,20 +19838,18 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T11:08:08+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed compromise of LiteLLM’s release infrastructure and distribution artifacts with a credential-stealing payload; this is the same event as the already tracked October 23 LiteLLM supply-chain incident.",
+  "reason": "LiteLLM maintainer statement and Wiz forensic analysis establish compromised release workflow, malicious packages and observed credential abuse.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed compromise of LiteLLM’s release infrastructure and distribution artifacts with a credential-stealing payload; this is the same event as the already tracked October 23 LiteLLM supply-chain incident.",
-    "title": "LiteLLM release pipeline and packages compromised",
-    "incident_id": "e2e13fe6f7503c25"
+    "reason": "LiteLLM maintainer statement and Wiz forensic analysis establish compromised release workflow, malicious packages and observed credential abuse.",
+    "title": "LiteLLM release pipeline compromised with credential stealer"
    }
   ],
-  "evidence": "feed_full_text",
-  "summary_hash": "540e1c72328ba425310e1810dcb4ebd75409b01404bf7f12cf983d96a931651a",
+  "evidence": "manual_review",
   "item": {
    "id": "03f62be0b652985b",
    "title": "LiteLLM Compromised, Steals Credentials",
@@ -41893,6 +41891,30 @@
    "date": "2026-11-18",
    "source": "HIPAA Journal",
    "published_at": "2026-11-18T14:36:07+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/": {
+  "title": "Transport for London breach exposes 265,000 Oyster card users' data",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:08:08+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "TfL disclosure confirms compromise and potentially exposed personal data affecting about 265,000 customers.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "TfL disclosure confirms compromise and potentially exposed personal data affecting about 265,000 customers.",
+    "title": "TfL Oyster photocard account breach affects about 265,000"
+   }
+  ],
+  "evidence": "manual_review",
+  "item": {
+   "id": "47d76e98be58dd13",
+   "title": "Transport for London breach exposes 265,000 Oyster card users' data",
+   "url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
+   "date": "2026-11-19",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-19T18:20:01+00:00"
   }
  }
 }

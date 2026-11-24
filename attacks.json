@@ -174,6 +174,54 @@
    }
   },
   {
+   "title": "TfL Oyster photocard account breach affects about 265,000",
+   "date": "2026-11-16",
+   "category": "major_cyber",
+   "victim": "Transport for London Oyster photocard customers",
+   "attacker": "Unidentified attackers",
+   "what": "TfL discovered compromised email/account infrastructure after fraudulent account-creation messages were sent from its systems. Personal data including names, addresses, dates of birth and security questions may have been exposed; the photocard portal was taken offline.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Not reported",
+   "where": "London, United Kingdom",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Transport authority reported approximately 265,000 potentially affected accounts and suspended a customer portal while investigating.",
+   "id": "47d76e98be58dd13",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
+   "added": "2026-11-24T11:08:08+00:00",
+   "reported_date": "2026-11-19",
+   "last_reported": "2026-11-19",
+   "evidence_status": "confirmed",
+   "lat": 51.5074456,
+   "lon": -0.1277653,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Approximately 265,000 customers potentially exposed; Oyster card travel remained operational and misuse was not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
+    "assessed_at": "2026-11-24T11:08:08+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 51.5074456,
+     "lon": -0.1277653,
+     "label": "London, United Kingdom",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/"
+    }
+   ]
+  },
+  {
    "title": "Fireworks-linked breach exposed thousands of Uber drivers’ license data",
    "date": "2026-10-09 to 2026-10-13",
    "category": "major_cyber",
@@ -17489,7 +17537,7 @@
     },
     {
      "date": "2026-10-21",
-     "what": "The attacker used stolen repository and maintainer credentials to publish a malicious LiteLLM 1.107.0 release and matching container images. The packages installed persistence that collected cloud, Kubernetes, SSH, GPG, registry, AI-provider, browser, and shell-history credentials, although reporting does not establish how many users were successfully exfiltrated.",
+     "what": "Attackers used compromised maintainer GitHub credentials to publish malicious LiteLLM 1.107.0 Python and Docker releases with a credential stealer. Wiz observed subsequent abuse of stolen AWS credentials.",
      "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
      "source": "Wiz Research"
     },
