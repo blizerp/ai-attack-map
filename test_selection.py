@@ -75,6 +75,17 @@ class SelectionTests(unittest.TestCase):
             self.assertFalse(u.eligible_record(record(**changes)))
         self.assertTrue(u.eligible_record(record(category='using_ai', major_impact='none', significance='Not reported')))
 
+    def test_direct_evidence_gate_rejects_non_incidents(self):
+        quote="The utility confirmed unauthorized access to its operational network."
+        base=record(actual_outcome="confirmed_compromise", severity_evidence={"context":"real_world"})
+        self.assertTrue(u.direct_incident_evidence(base,quote,quote))
+        for outcome in ("research_demonstration","attempt_without_compromise","potential_impact_only","background_or_forecast","unverified"):
+            self.assertFalse(u.direct_incident_evidence(dict(base,actual_outcome=outcome),quote,quote))
+        self.assertFalse(u.direct_incident_evidence(base,quote,"Different article."))
+        self.assertFalse(u.direct_incident_evidence(dict(base,major_impact="none"),quote,quote))
+        self.assertFalse(u.direct_incident_evidence(dict(base,category="using_ai",ai_role="AI involvement not confirmed"),quote,quote))
+        self.assertFalse(u.direct_incident_evidence(dict(base,severity_evidence={"context":"research_only"}),quote,quote))
+
     def test_schema_requires_all_fields(self):
         self.assertEqual(set(u.SCHEMA['required']), set(u.SCHEMA['properties']))
 

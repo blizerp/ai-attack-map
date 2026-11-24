@@ -271,6 +271,22 @@ def fetch_tracker():
     return []
 
 
+def direct_incident_evidence(rec, quote, article):
+    """A matching passage alone does not prove real external harm."""
+    normalize = lambda value: re.sub(r"\s+", " ", value).strip().casefold()
+    q = normalize(quote)
+    role = rec.get("ai_role", "").casefold()
+    return (
+        len(q) >= 20 and q in normalize(article)
+        and rec.get("actual_outcome") in {"confirmed_compromise", "confirmed_consequential_event"}
+        and rec.get("severity_evidence", {}).get("context") == "real_world"
+        and rec.get("impact_substantiated") is True
+        and rec.get("major_impact") in MAJOR_IMPACTS
+        and not (rec.get("category") in {"using_ai", "by_ai_agent"}
+                 and any(x in role for x in ("not confirmed", "not reported", "unknown", "unconfirmed")))
+    )
+
+
 def extract(client, item, tracked):
     # Bound repeated context to recent incidents to control API costs.
     # Search likely duplicates across the full database, maintaining the 40-record cap.
@@ -292,24 +308,27 @@ def extract(client, item, tracked):
     user = (f"Already-tracked incidents:\n{known}\n\n---\n"
             f"Source: {item['source']}\nPublished: {item['date']}\nTitle: {item['title']}\n"
             f"URL: {item['url']}\n\n{item['text']}")
-    extraction_schema = dict(SCHEMA, properties=dict(SCHEMA["properties"], evidence_quote=TEXT),
-                             required=list(SCHEMA["required"]) + ["evidence_quote"])
+    extraction_schema = dict(
+        SCHEMA, properties=dict(SCHEMA["properties"], evidence_quote=TEXT,
+                                actual_outcome={"type": "string", "enum": [
+                                    "confirmed_compromise", "confirmed_consequential_event",
+                                    "research_demonstration", "attempt_without_compromise",
+                                    "potential_impact_only", "background_or_forecast", "unverified"]}),
+        required=list(SCHEMA["required"]) + ["evidence_quote", "actual_outcome"])
     resp = client.chat.completions.create(
         model=MODEL,
         # Omit reasoning_effort: the configured model may not support it.
-        messages=[{"role": "system", "content": SYSTEM_PROMPT + "\nFor each include decision, evidence_quote must be a verbatim passage from the supplied article body, not known-incident context or headline, establishing actual compromise or a confirmed consequential cybersecurity event. Exclude unrelated background links, product announcements, and navigation. Defer if direct evidence is absent. Match likely duplicates even when victim names or dates differ."}, {"role": "user", "content": user}],
+        messages=[{"role": "system", "content": SYSTEM_PROMPT + "\nFor each include decision, evidence_quote must be a verbatim passage from the supplied article body, not known-incident context or headline, establishing actual compromise or a confirmed consequential cybersecurity event. Exclude unrelated background links, product announcements, and navigation. Defer if direct evidence is absent. Match likely duplicates even when victim names or dates differ. Independently classify actual_outcome based on what happened, not the capabilities described: a controlled research demonstration, failed attack, mere vulnerable exposure, possible impact, or background anecdote must never be a confirmed_compromise. For AI categories require the same observed, consequential outcome as conventional attacks. Never attribute AI use unless directly supported. Do not inflate a campaign into multiple overlapping records. For confirmed consequential events the evidence quote must establish a real affected organization or a documented affected population and actual unauthorized access, theft, service disruption, or another qualifying observed effect."}, {"role": "user", "content": user}],
         response_format={"type": "json_schema",
                          "json_schema": {"name": "incident", "strict": True, "schema": {"type":"object","additionalProperties":False,"properties":{"incidents":{"type":"array","items":extraction_schema}},"required":["incidents"]}}},
     )
     records = json.loads(resp.choices[0].message.content)["incidents"]
-    normalized = lambda value: re.sub(r"\s+", " ", value).strip().casefold()
-    article = normalized(item.get("text", ""))
     for rec in records:
-        quote = normalized(rec.pop("evidence_quote", ""))
-        if rec.get("decision") == "include" and (len(quote) < 20 or quote not in article
-                or rec.get("severity_evidence", {}).get("context") in {"research_only", "unverified"}):
+        quote = rec.pop("evidence_quote", "")
+        if rec.get("decision") == "include" and not direct_incident_evidence(rec, quote, item.get("text", "")):
             rec.update(relevant=False, decision="defer",
-                       decision_reason="No matching direct evidence passage of an actual consequential incident.")
+                       decision_reason="Direct evidence does not establish a qualifying real-world outcome.")
+        rec.pop("actual_outcome", None)
     return records
 
 
