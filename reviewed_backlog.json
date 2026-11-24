@@ -1,6 +1,41 @@
 [
   {
-    "url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
+    "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
+    "records": [
+      {
+        "relevant": true,
+        "category": "on_ai_system",
+        "attacker": "Unidentified supply-chain attacker",
+        "ai_role": "AI involvement not confirmed in the reporting.",
+        "why": "Not reported",
+        "where": "No fixed location",
+        "major_impact": "supply_chain_compromise",
+        "impact_substantiated": true,
+        "geocode_query": null,
+        "duplicate_of": null,
+        "location_queries": [],
+        "decision": "include",
+        "decision_reason": "LiteLLM maintainer statement and Wiz forensic analysis establish compromised release workflow, malicious packages and observed credential abuse.",
+        "evidence_status": "confirmed",
+        "severity_evidence": {
+          "context": "real_world",
+          "service": "unknown",
+          "reach": "multiple",
+          "damage": "sensitive_data",
+          "essential": "unknown",
+          "financial": "unknown",
+          "reason": "Malicious releases distributed to multiple environments with observed theft and subsequent use of cloud credentials; exact victim count unknown."
+        },
+        "title": "LiteLLM release pipeline compromised with credential stealer",
+        "date": "2026-10-21",
+        "victim": "LiteLLM open-source package and downstream installations",
+        "what": "Attackers used compromised maintainer GitHub credentials to publish malicious LiteLLM 1.107.0 Python and Docker releases with a credential stealer. Wiz observed subsequent abuse of stolen AWS credentials.",
+        "significance": "Compromised AI software distribution and theft of cloud and AI credentials; affected releases were removed within hours."
+      }
+    ]
+  },
+  {
+    "url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
     "records": [
       {
         "relevant": true,
@@ -8,309 +43,34 @@
         "attacker": "Unidentified attackers",
         "ai_role": "AI involvement not confirmed in the reporting.",
         "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "essential_service_disruption",
+        "where": "London, United Kingdom",
+        "major_impact": "large_scale_data_theft",
         "impact_substantiated": true,
-        "geocode_query": null,
+        "geocode_query": "London, United Kingdom",
         "duplicate_of": null,
-        "location_queries": [],
+        "location_queries": [
+          {
+            "query": "London, United Kingdom",
+            "basis": "Reported affected area"
+          }
+        ],
         "decision": "include",
-        "decision_reason": "Vendor-confirmed unauthorized server access with operational disruption to management services.",
+        "decision_reason": "TfL disclosure confirms compromise and potentially exposed personal data affecting about 265,000 customers.",
         "evidence_status": "confirmed",
         "severity_evidence": {
           "context": "real_world",
-          "service": "substantial",
-          "reach": "single",
-          "damage": "privileged_access",
+          "service": "limited",
+          "reach": "widespread",
+          "damage": "sensitive_data",
           "essential": "unknown",
           "financial": "unknown",
-          "reason": "One hosted server compromised; management services disabled for days, while email flow continued and customer data theft was not established."
+          "reason": "Approximately 265,000 customers potentially exposed; Oyster card travel remained operational and misuse was not established."
         },
-        "title": "N-able Mail Assure and SpamExperts server compromised",
+        "title": "TfL Oyster photocard account breach affects about 265,000",
         "date": "2026-11-16",
-        "victim": "N-able Mail Assure and SpamExperts Hosted Cloud",
-        "what": "N-able confirmed unauthorized access to one hosted web server. It disabled management portals, APIs, quarantine, logging and synchronization across regions while retaining mail delivery and filtering. Access was restored November 21.",
-        "significance": "Confirmed cloud email-security management disruption across Americas, Europe and APAC; no confirmed customer mailbox compromise."
-      }
-    ]
-  },
-  {
-    "url": "https://therecord.media/cisa-losapio-nomination-trump",
-    "records": [
-      {
-        "relevant": false,
-        "category": "using_ai",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Political appointment reporting, not a cyber incident.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No new incident established."
-        },
-        "title": "CISA leadership nomination",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "Not a new substantiated incident.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.wiz.io/blog/aspm-ai-era-pt-3-fixing-risk-code-speed",
-    "records": [
-      {
-        "relevant": false,
-        "category": "using_ai",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Security product and remediation guidance, not a newly documented intrusion.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No new incident established."
-        },
-        "title": "ASPM remediation guidance",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "Not a new substantiated incident.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.darkreading.com/vulnerabilities-threats/navigating-vulnerability-hysteria-ai-era",
-    "records": [
-      {
-        "relevant": false,
-        "category": "using_ai",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Discussion of vulnerability response and warning fatigue, not a new verified incident.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No new incident established."
-        },
-        "title": "Vulnerability hysteria commentary",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "Not a new substantiated incident.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.hipaajournal.com/tis-the-season-to-be-hacked/",
-    "records": [
-      {
-        "relevant": false,
-        "category": "using_ai",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "General trend commentary, not a distinct incident.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No new incident established."
-        },
-        "title": "Seasonal cybercrime risk commentary",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "Not a new substantiated incident.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.hipaajournal.com/dothouse-health-data-breach-settlement/",
-    "records": [
-      {
-        "relevant": false,
-        "category": "using_ai",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Legal settlement for a 2022 breach, without new incident facts.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No new incident established."
-        },
-        "title": "DotHouse Health settlement",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "Not a new substantiated incident.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.hipaajournal.com/virtual-forty-fourth-national-hipaa-summit-2027/",
-    "records": [
-      {
-        "relevant": false,
-        "category": "using_ai",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Event promotion, not a security incident.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No new incident established."
-        },
-        "title": "HIPAA summit announcement",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "Not a new substantiated incident.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.hipaajournal.com/new-hipaa-regulations/",
-    "records": [
-      {
-        "relevant": false,
-        "category": "using_ai",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Regulatory update, not a security incident.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No new incident established."
-        },
-        "title": "HIPAA regulations update",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "Not a new substantiated incident.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.hipaajournal.com/hipaa-privacy-rule/",
-    "records": [
-      {
-        "relevant": false,
-        "category": "using_ai",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Legal reference, not a newly reported security incident.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No new incident established."
-        },
-        "title": "HIPAA Privacy Rule explainer",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "Not a new substantiated incident.",
-        "significance": "Not reported"
+        "victim": "Transport for London Oyster photocard customers",
+        "what": "TfL discovered compromised email/account infrastructure after fraudulent account-creation messages were sent from its systems. Personal data including names, addresses, dates of birth and security questions may have been exposed; the photocard portal was taken offline.",
+        "significance": "Transport authority reported approximately 265,000 potentially affected accounts and suspended a customer portal while investigating."
       }
     ]
   }
