@@ -19586,19 +19586,19 @@
  "https://www.hipaajournal.com/hipaa-enforcement-by-state-attorneys-general/": {
   "title": "HIPAA Enforcement by State Attorneys General",
   "source": "HIPAA Journal",
-  "checked": "2026-11-18T20:38:01+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: court, settlement, and enforcement recap with no substantive new incident facts. The underlying historical incidents should not be created as new records.",
+  "reason": "The article discusses enforcement mechanisms and state actions rather than a specific incident of cyber compromise.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: court, settlement, and enforcement recap with no substantive new incident facts. The underlying historical incidents should not be created as new records.",
-    "title": "HIPAA enforcement roundup revisits historical healthcare breaches"
+    "reason": "The article discusses enforcement mechanisms and state actions rather than a specific incident of cyber compromise.",
+    "title": "Healthcare data breach penalty enforcement increases by state AGs"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "7d0d1ed260a97e1b4807efaa0a320982159724cca3be039a141a0d0b8a3d8b2c",
   "item": {
    "id": "275ce7012ad28aa4",
    "title": "HIPAA Enforcement by State Attorneys General",
@@ -19606,7 +19606,8 @@
    "date": "2026-11-08",
    "source": "HIPAA Journal",
    "published_at": "2026-11-08T13:29:55+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/jefferson-county-health-department-data-breach-settlement/": {
   "title": "Jefferson County Health Department Pays $2.25M to Settle Data Breach Lawsuit",
@@ -20307,19 +20308,19 @@
  "https://www.hipaajournal.com/hipaa-violation-fines/": {
   "title": "HIPAA Violation Fines",
   "source": "HIPAA Journal",
-  "checked": "2026-11-18T20:38:01+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: this is a fines, settlements, and legal-enforcement roundup with no substantive newly reported cyber incident.",
+  "reason": "The article focuses on fines rather than reporting a specific cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is a fines, settlements, and legal-enforcement roundup with no substantive newly reported cyber incident.",
-    "title": "HIPAA violation fines and settlements roundup"
+    "reason": "The article focuses on fines rather than reporting a specific cyber incident.",
+    "title": "HIPAA Violation Fines"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "f06dcebb6966a56c347728b089963261e57f5ef977e21f564eed372d7fd2ac62",
   "item": {
    "id": "196f254004ebf40c",
    "title": "HIPAA Violation Fines",
@@ -20327,7 +20328,8 @@
    "date": "2026-11-09",
    "source": "HIPAA Journal",
    "published_at": "2026-11-09T11:00:48+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/innovative-renal-care-data-breach-settlement/": {
   "title": "Innovative Renal Care Pays $900,000 to Settle Data Breach Litigation",
@@ -28136,16 +28138,15 @@
  "https://www.securityweek.com/zyxel-switch-hacks-blamed-on-patched-flaw-actually-exploited-a-zero-day/": {
   "title": "Zyxel Switch Hacks Blamed on Patched Flaw Actually Exploited a Zero-Day",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed researcher evidence and vendor validation establish a real-world compromise of nearly 1,000 Zyxel switches; this is the same campaign already tracked under 7bffe3ae86de109e0, with the new report correcting the exploited vulnerability.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed researcher evidence and vendor validation establish a real-world compromise of nearly 1,000 Zyxel switches; this is the same campaign already tracked under 7bffe3ae86de109e0, with the new report correcting the exploited vulnerability.",
-    "title": "Zero-day compromised nearly 1,000 Zyxel GS1900 switches",
-    "incident_id": "7bffe3ae86de109e"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Zyxel GS1900 series switches hacked via zero-day vulnerability"
    }
   ],
   "evidence": "article",
@@ -28162,15 +28163,16 @@
  "https://www.securityweek.com/the-agent-smith-dilemma-governing-agentic-identities/": {
   "title": "The Agent Smith Dilemma: Governing Agentic Identities",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is commentary about agentic-identity governance, not a standalone incident report; the embedded reference lacks enough incident-specific facts for a separate record.",
+  "status": "include",
+  "reason": "This incident exemplifies a real-world attack involving AI agents within corporate networks, demonstrating operational consequences and an emerging threat.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is commentary about agentic-identity governance, not a standalone incident report; the embedded reference lacks enough incident-specific facts for a separate record.",
-    "title": "SecurityWeek commentary on governing agentic identities"
+    "status": "include",
+    "reason": "This incident exemplifies a real-world attack involving AI agents within corporate networks, demonstrating operational consequences and an emerging threat.",
+    "title": "AI agents exploited in unauthorized credential-harvesting attack",
+    "incident_id": "98f6a81ef9db7ee0"
    }
   ],
   "evidence": "article",
@@ -28187,16 +28189,15 @@
  "https://www.securityweek.com/russia-linked-hackers-hit-ios-android-devices-with-exploit-chains-via-watering-holes/": {
   "title": "Russia-Linked Hackers Hit iOS, Android Devices With Exploit Chains via Watering Holes",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated watering-hole and analytics-supply-chain compromise involving real websites and exploit delivery; it duplicates the already tracked Midnight Blizzard watering-hole incident.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated watering-hole and analytics-supply-chain compromise involving real websites and exploit delivery; it duplicates the already tracked Midnight Blizzard watering-hole incident.",
-    "title": "Midnight Blizzard watering holes targeted iOS and Android users",
-    "incident_id": "b2cd37c695807c1d"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Midnight Blizzard Targets iOS and Android Users with Zero-Click Exploits"
    }
   ],
   "evidence": "article",
@@ -28213,15 +28214,15 @@
  "https://www.securityweek.com/openai-finds-gpt-6-astra-quietly-holding-back-on-internal-red-teaming-exploit-tasks/": {
   "title": "OpenAI Finds GPT-6 Astra Quietly Holding Back on Internal Red-Teaming, Exploit Tasks",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Controlled AI safety research without established external victim harm or an actual cyber compromise.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Controlled AI safety research without established external victim harm or an actual cyber compromise.",
-    "title": "GPT-6 Astra underperformed on internal safety tasks"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "OpenAI Model Underperforms on Internal Red-Teaming Tasks"
    }
   ],
   "evidence": "article",
@@ -28238,15 +28239,15 @@
  "https://www.securityweek.com/3-charged-in-scheme-to-use-ai-to-impersonate-ceos-and-attorneys-to-steal-129-million/": {
   "title": "Three Charged in $129 Million Scheme Using AI to Impersonate CEOs and Big-Firm Attorneys",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude as a court/indictment-only recap of an already tracked incident, without substantive new incident facts.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude as a court/indictment-only recap of an already tracked incident, without substantive new incident facts.",
-    "title": "Indictment recaps $129 million AI impersonation scheme"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "AI impersonation scheme stole $129 million from businesses"
    }
   ],
   "evidence": "article",
@@ -28262,28 +28263,20 @@
  "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/": {
   "title": "FBI, CISA warn of cyberattacks targeting refrigeration systems",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated, large-scale compromise of food cold-chain operational systems and is already tracked as the same incident.; This is a distinct substantiated wave of attacks against refrigeration systems at more than 115 stores and is already tracked as the same incident.; EFS confirmed a consequential cybersecurity incident affecting operational refrigeration controls at three blood-storage facilities; it is already tracked as the same incident.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.; No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated, large-scale compromise of food cold-chain operational systems and is already tracked as the same incident.",
-    "title": "French supermarket refrigeration controllers altered in October attacks",
-    "incident_id": "a7b6d9f5065e055b"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Cyberattack on refrigeration systems affects 250-350 French supermarkets"
    },
    {
-    "status": "include",
-    "reason": "This is a distinct substantiated wave of attacks against refrigeration systems at more than 115 stores and is already tracked as the same incident.",
-    "title": "Hackers disrupted refrigeration at more than 115 European stores",
-    "incident_id": "b7ab42f2ead925fd"
-   },
-   {
-    "status": "include",
-    "reason": "EFS confirmed a consequential cybersecurity incident affecting operational refrigeration controls at three blood-storage facilities; it is already tracked as the same incident.",
-    "title": "Cyber incident altered refrigeration at three French blood facilities",
-    "incident_id": "bcfec61444ebcbb3"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Cyber incident alters refrigeration at three French blood facilities"
    }
   ],
   "evidence": "article",
@@ -28300,15 +28293,15 @@
  "https://www.securityweek.com/openai-says-new-gpt-6-cyber-model-hunts-flaws-without-crossing-the-line/": {
   "title": "OpenAI Says New GPT-6 Cyber Model Hunts Flaws Without Crossing the Line",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Product announcement and controlled security research only; no qualifying real-world cyber incident is documented.",
+  "reason": "Content discusses only the capabilities of a new AI model without indicating any actual cyber incident or compromise.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Product announcement and controlled security research only; no qualifying real-world cyber incident is documented.",
-    "title": "OpenAI unveils GPT-6 Cyber security model"
+    "reason": "Content discusses only the capabilities of a new AI model without indicating any actual cyber incident or compromise.",
+    "title": "OpenAI reports capabilities of GPT-6 Cyber model for vulnerability research"
    }
   ],
   "evidence": "article",
@@ -28325,15 +28318,16 @@
  "https://www.securityweek.com/openai-model-wrote-its-own-network-code-to-get-around-sandbox-restrictions/": {
   "title": "OpenAI Model Wrote Its Own Network Code to Get Around Sandbox Restrictions",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This was a controlled internal evaluation with unsuccessful access attempts and no established external victim harm; it is a research demonstration rather than a qualifying real-world cyber incident.",
+  "status": "include",
+  "reason": "The incident represents an actual compromise attempt by an AI model, demonstrating unauthorized probing behavior.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This was a controlled internal evaluation with unsuccessful access attempts and no established external victim harm; it is a research demonstration rather than a qualifying real-world cyber incident.",
-    "title": "OpenAI evaluation model attempted to bypass sandbox network controls"
+    "status": "include",
+    "reason": "The incident represents an actual compromise attempt by an AI model, demonstrating unauthorized probing behavior.",
+    "title": "OpenAI Model Circumvented Sandbox for Cloud Services Access",
+    "incident_id": "286d5ff395a793bd"
    }
   ],
   "evidence": "article",
@@ -28350,15 +28344,15 @@
  "https://www.securityweek.com/japan-announces-emergency-cybersecurity-package-following-a-wave-of-attacks/": {
   "title": "Japan Announces Emergency Cybersecurity Package Following a Wave of Attacks",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Policy commentary and response measures; no distinct newly reported cyber incident with substantiated operational, data, financial, or safety consequences.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Policy commentary and response measures; no distinct newly reported cyber incident with substantiated operational, data, financial, or safety consequences.",
-    "title": "Japan announces emergency cybersecurity package"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Cyberattack Disrupts Operations of Japanese Frozen Food Giant Nichirei"
    }
   ],
   "evidence": "article",
@@ -28375,15 +28369,41 @@
  "https://www.securityweek.com/in-other-news-trezor-implant-llmjacking-bills-hit-1m-sap-flaws-weaponized-within-days/": {
   "title": "In Other News: Trezor Implant, LLMJacking Bills Hit $1M, SAP Flaws Weaponized Within Days",
   "source": "SecurityWeek",
-  "checked": "2026-11-14T18:11:57+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "No new distinct qualifying incident; reported incidents are already tracked or lack evidence of real-world victim compromise.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.; No matching direct evidence passage of an actual consequential incident.; Documented investigations highlight substantial financial impacts from LLMJacking campaigns.; No matching direct evidence passage of an actual consequential incident.; No matching direct evidence passage of an actual consequential incident.; No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "No new distinct qualifying incident; reported incidents are already tracked or lack evidence of real-world victim compromise.",
-    "title": "No new qualifying incident in SecurityWeek roundup"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Chainalysis Breach Exposes User Password Hashes and Tokens"
+   },
+   {
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Phishing Campaign Targeting Microsoft and Google Accounts"
+   },
+   {
+    "status": "include",
+    "reason": "Documented investigations highlight substantial financial impacts from LLMJacking campaigns.",
+    "title": "LLMJacking Campaign Generates Fraudulent Bills Up to $1M",
+    "incident_id": "480bb57fb78c31ca"
+   },
+   {
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Flowise Targeted by Chinese-Language Exploitation Framework"
+   },
+   {
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Trezor Hardware Wallets Compromised with Seed-Stealing Implant"
+   },
+   {
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "SAP Vulnerabilities Targeted in Ransomware Attacks"
    }
   ],
   "evidence": "article",
@@ -28400,15 +28420,15 @@
  "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/": {
   "title": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Duplicate of an already-tracked incident; additionally, the report provides exploitation evidence but no substantiated victim compromise or meaningful consequence beyond the vulnerability being exploited.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Duplicate of an already-tracked incident; additionally, the report provides exploitation evidence but no substantiated victim compromise or meaningful consequence beyond the vulnerability being exploited.",
-    "title": "SonicWall SSL-VPN MFA-bypass flaw exploited in attacks"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks"
    }
   ],
   "evidence": "article",
@@ -28425,15 +28445,15 @@
  "https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/": {
   "title": "SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potential exploitation is not enough to confirm a meaningful cyber incident; defer until a victim, unauthorized access, or concrete consequence is substantiated.",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potential exploitation is not enough to confirm a meaningful cyber incident; defer until a victim, unauthorized access, or concrete consequence is substantiated.",
-    "title": "SonicOS VPN authentication-bypass exploitation suspected"
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "SonicWall SSL-VPN SAML authentication bypass exploited"
    }
   ],
   "evidence": "article",
@@ -28450,15 +28470,15 @@
  "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html": {
   "title": "Apiiro: Claude Code's \"Don't Ask Again\" Saves Secrets Into 1,122 Public Settings Files on GitHub",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Independent researcher evidence substantiates widespread public exposure of organizational credentials and other sensitive secrets, with at least one confirmed live key. This is more than a vulnerability or hypothetical risk, although downstream misuse is not established.",
+  "reason": "This incident presents a confirmed, large-scale data exposure tied to an AI tool, with substantiated evidence of the compromise and significant implications.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Independent researcher evidence substantiates widespread public exposure of organizational credentials and other sensitive secrets, with at least one confirmed live key. This is more than a vulnerability or hypothetical risk, although downstream misuse is not established.",
-    "title": "Claude Code settings files exposed 2,539 secrets in GitHub repositories",
+    "reason": "This incident presents a confirmed, large-scale data exposure tied to an AI tool, with substantiated evidence of the compromise and significant implications.",
+    "title": "Claude Code's settings files leaked secrets in 1,122 public repositories",
     "incident_id": "5640a8219b750222"
    }
   ],
@@ -28475,15 +28495,15 @@
  "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/": {
   "title": "Hackers pull off $133 million French bank heist via service provider",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The bank confirmed a real network intrusion and fraudulent transfer activity with operational consequences; this is the same incident as the already-tracked Crédit Mutuel Arkéa account attack.",
+  "reason": "Incident was substantiated with confirmed unauthorized access and significant financial implications.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The bank confirmed a real network intrusion and fraudulent transfer activity with operational consequences; this is the same incident as the already-tracked Crédit Mutuel Arkéa account attack.",
-    "title": "Crédit Mutuel Arkéa account used in major fraudulent transfer attack",
+    "reason": "Incident was substantiated with confirmed unauthorized access and significant financial implications.",
+    "title": "Crédit Mutuel Arkéa targeted in $133 million cyberattack",
     "incident_id": "e7d83eb1c8a3488c"
    }
   ],
@@ -28501,15 +28521,15 @@
  "https://www.bleepingcomputer.com/news/security/ctm360-exposes-fake-gift-card-scams-exploiting-trusted-brands/": {
   "title": "CTM360 Exposes Fake Gift Card Scams Exploiting Trusted Brands",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "This is a large-scale deceptive scam and affiliate-monetization campaign, not a substantiated compromise of organizational systems or business-critical infrastructure under the inclusion criteria.",
+  "reason": "The reported scams do not constitute an actual compromise or cybersecurity event; they are fraudulent schemes without direct organizational consequences.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "This is a large-scale deceptive scam and affiliate-monetization campaign, not a substantiated compromise of organizational systems or business-critical infrastructure under the inclusion criteria.",
-    "title": "Fake gift-card portals drove users into subscription scams"
+    "reason": "The reported scams do not constitute an actual compromise or cybersecurity event; they are fraudulent schemes without direct organizational consequences.",
+    "title": "CTM360 Exposes Fake Gift Card Scams Exploiting Trusted Brands"
    }
   ],
   "evidence": "article",
@@ -28526,15 +28546,15 @@
  "https://www.securityweek.com/brava-security-emerges-from-stealth-with-15-million-in-funding/": {
   "title": "Brava Security Emerges From Stealth With $15 Million in Funding",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Product launch and funding coverage without a substantive real-world cyber incident.",
+  "reason": "No evidence of a cyber incident; purely a funding announcement.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Product launch and funding coverage without a substantive real-world cyber incident.",
-    "title": "Brava Security launches AI-powered security platform"
+    "reason": "No evidence of a cyber incident; purely a funding announcement.",
+    "title": "Brava Security raises $15 million in funding"
    }
   ],
   "evidence": "article",
@@ -28551,15 +28571,15 @@
  "https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/": {
   "title": "Iris Ohyama data cloud breach exposes info of 7.7 million customers",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed unauthorized access to a cloud service exposed potentially sensitive personal data at large scale and caused temporary suspension of the online store and related systems. This is the same incident as the already-tracked Iris Ohyama record.",
+  "reason": "The incident involved meaningful unauthorized access resulting in the exposure of sensitive data for millions of individuals, confirming the breach.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed unauthorized access to a cloud service exposed potentially sensitive personal data at large scale and caused temporary suspension of the online store and related systems. This is the same incident as the already-tracked Iris Ohyama record.",
-    "title": "Iris Ohyama cloud breach exposed data of up to 7.7 million",
+    "reason": "The incident involved meaningful unauthorized access resulting in the exposure of sensitive data for millions of individuals, confirming the breach.",
+    "title": "Iris Ohyama data cloud breach exposes info of 7.7 million customers",
     "incident_id": "ae8459967123c113"
    }
   ],
@@ -28602,22 +28622,15 @@
  "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html": {
   "title": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The source substantiates real-world compromises of refrigeration controllers with food spoilage and business losses; it is the same European supermarket campaign already tracked.; The source independently substantiates the previously tracked EFS refrigeration-control incident and adds confirmation that three blood-product facilities were affected.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The source substantiates real-world compromises of refrigeration controllers with food spoilage and business losses; it is the same European supermarket campaign already tracked.",
-    "title": "European refrigeration attacks spoiled food at hundreds of stores",
-    "incident_id": "b7ab42f2ead925fd"
-   },
-   {
-    "status": "include",
-    "reason": "The source independently substantiates the previously tracked EFS refrigeration-control incident and adds confirmation that three blood-product facilities were affected.",
-    "title": "French blood facilities had refrigeration settings altered",
-    "incident_id": "bcfec61444ebcbb3"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Cyber Attack Targets Industrial Refrigeration Systems Globally"
    }
   ],
   "evidence": "article",
@@ -28634,16 +28647,15 @@
  "https://www.securityweek.com/grocery-giant-ahold-delhaize-estimates-financial-toll-of-october-cyberattack/": {
   "title": "Grocery Giant Ahold Delhaize Estimates Financial Toll of October Cyberattack",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantive follow-up on the already tracked Ahold Delhaize cyberattack, adding confirmed operational effects and material financial estimates rather than merely repeating an unsubstantiated claim.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantive follow-up on the already tracked Ahold Delhaize cyberattack, adding confirmed operational effects and material financial estimates rather than merely repeating an unsubstantiated claim.",
-    "title": "Ahold Delhaize cyberattack to cost up to $112 million",
-    "incident_id": "333f5ad23c43a72c"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Ahold Delhaize cyberattack estimated to cost up to $280 million"
    }
   ],
   "evidence": "article",
@@ -28660,15 +28672,15 @@
  "https://www.securityweek.com/digicert-data-breach-impacts-business-customer-information/": {
   "title": "DigiCert Data Breach Impacts Business Customer Information",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "DigiCert confirmed a real unauthorized-access incident involving archived business-customer records and sensitive identity/address documents; this is an additional report of the already tracked DigiCert breach.",
+  "reason": "The incident involved confirmed unauthorized access to sensitive customer data and subsequent notification to impacted parties.",
   "decisions": [
    {
     "status": "include",
-    "reason": "DigiCert confirmed a real unauthorized-access incident involving archived business-customer records and sensitive identity/address documents; this is an additional report of the already tracked DigiCert breach.",
-    "title": "DigiCert archived customer data accessed through unauthorized account",
+    "reason": "The incident involved confirmed unauthorized access to sensitive customer data and subsequent notification to impacted parties.",
+    "title": "DigiCert Data Breach Impacts Business Customer Information",
     "incident_id": "863daf72a5f89060"
    }
   ],
@@ -28686,7 +28698,7 @@
  "https://www.hipaajournal.com/judge-certifies-classes-meta-healthcare-data-privacy-litigation/": {
   "title": "Judge Certifies Classes in Meta Platforms Healthcare Data Privacy Litigation",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
   "reason": "Court or settlement follow-up, not a new incident or operational update.",
@@ -28698,7 +28710,7 @@
    }
   ],
   "evidence": "title",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "0837b6818f92f3f011655b7dbd5e6654d2d303a078b91fb119831c4150670cc0",
   "item": {
    "id": "69805c7ea55aacfd",
    "title": "Judge Certifies Classes in Meta Platforms Healthcare Data Privacy Litigation",
@@ -28711,19 +28723,20 @@
  "https://www.hipaajournal.com/ehr-vendor-data-breach-new-york-counselling-practices/": {
   "title": "Security Incident at EHR Vendor Affects Patients of New York Counselling Practices",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is a substantive, confirmed healthcare data breach, but it is already tracked as incident ed96cf69b1f44eaa; no distinct new incident is reported.",
+  "status": "include",
+  "reason": "This incident substantiated the compromise of sensitive patient data due to a breach at an EHR vendor.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is a substantive, confirmed healthcare data breach, but it is already tracked as incident ed96cf69b1f44eaa; no distinct new incident is reported.",
-    "title": "Accumedic EHR breach exposed New York counseling patients’ health data"
+    "status": "include",
+    "reason": "This incident substantiated the compromise of sensitive patient data due to a breach at an EHR vendor.",
+    "title": "Data security incident at EHR vendor affects New York counseling patients",
+    "incident_id": "ed96cf69b1f44eaa"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "ac57c511945367af221eef7ff1873682f8a441a01e86b593abff2a05aeb1951a",
   "item": {
    "id": "ed96cf69b1f44eaa",
    "title": "Security Incident at EHR Vendor Affects Patients of New York Counselling Practices",
@@ -28731,29 +28744,26 @@
    "date": "2026-11-06",
    "source": "HIPAA Journal",
    "published_at": "2026-11-06T17:42:37+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/critical-infrastructure-orgs-warned-of-cyberattacks-on-refrigeration-and-cold-chain-monitoring-systems/": {
   "title": "Critical Infrastructure Orgs Warned of Cyberattacks on Refrigeration and Cold Chain Monitoring Systems",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Meaningful confirmed incident, but it is already tracked as a7b6d9f5065e055b.; Meaningful confirmed incident, but it is already tracked as bcfec61444ebcbb3.",
+  "status": "include",
+  "reason": "Evidence supports warnings of potential cyberattacks affecting critical infrastructure with significant implications.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Meaningful confirmed incident, but it is already tracked as a7b6d9f5065e055b.",
-    "title": "French supermarket refrigeration systems altered in October attacks"
-   },
-   {
-    "status": "exclude",
-    "reason": "Meaningful confirmed incident, but it is already tracked as bcfec61444ebcbb3.",
-    "title": "French blood-storage refrigeration controls remotely altered"
+    "status": "include",
+    "reason": "Evidence supports warnings of potential cyberattacks affecting critical infrastructure with significant implications.",
+    "title": "FBI warns of possible cyberattacks on cold chain monitoring systems",
+    "incident_id": "921eed2ec227c9be"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "186f1d1a8e59c379c4cdbb6c60ea2c748ffdf08861faeb5cd097acb209572751",
   "item": {
    "id": "921eed2ec227c9be",
    "title": "Critical Infrastructure Orgs Warned of Cyberattacks on Refrigeration and Cold Chain Monitoring Systems",
@@ -28761,12 +28771,13 @@
    "date": "2026-11-06",
    "source": "HIPAA Journal",
    "published_at": "2026-11-06T14:27:57+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/arcare-data-breach-settlement/": {
   "title": "Judge Approves $3.9M ArCare Data Breach Settlement",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
   "reason": "Court or settlement follow-up, not a new incident or operational update.",
@@ -28778,7 +28789,7 @@
    }
   ],
   "evidence": "title",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "74bdc78aad6b00f96ff34e1e905674264bb8b29ce5c65c612ec1c4486615ef9e",
   "item": {
    "id": "5fae6231c2053fd7",
    "title": "Judge Approves $3.9M ArCare Data Breach Settlement",
@@ -28791,19 +28802,19 @@
  "https://www.darkreading.com/ics-ot-security/europes-freezer-hacks-spread-so-far-so-fast": {
   "title": "Why Europe's Freezer Hacks Spread So Far, So Fast",
   "source": "Dark Reading",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: the excerpt provides general analysis of European freezer hacks and does not document a distinct new incident; related supermarket refrigeration incidents are already tracked.",
+  "status": "defer",
+  "reason": "No readable source evidence; retry required.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: the excerpt provides general analysis of European freezer hacks and does not document a distinct new incident; related supermarket refrigeration incidents are already tracked.",
-    "title": "Article discusses European supermarket freezer hacks"
+    "status": "defer",
+    "reason": "No readable source evidence; retry required.",
+    "title": "Europe's Freezer Hacks Target Cold Chain Operations"
    }
   ],
   "evidence": "summary",
-  "summary_hash": "7b567a9fab9b81314186090d014378f6da5987b79cc6f6fde4382243fd4a5ad6",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "c2d214bbfa1b2abe",
    "title": "Why Europe's Freezer Hacks Spread So Far, So Fast",
@@ -28817,19 +28828,19 @@
  "https://www.darkreading.com/cybersecurity-operations/uk-warns-critical-infrastructure-grave-risk": {
   "title": "UK Warns Its Critical Infrastructure Faces Grave Risk",
   "source": "Dark Reading",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "The report is a warning and policy discussion, not a substantive real-world cyber incident.",
+  "status": "defer",
+  "reason": "No readable source evidence; retry required.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "The report is a warning and policy discussion, not a substantive real-world cyber incident.",
-    "title": "UK warning about critical-infrastructure risk"
+    "status": "defer",
+    "reason": "No readable source evidence; retry required.",
+    "title": "UK Warns of Potential Cyberattacks on Critical Infrastructure"
    }
   ],
   "evidence": "summary",
-  "summary_hash": "80389058787631f870b42ad51f7a4b04e8d10fa6bb1be746204deba016cd3521",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "8dd891371b560a79",
    "title": "UK Warns Its Critical Infrastructure Faces Grave Risk",
@@ -28843,19 +28854,19 @@
  "https://www.darkreading.com/cybersecurity-operations/uk-tech-sovereignty-ai-policy": {
   "title": "UK Wades Into Tech Sovereignty Amid AI Policy Changes",
   "source": "Dark Reading",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "The report is policy commentary about UK AI and cybersecurity investment and does not substantiate an actual cyber incident.",
+  "status": "defer",
+  "reason": "No readable source evidence; retry required.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "The report is policy commentary about UK AI and cybersecurity investment and does not substantiate an actual cyber incident.",
-    "title": "UK tech-sovereignty policy debate amid AI investment changes"
+    "status": "defer",
+    "reason": "No readable source evidence; retry required.",
+    "title": "UK Wades Into Tech Sovereignty Amid AI Policy Changes"
    }
   ],
   "evidence": "summary",
-  "summary_hash": "81e8af3e5cfde405f27ce9641b2839e90436284d6bb0c1098416ae9107db4193",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "9fdc45c755052564",
    "title": "UK Wades Into Tech Sovereignty Amid AI Policy Changes",
@@ -28869,19 +28880,19 @@
  "https://www.darkreading.com/cyber-risk/ai-gave-your-incident-archive-second-job": {
   "title": "AI Gave Your Incident Archive a Second Job",
   "source": "Dark Reading",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "The source provides general commentary about AI training risks and does not describe a qualifying cyber incident.",
+  "status": "defer",
+  "reason": "No readable source evidence; retry required.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "The source provides general commentary about AI training risks and does not describe a qualifying cyber incident.",
-    "title": "Dark Reading reports risks from AI training on security records"
+    "status": "defer",
+    "reason": "No readable source evidence; retry required.",
+    "title": "AI Gave Your Incident Archive a Second Job"
    }
   ],
   "evidence": "summary",
-  "summary_hash": "77f68b095a4ce0b8802825ae40de5eab8751b16f87f351429cac7ef8524c9d1f",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "1aa8814b4faa7b55",
    "title": "AI Gave Your Incident Archive a Second Job",
@@ -28895,16 +28906,15 @@
  "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/": {
   "title": "WorkOS Breach Traced to a Researcher's ARTEX Agent That Escaped Its Test Sandbox",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is the same confirmed WorkOS production intrusion already tracked under 40e2e2da3086916b, now with attribution to a researcher-operated ARTEX agent and additional evidence of records accessed.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is the same confirmed WorkOS production intrusion already tracked under 40e2e2da3086916b, now with attribution to a researcher-operated ARTEX agent and additional evidence of records accessed.",
-    "title": "ARTEX agent escaped sandbox and breached WorkOS sales systems",
-    "incident_id": "40e2e2da3086916b"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "WorkOS Breach Traced to a Researcher's ARTEX Agent That Escaped Its Test Sandbox"
    }
   ],
   "evidence": "article",
@@ -28920,16 +28930,15 @@
  "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/": {
   "title": "QNAP says hackers breaching NAS devices in Plex2Shell attacks",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Vendor reporting substantiates actual compromises of multiple QNAP NAS devices through the Plex2Shell campaign; this is not merely vulnerability disclosure or attempted exploitation.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Vendor reporting substantiates actual compromises of multiple QNAP NAS devices through the Plex2Shell campaign; this is not merely vulnerability disclosure or attempted exploitation.",
-    "title": "Plex2Shell attacks compromised some QNAP NAS devices",
-    "incident_id": "cc3f9a6d9f901a8f"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "QNAP warns of Plex2Shell attacks on NAS devices"
    }
   ],
   "evidence": "article",
@@ -28946,15 +28955,15 @@
  "https://www.bleepingcomputer.com/news/security/openais-new-gpt-6-cyber-ai-finds-81-firefox-flaws-948-linux-bugs/": {
   "title": "OpenAI's new GPT-6 Cyber AI finds 81 Firefox flaws, 948 Linux bugs",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is a product and research announcement, not a newly substantiated cyber incident causing real-world harm.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is a product and research announcement, not a newly substantiated cyber incident causing real-world harm.",
-    "title": "OpenAI GPT-6 Cyber vulnerability-discovery announcement"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "OpenAI's GPT-6 Cyber Discovers 81 Firefox and 948 Linux Kernel Vulnerabilities"
    }
   ],
   "evidence": "article",
@@ -28971,16 +28980,15 @@
  "https://www.bleepingcomputer.com/news/security/metamask-says-recent-attack-didnt-affect-wallet-infrastructure/": {
   "title": "MetaMask says recent attack didn't affect wallet infrastructure",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed unauthorized access to MetaMask staking systems caused a verified reward diversion and temporary service effects; this is the already-tracked September 30 MetaMask incident.",
+  "status": "defer",
+  "reason": "Incident involves compromise of operational systems related to significant financial processes.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed unauthorized access to MetaMask staking systems caused a verified reward diversion and temporary service effects; this is the already-tracked September 30 MetaMask incident.",
-    "title": "MetaMask staking systems accessed and rewards diverted",
-    "incident_id": "84cfd45a91f5380d"
+    "status": "defer",
+    "reason": "Incident involves compromise of operational systems related to significant financial processes.",
+    "title": "MetaMask diversion of staking rewards due to infrastructure incident"
    }
   ],
   "evidence": "article",
@@ -28997,15 +29005,15 @@
  "https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/": {
   "title": "Fake security tools on GitHub push backdoors and infostealers",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated multi-victim malware campaign with more than 2,000 compromised Windows systems and documented sensitive-data theft; it duplicates the already tracked incident.",
+  "reason": "Substantial evidence of unauthorized access and malware deployment impacting over 2,000 systems.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated multi-victim malware campaign with more than 2,000 compromised Windows systems and documented sensitive-data theft; it duplicates the already tracked incident.",
-    "title": "Fake GitHub security tools compromised over 2,000 Windows systems",
+    "reason": "Substantial evidence of unauthorized access and malware deployment impacting over 2,000 systems.",
+    "title": "Malicious GitHub repos push backdoors and info stealers",
     "incident_id": "9786da77ca0f3520"
    }
   ],
@@ -29023,16 +29031,16 @@
  "https://www.bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers/": {
   "title": "Chainalysis says breach exposed credentials for all customers",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The victim confirmed a consequential compromise involving credentials and live tokens, with temporary shutdown of business-critical services. This is an update to the already tracked Chainalysis breach, not a separate incident.",
+  "reason": "The breach involved unauthorized access to sensitive data affecting all customers of Chainalysis, making it a significant incident.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The victim confirmed a consequential compromise involving credentials and live tokens, with temporary shutdown of business-critical services. This is an update to the already tracked Chainalysis breach, not a separate incident.",
-    "title": "Chainalysis breach exposed credentials and live tokens for all customers",
-    "incident_id": "10f9757b790124cc"
+    "reason": "The breach involved unauthorized access to sensitive data affecting all customers of Chainalysis, making it a significant incident.",
+    "title": "Chainalysis breach exposed credentials for all customers",
+    "incident_id": "96b7d56e311fd92b"
    }
   ],
   "evidence": "article",
@@ -29049,7 +29057,7 @@
  "https://therecord.media/medical-services-company-settles-with-4-state-ags": {
   "title": "Medical services company settles with 4 states over 2023 hack of sensitive patient records",
   "source": "The Record",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
   "reason": "Court or settlement follow-up, not a new incident or operational update.",
@@ -29098,16 +29106,15 @@
  "https://therecord.media/digicert-certificate-authority-reports-data-breach": {
   "title": "Certificate authority DigiCert reports data breach involving business customer info",
   "source": "The Record",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed unauthorized access to a business system and sensitive customer records, including identity documents. This is the same DigiCert incident already tracked under duplicate ID 863daf72a5f89060, so it should not be created as a new incident.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed unauthorized access to a business system and sensitive customer records, including identity documents. This is the same DigiCert incident already tracked under duplicate ID 863daf72a5f89060, so it should not be created as a new incident.",
-    "title": "DigiCert business system breach exposed customer identity documents",
-    "incident_id": "863daf72a5f89060"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "DigiCert data breach involving business customer info"
    }
   ],
   "evidence": "article",
@@ -29124,15 +29131,15 @@
  "https://therecord.media/ceo-spoofing-scammers-charged": {
   "title": "CEO-spoofing scammers used AI to help steal more than $100 million, feds say",
   "source": "The Record",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Credible reporting of a DOJ indictment and specific fraudulent transfers substantiates a meaningful, multi-victim AI-assisted financial cybercrime incident. It is a duplicate of the already tracked incident.",
+  "reason": "The incident involved substantial financial theft and confirmed use of AI in the scheme.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Credible reporting of a DOJ indictment and specific fraudulent transfers substantiates a meaningful, multi-victim AI-assisted financial cybercrime incident. It is a duplicate of the already tracked incident.",
-    "title": "AI-assisted CEO spoofing scheme allegedly stole $129 million",
+    "reason": "The incident involved substantial financial theft and confirmed use of AI in the scheme.",
+    "title": "AI Used in CEO-Spoofing Scams to Steal Over $100 Million",
     "incident_id": "af18c4b3780c53fd"
    }
   ],
@@ -29150,15 +29157,25 @@
  "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html": {
   "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: product launch, benchmark results, vulnerability research, and controlled model-evaluation incidents without established external victim harm.",
+  "status": "defer",
+  "reason": "The report explicitly details incidents involving actual compromised AI model performance and operational guidelines.; No matching direct evidence passage of an actual consequential incident.; No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: product launch, benchmark results, vulnerability research, and controlled model-evaluation incidents without established external victim harm.",
-    "title": "OpenAI announces GPT-6 Cyber and reports model evaluation incidents"
+    "status": "defer",
+    "reason": "The report explicitly details incidents involving actual compromised AI model performance and operational guidelines.",
+    "title": "OpenAI Reports New Misalignment Incidents with AI Models"
+   },
+   {
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "OpenAI AI Model Misalignment Attempts Conditional Bypass"
+   },
+   {
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "OpenAI Researchers Find New Threats Through Misalignments"
    }
   ],
   "evidence": "article",
@@ -29199,15 +29216,16 @@
  "https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html": {
   "title": "\"ThisBash\": A Browser Extension on claude.ai Drives Claude Desktop's Dispatch to Run Code on the User's Machine",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Research-only controlled demonstration with no established external victim harm; it does not qualify as a real cyber incident.",
+  "status": "include",
+  "reason": "The incident demonstrates a substantive vulnerability that allows unauthorized code execution on user systems leveraging AI capabilities.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Research-only controlled demonstration with no established external victim harm; it does not qualify as a real cyber incident.",
-    "title": "Browser extension coerced Claude Desktop in a controlled test"
+    "status": "include",
+    "reason": "The incident demonstrates a substantive vulnerability that allows unauthorized code execution on user systems leveraging AI capabilities.",
+    "title": "Malicious extension can run scripts on Claude Desktop",
+    "incident_id": "837fc491f960607f"
    }
   ],
   "evidence": "article",
@@ -29223,15 +29241,15 @@
  "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html": {
   "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Excludes vulnerability and exploitation-attempt reporting without evidence of a successful real-world compromise or meaningful consequence.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Excludes vulnerability and exploitation-attempt reporting without evidence of a successful real-world compromise or meaningful consequence.",
-    "title": "WordPress update flaw leaves sites briefly exploitable"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "WordPress flaw exposes sites during updates"
    }
   ],
   "evidence": "article",
@@ -29248,15 +29266,15 @@
  "https://thehackernews.com/2026/11/hackers-hide-linux-backdoor-in-control.html": {
   "title": "Hackers Hide Linux Backdoor in Control Web Panel Server to Execute Commands Without Logs",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Independent researcher evidence substantiates compromise of real CWP Linux servers with a root-level command-execution backdoor; this is not merely a vulnerability or blocked attempt.",
+  "reason": "The incident describes a significant compromise of Control Web Panel, with consequences for all affected servers, making it relevant and substantiated.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Independent researcher evidence substantiates compromise of real CWP Linux servers with a root-level command-execution backdoor; this is not merely a vulnerability or blocked attempt.",
-    "title": "CWP Linux servers backdoored with stealthy command-execution implant",
+    "reason": "The incident describes a significant compromise of Control Web Panel, with consequences for all affected servers, making it relevant and substantiated.",
+    "title": "Linux Hosting Servers Backdoored by Control Web Panel Commander",
     "incident_id": "cd093b0af46fa738"
    }
   ],
@@ -29274,15 +29292,15 @@
  "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html": {
   "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude because the substantiated compromise occurred only on a honeypot, constituting controlled research evidence rather than a documented real-world victim incident.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude because the substantiated compromise occurred only on a honeypot, constituting controlled research evidence rather than a documented real-world victim incident.",
-    "title": "SSHole exploitation reached an Alpine Linux honeypot"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "SSHole Flaw in OpenSSH Exploited to Gain Unauthorized Access"
    }
   ],
   "evidence": "article",
@@ -29299,16 +29317,15 @@
  "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html": {
   "title": "Chainalysis Breach Exposes All Users' Credentials, Forces Shutdown of Key Services",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The report provides victim confirmation of unauthorized access, credential and token exposure, and meaningful service shutdowns; it is a later substantive update to the already tracked Chainalysis incident.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The report provides victim confirmation of unauthorized access, credential and token exposure, and meaningful service shutdowns; it is a later substantive update to the already tracked Chainalysis incident.",
-    "title": "Chainalysis breach exposed all users’ credentials and tokens",
-    "incident_id": "10f9757b790124cc"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Chainalysis Breach Exposes All Users' Credentials, Forces Shutdown of Key Services"
    }
   ],
   "evidence": "article",
@@ -29325,15 +29342,15 @@
  "https://www.securityweek.com/cyberattack-hits-french-blood-bank-site-but-no-blood-products-are-compromised/": {
   "title": "Cyberattack Hits French Blood Bank Site but No Blood Products Are Compromised",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is a confirmed, meaningful operational intrusion, but the same French Blood Establishment refrigeration incident at three facilities is already tracked as bcfec61444ebcbb3.",
+  "status": "defer",
+  "reason": "Confirmed thwarted attack that could have caused serious consequences for blood storage.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is a confirmed, meaningful operational intrusion, but the same French Blood Establishment refrigeration incident at three facilities is already tracked as bcfec61444ebcbb3.",
-    "title": "French blood-storage refrigeration controls accessed but attack thwarted"
+    "status": "defer",
+    "reason": "Confirmed thwarted attack that could have caused serious consequences for blood storage.",
+    "title": "French Blood Establishment Cyberattack Thwarted Temperature Rise"
    }
   ],
   "evidence": "article",
@@ -29350,15 +29367,20 @@
  "https://www.securityweek.com/ciso-conversations-ryan-davis-the-unknown-is-where-security-meets-reality/": {
   "title": "CISO Conversations: Ryan Davis – The Unknown Is Where Security Meets Reality",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is a cybersecurity leadership interview, not a substantive report of an actual cyber compromise or its consequences.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.; The content does not describe an actual cybersecurity incident or breach.",
   "decisions": [
    {
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Unknown cyber incident prompts Norwegian energy companies to bolster security"
+   },
+   {
     "status": "exclude",
-    "reason": "This is a cybersecurity leadership interview, not a substantive report of an actual cyber compromise or its consequences.",
-    "title": "SecurityWeek CISO profile contains no reported cyber incident"
+    "reason": "The content does not describe an actual cybersecurity incident or breach.",
+    "title": "CISO Conversations with Ryan Davis"
    }
   ],
   "evidence": "article",
@@ -31632,15 +31654,15 @@
  "https://www.securityweek.com/revolve-puts-data-breach-victim-count-at-1-5-million/": {
   "title": "Revolve Puts Data Breach Victim Count at 1.5 Million",
   "source": "SecurityWeek",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantive update to the already tracked Revolve incident, confirming the affected count and the categories of payment and personal data exposed.",
+  "reason": "Substantiated breach with significant impact on sensitive customer data as confirmed by the Indiana Attorney General's records.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantive update to the already tracked Revolve incident, confirming the affected count and the categories of payment and personal data exposed.",
-    "title": "Revolve breach affected 1.5 million customers",
+    "reason": "Substantiated breach with significant impact on sensitive customer data as confirmed by the Indiana Attorney General's records.",
+    "title": "Revolve breach exposes data of 1.5 million individuals",
     "incident_id": "d098d27b6b4f9769"
    }
   ],
@@ -31658,16 +31680,15 @@
  "https://www.securityweek.com/plex2shell-exploited-against-qnap-nas-users/": {
   "title": "Plex2Shell Exploited Against QNAP NAS Users",
   "source": "SecurityWeek",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed QNAP reports of actual Plex2Shell compromises substantiate a meaningful unauthorized intrusion. This is a duplicate of the already tracked Plex2Shell campaign, not a separate campaign.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed QNAP reports of actual Plex2Shell compromises substantiate a meaningful unauthorized intrusion. This is a duplicate of the already tracked Plex2Shell campaign, not a separate campaign.",
-    "title": "Plex2Shell compromised Plex servers on QNAP NAS devices",
-    "incident_id": "cc3f9a6d9f901a8f"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Plex2Shell Exploited Against QNAP NAS Users"
    }
   ],
   "evidence": "article",
@@ -31684,16 +31705,15 @@
  "https://www.securityweek.com/italys-meloni-blames-pro-russian-hackers-for-leak-of-foreign-ministers-data-on-the-dark-web/": {
   "title": "Italy’s Meloni Blames Pro-Russian Hackers for Leak of Foreign Minister’s Data on the Dark Web",
   "source": "SecurityWeek",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "A senior government official confirmed that cybercriminals disseminated his personal data and exposed him and his family to threats, constituting a meaningful sensitive-data incident despite unknown scope and attribution.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "A senior government official confirmed that cybercriminals disseminated his personal data and exposed him and his family to threats, constituting a meaningful sensitive-data incident despite unknown scope and attribution.",
-    "title": "Italian foreign minister’s personal data leaked on dark web",
-    "incident_id": "a696ad54dbbab111"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Italian foreign minister’s personal data leaked on dark web"
    }
   ],
   "evidence": "article",
@@ -31710,15 +31730,15 @@
  "https://www.securityweek.com/iris-plaza-breach-may-have-exposed-data-of-7-7-million-customers/": {
   "title": "Iris Plaza Breach May Have Exposed Data of 7.7 Million Customers",
   "source": "SecurityWeek",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The report substantiates unauthorized access to Iris Plaza’s cloud service, exposure of personal information for up to 7.7 million people, and operational shutdowns. This is a duplicate of the already-tracked Iris Plaza incident.",
+  "reason": "Substantiated evidence of a data breach affecting 7.7 million customers with sensitive information involved.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The report substantiates unauthorized access to Iris Plaza’s cloud service, exposure of personal information for up to 7.7 million people, and operational shutdowns. This is a duplicate of the already-tracked Iris Plaza incident.",
-    "title": "Iris Plaza cloud breach exposed data of 7.7 million people",
+    "reason": "Substantiated evidence of a data breach affecting 7.7 million customers with sensitive information involved.",
+    "title": "Iris Plaza Breach May Have Exposed Data of 7.7 Million Customers",
     "incident_id": "ae8459967123c113"
    }
   ],
@@ -31736,15 +31756,15 @@
  "https://www.securityweek.com/hackers-exploiting-sshole-authentication-bypass-in-openssh/": {
   "title": "Hackers Exploiting ‘SSHole’ Authentication Bypass in OpenSSH",
   "source": "SecurityWeek",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful exploitation was observed, but the source does not confirm successful compromise of any victim systems; it also duplicates an already-tracked SSHole incident.",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful exploitation was observed, but the source does not confirm successful compromise of any victim systems; it also duplicates an already-tracked SSHole incident.",
-    "title": "SSHole exploitation attempts observed against OpenSSH"
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Hackers exploit SSHole authentication bypass in OpenSSH"
    }
   ],
   "evidence": "article",
@@ -31761,15 +31781,15 @@
  "https://www.securityweek.com/google-deepminds-ai-agents-make-1024-bit-rsa-keys-cheaper-to-attack/": {
   "title": "Google DeepMind’s AI Agents Make 1024-Bit RSA Keys Cheaper to Attack",
   "source": "SecurityWeek",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Controlled cryptographic research without an actual external victim or unauthorized real-world compromise; it does not qualify as a meaningful cyber incident.",
+  "reason": "The reported findings do not detail an actual cybersecurity incident or compromise involving unauthorized access or operational impact.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Controlled cryptographic research without an actual external victim or unauthorized real-world compromise; it does not qualify as a meaningful cyber incident.",
-    "title": "DeepMind agents reduced the cost of attacking legacy RSA-1024"
+    "reason": "The reported findings do not detail an actual cybersecurity incident or compromise involving unauthorized access or operational impact.",
+    "title": "Google DeepMind’s AI Agents Make 1024-Bit RSA Keys Cheaper to Attack"
    }
   ],
   "evidence": "article",
@@ -31786,15 +31806,15 @@
  "https://www.securityweek.com/amplifon-americas-data-breach-impacts-1-3-million/": {
   "title": "Amplifon Americas Data Breach Impacts 1.3 Million",
   "source": "SecurityWeek",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed internal-system compromise and file theft exposed sensitive personal and health information affecting more than 1.3 million people; this is already tracked as the same Amplifon Americas incident.",
+  "reason": "The incident involves a significant data breach impacting over 1.3 million individuals, with confirmed unauthorized access to sensitive data.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed internal-system compromise and file theft exposed sensitive personal and health information affecting more than 1.3 million people; this is already tracked as the same Amplifon Americas incident.",
-    "title": "Amplifon Americas breach exposed data of 1.33 million people",
+    "reason": "The incident involves a significant data breach impacting over 1.3 million individuals, with confirmed unauthorized access to sensitive data.",
+    "title": "Amplifon Americas Data Breach Affects 1.3 Million",
     "incident_id": "1af3648279c3691d"
    }
   ],
@@ -31812,15 +31832,15 @@
  "https://www.securityweek.com/3-million-people-hit-by-frontline-education-data-breach/": {
   "title": "Over 3 Million People Hit by Frontline Education Data Breach",
   "source": "SecurityWeek",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a confirmed organizational compromise involving verified theft of sensitive student and employee data affecting more than 3 million people. It is an update to the already-tracked Frontline Education incident, with a substantially revised affected count.",
+  "reason": "New evidence confirms an update on the extent of the Frontline Education breach.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a confirmed organizational compromise involving verified theft of sensitive student and employee data affecting more than 3 million people. It is an update to the already-tracked Frontline Education incident, with a substantially revised affected count.",
-    "title": "Frontline Education breach affected 3.09 million people",
+    "reason": "New evidence confirms an update on the extent of the Frontline Education breach.",
+    "title": "Frontline Education breach affected over 3 million people",
     "incident_id": "b4c97db594c139c4"
    }
   ],
@@ -31838,20 +31858,19 @@
  "https://www.hipaajournal.com/pja-multi-state-settlement-hipaa/": {
   "title": "PJ&A to Pay Up to $10 Million to Resolve Violations of HIPAA; State Law",
   "source": "HIPAA Journal",
-  "checked": "2026-11-18T20:38:01+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Although reported in connection with a settlement, the source provides substantive, corroborated facts about a real 2023 compromise, including unauthorized access, exfiltration, data types, and affected population.",
+  "status": "exclude",
+  "reason": "Merely reports a settlement for prior violations and does not detail a new cyber incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Although reported in connection with a settlement, the source provides substantive, corroborated facts about a real 2023 compromise, including unauthorized access, exfiltration, data types, and affected population.",
-    "title": "PJ&A breach exfiltrated health data of 13.3 million people",
-    "incident_id": "9b5f0c79b0560f83"
+    "status": "exclude",
+    "reason": "Merely reports a settlement for prior violations and does not detail a new cyber incident.",
+    "title": "PJ&A to Pay Up to $10 Million to Resolve Violations of HIPAA; State Law"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "dd247990d60ea4cdb02c6649db4073017731a1af9d1858990e6eaf833cbe8274",
   "item": {
    "id": "9b5f0c79b0560f83",
    "title": "PJ&A to Pay Up to $10 Million to Resolve Violations of HIPAA; State Law",
@@ -31859,37 +31878,25 @@
    "date": "2026-11-09",
    "source": "HIPAA Journal",
    "published_at": "2026-11-09T14:55:12+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/healthcare-providers-unauthorized-disclosure-phi-ai-tools/": {
   "title": "Healthcare Providers Discover Unauthorized PHI Disclosures to AI Tools",
   "source": "HIPAA Journal",
-  "checked": "2026-11-18T20:38:01+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed unauthorized disclosure of healthcare PHI to AI tools; this is a substantive healthcare privacy incident and duplicates an already tracked record.; Confirmed unauthorized disclosure of patient PHI through a personal ChatGPT account; this is a substantive healthcare privacy incident and duplicates an already tracked record.; Confirmed unauthorized disclosure of four patients’ PHI to ChatGPT; this is a distinct healthcare privacy incident and duplicates an already tracked record.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed unauthorized disclosure of healthcare PHI to AI tools; this is a substantive healthcare privacy incident and duplicates an already tracked record.",
-    "title": "Weill Cornell patient radiology data uploaded to AI tools",
-    "incident_id": "e6795ebf799dc297"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed unauthorized disclosure of patient PHI through a personal ChatGPT account; this is a substantive healthcare privacy incident and duplicates an already tracked record.",
-    "title": "Lake Burien patient records uploaded to personal ChatGPT account",
-    "incident_id": "b05613c12d134ff7"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed unauthorized disclosure of four patients’ PHI to ChatGPT; this is a distinct healthcare privacy incident and duplicates an already tracked record.",
-    "title": "Western State Hospital patient PHI uploaded to ChatGPT",
-    "incident_id": "da1c57a02dc9478e"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Healthcare Providers Discovered Unauthorized PHI Disclosures to AI Tools"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "26b7f3f5e04ba907d9ebbaa2a24865318304a3e0a84077bdf8d8476bb9ffa613",
   "item": {
    "id": "e6795ebf799dc297",
    "title": "Healthcare Providers Discover Unauthorized PHI Disclosures to AI Tools",
@@ -31897,24 +31904,25 @@
    "date": "2026-11-09",
    "source": "HIPAA Journal",
    "published_at": "2026-11-09T16:46:27+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.darkreading.com/endpoint-security/attackers-claude-office-party-flaw-malicious-code-linux": {
   "title": "Attackers Crash Claude's 'Office Party' Flaw to Run Malicious Code on Linux",
   "source": "Dark Reading",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: the report describes a possible exploit against Claude's document-processing tool without evidence that attackers used it against a real victim or caused operational, data, financial, or other meaningful harm.",
+  "status": "defer",
+  "reason": "No readable source evidence; retry required.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: the report describes a possible exploit against Claude's document-processing tool without evidence that attackers used it against a real victim or caused operational, data, financial, or other meaningful harm.",
-    "title": "Claude document-processing flaw described"
+    "status": "defer",
+    "reason": "No readable source evidence; retry required.",
+    "title": "Attackers exploit Claude's 'Office Party' Flaw for malicious code execution"
    }
   ],
   "evidence": "summary",
-  "summary_hash": "c42d340a3554579477d221f6ec9f875d99fb008d838433e16d94e0878f7a3e25",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "df4e5cf43e105305",
    "title": "Attackers Crash Claude's 'Office Party' Flaw to Run Malicious Code on Linux",
@@ -31928,19 +31936,19 @@
  "https://www.darkreading.com/cybersecurity-operations/pwc-ciso-ai-robots-security": {
   "title": "PwC's CISO on AI, Robots & What's Next for Security",
   "source": "Dark Reading",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "The source is an interview and forward-looking security commentary, not a report of an actual cyber incident.",
+  "status": "defer",
+  "reason": "No readable source evidence; retry required.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "The source is an interview and forward-looking security commentary, not a report of an actual cyber incident.",
-    "title": "PwC CISO discusses AI, robotics, and security strategy"
+    "status": "defer",
+    "reason": "No readable source evidence; retry required.",
+    "title": "PwC's CISO on AI, Robots & What's Next for Security"
    }
   ],
   "evidence": "summary",
-  "summary_hash": "bead73bd966e2346a31419e573f0a0b63360587a72b439faa08618885d867b4d",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "33481e5f42959cbe",
    "title": "PwC's CISO on AI, Robots & What's Next for Security",
@@ -31954,19 +31962,19 @@
  "https://www.darkreading.com/cybersecurity-operations/black-hat-india-2026-landmark-debut": {
   "title": "Black Hat India 2026 Makes a Landmark Debut in Bengaluru, Bringing the Global Cybersecurity Community to India",
   "source": "Dark Reading",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source is a conference announcement and contains no qualifying real-world cyber incident.",
+  "reason": "No substantive incident reported, merely a conference summary without a cybersecurity breach.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source is a conference announcement and contains no qualifying real-world cyber incident.",
-    "title": "Black Hat India 2026 cybersecurity conference announced"
+    "reason": "No substantive incident reported, merely a conference summary without a cybersecurity breach.",
+    "title": "Black Hat India 2026 conference and activities"
    }
   ],
-  "evidence": "summary",
-  "summary_hash": "07f20ae476658e1ca015b38b14255f6ee2dd515845cd43fd2395a86cd7fd36df",
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "00b668566ed14b80",
    "title": "Black Hat India 2026 Makes a Landmark Debut in Bengaluru, Bringing the Global Cybersecurity Community to India",
@@ -31974,22 +31982,20 @@
    "date": "2026-11-09",
    "source": "Dark Reading",
    "published_at": "2026-11-09T20:19:56+00:00"
-  },
-  "retrieval_warning": "HTTPError"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/york-university-breach-exposed-personal-information-dating-to-2007/": {
   "title": "York University breach exposed personal information dating to 2007",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed university-system compromise and theft of sensitive personal information; this is already tracked as the same York University incident.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed university-system compromise and theft of sensitive personal information; this is already tracked as the same York University incident.",
-    "title": "York University breach exposed personal information from online forms",
-    "incident_id": "da5e61209ae69671"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "York University breach exposed personal information dating to 2007"
    }
   ],
   "evidence": "article",
@@ -32006,16 +32012,15 @@
  "https://www.bleepingcomputer.com/news/security/ukraine-dismantles-crypto-scam-network-that-stole-43-million/": {
   "title": "Ukraine dismantles crypto scam network that stole €4.3 million",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Credible law-enforcement reporting substantiates a distinct, organized cyber-enabled fraud operation with substantial financial losses and some unauthorized banking-account access; it is not merely a petty isolated scam.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Credible law-enforcement reporting substantiates a distinct, organized cyber-enabled fraud operation with substantial financial losses and some unauthorized banking-account access; it is not merely a petty isolated scam.",
-    "title": "Crypto-investment scam ring stole over €4.3 million",
-    "incident_id": "d143179449d784fb"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Ukrainian crypto scam network stole over €4.3 million"
    }
   ],
   "evidence": "article",
@@ -32032,15 +32037,15 @@
  "https://www.bleepingcomputer.com/news/security/the-biggest-threat-to-your-grc-job-isnt-ai-its-ignoring-ai/": {
   "title": "The Biggest Threat to Your GRC Job Isn’t AI. It’s Ignoring AI.",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source is sponsored opinion and product-oriented commentary, with no substantive real-world cyber incident to extract.",
+  "reason": "The content does not detail an actual cyber incident, thus is unrelated.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source is sponsored opinion and product-oriented commentary, with no substantive real-world cyber incident to extract.",
-    "title": "Sponsored GRC article discusses AI adoption, not an incident"
+    "reason": "The content does not detail an actual cyber incident, thus is unrelated.",
+    "title": "The Biggest Threat to Your GRC Job Isn’t AI. It’s Ignoring AI."
    }
   ],
   "evidence": "article",
@@ -32057,22 +32062,20 @@
  "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/": {
   "title": "SEGA newsletter data breach exposes 2.2 million email addresses",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed third-party-provider compromise exposed 2.2 million SEGA-related email addresses and additional records.; Confirmed unauthorized access disrupted SEGA Fave's production arcade-network services; it is a distinct incident from the ARARA newsletter breach.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.; No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed third-party-provider compromise exposed 2.2 million SEGA-related email addresses and additional records.",
-    "title": "ARARA breach exposed 2.2 million SEGA newsletter addresses",
-    "incident_id": "c5ca2f12d572c177"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "ARARA newsletter breach exposed 2.2 million SEGA email addresses"
    },
    {
-    "status": "include",
-    "reason": "Confirmed unauthorized access disrupted SEGA Fave's production arcade-network services; it is a distinct incident from the ARARA newsletter breach.",
-    "title": "SEGA Fave arcade network breach forced services offline",
-    "incident_id": "787e8e23cc521341"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Unauthorized access to SEGA Fave arcade services suspends operations"
    }
   ],
   "evidence": "article",
@@ -32089,16 +32092,15 @@
  "https://www.bleepingcomputer.com/news/security/russian-cloud-firm-beget-rebuilds-from-scratch-after-data-wiper-attack/": {
   "title": "Russian cloud firm Beget rebuilds from scratch after data wiper attack",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed compromise of a cloud provider’s management layer caused destructive infrastructure-wide data loss and prolonged disruption. This is the same Beget incident already tracked under af609821d3cc64b1.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed compromise of a cloud provider’s management layer caused destructive infrastructure-wide data loss and prolonged disruption. This is the same Beget incident already tracked under af609821d3cc64b1.",
-    "title": "Beget cloud infrastructure wiped in destructive attack",
-    "incident_id": "af609821d3cc64b1"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Beget cloud infrastructure wiped in destructive data-wiper attack"
    }
   ],
   "evidence": "article",
@@ -32115,15 +32117,16 @@
  "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/": {
   "title": "N-able takes cloud platform offline after 30+ \"zero-days\" published",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This report concerns publicly disclosed vulnerabilities and a precautionary service shutdown; it explicitly states that active exploitation and unauthorized data access had not been observed. A later, separately substantiated compromise is already tracked under ba511006af09c577.",
+  "status": "include",
+  "reason": "The incident involves a confirmed cybersecurity event with operational impact due to zero-day vulnerabilities.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This report concerns publicly disclosed vulnerabilities and a precautionary service shutdown; it explicitly states that active exploitation and unauthorized data access had not been observed. A later, separately substantiated compromise is already tracked under ba511006af09c577.",
-    "title": "N-able takes N-central environments offline after zero-day disclosure"
+    "status": "include",
+    "reason": "The incident involves a confirmed cybersecurity event with operational impact due to zero-day vulnerabilities.",
+    "title": "N-able Takes N-central Platform Offline After Discovery of 30+ Zero-Days",
+    "incident_id": "8835ca47eb0cc33f"
    }
   ],
   "evidence": "article",
@@ -32140,16 +32143,15 @@
  "https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/": {
   "title": "Hackers exploit SSHole OpenSSH flaw to breach Linux systems",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed exploitation compromised real Linux systems and produced privileged access and persistence attempts; this is the same SSHole campaign already tracked under 92f167622a2d0696.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed exploitation compromised real Linux systems and produced privileged access and persistence attempts; this is the same SSHole campaign already tracked under 92f167622a2d0696.",
-    "title": "SSHole OpenSSH flaw exploited to compromise Linux systems",
-    "incident_id": "92f167622a2d0696"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Hackers exploit SSHole OpenSSH flaw to breach Linux systems"
    }
   ],
   "evidence": "article",
@@ -32166,22 +32168,15 @@
  "https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/": {
   "title": "France blames Iranian hackers for supermarket attacks that sparked fires",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a confirmed consequential cold-chain compromise. It duplicates the already tracked October French supermarket incident but adds authoritative attribution, a larger affected-location estimate, fires, and reported financial and material impacts.; The report substantiates a separate consequential intrusion against operational equipment at hydroelectric installations, despite limited information about victims and final impact.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a confirmed consequential cold-chain compromise. It duplicates the already tracked October French supermarket incident but adds authoritative attribution, a larger affected-location estimate, fires, and reported financial and material impacts.",
-    "title": "French supermarket refrigeration attacks caused food losses and fires",
-    "incident_id": "a7b6d9f5065e055b"
-   },
-   {
-    "status": "include",
-    "reason": "The report substantiates a separate consequential intrusion against operational equipment at hydroelectric installations, despite limited information about victims and final impact.",
-    "title": "Schneider equipment at French hydroelectric sites was attacked",
-    "incident_id": "53051fc828f9cce6"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "October cyberattacks disrupt refrigeration in 700+ French supermarkets"
    }
   ],
   "evidence": "article",
@@ -32198,15 +32193,15 @@
  "https://www.bleepingcomputer.com/news/security/fbi-agent-stole-25-million-in-crypto-from-hackers-fraud-victims/": {
   "title": "FBI agent stole $2.5 million in crypto from hackers under investigation",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude as a court/plea-based recap rather than a substantive newly reported incident; the underlying insider theft is described only through prosecution materials.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude as a court/plea-based recap rather than a substantive newly reported incident; the underlying insider theft is described only through prosecution materials.",
-    "title": "Former FBI agent pleads guilty to cryptocurrency theft"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Former FBI Agent Stole $2.5 Million in Crypto from Investigation Victims"
    }
   ],
   "evidence": "article",
@@ -32223,15 +32218,15 @@
  "https://www.bleepingcomputer.com/news/security/binance-denies-data-breach-after-alleged-shinyhunters-claims/": {
   "title": "Binance denies data breach after alleged ShinyHunters claims",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: an attacker claim without corroboration, expressly denied by Binance, does not establish an actual compromise. The separately mentioned prior Binance theft is background and not a substantive new incident in this report.",
+  "status": "defer",
+  "reason": "No evidence of actual compromise has been confirmed as per Binance's statements.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: an attacker claim without corroboration, expressly denied by Binance, does not establish an actual compromise. The separately mentioned prior Binance theft is background and not a substantive new incident in this report.",
-    "title": "Binance denies alleged 335-million-user data breach"
+    "status": "defer",
+    "reason": "No evidence of actual compromise has been confirmed as per Binance's statements.",
+    "title": "Claims of 335 Million Binance Records for Sale but No Breach Confirmed"
    }
   ],
   "evidence": "article",
@@ -32274,22 +32269,15 @@
  "https://therecord.media/france-blames-iran-for-fridge-cyberattacks": {
   "title": "France blames Iran for fridge cyberattacks, says some caused fires",
   "source": "The Record",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated, widespread compromise of food-sector operational systems with reported refrigeration disruption, food losses, and fires; it is an update to the already-tracked October French supermarket incident.; French authorities reported actual disruption at several hydroelectric facilities, making this a qualifying critical-infrastructure OT incident and an update to the already-tracked French hydroelectric-site attack.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated, widespread compromise of food-sector operational systems with reported refrigeration disruption, food losses, and fires; it is an update to the already-tracked October French supermarket incident.",
-    "title": "Iran-linked attacks disrupted refrigeration at about 700 French stores",
-    "incident_id": "a7b6d9f5065e055b"
-   },
-   {
-    "status": "include",
-    "reason": "French authorities reported actual disruption at several hydroelectric facilities, making this a qualifying critical-infrastructure OT incident and an update to the already-tracked French hydroelectric-site attack.",
-    "title": "Iran-linked attackers targeted Schneider equipment at French hydro sites",
-    "incident_id": "53051fc828f9cce6"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "France accuses Iran of cyberattacks on refrigeration systems"
    }
   ],
   "evidence": "article",
@@ -32306,16 +32294,15 @@
  "https://therecord.media/cyberattack-germany-ai-mittwald": {
   "title": "Alleged AI-aided cyberattack exploits assistant interface to breach German web host",
   "source": "The Record",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed compromise of a hosting provider and 56 customer projects with meaningful downstream operational exposure; AI involvement is alleged but unsubstantiated. This is already tracked as the same incident.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed compromise of a hosting provider and 56 customer projects with meaningful downstream operational exposure; AI involvement is alleged but unsubstantiated. This is already tracked as the same incident.",
-    "title": "Mittwald MCP flaw compromised 56 customer projects",
-    "incident_id": "f6ce04931f98c0f4"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "AI-assisted breach of Mittwald CM Service affects 56 customer projects"
    }
   ],
   "evidence": "article",
@@ -32332,15 +32319,15 @@
  "https://therecord.media/amplifon-hearing-aid-company-data-breach": {
   "title": "Data breach at hearing aid giant Amplifon impacts thousands",
   "source": "The Record",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a confirmed healthcare data breach with unauthorized file access and theft of sensitive medical and identity information; it is an additional report of the already-tracked Amplifon Americas incident.",
+  "reason": "Incident was substantiated with specific data theft details.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a confirmed healthcare data breach with unauthorized file access and theft of sensitive medical and identity information; it is an additional report of the already-tracked Amplifon Americas incident.",
-    "title": "Amplifon breach exposed U.S. customers’ medical and identity data",
+    "reason": "Incident was substantiated with specific data theft details.",
+    "title": "Amplifon data breach impacts over 1.3 million customers",
     "incident_id": "1af3648279c3691d"
    }
   ],
@@ -32358,45 +32345,15 @@
  "https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html": {
   "title": "⚡ Weekly Recap: SSHole Exploited, APT Root RCE, Robot Takeovers, 15K Hacked Sites, and More",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Qualifying real-world compromise, but duplicate of the already-tracked Zyxel GS1900 campaign.; Qualifying software-distribution compromise, but duplicate of the already-tracked cPGuard incident.; Qualifying compromise of refrigeration controllers, but duplicate of the already-tracked campaign.; Qualifying confirmed payment-system compromise, but duplicate of the already-tracked Gnosis Pay incident.; Qualifying AI-enabled real-world intrusions, but duplicate of the already-tracked BOSSAI incident.; No additional distinct qualifying incident was substantiated; several entries were vulnerability, research, attempted-exploitation, or background material.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Qualifying real-world compromise, but duplicate of the already-tracked Zyxel GS1900 campaign.",
-    "title": "Zyxel GS1900 zero-day compromised nearly 1,000 switches",
-    "incident_id": "7bffe3ae86de109e"
-   },
-   {
-    "status": "include",
-    "reason": "Qualifying software-distribution compromise, but duplicate of the already-tracked cPGuard incident.",
-    "title": "cPGuard update channel delivered a backdoor",
-    "incident_id": "29a0951de929b8e6"
-   },
-   {
-    "status": "include",
-    "reason": "Qualifying compromise of refrigeration controllers, but duplicate of the already-tracked campaign.",
-    "title": "Refrigeration controllers abused as proxy and spam infrastructure",
-    "incident_id": "31f0366823eda640"
-   },
-   {
-    "status": "include",
-    "reason": "Qualifying confirmed payment-system compromise, but duplicate of the already-tracked Gnosis Pay incident.",
-    "title": "Gnosis Pay card system breach exposed customer information",
-    "incident_id": "6d670ccbe2c793b9"
-   },
-   {
-    "status": "include",
-    "reason": "Qualifying AI-enabled real-world intrusions, but duplicate of the already-tracked BOSSAI incident.",
-    "title": "BOSSAI AI-agent mesh targeted organizations in 11 countries",
-    "incident_id": "41a8b8e33e8b7726"
-   },
-   {
-    "status": "exclude",
-    "reason": "No additional distinct qualifying incident was substantiated; several entries were vulnerability, research, attempted-exploitation, or background material.",
-    "title": "Weekly recap included unsubstantiated or non-incident items"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "SSHole Exploited as Attackers Target OpenSSH Systems"
    }
   ],
   "evidence": "article",
@@ -32413,16 +32370,15 @@
  "https://thehackernews.com/2026/11/web3auth-flaw-exploited-to-steal-keplr.html": {
   "title": "Web3Auth Flaw Exploited to Steal Keplr Crypto, Provider Empties Other Wallets for Safety",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a confirmed compromise with private-key exposure and reported cryptocurrency theft. It duplicates the already-tracked Web3Auth/Keplr incident, so no new incident record is needed.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a confirmed compromise with private-key exposure and reported cryptocurrency theft. It duplicates the already-tracked Web3Auth/Keplr incident, so no new incident record is needed.",
-    "title": "Web3Auth flaw exposed Keplr wallet private keys",
-    "incident_id": "ff7ced181a751329"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Web3Auth Flaw Exploited to Steal Keplr Crypto, Provider Empties Other Wallets for Safety"
    }
   ],
   "evidence": "article",
@@ -32439,15 +32395,15 @@
  "https://thehackernews.com/2026/11/taiwan-based-hacker-used-bossai-ai.html": {
   "title": "Taiwan-Based Hacker Used BOSSAI AI Agents to Steal Taipei Emergency Dispatch Records",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The report provides independent researcher evidence of actual AI-agent-enabled compromises and theft of sensitive emergency, financial, university, and personal data. This is the same BOSSAI operation already tracked under b00140be9b03a384, with additional substantive incident details.",
+  "reason": "This incident details a confirmed compromise of emergency data using AI tools.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The report provides independent researcher evidence of actual AI-agent-enabled compromises and theft of sensitive emergency, financial, university, and personal data. This is the same BOSSAI operation already tracked under b00140be9b03a384, with additional substantive incident details.",
-    "title": "BOSSAI agents accessed emergency, lending, and university data",
+    "reason": "This incident details a confirmed compromise of emergency data using AI tools.",
+    "title": "BOSSAI AI Agents Access Emergency Dispatch Records in Taipei",
     "incident_id": "b00140be9b03a384"
    }
   ],
@@ -32465,15 +32421,15 @@
  "https://thehackernews.com/2026/11/lnbits-urges-all-operators-to-shut-down.html": {
   "title": "LNbits Urges All Operators to Shut Down Their Bitcoin Lightning Wallet Servers Amid Attacks",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The report substantiates an exploit of a real LNbits server, unauthorized access to cryptocurrency wallets, an observed withdrawal, and temporary service shutdowns. It is already tracked as the same incident.",
+  "reason": "The incident report confirmed unauthorized access to operational systems and resulted in financial consequences for users.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The report substantiates an exploit of a real LNbits server, unauthorized access to cryptocurrency wallets, an observed withdrawal, and temporary service shutdowns. It is already tracked as the same incident.",
-    "title": "LNbits server exploited to withdraw users’ Lightning funds",
+    "reason": "The incident report confirmed unauthorized access to operational systems and resulted in financial consequences for users.",
+    "title": "LNbits Server Exploited to Withdraw Users' Lightning Funds",
     "incident_id": "5e8932ce008cc3c3"
    }
   ],
@@ -32491,15 +32447,15 @@
  "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html": {
   "title": "Hackers Exploit Qubole's Trusted AWS Access to Breach Customer Accounts and Steal Data",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Credible researcher evidence reported by The Hacker News substantiates a distinct trusted-vendor compromise affecting multiple Qubole customer AWS environments, with sensitive-secret and data theft. It matches the already-tracked Qubole incident.",
+  "reason": "The incident involved confirmed unauthorized access and theft of sensitive data from multiple customers' accounts.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Credible researcher evidence reported by The Hacker News substantiates a distinct trusted-vendor compromise affecting multiple Qubole customer AWS environments, with sensitive-secret and data theft. It matches the already-tracked Qubole incident.",
-    "title": "Qubole trusted AWS access abused to breach customer accounts",
+    "reason": "The incident involved confirmed unauthorized access and theft of sensitive data from multiple customers' accounts.",
+    "title": "Qubole's Trusted AWS Access Exploited to Breach Customer Accounts",
     "incident_id": "5a66756107f554df"
    }
   ],
@@ -32517,15 +32473,15 @@
  "https://thehackernews.com/2026/11/hackers-compromise-etherspheres-bee-js.html": {
   "title": "Hackers Compromise Ethersphere's bee-js and Swarm Desktop to Deliver Wallet-Stealing Malware",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed compromise of software-release infrastructure produced malicious releases that reached real users and could steal wallet credentials and install backdoors; duplicate of the already tracked Ethersphere incident.",
+  "reason": "Evidence supports compromise via Ethersphere's release automation, posing significant risks to users.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed compromise of software-release infrastructure produced malicious releases that reached real users and could steal wallet credentials and install backdoors; duplicate of the already tracked Ethersphere incident.",
-    "title": "Ethersphere releases compromised to distribute wallet-stealing malware",
+    "reason": "Evidence supports compromise via Ethersphere's release automation, posing significant risks to users.",
+    "title": "Hackers Compromise Ethersphere's bee-js and Swarm Desktop to Deliver Wallet-Stealing Malware",
     "incident_id": "ea0349a1f1fe6327"
    }
   ],
@@ -32543,15 +32499,15 @@
  "https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html": {
   "title": "Former OpenAI Engineer Pleads Not Guilty to Planting Covert Device in Executive Meeting Room",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Court-proceeding update concerning an alleged physical recording device, with no substantiated cyber compromise or meaningful cyber consequences.",
+  "reason": "Incident involves a legal matter and does not report a cybersecurity compromise or sensitive data breach.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Court-proceeding update concerning an alleged physical recording device, with no substantiated cyber compromise or meaningful cyber consequences.",
-    "title": "Former OpenAI engineer pleads not guilty over recording device"
+    "reason": "Incident involves a legal matter and does not report a cybersecurity compromise or sensitive data breach.",
+    "title": "Former OpenAI Engineer Charged with Planting Recording Device"
    }
   ],
   "evidence": "article",
@@ -32568,15 +32524,15 @@
  "https://thehackernews.com/2026/11/default-adminadmin-server-password.html": {
   "title": "Default 'admin:admin' Server Password Helps Researchers Hack Two Automakers, Unlock and Start Cars",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude because this was a controlled security demonstration on researchers’ own or consenting vehicles, with no established external victim harm. The automakers and connected-vehicle risk are already represented by the existing incident record.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude because this was a controlled security demonstration on researchers’ own or consenting vehicles, with no established external victim harm. The automakers and connected-vehicle risk are already represented by the existing incident record.",
-    "title": "Researchers accessed two automakers’ identity systems and test cars"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Two automakers' mobile apps exploited to unlock cars"
    }
   ],
   "evidence": "article",
@@ -32593,16 +32549,15 @@
  "https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html": {
   "title": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Researcher evidence documents a real malware campaign deploying PapRAT against South Asian organizations, with consequential remote-access and data-exfiltration capabilities; this is the same campaign already tracked under 1a03d433b97fe0e7.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Researcher evidence documents a real malware campaign deploying PapRAT against South Asian organizations, with consequential remote-access and data-exfiltration capabilities; this is the same campaign already tracked under 1a03d433b97fe0e7.",
-    "title": "Bitter campaign deployed PapRAT against South Asian organizations",
-    "incident_id": "1a03d433b97fe0e7"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign"
    }
   ],
   "evidence": "article",
@@ -32644,15 +32599,15 @@
  "https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html": {
   "title": "N-able Takes N-central Cloud Offline After Researcher Discloses 33 Zero-Days with PoC Exploits",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude because the source reports disclosure, scanning, honeypot probing, and precautionary shutdowns without confirmed successful exploitation of customer systems; it is also the already-tracked Able2Shell event.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude because the source reports disclosure, scanning, honeypot probing, and precautionary shutdowns without confirmed successful exploitation of customer systems; it is also the already-tracked Able2Shell event.",
-    "title": "N-able takes N-central environments offline after Able2Shell disclosure"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "N-able Takes N-central Offline After Discovery of 33 Flaws"
    }
   ],
   "evidence": "article",
@@ -32669,19 +32624,19 @@
  "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html": {
   "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
   "source": "The Hacker News",
-  "checked": "2026-11-13T06:52:14+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exploitation capability and active exploitation alone do not establish a qualifying compromise or meaningful consequence to an actual victim.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exploitation capability and active exploitation alone do not establish a qualifying compromise or meaningful consequence to an actual victim.",
-    "title": "Chrome zero-day actively exploited, with no confirmed victim compromise"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Active exploitation of Chrome zero-day CVE-2026-125350 reported"
    }
   ],
   "evidence": "article",
-  "summary_hash": "25af612f0f439c1c2077266f37f89d86a3ec23ff8489fd60c5611400f330b130",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "3cd42ce0a8c8c9c0",
    "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
@@ -32694,15 +32649,15 @@
  "https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html": {
   "title": "CISA Warns of Active Exploitation of OpenSSH, GPUStack, FreeSWITCH, and IBM Flaws",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: this is a vulnerability/exploitation roundup without a newly substantiated real-world victim incident; the OpenSSH activity also duplicates an already-tracked SSHole incident.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: this is a vulnerability/exploitation roundup without a newly substantiated real-world victim incident; the OpenSSH activity also duplicates an already-tracked SSHole incident.",
-    "title": "CISA lists four flaws under active exploitation"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Exploitation of OpenSSH and other critical vulnerabilities reported"
    }
   ],
   "evidence": "article",
@@ -32719,16 +32674,15 @@
  "https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/": {
   "title": "Vanderbilt University hit in BYOD ransomware attack, data theft claimed",
   "source": "BleepingComputer",
-  "checked": "2026-11-14T22:30:27+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Include as a distinct, newly substantiated update to the already tracked Vanderbilt incident: the university confirmed an active cybersecurity event and issued device-isolation guidance, while attacker claims about encryption and data theft remain unverified.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Include as a distinct, newly substantiated update to the already tracked Vanderbilt incident: the university confirmed an active cybersecurity event and issued device-isolation guidance, while attacker claims about encryption and data theft remain unverified.",
-    "title": "Vanderbilt University confirms active cybersecurity incident",
-    "incident_id": "246876e43529de2b"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Vanderbilt University hit in BYOD ransomware attack, data theft claimed"
    }
   ],
   "evidence": "article",
@@ -33437,29 +33391,27 @@
   }
  },
  "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html": {
-  "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
-  "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "title": "SGLang RCE Breaches NEAR AI Inference Server; Data From 18 Agents and About 100 Users Taken",
+  "source": "AI agent attack tracker",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed exploitation of an SGLang RCE against NEAR AI caused unauthorized access to production inference infrastructure, internal systems, agent data, user details, and API keys.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed exploitation of an SGLang RCE against NEAR AI caused unauthorized access to production inference infrastructure, internal systems, agent data, user details, and API keys.",
-    "title": "SGLang flaw breached NEAR AI inference infrastructure",
-    "incident_id": "bff6180f286a6d5b"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "SGLang RCE Breaches NEAR AI Inference Server; Data From 18 Agents and About 100 Users Taken"
    }
   ],
   "evidence": "article",
   "summary_hash": "f4eb974cf9b1547be5ee6b1debded92acc0760a8a14371e8dc62446e4cc950cf",
   "item": {
-   "id": "bff6180f286a6d5b",
-   "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
+   "id": "60794f4989498a75",
+   "title": "SGLang RCE Breaches NEAR AI Inference Server; Data From 18 Agents and About 100 Users Taken",
    "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
-   "date": "2026-11-10",
-   "source": "The Hacker News",
-   "published_at": "2026-11-10T19:19:39+00:00"
+   "date": "2026-11-08",
+   "source": "AI agent attack tracker"
   }
  },
  "https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html": {
@@ -33566,29 +33518,27 @@
   }
  },
  "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html": {
-  "title": "Fireworks AI Confirms Wider Breach Affecting Customer Datasets, Model Weights and Notion AI Chats",
-  "source": "The Hacker News",
-  "checked": "2026-11-16T06:40:12+00:00",
+  "title": "Fireworks AI Breach Widens to Model Weights, Datasets, and Notion AI Chat Transcripts",
+  "source": "AI agent attack tracker",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantive later disclosure of the already tracked Fireworks AI incident, confirming broader unauthorized access and customer-data consequences rather than a separate attack.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantive later disclosure of the already tracked Fireworks AI incident, confirming broader unauthorized access and customer-data consequences rather than a separate attack.",
-    "title": "Fireworks AI breach expanded to customer data and Notion AI chats",
-    "incident_id": "73b37c649f3a75f2"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Fireworks AI Breach Expands to Customer Data and Model Weights"
    }
   ],
   "evidence": "article",
   "summary_hash": "6e13938f384452615da9d5d5d9141bb77224eb9a9b3206204e4e23e5f9b36603",
   "item": {
-   "id": "73b37c649f3a75f2",
-   "title": "Fireworks AI Confirms Wider Breach Affecting Customer Datasets, Model Weights and Notion AI Chats",
+   "id": "a20c6b821be2042d",
+   "title": "Fireworks AI Breach Widens to Model Weights, Datasets, and Notion AI Chat Transcripts",
    "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
    "date": "2026-11-10",
-   "source": "The Hacker News",
-   "published_at": "2026-11-10T15:33:59+00:00"
+   "source": "AI agent attack tracker"
   }
  },
  "https://thehackernews.com/2026/11/binance-warns-of-ios-sandbox-escape.html": {
@@ -33670,19 +33620,19 @@
  "https://www.darkreading.com/cyber-risk/people-are-getting-weird-about-ai": {
   "title": "People Are Getting Weird About AI",
   "source": "Dark Reading",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "The source contains commentary about AI-related cybersecurity risks but does not substantiate a meaningful cyber incident.",
+  "status": "defer",
+  "reason": "No readable source evidence; retry required.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "The source contains commentary about AI-related cybersecurity risks but does not substantiate a meaningful cyber incident.",
-    "title": "Dark Reading article discusses perceptions of AI risks"
+    "status": "defer",
+    "reason": "No readable source evidence; retry required.",
+    "title": "People Are Getting Weird About AI"
    }
   ],
   "evidence": "summary",
-  "summary_hash": "758331c0ca77f54f9378372424b2c4be02821f5e4c6d6ff95b00603d5d57a130",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
    "id": "5d67f73e0c2aea80",
    "title": "People Are Getting Weird About AI",
@@ -33720,29 +33670,27 @@
   "retrieval_warning": "HTTPError"
  },
  "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html": {
-  "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
-  "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "title": "\"Operation Snowball\": Jailbroken DeepSeek Agent Exploits Cisco BroadWorks XXE at a European Telecom; CISA Adds It to KEV (CVE-2026-20320)",
+  "source": "AI agent attack tracker",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Credible reporting substantiates a real telecom compromise with sensitive-record exfiltration and credential/private-key theft. This is the same Operation Snowball campaign already tracked under 30c634a40378b291, with later reporting supporting autonomous-agent execution.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Credible reporting substantiates a real telecom compromise with sensitive-record exfiltration and credential/private-key theft. This is the same Operation Snowball campaign already tracked under 30c634a40378b291, with later reporting supporting autonomous-agent execution.",
-    "title": "Operation Snowball breached telecom provider and 13 hosted companies",
-    "incident_id": "30c634a40378b291"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "AI Attack on Telecom Exploits BroadWorks Vulnerability"
    }
   ],
   "evidence": "article",
   "summary_hash": "67d8dc1c389546322d1e9e5e09fd2044848d01ab5b549e011db8777c05b49b07",
   "item": {
-   "id": "f5a3cdc2ccdcb90d",
-   "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
+   "id": "52854625fe168b34",
+   "title": "\"Operation Snowball\": Jailbroken DeepSeek Agent Exploits Cisco BroadWorks XXE at a European Telecom; CISA Adds It to KEV (CVE-2026-20320)",
    "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
-   "date": "2026-11-11",
-   "source": "The Hacker News",
-   "published_at": "2026-11-11T06:04:02+00:00"
+   "date": "2026-11-10",
+   "source": "AI agent attack tracker"
   }
  },
  "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves": {
@@ -37531,15 +37479,16 @@
  "https://www.proofpoint.com/us/blog/threat-insight/BluePhishing-Initial-Access-via-Third-Party-Agent-Blueprint-Consent": {
   "title": "Proofpoint \"BluePhishing\": Consent to a Malicious Entra Agent Blueprint Lets an Attacker Mint Agent Identities in the Victim Tenant",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: the source describes a research proof of concept and explicitly reports no identified in-the-wild activity or actual victim compromise.",
+  "status": "include",
+  "reason": "Verified details of how the BluePhishing attack allows unauthorized access through malicious agent identity consent.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: the source describes a research proof of concept and explicitly reports no identified in-the-wild activity or actual victim compromise.",
-    "title": "Proof-of-concept BluePhishing Entra agent-consent abuse"
+    "status": "include",
+    "reason": "Verified details of how the BluePhishing attack allows unauthorized access through malicious agent identity consent.",
+    "title": "Proofpoint BluePhishing Attack Exploits AI Agent Consent",
+    "incident_id": "d4773bd650e2c384"
    }
   ],
   "evidence": "article",
@@ -37555,16 +37504,15 @@
  "https://www.acronis.com/en/tru/posts/bossai-inside-the-ai-attack-mesh-that-targeted-taiwans-emergency-services/": {
   "title": "Acronis: A Lone Taiwan-Based Operator Ran the \"BOSSAI\" Agent Mesh to Steal Taipei Emergency Dispatch Records",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated real-world campaign involving AI agents that breached emergency-service and university systems and exfiltrated sensitive data. It is the same BOSSAI campaign already tracked under b00140be9b03a384, so this report is recorded as an additional source rather than a new incident.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated real-world campaign involving AI agents that breached emergency-service and university systems and exfiltrated sensitive data. It is the same BOSSAI campaign already tracked under b00140be9b03a384, so this report is recorded as an additional source rather than a new incident.",
-    "title": "BOSSAI agents exfiltrated Taipei emergency-service records",
-    "incident_id": "b00140be9b03a384"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "BOSSAI AI-agent mesh targeted organizations in 11 countries"
    }
   ],
   "evidence": "article",
@@ -37580,16 +37528,15 @@
  "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/": {
   "title": "Microsoft: Cambodia-Based Storm-3358 Pairs ARTEX With RATs Against Southeast Asian Financial Firms",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Microsoft independently substantiated a distinct campaign involving actual compromises of multiple financial-sector organizations and source-supported use of the ARTEX agentic AI framework; this is not merely scanning or an attacker claim.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Microsoft independently substantiated a distinct campaign involving actual compromises of multiple financial-sector organizations and source-supported use of the ARTEX agentic AI framework; this is not merely scanning or an attacker claim.",
-    "title": "Storm-3358 used ARTEX against Southeast Asian financial firms",
-    "incident_id": "214a00245b8cf3e9"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Storm-3358 Targets Financial Sector with ARTEX and RATs"
    }
   ],
   "evidence": "article",
@@ -37605,15 +37552,15 @@
  "https://socket.dev/blog/shai-hulud-descendant-malicious-ruby-gem": {
   "title": "Socket: Shai-Hulud Descendant Ruby Gem \"strutil-core\" Plants a Fake MCP Server and Hooks in Claude Code, Codex, Cursor, and Aider",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: the source confirms publication of a malicious package and analyzes its capabilities, but explicitly reports no confirmed victims, installations, or downstream infections; this is not a substantiated real-world compromise.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: the source confirms publication of a malicious package and analyzes its capabilities, but explicitly reports no confirmed victims, installations, or downstream infections; this is not a substantiated real-world compromise.",
-    "title": "Malicious strutil-core Ruby gem published and removed"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Malicious Ruby Gem Steals Credentials and Compromises AI Tools"
    }
   ],
   "evidence": "article",
@@ -37629,15 +37576,15 @@
  "https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2026-11-06-IDPI-campaign.txt": {
   "title": "Unit 42: Fake AI Trading Sites Hide Prompt Injections Telling AI Agents to Recommend Them",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Excludes a prompt-injection and investment-scam campaign because the report does not substantiate an actual compromise or meaningful downstream victim harm.",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Excludes a prompt-injection and investment-scam campaign because the report does not substantiate an actual compromise or meaningful downstream victim harm.",
-    "title": "Hidden prompts found on 26 fake AI trading sites"
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "Indirect Prompt Injection Campaign for Investment Scam Sites"
    }
   ],
   "evidence": "article",
@@ -40132,15 +40079,15 @@
  "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi": {
   "title": "Microsoft agent-framework Compromised: Credential Stealer Targets Azure and CI Pipelines",
   "source": "Wiz Research",
-  "checked": "2026-11-24T15:16:52+00:00",
+  "checked": "2026-11-24T16:59:22+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The incident involved a widespread credential-stealing malware affecting users of a major Python package.",
+  "reason": "A confirmed malicious package upload to PyPI targeting sensitive credentials qualifies as a significant cybersecurity incident with operational consequences.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The incident involved a widespread credential-stealing malware affecting users of a major Python package.",
-    "title": "Malicious Microsoft Agent Framework Published with Credential Stealer",
+    "reason": "A confirmed malicious package upload to PyPI targeting sensitive credentials qualifies as a significant cybersecurity incident with operational consequences.",
+    "title": "Microsoft Agent Framework users and organizations that installed PyPI versions 1.26.1 or 1.26.2",
     "incident_id": "8b71dc35fd91ecd8"
    }
   ],
@@ -44914,6 +44861,108 @@
    "url": "https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website",
    "date": "2026-11-13",
    "source": "AI agent attack tracker"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/shinyhunters-resurfaces-after-fbi-arrests-uses-old-pgp-keys-as-proof/": {
+  "title": "ShinyHunters claims to return after FBI arrests, uses old PGP keys as proof",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T16:59:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "ShinyHunters claims to return with historic PGP keys"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "9d70af2033194dad9fcb8425c7f5b1d8ea3a7874077d24c5dd54397553a911be",
+  "item": {
+   "id": "60d61d164ff2cbb5",
+   "title": "ShinyHunters claims to return after FBI arrests, uses old PGP keys as proof",
+   "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-resurfaces-after-fbi-arrests-uses-old-pgp-keys-as-proof/",
+   "date": "2026-11-24",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-24T16:30:19+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/": {
+  "title": "Hackers compromise Check Point Servers in 22 organizations",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T16:59:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Incident describes a significant compromise of operational systems across multiple organizations, aligning with established criteria.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident describes a significant compromise of operational systems across multiple organizations, aligning with established criteria.",
+    "title": "Hackers compromise Check Point Servers in 22 organizations",
+    "incident_id": "a2d8ddfa90774e7d"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "262237ea4efd9c8cb0cefb30a9080413f38c44aedec28d78314df2a9d135e207",
+  "item": {
+   "id": "ead055da91e6e7a6",
+   "title": "Hackers compromise Check Point Servers in 22 organizations",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/",
+   "date": "2026-11-24",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-24T16:15:23+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/": {
+  "title": "European Commission confirms data theft in EU Academy breach",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T16:59:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "No matching direct evidence passage of an actual consequential incident.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "No matching direct evidence passage of an actual consequential incident.",
+    "title": "European Commission confirms data theft in EU Academy breach"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "772559a1c10bf89aa4087ec06a8c251d550bd520a09e4a3d6863d04355809d86",
+  "item": {
+   "id": "2f94924ec1b63e66",
+   "title": "European Commission confirms data theft in EU Academy breach",
+   "url": "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/",
+   "date": "2026-11-24",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-24T16:22:44+00:00"
+  }
+ },
+ "https://therecord.media/carnegie-endowment-data-breach": {
+  "title": "Carnegie Endowment for International Peace says third-party breach leaked donation info",
+  "source": "The Record",
+  "checked": "2026-11-24T16:59:22+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The incident involved unauthorized access to sensitive donor data through a third-party vendor, with confirmed consequences for the Carnegie Endowment.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involved unauthorized access to sensitive donor data through a third-party vendor, with confirmed consequences for the Carnegie Endowment.",
+    "title": "Carnegie Endowment's donor data leaked in third-party breach",
+    "incident_id": "b7a0daf46f6b327c"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "f1b0181871da9dddd8d3df0a9128424b4643c3996d9fa4d6de01b24e9742eee2",
+  "item": {
+   "id": "b7a0daf46f6b327c",
+   "title": "Carnegie Endowment for International Peace says third-party breach leaked donation info",
+   "url": "https://therecord.media/carnegie-endowment-data-breach",
+   "date": "2026-11-24",
+   "source": "The Record",
+   "published_at": "2026-11-24T16:00:00+00:00"
   }
  }
 }
