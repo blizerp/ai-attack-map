@@ -46,6 +46,15 @@ class ReviewedBacklogTests(unittest.TestCase):
         self.assertEqual(len(u.load_json(self.root / "attacks.json", {})["incidents"]), 1)
         self.assertEqual(u.load_json(self.root / "pending.json", {}), {})
 
+    def test_reapplying_same_batch_does_not_duplicate_incidents(self):
+        batch = [{"url":"https://example.org/story", "records":[self.record()]}]
+        with patch.object(u, "locate_incident"):
+            importer.import_reviews(self.root, batch, dry_run=False)
+            result = importer.import_reviews(self.root, batch, dry_run=False)
+        self.assertEqual(result["already_imported"], 1)
+        self.assertEqual(result["added"], 0)
+        self.assertEqual(len(u.load_json(self.root / "attacks.json", {})["incidents"]), 1)
+
     def test_unknown_source_is_rejected_without_changes(self):
         with self.assertRaises(ValueError):
             importer.import_reviews(self.root, [{"url":"https://example.org/other",
