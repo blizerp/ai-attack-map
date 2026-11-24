@@ -78,6 +78,8 @@ def import_reviews(root, reviews, dry_run=True):
                           "item": {k:v for k,v in item.items() if k != "text"}}
         del pending[url]
     if not dry_run:
+        if added or merged:
+            data["last_manual_publish"] = now
         # Preserve ingestion's last_success timestamp; manual import is not an API ingestion success.
         data["incidents"].sort(key=lambda i: i.get("last_reported", i["date"]), reverse=True)
         for name, obj in (("attacks.json", data), ("decisions.json", decisions),
