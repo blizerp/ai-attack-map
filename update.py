@@ -272,7 +272,9 @@ def fetch_tracker():
 
 
 def extract(client, item, tracked):
-    # Bound repeated context: sending the entire historical map with every article\n    # grows costs indefinitely. Prefer recent incidents for duplicate matching.\n    recent = sorted(tracked, key=lambda t: t.get("last_reported") or t.get("date") or "", reverse=True)[:40]\n    known = "\n".join(f"{t['id']}: {t['date']} | {t['category']} | {t['victim']} | {t['title']}" for t in recent) or "(none yet)"
+    # Bound repeated context to recent incidents to control API costs.
+    recent = sorted(tracked, key=lambda t: t.get("last_reported") or t.get("date") or "", reverse=True)[:40]
+    known = "\n".join(f"{t['id']}: {t['date']} | {t['category']} | {t['victim']} | {t['title']}" for t in recent) or "(none yet)"
     user = (f"Already-tracked incidents:\n{known}\n\n---\n"
             f"Source: {item['source']}\nPublished: {item['date']}\nTitle: {item['title']}\n"
             f"URL: {item['url']}\n\n{item['text']}")
