@@ -1,41 +1,141 @@
 [
   {
-    "url": "https://therecord.media/laliga-hacked-spain-top-professional-league-confirms-cyber-incident",
+    "url": "https://www.securityweek.com/gl-inet-routers-kvms-compromised-via-remote-management-service-flaw/",
     "records": [
       {
         "relevant": true,
         "category": "major_cyber",
-        "attacker": "Unidentified attacker",
+        "attacker": "Unidentified attackers",
         "ai_role": "AI involvement not confirmed in the reporting.",
         "why": "Not reported",
-        "where": "Spain (affected LaLiga platform and clubs)",
-        "major_impact": "large_scale_data_theft",
+        "where": "Location of affected organization; attack origin unconfirmed",
+        "major_impact": "critical_network_intrusion",
         "impact_substantiated": true,
-        "geocode_query": "Spain",
+        "geocode_query": null,
         "duplicate_of": null,
-        "location_queries": [
-          {
-            "query": "Spain",
-            "basis": "Reported affected area"
-          }
-        ],
+        "location_queries": [],
         "decision": "include",
-        "decision_reason": "LaLiga's official November 23 statement confirms unauthorized access and exfiltration; affected count remains under investigation.",
-        "evidence_status": "confirmed",
+        "decision_reason": "Reported real-world compromise; impact qualified to source evidence.",
+        "evidence_status": "under_investigation",
         "severity_evidence": {
           "context": "real_world",
-          "service": "none",
-          "reach": "multiple",
-          "damage": "sensitive_data",
-          "essential": "none",
+          "service": "unknown",
+          "reach": "unknown",
+          "damage": "privileged_access",
+          "essential": "unknown",
           "financial": "unknown",
-          "reason": "LaLiga confirms stolen personal data affecting its users and some clubs; total victim count and financial harm not established."
+          "reason": "Reported malware deployment to managed devices; number of affected installations not established."
         },
-        "title": "LaLiga fan-services platform breached and personal data stolen",
-        "date": "2026-11-14",
-        "victim": "LaLiga and affiliated clubs' fan-service users",
-        "what": "LaLiga confirmed unauthorized access to a fan-services platform between November 14 and 16, with extraction of registered users' personal data. LaLiga contained the intrusion November 16 and notified Spanish authorities.",
-        "significance": "Confirmed theft of personal data from LaLiga and some affiliated clubs; affected-user count and complete data scope not yet known."
+        "title": "GL.iNet remote management compromise",
+        "date": "2026-11-23",
+        "victim": "GL.iNet GoodCloud-managed routers and KVMs",
+        "what": "Reporting describes attackers abusing a GoodCloud remote management flaw to install malware on connected routers and KVM devices. Firmware replacement is required for cleanup.",
+        "significance": "Reporting describes attackers abusing a GoodCloud remote management flaw to install malware on connected routers and KVM devices. Firmware replacement is required for cleanup."
+      }
+    ]
+  },
+  {
+    "url": "https://www.securityweek.com/azure-flaw-exploited-to-target-secrets-at-norwegian-energy-firms/",
+    "records": [
+      {
+        "relevant": true,
+        "category": "major_cyber",
+        "attacker": "Unidentified attackers",
+        "ai_role": "AI involvement not confirmed in the reporting.",
+        "why": "Not reported",
+        "where": "Location of affected organization; attack origin unconfirmed",
+        "major_impact": "critical_network_intrusion",
+        "impact_substantiated": true,
+        "geocode_query": null,
+        "duplicate_of": null,
+        "location_queries": [],
+        "decision": "include",
+        "decision_reason": "Reported real-world compromise; impact qualified to source evidence.",
+        "evidence_status": "under_investigation",
+        "severity_evidence": {
+          "context": "real_world",
+          "service": "unknown",
+          "reach": "unknown",
+          "damage": "unknown",
+          "essential": "unknown",
+          "financial": "unknown",
+          "reason": "Reported exploitation against real organizations; successful exfiltration and disruption not established."
+        },
+        "title": "Azure API Management vulnerability exploited against Norwegian energy firms",
+        "date": "2026-11-23",
+        "victim": "Norwegian energy companies and other affected organizations",
+        "what": "Reporting describes exploitation of an Azure API Management flaw to target secrets at Norwegian energy organizations and additional sectors. The full extent of stolen material is not established.",
+        "significance": "Reporting describes exploitation of an Azure API Management flaw to target secrets at Norwegian energy organizations and additional sectors. The full extent of stolen material is not established."
+      }
+    ]
+  },
+  {
+    "url": "https://www.hipaajournal.com/prism-medical-products-data-breach/",
+    "records": [
+      {
+        "relevant": true,
+        "category": "major_cyber",
+        "attacker": "Unidentified attackers",
+        "ai_role": "AI involvement not confirmed in the reporting.",
+        "why": "Not reported",
+        "where": "Location of affected organization; attack origin unconfirmed",
+        "major_impact": "large_scale_data_theft",
+        "impact_substantiated": true,
+        "geocode_query": null,
+        "duplicate_of": null,
+        "location_queries": [],
+        "decision": "include",
+        "decision_reason": "Reported real-world compromise; impact qualified to source evidence.",
+        "evidence_status": "under_investigation",
+        "severity_evidence": {
+          "context": "real_world",
+          "service": "unknown",
+          "reach": "unknown",
+          "damage": "sensitive_data",
+          "essential": "unknown",
+          "financial": "unknown",
+          "reason": "Disclosed unauthorized access involving potentially sensitive patient data for more than 1.3 million individuals; actual misuse not established."
+        },
+        "title": "Prism Medical Products patient data breach",
+        "date": "2026-10-30",
+        "victim": "Prism Medical Products patients",
+        "what": "Prism Medical Products disclosed unauthorized access to patient data with more than 1.3 million individuals potentially affected. The full extent of exposure remains under investigation.",
+        "significance": "Prism Medical Products disclosed unauthorized access to patient data with more than 1.3 million individuals potentially affected. The full extent of exposure remains under investigation."
+      }
+    ]
+  },
+  {
+    "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
+    "records": [
+      {
+        "relevant": true,
+        "category": "major_cyber",
+        "attacker": "Unidentified attackers",
+        "ai_role": "AI involvement not confirmed in the reporting.",
+        "why": "Not reported",
+        "where": "Location of affected organization; attack origin unconfirmed",
+        "major_impact": "large_scale_data_theft",
+        "impact_substantiated": true,
+        "geocode_query": null,
+        "duplicate_of": null,
+        "location_queries": [],
+        "decision": "include",
+        "decision_reason": "Reported real-world compromise; impact qualified to source evidence.",
+        "evidence_status": "under_investigation",
+        "severity_evidence": {
+          "context": "real_world",
+          "service": "unknown",
+          "reach": "unknown",
+          "damage": "sensitive_data",
+          "essential": "unknown",
+          "financial": "unknown",
+          "reason": "Confirmed access to internal data systems with approximately 1.5 million potentially affected people; exact data theft scope not established."
+        },
+        "title": "KEPCO breach exposes data of approximately 1.5 million",
+        "date": "2026-11-23",
+        "victim": "Korea Electric Power Corporation",
+        "what": "KEPCO confirmed an attacker breached its internal network and accessed two systems containing customer, employee, and contractor information. Reported affected population is approximately 1.5 million.",
+        "significance": "KEPCO confirmed an attacker breached its internal network and accessed two systems containing customer, employee, and contractor information. Reported affected population is approximately 1.5 million."
       }
     ]
   }
