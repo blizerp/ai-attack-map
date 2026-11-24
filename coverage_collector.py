@@ -298,15 +298,15 @@ def run(u):
         u.save_json(path('feed_status.json'), status)
 
     fatal = not client
-    # Four readers keep backfill practical. Re-review collisions against newly added
-    # victims before committing a batch result, to avoid same-batch duplicates.
-    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-        for start in range(0, len(candidates), 4):
+    # Process one report at a time so a quota/auth failure stops before
+    # multiple simultaneous API requests consume credits or create noise.
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+        for start in range(0, len(candidates), 1):
             if fatal or time.monotonic() - started > 35 * 60:
                 break
             tracked = list(data['incidents'])
             known_ids = {i['id'] for i in tracked}
-            batch = candidates[start:start+4]
+            batch = candidates[start:start+1]
             jobs = [(item, pool.submit(review, item, tracked)) for item in batch]
             for item, job in jobs:
                 try:
