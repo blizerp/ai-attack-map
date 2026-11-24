@@ -7870,11 +7870,343 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-24-evening",
+   "date": "2026-11-24",
+   "edition": "evening",
+   "published_at": "2026-11-24T22:02:03+00:00",
+   "generated_at": "2026-11-24T22:02:03+00:00",
+   "scheduled_for": "2026-11-24T22:00:00+00:00",
+   "window_start": "2026-11-24T13:01:09+00:00",
+   "window_end": "2026-11-24T22:02:03+00:00",
+   "sector_window_start": "2026-11-23T22:02:03+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "Fresh reports show a cloud platform shutting down after a breach, a Colorado government app still unavailable, and confirmed data theft from an EU learning service. A security vendor also exposed some customer access keys. No broad power, water or household communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Rackspace will shut down Spot cloud service after a breach",
+      "what_happened": "Hackers breached Rackspace Spot on November 17 and accessed customer cloud workloads, stored secrets and files. Rackspace restored the service after an outage, but will permanently close Spot on December 8 at 5 p.m. Central Time.",
+      "impact": "Customers must move applications and retrieve data before the deadline. Any remaining workloads will be terminated, and data will no longer be accessible. Rackspace says its core systems and other customer environments were not affected.",
+      "what_next": "Rackspace customers are deciding where to move their services. The company may provide more information about exposed customer data and whether the shutdown deadline will change.",
+      "change": "New report",
+      "sectors": [
+       "internet",
+       "supply_chain"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
+        "published": "2026-11-24T21:37:30+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Colorado’s digital government app remains offline after a data theft",
+      "what_happened": "Colorado took the myColorado app offline after discovering a cyberattack on November 18. The app supports digital identification, document storage and access to state services. The state believes data tied to nearly 150,000 people was stolen.",
+      "impact": "The app was still unavailable on November 24. Residents can use agency websites, but need physical identification for some needs, including travel. The state has not said what information was taken.",
+      "what_next": "Colorado is investigating and will restore the app after security work is complete. Further notices may identify the exposed data and confirm the final number affected.",
+      "change": "New report",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/mycolorado-app-down-data-breach",
+        "published": "2026-11-24T20:52:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "EU confirms personal data stolen from its online learning platform",
+      "what_happened": "The European Commission confirmed that attackers who breached its systems on October 22 also accessed the EU Academy learning platform. Names and email addresses were stolen, although the full number of affected users is unknown.",
+      "impact": "Public access to EU Academy remains disabled. Users could face convincing scam messages using their names or email addresses. The Commission says most other affected applications have been restored.",
+      "what_next": "The investigation and European data-protection review continue. The Commission may clarify the scale of the leak and whether other personal information was accessed.",
+      "change": "Impact increased",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/",
+        "published": "2026-11-24T16:22:44+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/european-commission-uncovers-data-breach-in-cyberattack-investigation/",
+        "published": "2026-11-24T14:49:59+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Security vendor breach exposed some customers’ cloud access keys",
+      "what_happened": "Radware said attackers accessed an internal cloud security management system on November 19 without needing a sign-in. The exposed information may include customer contact details and storage credentials used to send security logs.",
+      "impact": "Some customers could face unauthorized access to stored security logs. Radware says customer applications and its protection services continued without interruption, and it has found no evidence that customer application traffic was accessed.",
+      "what_next": "Radware is investigating whether exposed credentials were used. Affected customers and investigators may clarify the scope and any access to stored logs.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+        "published": "2026-11-24T17:49:05+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "N-able restores email-security dashboards after an earlier breach",
+      "what_happened": "N-able said hackers used a flaw to breach one hosted server on November 16, disrupting Mail Assure and SpamExperts dashboards. The company restored dashboard and application access by November 21 and says email delivery and spam filtering continued.",
+      "impact": "Customers experienced a week of dashboard and service-management problems, but inbound and outbound email flow reportedly continued. N-able says it has found no evidence the attack spread beyond the one hosted server.",
+      "what_next": "N-able is monitoring the environment and plans to publish a root-cause report within two weeks. The investigation may confirm whether any customer information was accessed.",
+      "change": "Recovery update",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/cisa-nable-cybersecurity-bug",
+        "published": "2026-11-24T15:00:00+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+        "published": "2026-11-24T06:02:45+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "",
+     "items": []
+    },
+    "finance": {
+     "intro": "",
+     "items": []
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "Several online services have had confirmed disruptions or data exposure, including a Colorado government app, the EU Academy platform, Rackspace Spot and N-able’s email-security dashboards.",
+     "items": [
+      {
+       "headline": "Colorado’s digital government app remains offline after a data theft",
+       "what_happened": "Colorado took the myColorado app offline after discovering a cyberattack on November 18. The app supports digital identification, document storage and state services. Data tied to nearly 150,000 people may have been stolen.",
+       "impact": "The app was still unavailable on November 24. Residents can use agency websites, but may need physical identification for some services.",
+       "what_next": "Colorado is investigating and will restore the app after security checks. More notices may explain what information was exposed.",
+       "change": "New report",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/mycolorado-app-down-data-breach",
+         "published": "2026-11-24T20:52:00+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "EU confirms data theft from its online learning platform",
+       "what_happened": "Attackers who breached European Commission systems on October 22 also accessed the EU Academy platform. Names and email addresses were stolen, but the number affected is unknown.",
+       "impact": "Public access to EU Academy remains disabled. Users could face scam messages using their contact details.",
+       "what_next": "The investigation and data-protection review continue. Officials may clarify the scale of the breach.",
+       "change": "Impact increased",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/",
+         "published": "2026-11-24T16:22:44+00:00"
+        },
+        {
+         "name": "SecurityWeek",
+         "url": "https://www.securityweek.com/european-commission-uncovers-data-breach-in-cyberattack-investigation/",
+         "published": "2026-11-24T14:49:59+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Rackspace will close its Spot cloud platform after a breach",
+       "what_happened": "Hackers accessed customer cloud workloads, stored secrets and files on November 17. Rackspace restored service after an outage but will permanently close Spot on December 8.",
+       "impact": "Customers must move applications and retrieve data before the deadline. Remaining workloads will be terminated after closure.",
+       "what_next": "Customers are migrating services and assessing possible data exposure. Rackspace may provide further details about affected accounts.",
+       "change": "New report",
+       "sectors": [
+        "internet",
+        "supply_chain"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
+         "published": "2026-11-24T21:37:30+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "N-able restores email-security dashboards after an earlier breach",
+       "what_happened": "A November 16 breach disrupted Mail Assure and SpamExperts dashboards. N-able restored access by November 21 and says email flow and filtering continued.",
+       "impact": "Customers faced dashboard and management problems, but the reports do not describe a broad email outage.",
+       "what_next": "N-able is monitoring the environment and plans a root-cause report within two weeks.",
+       "change": "Recovery update",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/cisa-nable-cybersecurity-bug",
+         "published": "2026-11-24T15:00:00+00:00"
+        },
+        {
+         "name": "The Hacker News",
+         "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+         "published": "2026-11-24T06:02:45+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "A cloud platform and a security-service provider reported breaches that affected customer environments or customer access information.",
+     "items": [
+      {
+       "headline": "Rackspace will close Spot after hackers accessed customer cloud workloads",
+       "what_happened": "Hackers breached Rackspace Spot on November 17 and accessed customer cloud clusters, stored secrets and files. Rackspace restored the service but will shut it down permanently on December 8.",
+       "impact": "Customers must migrate applications and download data before the deadline. Remaining workloads will be terminated after closure.",
+       "what_next": "Customers are moving services and reviewing possible exposure. Rackspace may clarify the affected data and whether the deadline changes.",
+       "change": "New report",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
+         "published": "2026-11-24T21:37:30+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Radware breach exposed some customers’ cloud access keys",
+       "what_happened": "Attackers reached Radware’s internal cloud security management system on November 19 and may have accessed credentials used by some customers to send security logs to their own storage.",
+       "impact": "Those customers could face unauthorized access to stored logs. Radware says its protection services and customer applications continued normally.",
+       "what_next": "Radware is investigating whether the exposed credentials were used and may identify additional affected customers or records.",
+       "change": "Newly confirmed",
+       "sectors": [
+        "supply_chain",
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+         "published": "2026-11-24T17:49:05+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    }
+   },
+   "warnings": [],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 730
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 29,
+   "usage": {
+    "completion_tokens": 1936,
+    "prompt_tokens": 32619,
+    "total_tokens": 34555,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 134,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 32616,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-24T13:01:09+00:00"
+  "checked_at": "2026-11-24T22:02:03+00:00"
  },
  "automatic_attempts": {
   "2026-11-21-morning": {
@@ -7904,6 +8236,10 @@
   "2026-11-24-morning": {
    "count": 1,
    "checked_at": "2026-11-24T13:01:09+00:00"
+  },
+  "2026-11-24-evening": {
+   "count": 1,
+   "checked_at": "2026-11-24T22:02:03+00:00"
   }
  }
 }
