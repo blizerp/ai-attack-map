@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install "feedparser==6.0.11" "requests>=2.31,<3" "openai>=1.40,<3" "trafilatura>=2,<3"
-      - run: python -m unittest test_selection test_coverage test_site
+      - run: python -m unittest test_selection test_coverage test_site test_reviewed_backlog
       - name: Validate reviewed batch
         run: |
           test -f reviewed_backlog.json || { echo "No reviewed_backlog.json; nothing to publish"; exit 1; }
