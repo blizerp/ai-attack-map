@@ -276,8 +276,16 @@ def direct_incident_evidence(rec, quote, article):
     normalize = lambda value: re.sub(r"\s+", " ", value).strip().casefold()
     q = normalize(quote)
     role = rec.get("ai_role", "").casefold()
+    # A model label is not evidence: require an observed outcome in the quotation.
+    # Conditional advisories and capability descriptions must not pass as incidents.
+    hypothetical = re.compile(r"\b(?:could|would|might|may|can)\s+(?:allow|let|enable|lead|result|cause|provide|gain|execute|access|steal|expose|bypass|compromise|obtain|be exploited)\b|\bif (?:successfully )?exploited\b|\bsuccessful exploitation (?:could|would|may|can)\b")
+    observed = re.compile(r"\b(?:confirmed unauthorized access|unauthorized access (?:occurred|was detected|was confirmed)|(?:was|were|had been|has been|have been) (?:breached|compromised|stolen|exfiltrated|accessed|disrupted|encrypted)|(?:attackers?|intruders?|hackers?|threat actors?) (?:accessed|stole|exfiltrated|compromised|breached|encrypted|deployed|obtained|infiltrated|gained)|(?:data|records|files|credentials) (?:was|were) (?:exposed|leaked|stolen|exfiltrated|accessed)|(?:diverted|redirected) (?:ambulances|patients|emergency services)|(?:forced|caused) (?:it|the (?:hospital|company|utility|organization|operator)) to (?:send|divert|suspend|close|shut|cancel)|(?:suspended|disrupted|halted|cancelled|canceled|shut down) (?:operations|services|appointments|production|surgeries|trading)|(?:confirmed|disclosed|reported|detected) (?:a |an |the )?(?:data breach|security breach|network intrusion|ransomware attack|unauthorized access)|(?:breach|intrusion|attack) (?:resulted in|led to|disrupted|forced|exposed))\b")
+    negated = re.compile(r"\b(?:no evidence of|no (?:signs|evidence) (?:that|of)|not (?:been )?(?:compromised|accessed|exploited)|failed to|unsuccessful|attempted to)\b")
+    sentences = re.split(r"(?<=[.!?])\s+", q)
+    actual = any(observed.search(s) and not hypothetical.search(s) and not negated.search(s) for s in sentences)
     return (
-        len(q) >= 20 and q in normalize(article)
+        actual
+        and        len(q) >= 20 and q in normalize(article)
         and rec.get("actual_outcome") in {"confirmed_compromise", "confirmed_consequential_event"}
         and rec.get("severity_evidence", {}).get("context") == "real_world"
         and rec.get("impact_substantiated") is True

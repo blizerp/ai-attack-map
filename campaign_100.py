@@ -6,6 +6,16 @@ from pathlib import Path
 
 # Follow-up audit of the latest batch. Preserve full records, never modify baseline.
 HOLD_REASONS = {
+    "e5d92145d0f8de47": "Chainstack incident overlaps baseline a7cfb57f33eb6570; stored quote supplies no distinct compromise details.",
+    "8000e3bea6d7298a": "Second Fireworks incident of October 24 overlaps campaign record 9c255d81510cbc8a (downstream Notion data). Retain one underlying event pending reconciliation.",
+    "40183598d66106bb": "Same KeyDrift event and same source already present in baseline 4dc4a1512003044a.",
+    "4bf14ff9a2059f14": "Potential overlap with baseline Mexican government AI-assisted breach 8a983ded01bbaf68; stored historical excerpt does not establish separate event.",
+    "a250e26db6d2c877": "Exploit attempt and precautionary server rebuild; stored evidence does not establish successful compromise or qualifying service impact.",
+    "d24b286bd0afa7a2": "Public credentials tested by researchers; no unauthorized adversary access or separate consequential event established by stored evidence.",
+    "c61f357272763219": "General targeting and vulnerability report; stored evidence describes possible access, not distinct observed compromise.",
+    "a8be3b8eec59e8e1": "Stored evidence describes hypothetical exploitation capability, not observed compromise.",
+    "25fc86adddd45273": "Same October 26 UNM Health disruption in baseline 62c149c3423ae5e2.",
+    "93d7838ec5b0c895": "Conditional vulnerability advisory, not observed incident.",
     "fcbdd6eb50849ff1": "Same Norwegian Azure incident already in baseline 48dd2a3cc8d92863.",
     "5c22cf2f6e397964": "Norwegian energy follow-up overlaps baseline 48dd2a3cc8d92863; hold pending separate incident evidence.",
     "1c5879993c205ebc": "Overlaps shared financial-services vendor breach f48d0e7cb697eb9b.",

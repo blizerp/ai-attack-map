@@ -82,6 +82,15 @@ class SelectionTests(unittest.TestCase):
         for outcome in ("research_demonstration","attempt_without_compromise","potential_impact_only","background_or_forecast","unverified"):
             self.assertFalse(u.direct_incident_evidence(dict(base,actual_outcome=outcome),quote,quote))
         self.assertFalse(u.direct_incident_evidence(base,quote,"Different article."))
+        for passage in (
+            "Successful exploitation of these vulnerabilities could allow an attacker to cause a denial of service.",
+            "Two critical flaws could let a remote attacker bypass authentication or run arbitrary code.",
+            "Threat actors target devices because they can provide initial access to corporate environments.",
+            "The attacker attempted to exploit the server, but there was no evidence of unauthorized access.",
+        ):
+            self.assertFalse(u.direct_incident_evidence(base,passage,passage))
+        observed = "The attackers accessed production systems and stole sensitive customer records."
+        self.assertTrue(u.direct_incident_evidence(base,observed,observed))
         self.assertFalse(u.direct_incident_evidence(dict(base,major_impact="none"),quote,quote))
         self.assertFalse(u.direct_incident_evidence(dict(base,category="using_ai",ai_role="AI involvement not confirmed"),quote,quote))
         self.assertFalse(u.direct_incident_evidence(dict(base,severity_evidence={"context":"research_only"}),quote,quote))

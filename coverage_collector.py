@@ -212,14 +212,22 @@ def merge_record(u, data, item, rec, geo, now):
     def strong_match(i):
         title_sim = similarity(i.get('title',''), rec.get('title',''))
         victim = entity(i.get('victim',''))
-        same_victim = bool(victim) and victim == entity(rec.get('victim',''))
+        other_victim = entity(rec.get('victim',''))
+        same_victim = bool(victim) and victim == other_victim
+        # A longer named entity with a descriptive suffix can be the same victim.
+        # Require a multiword exact prefix plus same date and very similar title.
+        short, long = sorted((victim, other_victim), key=len)
+        named_alias = (len(short) >= 4 and long[:len(short)] == short
+                       and len(short) < len(long))
         same_date = bool(i.get('date')) and i.get('date') == rec.get('date')
         same_source = i in source_records
         # Exact normalized victim is required for deterministic cross-source merges.
         # Do not conflate Hospital A and Hospital B or rely on generic labels.
         generic = {"unknown", "multiple", "unnamed", "unspecified", "various"}
-        if not same_victim or generic.intersection(victim):
+        if generic.intersection(victim) or generic.intersection(other_victim):
             return False
+        if not same_victim:
+            return named_alias and same_date and title_sim >= .75
         return ((same_source and title_sim >= .75)
                 or (same_date and title_sim >= .8))
     strong = [i for i in data['incidents'] if strong_match(i)]
