@@ -29,7 +29,8 @@ jobs:
       - run: python -u update.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          # Separate inexpensive classification from the briefing model.
+          OPENAI_INGEST_MODEL: "gpt-4o-mini"
           MAX_NEW_ITEMS: "20"
       - name: Commit new data
         if: always()
