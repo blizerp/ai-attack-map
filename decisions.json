@@ -1,38 +1,131 @@
 {
  "https://investors.irhythmtech.com/news/news-details/2026/iRhythm-Provides-Update-on-Cybersecurity-Incident-Previously-Disclosed-in-June-2026/default.aspx": {
   "title": "iRhythm confirms patient information stolen from third-party systems",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "iRhythm",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident involves confirmed unauthorized access to sensitive patient information.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident involves confirmed unauthorized access to sensitive patient information.",
+    "title": "iRhythm patient information stolen from third-party systems",
+    "incident_id": "f9509bdd055c164a"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "0af2c5677e5f075e118636943b0fc5fcf2ea380b157f63805cd0a9b66207ad5f",
+  "item": {
+   "title": "iRhythm confirms patient information stolen from third-party systems",
+   "url": "https://investors.irhythmtech.com/news/news-details/2026/iRhythm-Provides-Update-on-Cybersecurity-Incident-Previously-Disclosed-in-June-2026/default.aspx",
+   "date": "2026-10-02",
+   "source": "iRhythm",
+   "id": "f9509bdd055c164a",
+   "priority": 1
+  }
  },
  "https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-012/": {
   "title": "CERT-FR confirms compromises of refrigeration controllers",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "CERT-FR / ANSSI",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "defer",
+  "reason": "The incident details confirm unauthorized access to critical systems used in cold chain management.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "The incident details confirm unauthorized access to critical systems used in cold chain management.",
+    "title": "Compromises of remote refrigeration controllers confirmed"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "1c568bad23dbda2d85e0f2b7ded547ab640ba303a53998aacbc3d49c293c1861",
+  "item": {
+   "title": "CERT-FR confirms compromises of refrigeration controllers",
+   "url": "https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-012/",
+   "date": "2026-10-16",
+   "source": "CERT-FR / ANSSI",
+   "id": "598d2412621773ee",
+   "priority": 1
+  }
  },
  "https://newsroom.aholddelhaize.com/ahold-delhaize-update-on-status-of-cybersecurity-incident/": {
   "title": "Ahold Delhaize confirms malicious activity and grocery service disruption",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "Ahold Delhaize",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident involved unauthorized malicious activity resulting in significant service disruption.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident involved unauthorized malicious activity resulting in significant service disruption.",
+    "title": "Ahold Delhaize grocery service disruption indicates cyber incident",
+    "incident_id": "333f5ad23c43a72c"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "3d84c8a852f715e621da24dfd6b594c823e53d0df43bd6fffa222b7733e56ecb",
+  "item": {
+   "title": "Ahold Delhaize confirms malicious activity and grocery service disruption",
+   "url": "https://newsroom.aholddelhaize.com/ahold-delhaize-update-on-status-of-cybersecurity-incident/",
+   "date": "2026-10-19",
+   "source": "Ahold Delhaize",
+   "id": "333f5ad23c43a72c",
+   "priority": 1
+  }
  },
  "https://www.genesys.com/blog/post/security-update-incident-affecting-certain-genesys-internal-business-systems": {
   "title": "Genesys confirms unauthorized access to internal CRM and learning systems",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "Genesys",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "defer",
+  "reason": "Incident details confirm unauthorized access to internal systems with potential data exposure.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Incident details confirm unauthorized access to internal systems with potential data exposure.",
+    "title": "Genesys confirms unauthorized access to internal CRM and learning systems"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "dd2f2102a94dafe24758f3a1a82d57179377fd1bd454af09fb1bd68d5775f995",
+  "item": {
+   "title": "Genesys confirms unauthorized access to internal CRM and learning systems",
+   "url": "https://www.genesys.com/blog/post/security-update-incident-affecting-certain-genesys-internal-business-systems",
+   "date": "2026-10-23",
+   "source": "Genesys",
+   "id": "fd019ed5d093f85f",
+   "priority": 1
+  }
  },
  "https://sansec.io/research/magento-cms-block-loader-deepveindrilling": {
   "title": "Magento CMS block loader campaign compromises 953 online stores",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "Sansec",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Documented substantial impact on multiple online stores through a confirmed malicious campaign.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Documented substantial impact on multiple online stores through a confirmed malicious campaign.",
+    "title": "Magento CMS block loader campaign compromises 953 online stores",
+    "incident_id": "8cc26022e4d14b3b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "f77e5461defd0534de9f45a11ea520812c2ac68d5fb33b4c605a9a06c4aee41e",
+  "item": {
+   "title": "Magento CMS block loader campaign compromises 953 online stores",
+   "url": "https://sansec.io/research/magento-cms-block-loader-deepveindrilling",
+   "date": "2026-10-24",
+   "source": "Sansec",
+   "id": "8cc26022e4d14b3b",
+   "priority": 1
+  }
  },
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
@@ -62,10 +155,29 @@
  },
  "https://hscnews.unm.edu/news/ambulance-traffic-diverted-clinical-appointments-cancelled-and-classes-cancelled-due-to-cybersecurity-issue-at-unm-hsc": {
   "title": "UNM Health cybersecurity event interrupts patient care",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "UNM Health Sciences Center",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Confirmed cybersecurity incident at UNM Health led to significant operational disruption.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Confirmed cybersecurity incident at UNM Health led to significant operational disruption.",
+    "title": "UNM Health cybersecurity event interrupts patient care",
+    "incident_id": "c10049381428bdc3"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "7cbf59260e86a316293bc0dfcc7b33676f39788b82b2c473293053ce4f02004b",
+  "item": {
+   "title": "UNM Health cybersecurity event interrupts patient care",
+   "url": "https://hscnews.unm.edu/news/ambulance-traffic-diverted-clinical-appointments-cancelled-and-classes-cancelled-due-to-cybersecurity-issue-at-unm-hsc",
+   "date": "2026-10-26",
+   "source": "UNM Health Sciences Center",
+   "id": "62c149c3423ae5e2",
+   "priority": 1
+  }
  },
  "https://www.hipaajournal.com/2026-cost-data-breach-study-ibm/": {
   "title": "Global Data Breach Cost Rises 12% to Almost $5 Million",
@@ -14346,10 +14458,29 @@
  },
  "https://www.hipaajournal.com/website-privacy-risks/": {
   "title": "Is Your Website Sharing Patient Data With Trackers? How to do a Web Scan",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "Discusses hypothetical risks of patient data exposure without reporting an actual cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Discusses hypothetical risks of patient data exposure without reporting an actual cyber incident.",
+    "title": "Website privacy risks pose hidden patient data exposure"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "0a3454ea25c0e7b83aa3c3a2908cdddeadf4200b08098912696b293072432b6a",
+  "item": {
+   "id": "3a07b702209876a3",
+   "title": "Is Your Website Sharing Patient Data With Trackers? How to do a Web Scan",
+   "url": "https://www.hipaajournal.com/website-privacy-risks/",
+   "date": "2026-11-19",
+   "source": "HIPAA Journal",
+   "published_at": "2026-11-19T16:13:53+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/windrose-health-network-data-breach/": {
   "title": "WindRose Health Network Discloses Data Breach Affecting 33K Individuals",
@@ -41212,150 +41343,555 @@
  },
  "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/": {
   "title": "VMware patches vCenter zero-day exploited in attacks since September",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident includes confirmed exploitation details with significant operational impact.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident includes confirmed exploitation details with significant operational impact.",
+    "title": "VMware vCenter Server exploited by Chinese-linked hackers",
+    "incident_id": "838824d529064f71"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "eb16906c4526cb4fcf37a66d14cce5ab17e954a9b873ddf94e1c2eff6458af03",
+  "item": {
+   "id": "838824d529064f71",
+   "title": "VMware patches vCenter zero-day exploited in attacks since September",
+   "url": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
+   "date": "2026-11-20",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-20T00:26:25+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html": {
   "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Substantiated exploitation of a zero-day vulnerability resulting in unauthorized access and potential data theft.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Substantiated exploitation of a zero-day vulnerability resulting in unauthorized access and potential data theft.",
+    "title": "Armory Castle Exploits VMware vCenter Zero-Day for Data Theft",
+    "incident_id": "c0bba4d580d7ef56"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "ab03cbcff18cb33fe60b0eaff0a644dfcd5598e0ca8ecb4c4129c44d28b7bf08",
+  "item": {
+   "id": "c0bba4d580d7ef56",
+   "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
+   "url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html",
+   "date": "2026-11-20",
+   "source": "The Hacker News",
+   "published_at": "2026-11-20T09:38:15+00:00"
+  }
  },
  "https://www.securityweek.com/sbc-medical-group-data-breach-impacts-over-2-million/": {
   "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident involves confirmed unauthorized access to sensitive personal and medical data impacting over 2 million individuals.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involves confirmed unauthorized access to sensitive personal and medical data impacting over 2 million individuals.",
+    "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
+    "incident_id": "6c3de3cb84e8f112"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "43d4eaa3631db67fbcff617bc9d6c2bd4931d51413d2880d2d712c406204d481",
+  "item": {
+   "id": "6c3de3cb84e8f112",
+   "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
+   "url": "https://www.securityweek.com/sbc-medical-group-data-breach-impacts-over-2-million/",
+   "date": "2026-11-20",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-20T11:36:51+00:00"
+  }
  },
  "https://www.securityweek.com/n-able-blames-service-disruption-on-cyberattack/": {
   "title": "N-able Blames Service Disruption on Cyberattack",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident confirmed by N-able with observed operational disruption.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident confirmed by N-able with observed operational disruption.",
+    "title": "N-able Cloud Services Disruption Due to Cyberattack",
+    "incident_id": "96b8f0ba7ba9a063"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "efc24ad07836c972926dbd1bc9a4f725edc68ae50985ce6054b03aa38c8d0bd3",
+  "item": {
+   "id": "96b8f0ba7ba9a063",
+   "title": "N-able Blames Service Disruption on Cyberattack",
+   "url": "https://www.securityweek.com/n-able-blames-service-disruption-on-cyberattack/",
+   "date": "2026-11-20",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-20T09:08:35+00:00"
+  }
  },
  "https://www.securityweek.com/jpmorgan-visa-mastercard-cite-third-party-incidents-amid-data-leak/": {
   "title": "JPMorgan, Visa, Mastercard Cite Third-Party Incidents Amid Data Leak",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Substantiated incident involving a significant provider breach affecting customer data.; Confirmed incident affecting customer data linked to a major payment processor.; Incident confirmed involving customer data exposure linked to a substantial payment network.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Substantiated incident involving a significant provider breach affecting customer data.",
+    "title": "JPMorgan discloses cyber incident involving third-party service providers",
+    "incident_id": "1c5879993c205ebc"
+   },
+   {
+    "status": "include",
+    "reason": "Confirmed incident affecting customer data linked to a major payment processor.",
+    "title": "Visa discloses third-party incident affecting marketing data",
+    "incident_id": "5db456fb2a3a7714"
+   },
+   {
+    "status": "include",
+    "reason": "Incident confirmed involving customer data exposure linked to a substantial payment network.",
+    "title": "Mastercard reveals incident at third-party provider impacting customer emails",
+    "incident_id": "32c3eee60443203b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e88eeb3126f2254cbe9049261e342bf351a1f087fe90ed1fa684d832ae31118e",
+  "item": {
+   "id": "1c5879993c205ebc",
+   "title": "JPMorgan, Visa, Mastercard Cite Third-Party Incidents Amid Data Leak",
+   "url": "https://www.securityweek.com/jpmorgan-visa-mastercard-cite-third-party-incidents-amid-data-leak/",
+   "date": "2026-11-20",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-20T07:35:46+00:00"
+  }
  },
  "https://www.securityweek.com/industry-reactions-to-major-outages-and-ai-patching-questions-feedback-friday/": {
   "title": "Industry Reactions to Major Outages and AI Patching Debate: Feedback Friday",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "Confirms outages without substantive evidence of cyber attacks or malicious compromise.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Confirms outages without substantive evidence of cyber attacks or malicious compromise.",
+    "title": "Major technology outages disrupt email, banking, air travel in the US"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "a284fecd1bd0fd46029db08ff307b5133ae1dd0e720e0d3532443b8cbaddd808",
+  "item": {
+   "id": "a59b581fa8396ece",
+   "title": "Industry Reactions to Major Outages and AI Patching Debate: Feedback Friday",
+   "url": "https://www.securityweek.com/industry-reactions-to-major-outages-and-ai-patching-questions-feedback-friday/",
+   "date": "2026-11-20",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-20T12:38:55+00:00"
+  }
  },
  "https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day/": {
   "title": "Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Significant use of AI in a cyberattack against operational systems is reported.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Significant use of AI in a cyberattack against operational systems is reported.",
+    "title": "Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day",
+    "incident_id": "a7623d7ef2d20363"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "db3bfc60df9749b7dd589f352c8d28eca133aa513dcda81f257c9fc17b45515f",
+  "item": {
+   "id": "a7623d7ef2d20363",
+   "title": "Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day",
+   "url": "https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day/",
+   "date": "2026-11-21",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-21T12:08:50+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/": {
   "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident describes an actionable compromise of tenant data through a service vulnerability, with confirmed unauthorized access.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident describes an actionable compromise of tenant data through a service vulnerability, with confirmed unauthorized access.",
+    "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
+    "incident_id": "d7b682214d29779d"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "fa894f321622bdc6a978d36c4e2e0cad7fcac6b293a6848902e09326c884f82f",
+  "item": {
+   "id": "d7b682214d29779d",
+   "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
+   "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
+   "date": "2026-11-21",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-21T18:01:58+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/": {
   "title": "FBI reportedly hacked again, this time targeting nationwide police database",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "defer",
+  "reason": "Incident represents a significant cybersecurity breach involving critical law enforcement systems.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Incident represents a significant cybersecurity breach involving critical law enforcement systems.",
+    "title": "FBI reportedly hacked again, this time targeting NCIC"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "2f0b0c584e1c4392f7bfad054a8ebc46ec6ec2d422244505ec198d837b4a5c4e",
+  "item": {
+   "id": "348c5f6d66c1b212",
+   "title": "FBI reportedly hacked again, this time targeting nationwide police database",
+   "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
+   "date": "2026-11-21",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-21T14:26:04+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/": {
   "title": "BADBOX botnet returns with record-breaking 40 billion daily ad requests",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "The incident primarily involves ad fraud and does not have confirmed organizational consequences or compromise.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The incident primarily involves ad fraud and does not have confirmed organizational consequences or compromise.",
+    "title": "BADBOX botnet generates record-breaking ad fraud"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "121f003c136c4c0913f9059d931a4cf8c0c13a2400198bdc75ff1957f6b59503",
+  "item": {
+   "id": "13b86ee78695eaf5",
+   "title": "BADBOX botnet returns with record-breaking 40 billion daily ad requests",
+   "url": "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/",
+   "date": "2026-11-21",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-21T15:17:27+00:00"
+  }
  },
  "https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/": {
   "title": "FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Says",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident involved unauthorized access to a critical law enforcement database.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident involved unauthorized access to a critical law enforcement database.",
+    "title": "FBI Investigates Hack of National Crime Information Center",
+    "incident_id": "625032aaa0251fbc"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "21e5331b8f31b8f5ffbd8ebe1825491d3739c5c24505489955b3baac0482ad7c",
+  "item": {
+   "id": "625032aaa0251fbc",
+   "title": "FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Says",
+   "url": "https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/",
+   "date": "2026-11-22",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-22T00:53:02+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html": {
   "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "Merely a demonstration of a vulnerability with no reported exploitation or real-world consequences.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Merely a demonstration of a vulnerability with no reported exploitation or real-world consequences.",
+    "title": "Ghostscript Vulnerability Demonstrated but Not Exploited"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "d0b6b96f02a8da2e8c594a025f97b5479b56e689d8efa726a6661075266b96b8",
+  "item": {
+   "id": "354f9b55b017ba3d",
+   "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
+   "url": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
+   "date": "2026-11-22",
+   "source": "The Hacker News",
+   "published_at": "2026-11-22T05:03:41+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html": {
   "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident involved confirmed theft of sensitive data from multiple organizations.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involved confirmed theft of sensitive data from multiple organizations.",
+    "title": "OpenRouter drops three AI inference providers after prompt theft",
+    "incident_id": "5048a98986ca15d9"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "c94b6c54cf6803ad3e2c24f695f4acff0b0520b5a81044c4eb6944bff9f67d2e",
+  "item": {
+   "id": "5048a98986ca15d9",
+   "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+   "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+   "date": "2026-11-22",
+   "source": "The Hacker News",
+   "published_at": "2026-11-22T05:06:55+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/signal-to-block-siri-gemini-ai-from-capturing-chats-on-ios-android/": {
   "title": "Signal to block Siri, Gemini AI from capturing chats on iOS, Android",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "No actual cyber incident reported; this discusses preventive measures without confirmed harm.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "No actual cyber incident reported; this discusses preventive measures without confirmed harm.",
+    "title": "Signal Blocks AI from Capturing Conversations"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "d1a66203a8976a3a8b49e0094222959025b305e9d790009466d46dc7d20aad25",
+  "item": {
+   "id": "dbb5b507706c7ac8",
+   "title": "Signal to block Siri, Gemini AI from capturing chats on iOS, Android",
+   "url": "https://www.bleepingcomputer.com/news/security/signal-to-block-siri-gemini-ai-from-capturing-chats-on-ios-android/",
+   "date": "2026-11-22",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-22T15:15:25+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/": {
   "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Substantiated evidence of a cyber incident compromising customer devices with malware.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Substantiated evidence of a cyber incident compromising customer devices with malware.",
+    "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
+    "incident_id": "24a68d70f4f53208"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "5a48670b718fd6f4dd50a707418cb9b9d4c1876b6d4f164f0526692c2be664b1",
+  "item": {
+   "id": "24a68d70f4f53208",
+   "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
+   "date": "2026-11-22",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-22T18:45:37+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/": {
   "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The breach at Cleverbridge involved significant theft of sensitive payment data.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The breach at Cleverbridge involved significant theft of sensitive payment data.",
+    "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
+    "incident_id": "3192f6d6dd439b4e"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "d5e1b8e03e5f1e65e5ddfcf47ce07e62e935d49804c94d2eb53d96e1cc114df5",
+  "item": {
+   "id": "3192f6d6dd439b4e",
+   "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
+   "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
+   "date": "2026-11-22",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-22T15:43:04+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/": {
   "title": "CISA flags critical Cisco RCE flaw as actively exploited in attacks",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident represents a significant unauthorized access event leveraging an AI agent to exploit a critical vulnerability.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident represents a significant unauthorized access event leveraging an AI agent to exploit a critical vulnerability.",
+    "title": "AI assistant exploits Cisco Expressway RCE flaw for unauthorized access",
+    "incident_id": "34e7b9698e26b47c"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "b7f6d0d5e72e39d03f9b3959fa3033149316838476e391a0963f49cc2fd0e341",
+  "item": {
+   "id": "34e7b9698e26b47c",
+   "title": "CISA flags critical Cisco RCE flaw as actively exploited in attacks",
+   "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
+   "date": "2026-11-23",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-23T07:44:19+00:00"
+  }
  },
  "https://therecord.media/austrian-foreign-ministry-says-website-hacked": {
   "title": "Hackers breach Austrian Foreign Ministry website, access diplomats' contact details",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident involved unauthorized access to sensitive government network information, substantiated by official reporting.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involved unauthorized access to sensitive government network information, substantiated by official reporting.",
+    "title": "Austrian Foreign Ministry website breached; diplomats' contacts accessed",
+    "incident_id": "8afb00fa037d26da"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "ddcebc9ec9562809f8fa17043484f6acb2a5a4903b39d4562e410d84aaa290d1",
+  "item": {
+   "id": "8afb00fa037d26da",
+   "title": "Hackers breach Austrian Foreign Ministry website, access diplomats' contact details",
+   "url": "https://therecord.media/austrian-foreign-ministry-says-website-hacked",
+   "date": "2026-11-24",
+   "source": "The Record",
+   "published_at": "2026-11-24T00:00:00+00:00"
+  }
  },
  "https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks": {
   "title": "Agentic Attacks: In The Wild",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "Wiz Research",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident details substantiate a significant cyber intrusion using advanced frameworks.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident details substantiate a significant cyber intrusion using advanced frameworks.",
+    "title": "Agentic offensive frameworks attack multiple organizations",
+    "incident_id": "4fe6f8be414fe937"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "3f1935c1ec2aa0db3cbe5e8a6de51152c6359a406f4538abee335351138ed08f",
+  "item": {
+   "id": "4fe6f8be414fe937",
+   "title": "Agentic Attacks: In The Wild",
+   "url": "https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks",
+   "date": "2026-11-23",
+   "source": "Wiz Research",
+   "published_at": "2026-11-23T14:46:19+00:00"
+  }
  },
  "https://www.securityweek.com/sap-netweaver-cisco-expressway-flaws-exploited-in-attacks/": {
   "title": "SAP NetWeaver, Cisco Expressway Flaws Exploited in Attacks",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident details substantiate the exploitation of a significant vulnerability in a critical system.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident details substantiate the exploitation of a significant vulnerability in a critical system.",
+    "title": "Exploitation of Cisco Expressway vulnerability reported",
+    "incident_id": "a374030764a7763e"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "92ccf9f151cb71f608bbd67d65d759e919b8e6353408fe012a1b18d8ee8230f4",
+  "item": {
+   "id": "a374030764a7763e",
+   "title": "SAP NetWeaver, Cisco Expressway Flaws Exploited in Attacks",
+   "url": "https://www.securityweek.com/sap-netweaver-cisco-expressway-flaws-exploited-in-attacks/",
+   "date": "2026-11-23",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-23T11:35:15+00:00"
+  }
  },
  "https://www.securityweek.com/n-able-patches-critical-flaw-disclosed-after-mail-assure-cyberattack/": {
   "title": "N-able Patches Critical Flaw Discovered After Mail Assure Cyberattack",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "defer",
+  "reason": "Incident showed meaningful unauthorized access to operational systems.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Incident showed meaningful unauthorized access to operational systems.",
+    "title": "N-able Mail Assure and SpamExperts cyberattack investigated"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "bc57a7ddc090f269914fd4baee151ff2bf78253d543b86d74ea5675875d8f173",
+  "item": {
+   "id": "8ea38b865fd31218",
+   "title": "N-able Patches Critical Flaw Discovered After Mail Assure Cyberattack",
+   "url": "https://www.securityweek.com/n-able-patches-critical-flaw-disclosed-after-mail-assure-cyberattack/",
+   "date": "2026-11-23",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-23T15:06:49+00:00"
+  }
  },
  "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/": {
   "title": "Hackers Exploit Cisco Expressway Vulnerability Soon After PoC Release",
@@ -41696,18 +42232,19 @@
  "https://www.darkreading.com/vulnerabilities-threats/navigating-vulnerability-hysteria-ai-era": {
   "title": "Navigating Vulnerability Hysteria in the AI Era",
   "source": "Dark Reading",
-  "checked": "2026-11-24T10:57:27+00:00",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Discussion of vulnerability response and warning fatigue, not a new verified incident.",
+  "reason": "The content discusses vulnerability hysteria without any substantive cyber incident being reported.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Discussion of vulnerability response and warning fatigue, not a new verified incident.",
-    "title": "Vulnerability hysteria commentary"
+    "reason": "The content discusses vulnerability hysteria without any substantive cyber incident being reported.",
+    "title": "Navigating Vulnerability Hysteria in the AI Era"
    }
   ],
-  "evidence": "manual_review",
+  "evidence": "summary",
+  "summary_hash": "63fdd05e370a9f804e269e5a27690db7e870ab2bb166b3a1e49f756c3a3167e6",
   "item": {
    "id": "961544351ab6d244",
    "title": "Navigating Vulnerability Hysteria in the AI Era",
@@ -41715,7 +42252,8 @@
    "date": "2026-11-19",
    "source": "Dark Reading",
    "published_at": "2026-11-19T19:46:44+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/tis-the-season-to-be-hacked/": {
   "title": "‘Tis the Season … to Be Hacked!",
@@ -41864,80 +42402,293 @@
  },
  "https://therecord.media/laliga-hacked-spain-top-professional-league-confirms-cyber-incident": {
   "title": "LaLiga hacked: Spain’s top football league confirms theft of fans’ personal data",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident involves confirmed data theft from LaLiga, which affects multiple clubs and fans.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involves confirmed data theft from LaLiga, which affects multiple clubs and fans.",
+    "title": "LaLiga confirms cyber incident affecting fans' personal data",
+    "incident_id": "33926e9c9a9d625c"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "8f1e42057adbb9884c4882d9ea7fee5d12ddb5f2eeee25c66e1a367cc9feae89",
+  "item": {
+   "id": "33926e9c9a9d625c",
+   "title": "LaLiga hacked: Spain’s top football league confirms theft of fans’ personal data",
+   "url": "https://therecord.media/laliga-hacked-spain-top-professional-league-confirms-cyber-incident",
+   "date": "2026-11-24",
+   "source": "The Record",
+   "published_at": "2026-11-24T00:00:00+00:00"
+  }
  },
  "https://www.securityweek.com/gl-inet-routers-kvms-compromised-via-remote-management-service-flaw/": {
   "title": "GL.iNet Routers, KVMs Compromised via Remote Management Service Flaw",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "defer",
+  "reason": "Substantive details about the exploitation of GL.iNet's remote management service provided evidence of a serious incident.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Substantive details about the exploitation of GL.iNet's remote management service provided evidence of a serious incident.",
+    "title": "GL.iNet Remote Management Compromised by Vulnerability"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "aef14e21444afa5d147cbe8db2f6c7af5b4adf896eb7a51db367a51deb74da7f",
+  "item": {
+   "id": "0deb3809956c7075",
+   "title": "GL.iNet Routers, KVMs Compromised via Remote Management Service Flaw",
+   "url": "https://www.securityweek.com/gl-inet-routers-kvms-compromised-via-remote-management-service-flaw/",
+   "date": "2026-11-23",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-23T13:26:22+00:00"
+  }
  },
  "https://www.securityweek.com/azure-flaw-exploited-to-target-secrets-at-norwegian-energy-firms/": {
   "title": "Azure Flaw Exploited to Target Secrets at Norwegian Energy Firms",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident involved significant unauthorized access to sensitive data affecting multiple organizations.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident involved significant unauthorized access to sensitive data affecting multiple organizations.",
+    "title": "Norwegian energy firms targeted through Azure APIM vulnerability",
+    "incident_id": "48dd2a3cc8d92863"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "5fda00549dcdc858adb2697c0110f6ed3f1b512ed63deb8376922ad05bc62b57",
+  "item": {
+   "id": "48dd2a3cc8d92863",
+   "title": "Azure Flaw Exploited to Target Secrets at Norwegian Energy Firms",
+   "url": "https://www.securityweek.com/azure-flaw-exploited-to-target-secrets-at-norwegian-energy-firms/",
+   "date": "2026-11-23",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-23T15:47:40+00:00"
+  }
  },
  "https://www.hipaajournal.com/prism-medical-products-data-breach/": {
   "title": "Prism Medical Products Data Breach Affects 1.3 Million Individuals",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident details document significant unauthorized access to sensitive patient data.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident details document significant unauthorized access to sensitive patient data.",
+    "title": "Prism Medical Products Data Breach Affects 1.3 Million Individuals",
+    "incident_id": "58d662e02d1f9fda"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "a5699e6bb245def9752f1ab02fccb9afdd35ac2b380b6dd983b687a474fd91ef",
+  "item": {
+   "id": "58d662e02d1f9fda",
+   "title": "Prism Medical Products Data Breach Affects 1.3 Million Individuals",
+   "url": "https://www.hipaajournal.com/prism-medical-products-data-breach/",
+   "date": "2026-11-23",
+   "source": "HIPAA Journal",
+   "published_at": "2026-11-23T13:51:26+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/": {
   "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident confirms a breach with significant data exposure from a critical infrastructure provider.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident confirms a breach with significant data exposure from a critical infrastructure provider.",
+    "title": "Korea Electric Power Corporation breaches expose data of 1.5 million",
+    "incident_id": "a50dfe86319a6af0"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "d00ddf4bd84961eb43bee5697381793219cc1c7c65456a405492cadb15af4ee7",
+  "item": {
+   "id": "a50dfe86319a6af0",
+   "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
+   "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
+   "date": "2026-11-23",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-23T20:54:51+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/globetopper-loses-25-million-after-hackers-steal-70k-in-gift-cards/": {
   "title": "GlobeTopper loses $2.5 million after hackers steal $70k in gift cards",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident resulted in significant financial losses and confirmed unauthorized access, warranting inclusion.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident resulted in significant financial losses and confirmed unauthorized access, warranting inclusion.",
+    "title": "GlobeTopper suffers $2.5 million losses from cyberattack",
+    "incident_id": "e98078666047e8cf"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "fdb9ace9615d68655942700b71f4185e7f3ff998a89db1d1b7edfac933cbeba9",
+  "item": {
+   "id": "e98078666047e8cf",
+   "title": "GlobeTopper loses $2.5 million after hackers steal $70k in gift cards",
+   "url": "https://www.bleepingcomputer.com/news/security/globetopper-loses-25-million-after-hackers-steal-70k-in-gift-cards/",
+   "date": "2026-11-23",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-23T16:50:01+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/": {
   "title": "OpenRouter drops AI providers over leaked prompts and secrets",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "defer",
+  "reason": "The incident involved confirmed data exposure and action taken against AI providers, representing meaningful consequences.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "The incident involved confirmed data exposure and action taken against AI providers, representing meaningful consequences.",
+    "title": "OpenRouter removes AI providers after sensitive data leak"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "55f39a83692aa7e00fa9941c33def54a464241d6ef98089968f368ee5f4dc405",
+  "item": {
+   "id": "bebedc9daae1e677",
+   "title": "OpenRouter drops AI providers over leaked prompts and secrets",
+   "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
+   "date": "2026-11-23",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-23T20:00:20+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/": {
   "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Breach resulted in sensitive data exposure and operational impact to customers.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Breach resulted in sensitive data exposure and operational impact to customers.",
+    "title": "Rackspace Spot breach lets hackers access customer Kubernetes secrets",
+    "incident_id": "749e4efd0c773ff6"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "454069ef70c61e78b69d6113cc9c8e7bb5da73bea918720c501ee23971b3a447",
+  "item": {
+   "id": "749e4efd0c773ff6",
+   "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+   "url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
+   "date": "2026-11-21",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-21T22:59:58+00:00"
+  }
  },
  "https://www.securityweek.com/peninsula-energy-halts-trading-after-cyber-incident-hits-us-uranium-mine/": {
   "title": "Peninsula Energy Halts Trading After Cyber Incident Hits US Uranium Mine",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident was confirmed and reported by the affected organization, impacting core operations temporarily.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident was confirmed and reported by the affected organization, impacting core operations temporarily.",
+    "title": "Peninsula Energy halts trading after cyber incident at Wyoming uranium mine",
+    "incident_id": "47052fe79444aaba"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "ef9a0da83732a5e5f08ff84e347016afdff8a9a5e43135f2c00e2fcf234fc50d",
+  "item": {
+   "id": "47052fe79444aaba",
+   "title": "Peninsula Energy Halts Trading After Cyber Incident Hits US Uranium Mine",
+   "url": "https://www.securityweek.com/peninsula-energy-halts-trading-after-cyber-incident-hits-us-uranium-mine/",
+   "date": "2026-11-24",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-24T10:35:04+00:00"
+  }
  },
  "https://www.hipaajournal.com/data-breaches-announced-by-payrhealth-medcom-solutions/": {
   "title": "Data Breaches Announced by PayrHealth & MedCom Solutions",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Substantiated unauthorized access to sensitive patient data.; Substantiated unauthorized access resulting in data exposure.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Substantiated unauthorized access to sensitive patient data.",
+    "title": "PayrHealth suffers data breach affecting patient data",
+    "incident_id": "e0b1c4011d9a46b6"
+   },
+   {
+    "status": "include",
+    "reason": "Substantiated unauthorized access resulting in data exposure.",
+    "title": "MedCom Solutions exposes patient data due to cybersecurity incident",
+    "incident_id": "1372b1e4d70a24db"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "3f82ee6b16c4a6d446786f204338abbd6baa00bc105541895c6ff3bd6722cdee",
+  "item": {
+   "id": "e0b1c4011d9a46b6",
+   "title": "Data Breaches Announced by PayrHealth & MedCom Solutions",
+   "url": "https://www.hipaajournal.com/data-breaches-announced-by-payrhealth-medcom-solutions/",
+   "date": "2026-11-24",
+   "source": "HIPAA Journal",
+   "published_at": "2026-11-24T11:00:41+00:00"
+  }
  },
  "https://www.hipaajournal.com/colla-health-bausch-health-opn-healthcare-data-breaches/": {
   "title": "Colla Health Data Breach Affects 336K Individuals",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Significant breach affecting over 336,000 individuals and involving sensitive patient data.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Significant breach affecting over 336,000 individuals and involving sensitive patient data.",
+    "title": "Colla Health Data Breach Affects 336K Individuals",
+    "incident_id": "cfa7ba7bebb52992"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "787fdc427c6cb11a4b936ac52cc67b303ab9c5ad2fd3a634f881a58b253e17ce",
+  "item": {
+   "id": "cfa7ba7bebb52992",
+   "title": "Colla Health Data Breach Affects 336K Individuals",
+   "url": "https://www.hipaajournal.com/colla-health-bausch-health-opn-healthcare-data-breaches/",
+   "date": "2026-11-24",
+   "source": "HIPAA Journal",
+   "published_at": "2026-11-24T11:00:56+00:00"
+  }
  },
  "https://therecord.media/gta-vi-hacker-arion-kurtaj-released-on-license": {
   "title": "‘Grand Theft Auto VI’ hacker sentenced to seven years, released the same day",
@@ -41966,66 +42717,237 @@
  },
  "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html": {
   "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "The report details the launch of a security tool rather than a confirmed cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The report details the launch of a security tool rather than a confirmed cyber incident.",
+    "title": "OpenAI and Cisco launch AI tool for Linux security"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "a6cfebce6981555b5f09732167e45db9b37c694f62d6eb2f62223de0a2845010",
+  "item": {
+   "id": "ca41da74fcf21c16",
+   "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
+   "url": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
+   "date": "2026-11-24",
+   "source": "The Hacker News",
+   "published_at": "2026-11-24T06:02:57+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html": {
   "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident involves verified unauthorized access through AI agents exploiting a zero-day vulnerability.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involves verified unauthorized access through AI agents exploiting a zero-day vulnerability.",
+    "title": "AI agents exploit MONAI Label zero-day to breach systems",
+    "incident_id": "8da2dc607997f09b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "45d905f9e05959a04d784bfc73a68a458be15694d89cc72b45616333791b63a4",
+  "item": {
+   "id": "8da2dc607997f09b",
+   "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+   "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+   "date": "2026-11-24",
+   "source": "The Hacker News",
+   "published_at": "2026-11-24T06:02:45+00:00"
+  }
  },
  "https://www.securityweek.com/ai-inference-providers-failed-to-detect-hacking-and-prompt-theft-says-dragos/": {
   "title": "AI Inference Providers Failed to Detect Hacking and Prompt Theft, Says Dragos",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "This incident meets the criteria for inclusion as it details unauthorized access and contextualizes the significance of breached data.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This incident meets the criteria for inclusion as it details unauthorized access and contextualizes the significance of breached data.",
+    "title": "AI inference providers breached; customer prompts stolen",
+    "incident_id": "1a31484c79d895e1"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "d8c5bb984409acef5500234d059e8ada8751c7a690ece3fd0f47bb48603fc14f",
+  "item": {
+   "id": "1a31484c79d895e1",
+   "title": "AI Inference Providers Failed to Detect Hacking and Prompt Theft, Says Dragos",
+   "url": "https://www.securityweek.com/ai-inference-providers-failed-to-detect-hacking-and-prompt-theft-says-dragos/",
+   "date": "2026-11-23",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-23T12:16:20+00:00"
+  }
  },
  "https://www.hipaajournal.com/zero-day-flaw-medical-imaging-app-identified-exploited-ai-agents/": {
   "title": "Zero-day Flaw in Medical Imaging App Identified and Exploited AI Agents",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident involved confirmed exploitation of a zero-day vulnerability by AI agents against operational systems in critical educational institutions.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involved confirmed exploitation of a zero-day vulnerability by AI agents against operational systems in critical educational institutions.",
+    "title": "Autonomous AI platform exploited zero-day in medical imaging tool",
+    "incident_id": "a4a2b7c71e12d6ef"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "6c253b4adc3d02641a7ecdfe4cf0cbe40e6df4111cad864c2588f902aeafb9c4",
+  "item": {
+   "id": "a4a2b7c71e12d6ef",
+   "title": "Zero-day Flaw in Medical Imaging App Identified and Exploited AI Agents",
+   "url": "https://www.hipaajournal.com/zero-day-flaw-medical-imaging-app-identified-exploited-ai-agents/",
+   "date": "2026-11-23",
+   "source": "HIPAA Journal",
+   "published_at": "2026-11-23T13:45:46+00:00"
+  }
  },
  "https://www.darkreading.com/endpoint-security/crowdstrike-ai-security-push-zscaler-deal": {
   "title": "CrowdStrike Makes AI Security Push With Blockbuster Zscaler Deal",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "Dark Reading",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "This is not a documented cybersecurity incident; it discusses an acquisition.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This is not a documented cybersecurity incident; it discusses an acquisition.",
+    "title": "CrowdStrike Makes AI Security Push With Blockbuster Zscaler Deal"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "623b32cdb603384bf16b34145013d5f47bee76ce16c8159eb25fe587deb854e5",
+  "item": {
+   "id": "3fe090dc06790909",
+   "title": "CrowdStrike Makes AI Security Push With Blockbuster Zscaler Deal",
+   "url": "https://www.darkreading.com/endpoint-security/crowdstrike-ai-security-push-zscaler-deal",
+   "date": "2026-11-23",
+   "source": "Dark Reading",
+   "published_at": "2026-11-23T21:21:42+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.darkreading.com/cybersecurity-operations/alias-researcher-unmasked-ransomware-actors": {
   "title": "Behind the Alias: How One Researcher Unmasked a Decade of Ransomware Actors",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "Dark Reading",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "Content does not report a specific substantive cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Content does not report a specific substantive cyber incident.",
+    "title": "Behind the Alias: How One Researcher Unmasked a Decade of Ransomware Actors"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "c9951cf1c25ab14ccd0fef60145988e365c347253d63c7503121145c4d99ba85",
+  "item": {
+   "id": "0dba6de435806516",
+   "title": "Behind the Alias: How One Researcher Unmasked a Decade of Ransomware Actors",
+   "url": "https://www.darkreading.com/cybersecurity-operations/alias-researcher-unmasked-ransomware-actors",
+   "date": "2026-11-23",
+   "source": "Dark Reading",
+   "published_at": "2026-11-23T17:45:52+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes": {
   "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "Dark Reading",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Substantiated breach of systems at East Asian universities due to AI agents exploiting a zero-day.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Substantiated breach of systems at East Asian universities due to AI agents exploiting a zero-day.",
+    "title": "AI agents breach East Asian universities via zero-day exploit",
+    "incident_id": "76ffda1800957dfa"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "865114610d355ada6aa87354e8107f099cc184e3ae9716c306fc81ab58036287",
+  "item": {
+   "id": "76ffda1800957dfa",
+   "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
+   "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes",
+   "date": "2026-11-23",
+   "source": "Dark Reading",
+   "published_at": "2026-11-23T16:17:21+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/": {
   "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident involved confirmed unauthorized access and data theft, affecting LaLiga's fan-service users.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involved confirmed unauthorized access and data theft, affecting LaLiga's fan-service users.",
+    "title": "LaLiga confirms data breach exposed fan personal data",
+    "incident_id": "f125d8a2521d4b7e"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e6a42d5bb3024486b83bbfa996664745462576457f1da064e9109cc8e10a69eb",
+  "item": {
+   "id": "f125d8a2521d4b7e",
+   "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
+   "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
+   "date": "2026-11-23",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-23T18:38:40+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/": {
   "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Confirmed vulnerability in Azure API Management led to credential exposure linked to cyberattacks on energy companies.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Confirmed vulnerability in Azure API Management led to credential exposure linked to cyberattacks on energy companies.",
+    "title": "Microsoft Azure API Management flaw exploited to steal credentials",
+    "incident_id": "58440cb16e1f1e8a"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "d0eaebbce956cf97d2850cce91c5ddd9c2700d74c439c7b8ae111365557bf38f",
+  "item": {
+   "id": "58440cb16e1f1e8a",
+   "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
+   "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
+   "date": "2026-11-23",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-23T19:42:20+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/call-center-operator-gets-8-years-for-helping-scam-30-000-americans/": {
   "title": "Call center operator gets 8 years for helping scam 30,000 Americans",
@@ -42054,143 +42976,531 @@
  },
  "https://www.bleepingcomputer.com/news/security/ai-agents-are-creating-a-shared-responsibility-gap/": {
   "title": "AI Agents Are Creating a Shared Responsibility Gap",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "Content is a summary of AI agent responsibility models without reporting a specific incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Content is a summary of AI agent responsibility models without reporting a specific incident.",
+    "title": "Overview of AI Agents and Responsibility Gap"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "9b2b7bfd47dda04ba0ff341e528453dfb2db2fca8400003a2ec78f31a2c93ed3",
+  "item": {
+   "id": "bb864a266e8ac387",
+   "title": "AI Agents Are Creating a Shared Responsibility Gap",
+   "url": "https://www.bleepingcomputer.com/news/security/ai-agents-are-creating-a-shared-responsibility-gap/",
+   "date": "2026-11-23",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-23T15:00:10+00:00"
+  }
  },
  "https://therecord.media/signal-no-screenshots-by-apple-google-operating-systems": {
   "title": "Signal blocks screenshots by Apple, Google operating systems to protect data from AI agents",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "No evidence of unauthorized access or specific security compromise reported.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "No evidence of unauthorized access or specific security compromise reported.",
+    "title": "Signal blocks screenshots by Apple, Google operating systems"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "a1a0ea85b485723f6519b4457a5d5c6ab882b777e0625c507fec9b3f79a83393",
+  "item": {
+   "id": "e9a6f102d0b65c78",
+   "title": "Signal blocks screenshots by Apple, Google operating systems to protect data from AI agents",
+   "url": "https://therecord.media/signal-no-screenshots-by-apple-google-operating-systems",
+   "date": "2026-11-23",
+   "source": "The Record",
+   "published_at": "2026-11-23T18:37:00+00:00"
+  }
  },
  "https://therecord.media/norway-microsoft-cyberattack-equinor": {
   "title": "Norway says hackers exploited Microsoft security flaw to attack energy firms Equinor, Skagerak Energi",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident reflects a significant compromise against key energy sector organizations in Norway.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident reflects a significant compromise against key energy sector organizations in Norway.",
+    "title": "Cyberattacks exploit Microsoft Azure vulnerability impacting Equinor, Skagerak Energi",
+    "incident_id": "fcbdd6eb50849ff1"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "9f3af06ae8ed8393567c89ccd1002020f88052347495c966e5fc1c7aeda2ca82",
+  "item": {
+   "id": "fcbdd6eb50849ff1",
+   "title": "Norway says hackers exploited Microsoft security flaw to attack energy firms Equinor, Skagerak Energi",
+   "url": "https://therecord.media/norway-microsoft-cyberattack-equinor",
+   "date": "2026-11-23",
+   "source": "The Record",
+   "published_at": "2026-11-23T15:45:00+00:00"
+  }
  },
  "https://therecord.media/fbi-cyberattack-data-breach": {
   "title": "FBI reportedly facing second data breach involving National Crime Information Center",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "defer",
+  "reason": "The incident constitutes a significant data breach involving sensitive law enforcement information.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "The incident constitutes a significant data breach involving sensitive law enforcement information.",
+    "title": "FBI data breach involving National Crime Information Center"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "6b5066901f82da7db4e3782d82ddcf429ba495b8eb1bd2f43513c8224c73a78b",
+  "item": {
+   "id": "1b15f192b9f750ff",
+   "title": "FBI reportedly facing second data breach involving National Crime Information Center",
+   "url": "https://therecord.media/fbi-cyberattack-data-breach",
+   "date": "2026-11-23",
+   "source": "The Record",
+   "published_at": "2026-11-23T18:30:00+00:00"
+  }
  },
  "https://therecord.media/crowdstrike-zscaler": {
   "title": "CrowdStrike to purchase Zscaler for $43.9 billion",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "Content is an acquisition announcement, not a cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Content is an acquisition announcement, not a cyber incident.",
+    "title": "CrowdStrike to purchase Zscaler for $43.9 billion"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "48dd76425d5f7c76c6871b1a59603b89cc8484528c528c42f4e9a272c196b85a",
+  "item": {
+   "id": "6ffb2aff9bea7e97",
+   "title": "CrowdStrike to purchase Zscaler for $43.9 billion",
+   "url": "https://therecord.media/crowdstrike-zscaler",
+   "date": "2026-11-23",
+   "source": "The Record",
+   "published_at": "2026-11-23T17:14:00+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html": {
   "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident involves a compromised access key leading to a data exposure that is substantiated by the report.; The incident describes a series of supply chain compromises with confirmed unauthorized access leading to downstream attacks.; The incident is substantiated and involved significant compromise of operational systems with downstream implications.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involves a compromised access key leading to a data exposure that is substantiated by the report.",
+    "title": "Cursor Links Malicious Claude Extension Release to AI Incident",
+    "incident_id": "42157daee7184bad"
+   },
+   {
+    "status": "include",
+    "reason": "The incident describes a series of supply chain compromises with confirmed unauthorized access leading to downstream attacks.",
+    "title": "Cold Relic Exploits Cloud Breaches to Target Organizations",
+    "incident_id": "5b9b8d2fc48f9597"
+   },
+   {
+    "status": "include",
+    "reason": "The incident is substantiated and involved significant compromise of operational systems with downstream implications.",
+    "title": "GL.iNet GoodCloud Exploited to Serve Reverse Shells, Backdoors",
+    "incident_id": "c6a7bcdbc893b315"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "0f79c99b9f125d47236e9946f480d99ede635f7b5a27c1749fb824f060f6190c",
+  "item": {
+   "id": "42157daee7184bad",
+   "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
+   "url": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
+   "date": "2026-11-23",
+   "source": "The Hacker News",
+   "published_at": "2026-11-23T15:10:48+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html": {
   "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident describes a substantive cybersecurity compromise using modified software to enable unauthorized access to networks.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident describes a substantive cybersecurity compromise using modified software to enable unauthorized access to networks.",
+    "title": "Webworm Threat Actor Modifies SoftEther VPN for Covert Access",
+    "incident_id": "74c011bc9ac22338"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "05636d085a3dd42072763f4ecbd3f83451c6418d08c2019acb97366c73f6c443",
+  "item": {
+   "id": "74c011bc9ac22338",
+   "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
+   "url": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
+   "date": "2026-11-23",
+   "source": "The Hacker News",
+   "published_at": "2026-11-23T17:45:15+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html": {
   "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "N-able confirmed unauthorized access to their Hosted Cloud service, affecting operational security.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "N-able confirmed unauthorized access to their Hosted Cloud service, affecting operational security.",
+    "title": "N-able Mail Assure and SpamExperts Hosted Cloud compromised",
+    "incident_id": "88a9a2f7d8cb538b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e51a25ed7cc51c53353b855d1b5ff8d39aa724013aeb92762be82f45764f8718",
+  "item": {
+   "id": "88a9a2f7d8cb538b",
+   "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
+   "url": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
+   "date": "2026-11-23",
+   "source": "The Hacker News",
+   "published_at": "2026-11-23T12:28:09+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/hackers-exploited-glinet-cloud-flaw-to.html": {
   "title": "Hackers Exploited GL.iNet Cloud Flaw to Install Malware on Routers and KVM Devices",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident involved unauthorized access leading to malware installations on operational equipment.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involved unauthorized access leading to malware installations on operational equipment.",
+    "title": "Hackers Exploit GL.iNet Cloud Flaw to Install Malware",
+    "incident_id": "433ffdc8521ad593"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "50a96ee243972cb3f065911886c100354d47ab97abe4abcc335424525d127614",
+  "item": {
+   "id": "433ffdc8521ad593",
+   "title": "Hackers Exploited GL.iNet Cloud Flaw to Install Malware on Routers and KVM Devices",
+   "url": "https://thehackernews.com/2026/11/hackers-exploited-glinet-cloud-flaw-to.html",
+   "date": "2026-11-23",
+   "source": "The Hacker News",
+   "published_at": "2026-11-23T09:04:08+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html": {
   "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident details substantial unauthorized access to critical IT management systems used by MSPs.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident details substantial unauthorized access to critical IT management systems used by MSPs.",
+    "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs",
+    "incident_id": "cd950d8081136893"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "8ef80c7bf86ff75edeab07d048d0d30e31f83999ec50e2c06de5c3144c8b7f3c",
+  "item": {
+   "id": "cd950d8081136893",
+   "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
+   "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
+   "date": "2026-11-23",
+   "source": "The Hacker News",
+   "published_at": "2026-11-23T12:41:04+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html": {
   "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "No confirmed victim impact or organizational consequences reported.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "No confirmed victim impact or organizational consequences reported.",
+    "title": "Critical ASP.NET Anti-CSRF Library Flaw Exploited"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "b19344b06f4f5b60a3bf95f2eabeb674a498d47404bf20b251ae0e18e8b000a0",
+  "item": {
+   "id": "ad474a6a52699163",
+   "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
+   "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
+   "date": "2026-11-23",
+   "source": "The Hacker News",
+   "published_at": "2026-11-23T09:11:56+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html": {
   "title": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident includes multiple unauthorized transactions due to AI-assisted cyber attacks, impacting critical financial sectors.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident includes multiple unauthorized transactions due to AI-assisted cyber attacks, impacting critical financial sectors.",
+    "title": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks",
+    "incident_id": "d8aa2fe875a2e6a5"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "225205d2040dc1a6be27710e714c0a784766bfee26da23ea6af03a854ca514cc",
+  "item": {
+   "id": "d8aa2fe875a2e6a5",
+   "title": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
+   "url": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
+   "date": "2026-11-23",
+   "source": "The Hacker News",
+   "published_at": "2026-11-23T08:24:15+00:00"
+  }
  },
  "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026": {
   "title": "Together AI: A Coding Agent Committed a Credential, and Customer Prompt Samples Were Downloaded",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "AI agent attack tracker",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Documented unauthorized access to stored samples due to a credential leak represents a meaningful incident.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Documented unauthorized access to stored samples due to a credential leak represents a meaningful incident.",
+    "title": "Together AI prompt samples exposed after credential leak",
+    "incident_id": "df9a1b4931dc938e"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "3b58d42936dc91f47c7b5949ffcf911f42c54e845911fa5753d1c1985926f973",
+  "item": {
+   "id": "df9a1b4931dc938e",
+   "title": "Together AI: A Coding Agent Committed a Credential, and Customer Prompt Samples Were Downloaded",
+   "url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
+   "date": "2026-11-21",
+   "source": "AI agent attack tracker"
+  }
  },
  "https://www.darkreading.com/identity-access-management-security/ai-agents-bring-enterprises-new-access-control-challenges": {
   "title": "How Security Vendors Are Tackling Access-Control Challenges for AI Agents",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "Dark Reading",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "Content is a general discussion about security strategies, not a specific cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Content is a general discussion about security strategies, not a specific cyber incident.",
+    "title": "How Security Vendors Are Tackling Access-Control Challenges for AI Agents"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "6330aa756d25127b9af0e8a8a74f3ad42ad039cc2ba7e791c0ea3725bf8864ad",
+  "item": {
+   "id": "7fc7e2023d66e3a2",
+   "title": "How Security Vendors Are Tackling Access-Control Challenges for AI Agents",
+   "url": "https://www.darkreading.com/identity-access-management-security/ai-agents-bring-enterprises-new-access-control-challenges",
+   "date": "2026-11-21",
+   "source": "Dark Reading",
+   "published_at": "2026-11-21T01:31:23+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html": {
   "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "The reported event does not constitute a confirmed incident of unauthorized access; it's more about preventive measures.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The reported event does not constitute a confirmed incident of unauthorized access; it's more about preventive measures.",
+    "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "b8bf661a29ff1d35eb348359605042a48a921eea0d9183238d2c6f2b07a95436",
+  "item": {
+   "id": "4c834b8d7c9a263e",
+   "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS",
+   "url": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
+   "date": "2026-11-21",
+   "source": "The Hacker News",
+   "published_at": "2026-11-21T08:49:20+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html": {
   "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident confirmed through reporting of vulnerability exploitation against a Russian organization.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident confirmed through reporting of vulnerability exploitation against a Russian organization.",
+    "title": "Exploitation of Cisco Expressway vulnerability at a Russian organization",
+    "incident_id": "1c478932fb067e6c"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "cd94fc4ae606b84018dcc94c7c1240e4ee1a58932f507b20ab2c375b3e399a3c",
+  "item": {
+   "id": "1c478932fb067e6c",
+   "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
+   "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
+   "date": "2026-11-21",
+   "source": "The Hacker News",
+   "published_at": "2026-11-21T08:49:13+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html": {
   "title": "GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "No evidence of exploitation or impact from unauthorized activities reported.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "No evidence of exploitation or impact from unauthorized activities reported.",
+    "title": "GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "6caef04696c1cab64acacdebb04d8675c8157a621e2f9e16883476e96e9a0dcf",
+  "item": {
+   "id": "753e957ddaabf9a9",
+   "title": "GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys",
+   "url": "https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html",
+   "date": "2026-11-21",
+   "source": "The Hacker News",
+   "published_at": "2026-11-21T11:05:53+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html": {
   "title": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident involves confirmed exploitation of a critical flaw with significant operational impact.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident involves confirmed exploitation of a critical flaw with significant operational impact.",
+    "title": "AI agents exploit MONAI Label zero-day to breach systems",
+    "incident_id": "eb38233b05cb9918"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "811d63a1a354b96615926f932df6b41fc6f904e0e02bfbe95f8dc41b27ec8520",
+  "item": {
+   "id": "eb38233b05cb9918",
+   "title": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
+   "url": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
+   "date": "2026-11-21",
+   "source": "The Hacker News",
+   "published_at": "2026-11-21T11:03:17+00:00"
+  }
  },
  "https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/": {
   "title": "In Other News: Norwegian Energy Firm Cyberattacks, Supercomputer Hack, New Nightmare Eclipse Exploit",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "defer",
+  "reason": "Confirmed incident involving unauthorized access to sensitive information through a third-party vendor.; Confirmed incident involving unauthorized access to a supercomputer's internal network.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Confirmed incident involving unauthorized access to sensitive information through a third-party vendor.",
+    "title": "Infoblox data accessed via third-party vendor compromise"
+   },
+   {
+    "status": "defer",
+    "reason": "Confirmed incident involving unauthorized access to a supercomputer's internal network.",
+    "title": "Riken supercomputer offline after intrusion detected"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e97056b7c084da07f58c68053505c1e8dfc6c9176098f924cc61bd1b8131909f",
+  "item": {
+   "id": "0fac2d3902aaf66c",
+   "title": "In Other News: Norwegian Energy Firm Cyberattacks, Supercomputer Hack, New Nightmare Eclipse Exploit",
+   "url": "https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/",
+   "date": "2026-11-20",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-20T14:56:23+00:00"
+  }
  },
  "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/": {
   "title": "European Commission Confirms AI-Assisted Cyberattack Disrupted Services",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The European Commission confirmed a significant cyber incident involving AI tools, resulting in service disruptions, making it relevant.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The European Commission confirmed a significant cyber incident involving AI tools, resulting in service disruptions, making it relevant.",
+    "title": "European Commission Confirms AI-Assisted Cyberattack Disrupted Services",
+    "incident_id": "d1cffe70cffece95"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "2f028cca7d08d0526d928633b759d967ee07b629b7440e99ffdae5a4e10a157c",
+  "item": {
+   "id": "d1cffe70cffece95",
+   "title": "European Commission Confirms AI-Assisted Cyberattack Disrupted Services",
+   "url": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/",
+   "date": "2026-11-20",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-20T10:51:42+00:00"
+  }
  },
  "https://www.hipaajournal.com/yuma-regional-medical-center-data-breach-settlement/": {
   "title": "Yuma Regional Medical Center Pays $2.7M to Settle Data Breach Lawsuit",
@@ -42219,198 +43529,817 @@
  },
  "https://www.hipaajournal.com/q3-2026-ransomware-report-healthcare/": {
   "title": "Healthcare Sector Disclosed 100 Ransomware Attacks in Q3",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Substantiated ransomware attack affecting sensitive patient data confirmed.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Substantiated ransomware attack affecting sensitive patient data confirmed.",
+    "title": "Saber Healthcare Group Suffers Major Ransomware Attack",
+    "incident_id": "d18a387969ddbd3d"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "0dee76bb7ae28ce1efca922466ba95df35530d63fc08bf1e38c7d672a2e46719",
+  "item": {
+   "id": "d18a387969ddbd3d",
+   "title": "Healthcare Sector Disclosed 100 Ransomware Attacks in Q3",
+   "url": "https://www.hipaajournal.com/q3-2026-ransomware-report-healthcare/",
+   "date": "2026-11-20",
+   "source": "HIPAA Journal",
+   "published_at": "2026-11-20T16:43:10+00:00"
+  }
  },
  "https://www.hipaajournal.com/office-dcmtk-toolkit-vulnerabilities-nov-2026/": {
   "title": "Vulnerabilities OFFIS DCMTK Toolkit Can Result in Data Deletion",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "No confirmed unauthorized access or actual harm reported from the vulnerabilities.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "No confirmed unauthorized access or actual harm reported from the vulnerabilities.",
+    "title": "OFFIS DCMTK toolkit vulnerabilities may lead to medical data deletion"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "e25d4679ed2198ed7f99460d55a43956861d82ba31218bca1d77cafb2b646ea2",
+  "item": {
+   "id": "63e048645f015a9c",
+   "title": "Vulnerabilities OFFIS DCMTK Toolkit Can Result in Data Deletion",
+   "url": "https://www.hipaajournal.com/office-dcmtk-toolkit-vulnerabilities-nov-2026/",
+   "date": "2026-11-20",
+   "source": "HIPAA Journal",
+   "published_at": "2026-11-20T14:05:38+00:00"
+  }
  },
  "https://www.hipaajournal.com/hipaa-security-risk-analysis-made-easy-for-small-practices/": {
   "title": "OCR Says Most Practices Fail the Security Risk Analysis. Here’s How to Make Yours Easy",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Documented incident showing data exposure in a healthcare setting.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Documented incident showing data exposure in a healthcare setting.",
+    "title": "Top of the World Ranch Treatment Center fined after phishing attack",
+    "incident_id": "9a4cf6a5d8a9c61f"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "1ae902db21a644d4d963ae1deb987aade23543210ba8d162ef2a6e716b13ab51",
+  "item": {
+   "id": "9a4cf6a5d8a9c61f",
+   "title": "OCR Says Most Practices Fail the Security Risk Analysis. Here’s How to Make Yours Easy",
+   "url": "https://www.hipaajournal.com/hipaa-security-risk-analysis-made-easy-for-small-practices/",
+   "date": "2026-11-20",
+   "source": "HIPAA Journal",
+   "published_at": "2026-11-20T13:19:58+00:00"
+  }
  },
  "https://www.hipaajournal.com/access-dental-valley-family-health-care-ochsner-health-data-breach/": {
   "title": "Access Dental Management Breach Affects Over 341,000 Individuals",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Substantiated data breach reported affecting a significant number of individuals with sensitive data.; Confirmed cybersecurity-related outage impacting hospital services, significant consequences for patient care.; Significant patient data exposure incident corroborated with investigation findings.; Substantiated cybersecurity incident affecting patient data and medical records confirmed by investigation findings.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Substantiated data breach reported affecting a significant number of individuals with sensitive data.",
+    "title": "Access Dental Management Breach Affects Over 341,000 Individuals",
+    "incident_id": "550a9113581d02ec"
+   },
+   {
+    "status": "include",
+    "reason": "Confirmed cybersecurity-related outage impacting hospital services, significant consequences for patient care.",
+    "title": "Monadnock Community Hospital Cyber Outage Causes Service Disruption",
+    "incident_id": "4fe46767ad654635"
+   },
+   {
+    "status": "include",
+    "reason": "Significant patient data exposure incident corroborated with investigation findings.",
+    "title": "Ochsner Health Reports Unauthorized Access with Patient Data Exposure",
+    "incident_id": "64584bd1c7e53fcc"
+   },
+   {
+    "status": "include",
+    "reason": "Substantiated cybersecurity incident affecting patient data and medical records confirmed by investigation findings.",
+    "title": "Valley Family Health Care Cybersecurity Incident Leads to Data Breach Notification",
+    "incident_id": "40fecc12d33a12b1"
+   }
+  ],
+  "evidence": "feed_full_text",
+  "summary_hash": "af98d0983850e7bb87d08003b71e846664df5f6a9673d9be74973035e5368cfa",
+  "item": {
+   "id": "550a9113581d02ec",
+   "title": "Access Dental Management Breach Affects Over 341,000 Individuals",
+   "url": "https://www.hipaajournal.com/access-dental-valley-family-health-care-ochsner-health-data-breach/",
+   "date": "2026-11-20",
+   "source": "HIPAA Journal",
+   "published_at": "2026-11-20T14:12:26+00:00"
+  }
  },
  "https://www.darkreading.com/endpoint-security/microsoft-offense-defense-ai-security-tools": {
   "title": "Microsoft Debuts Offensive, Defensive Security Tools for the AI Era",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "Dark Reading",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "Announcement of tools does not constitute an incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Announcement of tools does not constitute an incident.",
+    "title": "Microsoft Debuts Offensive, Defensive Security Tools for the AI Era"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "9ac7b760911f2b2a71df241b9e9fcaf514cb53b951b2854375a287355049ab0d",
+  "item": {
+   "id": "e3931f2f6b656f62",
+   "title": "Microsoft Debuts Offensive, Defensive Security Tools for the AI Era",
+   "url": "https://www.darkreading.com/endpoint-security/microsoft-offense-defense-ai-security-tools",
+   "date": "2026-11-20",
+   "source": "Dark Reading",
+   "published_at": "2026-11-20T13:51:30+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.darkreading.com/cybersecurity-operations/security-words-matter": {
   "title": "In Security, Words Matter as Much as Tools, Maybe More",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "Dark Reading",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "No substantive new incident facts reported.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "No substantive new incident facts reported.",
+    "title": "In Security, Words Matter as Much as Tools, Maybe More"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "9cf7acd588b09fa538408c87af1d7fdc7a4ca067c2432245ac16154b2c06db8d",
+  "item": {
+   "id": "0034021c4d020190",
+   "title": "In Security, Words Matter as Much as Tools, Maybe More",
+   "url": "https://www.darkreading.com/cybersecurity-operations/security-words-matter",
+   "date": "2026-11-20",
+   "source": "Dark Reading",
+   "published_at": "2026-11-20T18:35:40+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.darkreading.com/cyber-risk/what-we-missed-nvidia-ceo-scandal-rocks-ai-industry": {
   "title": "What We Missed: Nvidia CEO Scandal Rocks AI Industry",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "Dark Reading",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "This report contains no substantive new incident facts; merely a summary of news topics.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "This report contains no substantive new incident facts; merely a summary of news topics.",
+    "title": "Nvidia CEO resignation discussed, no new incidents reported"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "bfc2779a7afbaf6156b6a813ed30cff709d0399899cf918ac5436fcb9159a829",
+  "item": {
+   "id": "2cc8c5f291899e55",
+   "title": "What We Missed: Nvidia CEO Scandal Rocks AI Industry",
+   "url": "https://www.darkreading.com/cyber-risk/what-we-missed-nvidia-ceo-scandal-rocks-ai-industry",
+   "date": "2026-11-20",
+   "source": "Dark Reading",
+   "published_at": "2026-11-20T17:04:04+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/": {
   "title": "Vendor data breach exposes Chase, Visa, Mastercard customer info",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident substantiated through reporting on a significant breach affecting major financial services.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident substantiated through reporting on a significant breach affecting major financial services.",
+    "title": "Data breach at third-party vendor exposes Chase, Visa, Mastercard customer info",
+    "incident_id": "f48d0e7cb697eb9b"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "b76570d6a77e1c1eeeb1986a59502916715b7d21be689977161474348fe138b6",
+  "item": {
+   "id": "f48d0e7cb697eb9b",
+   "title": "Vendor data breach exposes Chase, Visa, Mastercard customer info",
+   "url": "https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/",
+   "date": "2026-11-20",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-20T15:58:06+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/still-tracking-company-passwords-in-spreadsheets-youre-flying-blind/": {
   "title": "Still tracking company passwords in spreadsheets? You’re flying blind.",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "The source does not report a confirmed cyber incident with operational or organizational consequences.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The source does not report a confirmed cyber incident with operational or organizational consequences.",
+    "title": "Credential Management Risks in Organizations"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "f9058b36ff3cd6ec6e67d8c8dcec632a7b70aaaf93b5416ac6fd5adf4330a368",
+  "item": {
+   "id": "53b5bc32bcbade54",
+   "title": "Still tracking company passwords in spreadsheets? You’re flying blind.",
+   "url": "https://www.bleepingcomputer.com/news/security/still-tracking-company-passwords-in-spreadsheets-youre-flying-blind/",
+   "date": "2026-11-20",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-20T15:00:10+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/": {
   "title": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "This incident substantively documents the exploitation of an AI agent to compromise operational systems involving unauthorized access.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This incident substantively documents the exploitation of an AI agent to compromise operational systems involving unauthorized access.",
+    "title": "Hackers use autonomous AI tool Cairn to exploit zero-day in medical imaging app",
+    "incident_id": "25cd67662c729ed7"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "9d0d0c703278c8ee9a19063458edac1d0e9a511bdb024e220a5f45149e86e262",
+  "item": {
+   "id": "25cd67662c729ed7",
+   "title": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/",
+   "date": "2026-11-20",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-20T17:30:00+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/": {
   "title": "F5 releases emergency patches for critical BIG-IP RCE flaws",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "Report discusses vulnerabilities and patch releases but does not describe any confirmed incidents of exploitation or actual breaches.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Report discusses vulnerabilities and patch releases but does not describe any confirmed incidents of exploitation or actual breaches.",
+    "title": "F5 Releases Emergency Patches for Critical BIG-IP RCE Flaws"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "910f09c16d416874feb9eaeb4528756db08212b15f4504f1b734e38cedc14856",
+  "item": {
+   "id": "d94e84577e8ecabd",
+   "title": "F5 releases emergency patches for critical BIG-IP RCE flaws",
+   "url": "https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/",
+   "date": "2026-11-20",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-20T10:57:43+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/": {
   "title": "Bell Canada: An \"Agentic Threat Actor\" Stole Enterprise Customer Data From a Pre-Production Maximo System",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "AI agent attack tracker",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Substantiated data breach involving unauthorized access to enterprise data.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Substantiated data breach involving unauthorized access to enterprise data.",
+    "title": "Bell Canada Breach by Agentic Threat Actor",
+    "incident_id": "7d4e74ee2827b833"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "6aab6a7c6be933c68349204e04a72d6d1d211a1a9c7150073fb77142d6ec0e6f",
+  "item": {
+   "id": "7d4e74ee2827b833",
+   "title": "Bell Canada: An \"Agentic Threat Actor\" Stole Enterprise Customer Data From a Pre-Production Maximo System",
+   "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
+   "date": "2026-11-20",
+   "source": "AI agent attack tracker"
+  }
  },
  "https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/": {
   "title": "N-able says recent security breach led to major service outage",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident confirmed by N-able with substantial service impact.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident confirmed by N-able with substantial service impact.",
+    "title": "N-able services outage due to security breach",
+    "incident_id": "efb744ee58f6d0f7"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "10b2dd2ad553fd28e37ad0944e437d656ee48832834a13fb61d0fd918ba548d0",
+  "item": {
+   "id": "efb744ee58f6d0f7",
+   "title": "N-able says recent security breach led to major service outage",
+   "url": "https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/",
+   "date": "2026-11-20",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-20T13:18:36+00:00"
+  }
  },
  "https://therecord.media/west-virginia-legislature-cyberattack": {
   "title": "West Virginia Legislature hit with cyber incident affecting IT systems",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident represents a meaningful compromise affecting operational systems within a critical governmental entity.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident represents a meaningful compromise affecting operational systems within a critical governmental entity.",
+    "title": "West Virginia Legislature hit with cyber incident affecting IT systems",
+    "incident_id": "2cebbd3fa96de829"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "43ba7462667a63e08885e59a6da7b7cbd07da1f01b9d614fe44e57537f14ee69",
+  "item": {
+   "id": "2cebbd3fa96de829",
+   "title": "West Virginia Legislature hit with cyber incident affecting IT systems",
+   "url": "https://therecord.media/west-virginia-legislature-cyberattack",
+   "date": "2026-11-20",
+   "source": "The Record",
+   "published_at": "2026-11-20T21:34:36+00:00"
+  }
  },
  "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach": {
   "title": "Dozens of credit unions hit by supplier breach that went unnoticed for six weeks",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "This incident involved a significant breach affecting multiple organizations, with confirmed access to sensitive data.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This incident involved a significant breach affecting multiple organizations, with confirmed access to sensitive data.",
+    "title": "Supplier Breach Hits 40+ Irish Credit Unions",
+    "incident_id": "c9ec8e70b636a2fa"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "b7f5effb55f0e68fbfbcc5f9a75f9fafe09362bb379638a9a38af6cc8225fbe4",
+  "item": {
+   "id": "c9ec8e70b636a2fa",
+   "title": "Dozens of credit unions hit by supplier breach that went unnoticed for six weeks",
+   "url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach",
+   "date": "2026-11-20",
+   "source": "The Record",
+   "published_at": "2026-11-20T14:24:00+00:00"
+  }
  },
  "https://therecord.media/container-store-restores-systems-cyberattack": {
   "title": "Container Store restores systems after cyberattack",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The attack resulted in operational disruption at The Container Store, fitting incident qualification criteria.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The attack resulted in operational disruption at The Container Store, fitting incident qualification criteria.",
+    "title": "Container Store recovers from cyberattack impacting ordering systems",
+    "incident_id": "6834d081823bac26"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "c2e36a35d5b50cafb49ef503b089df21070884d0687d09b066a8a2eb29c2b212",
+  "item": {
+   "id": "6834d081823bac26",
+   "title": "Container Store restores systems after cyberattack",
+   "url": "https://therecord.media/container-store-restores-systems-cyberattack",
+   "date": "2026-11-20",
+   "source": "The Record",
+   "published_at": "2026-11-20T19:32:00+00:00"
+  }
  },
  "https://therecord.media/chinese-open-weight-AI-use-by-US-companies-house-investigation": {
   "title": "US companies’ use of Chinese open weight AI draws rebuke from House chairmen",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "The report discusses risks but does not describe a specific cybersecurity incident or impact.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The report discusses risks but does not describe a specific cybersecurity incident or impact.",
+    "title": "US companies adopt Chinese open-weight AI models"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "9beb76758e65c19ae066178e4b63af398646797cb0ad4e55fd3606b25104b6e6",
+  "item": {
+   "id": "d1db7e431809a2a1",
+   "title": "US companies’ use of Chinese open weight AI draws rebuke from House chairmen",
+   "url": "https://therecord.media/chinese-open-weight-AI-use-by-US-companies-house-investigation",
+   "date": "2026-11-20",
+   "source": "The Record",
+   "published_at": "2026-11-20T20:25:00+00:00"
+  }
  },
  "https://therecord.media/amazon-research-cairn-ai-university-attacks-possible-zero-day": {
   "title": "Amazon says Chinese hackers used Cairn AI tool to discover apparent zero-day during attack on university",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Incident describes a confirmed breach where AI enabled the detection of a zero-day vulnerability.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident describes a confirmed breach where AI enabled the detection of a zero-day vulnerability.",
+    "title": "Chinese hackers used Cairn AI to discover zero-day vulnerabilities",
+    "incident_id": "8019e44d9801e711"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "ced390a4f8acc5f54aa219abd3fa93b984aaf3262e23229593fe5bc186224052",
+  "item": {
+   "id": "8019e44d9801e711",
+   "title": "Amazon says Chinese hackers used Cairn AI tool to discover apparent zero-day during attack on university",
+   "url": "https://therecord.media/amazon-research-cairn-ai-university-attacks-possible-zero-day",
+   "date": "2026-11-20",
+   "source": "The Record",
+   "published_at": "2026-11-20T17:30:00+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html": {
   "title": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "No confirmed incidents of unauthorized access or operational impact were reported.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "No confirmed incidents of unauthorized access or operational impact were reported.",
+    "title": "WhatsApp security vulnerabilities patched but no confirmed incidents reported"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "fc28ff4cd7cd6ca2e37a8a9dc567c5ee2bd3a66c76ab3fa7c6e8bb88ec217b99",
+  "item": {
+   "id": "bd729d5df947bdd2",
+   "title": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
+   "url": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html",
+   "date": "2026-11-20",
+   "source": "The Hacker News",
+   "published_at": "2026-11-20T17:57:20+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/the-path-to-ai-autonomy-in-soc.html": {
   "title": "The Path to AI Autonomy in the SOC",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "Content is a strategic discussion, not a report of a specific cyber incident.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Content is a strategic discussion, not a report of a specific cyber incident.",
+    "title": "Insights on AI Autonomy in Security Operations Centers"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "3d881ef82f32b838ca248a0ce1c701fecb3f1bd0a00fd39de9d8c5fb3ac89935",
+  "item": {
+   "id": "96d47e22a0cac45d",
+   "title": "The Path to AI Autonomy in the SOC",
+   "url": "https://thehackernews.com/2026/11/the-path-to-ai-autonomy-in-soc.html",
+   "date": "2026-11-20",
+   "source": "The Hacker News",
+   "published_at": "2026-11-20T12:00:00+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html": {
   "title": "SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "exclude",
+  "reason": "No confirmed incident or breach occurred; the report is a warning without substantiated unauthorized access.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "No confirmed incident or breach occurred; the report is a warning without substantiated unauthorized access.",
+    "title": "SonicWall advises replacement of Gen 6 firewalls due to security risks"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "642cefbf5e3dbf1169e8d477b3ff3f26bf0e401be3fac41cf59c06b4902792a1",
+  "item": {
+   "id": "fbd43820607ab6b4",
+   "title": "SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws",
+   "url": "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html",
+   "date": "2026-11-20",
+   "source": "The Hacker News",
+   "published_at": "2026-11-20T10:38:22+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html": {
   "title": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident depicts a real-world malware delivery exploiting advanced techniques, leading to significant user system compromise.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident depicts a real-world malware delivery exploiting advanced techniques, leading to significant user system compromise.",
+    "title": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users",
+    "incident_id": "1bdd21a659f4faf3"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "cff020fe01d2b984f743b26b9b491ed1869e48a7a0fdf48c0b295c6456348ade",
+  "item": {
+   "id": "1bdd21a659f4faf3",
+   "title": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
+   "url": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html",
+   "date": "2026-11-20",
+   "source": "The Hacker News",
+   "published_at": "2026-11-20T07:11:39+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html": {
   "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Substantiated incident with unauthorized access impacting a critical network.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Substantiated incident with unauthorized access impacting a critical network.",
+    "title": "Exploitation of Cisco Expressway vulnerability at a Russian organization",
+    "incident_id": "a05c5c69b0558776"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "eb97ab8b243ff14798ab5fc5f93c74a2d0c6d7c73d32c67732bed773b708b0c2",
+  "item": {
+   "id": "a05c5c69b0558776",
+   "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
+   "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
+   "date": "2026-11-20",
+   "source": "The Hacker News",
+   "published_at": "2026-11-20T10:32:50+00:00"
+  }
  },
  "https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html": {
   "title": "Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The report specifies the integration of AI into a new Android malware framework that actively facilitates unauthorized actions.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The report specifies the integration of AI into a new Android malware framework that actively facilitates unauthorized actions.",
+    "title": "Bazuka Android Malware Integrates AI for Credential Theft",
+    "incident_id": "2bb6f84f59904e64"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "0ae842a79cf228285f4ab36c392ed2bdcfc4e7a44f565f8a644cbc5d516b507d",
+  "item": {
+   "id": "2bb6f84f59904e64",
+   "title": "Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control",
+   "url": "https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html",
+   "date": "2026-11-20",
+   "source": "The Hacker News",
+   "published_at": "2026-11-20T16:58:16+00:00"
+  }
  },
  "https://socradar.io/blog/babidighost-ai-augmented-cybercrime/": {
   "title": "SOCRadar \"BabidiGhost\": A Low-Skilled Operator's Jailbroken Hermes Agent Took 8.6GB From European Public Bodies in Nine Days",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "AI agent attack tracker",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "This incident reports on concrete unauthorized access and data theft facilitated by an AI agent, fitting all criteria for inclusion.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "This incident reports on concrete unauthorized access and data theft facilitated by an AI agent, fitting all criteria for inclusion.",
+    "title": "BabidiGhost AI agent compromises multiple organizations",
+    "incident_id": "12dbb44d46fc0716"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "53dec69a299f5362c50831034d69a7824f2896f17a7bde3c81fce2d91a526bc7",
+  "item": {
+   "id": "12dbb44d46fc0716",
+   "title": "SOCRadar \"BabidiGhost\": A Low-Skilled Operator's Jailbroken Hermes Agent Took 8.6GB From European Public Bodies in Nine Days",
+   "url": "https://socradar.io/blog/babidighost-ai-augmented-cybercrime/",
+   "date": "2026-11-20",
+   "source": "AI agent attack tracker"
+  }
  },
  "https://nebusec.ai/research/meta-muse-credential-exposure/": {
   "title": "NebuSec: A Single Malicious Web Page Let Meta Muse Leak and Rewrite a User's Chats and Memories",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "AI agent attack tracker",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident details validate a severe compromise of an AI system leading to sensitive data exposure.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident details validate a severe compromise of an AI system leading to sensitive data exposure.",
+    "title": "Meta Muse Cloud AI Assistant Data Compromised",
+    "incident_id": "f5d398a06319db6e"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e12a286fa8e17d2dc17fa5249e7082b7ad51ccfa4970ca0ae09ab8cb0c153938",
+  "item": {
+   "id": "f5d398a06319db6e",
+   "title": "NebuSec: A Single Malicious Web Page Let Meta Muse Leak and Rewrite a User's Chats and Memories",
+   "url": "https://nebusec.ai/research/meta-muse-credential-exposure/",
+   "date": "2026-11-20",
+   "source": "AI agent attack tracker"
+  }
  },
  "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/": {
   "title": "Amazon: China-Nexus Actor's Cairn Agents Found a MONAI Label Zero-Day on Their Own and Took Root on University Servers (GHSA-qc22-rmgc-vg94)",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "AI agent attack tracker",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "Substantiated AI agent activity identified actual unauthorized access attempt using a zero-day exploit.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Substantiated AI agent activity identified actual unauthorized access attempt using a zero-day exploit.",
+    "title": "Chinese-nexus actor's AI agents breach university servers via zero-day",
+    "incident_id": "028d3ae9fb35245a"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "dccf0016fbaf8f414699658a2ec2f53423b6e081902b8004cd2d79dae85983d0",
+  "item": {
+   "id": "028d3ae9fb35245a",
+   "title": "Amazon: China-Nexus Actor's Cairn Agents Found a MONAI Label Zero-Day on Their Own and Took Root on University Servers (GHSA-qc22-rmgc-vg94)",
+   "url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
+   "date": "2026-11-20",
+   "source": "AI agent attack tracker"
+  }
  },
  "https://www.securityweek.com/critical-apache-roller-axis-vulnerabilities-exploited-in-attacks/": {
   "title": "Critical Apache Roller, Axis Vulnerabilities Exploited in Attacks",
-  "checked": "2026-11-24T11:23:26+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T11:26:46+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "NameError"
+  "status": "include",
+  "reason": "The incident involves verified exploitation of critical vulnerabilities with substantial impact.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involves verified exploitation of critical vulnerabilities with substantial impact.",
+    "title": "Apache Axis Vulnerability Exploited in Attacks",
+    "incident_id": "f755b56e4c5a2554"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "d2af53f94c4de4f43d488e403ad07ab2e7f8541a727ea28f7b428777eaa763a2",
+  "item": {
+   "id": "f755b56e4c5a2554",
+   "title": "Critical Apache Roller, Axis Vulnerabilities Exploited in Attacks",
+   "url": "https://www.securityweek.com/critical-apache-roller-axis-vulnerabilities-exploited-in-attacks/",
+   "date": "2026-11-19",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-19T12:13:24+00:00"
+  }
+ },
+ "https://www.hipaajournal.com/data-breach-southwire-kern-medical-uchealth/": {
+  "title": "Security Incidents Announced by Southwire, Kern Medical & UCHealth",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-24T11:26:46+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Incident confirmed with reported exposure of sensitive data.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident confirmed with reported exposure of sensitive data.",
+    "title": "Southwire reports data breach impacting employee health plan",
+    "incident_id": "335efbad9fcaf3c0"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "bcac7782d7de13af1898a174a5d549794b2cfbe98db6e72a379e47e9254a4ab3",
+  "item": {
+   "id": "335efbad9fcaf3c0",
+   "title": "Security Incidents Announced by Southwire, Kern Medical & UCHealth",
+   "url": "https://www.hipaajournal.com/data-breach-southwire-kern-medical-uchealth/",
+   "date": "2026-11-19",
+   "source": "HIPAA Journal",
+   "published_at": "2026-11-19T18:35:28+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/cyberattacks-data-breaches/second-norwegian-energy-company-breached": {
+  "title": "Second Norwegian Energy Company Breached in 2 Days",
+  "source": "Dark Reading",
+  "checked": "2026-11-24T11:26:46+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Incident involves unauthorized access with potential operational consequences in a critical sector.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Incident involves unauthorized access with potential operational consequences in a critical sector.",
+    "title": "Second Norwegian Energy Company Breached in 2 Days",
+    "incident_id": "5c22cf2f6e397964"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "49067743dd1f04f1c93d0b6663a30f8eac936bb965fa80156bf6c6660c3e4408",
+  "item": {
+   "id": "5c22cf2f6e397964",
+   "title": "Second Norwegian Energy Company Breached in 2 Days",
+   "url": "https://www.darkreading.com/cyberattacks-data-breaches/second-norwegian-energy-company-breached",
+   "date": "2026-11-19",
+   "source": "Dark Reading",
+   "published_at": "2026-11-19T20:14:15+00:00"
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://www.darkreading.com/cyber-risk/qwen-incidents-self-hosted-ai-models-stronger-steering": {
+  "title": "Qwen Incidents Show Self-Hosted AI Models Need Stronger Steering",
+  "source": "Dark Reading",
+  "checked": "2026-11-24T11:26:46+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "The report discusses significant operational issues related to AI deployment across organizations.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "The report discusses significant operational issues related to AI deployment across organizations.",
+    "title": "Companies deploying AI agents face operational control risks"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "9f4672dbd4b95f31d347e177545d0e89daa8cbec5f8fd43115dee948c8109cb5",
+  "item": {
+   "id": "7590fd40b54ccd96",
+   "title": "Qwen Incidents Show Self-Hosted AI Models Need Stronger Steering",
+   "url": "https://www.darkreading.com/cyber-risk/qwen-incidents-self-hosted-ai-models-stronger-steering",
+   "date": "2026-11-19",
+   "source": "Dark Reading",
+   "published_at": "2026-11-19T22:40:03+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  }
 }

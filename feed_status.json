@@ -1,16 +1,14 @@
 {
- "checked_at": "2026-11-24T11:23:26+00:00",
- "last_success": "2026-11-18T20:38:01+00:00",
- "status": "partial",
- "added": 0,
- "merged": 0,
- "processed": 4,
- "errors": 96,
- "summary_only": 0,
- "retrieval_warnings": 0,
- "error_samples": [
-  "NameError"
- ],
+ "checked_at": "2026-11-24T11:26:46+00:00",
+ "last_success": "2026-11-24T11:26:46+00:00",
+ "status": "ok",
+ "added": 61,
+ "merged": 12,
+ "processed": 100,
+ "errors": 0,
+ "summary_only": 12,
+ "retrieval_warnings": 12,
+ "error_samples": [],
  "model": "gpt-4o-mini",
  "sources": [
   {
@@ -35,6 +33,13 @@
    "newest": "2026-11-24"
   },
   {
+   "source": "CERT-FR",
+   "ok": true,
+   "entries": 40,
+   "candidates": 3,
+   "newest": "2026-11-18"
+  },
+  {
    "source": "The Hacker News",
    "ok": true,
    "entries": 50,
@@ -49,20 +54,6 @@
    "newest": "2026-11-23"
   },
   {
-   "source": "HIPAA Journal",
-   "ok": true,
-   "entries": 10,
-   "candidates": 10,
-   "newest": "2026-11-24"
-  },
-  {
-   "source": "CERT-FR",
-   "ok": true,
-   "entries": 40,
-   "candidates": 3,
-   "newest": "2026-11-18"
-  },
-  {
    "source": "Wiz Research",
    "ok": true,
    "entries": 728,
@@ -70,12 +61,19 @@
    "newest": "2026-11-23"
   },
   {
+   "source": "HIPAA Journal",
+   "ok": true,
+   "entries": 10,
+   "candidates": 10,
+   "newest": "2026-11-24"
+  },
+  {
    "source": "AI agent attack tracker",
    "ok": true,
    "entries": 117
   }
  ],
- "pending": 1279,
+ "pending": 1179,
  "backfill": {
   "SecurityWeek": {
    "page": 67,
