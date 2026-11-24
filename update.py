@@ -273,19 +273,44 @@ def fetch_tracker():
 
 def extract(client, item, tracked):
     # Bound repeated context to recent incidents to control API costs.
-    recent = sorted(tracked, key=lambda t: t.get("last_reported") or t.get("date") or "", reverse=True)[:40]
+    # Search likely duplicates across the full database, maintaining the 40-record cap.
+    def tokens(value):
+        return set(re.findall(r"[a-z0-9]{3,}", str(value).lower())) - {
+            "the", "and", "from", "with", "after", "into", "that", "cyber", "attack",
+            "attacks", "hackers", "security", "data", "breach", "vulnerability", "exploited",
+            "organizations", "multiple", "using", "reported", "users", "systems", "flaw",
+        }
+    q = tokens(item.get("title", "") + " " + item.get("text", "")[:4000])
+    def overlap(t):
+        v = tokens(t.get("victim", ""))
+        h = tokens(t.get("title", ""))
+        return 3 * len(q & v) / max(1, len(v)) + len(q & h) / max(1, len(h))
+    ranked = sorted(tracked, key=overlap, reverse=True)[:25]
+    latest = sorted(tracked, key=lambda t: t.get("last_reported") or t.get("date") or "", reverse=True)
+    recent = list({t["id"]: t for t in ranked + latest[:40]}.values())[:40]
     known = "\n".join(f"{t['id']}: {t['date']} | {t['category']} | {t['victim']} | {t['title']}" for t in recent) or "(none yet)"
     user = (f"Already-tracked incidents:\n{known}\n\n---\n"
             f"Source: {item['source']}\nPublished: {item['date']}\nTitle: {item['title']}\n"
             f"URL: {item['url']}\n\n{item['text']}")
+    extraction_schema = dict(SCHEMA, properties=dict(SCHEMA["properties"], evidence_quote=TEXT),
+                             required=list(SCHEMA["required"]) + ["evidence_quote"])
     resp = client.chat.completions.create(
         model=MODEL,
         # Omit reasoning_effort: the configured model may not support it.
-        messages=[{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": user}],
+        messages=[{"role": "system", "content": SYSTEM_PROMPT + "\nFor each include decision, evidence_quote must be a verbatim passage from the supplied article body, not known-incident context or headline, establishing actual compromise or a confirmed consequential cybersecurity event. Exclude unrelated background links, product announcements, and navigation. Defer if direct evidence is absent. Match likely duplicates even when victim names or dates differ."}, {"role": "user", "content": user}],
         response_format={"type": "json_schema",
-                         "json_schema": {"name": "incident", "strict": True, "schema": {"type":"object","additionalProperties":False,"properties":{"incidents":{"type":"array","items":SCHEMA}},"required":["incidents"]}}},
+                         "json_schema": {"name": "incident", "strict": True, "schema": {"type":"object","additionalProperties":False,"properties":{"incidents":{"type":"array","items":extraction_schema}},"required":["incidents"]}}},
     )
-    return json.loads(resp.choices[0].message.content)["incidents"]
+    records = json.loads(resp.choices[0].message.content)["incidents"]
+    normalized = lambda value: re.sub(r"\s+", " ", value).strip().casefold()
+    article = normalized(item.get("text", ""))
+    for rec in records:
+        quote = normalized(rec.pop("evidence_quote", ""))
+        if rec.get("decision") == "include" and (len(quote) < 20 or quote not in article
+                or rec.get("severity_evidence", {}).get("context") in {"research_only", "unverified"}):
+            rec.update(relevant=False, decision="defer",
+                       decision_reason="No matching direct evidence passage of an actual consequential incident.")
+    return records
 
 
 def geocode(query, cache):
