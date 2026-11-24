@@ -6,6 +6,7 @@ from pathlib import Path
 
 # Follow-up audit of the latest batch. Preserve full records, never modify baseline.
 HOLD_REASONS = {
+    "b1c27b067e00ac4a": "Same October LiteLLM malicious package release as baseline e2e13fe6f7503c25; different publication/event date and victim wording do not establish a separate compromise.",
     "e5d92145d0f8de47": "Chainstack incident overlaps baseline a7cfb57f33eb6570; stored quote supplies no distinct compromise details.",
     "8000e3bea6d7298a": "Second Fireworks incident of October 24 overlaps campaign record 9c255d81510cbc8a (downstream Notion data). Retain one underlying event pending reconciliation.",
     "40183598d66106bb": "Same KeyDrift event and same source already present in baseline 4dc4a1512003044a.",
@@ -83,6 +84,18 @@ def refresh(root, initialize=False):
         for i in held:
             archive[str(i["id"])]={"reason":HOLD_REASONS[str(i["id"])],"record":i}
         archive_path.write_text(json.dumps(archive,ensure_ascii=False,indent=2)+"\n")
+        # Reconcile independently reviewed cross-source duplicates with the canonical
+        # baseline record. Preserve the held record and its evidence in the archive;
+        # attach only the alternate source, not its unverified impact assertions.
+        canonical_by_held_id = {"b1c27b067e00ac4a": "e2e13fe6f7503c25"}
+        by_id = {str(i.get("id")): i for i in incidents}
+        for i in held:
+            canonical_id = canonical_by_held_id.get(str(i.get("id")))
+            canonical = by_id.get(canonical_id)
+            if canonical is not None and canonical_id in baseline and i.get("source_url"):
+                urls = {canonical.get("source_url")} | {s.get("url") for s in canonical.get("more_sources", [])}
+                if i["source_url"] not in urls:
+                    canonical.setdefault("more_sources", []).append({"name": i.get("source_name", "Additional report"), "url": i["source_url"]})
         data_ids={str(i["id"]) for i in held}
         attacks["incidents"]=[i for i in incidents if str(i.get("id")) not in data_ids]
         attacks["last_added"]=max((i.get("added","") for i in attacks["incidents"]),default=None)
