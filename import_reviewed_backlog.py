@@ -25,15 +25,22 @@ def import_reviews(root, reviews, dry_run=True):
     # Validate the entire batch before touching the on-disk database.
     data, pending, decisions, geo = map(copy.deepcopy, (data, pending, decisions, geo))
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    added = merged = excluded = 0
+    added = merged = excluded = skipped = 0
     seen_urls = set()
     for review in reviews:
         if not isinstance(review, dict) or set(review) != {"url", "records"}:
             raise ValueError("Each review must have exactly url and records")
         url, records = review["url"], review["records"]
-        if url in seen_urls or url not in pending:
-            raise ValueError("Duplicate or unknown pending source URL")
+        if url in seen_urls:
+            raise ValueError("Duplicate source URL in review batch")
         seen_urls.add(url)
+        if url not in pending:
+            prior = decisions.get(url, {})
+            if prior.get("evidence") == "manual_review":
+                # Safe to rerun a previously applied batch without duplicating incidents.
+                skipped += 1
+                continue
+            raise ValueError("Unknown pending source URL")
         if not isinstance(records, list) or not records or len(records) > 8:
             raise ValueError("Each review must contain 1 to 8 records")
         item = pending[url]
@@ -77,7 +84,7 @@ def import_reviews(root, reviews, dry_run=True):
                           ("pending.json", pending), ("geocache.json", geo)):
             u.save_json(root / name, obj)
     return {"reviewed_articles": len(seen_urls), "added": added, "merged": merged,
-            "not_published": excluded, "pending_remaining": len(pending), "dry_run": dry_run}
+            "not_published": excluded, "already_imported": skipped, "pending_remaining": len(pending), "dry_run": dry_run}
 
 
 if __name__ == "__main__":
