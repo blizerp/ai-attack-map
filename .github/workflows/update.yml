@@ -3,7 +3,7 @@ name: Update attack map
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/update.yml', 'update.py', 'campaign_100.py', 'campaign_tick.json']
+    paths: ['.github/workflows/update.yml', 'update.py', 'coverage_collector.py', 'test_coverage.py', 'test_selection.py', 'test_site.py', 'campaign_100.py', 'campaign_tick.json']
   schedule:
     - cron: "17 * * * *"      # hourly until target reached
   workflow_dispatch:          # "Run workflow" button for manual runs
