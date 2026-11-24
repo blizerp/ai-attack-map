@@ -12,20 +12,26 @@ on:
 permissions:
   contents: read
 
+# Serialize deployments without cancelling an in-flight publish.
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
   deploy:
+    # Do not deploy on failed upstream runs. Bot commits using GITHUB_TOKEN
+    # do not trigger push workflows, so keep successful workflow_run events.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: read
       pages: write
       id-token: write
+      actions: read
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deploy_first.outputs.page_url || steps.deploy_second.outputs.page_url || steps.deploy_final.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -36,6 +42,38 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
-      - uses: actions/deploy-pages@v4
-        id: deployment
-
+      - name: Verify Pages artifact is indexed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5 6; do
+            if gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts" --jq '.artifacts[] | select(.name == "github-pages" and .expired == false) | .id' | grep -q '[0-9]'; then
+              echo "Pages artifact available in Actions API"
+              exit 0
+            fi
+            echo "Artifact not yet indexed (attempt $attempt/6); retrying in 10s"
+            sleep 10
+          done
+          echo "::error::Pages artifact was uploaded but is not visible via Actions API"
+          exit 1
+      - name: Deploy Pages (first attempt)
+        id: deploy_first
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - name: Wait before retry
+        if: steps.deploy_first.outcome == 'failure'
+        run: sleep 30
+      - name: Deploy Pages (second attempt)
+        if: steps.deploy_first.outcome == 'failure'
+        id: deploy_second
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - name: Wait before final retry
+        if: steps.deploy_first.outcome == 'failure' && steps.deploy_second.outcome == 'failure'
+        run: sleep 60
+      - name: Deploy Pages (final attempt)
+        if: steps.deploy_first.outcome == 'failure' && steps.deploy_second.outcome == 'failure'
+        id: deploy_final
+        uses: actions/deploy-pages@v4
