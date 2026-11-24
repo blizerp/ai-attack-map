@@ -202,17 +202,26 @@ def merge_record(u, data, item, rec, geo, now):
     # Deterministic backstop for repeated reports with nearly identical titles.
     # Do not collapse different victims in multi-event roundups.
     def words(value):
-        return set(re.findall(r"[a-z0-9]+", str(value).casefold())) - {"the","a","an","and","of","in","to","by","for","at"}
+        # Remove only reporting boilerplate; keep entity tokens, including A/B.
+        return set(re.findall(r"[a-z0-9]+", str(value).casefold())) - {"the","an","and","of","in","to","by","for","at","reported","report","reports"}
     def similarity(a, b):
         a, b = words(a), words(b)
         return len(a & b) / max(1, len(a | b))
+    def entity(value):
+        return tuple(re.findall(r"[a-z0-9]+", str(value).casefold()))
     def strong_match(i):
         title_sim = similarity(i.get('title',''), rec.get('title',''))
-        victim_sim = similarity(i.get('victim',''), rec.get('victim',''))
-        same_date = i.get('date') == rec.get('date')
+        victim = entity(i.get('victim',''))
+        same_victim = bool(victim) and victim == entity(rec.get('victim',''))
+        same_date = bool(i.get('date')) and i.get('date') == rec.get('date')
         same_source = i in source_records
-        return ((same_source and title_sim >= .75 and victim_sim >= .5)
-                or (same_date and title_sim >= .8 and victim_sim >= .65))
+        # Exact normalized victim is required for deterministic cross-source merges.
+        # Do not conflate Hospital A and Hospital B or rely on generic labels.
+        generic = {"unknown", "multiple", "unnamed", "unspecified", "various"}
+        if not same_victim or generic.intersection(victim):
+            return False
+        return ((same_source and title_sim >= .75)
+                or (same_date and title_sim >= .8))
     strong = [i for i in data['incidents'] if strong_match(i)]
     deterministic = strong[0] if len(strong) == 1 else None
     dup = by_id.get(rec.get('duplicate_of')) or source_match or id_match or deterministic
@@ -243,6 +252,8 @@ def merge_record(u, data, item, rec, geo, now):
                reported_date=reported, last_reported=reported, evidence_status=rec.get('evidence_status','under_investigation'), lat=None, lon=None)
     if inc['category'] == 'major_cyber':
         inc['ai_role'] = 'AI involvement not confirmed in the reporting.'
+    if rec.get('_evidence'):
+        inc['direct_evidence'] = dict(rec['_evidence'])
     u.update_severity(inc, rec.get('severity_evidence'), item['url'], now)
     u.locate_incident(inc, geo, queries)
     data['incidents'].append(inc)
