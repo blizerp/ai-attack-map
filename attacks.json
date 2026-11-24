@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T18:35:28+00:00",
+ "updated": "2026-11-24T20:22:44+00:00",
  "incidents": [
   {
    "title": "LaLiga fan-services platform breached and personal data stolen",
@@ -2813,7 +2813,7 @@
    "updates": [
     {
      "date": "2026-11-17",
-     "what": "Malicious Python package published to PyPI contained credential stealing functionality targeting Azure and DevOps.",
+     "what": "Malicious versions of a Python package containing a credential stealer were published to PyPI.",
      "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
      "source": "Wiz Research"
     },
@@ -14873,7 +14873,7 @@
     },
     {
      "date": "2026-10-29",
-     "what": "Unauthorized access to Amadeus systems between August 10, 2023, and September 23, 2026, exposed reservation data for about 90,000 JAL customers. Data for another 2,000 customers also included email addresses, phone numbers, passport numbers, nationalities, frequent-flyer numbers, and flight, ticket, and seat numbers.",
+     "what": "Data breach at Amadeus's Passenger Service System exposed data of about 92,000 customers.",
      "url": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
      "source": "BleepingComputer"
     },
@@ -16105,7 +16105,7 @@
    "updates": [
     {
      "date": "2026-10-29",
-     "what": "Attackers compromised Polymarket’s third-party website-monitoring provider, DebugBear, and distributed malicious JavaScript through its infrastructure. The script targeted authenticated Polymarket sessions, attempted to sell positions or transfer users’ cryptocurrency and prediction-market assets, and sent account and transaction data to attacker-controlled infrastructure.",
+     "what": "Malicious JavaScript led to the unauthorized draining of cryptocurrency from Polymarket users.",
      "url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
      "source": "BleepingComputer"
     },
@@ -18562,6 +18562,92 @@
    }
   },
   {
+   "title": "Chainstack Incident Affects Customers due to Unauthorized Access",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Chainstack",
+   "attacker": "Not reported",
+   "what": "Unauthorized access leading to customer data exposure and potential credential theft.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Reportedly correlated with an industry-wide attack targeting AI developers.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The Chainstack incident exposed customer data due to breaches across AI platforms, highlighting a trend of credential abuse in the industry.",
+   "id": "e5d92145d0f8de47",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+   "added": "2026-11-24T20:22:44+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "609feb67bb1a47b3eaba2b599f59c57194690129adc631e63046a54d1fe7f386",
+    "excerpt": "An additional incident is publicly reported: Chainstack (October 29-31). No TTPs or IOCs have been shared."
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Customer data exposure noted in the reports.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Fireworks AI Breach Impacts Customer Data Access",
+   "date": "2026-10-24",
+   "category": "major_cyber",
+   "victim": "Fireworks AI",
+   "attacker": "Not reported",
+   "what": "Breach of Fireworks AI development machines hosted on a third-party cloud provider.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Credential access believed to be the root cause leading to unauthorized access.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The breach impacts customer data through unauthorized access and could affect AI service utilization.",
+   "id": "8000e3bea6d7298a",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+   "added": "2026-11-24T20:22:44+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "97256291d2d28c3606849675814bf1c395fe0cac6d2f5f4fcaed3213fb1bbaa7",
+    "excerpt": "Fireworks AI provided an updated disclosure of a second incident (October 24), based on a breach of a \"third-party cloud"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Customer data access realized due to the incident.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
    "title": "Volt Typhoon used Silent Train in zero-day intrusions",
    "date": "2026-10-28",
    "category": "major_cyber",
@@ -18643,7 +18729,7 @@
     },
     {
      "date": "2026-10-28",
-     "what": "Black Lotus Labs observed Volt Typhoon using the Silent Train framework, a disposable chain of compromised routers and other devices, to conceal attacks. The group exploited at least four zero-day vulnerabilities in enterprise edge and management products, including VeloCloud Orchestrator, Cisco Catalyst SD-WAN, and N-able N-central, enabling credential theft, data exfiltration, persistent remote access, and potential reach into downstream customers.",
+     "what": "Volt Typhoon used the Silent Train framework to exploit zero-day vulnerabilities in attacks targeting sensitive systems.",
      "url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/",
      "source": "BleepingComputer"
     },
@@ -18711,7 +18797,7 @@
    "updates": [
     {
      "date": "2026-10-28",
-     "what": "An unauthorized party accessed Sony Network Communications’ So-net member database and compromised 2,585,481 customer records containing names, phone numbers, email addresses, user IDs, birth dates, gender, and internet connection IDs. A further 54,401 email addresses were exposed with account passwords; no banking or payment-card data was exposed.",
+     "what": "Unauthorized access to user database exposed records",
      "url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
      "source": "BleepingComputer"
     },
@@ -18875,15 +18961,15 @@
    "updates": [
     {
      "date": "2026-10-29",
-     "what": "CrowdStrike reported that Warp Panda exploited VMware ESXi CVE-2026-41709 as a zero-day in early 2026 to reduce audit-trail visibility. The intrusions involved access through internet-facing edge devices, pivots into VMware vCenter environments, and deployment of BRICKSTORM and SharpStorm malware; some related intrusions harvested cloud session tokens and registered rogue MFA devices.",
-     "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html",
-     "source": "The Hacker News"
+     "what": "Hackers exploited a VMware ESXi vulnerability (CVE-2026-41709) as a zero-day",
+     "url": "https://www.securityweek.com/chinese-hackers-quietly-used-low-severity-esxi-logging-flaw-as-zero-day/",
+     "source": "SecurityWeek"
     },
     {
      "date": "2026-10-29",
-     "what": "Attackers used administrator access to exploit CVE-2026-41709 in VMware ESXi to reduce audit-trail visibility during intrusions. CrowdStrike also reported deployment of BrickStorm, TetanusStorm, SharpStorm, DualGauge, and GuestConduit malware after pivots to VMware vCenter.",
-     "url": "https://www.securityweek.com/chinese-hackers-quietly-used-low-severity-esxi-logging-flaw-as-zero-day/",
-     "source": "SecurityWeek"
+     "what": "Exploitation of CVE-2026-41709 reduced audit trail visibility, enabling unaudited operations.",
+     "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html",
+     "source": "The Hacker News"
     }
    ]
   },
@@ -18909,19 +18995,19 @@
    "lat": null,
    "lon": null,
    "severity": {
-    "level": "significant",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "Cisco confirmed exploitation in the wild, but the available reporting provides no victim-specific evidence, scale, or confirmed outage. The exploit path can cause device restarts, but actual disruption was not established.",
+    "reason": "The vulnerability allows remote attackers to force a restart of the device, leading to significant service disruption.",
     "evidence": {
      "context": "real_world",
-     "service": "unknown",
-     "reach": "unknown",
-     "damage": "privileged_access",
-     "essential": "unknown",
+     "service": "major",
+     "reach": "multiple",
+     "damage": "none",
+     "essential": "disrupted",
      "financial": "unknown"
     },
     "source_url": "https://www.securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august/",
-    "assessed_at": "2026-11-09T07:04:55+00:00",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
     "method": "reported-impact-v1"
    },
    "more_sources": [
@@ -18943,15 +19029,15 @@
     },
     {
      "date": "2026-10-29",
-     "what": "Unauthenticated attackers exploited CVE-2026-76418 through the SSL remote-access VPN service when specified secondary-authentication conditions were present. Successful exploitation could force vulnerable firewalls to reload and cause denial of service.",
-     "url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
-     "source": "The Hacker News"
+     "what": "A vulnerability in Cisco's Secure Firewall ASA and FTD software was actively exploited.",
+     "url": "https://www.securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august/",
+     "source": "SecurityWeek"
     },
     {
      "date": "2026-10-29",
-     "what": "Attackers exploited CVE-2026-76418 in the Remote Access SSL-VPN service without authentication. A malicious connection request could force vulnerable firewalls to restart; successful VPN login was not required.",
-     "url": "https://www.securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august/",
-     "source": "SecurityWeek"
+     "what": "Exploitation of a high-severity vulnerability in Cisco ASA and FTD VPN software",
+     "url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
+     "source": "The Hacker News"
     }
    ]
   },
@@ -19019,18 +19105,6 @@
     },
     {
      "date": "2026-10-29",
-     "what": "Attackers exploited the authentication-bypass vulnerability CVE-2026-20127 to obtain privileged access to Cisco Catalyst SD-WAN Controllers and Managers, add rogue peers, and deploy the KeyDrift framework. KeyDrift could execute commands, intercept decrypted control traffic, extract IPsec key material, and stage or transmit data.",
-     "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/",
-     "source": "BleepingComputer"
-    },
-    {
-     "date": "2026-10-29",
-     "what": "Attackers exploited CVE-2026-20127 to gain administrative access to Cisco Catalyst SD-WAN Controllers, Managers, or Validators and install KeyDrift malware. Its components hooked SD-WAN processes to collect AES-256 traffic-key material, provide a backdoor, and potentially transmit encrypted records, although Talos could not establish whether keys were sent.",
-     "url": "https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html",
-     "source": "The Hacker News"
-    },
-    {
-     "date": "2026-10-29",
      "what": "UAT-11473 exploited CVE-2026-20127, an authentication-bypass flaw in Cisco SD-WAN Catalyst Controller instances, to gain unauthorized access and install the KeyDrift framework, including PolyFlame and LittleFilch components. Cisco said KeyDrift could persist, intercept decrypted control traffic, extract control-session metadata and data-plane keying material, and automate exfiltration.",
      "url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
      "source": "The Hacker News"
@@ -19040,6 +19114,18 @@
      "what": "Attackers exploited Cisco SD-WAN vulnerability CVE-2026-20127 without credentials, bypassed peering authentication, obtained administrator rights, and deployed KeyDrift malware on SD-WAN controllers. KeyDrift provided persistent access, siphoned encryption keying material, and could relay commands to other hosts.",
      "url": "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/",
      "source": "SecurityWeek"
+    },
+    {
+     "date": "2026-10-29",
+     "what": "Exploitation of a max-severity vulnerability in Cisco SD-WAN Controllers",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/",
+     "source": "BleepingComputer"
+    },
+    {
+     "date": "2026-10-29",
+     "what": "Custom malware called KeyDrift exploits Cisco SD-WAN systems to steal encryption keys.",
+     "url": "https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html",
+     "source": "The Hacker News"
     }
    ],
    "locations": [
@@ -19264,6 +19350,14 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks"
+    }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "Attacker-controlled Hermes AI agent compromised multiple ministry systems",
+     "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+     "source": "Wiz Research"
     }
    ]
   },
@@ -20095,6 +20189,14 @@
      "entity": "",
      "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks"
     }
+   ],
+   "updates": [
+    {
+     "date": "2026-10-29",
+     "what": "AI utilized to scan for vulnerabilities and exploit APIs across multiple organizations",
+     "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+     "source": "Wiz Research"
+    }
    ]
   },
   {
@@ -20418,6 +20520,224 @@
    }
   },
   {
+   "title": "Cisco SD-WAN Zero-Day Exploitation Tied to Volt Typhoon’s ‘Silent Train’ Network",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Organizations using Cisco SD-WAN control systems",
+   "attacker": "Not reported",
+   "what": "Attackers exploited a critical Cisco SD-WAN vulnerability to deploy KeyDrift malware for harvesting encryption keys.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Attackers gained unauthorized remote access to SD-WAN controllers, enabling them to alter configurations and exfiltrate sensitive information.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "Critical vulnerability in Cisco SD-WAN systems exploited by sophisticated malware could allow significant breaches in multiple sectors including defense and telecommunications.",
+   "id": "40183598d66106bb",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/",
+   "added": "2026-11-24T20:22:44+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 19.5938015,
+   "lon": -155.4283701,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "c186aaa345b39c132569435044a8b209df5b9be6e3dec0d7ee45e8e3daacce15",
+    "excerpt": "The vulnerability, CVE-2026-20127, has a CVSS score of 10 and was disclosed in February 2026. Without needing credentials, attackers can"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Malware embedded in legitimate processes to access and siphon off encryption keys indicates serious potential compromise.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 19.5938015,
+     "lon": -155.4283701,
+     "label": "Hawaii",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/"
+    },
+    {
+     "lat": 36.7014631,
+     "lon": -118.755997,
+     "label": "California",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/"
+    },
+    {
+     "lat": 31.2638905,
+     "lon": -98.5456116,
+     "label": "Texas",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/"
+    }
+   ]
+  },
+  {
+   "title": "AI agent attack compromised Mexican government institutions",
+   "date": "2025",
+   "category": "major_cyber",
+   "victim": "Mexican government institutions",
+   "attacker": "Not reported",
+   "what": "AI-assisted breach utilized patterns of benign actions to conduct data theft",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Bad actors used AI agents to break into systems under the guise of legitimate actions, hiding the malicious intent behind the sequence of events.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "This incident illustrates the evolving threat of AI agents being used for sophisticated cyberattacks, complicating traditional defenses.",
+   "id": "4bf14ff9a2059f14",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/cisco-open-sources-quarry-to-catch-ai-agent-attacks-hidden-in-harmless-steps/",
+   "added": "2026-11-24T20:22:44+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 23.6585116,
+   "lon": -102.0077097,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "cbaf16788905281f139bd166d23b69859f144ecfd10efbd1c1f2cf73629185c1",
+    "excerpt": "In 2025, Claude Code was used by bad actors in two campaigns: one against around 30 organizations, and a second"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Confirmed unauthorized access utilizing AI agents to mask the true intent of data theft.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/cisco-open-sources-quarry-to-catch-ai-agent-attacks-hidden-in-harmless-steps/",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 23.6585116,
+     "lon": -102.0077097,
+     "label": "Mexico",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/cisco-open-sources-quarry-to-catch-ai-agent-attacks-hidden-in-harmless-steps/"
+    }
+   ]
+  },
+  {
+   "title": "Alpine Linux Rebuilds GitLab Server After Exploit Attempt",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Alpine Linux",
+   "attacker": "Not reported",
+   "what": "Alpine attempted to exploit GitLab vulnerability CVE-2026-97229",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Attacker sent crafted CI configurations causing server crashes and potentially attempted to execute code.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The incident illustrates the importance of timely updates and fixes for vulnerabilities, as even attempted exploits can lead to significant operational responses.",
+   "id": "a250e26db6d2c877",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/attacker-tried-to-exploit-alpine-linuxs.html",
+   "added": "2026-11-24T20:22:44+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "7f7c75013b9257216eb07ee23cc1da42e31874cf44063acbb1062b18de801ec3",
+    "excerpt": "On 26 October, Alpine found that the server was still vulnerable after its 22 October upgrade to 19.3.6. The next"
+   },
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Alpine found that the server was potentially compromised and took extensive measures to rebuild and secure it as a precaution.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/attacker-tried-to-exploit-alpine-linuxs.html",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "26,400 Cloud and AI Credentials Found in Public Gitee Repositories",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "Numerous organizations using exposed credentials",
+   "attacker": "Not reported",
+   "what": "Developers left sensitive credentials in public repositories on Gitee, providing attackers with potential unauthorized access.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The leaked credentials include keys for cloud and AI services, exposing various organizations to risks such as anomalous charges and data loss.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Exposure of 26,400 valid credentials indicates significant risk for many organizations, allowing potential unauthorized access to multiple services.",
+   "id": "d24b286bd0afa7a2",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html",
+   "added": "2026-11-24T20:22:44+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 46.4093693,
+   "lon": -0.528511,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "a18ab0c45ca9179356fe51be728685e8f97dbeac8090f2c16bb8beb432d62a52",
+    "excerpt": "26,400 credentials that developers left in public code on Gitee, a Chinese code-hosting service, still worked when a researcher tested"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The incident involves potentially compromised access to critical cloud and AI services.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 46.4093693,
+     "lon": -0.528511,
+     "label": "Gitee",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html"
+    }
+   ]
+  },
+  {
    "title": "UNM Health ransomware attack diverted ambulances",
    "date": "2026-10-26",
    "category": "major_cyber",
@@ -20537,19 +20857,19 @@
    "lat": 52.9534193,
    "lon": -1.1496461,
    "severity": {
-    "level": "significant",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "Researchers observed real compromises across more than 100 PeopleSoft customers, including persistence, backdoors, internal tunneling, and root/System-level command execution. The reporting does not establish campaign-wide service disruption, confirmed data exfiltration, or financial loss.",
+    "reason": "Actual breaches reported through abuse of the SSRF and remote code execution on vulnerable servers.",
     "evidence": {
      "context": "real_world",
      "service": "unknown",
      "reach": "multiple",
-     "damage": "privileged_access",
-     "essential": "unknown",
+     "damage": "sensitive_data",
+     "essential": "none",
      "financial": "unknown"
     },
-    "source_url": "https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/",
-    "assessed_at": "2026-10-27T06:10:01+00:00",
+    "source_url": "https://thehackernews.com/2026/10/shinyhunters-exploited-oracle.html",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
     "method": "reported-impact-v1"
    },
    "locations": [
@@ -20585,7 +20905,7 @@
     },
     {
      "date": "2026-10-28",
-     "what": "Attackers exploited a pre-patch PeopleSoft zero-day chain involving SSRF, trusted loopback access to the Environment Management Hub, and paths to remote code execution. Mandiant reported an initial campaign from May 27 to June 9, followed by a larger September wave; attackers used URL encoding to bypass some web-application-firewall rules and deployed web shells or other code-execution mechanisms.",
+     "what": "Exploited a critical chained zero-day vulnerability in Oracle PeopleSoft leading to unauthorized access and potential data theft.",
      "url": "https://thehackernews.com/2026/10/shinyhunters-exploited-oracle.html",
      "source": "The Hacker News"
     }
@@ -20647,7 +20967,7 @@
    "updates": [
     {
      "date": "2026-10-27",
-     "what": "GMO detected an intrusion into Onamae Desktop Cloud on October 20. The company said data belonging to GMO and customers was stolen and later published online; up to 26,739 customer servers may have had malware installed, and MT4/MT5 credentials and trading-account details may have been exposed.",
+     "what": "Unauthorized access to Onamae Desktop Cloud, followed by data publication and ransomware threat.",
      "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
      "source": "BleepingComputer"
     },
@@ -20711,7 +21031,7 @@
     },
     {
      "date": "2026-10-28",
-     "what": "Attackers exploited CVE-2026-48356, known as PolyShell, to breach hundreds of stores and inject a malicious loader through Magento CMS blocks. The loader could fetch and execute attacker-controlled payloads, but no next-stage malware was recovered.",
+     "what": "Attackers leveraged vulnerabilities in Adobe Commerce and Magento to breach stores and inject malicious loaders.",
      "url": "https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html",
      "source": "The Hacker News"
     }
@@ -20775,7 +21095,7 @@
    "updates": [
     {
      "date": "2026-10-28",
-     "what": "Attackers obtained copies of Blueberry Pediatrics patient data through exploited Metabase instances at Blueberry and its prescription-service provider Photon. Exposed information included names, dates of birth, health-plan names and policy numbers, medical records, dates of service, medical codes, charges, and, for Photon-affected individuals, contact, member-ID, and medication information.",
+     "what": "Incident involved a third-party tool, Metabase, leading to data theft.",
      "url": "https://www.hipaajournal.com/blueberry-pediatrics-photon-data-breach/",
      "source": "HIPAA Journal"
     }
@@ -20831,7 +21151,7 @@
    "updates": [
     {
      "date": "2026-10-28",
-     "what": "Attackers exploited vulnerabilities in unauthenticated government services and interconnected systems, making about 11 million data-access requests. Preliminary findings indicate information linked to approximately 750,000 identification numbers was extracted, potentially including identity, health, benefits, pension, driver’s-license, vehicle-ownership and financial-related records; bank-card information was reportedly not compromised.",
+     "what": "Hackers exploited vulnerabilities to access government personal data and disrupt services.",
      "url": "https://therecord.media/moldova-investigates-possible-foreign-involvement-cyberattacks",
      "source": "The Record"
     }
@@ -21130,6 +21450,92 @@
      "source": "BleepingComputer"
     }
    ]
+  },
+  {
+   "title": "PHP vulnerabilities exploited in critical network infrastructure",
+   "date": "2026-10-28",
+   "category": "major_cyber",
+   "victim": "Organizations using vulnerable network infrastructure devices",
+   "attacker": "Not reported",
+   "what": "Threat actors are exploiting vulnerabilities affecting a range of network devices including firewalls and VPNs.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "PHP flaws known as 'PHP2Shell' put the web management interfaces of various devices at risk, allowing unauthorized access and further attacks.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The vulnerabilities impact critical network infrastructure, potentially allowing attackers to gain initial access to enterprise networks.",
+   "id": "c61f357272763219",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/infratrust-report-warns-of-exploited-flaws-in-critical-network-infrastructure/",
+   "added": "2026-11-24T20:22:44+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-28",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "33484ea4f11f371bfd35e35521725423da1b494674e5ebdaa71e57b80be01679",
+    "excerpt": "Threat actors target these devices because they can provide initial access to corporate environments or serve as a springboard for"
+   },
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Threat actors actively exploiting PHP vulnerabilities pose a significant risk to network infrastructure.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "unknown",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/infratrust-report-warns-of-exploited-flaws-in-critical-network-infrastructure/",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Langflow Remote Code Execution Vulnerability Exploited",
+   "date": "2026-10-28",
+   "category": "on_ai_system",
+   "victim": "Organizations using Langflow",
+   "attacker": "Not reported",
+   "what": "Critical vulnerabilities allowed unprivileged attackers to bypass authentication and execute code remotely.",
+   "ai_role": "Not reported",
+   "why": "Two critical flaws in Langflow without account requirements allowed arbitrary code execution.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "This could lead to unauthorized access to systems using Langflow, severely compromising sensitive data.",
+   "id": "a8be3b8eec59e8e1",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
+   "added": "2026-11-24T20:22:44+00:00",
+   "reported_date": "2026-10-28",
+   "last_reported": "2026-10-28",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "27efaf73a1995be08775154c0203dbb488d5dc128e0a6dea6cff5f0d3975284d",
+    "excerpt": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code, IBM"
+   },
+   "severity": {
+    "level": "unknown",
+    "status": "preliminary",
+    "reason": "Attackers could exploit vulnerabilities to gain unauthorized access and execute code, impacting organizations using Langflow.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "unknown",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "Hackers compromised Dahua surveillance cameras in Ukraine",
@@ -21801,25 +22207,25 @@
    "lat": null,
    "lon": null,
    "severity": {
-    "level": "limited",
+    "level": "severe",
     "status": "preliminary",
-    "reason": "Warp detected and mitigated the operation within hours, with no reported service outage. Agent traces and telemetry were potentially exposed, but the reporting does not establish theft of source code, prompts, credentials, or other sensitive data.",
+    "reason": "Sensitive data relating to the operations of AI agents was leaked, though specific details on the type of data exposed were not provided.",
     "evidence": {
      "context": "real_world",
-     "service": "limited",
+     "service": "none",
      "reach": "multiple",
-     "damage": "unknown",
+     "damage": "sensitive_data",
      "essential": "none",
      "financial": "unknown"
     },
     "source_url": "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/",
-    "assessed_at": "2026-10-27T22:20:35+00:00",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
     "method": "reported-impact-v1"
    },
    "updates": [
     {
      "date": "2026-10-27",
-     "what": "An attacker exploited a third-party vendor in Warp’s infrastructure, exposing potentially affected users’ agent traces, decision logs, and telemetry. Warp estimated roughly 1% of users may have been impacted and said the investigation remains ongoing; exposure of source code, prompts, credentials, or other sensitive details was not established.",
+     "what": "Agent decision logs and telemetry data leaked due to a compromise of a third-party vendor.",
      "url": "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/",
      "source": "BleepingComputer"
     }
@@ -22363,6 +22769,112 @@
     "assessed_at": "2026-11-19T07:33:31+00:00",
     "method": "reported-impact-v1"
    }
+  },
+  {
+   "title": "UNM Health System cyber incident diverted ambulances and closed clinics",
+   "date": "2026-10-26",
+   "category": "major_cyber",
+   "victim": "University of New Mexico Health System",
+   "attacker": "Not reported",
+   "what": "Cybersecurity issue forced the hospital to divert emergency services and close clinics.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The hospital was left without an emergency department capable of treating serious injuries, affecting patient care.",
+   "where": "Albuquerque, New Mexico, USA",
+   "major_impact": "essential_service_disruption",
+   "significance": "The UNM Health System is vital, handling over 900,000 outpatient and 100,000 emergency visits annually. Disruption in its services could severely impact healthcare access for a large population.",
+   "id": "25fc86adddd45273",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/cybersecurity-issue-forces-a-major-new-mexico-hospital-to-divert-patients-and-close-clinics/",
+   "added": "2026-11-24T20:22:44+00:00",
+   "reported_date": "2026-10-27",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": 35.0841034,
+   "lon": -106.650985,
+   "direct_evidence": {
+    "outcome": "confirmed_consequential_event",
+    "quote_sha256": "2940783f1461b863dd6446fadc3e510ffa2dfbf0ee7e3018a03041b3c3e76ffd",
+    "excerpt": "A major hospital network in New Mexico raced to fix a cybersecurity issue on Monday that forced it to send"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The incident forced the diversion of ambulances and closure of clinics, impacting emergency care services.",
+    "evidence": {
+     "context": "real_world",
+     "service": "major",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "disrupted",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/cybersecurity-issue-forces-a-major-new-mexico-hospital-to-divert-patients-and-close-clinics/",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 35.0841034,
+     "lon": -106.650985,
+     "label": "Albuquerque, New Mexico, USA",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/cybersecurity-issue-forces-a-major-new-mexico-hospital-to-divert-patients-and-close-clinics/"
+    }
+   ]
+  },
+  {
+   "title": "Vulnerabilities in EPICS Particle-Accelerator Control Software",
+   "date": "2026-10-27",
+   "category": "major_cyber",
+   "victim": "Global users of EPICS Base",
+   "attacker": "Not reported",
+   "what": "Exploitation of vulnerabilities in EPICS Base could lead to service disruption or unauthorized access.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Successful exploitation could cause denial-of-service, memory corruption, sensitive information disclosure, or arbitrary code execution.",
+   "where": "Worldwide",
+   "major_impact": "essential_service_disruption",
+   "significance": "The vulnerabilities pose significant risks to critical manufacturing infrastructure globally, potentially affecting essential services.",
+   "id": "93d7838ec5b0c895",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01",
+   "added": "2026-11-24T20:22:44+00:00",
+   "reported_date": "2026-10-27",
+   "last_reported": "2026-10-27",
+   "evidence_status": "confirmed",
+   "lat": -33.8938107,
+   "lon": 151.2621478,
+   "direct_evidence": {
+    "outcome": "confirmed_consequential_event",
+    "quote_sha256": "4278894a014dfbe5a999ef9483ac02ef74766633c669c5d468b5cf2f6d2d81f5",
+    "excerpt": "Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition, corrupt memory, disclose sensitive information, or"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The flaws could lead to operational downtime and unauthorized access, impacting critical infrastructure services.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "none",
+     "essential": "disrupted",
+     "financial": "none"
+    },
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01",
+    "assessed_at": "2026-11-24T20:22:44+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": -33.8938107,
+     "lon": 151.2621478,
+     "label": "Worldwide",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01"
+    }
+   ]
   },
   {
    "title": "Gheist campaign stole secrets through compromised GitHub tokens",
@@ -48106,7 +48618,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-24T18:35:28+00:00",
+ "last_added": "2026-11-24T20:22:44+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }
