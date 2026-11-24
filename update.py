@@ -22,7 +22,7 @@ SEEN_PATH = os.path.join(ROOT, "seen.json")
 GEO_PATH = os.path.join(ROOT, "geocache.json")
 LOCATION_REGISTRY_PATH = os.path.join(ROOT, "location_registry.json")
 
-MODEL = os.environ.get("OPENAI_MODEL") or "gpt-4o-mini"
+MODEL = os.environ.get("OPENAI_INGEST_MODEL") or "gpt-4o-mini"
 MAX_NEW = int(os.environ.get("MAX_NEW_ITEMS") or 150)
 UA = "ai-attack-map/1.0 (github pages hobby project)"
 # Re-screen currently available articles once when expanding the selection policy.
@@ -272,7 +272,7 @@ def fetch_tracker():
 
 
 def extract(client, item, tracked):
-    known = "\n".join(f"{t['id']}: {t['date']} | {t['category']} | {t['victim']} | {t['title']}" for t in tracked) or "(none yet)"
+    # Bound repeated context: sending the entire historical map with every article\n    # grows costs indefinitely. Prefer recent incidents for duplicate matching.\n    recent = sorted(tracked, key=lambda t: t.get("last_reported") or t.get("date") or "", reverse=True)[:40]\n    known = "\n".join(f"{t['id']}: {t['date']} | {t['category']} | {t['victim']} | {t['title']}" for t in recent) or "(none yet)"
     user = (f"Already-tracked incidents:\n{known}\n\n---\n"
             f"Source: {item['source']}\nPublished: {item['date']}\nTitle: {item['title']}\n"
             f"URL: {item['url']}\n\n{item['text']}")
