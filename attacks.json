@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T22:27:59+00:00",
+ "updated": "2026-11-24T22:45:52+00:00",
  "incidents": [
   {
    "title": "LaLiga fan-services platform breached and personal data stolen",
@@ -24994,49 +24994,6 @@
    ]
   },
   {
-   "title": "LiteLLM release pipeline compromised, malicious package released",
-   "date": "2026-10-21",
-   "category": "on_ai_system",
-   "victim": "LiteLLM users",
-   "attacker": "Not reported",
-   "what": "Threat actors compromised LiteLLM release pipeline to publish malicious packages containing backdoor and credential-stealer.",
-   "ai_role": "Not reported",
-   "why": "The attacker used compromised GitHub credentials to disable protections and publish a malicious version of LiteLLM.",
-   "where": "No fixed location",
-   "major_impact": "supply_chain_compromise",
-   "significance": "The incident allowed threat actors to harvest sensitive credentials from multiple environments via a contaminated package release, impacting potentially many organizations.",
-   "id": "b1c27b067e00ac4a",
-   "source_name": "The Hacker News",
-   "source_url": "https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html",
-   "added": "2026-11-24T22:27:59+00:00",
-   "reported_date": "2026-10-22",
-   "last_reported": "2026-10-22",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "direct_evidence": {
-    "outcome": "confirmed_compromise",
-    "quote_sha256": "c6b0f6dc64bcf4833d8ab9fa8347b8ae45ca58d68038a4aa2797666b65baed38",
-    "excerpt": "LiteLLM on Wednesday disclosed that threat actors compromised \"multiple independent security controls\" to push a malicious version of the Python"
-   },
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "The malware harvested sensitive credentials from affected installations, demonstrating a direct compromise of users' systems.",
-    "evidence": {
-     "context": "real_world",
-     "service": "substantial",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html",
-    "assessed_at": "2026-11-24T22:27:59+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
    "id": "287f1bf365268250",
    "title": "OpenAI Agents Disabled and Concealed Misalignment Monitoring",
    "date": "2026-10-21",
@@ -27518,6 +27475,59 @@
    ]
   },
   {
+   "title": "Burger King Japan app breach exposes 11 million member records",
+   "date": "2026-10-02",
+   "category": "major_cyber",
+   "victim": "Burger King Japan",
+   "attacker": "Not reported",
+   "what": "Breach accessing member data for BK Japan app.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Unauthorized access to system holding app member data occurred.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Exposed personal data of a vast number of users can lead to identity theft and fraud risks.",
+   "id": "4a10c0433fb3fb47",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/in-other-news-ics-sniper-attack-hacking-xworm-malware-operators-250k-chrome-exploit/",
+   "added": "2026-11-24T22:45:52+00:00",
+   "reported_date": "2026-10-16",
+   "last_reported": "2026-10-16",
+   "evidence_status": "confirmed",
+   "lat": 36.5748441,
+   "lon": 139.2394179,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "fda5d590ac0a46a556be95bc58a01b5897a77c9a28170b0ff99caba50b32c675",
+    "excerpt": "BK Japan, which runs Burger King’s official app in Japan, says hackers accessed the system holding the app’s member data"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The app breach resulted in the exposure of personal information such as names, email addresses, and phone numbers, impacting approximately 11 million records.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "none"
+    },
+    "source_url": "https://www.securityweek.com/in-other-news-ics-sniper-attack-hacking-xworm-malware-operators-250k-chrome-exploit/",
+    "assessed_at": "2026-11-24T22:45:52+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 36.5748441,
+     "lon": 139.2394179,
+     "label": "Japan",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/in-other-news-ics-sniper-attack-hacking-xworm-malware-operators-250k-chrome-exploit/"
+    }
+   ]
+  },
+  {
    "id": "6fb8f41fae003348",
    "title": "AI Agents Accessed Indian Organizations’ Live Systems Without Detection",
    "date": "2026-10-15",
@@ -28091,7 +28101,7 @@
     },
     {
      "date": "2026-10-15",
-     "what": "CenterPoint Energy confirmed that customer information was stolen from its systems. The compromised data included names, addresses, Social Security numbers, and driver’s license numbers; Texas authorities reported 1,062,060 affected residents.",
+     "what": "Personal information of over 1 million individuals compromised in a data breach.",
      "url": "https://www.securityweek.com/centerpoint-energy-data-breach-impacts-1-million-texans/",
      "source": "SecurityWeek"
     }
@@ -48165,7 +48175,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-24T22:27:59+00:00",
+ "last_added": "2026-11-24T22:45:52+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }
