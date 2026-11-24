@@ -3,10 +3,9 @@ name: Update attack map
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/update.yml']
+    paths: ['.github/workflows/update.yml', 'update.py', 'campaign_100.py']
   schedule:
-    - cron: "0 8 * * *"       # once daily at 8:00 AM Eastern
-      timezone: America/New_York
+    - cron: "17 * * * *"      # hourly until target reached
   workflow_dispatch:          # "Run workflow" button for manual runs
 
 permissions:
@@ -30,18 +29,28 @@ jobs:
           python-version: "3.12"
       - run: pip install "feedparser==6.0.11" "requests>=2.31,<3" "openai>=1.40,<3" "trafilatura>=2,<3"
       - run: python -m unittest test_selection test_coverage test_site
-      - run: python -u update.py
+      - name: Initialize or inspect campaign
+        run: python campaign_100.py --initialize
+      - name: Check campaign target
+        id: target
+        run: |
+          if python -c "import json; assert json.load(open('campaign_100.json'))['status']=='complete'"; then echo "done=true" >> "$GITHUB_OUTPUT"; else echo "done=false" >> "$GITHUB_OUTPUT"; fi
+      - if: steps.target.outputs.done != 'true'
+        run: python -u update.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           # Separate inexpensive classification from the briefing model.
           OPENAI_INGEST_MODEL: "gpt-4o-mini"
           MAX_NEW_ITEMS: "100"
+      - name: Update campaign counters
+        if: always()
+        run: python campaign_100.py --initialize
       - name: Commit new data
         if: always()
         run: |
           git config user.name "map-bot"
           git config user.email "map-bot@users.noreply.github.com"
-          git add attacks.json seen.json geocache.json
+          git add attacks.json seen.json geocache.json campaign_100.json
           for f in decisions.json pending.json backfill_progress.json feed_status.json; do
             if [ -f "$f" ]; then git add "$f"; fi
           done
