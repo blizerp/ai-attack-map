@@ -1,386 +1,41 @@
 [
   {
-    "url": "https://www.securityweek.com/stepsecurity-secures-20-million-to-expand-supply-chain-protection/",
+    "url": "https://therecord.media/european-commission-confirms-cyberattack-using-ai",
     "records": [
       {
         "relevant": false,
-        "category": "major_cyber",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
+        "category": "using_ai",
+        "attacker": "Unidentified attackers",
+        "ai_role": "The European Commission confirmed attackers used a publicly available AI tool; the specific tool and autonomy level were not confirmed.",
         "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
+        "where": "Brussels, Belgium (institutional headquarters; not a confirmed attack origin)",
+        "major_impact": "essential_service_disruption",
+        "impact_substantiated": true,
+        "geocode_query": "Brussels, Belgium",
         "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Company financing announcement, not an incident.",
-        "evidence_status": "unverified",
+        "location_queries": [
+          {
+            "query": "Brussels, Belgium",
+            "basis": "Vendor headquarters (approximate)"
+          }
+        ],
+        "decision": "include",
+        "decision_reason": "Commission confirmed an AI-assisted cyber campaign and precautionary service shutdowns; subsequent reporting confirmed EU Academy user data leakage.",
+        "evidence_status": "confirmed",
         "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
+          "context": "real_world",
+          "service": "substantial",
+          "reach": "single",
+          "damage": "sensitive_data",
           "essential": "unknown",
           "financial": "unknown",
-          "reason": "No substantiated compromise reported."
+          "reason": "Confirmed disruption of Commission applications and reported EU Academy user-data leak; full scale and attribution unresolved."
         },
-        "title": "StepSecurity funding announcement",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "No substantiated new compromise described in the supplied article excerpt.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.securityweek.com/the-governance-gap-in-open-weight-ai-and-what-to-do-about-it/",
-    "records": [
-      {
-        "relevant": false,
-        "category": "major_cyber",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "General risk commentary without a documented compromise.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No substantiated compromise reported."
-        },
-        "title": "Open-weight AI governance commentary",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "No substantiated new compromise described in the supplied article excerpt.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.securityweek.com/f5-patches-critical-nginx2root-flaws-as-poc-exploits-go-public/",
-    "records": [
-      {
-        "relevant": false,
-        "category": "major_cyber",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Patch and proof-of-concept announcement without documented real-world compromise.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No substantiated compromise reported."
-        },
-        "title": "F5 patches NGINX2Root vulnerabilities",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "No substantiated new compromise described in the supplied article excerpt.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/",
-    "records": [
-      {
-        "relevant": false,
-        "category": "major_cyber",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Probing and attempts alone do not establish successful compromise.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No substantiated compromise reported."
-        },
-        "title": "Java4Shell probing and exploitation attempts",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "No substantiated new compromise described in the supplied article excerpt.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html",
-    "records": [
-      {
-        "relevant": false,
-        "category": "major_cyber",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Vulnerability analysis without a documented external victim.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No substantiated compromise reported."
-        },
-        "title": "phpAfterShell technical explanation",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "No substantiated new compromise described in the supplied article excerpt.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html",
-    "records": [
-      {
-        "relevant": false,
-        "category": "major_cyber",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Security patch announcement without a documented compromise.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No substantiated compromise reported."
-        },
-        "title": "PHP critical vulnerability patches",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "No substantiated new compromise described in the supplied article excerpt.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
-    "records": [
-      {
-        "relevant": false,
-        "category": "major_cyber",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Proof-of-concept research and patches, not a documented victim incident.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No substantiated compromise reported."
-        },
-        "title": "Ruby vulnerability fixes",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "No substantiated new compromise described in the supplied article excerpt.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html",
-    "records": [
-      {
-        "relevant": false,
-        "category": "major_cyber",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Controlled proof-of-concept demonstrations, not documented external harm.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No substantiated compromise reported."
-        },
-        "title": "Database RCE research demonstration",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "No substantiated new compromise described in the supplied article excerpt.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/",
-    "records": [
-      {
-        "relevant": false,
-        "category": "major_cyber",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Defensive guidance, not a newly reported incident.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No substantiated compromise reported."
-        },
-        "title": "Ransomware warning signs guidance",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "No substantiated new compromise described in the supplied article excerpt.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/",
-    "records": [
-      {
-        "relevant": false,
-        "category": "major_cyber",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Patch announcement without evidence of actual compromise.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No substantiated compromise reported."
-        },
-        "title": "Drupal vulnerability patch",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "No substantiated new compromise described in the supplied article excerpt.",
-        "significance": "Not reported"
-      }
-    ]
-  },
-  {
-    "url": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/",
-    "records": [
-      {
-        "relevant": false,
-        "category": "major_cyber",
-        "attacker": "Not reported",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "none",
-        "impact_substantiated": false,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "exclude",
-        "decision_reason": "Unverified attacker claim; later Nvidia response reported no evidence of compromise.",
-        "evidence_status": "unverified",
-        "severity_evidence": {
-          "context": "unknown",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "No substantiated compromise reported."
-        },
-        "title": "Nvidia investigating ransomware claims",
-        "date": "2026-11-19",
-        "victim": "Not reported",
-        "what": "No substantiated new compromise described in the supplied article excerpt.",
-        "significance": "Not reported"
+        "title": "AI-assisted cyber campaign disrupted European Commission services",
+        "date": "2026-10-22",
+        "victim": "European Commission",
+        "what": "A cyber campaign detected October 22 led the Commission to take several applications offline. Subsequent reporting confirmed a personal-data leak affecting EU Academy users; the investigation remains ongoing.",
+        "significance": "AI-assisted campaign affected European Commission applications and EU Academy user data; full scope remains under investigation."
       }
     ]
   }
