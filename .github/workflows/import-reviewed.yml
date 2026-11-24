@@ -1,0 +1,40 @@
+name: Import reviewed backlog
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-map
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "feedparser==6.0.11" "requests>=2.31,<3" "openai>=1.40,<3" "trafilatura>=2,<3"
+      - run: python -m unittest test_selection test_coverage test_site
+      - name: Validate reviewed batch
+        run: |
+          test -f reviewed_backlog.json || { echo "No reviewed_backlog.json; nothing to publish"; exit 1; }
+          python import_reviewed_backlog.py reviewed_backlog.json
+      - name: Apply reviewed batch
+        run: python import_reviewed_backlog.py reviewed_backlog.json --apply
+      - name: Commit verified incidents
+        run: |
+          git config user.name "map-bot"
+          git config user.email "map-bot@users.noreply.github.com"
+          git add attacks.json pending.json decisions.json geocache.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish reviewed backlog incidents"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
