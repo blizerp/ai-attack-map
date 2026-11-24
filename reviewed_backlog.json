@@ -1,6 +1,6 @@
 [
   {
-    "url": "https://www.securityweek.com/gl-inet-routers-kvms-compromised-via-remote-management-service-flaw/",
+    "url": "https://therecord.media/austrian-foreign-ministry-says-website-hacked",
     "records": [
       {
         "relevant": true,
@@ -8,85 +8,90 @@
         "attacker": "Unidentified attackers",
         "ai_role": "AI involvement not confirmed in the reporting.",
         "why": "Not reported",
-        "where": "Location of affected organization; attack origin unconfirmed",
+        "where": "Vienna, Austria (ministry; website hosting location unconfirmed)",
         "major_impact": "critical_network_intrusion",
+        "impact_substantiated": true,
+        "geocode_query": "Vienna, Austria",
+        "duplicate_of": null,
+        "location_queries": [
+          {
+            "query": "Vienna, Austria",
+            "basis": "Reported affected area"
+          }
+        ],
+        "decision": "include",
+        "decision_reason": "Ministry disclosure corroborated by Reuters and The Record; no public evidence of data exfiltration or attribution.",
+        "evidence_status": "confirmed",
+        "severity_evidence": {
+          "context": "real_world",
+          "service": "unknown",
+          "reach": "single",
+          "damage": "limited",
+          "essential": "unknown",
+          "financial": "unknown",
+          "reason": "Unauthorized access and viewing of work contact details; theft and operational disruption not established."
+        },
+        "title": "Austrian Foreign Ministry website accessed without authorization",
+        "date": "2026-11-12",
+        "victim": "Austrian Federal Ministry for European and International Affairs",
+        "what": "Unauthorized access to an externally operated ministry website occurred November 12–13. An investigation confirmed viewing of staff names and official contact details, but did not establish theft or compromise of citizens' data.",
+        "significance": "Confirmed intrusion into government web infrastructure with staff directory information accessed."
+      }
+    ]
+  },
+  {
+    "url": "https://www.bleepingcomputer.com/news/security/globetopper-loses-25-million-after-hackers-steal-70k-in-gift-cards/",
+    "records": [
+      {
+        "relevant": true,
+        "category": "major_cyber",
+        "attacker": "Unidentified attackers",
+        "ai_role": "AI involvement not confirmed in the reporting.",
+        "why": "Not reported",
+        "where": "No fixed attack location",
+        "major_impact": "essential_service_disruption",
         "impact_substantiated": true,
         "geocode_query": null,
         "duplicate_of": null,
         "location_queries": [],
         "decision": "include",
-        "decision_reason": "Reported real-world compromise; impact qualified to source evidence.",
-        "evidence_status": "under_investigation",
+        "decision_reason": "Parent company iQSTEL SEC Form 8-K confirms access, shutdown, credential theft and gift-card redemption.",
+        "evidence_status": "confirmed",
         "severity_evidence": {
           "context": "real_world",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "privileged_access",
+          "service": "major",
+          "reach": "single",
+          "damage": "sensitive_data",
           "essential": "unknown",
-          "financial": "unknown",
-          "reason": "Reported malware deployment to managed devices; number of affected installations not established."
+          "financial": "limited",
+          "reason": "Platform interruption over several days and $70,000 in gift-card redemptions; $2.5 million is an upper estimate of foregone revenue, not verified loss."
         },
-        "title": "GL.iNet remote management compromise",
-        "date": "2026-11-23",
-        "victim": "GL.iNet GoodCloud-managed routers and KVMs",
-        "what": "Reporting describes attackers abusing a GoodCloud remote management flaw to install malware on connected routers and KVM devices. Firmware replacement is required for cleanup.",
-        "significance": "Reporting describes attackers abusing a GoodCloud remote management flaw to install malware on connected routers and KVM devices. Firmware replacement is required for cleanup."
+        "title": "GlobeTopper compromised; gift cards redeemed and platform disrupted",
+        "date": "2026-10-22",
+        "victim": "GlobeTopper LLC",
+        "what": "GlobeTopper disclosed unauthorized platform access, theft of business customer API keys, and approximately $70,000 in unauthorized gift-card redemption. Systems were taken offline October 23 and commercial operations resumed in stages November 1. A $2.5 million estimate represents potentially unrealized revenue, not confirmed net loss.",
+        "significance": "Confirmed disruption of a B2B prepaid and gift-card platform with credential exposure and unrecoverable unauthorized redemptions."
       }
     ]
   },
   {
-    "url": "https://www.securityweek.com/azure-flaw-exploited-to-target-secrets-at-norwegian-energy-firms/",
+    "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
     "records": [
       {
         "relevant": true,
-        "category": "major_cyber",
+        "category": "on_ai_system",
         "attacker": "Unidentified attackers",
         "ai_role": "AI involvement not confirmed in the reporting.",
         "why": "Not reported",
-        "where": "Location of affected organization; attack origin unconfirmed",
-        "major_impact": "critical_network_intrusion",
-        "impact_substantiated": true,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "include",
-        "decision_reason": "Reported real-world compromise; impact qualified to source evidence.",
-        "evidence_status": "under_investigation",
-        "severity_evidence": {
-          "context": "real_world",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "unknown",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "Reported exploitation against real organizations; successful exfiltration and disruption not established."
-        },
-        "title": "Azure API Management vulnerability exploited against Norwegian energy firms",
-        "date": "2026-11-23",
-        "victim": "Norwegian energy companies and other affected organizations",
-        "what": "Reporting describes exploitation of an Azure API Management flaw to target secrets at Norwegian energy organizations and additional sectors. The full extent of stolen material is not established.",
-        "significance": "Reporting describes exploitation of an Azure API Management flaw to target secrets at Norwegian energy organizations and additional sectors. The full extent of stolen material is not established."
-      }
-    ]
-  },
-  {
-    "url": "https://www.hipaajournal.com/prism-medical-products-data-breach/",
-    "records": [
-      {
-        "relevant": true,
-        "category": "major_cyber",
-        "attacker": "Unidentified attackers",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "Location of affected organization; attack origin unconfirmed",
+        "where": "No fixed attack location",
         "major_impact": "large_scale_data_theft",
         "impact_substantiated": true,
         "geocode_query": null,
         "duplicate_of": null,
         "location_queries": [],
         "decision": "include",
-        "decision_reason": "Reported real-world compromise; impact qualified to source evidence.",
-        "evidence_status": "under_investigation",
+        "decision_reason": "Together AI disclosure reported by BleepingComputer; distinct from other providers' incidents.",
+        "evidence_status": "confirmed",
         "severity_evidence": {
           "context": "real_world",
           "service": "unknown",
@@ -94,48 +99,13 @@
           "damage": "sensitive_data",
           "essential": "unknown",
           "financial": "unknown",
-          "reason": "Disclosed unauthorized access involving potentially sensitive patient data for more than 1.3 million individuals; actual misuse not established."
+          "reason": "Stored prompt samples downloaded without authorization; affected customer count not established."
         },
-        "title": "Prism Medical Products patient data breach",
-        "date": "2026-10-30",
-        "victim": "Prism Medical Products patients",
-        "what": "Prism Medical Products disclosed unauthorized access to patient data with more than 1.3 million individuals potentially affected. The full extent of exposure remains under investigation.",
-        "significance": "Prism Medical Products disclosed unauthorized access to patient data with more than 1.3 million individuals potentially affected. The full extent of exposure remains under investigation."
-      }
-    ]
-  },
-  {
-    "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
-    "records": [
-      {
-        "relevant": true,
-        "category": "major_cyber",
-        "attacker": "Unidentified attackers",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "Location of affected organization; attack origin unconfirmed",
-        "major_impact": "large_scale_data_theft",
-        "impact_substantiated": true,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "include",
-        "decision_reason": "Reported real-world compromise; impact qualified to source evidence.",
-        "evidence_status": "under_investigation",
-        "severity_evidence": {
-          "context": "real_world",
-          "service": "unknown",
-          "reach": "unknown",
-          "damage": "sensitive_data",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "Confirmed access to internal data systems with approximately 1.5 million potentially affected people; exact data theft scope not established."
-        },
-        "title": "KEPCO breach exposes data of approximately 1.5 million",
-        "date": "2026-11-23",
-        "victim": "Korea Electric Power Corporation",
-        "what": "KEPCO confirmed an attacker breached its internal network and accessed two systems containing customer, employee, and contractor information. Reported affected population is approximately 1.5 million.",
-        "significance": "KEPCO confirmed an attacker breached its internal network and accessed two systems containing customer, employee, and contractor information. Reported affected population is approximately 1.5 million."
+        "title": "Together AI prompt samples exposed through compromised credential",
+        "date": "2026-07-01",
+        "victim": "Together AI customers using affected hosted models",
+        "what": "Together AI disclosed that an AI coding agent exposed a repository credential, enabling an unauthorized party to download stored prompt samples from June and July. OpenRouter removed affected providers after Dragos canary testing found leakage.",
+        "significance": "AI inference customer prompts were accessed without authorization after a repository credential exposure."
       }
     ]
   }
