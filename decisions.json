@@ -41230,17 +41230,51 @@
  },
  "https://www.securityweek.com/php-patches-seven-critical-rce-vulnerabilities/": {
   "title": "PHP Patches Seven Critical RCE Vulnerabilities",
-  "checked": "2026-11-19T20:43:30+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T10:49:04+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "RateLimitError (HTTP 429)"
+  "status": "exclude",
+  "reason": "Patch advisory describes potential exploitation, not a confirmed victim compromise.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Patch advisory describes potential exploitation, not a confirmed victim compromise.",
+    "title": "PHP patches seven critical vulnerabilities"
+   }
+  ],
+  "evidence": "manual_review",
+  "item": {
+   "id": "2905d00a89c4d45d",
+   "title": "PHP Patches Seven Critical RCE Vulnerabilities",
+   "url": "https://www.securityweek.com/php-patches-seven-critical-rce-vulnerabilities/",
+   "date": "2026-11-19",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-19T15:54:20+00:00"
+  }
  },
  "https://www.securityweek.com/nvidia-responds-to-gentlemen-ransomware-claim/": {
   "title": "Nvidia Responds to Gentlemen Ransomware Claim",
-  "checked": "2026-11-19T20:43:30+00:00",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T10:49:04+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "RateLimitError (HTTP 429)"
+  "status": "exclude",
+  "reason": "Attacker claim unverified; Nvidia reports no indication of compromise.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "Attacker claim unverified; Nvidia reports no indication of compromise.",
+    "title": "Nvidia responds to unverified ransomware claim"
+   }
+  ],
+  "evidence": "manual_review",
+  "item": {
+   "id": "82655b19b8af4cea",
+   "title": "Nvidia Responds to Gentlemen Ransomware Claim",
+   "url": "https://www.securityweek.com/nvidia-responds-to-gentlemen-ransomware-claim/",
+   "date": "2026-11-19",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-19T14:17:32+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/": {
   "title": "VMware patches vCenter zero-day exploited in attacks since September",
@@ -41388,5 +41422,53 @@
   "policy": "meaningful-v2",
   "status": "error",
   "reason": "RateLimitError (HTTP 429)"
+ },
+ "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/": {
+  "title": "Hackers Exploit Cisco Expressway Vulnerability Soon After PoC Release",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T10:49:04+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Researcher-documented unauthorized access to operational systems.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Researcher-documented unauthorized access to operational systems.",
+    "title": "Cisco Expressway devices compromised at Russian organization"
+   }
+  ],
+  "evidence": "manual_review",
+  "item": {
+   "id": "99c2241f1a9ed825",
+   "title": "Hackers Exploit Cisco Expressway Vulnerability Soon After PoC Release",
+   "url": "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/",
+   "date": "2026-11-19",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-19T13:12:20+00:00"
+  }
+ },
+ "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/": {
+  "title": "Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT",
+  "source": "SecurityWeek",
+  "checked": "2026-11-24T10:49:04+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Researcher-documented unauthorized access to operational systems.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Researcher-documented unauthorized access to operational systems.",
+    "title": "China-linked group exploited VMware vCenter zero-day"
+   }
+  ],
+  "evidence": "manual_review",
+  "item": {
+   "id": "859252b312e3d82e",
+   "title": "Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT",
+   "url": "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/",
+   "date": "2026-11-19",
+   "source": "SecurityWeek",
+   "published_at": "2026-11-19T19:21:06+00:00"
+  }
  }
 }

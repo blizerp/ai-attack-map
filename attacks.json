@@ -2,6 +2,92 @@
  "updated": "2026-11-18T20:38:01+00:00",
  "incidents": [
   {
+   "title": "Cisco Expressway devices compromised at Russian organization",
+   "date": "2026-11-19",
+   "category": "major_cyber",
+   "victim": "Unnamed Russian organization",
+   "attacker": "Unattributed attackers",
+   "what": "F6 reported compromise of two internet-exposed Cisco Expressway devices and lateral access to internal cluster nodes, with root privileges and reconnaissance tooling.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Not reported",
+   "where": "Russia (organization; precise site not reported)",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Privileged access to collaboration gateways and internal nodes; tools prepared to seek credentials and move laterally.",
+   "id": "99c2241f1a9ed825",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/",
+   "added": "2026-11-24T10:49:04+00:00",
+   "reported_date": "2026-11-19",
+   "last_reported": "2026-11-19",
+   "evidence_status": "confirmed",
+   "lat": 64.6863136,
+   "lon": 97.7453061,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Root-level compromise of Cisco Expressway devices and internal cluster access; exfiltration not established.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "single",
+     "damage": "privileged_access",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/",
+    "assessed_at": "2026-11-24T10:49:04+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 64.6863136,
+     "lon": 97.7453061,
+     "label": "Russia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/"
+    }
+   ]
+  },
+  {
+   "title": "China-linked group exploited VMware vCenter zero-day",
+   "date": "2026-09-01",
+   "category": "major_cyber",
+   "victim": "Multiple unnamed organizations",
+   "attacker": "Armory Castle (Mandiant attribution; suspected China-linked)",
+   "what": "Mandiant documented exploitation of CVE-2026-123890 to obtain vCenter administrative access, extract signing material and credentials, deploy backdoors, and reach ESXi infrastructure.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Not reported",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Confirmed enterprise virtualization compromise and theft of authentication material across multiple investigations.",
+   "id": "859252b312e3d82e",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/",
+   "added": "2026-11-24T10:49:04+00:00",
+   "reported_date": "2026-11-19",
+   "last_reported": "2026-11-19",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Multiple investigated intrusions with stolen credentials, keys, and backdoors; service disruption not reported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "unknown",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/",
+    "assessed_at": "2026-11-24T10:49:04+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
    "title": "Fireworks-linked breach exposed thousands of Uber drivers’ license data",
    "date": "2026-10-09 to 2026-10-13",
    "category": "major_cyber",
