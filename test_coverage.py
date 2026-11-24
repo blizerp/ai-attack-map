@@ -132,5 +132,16 @@ class CoverageTests(unittest.TestCase):
         self.assertEqual((result,incident_id),('merged','original'))
         self.assertEqual(len(data['incidents']),1)
 
+    def test_same_date_distinct_named_victims_do_not_merge(self):
+        from test_selection import record
+        original={'id':'original','title':'Hospital A data breach reported','victim':'Hospital A','date':'2026-10-20','category':'major_cyber','source_url':'https://example.com/original'}
+        data={'incidents':[original]}
+        item={'id':'new','url':'https://example.com/second','source':'Test','date':'2026-10-26'}
+        rec=record(victim='Hospital B',title='Hospital B data breach',date='2026-10-20')
+        with patch.object(u,'geocode',return_value=None):
+            result, incident_id=c.merge_record(u,data,item,rec,{},'2026-10-27T00:00:00+00:00')
+        self.assertEqual((result,incident_id),('added','new'))
+        self.assertEqual(len(data['incidents']),2)
+
 if __name__=='__main__':
     unittest.main()
