@@ -41387,10 +41387,27 @@
  },
  "https://therecord.media/austrian-foreign-ministry-says-website-hacked": {
   "title": "Hackers breach Austrian Foreign Ministry website, access diplomats' contact details",
-  "checked": "2026-11-23T23:58:41+00:00",
+  "source": "The Record",
+  "checked": "2026-11-24T11:17:42+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "RateLimitError (HTTP 429)"
+  "status": "include",
+  "reason": "Ministry disclosure corroborated by Reuters and The Record; no public evidence of data exfiltration or attribution.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Ministry disclosure corroborated by Reuters and The Record; no public evidence of data exfiltration or attribution.",
+    "title": "Austrian Foreign Ministry website accessed without authorization"
+   }
+  ],
+  "evidence": "manual_review",
+  "item": {
+   "id": "8afb00fa037d26da",
+   "title": "Hackers breach Austrian Foreign Ministry website, access diplomats' contact details",
+   "url": "https://therecord.media/austrian-foreign-ministry-says-website-hacked",
+   "date": "2026-11-24",
+   "source": "The Record",
+   "published_at": "2026-11-24T00:00:00+00:00"
+  }
  },
  "https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks": {
   "title": "Agentic Attacks: In The Wild",
@@ -42035,6 +42052,54 @@
    "date": "2026-11-23",
    "source": "BleepingComputer",
    "published_at": "2026-11-23T20:54:51+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/globetopper-loses-25-million-after-hackers-steal-70k-in-gift-cards/": {
+  "title": "GlobeTopper loses $2.5 million after hackers steal $70k in gift cards",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:17:42+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Parent company iQSTEL SEC Form 8-K confirms access, shutdown, credential theft and gift-card redemption.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Parent company iQSTEL SEC Form 8-K confirms access, shutdown, credential theft and gift-card redemption.",
+    "title": "GlobeTopper compromised; gift cards redeemed and platform disrupted"
+   }
+  ],
+  "evidence": "manual_review",
+  "item": {
+   "id": "e98078666047e8cf",
+   "title": "GlobeTopper loses $2.5 million after hackers steal $70k in gift cards",
+   "url": "https://www.bleepingcomputer.com/news/security/globetopper-loses-25-million-after-hackers-steal-70k-in-gift-cards/",
+   "date": "2026-11-23",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-23T16:50:01+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/": {
+  "title": "OpenRouter drops AI providers over leaked prompts and secrets",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:17:42+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Together AI disclosure reported by BleepingComputer; distinct from other providers' incidents.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Together AI disclosure reported by BleepingComputer; distinct from other providers' incidents.",
+    "title": "Together AI prompt samples exposed through compromised credential"
+   }
+  ],
+  "evidence": "manual_review",
+  "item": {
+   "id": "bebedc9daae1e677",
+   "title": "OpenRouter drops AI providers over leaked prompts and secrets",
+   "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
+   "date": "2026-11-23",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-23T20:00:20+00:00"
   }
  }
 }
