@@ -1,6 +1,7 @@
 import unittest
 from triage_backlog import reason_for
 
+# No-API batch triage regression checks.
 class TriageTests(unittest.TestCase):
     def test_conservative_exclusions(self):
         for title in ("Annual HIPAA Summit early bird registration",
