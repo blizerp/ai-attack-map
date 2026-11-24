@@ -36,7 +36,10 @@ def timestamp():
 def safe_error(exc):
     # SDK exception messages may contain fragments of credentials.
     code = getattr(exc, 'status_code', None)
-    return f'{type(exc).__name__}' + (f' (HTTP {code})' if code else '')
+    error_type = getattr(exc, 'code', None)
+    if not isinstance(error_type, str) or not re.fullmatch(r'[a-zA-Z0-9_\-]{1,64}', error_type):
+        error_type = None
+    return f'{type(exc).__name__}' + (f' (HTTP {code})' if code else '') + (f' [{error_type}]' if error_type else '')
 
 def public_url(url):
     p = urlparse(url)
@@ -239,7 +242,7 @@ def run(u):
     queue = u.load_json(path('pending.json'), {})
     history = u.load_json(path('backfill_progress.json'), {})
     geo = u.load_json(u.GEO_PATH, {})
-    status = {'checked_at':now,'last_success':data.get('updated'),'status':'running','added':0,'merged':0,'processed':0,'errors':0,'summary_only':0,'retrieval_warnings':0}
+    status = {'checked_at':now,'last_success':data.get('updated'),'status':'running','added':0,'merged':0,'processed':0,'errors':0,'summary_only':0,'retrieval_warnings':0,'error_samples':[],'model':u.MODEL}
     items, sources = discover(u, history, now)
     # Revisit decisions even after their articles rotate out of RSS.
     fresh_urls = {i['url'] for i in items}
@@ -264,6 +267,7 @@ def run(u):
     client = u.OpenAI(timeout=60, max_retries=1) if os.environ.get('OPENAI_API_KEY') else None
     if not client:
         status.update(status='failed', errors=1, error='OPENAI_API_KEY is not set')
+        status['error_samples'].append('OPENAI_API_KEY is not set')
 
     def review(item, tracked):
         original = live.get(item['url'], item)
@@ -338,9 +342,14 @@ def run(u):
                     status['processed'] += 1
                 except Exception as e:
                     status['errors'] += 1
+                    error_label = safe_error(e)
+                    if error_label not in status['error_samples'] and len(status['error_samples']) < 5:
+                        status['error_samples'].append(error_label)
                     audit[item['url']] = dict(title=item['title'], checked=now, policy=u.SELECTION_VERSION, status='error', reason=safe_error(e))
                     print(f'extract failed: {item["url"]}: {safe_error(e)}', flush=True)
-                    if getattr(e, 'status_code', None) in {401,403,429}:
+                    # Authentication, quota, rate limits, and invalid request shapes
+                    # are unlikely to improve by retrying hundreds of articles.
+                    if getattr(e, 'status_code', None) in {400,401,403,429}:
                         fatal = True
             checkpoint()
             print(f'reviewed {status["processed"]}/{len(candidates)} reports; {status["added"]} added, {status["merged"]} updated, {status["errors"]} errors', flush=True)
