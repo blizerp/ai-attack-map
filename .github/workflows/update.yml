@@ -30,7 +30,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-          MAX_NEW_ITEMS: "1000"
+          MAX_NEW_ITEMS: "20"
       - name: Commit new data
         if: always()
         run: |
