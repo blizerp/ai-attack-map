@@ -41317,10 +41317,27 @@
  },
  "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/": {
   "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
-  "checked": "2026-11-21T19:22:59+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:18:18+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "RateLimitError (HTTP 429)"
+  "status": "include",
+  "reason": "Reported confirmed unauthorized access; impact restricted to reported evidence.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Reported confirmed unauthorized access; impact restricted to reported evidence.",
+    "title": "Microsoft Entra Connect Health tenant data exposed"
+   }
+  ],
+  "evidence": "manual_review",
+  "item": {
+   "id": "d7b682214d29779d",
+   "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
+   "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
+   "date": "2026-11-21",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-21T18:01:58+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/": {
   "title": "FBI reportedly hacked again, this time targeting nationwide police database",
@@ -41373,10 +41390,27 @@
  },
  "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/": {
   "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
-  "checked": "2026-11-22T19:46:42+00:00",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:18:18+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "RateLimitError (HTTP 429)"
+  "status": "include",
+  "reason": "Reported confirmed unauthorized access; impact restricted to reported evidence.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Reported confirmed unauthorized access; impact restricted to reported evidence.",
+    "title": "Cleverbridge payment-card breach"
+   }
+  ],
+  "evidence": "manual_review",
+  "item": {
+   "id": "3192f6d6dd439b4e",
+   "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
+   "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
+   "date": "2026-11-22",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-22T15:43:04+00:00"
+  }
  },
  "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/": {
   "title": "CISA flags critical Cisco RCE flaw as actively exploited in attacks",
@@ -42100,6 +42134,30 @@
    "date": "2026-11-23",
    "source": "BleepingComputer",
    "published_at": "2026-11-23T20:00:20+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/": {
+  "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T11:18:18+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "Reported confirmed unauthorized access; impact restricted to reported evidence.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "Reported confirmed unauthorized access; impact restricted to reported evidence.",
+    "title": "Rackspace Spot cloud compromised via stolen credentials"
+   }
+  ],
+  "evidence": "manual_review",
+  "item": {
+   "id": "749e4efd0c773ff6",
+   "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+   "url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
+   "date": "2026-11-21",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-21T22:59:58+00:00"
   }
  }
 }
