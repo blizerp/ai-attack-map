@@ -1,6 +1,6 @@
 """Prepare a 100-article evidence-review queue; never auto-publish unverified items.
 
-This is a staging tool, not a classification or incident publication tool.
+This is a staging tool, not a classification or incident publication tool.\nReview decisions require independent source evidence.
 Run with --apply to write review_queue_100.json from the current pending queue.
 """
 import argparse
