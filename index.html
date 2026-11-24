@@ -621,7 +621,10 @@ fetch("attacks.json?v=" + Date.now())
     MapTrends.renderTrend(state.incidents, data.updated);
     setInterval(() => MapTrends.renderTrend(state.incidents, data.updated), 60000);
     const u = data.updated ? new Date(data.updated).toLocaleString() : "not yet";
-    document.getElementById("updated").textContent = `${state.incidents.length} incidents tracked. Last successful collection ${u}.`;
+    const latestAdded = state.incidents.map(i => i.added).filter(Boolean).sort().at(-1);
+    const manual = data.last_manual_publish ? new Date(data.last_manual_publish).toLocaleString() : "not recorded separately";
+    const latest = latestAdded ? new Date(latestAdded).toLocaleString() : "not yet";
+    document.getElementById("updated").textContent = `${state.incidents.length} incidents tracked. Automated collection: ${u}. Latest record added: ${latest}. Manual backlog publication: ${manual}.`;
     render();
     fetch("feed_status.json?v=" + Date.now(), {cache:"no-store"}).then(r => r.ok ? r.json() : null).then(health => {
       if (!health) return;
