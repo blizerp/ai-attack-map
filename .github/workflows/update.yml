@@ -1,6 +1,9 @@
 name: Update attack map
 
 on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/update.yml']
   schedule:
     - cron: "0 8 * * *"       # once daily at 8:00 AM Eastern
       timezone: America/New_York
