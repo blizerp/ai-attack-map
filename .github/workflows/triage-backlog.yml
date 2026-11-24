@@ -1,0 +1,41 @@
+name: Triage backlog (no API)
+
+on:
+  push:
+    branches: [main]
+    paths: ['triage_backlog.py', 'test_triage_backlog.py']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-map
+  cancel-in-progress: false
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "feedparser==6.0.11" "requests>=2.31,<3" "openai>=1.40,<3" "trafilatura>=2,<3"
+      - run: python -m unittest test_triage_backlog test_selection test_coverage test_site
+      - name: Preview conservative exclusions
+        run: python triage_backlog.py --limit 100
+      - name: Apply conservative exclusions
+        run: python triage_backlog.py --limit 100 --apply
+      - name: Commit queue and audit changes
+        run: |
+          git config user.name "map-bot"
+          git config user.email "map-bot@users.noreply.github.com"
+          git add pending.json decisions.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Triage up to 100 clear non-incident backlog items"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
