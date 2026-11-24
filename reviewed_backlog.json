@@ -1,76 +1,41 @@
 [
   {
-    "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
-    "records": [
-      {
-        "relevant": true,
-        "category": "on_ai_system",
-        "attacker": "Unidentified supply-chain attacker",
-        "ai_role": "AI involvement not confirmed in the reporting.",
-        "why": "Not reported",
-        "where": "No fixed location",
-        "major_impact": "supply_chain_compromise",
-        "impact_substantiated": true,
-        "geocode_query": null,
-        "duplicate_of": null,
-        "location_queries": [],
-        "decision": "include",
-        "decision_reason": "LiteLLM maintainer statement and Wiz forensic analysis establish compromised release workflow, malicious packages and observed credential abuse.",
-        "evidence_status": "confirmed",
-        "severity_evidence": {
-          "context": "real_world",
-          "service": "unknown",
-          "reach": "multiple",
-          "damage": "sensitive_data",
-          "essential": "unknown",
-          "financial": "unknown",
-          "reason": "Malicious releases distributed to multiple environments with observed theft and subsequent use of cloud credentials; exact victim count unknown."
-        },
-        "title": "LiteLLM release pipeline compromised with credential stealer",
-        "date": "2026-10-21",
-        "victim": "LiteLLM open-source package and downstream installations",
-        "what": "Attackers used compromised maintainer GitHub credentials to publish malicious LiteLLM 1.107.0 Python and Docker releases with a credential stealer. Wiz observed subsequent abuse of stolen AWS credentials.",
-        "significance": "Compromised AI software distribution and theft of cloud and AI credentials; affected releases were removed within hours."
-      }
-    ]
-  },
-  {
-    "url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
+    "url": "https://therecord.media/laliga-hacked-spain-top-professional-league-confirms-cyber-incident",
     "records": [
       {
         "relevant": true,
         "category": "major_cyber",
-        "attacker": "Unidentified attackers",
+        "attacker": "Unidentified attacker",
         "ai_role": "AI involvement not confirmed in the reporting.",
         "why": "Not reported",
-        "where": "London, United Kingdom",
+        "where": "Spain (affected LaLiga platform and clubs)",
         "major_impact": "large_scale_data_theft",
         "impact_substantiated": true,
-        "geocode_query": "London, United Kingdom",
+        "geocode_query": "Spain",
         "duplicate_of": null,
         "location_queries": [
           {
-            "query": "London, United Kingdom",
+            "query": "Spain",
             "basis": "Reported affected area"
           }
         ],
         "decision": "include",
-        "decision_reason": "TfL disclosure confirms compromise and potentially exposed personal data affecting about 265,000 customers.",
+        "decision_reason": "LaLiga's official November 23 statement confirms unauthorized access and exfiltration; affected count remains under investigation.",
         "evidence_status": "confirmed",
         "severity_evidence": {
           "context": "real_world",
-          "service": "limited",
-          "reach": "widespread",
+          "service": "none",
+          "reach": "multiple",
           "damage": "sensitive_data",
-          "essential": "unknown",
+          "essential": "none",
           "financial": "unknown",
-          "reason": "Approximately 265,000 customers potentially exposed; Oyster card travel remained operational and misuse was not established."
+          "reason": "LaLiga confirms stolen personal data affecting its users and some clubs; total victim count and financial harm not established."
         },
-        "title": "TfL Oyster photocard account breach affects about 265,000",
-        "date": "2026-11-16",
-        "victim": "Transport for London Oyster photocard customers",
-        "what": "TfL discovered compromised email/account infrastructure after fraudulent account-creation messages were sent from its systems. Personal data including names, addresses, dates of birth and security questions may have been exposed; the photocard portal was taken offline.",
-        "significance": "Transport authority reported approximately 265,000 potentially affected accounts and suspended a customer portal while investigating."
+        "title": "LaLiga fan-services platform breached and personal data stolen",
+        "date": "2026-11-14",
+        "victim": "LaLiga and affiliated clubs' fan-service users",
+        "what": "LaLiga confirmed unauthorized access to a fan-services platform between November 14 and 16, with extraction of registered users' personal data. LaLiga contained the intrusion November 16 and notified Spanish authorities.",
+        "significance": "Confirmed theft of personal data from LaLiga and some affiliated clubs; affected-user count and complete data scope not yet known."
       }
     ]
   }
