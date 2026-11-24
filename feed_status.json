@@ -1,32 +1,18 @@
 {
- "checked_at": "2026-11-24T09:59:54+00:00",
+ "checked_at": "2026-11-24T11:23:26+00:00",
  "last_success": "2026-11-18T20:38:01+00:00",
- "status": "failed",
+ "status": "partial",
  "added": 0,
  "merged": 0,
- "processed": 0,
- "errors": 4,
+ "processed": 4,
+ "errors": 96,
  "summary_only": 0,
  "retrieval_warnings": 0,
  "error_samples": [
-  "RateLimitError (HTTP 429) [credit_balance_exhausted]"
+  "NameError"
  ],
- "model": "gpt-5.6-luna",
+ "model": "gpt-4o-mini",
  "sources": [
-  {
-   "source": "The Record",
-   "ok": true,
-   "entries": 5,
-   "candidates": 5,
-   "newest": "2026-11-24"
-  },
-  {
-   "source": "SecurityWeek",
-   "ok": true,
-   "entries": 10,
-   "candidates": 6,
-   "newest": "2026-11-23"
-  },
   {
    "source": "BleepingComputer",
    "ok": true,
@@ -35,10 +21,38 @@
    "newest": "2026-11-23"
   },
   {
+   "source": "SecurityWeek",
+   "ok": true,
+   "entries": 10,
+   "candidates": 6,
+   "newest": "2026-11-24"
+  },
+  {
+   "source": "The Record",
+   "ok": true,
+   "entries": 5,
+   "candidates": 5,
+   "newest": "2026-11-24"
+  },
+  {
    "source": "The Hacker News",
    "ok": true,
    "entries": 50,
-   "candidates": 41,
+   "candidates": 39,
+   "newest": "2026-11-24"
+  },
+  {
+   "source": "Dark Reading",
+   "ok": true,
+   "entries": 50,
+   "candidates": 37,
+   "newest": "2026-11-23"
+  },
+  {
+   "source": "HIPAA Journal",
+   "ok": true,
+   "entries": 10,
+   "candidates": 10,
    "newest": "2026-11-24"
   },
   {
@@ -56,26 +70,12 @@
    "newest": "2026-11-23"
   },
   {
-   "source": "HIPAA Journal",
-   "ok": true,
-   "entries": 10,
-   "candidates": 10,
-   "newest": "2026-11-23"
-  },
-  {
-   "source": "Dark Reading",
-   "ok": true,
-   "entries": 50,
-   "candidates": 37,
-   "newest": "2026-11-23"
-  },
-  {
    "source": "AI agent attack tracker",
    "ok": true,
    "entries": 117
   }
  ],
- "pending": 1339,
+ "pending": 1279,
  "backfill": {
   "SecurityWeek": {
    "page": 67,
