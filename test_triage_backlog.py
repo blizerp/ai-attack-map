@@ -7,10 +7,10 @@ class TriageTests(unittest.TestCase):
         for title in ("Annual HIPAA Summit early bird registration",
                       "Company secures $20 million in funding",
                       "Privacy Rule compliance checklist",
-                      "Old breach settlement reached"):
+                      "Historic case settlement reached"):
             self.assertIsNotNone(reason_for({"title":title}))
     def test_potential_incidents_are_retained(self):
-        for title in ("Ransomware attack disrupts hospital",
+        for title in ("Old breach settlement reached", "Ransomware attack disrupts hospital",
                       "Company hacked after webinar",
                       "Supply-chain attack in new product",
                       "N-able confirms unauthorized cloud intrusion"):
