@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T17:39:41+00:00",
+ "updated": "2026-11-24T18:35:28+00:00",
  "incidents": [
   {
    "title": "LaLiga fan-services platform breached and personal data stolen",
@@ -610,6 +610,54 @@
     "assessed_at": "2026-11-24T16:59:22+00:00",
     "method": "reported-impact-v1"
    }
+  },
+  {
+   "title": "IDScan Breach Exposes Data of Over 150 Million Individuals",
+   "date": "2026-09-01",
+   "category": "major_cyber",
+   "victim": "IDScan",
+   "attacker": "Not reported",
+   "what": "Data from IDScan, including scanned IDs, appeared for sale on the dark web.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The breach resulted in customer data theft, raising concerns about identity theft and fraud among numerous victims.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The breach exposed sensitive personal information which could have significant implications for identity theft and fraud.",
+   "id": "18fa95a1ad3755a9",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/idscan-data-breach-warning-congressional-letter",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-11-24",
+   "last_reported": "2026-11-24",
+   "evidence_status": "confirmed",
+   "lat": 47.5698743,
+   "lon": -52.6938191,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The breach involved the exposure of over 150 million sensitive identification documents, including medical cards and employment authorizations.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "widespread",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/idscan-data-breach-warning-congressional-letter",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 47.5698743,
+     "lon": -52.6938191,
+     "label": "Canada and the U.S.",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/idscan-data-breach-warning-congressional-letter"
+    }
+   ]
   },
   {
    "title": "GL.iNet remote management compromise",
@@ -4235,15 +4283,15 @@
    "updates": [
     {
      "date": "2026-10-30",
-     "what": "A maliciously modified Claude Code extension was available in Cursor’s marketplace for about 11 hours. Its loader collected host information, installed an attacker-controlled SSH key, attempted persistence and reverse tunneling, and transmitted reconnaissance data, including usernames, hostnames, public IP addresses, Git email addresses, and names of environment variables associated with sensitive credentials.",
-     "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
-     "source": "BleepingComputer"
-    },
-    {
-     "date": "2026-10-30",
      "what": "A malicious loader inserted into the Claude Code extension attempted to add an attacker-controlled SSH key, enable SSH access, establish reverse tunneling, install persistence, and send host reconnaissance data. Cursor removed the versions, rotated keys, rebuilt the marketplace, and took the attacker’s server offline; Anthropic’s official systems and other marketplaces were not affected.",
      "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
      "source": "The Hacker News"
+    },
+    {
+     "date": "2026-10-30",
+     "what": "Malicious extension distributed through Cursor's marketplace installed backdoors.",
+     "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
+     "source": "BleepingComputer"
     },
     {
      "date": "2026-11-02",
@@ -10923,7 +10971,7 @@
    "updates": [
     {
      "date": "2026-11-02",
-     "what": "Attackers remotely changed refrigeration and freezer settings, shut down units, or activated defrost functions. At least 115 stores were affected, with some reporting temperature increases, discarded frozen food, and managers or technicians intervening to contain the disruption.",
+     "what": "Hackers remotely changed temperature settings on refrigeration systems.",
      "url": "https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/",
      "source": "BleepingComputer"
     },
@@ -11125,7 +11173,7 @@
     },
     {
      "date": "2026-11-02",
-     "what": "Attackers gained unauthorized access to systems including Revolve’s online shopping platform and may have accessed and exfiltrated customer names, addresses, payment-card numbers, and expiration dates. Revolve contained and remediated the activity.",
+     "what": "Unauthorized access to systems including e-commerce platform",
      "url": "https://www.securityweek.com/revolve-data-breach-impacts-at-least-180000-people/",
      "source": "SecurityWeek"
     },
@@ -14816,102 +14864,6 @@
    }
   },
   {
-   "title": "OpenAI AI Agents Exploit Linux with 948 Vulnerabilities",
-   "date": "2026-10-15",
-   "category": "by_ai_agent",
-   "victim": "OpenAI",
-   "attacker": "OpenAI",
-   "what": "AI agents exploited 948 Linux kernel vulnerabilities, gaining root access.",
-   "ai_role": "Not reported",
-   "why": "The scan was part of an effort to enhance security by identifying and fixing vulnerabilities.",
-   "where": "No fixed location",
-   "major_impact": "critical_network_intrusion",
-   "significance": "This incident highlights the capability of AI to discover and exploit a significant number of vulnerabilities, raising concerns about security in software development.",
-   "id": "6033db420afc450f",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/ai-agents-got-root-on-linux-via-948-kernel-flaws-in-openai-research/",
-   "added": "2026-11-24T17:39:41+00:00",
-   "reported_date": "2026-11-05",
-   "last_reported": "2026-11-05",
-   "evidence_status": "confirmed",
-   "lat": 40.7246435,
-   "lon": -73.9953859,
-   "severity": {
-    "level": "limited",
-    "status": "preliminary",
-    "reason": "Impact not established in the available reporting.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "single",
-     "damage": "none",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/ai-agents-got-root-on-linux-via-948-kernel-flaws-in-openai-research/",
-    "assessed_at": "2026-11-24T17:39:41+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 40.7246435,
-     "lon": -73.9953859,
-     "label": "OpenAI",
-     "basis": "Vendor headquarters (approximate)",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/ai-agents-got-root-on-linux-via-948-kernel-flaws-in-openai-research/"
-    }
-   ]
-  },
-  {
-   "title": "AI agents used exposed Hugging Face tokens in security compromise",
-   "date": "2026-07",
-   "category": "using_ai",
-   "victim": "Hugging Face",
-   "attacker": "Not reported",
-   "what": "AI agents exploited exposed tokens to steal data from Hugging Face",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Exposed tokens allowed unauthorized access leading to data theft.",
-   "where": "No fixed location",
-   "major_impact": "large_scale_data_theft",
-   "significance": "This incident demonstrates the security risks associated with improperly managed API keys, which can be exploited using AI tools.",
-   "id": "31ac03a2cea8acb0",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets/",
-   "added": "2026-11-24T17:39:41+00:00",
-   "reported_date": "2026-11-05",
-   "last_reported": "2026-11-05",
-   "evidence_status": "confirmed",
-   "lat": 48.8678383,
-   "lon": 2.3498212,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "AI agents successfully exploited exposed tokens for unauthorized data access.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "unknown",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets/",
-    "assessed_at": "2026-11-24T17:39:41+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 48.8678383,
-     "lon": 2.3498212,
-     "label": "Hugging Face",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets/"
-    }
-   ]
-  },
-  {
    "title": "AI-Assisted Attacks Target BFSI Sector with Remote Access Tools",
    "date": "2026-11-05",
    "category": "using_ai",
@@ -14998,44 +14950,6 @@
    }
   },
   {
-   "title": "ARTEX Campaign Targets Crypto Accounts with Failed Attempts",
-   "date": "2026-10-14 to 2026-10-29",
-   "category": "by_ai_agent",
-   "victim": "Various cryptocurrency platforms",
-   "attacker": "Various operators using ARTEX",
-   "what": "AI agents attempted to penetrate crypto platforms for financial gain",
-   "ai_role": "AI agents executed unauthorized actions autonomously",
-   "why": "To drain cryptocurrency and backdoor crypto infrastructures for financial benefit",
-   "where": "No fixed location",
-   "major_impact": "none",
-   "significance": "Highlights the ability of AI agents to autonomously seek vulnerabilities in critical financial systems, showcasing the risks posed by automated attacks.",
-   "id": "2fafaf9c763f9fb9",
-   "source_name": "AI agent attack tracker",
-   "source_url": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/",
-   "added": "2026-11-24T17:39:41+00:00",
-   "reported_date": "2026-11-05",
-   "last_reported": "2026-11-05",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "limited",
-    "status": "preliminary",
-    "reason": "The campaign yielded no transactions or successful exploitations despite identifying high-severity vulnerabilities.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "none",
-     "essential": "none",
-     "financial": "none"
-    },
-    "source_url": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/",
-    "assessed_at": "2026-11-24T17:39:41+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
    "title": "ARTEX Compromised 190k Gaming Accounts on Chinese Market",
    "date": "2026-10-14 to 2026-10-29",
    "category": "by_ai_agent",
@@ -15072,54 +14986,6 @@
     "assessed_at": "2026-11-24T17:39:41+00:00",
     "method": "reported-impact-v1"
    }
-  },
-  {
-   "title": "ChatGPT Lockdown Mode Bypass Allowed Silent Data Exfiltration",
-   "date": "2026-09-18",
-   "category": "on_ai_system",
-   "victim": "OpenAI",
-   "attacker": "Check Point Research",
-   "what": "A vulnerability allowed attackers to bypass Lockdown Mode, enabling silent exfiltration of chat data.",
-   "ai_role": "Not reported",
-   "why": "Attackers could exfiltrate chat history, credential theft via phishing, and malware delivery.",
-   "where": "No fixed location",
-   "major_impact": "large_scale_data_theft",
-   "significance": "The vulnerability represents serious risks to user data privacy, especially in sensitive applications handling confidential information.",
-   "id": "acdf7d9610b318d4",
-   "source_name": "AI agent attack tracker",
-   "source_url": "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/",
-   "added": "2026-11-24T17:39:41+00:00",
-   "reported_date": "2026-11-05",
-   "last_reported": "2026-11-05",
-   "evidence_status": "confirmed",
-   "lat": 40.7246435,
-   "lon": -73.9953859,
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "The vulnerability allowed for the theft of entire chat histories without user interaction.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "single",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "none"
-    },
-    "source_url": "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/",
-    "assessed_at": "2026-11-24T17:39:41+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 40.7246435,
-     "lon": -73.9953859,
-     "label": "OpenAI",
-     "basis": "Vendor headquarters (approximate)",
-     "entity": "",
-     "source_url": "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"
-    }
-   ]
   },
   {
    "title": "Chainstack breach exposed customer data and potentially node credentials",
@@ -16348,54 +16214,6 @@
    ]
   },
   {
-   "title": "CISA Confirms Hackers Exploiting WordPress Core Flaw During Software Upgrades",
-   "date": "2026-10-30",
-   "category": "major_cyber",
-   "victim": "Organizations using WordPress with the vulnerable core version",
-   "attacker": "Not reported",
-   "what": "Exploitation of a CVE-2026-119977 vulnerability in WordPress core",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Attackers can exploit a time-of-check time-of-use vulnerability to execute arbitrary code during upgrades.",
-   "where": "No fixed location",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Active exploitation of a critical vulnerability in widely used software could impact numerous organizations, leading to compromised systems.",
-   "id": "23ba3087abf35aa7",
-   "source_name": "The Hacker News",
-   "source_url": "https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html",
-   "added": "2026-11-24T17:39:41+00:00",
-   "reported_date": "2026-11-04",
-   "last_reported": "2026-11-04",
-   "evidence_status": "confirmed",
-   "lat": 39.7837304,
-   "lon": -100.445882,
-   "severity": {
-    "level": "limited",
-    "status": "preliminary",
-    "reason": "The vulnerability was actively exploited, but it's unclear what impact was actually observed.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "none",
-     "essential": "none",
-     "financial": "none"
-    },
-    "source_url": "https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html",
-    "assessed_at": "2026-11-24T17:39:41+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 39.7837304,
-     "lon": -100.445882,
-     "label": "U.S.",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html"
-    }
-   ]
-  },
-  {
    "title": "China-Aligned Hackers Hijack Sogou Input Method DNS Requests",
    "date": "2026-07-01",
    "category": "major_cyber",
@@ -17069,7 +16887,7 @@
    "updates": [
     {
      "date": "2026-11-02",
-     "what": "Attackers exploited an attack vector affecting older BTCPay Server versions and logged in as administrators, draining Bitcoin and Litecoin from hot wallets. BTCPay Server received reports from affected users and urged operators to take vulnerable instances offline and update.",
+     "what": "Hackers drained hot wallets on instances running outdated versions of BTCPay Server.",
      "url": "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/",
      "source": "BleepingComputer"
     },
@@ -17422,54 +17240,6 @@
    ]
   },
   {
-   "title": "Jaguar Land Rover suffered more than $260 million in losses due to cyberattack",
-   "date": "2025-01-01",
-   "category": "major_cyber",
-   "victim": "Jaguar Land Rover",
-   "attacker": "Not reported",
-   "what": "Jaguar Land Rover cyberattack affected production and suppliers",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The attack halted production and impacted suppliers, indicating broad economic consequences.",
-   "where": "No fixed location",
-   "major_impact": "major_financial_loss",
-   "significance": "The incident caused substantial losses to Jaguar Land Rover and affected the UK economy, showing the impact of cyberattacks on critical manufacturing sectors.",
-   "id": "8a62628b5f9b9760",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/uk-cyber-chief-says-the-uk-will-face-ai-cyberattacks-on-critical-infrastructure-by-2028/",
-   "added": "2026-11-24T17:39:41+00:00",
-   "reported_date": "2026-11-03",
-   "last_reported": "2026-11-03",
-   "evidence_status": "confirmed",
-   "lat": 54.7023545,
-   "lon": -3.2765753,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Jaguar Land Rover faced over $260 million in direct losses, impacting their operations significantly.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "single",
-     "damage": "unknown",
-     "essential": "none",
-     "financial": "major"
-    },
-    "source_url": "https://www.securityweek.com/uk-cyber-chief-says-the-uk-will-face-ai-cyberattacks-on-critical-infrastructure-by-2028/",
-    "assessed_at": "2026-11-24T17:39:41+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 54.7023545,
-     "lon": -3.2765753,
-     "label": "UK",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/uk-cyber-chief-says-the-uk-will-face-ai-cyberattacks-on-critical-infrastructure-by-2028/"
-    }
-   ]
-  },
-  {
    "title": "VOLTA infostealer uses AI to rank stolen victim data",
    "date": "2026-11-02",
    "category": "using_ai",
@@ -17581,13 +17351,13 @@
     },
     {
      "date": "2026-10-30",
-     "what": "A compromised DebugBear monitoring script served through Polymarket’s international website attempted to sell users’ positions or transfer position tokens to an attacker-controlled address by reusing authority available in authenticated sessions. Polymarket halted trading temporarily, removed the script, and said affected users would be reimbursed.",
+     "what": "Malicious code hijacked logged-in Polymarket sessions and siphoned user funds.",
      "url": "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/",
      "source": "SecurityWeek"
     },
     {
      "date": "2026-11-01",
-     "what": "Attackers replaced the DebugBear page-speed script loaded by Polymarket with malicious code. The script abused signed-in trading sessions and transaction-signing mechanisms to move positions and funds to attacker-controlled wallets; blockchain records showed about $2.64 million in POL reached the attackers.",
+     "what": "Malicious code hijacked user accounts to steal funds during trading",
      "url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
      "source": "The Hacker News"
     },
@@ -17599,7 +17369,7 @@
     },
     {
      "date": "2026-11-02",
-     "what": "Attackers compromised DebugBear DNS records and served malicious JavaScript through Polymarket’s website. The script targeted logged-in traders, using active browser-session permissions to dump positions or transfer assets to an attacker-controlled wallet.",
+     "what": "Supply chain attack involved DNS hijack leading to unauthorized withdrawals.",
      "url": "https://www.securityweek.com/polymarket-returns-3-9-million-to-traders-as-debugbear-cites-dns-hijack/",
      "source": "SecurityWeek"
     }
@@ -17677,7 +17447,7 @@
     },
     {
      "date": "2026-11-02",
-     "what": "Hackers breached the Florida Student Financial Aid website. Potentially accessible data included names, Social Security numbers, dates of birth, addresses, phone numbers, email addresses, and gender codes. The department detected the intrusion on October 19 and contained it.",
+     "what": "Hackers breached the student financial aid website, potentially exposing personal information",
      "url": "https://www.securityweek.com/florida-student-aid-website-hack-puts-data-of-4-9-million-people-at-risk/",
      "source": "SecurityWeek"
     }
@@ -17809,7 +17579,7 @@
    "updates": [
     {
      "date": "2026-11-02",
-     "what": "An unauthorized user accessed a Connecticut Medicaid provider reimbursement account administered through Gainwell Technologies. Exposed information included names, claim or payment-account identification numbers, dates of service, payment and service details, amounts paid, and information about other health insurance; data theft could not be ruled out.",
+     "what": "Data breach involving protected health information of Medicaid recipients",
      "url": "https://www.hipaajournal.com/connecticut-dhs-husky-data-security-incident/",
      "source": "HIPAA Journal"
     }
@@ -18039,7 +17809,7 @@
    "updates": [
     {
      "date": "2026-11-02",
-     "what": "Attackers obtained AT&T call and text metadata, including phone numbers, call and text counts, durations, and location data from May–October 2022 and January 2023. AT&T said call content, customer names, and Social Security numbers were not included.",
+     "what": "A massive data breach exposed call logs containing sensitive customer data.",
      "url": "https://www.bleepingcomputer.com/news/security/your-mobile-carrier-stores-your-call-logs-for-years/",
      "source": "BleepingComputer"
     }
@@ -18481,7 +18251,7 @@
    "updates": [
     {
      "date": "2026-11-02",
-     "what": "The campaign used spear-phishing, credential-phishing lookalike domains, and trojanized utilities or coding challenges to deliver SHELBYLOADER V2 and the SHELBYC2 backdoor. Reporting states that the activity compromised a high-profile Israeli individual and a Kurdistan Region government cloud environment.",
+     "what": "Cyber espionage campaign led to unauthorized access and compromise of systems in Israel and Kurdistan Region.",
      "url": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html",
      "source": "The Hacker News"
     }
@@ -18662,6 +18432,244 @@
    ]
   },
   {
+   "title": "Ivanti Connect Secure zero-days chained for unauthorized access",
+   "date": "2026-10-03",
+   "category": "major_cyber",
+   "victim": "A limited number of Ivanti Connect Secure customers",
+   "attacker": "Not reported",
+   "what": "Attackers exploited three chained zero-day vulnerabilities to gain unauthorized root access and steal credentials.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Exploitation involved credential theft, data exfiltration, and network scanning, affecting the operational capacity of the impacted organizations.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The attack highlights the critical vulnerabilities in widely used security products exposed in-the-wild, posing risks to many customers.",
+   "id": "af77d8a5b0044ab6",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-11-02",
+   "last_reported": "2026-11-02",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Unauthorized access and credential theft occurred due to the exploitation of multiple zero-days.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Vapor Panda Ran ARTEX AI Against Over 200 Organizations",
+   "date": "2026-10-17",
+   "category": "by_ai_agent",
+   "victim": "Numerous organizations including telecommunications providers and government entities",
+   "attacker": "Vapor Panda",
+   "what": "Chinese hackers used ARTEX AI in an automated campaign targeting 200+ organizations across multiple sectors",
+   "ai_role": "AI agents deposed by human operators to carry out coordinated attacks.",
+   "why": "Confirmed intrusions included password spraying and credential scanning activities against high-value targets.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The campaign illustrates a significant escalation in the use of AI by state-sponsored actors to coordinate complex cyber operations simultaneously.",
+   "id": "1e7b9b662485974e",
+   "source_name": "AI agent attack tracker",
+   "source_url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-11-02",
+   "last_reported": "2026-11-02",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The AI agents were able to gain unauthorized access to multiple networks and perform credential harvesting.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Russia's EMERCOM app hacked, false nuclear warnings sent",
+   "date": "2026-11-01",
+   "category": "major_cyber",
+   "victim": "EMERCOM mobile emergency app",
+   "attacker": "DC8044",
+   "what": "Hackers gained access to Russia's EMERCOM app to send fabricated emergency alerts",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The attackers used the app's API to spread false emergency warnings to citizens.",
+   "where": "Russia",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The hacking of Russia's emergency app could undermine public trust in crisis communications, especially in a conflict setting.",
+   "id": "346a9555131efdd6",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/ukraine-hackers-russia-alert-system",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-11-02",
+   "last_reported": "2026-11-02",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "limited",
+    "status": "preliminary",
+    "reason": "False alerts were disseminated without direct threats to data.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "none",
+     "essential": "none",
+     "financial": "none"
+    },
+    "source_url": "https://therecord.media/ukraine-hackers-russia-alert-system",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Michigan State University incident claimed by ransomware gang",
+   "date": "2026-10-01",
+   "category": "major_cyber",
+   "victim": "Michigan State University",
+   "attacker": "BYOD Ransomware Gang",
+   "what": "Claimed to have stolen personal information on 1.3 million students; forced password resets",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The university faced suspicious activity and a potential credential compromise event.",
+   "where": "East Lansing, USA",
+   "major_impact": "large_scale_data_theft",
+   "significance": "This incident includes claims of substantial personal data theft affecting a large student population.",
+   "id": "7e4faad6cb5eeda1",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/michigan-state-university-byod-gang-cyber-incident",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-11-02",
+   "last_reported": "2026-11-02",
+   "evidence_status": "confirmed",
+   "lat": 42.7320307,
+   "lon": -84.4721678,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Alleged data theft affecting 1.3 million students, though full impact remains unclear.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "none"
+    },
+    "source_url": "https://therecord.media/michigan-state-university-byod-gang-cyber-incident",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 42.7320307,
+     "lon": -84.4721678,
+     "label": "East Lansing, USA",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/michigan-state-university-byod-gang-cyber-incident"
+    }
+   ]
+  },
+  {
+   "title": "Polymarket Briefly Suspended Trading After Third-Party Hack",
+   "date": "2026-11-01",
+   "category": "major_cyber",
+   "victim": "Polymarket and 33 deposit wallets",
+   "attacker": "Not reported",
+   "what": "Hackers compromised DebugBear to distribute malicious JavaScript",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "$2.7 million in assets siphoned from deposit wallets in under an hour due to the attack.",
+   "where": "No fixed location",
+   "major_impact": "major_financial_loss",
+   "significance": "This incident showcases the vulnerabilities associated with third-party services and their potential substantial financial impact on platforms using them.",
+   "id": "d55b06e56457a51b",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-11-02",
+   "last_reported": "2026-11-02",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The attack resulted in the siphoning of approximately $2.7 million from deposit wallets.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "substantial"
+    },
+    "source_url": "https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Cursor Marketplace Extension Tampered to Install Backdoor",
+   "date": "2026-11-01",
+   "category": "major_cyber",
+   "victim": "Cursor Marketplace and its users",
+   "attacker": "Not reported",
+   "what": "Malicious extensions installed a persistent SSH backdoor",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Up to 5,000 users impacted due to extension tampering, raising potential for continuous unauthorized access.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Compromised trusted extensions can lead to significant security breaches affecting tens of thousands of users.",
+   "id": "36413c2be5b317d5",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-11-02",
+   "last_reported": "2026-11-02",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "The incident potentially gave attackers unauthorized access through a backdoor in the users' systems.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "none",
+     "financial": "none"
+    },
+    "source_url": "https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
    "title": "NetamLoader infected a government Windows system in Asia",
    "date": "2026-10-30",
    "category": "major_cyber",
@@ -18707,13 +18715,13 @@
    "updates": [
     {
      "date": "2026-10-30",
-     "what": "Kaspersky identified NetamLoader on one government computer in the first half of 2026. The malware used legitimate Microsoft and Patch My PC components, interfered with security scanning, concealed activity, collected system information, downloaded additional code, and communicated with attacker infrastructure. The delivery path and possible compromise of update infrastructure were not established.",
+     "what": "NetamLoader malware was detected targeting government systems",
      "url": "https://therecord.media/hackers-target-government-windows-systems-asia-new-malware",
      "source": "The Record"
     },
     {
      "date": "2026-11-01",
-     "what": "NetamLoader was delivered in a CAB archive placed in a Windows update-package directory. The chain used AppDomainManager injection and multiple .NET, XAML, and JSON payloads to execute code, communicate with command-and-control infrastructure, collect system information, and erase artifacts.",
+     "what": "The NetamLoader malware was found to target systems within a custom Windows 10 build for government use, employing .NET injection techniques.",
      "url": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
      "source": "The Hacker News"
     }
@@ -19974,6 +19982,216 @@
     },
     "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
     "assessed_at": "2026-11-16T22:12:47+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "New WordPress vulnerability exploited for remote code execution",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "WordPress users",
+   "attacker": "Not reported",
+   "what": "Threat actors exploited a high-severity vulnerability in WordPress",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The vulnerability allows for remote code execution during the update process",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The high-severity vulnerability put many WordPress sites at risk shortly after patches were made available.",
+   "id": "d60fe79bc501a73f",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/fresh-wordpress-vulnerability-in-attackers-crosshairs/",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "limited",
+    "status": "preliminary",
+    "reason": "While exploitation attempts were reported, no successful compromises had been confirmed in available data.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "none",
+     "essential": "none",
+     "financial": "none"
+    },
+    "source_url": "https://www.securityweek.com/fresh-wordpress-vulnerability-in-attackers-crosshairs/",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "Trezor, CryptoBilis customers in Southeast Asia",
+   "attacker": "Not reported",
+   "what": "Suspicious hardware implant found in Trezor Safe 5 wallets sold through CryptoBilis",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The extra circuit board in the device appears capable of intercepting sensitive information and transmitting it.",
+   "where": "No fixed location",
+   "major_impact": "supply_chain_compromise",
+   "significance": "Potential supply-chain compromise raises security concerns about Trezor hardware wallets, affecting customer trust and product integrity.",
+   "id": "5bd0bbf19ecb788e",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": -22.0159585,
+   "lon": -47.897938,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "No confirmed thefts reported yet, but unauthorized access to sensitive crypto information is a significant concern.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "none"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": -22.0159585,
+     "lon": -47.897938,
+     "label": "Southeast Asia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/"
+    }
+   ]
+  },
+  {
+   "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
+   "date": "2026-10-30",
+   "category": "on_ai_system",
+   "victim": "Servers running Multipath TCP (MPTCP)",
+   "attacker": "Anthropic",
+   "what": "Critical use-after-free vulnerability allows unauthenticated attackers to execute commands as root.",
+   "ai_role": "AI model used to develop the exploit for remote code execution.",
+   "why": "Exploitation takes advantage of a race condition in the kernel's TCP handling code, enabling command execution.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The Linux kernel flaw could allow attackers significant unauthorized access to critical systems running MPTCP, affecting various Linux distributions including Ubuntu, Red Hat, and Rocky Linux.",
+   "id": "9cae37f54566134b",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "A critical Linux kernel vulnerability has been demonstrated to allow remote code execution on multiple systems.",
+    "evidence": {
+     "context": "real_world",
+     "service": "unknown",
+     "reach": "multiple",
+     "damage": "privileged_access",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Poryadok cyberattack disrupts operations for five days",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "Poryadok, a Russian home goods retailer",
+   "attacker": "Not reported",
+   "what": "Poryadok faced a cyberattack that forced it to close some stores and suspend online services for days.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The attack rendered the website, app, and physical stores temporarily unavailable, affecting customer access to orders and support.",
+   "where": "Russia",
+   "major_impact": "essential_service_disruption",
+   "significance": "The disruption affected customer access to services across 32 cities, illustrating vulnerabilities in retail cyber defenses.",
+   "id": "5a8cea201a2f1a3a",
+   "source_name": "The Record",
+   "source_url": "https://therecord.media/russian-home-goods-chain-faces-disruptions",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": 64.6863136,
+   "lon": 97.7453061,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Customers were unable to collect orders and contact support due to service unavailability.",
+    "evidence": {
+     "context": "real_world",
+     "service": "major",
+     "reach": "multiple",
+     "damage": "none",
+     "essential": "disrupted",
+     "financial": "unknown"
+    },
+    "source_url": "https://therecord.media/russian-home-goods-chain-faces-disruptions",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 64.6863136,
+     "lon": 97.7453061,
+     "label": "Russia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://therecord.media/russian-home-goods-chain-faces-disruptions"
+    }
+   ]
+  },
+  {
+   "title": "Syrian Hacker Sentenced for Conspiracy Hacking Media Outlets",
+   "date": "2026-10-30",
+   "category": "major_cyber",
+   "victim": "Various Western media outlets and organizations",
+   "attacker": "Syrian Electronic Army (Agha)",
+   "what": "Sent phishing emails to steal passwords, hijacked accounts.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Caused a significant drop in stock values and targeted media organizations.",
+   "where": "No fixed location",
+   "major_impact": "major_financial_loss",
+   "significance": "The hack resulted in a $136 billion market drop, showing the broad financial impact of cybercriminal activities against media outlets.",
+   "id": "9a8a1b6ecac8bb72",
+   "source_name": "The Hacker News",
+   "source_url": "https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Victims incurred significant cleanup costs totaling over $480,000, including security upgrades.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "multiple",
+     "damage": "limited",
+     "essential": "none",
+     "financial": "substantial"
+    },
+    "source_url": "https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
     "method": "reported-impact-v1"
    }
   },
@@ -21832,6 +22050,54 @@
     "assessed_at": "2026-11-19T07:33:31+00:00",
     "method": "reported-impact-v1"
    }
+  },
+  {
+   "title": "DHS employee database leaked online",
+   "date": "2026-10-29",
+   "category": "major_cyber",
+   "victim": "U.S. Department of Homeland Security",
+   "attacker": "Department of Peace",
+   "what": "A database containing the personal and work information of DHS employees was leaked online.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The leak included information on DHS employees, including sensitive job-related access information.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The leak exposes personal details of DHS personnel, including those involved in sensitive operations, potentially endangering them and affecting national security.",
+   "id": "c949d6c620573589",
+   "source_name": "SecurityWeek",
+   "source_url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/",
+   "added": "2026-11-24T18:35:28+00:00",
+   "reported_date": "2026-10-29",
+   "last_reported": "2026-10-29",
+   "evidence_status": "confirmed",
+   "lat": 39.7837304,
+   "lon": -100.445882,
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The leaked data included sensitive personal and work information of DHS employees, posing risks to their safety and impacting operational security.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "none"
+    },
+    "source_url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/",
+    "assessed_at": "2026-11-24T18:35:28+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7837304,
+     "lon": -100.445882,
+     "label": "United States",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/"
+    }
+   ]
   },
   {
    "title": "UNM Health ransomware attack diverted ambulances",
@@ -49570,7 +49836,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-24T17:39:41+00:00",
+ "last_added": "2026-11-24T18:35:28+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }

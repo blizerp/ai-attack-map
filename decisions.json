@@ -15886,19 +15886,19 @@
  "https://www.hipaajournal.com/hipaa-violation-cases/": {
   "title": "HIPAA Violation Cases: Types & Consequences",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Excludes compliance commentary and legal/enforcement recaps without substantive new incident facts.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Excludes compliance commentary and legal/enforcement recaps without substantive new incident facts.",
-    "title": "HIPAA violation cases and enforcement overview"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Prism Medical Products patients"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "8b681194c2c4b8932cccd6ef91d956504fcd213fedb75f51f3a07ef53644a7ef",
   "item": {
    "id": "6d4608410aa92f3c",
    "title": "HIPAA Violation Cases: Types & Consequences",
@@ -15906,7 +15906,8 @@
    "date": "2026-10-30",
    "source": "HIPAA Journal",
    "published_at": "2026-10-30T22:17:33+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/shen-smiles-pays-140000-to-resolve-hipaa-privacy-rule-violations/": {
   "title": "Shen Smiles Pays $140,000 to Resolve HIPAA Privacy Rule Violations",
@@ -24332,19 +24333,20 @@
  "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/": {
   "title": "Over 41,000 DHS Employee Records Leaked Online",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Substantive reporting supports a meaningful DHS data leak, but this report duplicates the already-tracked DHS employee database incident.",
+  "status": "include",
+  "reason": "Incident confirmed with substantiated evidence of data breach and substantial data leak.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Substantive reporting supports a meaningful DHS data leak, but this report duplicates the already-tracked DHS employee database incident.",
-    "title": "DHS employee records leaked online"
+    "status": "include",
+    "reason": "Incident confirmed with substantiated evidence of data breach and substantial data leak.",
+    "title": "DHS employee database leaked online",
+    "incident_id": "c949d6c620573589"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "0ccfe126da0971ec031914430e93677d012e8b61e3a456b411159135a827492a",
   "item": {
    "id": "0e3249a520322cec",
    "title": "Over 41,000 DHS Employee Records Leaked Online",
@@ -24357,20 +24359,19 @@
  "https://www.securityweek.com/hhs-filing-puts-irhythm-data-breach-toll-at-8-2-million/": {
   "title": "HHS Filing Puts iRhythm Data Breach Toll at 8.2 Million",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed third-party application compromise with substantiated theft or exposure of sensitive medical and identity-related data affecting more than 8 million people; this is an update to the already-tracked iRhythm incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed third-party application compromise with substantiated theft or exposure of sensitive medical and identity-related data affecting more than 8 million people; this is an update to the already-tracked iRhythm incident.",
-    "title": "iRhythm breach affected 8.18 million people",
-    "incident_id": "f9509bdd055c164a"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "iRhythm data breach affects over 8 million individuals"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "58ba3810113e6c2a2527082d3d681b1d0550d8b1a373cb3c040514ef7dd9cd01",
   "item": {
    "id": "2776a6abc00e2dd6",
    "title": "HHS Filing Puts iRhythm Data Breach Toll at 8.2 Million",
@@ -24772,28 +24773,30 @@
  "https://www.wiz.io/blog/the-rise-of-agentic-attacks": {
   "title": "The Rise of Agentic Attacks: What They Look Like, and Where They're Headed",
   "source": "Wiz Research",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Wiz provided researcher evidence of consequential unauthorized access to production Flowise services and agent-driven post-exploitation; this is distinct from the broader campaign summaries already tracked.; The report documents a distinct real-world cloud intrusion with demonstrated unauthorized access to privileged infrastructure and agent-driven escalation.; The report supplies researcher evidence of a distinct multi-victim agentic campaign involving unauthorized access and apparent bulk data theft, rather than merely describing a capability or attacker claim.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Wiz provided researcher evidence of consequential unauthorized access to production Flowise services and agent-driven post-exploitation; this is distinct from the broader campaign summaries already tracked.",
-    "title": "Agentic intrusion used Flowise RCE and cloud-environment access",
-    "incident_id": "808ef1cc369494d3"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "AI Agent Compromises Thailand’s Ministry of Finance Systems"
    },
    {
-    "status": "include",
-    "reason": "The report documents a distinct real-world cloud intrusion with demonstrated unauthorized access to privileged infrastructure and agent-driven escalation.",
-    "title": "Agentic cloud intrusion escalated into Kubernetes and cloud credentials",
-    "incident_id": "d0aadc1af24d9665"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Agentic API Exploitation Affects Organizations in Japan"
    },
    {
-    "status": "include",
-    "reason": "The report supplies researcher evidence of a distinct multi-victim agentic campaign involving unauthorized access and apparent bulk data theft, rather than merely describing a capability or attacker claim.",
-    "title": "Agentic campaign pursued crypto and fintech cloud environments",
-    "incident_id": "7954b8c30e7bed5c"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "AI-Driven Campaign Affects Multiple Organizations Using ConnectWise"
+   },
+   {
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Agentic Cloud Intrusion Targets Unnamed Organization"
    }
   ],
   "evidence": "article",
@@ -24810,19 +24813,19 @@
  "https://www.securityweek.com/how-secure-are-us-elections-voting-machine-risks-and-the-growing-threat-of-ai/": {
   "title": "How Secure Are US Elections? Voting Machine Risks and the Growing Threat of AI",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: this is hypothetical cybersecurity analysis and policy commentary. It reports no confirmed compromise, disruption, data theft, or other real-world cyber harm.",
+  "reason": "The content primarily discusses theoretical vulnerabilities and potential threats without confirming any specific cybersecurity incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is hypothetical cybersecurity analysis and policy commentary. It reports no confirmed compromise, disruption, data theft, or other real-world cyber harm.",
-    "title": "SecurityWeek discusses hypothetical US election cyber risks"
+    "reason": "The content primarily discusses theoretical vulnerabilities and potential threats without confirming any specific cybersecurity incident.",
+    "title": "US Elections Cybersecurity Concerns and Influence Campaigns"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "1fd77119251ba149a99099d761e083b52950cdbe2a349febf5759e7b0727c343",
   "item": {
    "id": "5a6aef5f5c8c0b99",
    "title": "How Secure Are US Elections? Voting Machine Risks and the Growing Threat of AI",
@@ -25471,16 +25474,15 @@
  "https://thehackernews.com/2026/10/binance-suffers-security-breach.html": {
   "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a confirmed compromise of a cryptocurrency exchange’s operational signing infrastructure with unauthorized withdrawals, temporary service suspension, and multibillion-dollar financial impact. It is the same Binance incident already tracked under the supplied duplicate record.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a confirmed compromise of a cryptocurrency exchange’s operational signing infrastructure with unauthorized withdrawals, temporary service suspension, and multibillion-dollar financial impact. It is the same Binance incident already tracked under the supplied duplicate record.",
-    "title": "Binance breach enabled approximately $5.9 billion in withdrawals",
-    "incident_id": "0608e73237d158c5"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets"
    }
   ],
   "evidence": "article",
@@ -25522,19 +25524,19 @@
  "https://www.securityweek.com/max-severity-gitlab-vulnerability-exploited-against-alpine-linux/": {
   "title": "Max-Severity GitLab Vulnerability Exploited Against Alpine Linux",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude because this was a failed, blocked exploitation attempt with no substantiated compromise or meaningful operational, data, financial, or downstream consequences.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude because this was a failed, blocked exploitation attempt with no substantiated compromise or meaningful operational, data, financial, or downstream consequences.",
-    "title": "Failed GitLab exploit attempt against Alpine Linux"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Failed exploit attempt against Alpine Linux's GitLab instance"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "85806d8f58efda7c3cccfdc0474a3d6f0395aeb8e940286ddfe783d7bbbbc518",
   "item": {
    "id": "d6e03c506b4f0957",
    "title": "Max-Severity GitLab Vulnerability Exploited Against Alpine Linux",
@@ -25547,19 +25549,20 @@
  "https://www.securityweek.com/fresh-wordpress-vulnerability-in-attackers-crosshairs/": {
   "title": "Fresh WordPress Vulnerability in Attackers’ Crosshairs",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Excludes blocked or unsuccessful exploitation attempts without evidence of a real victim compromise.",
+  "status": "include",
+  "reason": "Substantial exploitation attempts reported, leading to potential remote code execution risk.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Excludes blocked or unsuccessful exploitation attempts without evidence of a real victim compromise.",
-    "title": "WordPress update-process vulnerability actively targeted"
+    "status": "include",
+    "reason": "Substantial exploitation attempts reported, leading to potential remote code execution risk.",
+    "title": "New WordPress vulnerability exploited for remote code execution",
+    "incident_id": "d60fe79bc501a73f"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "0d33f0dcef470e7d3744fd2d8264d8a46b03200cba76715893b5db5c4eb6da76",
   "item": {
    "id": "d60fe79bc501a73f",
    "title": "Fresh WordPress Vulnerability in Attackers’ Crosshairs",
@@ -25572,20 +25575,19 @@
  "https://www.securityweek.com/drupal-commerce-core-vulnerability-exploited-against-online-stores/": {
   "title": "Drupal Commerce Core Vulnerability Exploited Against Online Stores",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Drupal confirmed that the Commerce Core vulnerability was being actively exploited against real online stores, constituting a substantiated compromise even though victim count and consequences remain unknown.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Drupal confirmed that the Commerce Core vulnerability was being actively exploited against real online stores, constituting a substantiated compromise even though victim count and consequences remain unknown.",
-    "title": "Drupal Commerce access bypass exploited against online stores",
-    "incident_id": "76d68c45944a2559"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Drupal Commerce Core Vulnerability Exploited Against Online Stores"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "5a8706a10d3c8bf25e555184fa32d23f426c4ef123734b127b6746603d8df508",
   "item": {
    "id": "76d68c45944a2559",
    "title": "Drupal Commerce Core Vulnerability Exploited Against Online Stores",
@@ -25598,20 +25600,19 @@
  "https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/": {
   "title": "$6 Billion Binance Hack Bears Hallmarks of North Korea’s TraderTraitor",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a confirmed, consequential compromise of Binance wallet-signing infrastructure with approximately $6.36 billion in observed cryptocurrency theft; it duplicates the already tracked Binance incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a confirmed, consequential compromise of Binance wallet-signing infrastructure with approximately $6.36 billion in observed cryptocurrency theft; it duplicates the already tracked Binance incident.",
-    "title": "Binance hot-wallet intrusion siphoned about $6.36 billion",
-    "incident_id": "0608e73237d158c5"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Binance suffers $6.3 billion hack attributed to North Korean hackers"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "0271b5dfa0d7547739fa6476a893a5f0af83c967da5eb6d9358472e2cd007c87",
   "item": {
    "id": "bea4dfc19f15df8e",
    "title": "$6 Billion Binance Hack Bears Hallmarks of North Korea’s TraderTraitor",
@@ -25624,20 +25625,20 @@
  "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/": {
   "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed supply-chain compromise of a third-party provider caused unauthorized withdrawals and a temporary trading disruption at Polymarket; this is the same event as the already-tracked DebugBear script compromise.",
+  "reason": "The evidence points to a significant financial cyber incident affecting users of Polymarket, substantiated by the draining of user funds.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed supply-chain compromise of a third-party provider caused unauthorized withdrawals and a temporary trading disruption at Polymarket; this is the same event as the already-tracked DebugBear script compromise.",
-    "title": "DebugBear script compromise drained Polymarket trader funds",
+    "reason": "The evidence points to a significant financial cyber incident affecting users of Polymarket, substantiated by the draining of user funds.",
+    "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
     "incident_id": "83273d8d85f8311b"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "db889d93178262f80b78092f45a5bd576ca57dbc1e086df4ea1a1b46a1f09098",
   "item": {
    "id": "535f68c41a1f1c89",
    "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
@@ -25645,24 +25646,25 @@
    "date": "2026-10-30",
    "source": "SecurityWeek",
    "published_at": "2026-10-30T09:41:36+00:00"
-  }
+  },
+  "retrieval_warning": "ReadTimeout"
  },
  "https://www.hipaajournal.com/lehigh-valley-health-network-hipaa-penalty/": {
   "title": "Lehigh Valley Health Network Pays $800K Penalty to Resolve HIPAA Violations",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude legal or regulatory settlement-only reporting when it adds no substantive new incident facts; the underlying Lehigh Valley Health Network breach is already tracked.",
+  "reason": "This report pertains to a settlement over past violations rather than a new cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude legal or regulatory settlement-only reporting when it adds no substantive new incident facts; the underlying Lehigh Valley Health Network breach is already tracked.",
-    "title": "HIPAA penalty for prior Lehigh Valley ransomware breach"
+    "reason": "This report pertains to a settlement over past violations rather than a new cyber incident.",
+    "title": "Lehigh Valley Health Network Pays $800K Penalty"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "47ad055e7b352f08f968c9488dd888aa9c3f8efcc57d49f8e775c84796893908",
   "item": {
    "id": "1e65e1c43420ba36",
    "title": "Lehigh Valley Health Network Pays $800K Penalty to Resolve HIPAA Violations",
@@ -25670,20 +25672,21 @@
    "date": "2026-10-30",
    "source": "HIPAA Journal",
    "published_at": "2026-10-30T10:48:28+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/": {
   "title": "CISA says max severity GitLab flaw now exploited in the wild",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exploitation of a vulnerability and scanning/exposure counts without substantiated unauthorized access to a real victim do not qualify as a confirmed incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exploitation of a vulnerability and scanning/exposure counts without substantiated unauthorized access to a real victim do not qualify as a confirmed incident.",
-    "title": "GitLab vulnerability exploited in the wild, victims not established"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Active Exploitation of Max Severity GitLab Flaw Confirmed"
    }
   ],
   "evidence": "article",
@@ -25700,15 +25703,15 @@
  "https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/": {
   "title": "Drupal warns of critical Commerce Core flaw exploited in attacks",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is a vulnerability-exploitation warning without substantiated evidence of an actual victim compromise or meaningful consequences. It duplicates the already tracked Drupal Commerce access-bypass item.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is a vulnerability-exploitation warning without substantiated evidence of an actual victim compromise or meaningful consequences. It duplicates the already tracked Drupal Commerce access-bypass item.",
-    "title": "Drupal Commerce Core flaw exploited, victims not identified"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Drupal Commerce Core flaw exploited in attacks"
    }
   ],
   "evidence": "article",
@@ -25725,16 +25728,15 @@
  "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/": {
   "title": "Binance links $6.3 billion crypto theft to compromised DevOps laptop",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a confirmed compromise of Binance’s operational environment with unauthorized cryptocurrency withdrawals and material financial consequences. It duplicates the already tracked Binance breach, with this report providing updated loss and attribution details.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a confirmed compromise of Binance’s operational environment with unauthorized cryptocurrency withdrawals and material financial consequences. It duplicates the already tracked Binance breach, with this report providing updated loss and attribution details.",
-    "title": "Binance breach enabled approximately $6.3 billion in crypto withdrawals",
-    "incident_id": "0608e73237d158c5"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Binance Links $6.3 Billion Crypto Theft to Compromised DevOps Laptop"
    }
   ],
   "evidence": "article",
@@ -25751,16 +25753,16 @@
  "https://therecord.media/russian-home-goods-chain-faces-disruptions": {
   "title": "Russian popular home goods chain faces days of disruption following cyberattack",
   "source": "The Record",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The company confirmed an actual cyberattack that caused multi-day closure of stores and suspension of core online and customer services. This is the same Poryadok incident already tracked under 1e65e1c43420ba36.",
+  "reason": "The report provides substantial evidence of operational disruption due to a cyberattack, with direct customer impacts and service interruptions.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The company confirmed an actual cyberattack that caused multi-day closure of stores and suspension of core online and customer services. This is the same Poryadok incident already tracked under 1e65e1c43420ba36.",
-    "title": "Poryadok cyberattack disrupted stores and online services",
-    "incident_id": "1e65e1c43420ba36"
+    "reason": "The report provides substantial evidence of operational disruption due to a cyberattack, with direct customer impacts and service interruptions.",
+    "title": "Poryadok cyberattack disrupts operations for five days",
+    "incident_id": "5a8cea201a2f1a3a"
    }
   ],
   "evidence": "article",
@@ -25777,16 +25779,15 @@
  "https://therecord.media/polymarket-confirms-cyberattack-third-party": {
   "title": "Polymarket confirms cyberattack on third-party provider after outages",
   "source": "The Record",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated real-world compromise of Polymarket’s third-party provider that caused platform outages, halted trading, and cryptocurrency losses; it is the same event as the already-tracked Polymarket/DebugBear incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated real-world compromise of Polymarket’s third-party provider that caused platform outages, halted trading, and cryptocurrency losses; it is the same event as the already-tracked Polymarket/DebugBear incident.",
-    "title": "Polymarket outage and cryptocurrency theft followed DebugBear compromise",
-    "incident_id": "83273d8d85f8311b"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Polymarket confirms cyberattack on third-party provider after outages"
    }
   ],
   "evidence": "article",
@@ -25803,15 +25804,15 @@
  "https://therecord.media/hackers-target-government-windows-systems-asia-new-malware": {
   "title": "Hackers target government Windows systems in Asia with new malware",
   "source": "The Record",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed malware infection of a government Windows system with consequential unauthorized code execution; this is the same event as the already-tracked NetamLoader incident.",
+  "reason": "The incident involves confirmed malware targeting government systems, with evidence of a critical network intrusion.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed malware infection of a government Windows system with consequential unauthorized code execution; this is the same event as the already-tracked NetamLoader incident.",
-    "title": "NetamLoader infected an Asian government Windows system",
+    "reason": "The incident involves confirmed malware targeting government systems, with evidence of a critical network intrusion.",
+    "title": "NetamLoader malware targets government Windows systems in Asia",
     "incident_id": "fcfc74f3570ba5e9"
    }
   ],
@@ -25829,15 +25830,15 @@
  "https://therecord.media/binance-hit-by-record-6-billion-crypto-hack": {
   "title": "Binance hit by record $6.3 billion crypto hack, scrambles to freeze funds",
   "source": "The Record",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Credible reporting and Binance's postmortem substantiate a consequential compromise, unauthorized withdrawals, major financial loss, and temporary service suspension. This is the same Binance event already tracked under 0608e73237d158c5.",
+  "reason": "The incident involves significant unauthorized access and financial loss reported by Binance and acknowledged in credible sources.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Credible reporting and Binance's postmortem substantiate a consequential compromise, unauthorized withdrawals, major financial loss, and temporary service suspension. This is the same Binance event already tracked under 0608e73237d158c5.",
-    "title": "Binance hack enabled $6.3 billion in unauthorized withdrawals",
+    "reason": "The incident involves significant unauthorized access and financial loss reported by Binance and acknowledged in credible sources.",
+    "title": "Binance hit by record $6.3 billion crypto hack",
     "incident_id": "0608e73237d158c5"
    }
   ],
@@ -25855,15 +25856,16 @@
  "https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html": {
   "title": "Syrian Hacker Behind Fake Tweet That Triggered $136 Billion Market Drop Gets 42 Months in Prison",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: sentencing and court-case recap of old incidents, with no substantive newly reported cyber incident.",
+  "status": "include",
+  "reason": "Reported evidence of significant unauthorized attacks impacting multiple organizations with documented financial consequences.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: sentencing and court-case recap of old incidents, with no substantive newly reported cyber incident.",
-    "title": "Sentencing recap of Syrian Electronic Army media-hacking campaign"
+    "status": "include",
+    "reason": "Reported evidence of significant unauthorized attacks impacting multiple organizations with documented financial consequences.",
+    "title": "Syrian Hacker Sentenced for Conspiracy Hacking Media Outlets",
+    "incident_id": "9a8a1b6ecac8bb72"
    }
   ],
   "evidence": "article",
@@ -25880,16 +25882,15 @@
  "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html": {
   "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed malicious software was distributed through a trusted marketplace and executed actions on user systems, causing a meaningful developer-tool supply-chain compromise. This is the same incident already tracked under e3ed66e626b0480b.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed malicious software was distributed through a trusted marketplace and executed actions on user systems, causing a meaningful developer-tool supply-chain compromise. This is the same incident already tracked under e3ed66e626b0480b.",
-    "title": "Trojanized Claude Code extension distributed through Cursor Marketplace",
-    "incident_id": "e3ed66e626b0480b"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Trojanized Claude Code Extension Distributed on Cursor Marketplace"
    }
   ],
   "evidence": "article",
@@ -25906,15 +25907,15 @@
  "https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html": {
   "title": "Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw",
   "source": "The Hacker News",
-  "checked": "2026-11-18T07:37:34+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful exploitation is reported, but the source gives no substantiated victim compromise or consequences; defer pending evidence of actual affected organizations or systems.",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful exploitation is reported, but the source gives no substantiated victim compromise or consequences; defer pending evidence of actual affected organizations or systems.",
-    "title": "Drupal Commerce Core flaw reportedly exploited in the wild"
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Unauthorized Exploitation of Drupal Commerce Core Flaw"
    }
   ],
   "evidence": "article",
@@ -25931,15 +25932,15 @@
  "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html": {
   "title": "CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV",
   "source": "The Hacker News",
-  "checked": "2026-11-13T19:48:17+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This report concerns vulnerabilities and active or attempted exploitation without a confirmed successful compromise or meaningful victim consequence. The Alpine Linux attempt was explicitly unsuccessful or blocked.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This report concerns vulnerabilities and active or attempted exploitation without a confirmed successful compromise or meaningful victim consequence. The Alpine Linux attempt was explicitly unsuccessful or blocked.",
-    "title": "CISA-listed GitLab and Cisco flaws lacked confirmed victim compromise"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "GitLab RCE Vulnerability Targeted with Unsuccessful Exploit Attempt"
    }
   ],
   "evidence": "article",
@@ -25981,15 +25982,15 @@
  "https://www.wiz.io/blog/ai-threat-readiness-survey-report-2026": {
   "title": "Key Takeaways: AI Threat Readiness Survey Report 2026",
   "source": "Wiz Research",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "The source is a survey and threat-readiness analysis. Its PHP2Shell discussion concerns unsuccessful exploitation attempts, not a confirmed compromise.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "The source is a survey and threat-readiness analysis. Its PHP2Shell discussion concerns unsuccessful exploitation attempts, not a confirmed compromise.",
-    "title": "Wiz AI threat-readiness survey reported no successful PHP2Shell compromises"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Unauthorized AI applications discovered in 52% of organizations"
    }
   ],
   "evidence": "article",
@@ -26006,19 +26007,19 @@
  "https://www.securityweek.com/php2shell-attacks-root-palo-alto-firewalls-but-fail-against-wordpress/": {
   "title": "PHP2Shell Attacks Root Palo Alto Firewalls but Fail Against WordPress",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is the same PHP2Shell campaign against Palo Alto management interfaces already tracked under incident 1b7ea59a8a7fdd41; no separate incident is created.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is the same PHP2Shell campaign against Palo Alto management interfaces already tracked under incident 1b7ea59a8a7fdd41; no separate incident is created.",
-    "title": "PHP2Shell campaign rooted at least 25 Palo Alto firewalls"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Palo Alto Networks Firewalls Rooted by PHP2Shell Exploits"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "0b9d1aa9e922d477126f8b8e8cfa6e4f8907ac38e1934053f98e91dff5970e55",
   "item": {
    "id": "e5a9603867586d14",
    "title": "PHP2Shell Attacks Root Palo Alto Firewalls but Fail Against WordPress",
@@ -26031,55 +26032,20 @@
  "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/": {
   "title": "In Other News: Anthropic Breach Dispute, UEFI Flaw Hits Most Servers, Cloudflare AI Data Leak",
   "source": "SecurityWeek",
-  "checked": "2026-11-14T18:11:57+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Substantive incident, but it duplicates the already-tracked freezer attack record.; This is the already-tracked Cathedral/Anthropic incident.; This duplicates the already-tracked University of Copenhagen breach.; This duplicates the already-tracked ENGIE partner-platform breach.; This duplicates the already-tracked Cloudflare Workers AI/SGLang cross-tenant leak.; Blocked or unsuccessful attempts without a confirmed compromise are out of scope.; Mere vulnerability disclosure without evidence of exploitation is excluded.; Routine scanning and unsubstantiated secret theft do not qualify as confirmed cyber incidents.; General campaign or capability reporting without a distinct substantiated incident is excluded.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Substantive incident, but it duplicates the already-tracked freezer attack record.",
-    "title": "US military commissary freezers hacked and food spoiled"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "University of Copenhagen breach exposed data of 525,000 people"
    },
    {
-    "status": "exclude",
-    "reason": "This is the already-tracked Cathedral/Anthropic incident.",
-    "title": "Cathedral agents accessed limited Anthropic business systems"
-   },
-   {
-    "status": "exclude",
-    "reason": "This duplicates the already-tracked University of Copenhagen breach.",
-    "title": "University of Copenhagen breach exposed identity data and PINs"
-   },
-   {
-    "status": "exclude",
-    "reason": "This duplicates the already-tracked ENGIE partner-platform breach.",
-    "title": "ENGIE partner marketing tool breach exposed French customer data"
-   },
-   {
-    "status": "exclude",
-    "reason": "This duplicates the already-tracked Cloudflare Workers AI/SGLang cross-tenant leak.",
-    "title": "Cloudflare Workers AI cross-tenant responses leaked customer data"
-   },
-   {
-    "status": "exclude",
-    "reason": "Blocked or unsuccessful attempts without a confirmed compromise are out of scope.",
-    "title": "FEC filing system taken offline after breach attempt"
-   },
-   {
-    "status": "exclude",
-    "reason": "Mere vulnerability disclosure without evidence of exploitation is excluded.",
-    "title": "AI-identified UEFI flaw disclosed without reported exploitation"
-   },
-   {
-    "status": "exclude",
-    "reason": "Routine scanning and unsubstantiated secret theft do not qualify as confirmed cyber incidents.",
-    "title": "AI bot campaign scanned websites for exposed secrets"
-   },
-   {
-    "status": "exclude",
-    "reason": "General campaign or capability reporting without a distinct substantiated incident is excluded.",
-    "title": "Reports described AI use in Aur0ra ransomware operations"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "ENGIE data breach traced to tool used by sales partners"
    }
   ],
   "evidence": "article",
@@ -26096,19 +26062,19 @@
  "https://www.securityweek.com/bulletproof-host-virtualine-loses-its-domain-to-fbi-seizure/": {
   "title": "Bulletproof Host Virtualine Loses Its Domain to FBI Seizure",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Enforcement/seizure report with no newly substantiated qualifying cyber compromise; the article mainly recaps alleged criminal hosting activity and related cryptocurrency flows.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Enforcement/seizure report with no newly substantiated qualifying cyber compromise; the article mainly recaps alleged criminal hosting activity and related cryptocurrency flows.",
-    "title": "FBI seized Virtualine bulletproof-hosting domain"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "FBI Seizes Domain of Cybercriminal Hosting Service Virtualine"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "8f827eab76f93509c02759bd4b4af208a5b1d7e20c240474114ad88a4da56dbd",
   "item": {
    "id": "32755954788a11dc",
    "title": "Bulletproof Host Virtualine Loses Its Domain to FBI Seizure",
@@ -26121,19 +26087,19 @@
  "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/": {
   "title": "August 2026 Healthcare Data Breach Report",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Retrospective aggregate report; all substantive incidents identified in the supplied text are already tracked, and no distinct new event remains.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Retrospective aggregate report; all substantive incidents identified in the supplied text are already tracked, and no distinct new event remains.",
-    "title": "August 2026 healthcare breach report adds no new incidents"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Prism Medical Products patients breach"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "c8823cf3857b88f9964f25de09bddbca4428d1f5caec465baf776fe67aad8d3b",
   "item": {
    "id": "92bf4ffa96e70947",
    "title": "August 2026 Healthcare Data Breach Report",
@@ -26141,12 +26107,13 @@
    "date": "2026-10-30",
    "source": "HIPAA Journal",
    "published_at": "2026-10-30T17:52:10+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.darkreading.com/cyberattacks-data-breaches/devs-trojanized-claude-code-extension-cursor": {
   "title": "Devs Hit by Trojanized Claude Code Extension for Cursor",
   "source": "Dark Reading",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -26154,7 +26121,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Trojanized Claude Code extension distributed through Cursor"
+    "title": "Trojanized Claude Code Extension Distributed via Cursor"
    }
   ],
   "evidence": "summary",
@@ -26172,15 +26139,16 @@
  "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/": {
   "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
   "source": "BleepingComputer",
-  "checked": "2026-11-18T07:37:34+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Potentially meaningful hardware supply-chain compromise, but the available report relies on an unexamined customer device and does not substantiate a malicious implant or unauthorized theft. It also appears to concern the already-tracked CryptoBilis/Trezor implant incident.",
+  "status": "include",
+  "reason": "Substantiated reports of a suspected implant affecting hardware wallets with potential for sensitive data theft.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potentially meaningful hardware supply-chain compromise, but the available report relies on an unexamined customer device and does not substantiate a malicious implant or unauthorized theft. It also appears to concern the already-tracked CryptoBilis/Trezor implant incident.",
-    "title": "Trezor investigates suspected CryptoBilis wallet implant"
+    "status": "include",
+    "reason": "Substantiated reports of a suspected implant affecting hardware wallets with potential for sensitive data theft.",
+    "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
+    "incident_id": "5bd0bbf19ecb788e"
    }
   ],
   "evidence": "article",
@@ -26197,15 +26165,15 @@
  "https://www.bleepingcomputer.com/news/security/ss7-and-diameter-attacks-how-signaling-flaws-expose-your-phone/": {
   "title": "SS7 and Diameter Attacks: How Signaling Flaws Expose Your Phone",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: a sponsored explanatory article about signaling vulnerabilities and historical claims, without a distinct substantiated cyber incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: a sponsored explanatory article about signaling vulnerabilities and historical claims, without a distinct substantiated cyber incident.",
-    "title": "Sponsored SS7 and Diameter attack explainer"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Signaling Attacks Exploit Flaws in SS7 and Diameter Protocols"
    }
   ],
   "evidence": "article",
@@ -26222,15 +26190,15 @@
  "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/": {
   "title": "Malicious Claude Code extension on Cursor planted SSH backdoors",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed real-world supply-chain compromise of an AI coding extension with execution on potentially thousands of developer systems, persistence attempts, reconnaissance exfiltration, and marketplace containment. It is the same incident already tracked under e3ed66e626b0480b.",
+  "reason": "The incident involves a compromised extension installing backdoors for potentially thousands of developers, with substantive impacts reported.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed real-world supply-chain compromise of an AI coding extension with execution on potentially thousands of developer systems, persistence attempts, reconnaissance exfiltration, and marketplace containment. It is the same incident already tracked under e3ed66e626b0480b.",
-    "title": "Trojanized Claude Code extension distributed through Cursor Marketplace",
+    "reason": "The incident involves a compromised extension installing backdoors for potentially thousands of developers, with substantive impacts reported.",
+    "title": "Malicious Claude Code extension on Cursor planted SSH backdoors",
     "incident_id": "e3ed66e626b0480b"
    }
   ],
@@ -26248,15 +26216,16 @@
  "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/": {
   "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "A demonstrated exploit against a vulnerability, without confirmed unauthorized activity against real external systems, is out of scope under the incident criteria.",
+  "status": "include",
+  "reason": "Incident involves actual compromise through critical vulnerability exploitation supported by researcher evidence.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "A demonstrated exploit against a vulnerability, without confirmed unauthorized activity against real external systems, is out of scope under the incident criteria.",
-    "title": "Linux MPTCP kernel flaw demonstrated, but no real-world exploitation confirmed"
+    "status": "include",
+    "reason": "Incident involves actual compromise through critical vulnerability exploitation supported by researcher evidence.",
+    "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
+    "incident_id": "9cae37f54566134b"
    }
   ],
   "evidence": "article",
@@ -26273,15 +26242,15 @@
  "https://therecord.media/syrian-electronic-army-hacker-sentenced-three-years": {
   "title": "Syrian Electronic Army hacker gets prison time for attacks on Western targets",
   "source": "The Record",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: court/sentencing coverage that rehashes historical cyberattacks without substantive new incident facts.",
+  "reason": "This report details a legal sentencing rather than an active cybersecurity incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: court/sentencing coverage that rehashes historical cyberattacks without substantive new incident facts.",
-    "title": "Syrian Electronic Army hacker sentenced for historical attacks"
+    "reason": "This report details a legal sentencing rather than an active cybersecurity incident.",
+    "title": "Syrian Electronic Army hacker sentenced for attacks on Western targets"
    }
   ],
   "evidence": "article",
@@ -26298,16 +26267,15 @@
  "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards": {
   "title": "Fashion retailer Resolve says hackers stole payment card information",
   "source": "The Record",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The report substantiates unauthorized access to Revolve systems and theft of customers’ payment-card data; this is the same incident already tracked under d098d27b6b4f9769.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The report substantiates unauthorized access to Revolve systems and theft of customers’ payment-card data; this is the same incident already tracked under d098d27b6b4f9769.",
-    "title": "Revolve breach exposed payment-card information",
-    "incident_id": "d098d27b6b4f9769"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Revolve breach exposed payment-card information"
    }
   ],
   "evidence": "article",
@@ -26324,16 +26292,15 @@
  "https://therecord.media/florida-warns-5-million-affected-financial-aid-site-breach": {
   "title": "Florida warns that 4.9 million people had Social Security numbers leaked in financial aid site breach",
   "source": "The Record",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The report substantiates a large-scale compromise of a state financial-aid system and exposure of Social Security numbers and other sensitive records. It duplicates the already tracked Florida financial-aid breach incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The report substantiates a large-scale compromise of a state financial-aid system and exposure of Social Security numbers and other sensitive records. It duplicates the already tracked Florida financial-aid breach incident.",
-    "title": "Florida financial-aid breach exposed 4.9 million people’s data",
-    "incident_id": "4c8edab482b9c4df"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Florida Student Financial Aid data breach exposes 4.9 million records"
    }
   ],
   "evidence": "article",
@@ -26350,15 +26317,15 @@
  "https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale": {
   "title": "DOJ raises privacy concerns over potential sale of Character.AI chats",
   "source": "The Record",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: this is policy/legal commentary about a potential sale of user data, without evidence of an actual compromise or unauthorized disclosure.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: this is policy/legal commentary about a potential sale of user data, without evidence of an actual compromise or unauthorized disclosure.",
-    "title": "DOJ questions possible sale of Character.AI chat data"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Character.AI faces DOJ scrutiny over user data sale"
    }
   ],
   "evidence": "article",
@@ -26375,15 +26342,15 @@
  "https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html": {
   "title": "WordPress RCE Flaw Draws Nearly 63,000 Attack Attempts in Just 24 Hours",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: this is a vulnerability-exploitation attempt report with blocked requests and no substantiated successful compromise or victim impact.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: this is a vulnerability-exploitation attempt report with blocked requests and no substantiated successful compromise or victim impact.",
-    "title": "WordPress RCE exploitation attempts blocked by Wordfence"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "High-severity WordPress RCE Flaw Exploited in Active Attacks"
    }
   ],
   "evidence": "article",
@@ -26400,15 +26367,15 @@
  "https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html": {
   "title": "TeamViewer Flaw Lets Remote Computers Attack Users Who Connect to Control Them",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: this is a vulnerability disclosure and research demonstration with no evidence of exploitation or real-world victim harm.",
+  "reason": "This incident describes a vulnerability but lacks evidence of an actual compromise or operational consequences.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is a vulnerability disclosure and research demonstration with no evidence of exploitation or real-world victim harm.",
-    "title": "TeamViewer flaw disclosed without evidence of exploitation"
+    "reason": "This incident describes a vulnerability but lacks evidence of an actual compromise or operational consequences.",
+    "title": "TeamViewer Flaw Allows Remote Attacks"
    }
   ],
   "evidence": "article",
@@ -26425,15 +26392,15 @@
  "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html": {
   "title": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is an additional report about the already-tracked Vapor Panda ARTEX campaign, duplicate_of 839c367c02ad6f3; it should not create a second incident record.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is an additional report about the already-tracked Vapor Panda ARTEX campaign, duplicate_of 839c367c02ad6f3; it should not create a second incident record.",
-    "title": "Vapor Panda used ARTEX agents against more than 200 organizations"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Vapor Panda Targets Over 200 Organizations Worldwide"
    }
   ],
   "evidence": "article",
@@ -26450,15 +26417,25 @@
  "https://www.wiz.io/blog/black-october-for-ai-developer-platforms": {
   "title": "“Black October” for AI Developer Platforms",
   "source": "Wiz Research",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "All substantive incidents described are already represented in the supplied tracking list; the source adds analysis and follow-on details rather than a new distinct incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "All substantive incidents described are already represented in the supplied tracking list; the source adds analysis and follow-on details rather than a new distinct incident.",
-    "title": "No new distinct incidents in Wiz AI-platform roundup"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Chainstack Reports Incident Following Credential Access"
+   },
+   {
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Fireworks AI Reports Breach Linked to Third-Party Cloud Provider"
+   },
+   {
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Trigger.dev Reports November Security Incident"
    }
   ],
   "evidence": "article",
@@ -26475,19 +26452,19 @@
  "https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run/": {
   "title": "Syrian Hacker Gets Prison Time in US After Over a Decade on the Run",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Court/sentencing-only recap with no substantive new incident facts; the underlying intrusions are historical and not newly reported here.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Court/sentencing-only recap with no substantive new incident facts; the underlying intrusions are historical and not newly reported here.",
-    "title": "SEA-linked hacker sentenced for historical intrusions"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Syrian Hacker Sentenced After Compromising 47 Targets"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "62d7d6b18b830b611ac4b199b451e4f1dc606ca79da4c9e95ab36ece1599e664",
   "item": {
    "id": "8426474406aa87ba",
    "title": "Syrian Hacker Gets Prison Time in US After Over a Decade on the Run",
@@ -26500,15 +26477,15 @@
  "https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html": {
   "title": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3, Up 38%",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: this is an aggregate quarterly DDoS report describing mitigated attacks, not a distinct substantiated incident with an identified consequential victim compromise.",
+  "reason": "Article discusses general trends in DDoS attacks without detailing specific incidents or impacts on organizations.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is an aggregate quarterly DDoS report describing mitigated attacks, not a distinct substantiated incident with an identified consequential victim compromise.",
-    "title": "Cloudflare reports aggregate Q3 2026 DDoS attack statistics"
+    "reason": "Article discusses general trends in DDoS attacks without detailing specific incidents or impacts on organizations.",
+    "title": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3"
    }
   ],
   "evidence": "article",
@@ -26525,16 +26502,15 @@
  "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html": {
   "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed organizational compromise and customer-data exposure are substantive. This is a duplicate of the already tracked Chainalysis intrusion disclosed on 2026-10-31.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed organizational compromise and customer-data exposure are substantive. This is a duplicate of the already tracked Chainalysis intrusion disclosed on 2026-10-31.",
-    "title": "Chainalysis confirms intrusion exposing non-sensitive customer data",
-    "incident_id": "e94efd15e11a3993"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data"
    }
   ],
   "evidence": "article",
@@ -26551,15 +26527,15 @@
  "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html": {
   "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is a qualifying real-world incident, but it duplicates the already tracked Ivanti Connect Secure exploit-chain incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is a qualifying real-world incident, but it duplicates the already tracked Ivanti Connect Secure exploit-chain incident.",
-    "title": "Ivanti Connect Secure exploit chain gained unauthenticated root access"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Ivanti Connect Secure flaws exploited for unauthenticated root access"
    }
   ],
   "evidence": "article",
@@ -26576,15 +26552,15 @@
  "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html": {
   "title": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Research demonstration without established external victim harm; OpenAI patched the flaw before any reported real-world exploitation.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Research demonstration without established external victim harm; OpenAI patched the flaw before any reported real-world exploitation.",
-    "title": "ChatGPT shared-link flaw demonstrated in controlled test"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "ChatGPT Vulnerability Allowed Code Execution from Shared Links"
    }
   ],
   "evidence": "article",
@@ -26601,16 +26577,15 @@
  "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/": {
   "title": "Northflank security breach leads to abuse of customers' AI API keys",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed cloud-platform breach with stolen customer secrets and reported unauthorized use of customer AI API keys; this is the already-tracked Northflank incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed cloud-platform breach with stolen customer secrets and reported unauthorized use of customer AI API keys; this is the already-tracked Northflank incident.",
-    "title": "Northflank breach exposed customer secrets and AI API keys",
-    "incident_id": "7538a47c398f6773"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Northflank security breach leads to abuse of customers' AI API keys"
    }
   ],
   "evidence": "article",
@@ -26627,15 +26602,15 @@
  "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/": {
   "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "This is a vulnerability and controlled proof-of-concept demonstration without evidence of actual external victims or unauthorized real-world impact.",
+  "reason": "Reported vulnerability lacks confirmed exploitation or actual impact.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "This is a vulnerability and controlled proof-of-concept demonstration without evidence of actual external victims or unauthorized real-world impact.",
-    "title": "Android SMS of Death vulnerability demonstrated in proof of concept"
+    "reason": "Reported vulnerability lacks confirmed exploitation or actual impact.",
+    "title": "New Android SMS of Death exploit can remotely crash unpatched phones"
    }
   ],
   "evidence": "article",
@@ -26652,15 +26627,15 @@
  "https://www.bleepingcomputer.com/news/security/from-beginner-to-bug-hunter-learning-cybersecurity-in-the-ai-era/": {
   "title": "From Beginner to Bug Hunter: Learning Cybersecurity in the AI Era.",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: educational/sponsored content and general discussion of bug-bounty programs, not a substantive real cyber incident.",
+  "reason": "The article does not document a specific cyber incident, rather it discusses trends in bug bounty programs.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: educational/sponsored content and general discussion of bug-bounty programs, not a substantive real cyber incident.",
-    "title": "Sponsored article about learning cybersecurity and bug bounties"
+    "reason": "The article does not document a specific cyber incident, rather it discusses trends in bug bounty programs.",
+    "title": "From Beginner to Bug Hunter: Learning Cybersecurity in the AI Era"
    }
   ],
   "evidence": "article",
@@ -26677,16 +26652,15 @@
  "https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/": {
   "title": "Chainalysis discloses data breach from \"offensive agentic techniques\"",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The victim confirmed a consequential compromise of internal systems and customer-related records; this is the same Chainalysis incident already tracked under e94efd15e11a3993.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The victim confirmed a consequential compromise of internal systems and customer-related records; this is the same Chainalysis incident already tracked under e94efd15e11a3993.",
-    "title": "Chainalysis discloses breach using offensive agentic techniques",
-    "incident_id": "e94efd15e11a3993"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Chainalysis discloses data breach from \"offensive agentic techniques\""
    }
   ],
   "evidence": "article",
@@ -26703,19 +26677,19 @@
  "https://www.securityweek.com/northstar-security-exits-stealth-with-7m-to-expose-toxic-risk-combinations/": {
   "title": "Northstar Security Exits Stealth With $7M to Expose Toxic Risk Combinations",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Product announcement and funding news without an actual cyber incident.",
+  "reason": "The content does not report any cybersecurity incidents; it discusses a startup's funding and goals.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Product announcement and funding news without an actual cyber incident.",
-    "title": "Northstar Security launches AI security platform"
+    "reason": "The content does not report any cybersecurity incidents; it discusses a startup's funding and goals.",
+    "title": "Northstar Security funds AI for security without reported incidents"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "bd1b01693c3476ee81fc20978d446a5b844426b35c59ab328a2ea816ad564d11",
   "item": {
    "id": "1d241447123012b5",
    "title": "Northstar Security Exits Stealth With $7M to Expose Toxic Risk Combinations",
@@ -26728,15 +26702,15 @@
  "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html": {
   "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The report substantiates a real infection on one government Windows system through Kaspersky telemetry; it is already tracked as the same NetamLoader incident.",
+  "reason": "The report details a confirmed compromise involving a sophisticated malware targeting government systems.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The report substantiates a real infection on one government Windows system through Kaspersky telemetry; it is already tracked as the same NetamLoader incident.",
-    "title": "NetamLoader infected a government Windows system in Asia",
+    "reason": "The report details a confirmed compromise involving a sophisticated malware targeting government systems.",
+    "title": "NetamLoader Malware Targets Government Windows 10 Systems",
     "incident_id": "fcfc74f3570ba5e9"
    }
   ],
@@ -26754,15 +26728,15 @@
  "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html": {
   "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed real-world compromise of a third-party script used by Polymarket caused unauthorized wallet activity, documented cryptocurrency theft, and trading disruption. This is the same event as the already-tracked Polymarket/DebugBear incident.",
+  "reason": "Documented financial loss through unauthorized access to user accounts via compromised script.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed real-world compromise of a third-party script used by Polymarket caused unauthorized wallet activity, documented cryptocurrency theft, and trading disruption. This is the same event as the already-tracked Polymarket/DebugBear incident.",
-    "title": "Hijacked DebugBear script stole about $2.64 million from Polymarket traders",
+    "reason": "Documented financial loss through unauthorized access to user accounts via compromised script.",
+    "title": "Hackers Steal About $2.7 Million From Polymarket Traders",
     "incident_id": "83273d8d85f8311b"
    }
   ],
@@ -26780,16 +26754,15 @@
  "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html": {
   "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed real-world cryptocurrency theft with documented multibillion-dollar losses and temporary withdrawal disruption; this report adds official attribution and AI-assisted lure details to an already tracked incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed real-world cryptocurrency theft with documented multibillion-dollar losses and temporary withdrawal disruption; this report adds official attribution and AI-assisted lure details to an already tracked incident.",
-    "title": "FBI attributes $6.43 billion Binance theft to TraderTraitor",
-    "incident_id": "0608e73237d158c5"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist"
    }
   ],
   "evidence": "article",
@@ -26806,16 +26779,15 @@
  "https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/": {
   "title": "FBI links $6.3 billion Binance crypto heist to North Korean hackers",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a confirmed, consequential compromise of Binance’s cryptocurrency infrastructure with approximately $6.36 billion stolen. It duplicates the already tracked Binance incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a confirmed, consequential compromise of Binance’s cryptocurrency infrastructure with approximately $6.36 billion stolen. It duplicates the already tracked Binance incident.",
-    "title": "Binance crypto heist attributed to North Korean hackers",
-    "incident_id": "0608e73237d158c5"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "North Korean hackers linked to $6.3 billion Binance heist"
    }
   ],
   "evidence": "article",
@@ -26832,15 +26804,15 @@
  "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/": {
   "title": "Alpine Linux rebuilds GitLab after attempted RCE attack",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: this was a blocked or unconfirmed exploitation attempt. The victim found no evidence of successful code execution, unauthorized access, data compromise, or software/release tampering.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: this was a blocked or unconfirmed exploitation attempt. The victim found no evidence of successful code execution, unauthorized access, data compromise, or software/release tampering.",
-    "title": "Alpine Linux GitLab RCE exploitation attempt was not confirmed successful"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Alpine Linux rebuilts GitLab after RCE attack attempts"
    }
   ],
   "evidence": "article",
@@ -26857,15 +26829,15 @@
  "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-its-doubling-pro-usage-limits-and-bringing-work-features-to-chat/": {
   "title": "OpenAI says it's doubling Pro usage limits and bringing Work features to Chat",
   "source": "BleepingComputer",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Product announcement and feature/usage-limit changes without evidence of an actual cyber incident.",
+  "reason": "Report contains no substantive evidence of a cybersecurity incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Product announcement and feature/usage-limit changes without evidence of an actual cyber incident.",
-    "title": "OpenAI expands ChatGPT Work and Codex features"
+    "reason": "Report contains no substantive evidence of a cybersecurity incident.",
+    "title": "OpenAI announces features for ChatGPT and Codex as part of Pro subscriptions"
    }
   ],
   "evidence": "article",
@@ -26882,15 +26854,15 @@
  "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html": {
   "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value",
   "source": "The Hacker News",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is a substantive, researcher-documented AI-enabled infostealer campaign, but it duplicates the already-tracked VOLTA-AUTODOXER incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is a substantive, researcher-documented AI-enabled infostealer campaign, but it duplicates the already-tracked VOLTA-AUTODOXER incident.",
-    "title": "VOLTA infostealer used AI to rank stolen victim data"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value"
    }
   ],
   "evidence": "article",
@@ -26907,15 +26879,15 @@
  "https://www.wiz.io/blog/soc-alerts-red-and-blue-agents": {
   "title": "From Reactive to Proactive: Empowering SOC Teams with the Wiz Red and Blue Agents",
   "source": "Wiz Research",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "This is a product announcement and hypothetical security example, not a substantiated real-world cyber incident.",
+  "reason": "The article discusses operational strategies and does not report any specific cyber incidents.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "This is a product announcement and hypothetical security example, not a substantiated real-world cyber incident.",
-    "title": "Wiz describes proactive SOC agents and hypothetical breach scenarios"
+    "reason": "The article discusses operational strategies and does not report any specific cyber incidents.",
+    "title": "Wiz Research on SOC teams and AI"
    }
   ],
   "evidence": "article",
@@ -26932,20 +26904,20 @@
  "https://www.securityweek.com/revolve-data-breach-impacts-at-least-180000-people/": {
   "title": "Revolve Data Breach Impacts at Least 200,000 People",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated e-commerce compromise involving unauthorized access and potential theft of payment-card and personal data from at least 197,072 people; it duplicates the already tracked Revolve incident.",
+  "reason": "Confirmed unauthorized access to Revolve's systems and customer data theft.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated e-commerce compromise involving unauthorized access and potential theft of payment-card and personal data from at least 197,072 people; it duplicates the already tracked Revolve incident.",
-    "title": "Revolve breach exposed payment-card data of at least 197,072 people",
+    "reason": "Confirmed unauthorized access to Revolve's systems and customer data theft.",
+    "title": "Revolve Data Breach Impacts at Least 200,000 People",
     "incident_id": "d098d27b6b4f9769"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "8341e29461946812a7f722a4dc747d5c7010cefae02dc83a54629728dc713f80",
   "item": {
    "id": "85102a722589abf1",
    "title": "Revolve Data Breach Impacts at Least 200,000 People",
@@ -26958,20 +26930,20 @@
  "https://www.securityweek.com/polymarket-returns-3-9-million-to-traders-as-debugbear-cites-dns-hijack/": {
   "title": "Polymarket Returns $3.9 Million to Traders as DebugBear Cites DNS Hijack",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantive update to the already tracked Polymarket/DebugBear supply-chain compromise, documenting affected wallets, trading disruption, and approximately $3.9 million in reimbursements and losses.",
+  "reason": "Incident involved unauthorized access and financial consequences, substantiated through various reports and acknowledgments from the victim.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantive update to the already tracked Polymarket/DebugBear supply-chain compromise, documenting affected wallets, trading disruption, and approximately $3.9 million in reimbursements and losses.",
-    "title": "Polymarket traders lost funds after DebugBear script compromise",
+    "reason": "Incident involved unauthorized access and financial consequences, substantiated through various reports and acknowledgments from the victim.",
+    "title": "Polymarket Returns $3.9 Million to Traders After DebugBear Compromise",
     "incident_id": "83273d8d85f8311b"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "50162530f602a6afb9250f60ecaa545c15b19e912a60a51f35e018b48bc3e8f3",
   "item": {
    "id": "cedbefc4c8c84466",
    "title": "Polymarket Returns $3.9 Million to Traders as DebugBear Cites DNS Hijack",
@@ -26984,20 +26956,19 @@
  "https://www.securityweek.com/malicious-claude-code-extension-served-in-cursor-supply-chain-attack/": {
   "title": "Malicious Claude Code Extension Served in Cursor Supply Chain Attack",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed compromise of a trusted AI-code-extension distribution channel with a malicious payload capable of command execution and persistence; this is the already tracked Cursor Claude Code extension incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed compromise of a trusted AI-code-extension distribution channel with a malicious payload capable of command execution and persistence; this is the already tracked Cursor Claude Code extension incident.",
-    "title": "Malicious Claude Code extension distributed through Cursor marketplace",
-    "incident_id": "e3ed66e626b0480b"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Cursor Users Targeted with Malicious Claude Code Extension"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "e884831a9b0247bc644790f1d8b6a81de4c7c7a53cb5ee2cb0e718072f73b584",
   "item": {
    "id": "0755049f14893528",
    "title": "Malicious Claude Code Extension Served in Cursor Supply Chain Attack",
@@ -27010,20 +26981,20 @@
  "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/": {
   "title": "Ivanti Patches Two More Zero-Days Exploited in Connect Secure Attack Chain",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The report substantiates in-the-wild compromise of Ivanti Connect Secure customers with root access, credential theft, and data exfiltration; it is a later report of the already tracked incident.",
+  "reason": "The incident involves confirmed exploitation of multiple vulnerabilities resulting in unauthorized access and compromised credentials.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The report substantiates in-the-wild compromise of Ivanti Connect Secure customers with root access, credential theft, and data exfiltration; it is a later report of the already tracked incident.",
-    "title": "Ivanti Connect Secure zero-day chain compromised customers",
-    "incident_id": "f308e7abc49980c1"
+    "reason": "The incident involves confirmed exploitation of multiple vulnerabilities resulting in unauthorized access and compromised credentials.",
+    "title": "Ivanti Connect Secure zero-days chained for unauthorized access",
+    "incident_id": "af77d8a5b0044ab6"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "af0b102d9943b6d3f00b5d87d55eba674a2fc2eb44906f41a78eff27528dd436",
   "item": {
    "id": "f308e7abc49980c1",
    "title": "Ivanti Patches Two More Zero-Days Exploited in Connect Secure Attack Chain",
@@ -27036,20 +27007,20 @@
  "https://www.securityweek.com/florida-student-aid-website-hack-puts-data-of-4-9-million-people-at-risk/": {
   "title": "Florida Student Aid Website Hack Puts Data of 4.9 Million People at Risk",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The state agency confirmed an actual website breach with potential exposure of large-scale sensitive personal records; this is the same incident already tracked under 4c8edab482b9c4df.",
+  "reason": "Incident has substantiated evidence of unauthorized access and significant data exposure.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The state agency confirmed an actual website breach with potential exposure of large-scale sensitive personal records; this is the same incident already tracked under 4c8edab482b9c4df.",
-    "title": "Florida student-aid website breach may affect 4.9 million",
+    "reason": "Incident has substantiated evidence of unauthorized access and significant data exposure.",
+    "title": "Florida Department of Education Hack Exposes Data of 4.9 Million",
     "incident_id": "4c8edab482b9c4df"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "4230e26e2f6ca6a350283a6f2dc865ca467e50e22c336a718386052f84e2794f",
   "item": {
    "id": "5bba28fa15dbd657",
    "title": "Florida Student Aid Website Hack Puts Data of 4.9 Million People at Risk",
@@ -27062,20 +27033,19 @@
  "https://www.securityweek.com/fbi-flags-over-600-addresses-tied-to-north-koreas-binance-heist/": {
   "title": "FBI Flags Over 600 Addresses Tied to North Korea’s Binance Heist",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated compromise of Binance hot wallets with a reported multibillion-dollar financial loss. It is a later report about the already-tracked Binance incident, so it is linked as a duplicate rather than treated as a new event.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated compromise of Binance hot wallets with a reported multibillion-dollar financial loss. It is a later report about the already-tracked Binance incident, so it is linked as a duplicate rather than treated as a new event.",
-    "title": "North Korean hackers stole about $6.3 billion from Binance",
-    "incident_id": "0608e73237d158c5"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Binance Cryptocurrency Heist Estimated at $6.3 Billion"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "ca8b5a13be3230cf8a9a0132ac8c67cd6b3fb63ecc789bb3a0be810b9e88f78e",
   "item": {
    "id": "fdc54b3286b3c6aa",
    "title": "FBI Flags Over 600 Addresses Tied to North Korea’s Binance Heist",
@@ -27088,19 +27058,19 @@
  "https://www.securityweek.com/cybersecurity-ma-roundup-37-deals-announced-in-october-2026/": {
   "title": "Cybersecurity M&A Roundup: 37 Deals Announced in October 2026",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: the report concerns cybersecurity acquisitions and investments rather than substantive cyber incidents.",
+  "reason": "The content consists solely of M&A announcements without any substantive cybersecurity events reported.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: the report concerns cybersecurity acquisitions and investments rather than substantive cyber incidents.",
-    "title": "SecurityWeek cybersecurity M&A roundup"
+    "reason": "The content consists solely of M&A announcements without any substantive cybersecurity events reported.",
+    "title": "Cybersecurity M&A Roundup: 37 Deals Announced in October 2026"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "e745a76b7bb1ee01b50206aadbd2092854b5e96a3093cb999ddef9c6d6fe5cfe",
   "item": {
    "id": "e1ce3fb91c10667d",
    "title": "Cybersecurity M&A Roundup: 37 Deals Announced in October 2026",
@@ -27113,20 +27083,19 @@
  "https://www.securityweek.com/chainalysis-discloses-data-breach-following-ai-driven-cyberattack/": {
   "title": "Chainalysis Discloses Data Breach Following AI-Driven Cyberattack",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Chainalysis and credible reporting substantiate a real unauthorized intrusion and access to customer-related data; this is a duplicate of the already tracked Chainalysis AI-driven breach.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Chainalysis and credible reporting substantiate a real unauthorized intrusion and access to customer-related data; this is a duplicate of the already tracked Chainalysis AI-driven breach.",
-    "title": "Chainalysis data breach followed AI-driven intrusion",
-    "incident_id": "96b7d56e311fd92b"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Chainalysis Discloses Data Breach Following AI-Driven Cyberattack"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "56466ce5457ae87fb04ce1eef738c1e364779d484d290bb0d520185ea4fc1f06",
   "item": {
    "id": "96b7d56e311fd92b",
    "title": "Chainalysis Discloses Data Breach Following AI-Driven Cyberattack",
@@ -27139,38 +27108,20 @@
  "https://www.hipaajournal.com/connecticut-dhs-husky-data-security-incident/": {
   "title": "41,000 Connecticut Medicaid Recipients Affected by DHS Data Incident",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "DSS and its fiscal agent substantiated unauthorized access to a Medicaid reimbursement account and exposure of sensitive information affecting 41,000 people.; The source reports a substantiated insider data incident involving 12,018 Medicaid participants and sensitive health and identity information; the attempted sale does not make it merely hypothetical.; The clinic's investigation substantiated exposure of protected health information affecting 6,137 patients, making this a meaningful healthcare compromise despite uncertain acquisition scope.; The provider confirmed unauthorized access to files containing medical and identity information for 3,059 patients.",
+  "reason": "Substantiated impact on protected health information of individuals by a confirmed breach.",
   "decisions": [
    {
     "status": "include",
-    "reason": "DSS and its fiscal agent substantiated unauthorized access to a Medicaid reimbursement account and exposure of sensitive information affecting 41,000 people.",
-    "title": "Connecticut Medicaid provider account accessed, affecting 41,000",
+    "reason": "Substantiated impact on protected health information of individuals by a confirmed breach.",
+    "title": "Connecticut Department of Social Services Data Breach",
     "incident_id": "92bf4ffa96e70947"
-   },
-   {
-    "status": "include",
-    "reason": "The source reports a substantiated insider data incident involving 12,018 Medicaid participants and sensitive health and identity information; the attempted sale does not make it merely hypothetical.",
-    "title": "Former facilitator offered New York Medicaid consumer data for sale",
-    "incident_id": "701af7aebe198ea5"
-   },
-   {
-    "status": "include",
-    "reason": "The clinic's investigation substantiated exposure of protected health information affecting 6,137 patients, making this a meaningful healthcare compromise despite uncertain acquisition scope.",
-    "title": "Hattiesburg Eye Clinic patient data exposed after network incident",
-    "incident_id": "c27cdae9766408d9"
-   },
-   {
-    "status": "include",
-    "reason": "The provider confirmed unauthorized access to files containing medical and identity information for 3,059 patients.",
-    "title": "Eye Care Center of Snohomish files accessed by unauthorized party",
-    "incident_id": "2d410854413184ab"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "0bc7a4cadf1c555edd5f996b97b35a1d7cb93af2c7a202452a993973d2f13780",
   "item": {
    "id": "0c618fdc0bb5c92c",
    "title": "41,000 Connecticut Medicaid Recipients Affected by DHS Data Incident",
@@ -27178,12 +27129,13 @@
    "date": "2026-11-02",
    "source": "HIPAA Journal",
    "published_at": "2026-11-02T16:09:39+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.darkreading.com/cyberattacks-data-breaches/paprat-cyberespionage-campaign-bitter-south-asia": {
   "title": "PapRAT Cyber-Espionage Campaign Leaves a 'Bitter' Taste in South Asia",
   "source": "Dark Reading",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -27191,7 +27143,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Bitter campaign deployed PapRAT in South Asia"
+    "title": "PapRAT Cyber-Espionage Campaign Leaves a 'Bitter' Taste in South Asia"
    }
   ],
   "evidence": "summary",
@@ -27209,7 +27161,7 @@
  "https://www.darkreading.com/cyberattacks-data-breaches/microsoft-ai-cyber-risk-report-miss": {
   "title": "Microsoft's AI Risk Report Misses This Key Detail",
   "source": "Dark Reading",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -27217,7 +27169,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Dark Reading commentary on Microsoft AI risk report"
+    "title": "Cold Relic Exploits Cloud Breaches to Target Organizations"
    }
   ],
   "evidence": "summary",
@@ -27235,14 +27187,14 @@
  "https://www.bleepingcomputer.com/news/security/your-mobile-carrier-stores-your-call-logs-for-years/": {
   "title": "Your Mobile Carrier Stores Your Call Logs for Years",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The report provides substantive details about the previously tracked confirmed AT&T data breach, including the affected data types and approximate scale; it is not a new incident.",
+  "reason": "Confirmed breach of sensitive data affecting a large number of customers.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The report provides substantive details about the previously tracked confirmed AT&T data breach, including the affected data types and approximate scale; it is not a new incident.",
+    "reason": "Confirmed breach of sensitive data affecting a large number of customers.",
     "title": "AT&T breach exposed communication logs of 109 million customers",
     "incident_id": "6773d05bdf105064"
    }
@@ -27261,16 +27213,15 @@
  "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/": {
   "title": "Synology warns of C3RB3R ransomware attacks targeting NAS devices",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Synology confirmed ongoing exploitation of outdated NAS devices, and customer reports substantiated ransomware encryption and extortion; this is the same incident already tracked under b8d9bc65794359ea.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Synology confirmed ongoing exploitation of outdated NAS devices, and customer reports substantiated ransomware encryption and extortion; this is the same incident already tracked under b8d9bc65794359ea.",
-    "title": "C3RB3R ransomware encrypted data on Synology NAS devices",
-    "incident_id": "b8d9bc65794359ea"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Ransomware Attack Targets Synology NAS Devices, Data Encrypted"
    }
   ],
   "evidence": "article",
@@ -27287,15 +27238,15 @@
  "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/": {
   "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: active exploitation of a vulnerability and the presence of more than 1,000 unpatched servers do not establish a qualifying real-world compromise of identified systems.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: active exploitation of a vulnerability and the presence of more than 1,000 unpatched servers do not establish a qualifying real-world compromise of identified systems.",
-    "title": "Over 1,000 GitLab servers remain vulnerable to active RCE exploitation"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks"
    }
   ],
   "evidence": "article",
@@ -27312,15 +27263,15 @@
  "https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/": {
   "title": "Hackers disrupt refrigeration systems at European supermarkets",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed unauthorized changes to operational refrigeration systems caused material cold-chain disruption across more than 115 stores, with documented product losses and retailer responses. This is the same incident already tracked under b7ab42f2ead925fd.",
+  "reason": "This incident involved a confirmed disruption of refrigeration systems affecting multiple supermarket chains across several European countries.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed unauthorized changes to operational refrigeration systems caused material cold-chain disruption across more than 115 stores, with documented product losses and retailer responses. This is the same incident already tracked under b7ab42f2ead925fd.",
-    "title": "Hackers disrupted refrigeration at more than 115 European stores",
+    "reason": "This incident involved a confirmed disruption of refrigeration systems affecting multiple supermarket chains across several European countries.",
+    "title": "Hackers disrupt refrigeration systems at European supermarkets",
     "incident_id": "b7ab42f2ead925fd"
    }
   ],
@@ -27338,15 +27289,15 @@
  "https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/": {
   "title": "Google disrupts million-device XCPE Android malware botnet, bans TV box maker",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is the same XCPE botnet incident already tracked under ca58adb7e2750825; the article provides additional attribution and technical detail but does not establish a distinct incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is the same XCPE botnet incident already tracked under ca58adb7e2750825; the article provides additional attribution and technical detail but does not establish a distinct incident.",
-    "title": "XCPE malware preinstalled on 1.3 million Android TV boxes"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "XCPE malware botnet disrupts 1.3 million Android TV devices"
    }
   ],
   "evidence": "article",
@@ -27363,15 +27314,15 @@
  "https://www.bleepingcomputer.com/news/security/fintech-platform-sageworks-taken-offline-after-suspected-cyberattack/": {
   "title": "Fintech platform Sageworks taken offline after suspected cyberattack",
   "source": "BleepingComputer",
-  "checked": "2026-11-18T07:37:34+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful financial-sector cyber incident because a business-critical lending platform was taken offline after suspicious activity, but the provider had not confirmed a compromise and the nature and impact remained under investigation.",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful financial-sector cyber incident because a business-critical lending platform was taken offline after suspicious activity, but the provider had not confirmed a compromise and the nature and impact remained under investigation.",
-    "title": "Sageworks taken offline after suspicious activity"
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Fintech platform Sageworks taken offline after suspected cyberattack"
    }
   ],
   "evidence": "article",
@@ -27388,22 +27339,16 @@
  "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/": {
   "title": "CrowdStrike: China-Nexus \"Vapor Panda\" Ran ARTEX Agents Against 200+ Organizations in 14 Countries at Once",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantive, researcher-substantiated multi-victim campaign with at least nine confirmed compromises and AI agents performing unauthorized actions; it is already tracked as the same Vapor Panda campaign.; DIVD's account, as summarized in the report, substantiates unauthorized access, root privilege escalation, and autonomous post-compromise actions against a real organization.",
+  "reason": "The attack involved confirmed unauthorized access using AI, affecting multiple organizations.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantive, researcher-substantiated multi-victim campaign with at least nine confirmed compromises and AI agents performing unauthorized actions; it is already tracked as the same Vapor Panda campaign.",
-    "title": "Vapor Panda used ARTEX agents against 200+ organizations",
-    "incident_id": "8393c367c02ad6f3"
-   },
-   {
-    "status": "include",
-    "reason": "DIVD's account, as summarized in the report, substantiates unauthorized access, root privilege escalation, and autonomous post-compromise actions against a real organization.",
-    "title": "ARTEX AI agent breached Dutch vulnerability-disclosure institute",
-    "incident_id": "21e424a5156eabc6"
+    "reason": "The attack involved confirmed unauthorized access using AI, affecting multiple organizations.",
+    "title": "Vapor Panda Ran ARTEX AI Against Over 200 Organizations",
+    "incident_id": "1e7b9b662485974e"
    }
   ],
   "evidence": "article",
@@ -27419,15 +27364,15 @@
  "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/": {
   "title": "BTCPay Server warns of hot wallet crypto thefts on outdated instances",
   "source": "BleepingComputer",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed compromise of outdated BTCPay Server instances resulted in actual cryptocurrency theft; this is already tracked as the same BTCPay Server hot-wallet attack.",
+  "reason": "The incident clearly outlines unauthorized access and theft, fulfilling all criteria.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed compromise of outdated BTCPay Server instances resulted in actual cryptocurrency theft; this is already tracked as the same BTCPay Server hot-wallet attack.",
-    "title": "BTCPay Server attacks drained cryptocurrency hot wallets",
+    "reason": "The incident clearly outlines unauthorized access and theft, fulfilling all criteria.",
+    "title": "BTCPay Server warns of hot wallet crypto thefts on outdated instances",
     "incident_id": "dc5957d2025428d2"
    }
   ],
@@ -27445,22 +27390,21 @@
  "https://therecord.media/ukraine-hackers-russia-alert-system": {
   "title": "Russian and Ukrainian hackers hijack emergency apps to spread fake nuclear attack warnings",
   "source": "The Record",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed compromise of a public emergency-alert application with widespread false warnings and temporary service disruption; this is already tracked as the same incident.; The victim ministry confirmed a consequential compromise of its emergency mobile app; the incident is distinct from the separately reported Ukrainian Air Alert compromise and is already tracked.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.; This incident involves a confirmed cyber compromise of a critical emergency response app with significant public implications.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed compromise of a public emergency-alert application with widespread false warnings and temporary service disruption; this is already tracked as the same incident.",
-    "title": "Hackers hijacked Ukraine’s Air Alert app with fake emergency warnings",
-    "incident_id": "968c1fb7383ebf78"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Ukraine’s Air Alert app compromised; fake nuclear attack warnings sent"
    },
    {
     "status": "include",
-    "reason": "The victim ministry confirmed a consequential compromise of its emergency mobile app; the incident is distinct from the separately reported Ukrainian Air Alert compromise and is already tracked.",
-    "title": "Hackers compromised Russia’s EMERCOM mobile emergency app",
-    "incident_id": "e3b5363a9ef87983"
+    "reason": "This incident involves a confirmed cyber compromise of a critical emergency response app with significant public implications.",
+    "title": "Russia's EMERCOM app hacked, false nuclear warnings sent",
+    "incident_id": "346a9555131efdd6"
    }
   ],
   "evidence": "article",
@@ -27477,16 +27421,15 @@
  "https://therecord.media/polymarket-returning-funds-to-customers-after-site-compromise": {
   "title": "Polymarket pledges to give $3.9 million back to victims after site compromise",
   "source": "The Record",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The report substantiates a real compromise of Polymarket’s website through a third-party script, unauthorized wallet transfers, trading shutdown, and material financial compensation. This is already tracked as the same Polymarket/DebugBear incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The report substantiates a real compromise of Polymarket’s website through a third-party script, unauthorized wallet transfers, trading shutdown, and material financial compensation. This is already tracked as the same Polymarket/DebugBear incident.",
-    "title": "Polymarket script compromise drained users’ wallets",
-    "incident_id": "83273d8d85f8311b"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Polymarket compromised; $3.9 million to be refunded to users"
    }
   ],
   "evidence": "article",
@@ -27503,15 +27446,16 @@
  "https://therecord.media/michigan-state-university-byod-gang-cyber-incident": {
   "title": "Michigan State cyber incident claimed by ransomware gang behind recent hospital attack",
   "source": "The Record",
-  "checked": "2026-11-18T07:37:34+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Potentially meaningful university credential-compromise activity was reported, but the only asserted data theft comes from an unverified ransomware claim and the university reports no evidence of successful compromise or theft.",
+  "status": "include",
+  "reason": "This incident involves claims of significant data theft affecting a major university.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Potentially meaningful university credential-compromise activity was reported, but the only asserted data theft comes from an unverified ransomware claim and the university reports no evidence of successful compromise or theft.",
-    "title": "Michigan State investigates suspected credential compromise"
+    "status": "include",
+    "reason": "This incident involves claims of significant data theft affecting a major university.",
+    "title": "Michigan State University incident claimed by ransomware gang",
+    "incident_id": "7e4faad6cb5eeda1"
    }
   ],
   "evidence": "article",
@@ -27528,15 +27472,15 @@
  "https://therecord.media/hackers-ukraine-belarus-russia": {
   "title": "Russia's statistics agency confirms cyberattack claimed by Belarusian and Ukrainian hackers",
   "source": "The Record",
-  "checked": "2026-11-18T07:37:34+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful government cyber incident, but attacker claims about successful compromise and consequences could not be independently verified and the victim reported no evidence of protected-information leakage or database compromise.",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful government cyber incident, but attacker claims about successful compromise and consequences could not be independently verified and the victim reported no evidence of protected-information leakage or database compromise.",
-    "title": "Rosstat confirms cyberattack but disputes breach claims"
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Russian Statistics Agency Confirms Cyberattack by Hackers"
    }
   ],
   "evidence": "article",
@@ -27553,15 +27497,22 @@
  "https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html": {
   "title": "⚡ Weekly Recap: Critical CVEs, Linux DDoS Botnet, Device-Code Phishing, Android Spyware and More",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude as a roundup with no new untracked qualifying incident: its substantive incidents duplicate existing records, while the remaining items are research, general campaign background, or a legal/enforcement action.",
+  "status": "include",
+  "reason": "The incident involved unauthorized access and substantial financial loss.; The incident involved unauthorized access due to compromised software and substantial security implications.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude as a roundup with no new untracked qualifying incident: its substantive incidents duplicate existing records, while the remaining items are research, general campaign background, or a legal/enforcement action.",
-    "title": "Weekly recap contains no new untracked qualifying incidents"
+    "status": "include",
+    "reason": "The incident involved unauthorized access and substantial financial loss.",
+    "title": "Polymarket Briefly Suspended Trading After Third-Party Hack",
+    "incident_id": "d55b06e56457a51b"
+   },
+   {
+    "status": "include",
+    "reason": "The incident involved unauthorized access due to compromised software and substantial security implications.",
+    "title": "Cursor Marketplace Extension Tampered to Install Backdoor",
+    "incident_id": "36413c2be5b317d5"
    }
   ],
   "evidence": "article",
@@ -27578,15 +27529,15 @@
  "https://thehackernews.com/2026/11/is-your-soc-ready-for-ai-agents.html": {
   "title": "Is Your SOC Ready for AI Agents? A Maturity Check Before You Deploy",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: the report is commentary, survey data, and vendor/product promotion without a specific qualifying cyber incident.",
+  "reason": "No substantive incident or compromise was reported; the content primarily discusses survey results.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: the report is commentary, survey data, and vendor/product promotion without a specific qualifying cyber incident.",
-    "title": "AI SOC readiness guidance and survey results"
+    "reason": "No substantive incident or compromise was reported; the content primarily discusses survey results.",
+    "title": "AI SOC Readiness Problems Highlighted in 2026 Survey"
    }
   ],
   "evidence": "article",
@@ -27603,16 +27554,15 @@
  "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html": {
   "title": "Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated campaign involving persistent compromise of government-associated Linux infrastructure and consequential remote-access capabilities. It duplicates the already-tracked SysGoRAT campaign record, with later reporting adding evidence about likely AI-generated scripts and operational details.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated campaign involving persistent compromise of government-associated Linux infrastructure and consequential remote-access capabilities. It duplicates the already-tracked SysGoRAT campaign record, with later reporting adding evidence about likely AI-generated scripts and operational details.",
-    "title": "SysGoRAT campaign compromised government-linked Linux infrastructure",
-    "incident_id": "99775ad392cef43b"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Government Linux Servers Targeted With SysGoRAT"
    }
   ],
   "evidence": "article",
@@ -27629,15 +27579,15 @@
  "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html": {
   "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "This is a substantiated espionage campaign with two reported compromises, including a government cloud environment; it is not merely an attacker claim or vulnerability report. It duplicates the already-tracked DarkBlinders incident.",
+  "reason": "The reporting substantiates a meaningful breach impacting both an individual and a government system.",
   "decisions": [
    {
     "status": "include",
-    "reason": "This is a substantiated espionage campaign with two reported compromises, including a government cloud environment; it is not merely an attacker claim or vulnerability report. It duplicates the already-tracked DarkBlinders incident.",
-    "title": "DarkBlinders compromised Israeli and Iraqi Kurdish targets",
+    "reason": "The reporting substantiates a meaningful breach impacting both an individual and a government system.",
+    "title": "DarkBlinders Compromises Israeli Target and Iraqi Government Cloud",
     "incident_id": "9a9dbfe0a0d147ff"
    }
   ],
@@ -27679,16 +27629,15 @@
  "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html": {
   "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
   "source": "The Hacker News",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated report of two distinct organizational intrusions involving privileged certificate abuse, domain-controller access, and confirmed external data copying in one case; it duplicates the already tracked incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated report of two distinct organizational intrusions involving privileged certificate abuse, domain-controller access, and confirmed external data copying in one case; it duplicates the already tracked incident.",
-    "title": "Teams impersonation led to AD CS intrusions at two companies",
-    "incident_id": "05148959803eed54"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data"
    }
   ],
   "evidence": "article",
@@ -27705,7 +27654,7 @@
  "https://www.darkreading.com/cybersecurity-operations/investors-dish-new-startsup-what-back-next": {
   "title": "Investors Dish on New Startups & What They'd Back Next",
   "source": "Dark Reading",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -27713,7 +27662,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "No qualifying cyber incident reported"
+    "title": "Investors Dish on New Startups & What They'd Back Next"
    }
   ],
   "evidence": "summary",
@@ -27806,7 +27755,7 @@
  "https://www.darkreading.com/cyberattacks-data-breaches/binance-hack-test-attack-paths": {
   "title": "One Compromised Laptop, Billions Lost: The Binance Attack-Path Warning",
   "source": "Dark Reading",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "No readable source evidence; retry required.",
@@ -27814,7 +27763,7 @@
    {
     "status": "defer",
     "reason": "No readable source evidence; retry required.",
-    "title": "Binance attack enabled approximately $5.9 billion in withdrawals"
+    "title": "One Compromised Laptop, Billions Lost: The Binance Attack-Path Warning"
    }
   ],
   "evidence": "summary",
@@ -27832,16 +27781,15 @@
  "https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist": {
   "title": "Largest crypto exchange in Brazil confirms cyberattack as millions flow out of platform",
   "source": "The Record",
-  "checked": "2026-11-17T08:00:37+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The company confirmed a real cyberattack and operational shutdown, while independent blockchain-security evidence substantiated unauthorized cryptocurrency transfers. This is the already-tracked Mercado Bitcoin incident, not a separate attack.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The company confirmed a real cyberattack and operational shutdown, while independent blockchain-security evidence substantiated unauthorized cryptocurrency transfers. This is the already-tracked Mercado Bitcoin incident, not a separate attack.",
-    "title": "Mercado Bitcoin suspends withdrawals after crypto theft",
-    "incident_id": "4376b3a64ea13af8"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Mercado Bitcoin suspends all transactions after cyberattack"
    }
   ],
   "evidence": "article",
@@ -37743,16 +37691,15 @@
  "https://research.checkpoint.com/2026/free-the-model-sell-the-gateway-prompt-adware-hidden-in-jailbreak-bundles/": {
   "title": "Check Point: \"Prompt Adware\" in the Haiou Codex Jailbreak Bundle Makes the Agent Advertise an LLM Gateway",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Independent researcher evidence substantiates unauthorized compromise of multiple real computers; the report provides limited detail about victims and impact but describes more than capability or a blocked attempt.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Independent researcher evidence substantiates unauthorized compromise of multiple real computers; the report provides limited detail about victims and impact but describes more than capability or a blocked attempt.",
-    "title": "Cobalt Strike actor compromised private computers using dual-use tools",
-    "incident_id": "a7015e7c42728896"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Prompt Adware in Haiou Codex Jailbreak Bundle"
    }
   ],
   "evidence": "article",
@@ -37768,15 +37715,15 @@
  "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/": {
   "title": "JFrog: Five Chained Flaws Give Root and Motor Control of Hugging Face's Reachy Mini Robot, Including From a Web Page",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: this is a controlled vulnerability demonstration and proof of concept without established external victim compromise or real-world harm.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: this is a controlled vulnerability demonstration and proof of concept without established external victim compromise or real-world harm.",
-    "title": "JFrog demonstrates Reachy Mini robot takeover chain"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Reachy Mini Robot Vulnerabilities Expose to Remote Control"
    }
   ],
   "evidence": "article",
@@ -37792,15 +37739,15 @@
  "https://era.security/blog/greeter-flowise-ai-infrastructure-attack": {
   "title": "\"Greeter\": Chinese-Language Framework Sends \"hello\" to Flowise While Injecting Code Through overrideConfig",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: this is a controlled honeypot/research observation without established external victim harm. Internet-wide exposure counts and potential consequences do not establish actual compromises.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: this is a controlled honeypot/research observation without established external victim harm. Internet-wide exposure counts and potential consequences do not establish actual compromises.",
-    "title": "Greeter framework observed exploiting Flowise honeypots"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Greeter Framework Injects Code Through Flowise API"
    }
   ],
   "evidence": "article",
@@ -37816,16 +37763,15 @@
  "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models": {
   "title": "Google GTIG: LLMjacking Runs Up $100,000 a Day and Up to $1 Million per Victim as \"LLM Mixers\" Resell Stolen Access",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Google/Mandiant reporting substantiates a distinct real-world compromise involving stolen organizational LLM credentials, unauthorized resource use, and nearly US$1 million in charges; it is not one of the already tracked UNC6993 incidents.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Google/Mandiant reporting substantiates a distinct real-world compromise involving stolen organizational LLM credentials, unauthorized resource use, and nearly US$1 million in charges; it is not one of the already tracked UNC6993 incidents.",
-    "title": "LLM mixer used stolen API keys to incur nearly $1M in charges",
-    "incident_id": "f7b70729752da721"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "LLMJacking Attacks Generate $1M in Fraudulent Charges"
    }
   ],
   "evidence": "article",
@@ -37841,16 +37787,20 @@
  "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks": {
   "title": "Mandiant: UNC7228 Used ARTEX and Forks to Go From First Account to Deep Access in Four Hours, Once in 15 Minutes",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Independent incident-response and threat-intelligence reporting substantiates multiple real-world compromises in which ARTEX agents performed consequential intrusion activities and facilitated data theft. This is a distinct UNC7228 campaign, not merely a description of framework capability.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Independent incident-response and threat-intelligence reporting substantiates multiple real-world compromises in which ARTEX agents performed consequential intrusion activities and facilitated data theft. This is a distinct UNC7228 campaign, not merely a description of framework capability.",
-    "title": "UNC7228 used ARTEX in rapid intrusions against US and European firms",
-    "incident_id": "9789dba6cb9b5c5d"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Threat Actor Uses ARTEX Framework for Deep Intrusion in Hours"
+   },
+   {
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Evolution of Autonomous Offensive Frameworks Observed"
    }
   ],
   "evidence": "article",
@@ -37866,16 +37816,15 @@
  "https://bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers": {
   "title": "Chainalysis Breached by \"Offensive Agentic Techniques\"; Password Hashes and Live Tokens for All Users Exposed",
   "source": "AI agent attack tracker",
-  "checked": "2026-11-14T06:34:05+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed organizational compromise with exposure of credentials and live tokens for all customers, plus meaningful containment and service disruption; this is a later-impact update to the already tracked Chainalysis incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed organizational compromise with exposure of credentials and live tokens for all customers, plus meaningful containment and service disruption; this is a later-impact update to the already tracked Chainalysis incident.",
-    "title": "Chainalysis breach exposed customer hashes and live tokens",
-    "incident_id": "10f9757b790124cc"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Chainalysis Breach Exposes User Credentials and Tokens"
    }
   ],
   "evidence": "article",
@@ -39986,15 +39935,15 @@
  "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi": {
   "title": "Microsoft agent-framework Compromised: Credential Stealer Targets Azure and CI Pipelines",
   "source": "Wiz Research",
-  "checked": "2026-11-24T17:39:41+00:00",
+  "checked": "2026-11-24T18:35:28+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "No matching direct evidence passage of an actual consequential incident.",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "No matching direct evidence passage of an actual consequential incident.",
-    "title": "Malicious Microsoft Agent Framework PyPI releases stole cloud credentials"
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Malicious Microsoft Agent Framework Credentials Exposed"
    }
   ],
   "evidence": "article",
@@ -44869,6 +44818,82 @@
    "date": "2026-11-24",
    "source": "The Record",
    "published_at": "2026-11-24T16:00:00+00:00"
+  }
+ },
+ "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/": {
+  "title": "Radware discloses breach exposing customer cloud access keys",
+  "source": "BleepingComputer",
+  "checked": "2026-11-24T18:35:28+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Radware breach exposes customer cloud access keys"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "1208e52d39c3bd28066a6b11559b9a4a4fb21ab78fbf406ee3f273c0fb7ffaad",
+  "item": {
+   "id": "7d7129fa2ced9baf",
+   "title": "Radware discloses breach exposing customer cloud access keys",
+   "url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+   "date": "2026-11-24",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-24T17:49:05+00:00"
+  }
+ },
+ "https://therecord.media/idscan-data-breach-warning-congressional-letter": {
+  "title": "Lawmakers warn ID verification companies to bolster security after September hack",
+  "source": "The Record",
+  "checked": "2026-11-24T18:35:28+00:00",
+  "policy": "meaningful-v2",
+  "status": "include",
+  "reason": "The incident involved a significant breach leading to the exposure of detailed personal data.",
+  "decisions": [
+   {
+    "status": "include",
+    "reason": "The incident involved a significant breach leading to the exposure of detailed personal data.",
+    "title": "IDScan Breach Exposes Data of Over 150 Million Individuals",
+    "incident_id": "18fa95a1ad3755a9"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "bbdd72b660ab58a6359cbf7c8fda7265262d1d11239d5a7693289af6e3496133",
+  "item": {
+   "id": "18fa95a1ad3755a9",
+   "title": "Lawmakers warn ID verification companies to bolster security after September hack",
+   "url": "https://therecord.media/idscan-data-breach-warning-congressional-letter",
+   "date": "2026-11-24",
+   "source": "The Record",
+   "published_at": "2026-11-24T17:49:00+00:00"
+  }
+ },
+ "https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html": {
+  "title": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
+  "source": "The Hacker News",
+  "checked": "2026-11-24T18:35:28+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Iran-Aligned Volant Manticore Targets Critical Infrastructure in Cyprus"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "da17a0b8ac76c28699ac65c92110ff295415ff92f32898c528df45cd05a4e3e0",
+  "item": {
+   "id": "f9af9ea4b3c7d8db",
+   "title": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
+   "url": "https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html",
+   "date": "2026-11-24",
+   "source": "The Hacker News",
+   "published_at": "2026-11-24T16:54:07+00:00"
   }
  }
 }
