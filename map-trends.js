@@ -22,7 +22,7 @@
     const trend = dailyTrend(incidents), max = Math.max(1, ...trend.days.map(d => d.count));
     const width = 700, height = 80, step = width / trend.days.length;
     document.getElementById('trend-chart').innerHTML = `<svg viewBox="0 0 740 110" role="img" aria-label="Daily recorded incidents from ${trend.start} through ${trend.end}; maximum ${max} in one day"><text x="0" y="14" fill="#A7B4C2" font-size="12">${max}</text><text x="0" y="91" fill="#A7B4C2" font-size="12">0</text>${trend.days.map((d,i) => `<rect x="${30+i*step}" y="${90-d.count/max*height}" width="${Math.max(.5,step-.5)}" height="${d.count/max*height}" fill="#8DC4FF"><title>${d.day}: ${d.count} recorded incidents</title></rect>`).join('')}<text x="30" y="108" fill="#A7B4C2" font-size="12">Aug 1, ${trend.start.slice(0,4)}</text><text x="730" y="108" text-anchor="end" fill="#A7B4C2" font-size="12">${trend.end} (partial)</text></svg>`;
-    document.getElementById('trend-note').textContent = `All categories, independent of map filters. Incomplete reporting; blank days mean no dated records, not no attacks. ${trend.undated} records with imprecise dates excluded. Data: ${updated ? new Date(updated).toLocaleString() : 'unknown'}.`;
+    document.getElementById('trend-note').textContent = `All categories, independent of map filters. Incomplete reporting; blank days mean no dated records, not no attacks. ${trend.undated} records with imprecise dates excluded. Last automated collection: ${updated ? new Date(updated).toLocaleString() : 'unknown'}. New manually reviewed incidents may have been published since then.`;
   }
   root.MapTrends = {dailyTrend, renderTrend};
   if (typeof module !== 'undefined') module.exports = root.MapTrends;
