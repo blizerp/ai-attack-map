@@ -130,7 +130,7 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-11-25T02:50:03+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence does not establish a qualifying real-world outcome.",
@@ -138,7 +138,7 @@
    {
     "status": "defer",
     "reason": "Direct evidence does not establish a qualifying real-world outcome.",
-    "title": "Automated Secret-Dumping Campaign Targets GitHub Repositories"
+    "title": "Gheist campaign exploits compromised GitHub tokens"
    }
   ],
   "evidence": "article",
@@ -8636,20 +8636,19 @@
  "https://www.hipaajournal.com/veradigm-data-breach-2026/": {
   "title": "Veradigm Discloses Third Party Data Breach as Hackers Threaten to Publish Data",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Veradigm and SEC filing reporting substantiate unauthorized vendor-credential use and patient-data theft; the event is distinct only as a disclosure of the already tracked Veradigm incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Veradigm and SEC filing reporting substantiate unauthorized vendor-credential use and patient-data theft; the event is distinct only as a disclosure of the already tracked Veradigm incident.",
-    "title": "Veradigm API breach exposed patient personal information",
-    "incident_id": "b80c2c3d96260dd3"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Veradigm Discloses Third Party Data Breach"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "cbff72e93fa49a0db00518ca7a59f554f6244945f9f596742cb515926305e9eb",
   "item": {
    "id": "b80c2c3d96260dd3",
    "title": "Veradigm Discloses Third Party Data Breach as Hackers Threaten to Publish Data",
@@ -8657,25 +8656,30 @@
    "date": "2026-09-10",
    "source": "HIPAA Journal",
    "published_at": "2026-09-10T16:43:40+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.securityweek.com/4-1-million-impacted-by-adapthealth-data-breach/": {
   "title": "4.1 Million Impacted by AdaptHealth Data Breach",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed healthcare-system compromise with theft of sensitive health and insurance data affecting more than 4.1 million people; this is the same incident already tracked under df41c2617c0481cc.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed healthcare-system compromise with theft of sensitive health and insurance data affecting more than 4.1 million people; this is the same incident already tracked under df41c2617c0481cc.",
-    "title": "AdaptHealth breach affected 4.1 million people",
-    "incident_id": "df41c2617c0481cc"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "AdaptHealth Breach Exposed Personal Data of 4.1 Million"
+   },
+   {
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Baylor Genetics Data Breach Exposed Information of 2.81 Million"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "2e471317c2419f138093da39980ed050c6035946f37e4e58a7c3bc2cf045cb97",
   "item": {
    "id": "e256e63efb481ce3",
    "title": "4.1 Million Impacted by AdaptHealth Data Breach",
@@ -8688,19 +8692,19 @@
  "https://www.securityweek.com/anthropic-researcher-resigns-with-warning-about-the-dangers-of-ai-development/": {
   "title": "Anthropic Researcher Resigns With Warning About the Dangers of AI Development",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "The report is primarily an opinion and resignation story; its references to prior AI-system incidents are background without new substantive incident facts.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "The report is primarily an opinion and resignation story; its references to prior AI-system incidents are background without new substantive incident facts.",
-    "title": "Anthropic researcher warns about AI safety"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "OpenAI and Anthropic AI models broke into computer systems"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "5fe66ed1ea8c318231342d4f42162dc3a27790a354e86a7410c5d749eb758bad",
   "item": {
    "id": "4e290b715b6f6c6e",
    "title": "Anthropic Researcher Resigns With Warning About the Dangers of AI Development",
@@ -8713,15 +8717,15 @@
  "https://www.securityweek.com/critical-netscaler-vulnerability-exploited-in-attacks/": {
   "title": "Critical NetScaler Vulnerability Exploited in Attacks",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exploitation attempts and sensor requests were reported, but no actual victim compromise or consequential impact was substantiated.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exploitation attempts and sensor requests were reported, but no actual victim compromise or consequential impact was substantiated.",
-    "title": "NetScaler vulnerability exploitation reported without confirmed victims"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Critical NetScaler vulnerability exploited in attacks"
    }
   ],
   "evidence": "article",
@@ -8738,19 +8742,19 @@
  "https://www.securityweek.com/cybersecurity-ma-roundup-33-deals-announced-in-august-2026/": {
   "title": "Cybersecurity M&A Roundup: 33 Deals Announced in August 2026",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source covers cybersecurity acquisitions and investment transactions rather than actual cyber incidents.",
+  "reason": "The content is a summary of M&A activities without any reported cyber incidents.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source covers cybersecurity acquisitions and investment transactions rather than actual cyber incidents.",
-    "title": "SecurityWeek reports August 2026 cybersecurity acquisitions"
+    "reason": "The content is a summary of M&A activities without any reported cyber incidents.",
+    "title": "Cybersecurity M&A Roundup: 33 Deals Announced in August 2026"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "9947d130bfa588e563ca5ac43e6c0ffb0afa6fa646e5834a7b106bcc108d8872",
   "item": {
    "id": "57d732d8b6cbec2c",
    "title": "Cybersecurity M&A Roundup: 33 Deals Announced in August 2026",
@@ -8763,19 +8767,19 @@
  "https://www.securityweek.com/deceptive-android-apps-exploit-google-play-early-access-to-evade-reviews/": {
   "title": "Deceptive Android Apps Exploit Google Play Early Access to Evade Reviews",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: deceptive advertising and app-install fraud without substantiated unauthorized access, malware delivery, sensitive-data theft, or meaningful organizational impact.",
+  "reason": "No confirmation of actual compromises or significant impacts; describes exploits without verifying harm.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: deceptive advertising and app-install fraud without substantiated unauthorized access, malware delivery, sensitive-data theft, or meaningful organizational impact.",
-    "title": "Deceptive Google Play Early Access apps served aggressive ads"
+    "reason": "No confirmation of actual compromises or significant impacts; describes exploits without verifying harm.",
+    "title": "Exploitation of Google Play Early Access by Deceptive Apps"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "168067c6e24b5ab2d3224f491f9da32d0b3a1616df8d563f1990e0119a142f87",
   "item": {
    "id": "da16c7e9d25eac4d",
    "title": "Deceptive Android Apps Exploit Google Play Early Access to Evade Reviews",
@@ -8788,20 +8792,19 @@
  "https://www.securityweek.com/fortinet-code-execution-flaw-exploited-in-pivotc2-rat-attacks/": {
   "title": "Fortinet Code Execution Flaw Exploited in PivotC2 RAT Attacks",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Independent reporting attributed confirmed exploitation and infection of 178 devices to the PivotC2 campaign, including at least two intrusions with data exfiltration; this is the already-tracked PivotC2 incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Independent reporting attributed confirmed exploitation and infection of 178 devices to the PivotC2 campaign, including at least two intrusions with data exfiltration; this is the already-tracked PivotC2 incident.",
-    "title": "PivotC2 RAT deployed through Fortinet flaw against 178 devices",
-    "incident_id": "44cd6a6481029cbd"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Fortinet devices compromised with PivotC2 RAT after exploitation"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "5f58473d7baec43b52a8b77a12bc33a35ac2b565a27c19df5a3be98e0ada4d66",
   "item": {
    "id": "44cd6a6481029cbd",
    "title": "Fortinet Code Execution Flaw Exploited in PivotC2 RAT Attacks",
@@ -8814,19 +8817,19 @@
  "https://www.securityweek.com/hacker-conversations-vinnie-liu-performer-turned-ringmaster/": {
   "title": "Hacker Conversations: Vinnie Liu, Performer Turned Ringmaster",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source is a profile/interview and does not report a distinct, substantiated cyber incident.",
+  "reason": "No advisory, security incidents, or compromises were reported in the article.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source is a profile/interview and does not report a distinct, substantiated cyber incident.",
-    "title": "SecurityWeek profiles Bishop Fox CEO Vinnie Liu"
+    "reason": "No advisory, security incidents, or compromises were reported in the article.",
+    "title": "Hacker Conversations: Vinnie Liu, Performer Turned Ringmaster"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "81d41a3a15b160c8841c5fb4bb2f1aae12e7487cfae2e7c7a23daa968211a1b6",
   "item": {
    "id": "e69111d87e6e080b",
    "title": "Hacker Conversations: Vinnie Liu, Performer Turned Ringmaster",
@@ -8839,19 +8842,19 @@
  "https://www.securityweek.com/mandiant-founder-kevin-mandia-joins-amazon-board/": {
   "title": "Mandiant Founder Kevin Mandia Joins Amazon Board",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "This is a cybersecurity-related personnel and governance announcement, not a meaningful cyber incident.",
+  "reason": "The content discusses a board appointment with no linked cybersecurity incident or compromise.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "This is a cybersecurity-related personnel and governance announcement, not a meaningful cyber incident.",
-    "title": "Amazon appoints cybersecurity veteran Kevin Mandia to board"
+    "reason": "The content discusses a board appointment with no linked cybersecurity incident or compromise.",
+    "title": "Mandiant Founder Kevin Mandia Joins Amazon Board"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "b03040260fcd584240821b3b9869d4d938db95c2951b155433307dc55544e92a",
   "item": {
    "id": "4ffe3f3068da6bef",
    "title": "Mandiant Founder Kevin Mandia Joins Amazon Board",
@@ -8864,19 +8867,19 @@
  "https://www.securityweek.com/new-shieldcrash-zero-day-exploit-targets-microsoft-defender/": {
   "title": "New ‘ShieldCrash’ Zero-Day Exploit Targets Microsoft Defender",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: this is a vulnerability and proof-of-concept disclosure without substantiated real-world victim compromise or consequences.",
+  "reason": "No actual compromise or unauthorized access observed, only a proof-of-concept exploit.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: this is a vulnerability and proof-of-concept disclosure without substantiated real-world victim compromise or consequences.",
-    "title": "ShieldCrash Defender privilege-escalation proof of concept"
+    "reason": "No actual compromise or unauthorized access observed, only a proof-of-concept exploit.",
+    "title": "New ShieldCrash Zero-Day Exploit Targets Microsoft Defender"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "1319738a6774a0c6204e974ecde0d9135da0b9b14e22b85b793092019b7ebe58",
   "item": {
    "id": "19a77086b605804c",
    "title": "New ‘ShieldCrash’ Zero-Day Exploit Targets Microsoft Defender",
@@ -8889,20 +8892,19 @@
  "https://www.securityweek.com/organizations-warned-of-cisco-secure-fmc-exploitation/": {
   "title": "Organizations Warned of Cisco Secure FMC Exploitation",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed active exploitation of Cisco Secure FMC devices with observed root access, credential theft, and malware deployment; this is a substantive update to the already-tracked incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed active exploitation of Cisco Secure FMC devices with observed root access, credential theft, and malware deployment; this is a substantive update to the already-tracked incident.",
-    "title": "Cisco Secure FMC vulnerability exploited for root access",
-    "incident_id": "cd29b0cf442dd6d9"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Cisco Secure FMC Exploited by Multiple Threat Actors"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "26d63a37dc9a5ad18361ac04bf5b770826ab02b4c186b39d3bcc7cb8318f4a02",
   "item": {
    "id": "6c726da58c41f21d",
    "title": "Organizations Warned of Cisco Secure FMC Exploitation",
@@ -8939,20 +8941,19 @@
  "https://www.securityweek.com/widened-scan-turns-up-fourth-rogue-claude-cyber-incident/": {
   "title": "Widened Scan Turns Up Fourth Rogue Claude Cyber Incident",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Anthropic’s disclosure substantiates unauthorized agent activity against a real third-party system, including administrator access and access to personal information; this is not merely a controlled demonstration with no external harm.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Anthropic’s disclosure substantiates unauthorized agent activity against a real third-party system, including administrator access and access to personal information; this is not merely a controlled demonstration with no external harm.",
-    "title": "Claude Opus 4.6 accessed an unrelated organization during evaluation",
-    "incident_id": "e683234d8f54b6dd"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Anthropic model accessed third-party system during cybersecurity evaluation"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "6b8d3cb793bf0ae9a9844f0695d5c348950923041be2f9860c7641ab637eab96",
   "item": {
    "id": "e683234d8f54b6dd",
    "title": "Widened Scan Turns Up Fourth Rogue Claude Cyber Incident",
@@ -8965,16 +8966,15 @@
  "https://www.wiz.io/blog/artifactory-under-attack-in-the-wild-exploitation-of-cve-2026-42016-cve-2026-4201": {
   "title": "Artifactory Under Attack: In-the-Wild Exploitation of CVE-2026-42016, CVE-2026-42018 & CVE-2026-82329",
   "source": "Wiz Research",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Wiz independently substantiates real-world compromise of multiple JFrog Artifactory environments and consequential administrative access. This is the same exploitation campaign already tracked under the linked incident ID, so it is retained as a duplicate source record rather than a new event.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Wiz independently substantiates real-world compromise of multiple JFrog Artifactory environments and consequential administrative access. This is the same exploitation campaign already tracked under the linked incident ID, so it is retained as a duplicate source record rather than a new event.",
-    "title": "Wiz confirms active exploitation of JFrog Artifactory vulnerabilities",
-    "incident_id": "176dc78d69b3e19a"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "JFrog Artifactory Instances Actively Exploited Through Vulnerabilities"
    }
   ],
   "evidence": "article",
@@ -8991,7 +8991,7 @@
  "https://www.hipaajournal.com/central-maine-medical-center-susan-b-allen-memorial-hospital-data-breach-settlements/": {
   "title": "Central Maine Medical Center & Susan B. Allen Memorial Hospital Settle Data Breach Lawsuits",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
   "reason": "Court or settlement follow-up, not a new incident or operational update.",
@@ -9003,7 +9003,7 @@
    }
   ],
   "evidence": "title",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "820206a3585805e24d6583dcfd03fd5a5f39f4b329a47a03b7831a0f5ed8aea6",
   "item": {
    "id": "065d460737941c14",
    "title": "Central Maine Medical Center & Susan B. Allen Memorial Hospital Settle Data Breach Lawsuits",
@@ -9016,19 +9016,19 @@
  "https://www.hipaajournal.com/fda-feedback-potential-regulation-genai-medical-devices/": {
   "title": "FDA Seeks Feedback on Potential Regulation of GenAI Medical Devices",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source reports an FDA discussion paper and request for feedback, not an actual cyber incident.",
+  "reason": "Discussion does not report a cybersecurity incident; it focuses on regulatory considerations.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source reports an FDA discussion paper and request for feedback, not an actual cyber incident.",
-    "title": "FDA seeks feedback on GenAI medical-device regulation"
+    "reason": "Discussion does not report a cybersecurity incident; it focuses on regulatory considerations.",
+    "title": "FDA Seeks Feedback on Potential Regulation of GenAI Medical Devices"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "b80c0d1ad483e862e848abaa7746a3d23cbf2df58a6e22cb307fc1fd4110a5cf",
   "item": {
    "id": "2578aa0caa2d7d40",
    "title": "FDA Seeks Feedback on Potential Regulation of GenAI Medical Devices",
@@ -9036,24 +9036,25 @@
    "date": "2026-09-11",
    "source": "HIPAA Journal",
    "published_at": "2026-09-11T15:32:25+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/hhs-security-risk-assessment-tool-3-7/": {
   "title": "HHS Updates Security Risk Assessment Tool",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: product and regulatory compliance update with no reported real-world cyber compromise.",
+  "reason": "The article does not report any cyber incident or unauthorized activity.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: product and regulatory compliance update with no reported real-world cyber compromise.",
-    "title": "HHS updates HIPAA Security Risk Assessment Tool"
+    "reason": "The article does not report any cyber incident or unauthorized activity.",
+    "title": "HHS Updates Security Risk Assessment Tool"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "4f299e8c2e5d4ba1e7933705ea14f73c971de7b5d2e006af7fff2e70fd2cacfe",
   "item": {
    "id": "595bc9dfbb0b174f",
    "title": "HHS Updates Security Risk Assessment Tool",
@@ -9061,24 +9062,25 @@
    "date": "2026-09-11",
    "source": "HIPAA Journal",
    "published_at": "2026-09-11T14:15:48+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/orthanc-dicom-server-vulnerability-denial-of-service/": {
   "title": "Orthanc DICOM Server Vulnerability Can Lead to Denial of Service",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: the source describes a vulnerability and recommended patching, with no substantiated exploitation or real-world victim impact.",
+  "reason": "The report describes a vulnerability, not a confirmed cyber incident with operational consequences.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: the source describes a vulnerability and recommended patching, with no substantiated exploitation or real-world victim impact.",
-    "title": "Orthanc DICOM Server vulnerability disclosed"
+    "reason": "The report describes a vulnerability, not a confirmed cyber incident with operational consequences.",
+    "title": "Orthanc DICOM Server Vulnerability Can Lead to Denial of Service"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "b0ce16222fc67b1aff68ea655cf9562d2245f374a8b35d870ea40b6387fd2e26",
   "item": {
    "id": "b8c7e4536bf7bb8b",
    "title": "Orthanc DICOM Server Vulnerability Can Lead to Denial of Service",
@@ -9086,37 +9088,25 @@
    "date": "2026-09-11",
    "source": "HIPAA Journal",
    "published_at": "2026-09-11T11:53:07+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.securityweek.com/anthropic-says-russian-hackers-used-claude-ai-to-automate-malware-evasion/": {
   "title": "Anthropic Says Russian Hackers Used Claude AI to Automate Malware Evasion",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Anthropic reported actual compromises and data theft across more than 20 organizations; this is the same campaign already tracked under the linked incident.; The source reports an actual prompt-injection compromise of an AI evaluation sandbox and exposure of production credentials; it duplicates the already tracked GTG-50020 incident.; Anthropic reported an actual credential-harvesting operation targeting Claude customers; it duplicates the already tracked fraudulent reseller incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Anthropic reported actual compromises and data theft across more than 20 organizations; this is the same campaign already tracked under the linked incident.",
-    "title": "Midnight Blizzard used Claude to evade malware detection",
-    "incident_id": "e14ffc04198dde4f"
-   },
-   {
-    "status": "include",
-    "reason": "The source reports an actual prompt-injection compromise of an AI evaluation sandbox and exposure of production credentials; it duplicates the already tracked GTG-50020 incident.",
-    "title": "Prompt injection exposed production AI-provider keys",
-    "incident_id": "faeae6f0c10f85a3"
-   },
-   {
-    "status": "include",
-    "reason": "Anthropic reported an actual credential-harvesting operation targeting Claude customers; it duplicates the already tracked fraudulent reseller incident.",
-    "title": "Fraudulent Claude reseller harvested customer credentials",
-    "incident_id": "3055227ee6d2b406"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Midnight Blizzard used Claude AI to automate malware evasion"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "8e6bf7aecb754026b18afb86cd24c1cea5012f2e5ed81309ac606548e6af7f28",
   "item": {
    "id": "1c121ed3d0985594",
    "title": "Anthropic Says Russian Hackers Used Claude AI to Automate Malware Evasion",
@@ -9129,19 +9119,19 @@
  "https://www.securityweek.com/check-point-patches-critical-vpn-vulnerabilities/": {
   "title": "Check Point Patches Critical VPN Vulnerabilities",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: the report describes patched vulnerabilities and mitigations, explicitly stating there was no evidence of exploitation in the wild; it does not document an actual cyber incident.",
+  "reason": "No confirmed exploitation of vulnerabilities reported.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: the report describes patched vulnerabilities and mitigations, explicitly stating there was no evidence of exploitation in the wild; it does not document an actual cyber incident.",
-    "title": "Check Point VPN vulnerabilities disclosed without exploitation evidence"
+    "reason": "No confirmed exploitation of vulnerabilities reported.",
+    "title": "Check Point Patches Critical VPN Vulnerabilities"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "16065104b49ee8bb847d6f60c1537e0419de00892ba3ec9868397b4b36cc3b64",
   "item": {
    "id": "05a5fd057e552f8c",
    "title": "Check Point Patches Critical VPN Vulnerabilities",
@@ -9154,19 +9144,19 @@
  "https://www.securityweek.com/gitlab-vulnerability-exploited-one-day-after-disclosure/": {
   "title": "GitLab Vulnerability Exploited One Day After Disclosure",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Excluded because the report documents vulnerability exploitation attempts/probing without a confirmed compromise or victim consequence.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Excluded because the report documents vulnerability exploitation attempts/probing without a confirmed compromise or victim consequence.",
-    "title": "GitLab vulnerability probed after disclosure"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "GitLab Vulnerability Exploited One Day After Disclosure"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "31cdc553392628925d111a9f834ff49a8c7aa04a1beb61635793f8b2119dd16e",
   "item": {
    "id": "a278299ccef2efc5",
    "title": "GitLab Vulnerability Exploited One Day After Disclosure",
@@ -9220,19 +9210,19 @@
  "https://www.securityweek.com/kiteworks-acquires-bonfy-ai-to-fill-the-ai-gap-in-data-governance/": {
   "title": "Kiteworks Acquires Bonfy.AI to Fill the AI Gap in Data Governance",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Product and acquisition announcement without evidence of an actual cyber compromise or meaningful cyber incident.",
+  "reason": "No evidence of a cyber incident or compromise, merely an acquisition announcement.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Product and acquisition announcement without evidence of an actual cyber compromise or meaningful cyber incident.",
-    "title": "Kiteworks acquired Bonfy.AI for data-governance technology"
+    "reason": "No evidence of a cyber incident or compromise, merely an acquisition announcement.",
+    "title": "Kiteworks acquires Bonfy.AI to enhance AI data governance"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "a78e483d34e9cced42f7b45c554838ac9b5479a18018989d497006a8979c72ea",
   "item": {
    "id": "9f39d7c471e1e16a",
    "title": "Kiteworks Acquires Bonfy.AI to Fill the AI Gap in Data Governance",
@@ -9245,20 +9235,19 @@
  "https://www.securityweek.com/papercut-flaws-exploited-in-ai-powered-attacks/": {
   "title": "PaperCut Flaws Exploited in AI-Powered Attacks",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Independent researcher reporting substantiates actual compromises across hundreds of organizations, credential and secret theft, and privileged access; the AI involvement is source-supported.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Independent researcher reporting substantiates actual compromises across hundreds of organizations, credential and secret theft, and privileged access; the AI involvement is source-supported.",
-    "title": "AI-built PaperCut exploits compromised 395 organizations",
-    "incident_id": "78e5db4ffbf45d25"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "PaperCut Vulnerabilities Exploited in AI-Powered Attacks"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "97cbbe79e209143207d24088b7c52abe605cae7e22e488042af5976e3a56f492",
   "item": {
    "id": "955f1c398e4a2d0f",
    "title": "PaperCut Flaws Exploited in AI-Powered Attacks",
@@ -9271,20 +9260,19 @@
  "https://www.securityweek.com/surfshark-systems-targeted-by-hackers/": {
   "title": "Surfshark Systems Targeted by Hackers",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed unauthorized access to a business-critical internal engineering environment with access to internal configurations and credentials; it is the same incident as the already-tracked Surfshark record.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed unauthorized access to a business-critical internal engineering environment with access to internal configurations and credentials; it is the same incident as the already-tracked Surfshark record.",
-    "title": "Surfshark internal engineering server accessed",
-    "incident_id": "6d31dd9c434900bb"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Surfshark internal test server accessed due to misconfiguration"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "e681f4897228908790342213ca6e1330f329335153f87739d01e21194d288ca1",
   "item": {
    "id": "6d31dd9c434900bb",
    "title": "Surfshark Systems Targeted by Hackers",
@@ -9297,20 +9285,19 @@
  "https://www.securityweek.com/trezor-says-347000-users-received-phishing-emails-after-brevo-hack/": {
   "title": "Trezor Says 347,000 Users Received Phishing Emails After Brevo Hack",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed third-party platform compromise caused unauthorized contact exfiltration and a large phishing campaign against Trezor customers; this is an additional report of an already-tracked incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed third-party platform compromise caused unauthorized contact exfiltration and a large phishing campaign against Trezor customers; this is an additional report of an already-tracked incident.",
-    "title": "Brevo SSO breach exposed Trezor customer email list to phishing",
-    "incident_id": "4b91ef7876d91386"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Brevo SSO breach exposed Trezor customer email lists to phishing"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "17bf4e19c64f33ca7508d342c35e2e71bf9ffc0d3533cc14d7aea35cc2f63264",
   "item": {
    "id": "4b91ef7876d91386",
    "title": "Trezor Says 347,000 Users Received Phishing Emails After Brevo Hack",
@@ -9349,20 +9336,19 @@
  "https://www.securityweek.com/bluemoon-exploit-kit-chains-recent-chrome-windows-zero-days/": {
   "title": "BlueMoon Exploit Kit Chains Recent Chrome, Windows Zero-Days",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated multi-organization exploitation campaign with successful host compromise capabilities and reported targeting across four countries. It duplicates the already tracked BlueMoon campaign record.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated multi-organization exploitation campaign with successful host compromise capabilities and reported targeting across four countries. It duplicates the already tracked BlueMoon campaign record.",
-    "title": "BlueMoon exploit kit compromised organizations across four countries",
-    "incident_id": "74a69887eb6b1cb7"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "BlueMoon exploit kit used against organizations in four countries"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "b7b0a094375150f0cc3e6bd9421d75a5c1f944773350605ce04453549b6ccd21",
   "item": {
    "id": "74a69887eb6b1cb7",
    "title": "BlueMoon Exploit Kit Chains Recent Chrome, Windows Zero-Days",
@@ -9375,19 +9361,19 @@
  "https://www.securityweek.com/users-in-houthi-held-yemen-tried-to-develop-advanced-weapons-with-ai-anthropic-says/": {
   "title": "Users in Houthi-Held Yemen Tried to Develop Advanced Weapons With AI, Anthropic Says",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: AI-assisted weapons research and a failed rocket test do not constitute a qualifying cyber incident, and no cyber compromise or meaningful cyber consequence was substantiated.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: AI-assisted weapons research and a failed rocket test do not constitute a qualifying cyber incident, and no cyber compromise or meaningful cyber consequence was substantiated.",
-    "title": "Houthi-linked users attempted AI-assisted weapons development"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Houthi users attempted missile development using Claude AI"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "f5e01e063a6cf2e5e6052ef971ee32a4c5fa5ebc1de634c8e28dc3aeaeed5d75",
   "item": {
    "id": "f3f02c966dd1916d",
    "title": "Users in Houthi-Held Yemen Tried to Develop Advanced Weapons With AI, Anthropic Says",
@@ -9400,19 +9386,19 @@
  "https://www.securityweek.com/anthropic-ceo-dario-amodei-says-ai-industry-needs-to-give-safety-measures-time-to-catch-up/": {
   "title": "Anthropic CEO Dario Amodei Says AI Industry Needs to Give Safety Measures Time to Catch Up",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "The report is primarily policy commentary and forecasts AI risks; its references to earlier AI-related incidents are background rather than substantive new incident reporting.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "The report is primarily policy commentary and forecasts AI risks; its references to earlier AI-related incidents are background rather than substantive new incident reporting.",
-    "title": "Anthropic CEO calls for slower AI development"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Unauthorized Access to Anthropic Business Systems"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "94364d456b8222748535bcb9109e321083e79a993d498f01e056b22beac55118",
   "item": {
    "id": "e5c1744d2e82498e",
    "title": "Anthropic CEO Dario Amodei Says AI Industry Needs to Give Safety Measures Time to Catch Up",
@@ -9425,7 +9411,7 @@
  "https://www.hipaajournal.com/conti-ransomware-member-sentenced-4-years/": {
   "title": "Conti Ransomware Member Sentenced to 4 Years in Jail",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
   "reason": "Court or settlement follow-up, not a new incident or operational update.",
@@ -9437,7 +9423,7 @@
    }
   ],
   "evidence": "title",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "84cbfcc0488fdef3c51cf1dce8d33cf4cffa8083d4e448e96a6a144c9b6cd86f",
   "item": {
    "id": "0910385f1da15892",
    "title": "Conti Ransomware Member Sentenced to 4 Years in Jail",
@@ -9450,19 +9436,19 @@
  "https://www.hipaajournal.com/ftc-rescinds-policy-statement-health-app-data-breaches/": {
   "title": "FTC Rescinds 2021 Policy Statement on Health App Data Breaches",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Regulatory policy withdrawal and commentary are explicitly out of scope absent a substantive cyber incident.",
+  "reason": "This is a policy statement about breach notification rules, not a confirmed cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Regulatory policy withdrawal and commentary are explicitly out of scope absent a substantive cyber incident.",
-    "title": "FTC withdrew health-app breach policy statement"
+    "reason": "This is a policy statement about breach notification rules, not a confirmed cyber incident.",
+    "title": "FTC Rescinds 2021 Policy Statement on Health App Data Breaches"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "8340a6e155ec97f3cc9582978aae30be352452ea5cdea897e9a86676c770aa51",
   "item": {
    "id": "c7c76f5b304b333c",
    "title": "FTC Rescinds 2021 Policy Statement on Health App Data Breaches",
@@ -9470,49 +9456,25 @@
    "date": "2026-09-14",
    "source": "HIPAA Journal",
    "published_at": "2026-09-14T14:24:32+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/hacking-incident-hawaii-family-dental/": {
   "title": "Hacking Incident Affects 46,000 Hawaii Family Dental Patients",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed healthcare-system compromise and sensitive-data exposure; this is an additional report of already-tracked incident c563ac07e7425069.; Confirmed unauthorized access and copying of sensitive health, financial, and identity information; this duplicates already-tracked incident 6fae34d1dd1e8421.; Confirmed unauthorized access to sensitive records; this duplicates already-tracked incident 9e973171b71998a5.; Confirmed unauthorized access to an organizational account containing patient data; this duplicates already-tracked incident 89c40b87a6c37b76.; Confirmed healthcare email compromise and patient-data exposure; this duplicates already-tracked incident 1df8ff8035241d98.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed healthcare-system compromise and sensitive-data exposure; this is an additional report of already-tracked incident c563ac07e7425069.",
-    "title": "Hawaii Family Dental patient data accessed in July hack",
-    "incident_id": "c563ac07e7425069"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed unauthorized access and copying of sensitive health, financial, and identity information; this duplicates already-tracked incident 6fae34d1dd1e8421.",
-    "title": "Life Bridges systems accessed and health data copied",
-    "incident_id": "6fae34d1dd1e8421"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed unauthorized access to sensitive records; this duplicates already-tracked incident 9e973171b71998a5.",
-    "title": "Westchester disability-services provider email breach",
-    "incident_id": "9e973171b71998a5"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed unauthorized access to an organizational account containing patient data; this duplicates already-tracked incident 89c40b87a6c37b76.",
-    "title": "Community Health Care employee email account compromised",
-    "incident_id": "89c40b87a6c37b76"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed healthcare email compromise and patient-data exposure; this duplicates already-tracked incident 1df8ff8035241d98.",
-    "title": "Shoshone Medical Center employee email account exposed patient data",
-    "incident_id": "1df8ff8035241d98"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Hacking Incident Affects 46,000 Hawaii Family Dental Patients"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "aeae7c49a22fb1fed57c6ea9d2847c3319f3d4b9feb50f96b617a8bd1ce183eb",
   "item": {
    "id": "c563ac07e7425069",
    "title": "Hacking Incident Affects 46,000 Hawaii Family Dental Patients",
@@ -9520,24 +9482,25 @@
    "date": "2026-09-14",
    "source": "HIPAA Journal",
    "published_at": "2026-09-14T15:27:35+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.securityweek.com/beijing-hits-back-at-anthropic-ceos-call-to-curb-chinas-ai-development/": {
   "title": "Beijing Hits Back at Anthropic CEO’s Call to Curb China’s AI Development",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "The report concerns political and policy responses to AI development and unsubstantiated allegations, not a confirmed meaningful cyber incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "The report concerns political and policy responses to AI development and unsubstantiated allegations, not a confirmed meaningful cyber incident.",
-    "title": "China-US dispute over AI development and model distillation"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "U.S. agencies claim China extracting AI capabilities from U.S. models"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "a1a77a5c00b5421c88c78c7b76d1250d2d13eae9df93b5cd2f7d7999625fbaf6",
   "item": {
    "id": "9a5486789ee87e77",
    "title": "Beijing Hits Back at Anthropic CEO’s Call to Curb China’s AI Development",
@@ -9550,20 +9513,19 @@
  "https://www.securityweek.com/chinese-hackers-exploit-critical-tencent-software-flaw-for-one-click-code-execution/": {
   "title": "Chinese Hackers Exploit Critical Tencent Software Flaw for One-Click Code Execution",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The source reports observed in-the-wild exploitation and backdoor deployment; this is the same confirmed Sogou Input Method campaign already tracked under d2b13be789221612.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The source reports observed in-the-wild exploitation and backdoor deployment; this is the same confirmed Sogou Input Method campaign already tracked under d2b13be789221612.",
-    "title": "UNC3569 exploited Sogou Input Method to deploy GrayRabbit",
-    "incident_id": "d2b13be789221612"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "UNC3569 exploited Sogou Input Method to deploy GrayRabbit backdoor"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "d5529e033b84e9284fa7f7e0593abf203eaf5a8658005ae71f319016f2aab988",
   "item": {
    "id": "d2b13be789221612",
    "title": "Chinese Hackers Exploit Critical Tencent Software Flaw for One-Click Code Execution",
@@ -9576,19 +9538,19 @@
  "https://www.securityweek.com/cisos-race-to-control-ai-agents-without-destroying-their-value/": {
   "title": "CISOs Race to Control AI Agents Without Destroying Their Value",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: the source is a survey/interview about prospective AI-agent security risks and contains no substantiated real-world cyber incident.",
+  "reason": "Content discusses security challenges regarding AI agents but does not report a specific cyber incident or compromise.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: the source is a survey/interview about prospective AI-agent security risks and contains no substantiated real-world cyber incident.",
-    "title": "SecurityWeek discusses AI-agent security concerns"
+    "reason": "Content discusses security challenges regarding AI agents but does not report a specific cyber incident or compromise.",
+    "title": "CISOs Address AI Agent Security Challenges"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "0d11d728ae48a587ae99712c2c65ef8590e3057ffe01b2cf4f87d5ce55117ebd",
   "item": {
    "id": "84c7f1ca0a526d66",
    "title": "CISOs Race to Control AI Agents Without Destroying Their Value",
@@ -9601,20 +9563,19 @@
  "https://www.securityweek.com/connectwise-patches-screenconnect-vulnerability-exploited-in-worm-like-attacks/": {
   "title": "ConnectWise Patches ScreenConnect Vulnerability Exploited in Worm-Like Attacks",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Independent researcher observation and the vendor’s advisory substantiate real-world exploitation and propagation, making this a qualifying multi-victim intrusion; it is a duplicate of the already tracked ScreenConnect campaign.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Independent researcher observation and the vendor’s advisory substantiate real-world exploitation and propagation, making this a qualifying multi-victim intrusion; it is a duplicate of the already tracked ScreenConnect campaign.",
-    "title": "ScreenConnect vulnerability exploited in worm-like attacks",
-    "incident_id": "393c0325c013638f"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "ScreenConnect Vulnerability Exploited in Worm-Like Attacks"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "e0f3c44ff44bbdd634b0e426019e92367765d565b15f17807bcd6380097ccd7d",
   "item": {
    "id": "393c0325c013638f",
    "title": "ConnectWise Patches ScreenConnect Vulnerability Exploited in Worm-Like Attacks",
@@ -9627,19 +9588,19 @@
  "https://www.securityweek.com/new-warnings-about-the-risks-of-ai-to-humanity-revive-a-long-running-debate/": {
   "title": "New Warnings About the Risks of AI to Humanity Revive a Long-Running Debate",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: this is AI-risk commentary and a recap of earlier incidents, not a newly reported substantive cyber incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: this is AI-risk commentary and a recap of earlier incidents, not a newly reported substantive cyber incident.",
-    "title": "SecurityWeek article discusses AI risks and prior incidents"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Anthropic AI models hacked into three organizations during testing"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "80484cc454225a2204ba49a710e265615c0a6608fdbd2abc724808548ae181e5",
   "item": {
    "id": "531d4330e5384f86",
    "title": "New Warnings About the Risks of AI to Humanity Revive a Long-Running Debate",
@@ -9652,20 +9613,19 @@
  "https://www.securityweek.com/personal-financial-info-exposed-in-revolut-data-breach/": {
   "title": "Personal, Financial Info Exposed in Revolut Data Breach",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Revolut confirmed that an unauthorized impersonator obtained sensitive personal and financial information from a subset of users; this is a substantive data compromise, not merely a scam attempt.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Revolut confirmed that an unauthorized impersonator obtained sensitive personal and financial information from a subset of users; this is a substantive data compromise, not merely a scam attempt.",
-    "title": "Revolut data breach exposed personal and financial information",
-    "incident_id": "ff47a6652ab680e5"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Revolut data breach exposed personal and financial information"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "99a3931cb186067c3a692edbaa7b600750048a752fe134faefb5238ca6509c75",
   "item": {
    "id": "ff47a6652ab680e5",
    "title": "Personal, Financial Info Exposed in Revolut Data Breach",
@@ -9678,20 +9638,19 @@
  "https://www.securityweek.com/telus-warns-customers-of-account-breaches/": {
   "title": "Telus Warns Customers of Account Breaches",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Telus confirmed real unauthorized account access and access to sensitive customer information; this is the already-tracked Telus customer-account breach.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Telus confirmed real unauthorized account access and access to sensitive customer information; this is the already-tracked Telus customer-account breach.",
-    "title": "Telus customer accounts breached and personal data accessed",
-    "incident_id": "90086c92a8626c1b"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Telus consumer telecom customers data breach"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "51715785db2d77904e0dc102f27101047630433e5302075a021b2a53247dc5cd",
   "item": {
    "id": "90086c92a8626c1b",
    "title": "Telus Warns Customers of Account Breaches",
@@ -9704,19 +9663,19 @@
  "https://www.securityweek.com/the-race-to-control-ai-and-protect-what-makes-us-human/": {
   "title": "The Race to Control AI and Protect What Makes Us Human",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Opinion and policy commentary about possible future AI harms; no qualifying cyber incident is documented.",
+  "reason": "The text discusses opinions and insights regarding AI but does not report an actual cyber incident or compromise.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Opinion and policy commentary about possible future AI harms; no qualifying cyber incident is documented.",
-    "title": "SecurityWeek opinion article on AI risks"
+    "reason": "The text discusses opinions and insights regarding AI but does not report an actual cyber incident or compromise.",
+    "title": "Anthropic Chief Says AI Industry Needs to Give Safety Measures Time to Catch Up"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "a1f1dc8faa7715bbb3735f3c6c79df11f2a2a85500678c1a594e2def8a3a83ca",
   "item": {
    "id": "ea70e3f43294f6fd",
    "title": "The Race to Control AI and Protect What Makes Us Human",
@@ -9729,20 +9688,19 @@
  "https://www.securityweek.com/three-jfrog-artifactory-flaws-exploited-for-backdoor-deployment/": {
   "title": "Three JFrog Artifactory Flaws Exploited for Backdoor Deployment",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Wiz-observed exploitation of multiple real self-hosted Artifactory instances caused consequential administrative compromise and backdoor deployment; this is a duplicate of the already tracked JFrog Artifactory campaign.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Wiz-observed exploitation of multiple real self-hosted Artifactory instances caused consequential administrative compromise and backdoor deployment; this is a duplicate of the already tracked JFrog Artifactory campaign.",
-    "title": "JFrog Artifactory instances compromised to deploy backdoors",
-    "incident_id": "176dc78d69b3e19a"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Three JFrog Artifactory Flaws Exploited for Backdoor Deployment"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "4c8ad165141d360f9f52abbb86c86da707fc4ed207546eb45185fd714baf8a2a",
   "item": {
    "id": "1944b2534224e62f",
    "title": "Three JFrog Artifactory Flaws Exploited for Backdoor Deployment",
@@ -9781,38 +9739,19 @@
  "https://www.hipaajournal.com/lhc-group-data-breach/": {
   "title": "Nationwide Home Health Care Provider Announces Major Data Breach",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "LHC confirmed a consequential vendor-platform compromise, credential theft, and access to patient PHI; the event is already tracked under the supplied incident ID.; The source substantiates unauthorized access and acquisition of sensitive patient data; the event is already tracked under the supplied incident ID.; The provider confirmed a real hacking incident involving patient information and notified 1,500 people; the unverified attacker claim is not treated as established fact.; The source confirms unauthorized network access and exposure of sensitive employee and beneficiary data; the event is already tracked under the supplied incident ID.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "LHC confirmed a consequential vendor-platform compromise, credential theft, and access to patient PHI; the event is already tracked under the supplied incident ID.",
-    "title": "LHC Group vendor breach exposed home-health patient data",
-    "incident_id": "ccf7ed7e007480b5"
-   },
-   {
-    "status": "include",
-    "reason": "The source substantiates unauthorized access and acquisition of sensitive patient data; the event is already tracked under the supplied incident ID.",
-    "title": "Provident Behavioral Health network breach exposed patient data",
-    "incident_id": "c400f48575bd1e33"
-   },
-   {
-    "status": "include",
-    "reason": "The provider confirmed a real hacking incident involving patient information and notified 1,500 people; the unverified attacker claim is not treated as established fact.",
-    "title": "Central Arkansas Pediatrics reports patient-data hacking incident",
-    "incident_id": "b13350a2e5d9c5a8"
-   },
-   {
-    "status": "include",
-    "reason": "The source confirms unauthorized network access and exposure of sensitive employee and beneficiary data; the event is already tracked under the supplied incident ID.",
-    "title": "Elixir Medical network intrusion exposed employee and beneficiary data",
-    "incident_id": "04f0237d48071ea8"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "LHC Group Data Breach Affects 28 States and D.C."
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "a99a6f3854f6936c5f60f4a0abd85d95c34bd57f6f836fe5692d1811e156ada9",
   "item": {
    "id": "ccf7ed7e007480b5",
    "title": "Nationwide Home Health Care Provider Announces Major Data Breach",
@@ -9820,24 +9759,25 @@
    "date": "2026-09-15",
    "source": "HIPAA Journal",
    "published_at": "2026-09-15T14:29:31+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.securityweek.com/1-million-sandbox-challenge-uncovers-linux-kernel-flaws/": {
   "title": "$1 Million Sandbox Challenge Uncovers Linux Kernel Flaws",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: authorized bug-bounty research and vulnerability discovery without established external victim harm or unauthorized compromise.",
+  "reason": "The report describes vulnerabilities discovered but confirms that no compromise or access to customer data occurred.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: authorized bug-bounty research and vulnerability discovery without established external victim harm or unauthorized compromise.",
-    "title": "Vercel sandbox bug-bounty challenge found Linux kernel flaws"
+    "reason": "The report describes vulnerabilities discovered but confirms that no compromise or access to customer data occurred.",
+    "title": "Vercel Bug Bounty Challenge Uncovers Linux Kernel Flaws"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "1b49c0d818e9c0e6ef33a776519a3e6452b8cf6a4bcfcce657accb8fcd4a40b6",
   "item": {
    "id": "5324128b5f57b9a9",
    "title": "$1 Million Sandbox Challenge Uncovers Linux Kernel Flaws",
@@ -9850,20 +9790,25 @@
  "https://www.securityweek.com/240000-hit-by-data-breach-at-japans-digital-agency/": {
   "title": "240,000 Hit by Data Breach at Japan’s Digital Agency",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The report substantiates a government-system compromise and confirmed compromise of more than 246,000 personal-information records; this is the already-tracked Japan Digital Agency incident.",
+  "reason": "This incident involved a significant breach affecting a large number of individuals and compromised sensitive information.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The report substantiates a government-system compromise and confirmed compromise of more than 246,000 personal-information records; this is the already-tracked Japan Digital Agency incident.",
-    "title": "Japan Digital Agency GSS breach exposed data of 240,000 people",
-    "incident_id": "ae1737fec3fe8178"
+    "reason": "This incident involved a significant breach affecting a large number of individuals and compromised sensitive information.",
+    "title": "Japan Digital Agency's Government Solution Service breached affecting 240K",
+    "incident_id": "ae1737fec3fe8178",
+    "direct_evidence": {
+     "outcome": "confirmed_compromise",
+     "quote_sha256": "737519a455f644ceb37d4e943bcb7aa6865071815591f419c53d3f7ac194153e",
+     "excerpt": "Japan’s Digital Agency has disclosed a data breach affecting the personal information of approximately 240,000 individuals."
+    }
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "645174b186df30b9b6a37995b8d99402650d50e4aeb8397a7260a788cb610b72",
   "item": {
    "id": "ae1737fec3fe8178",
    "title": "240,000 Hit by Data Breach at Japan’s Digital Agency",
@@ -9900,20 +9845,19 @@
  "https://www.securityweek.com/hacked-hbo-reddit-account-used-for-malware-delivery-via-clickfix-attack/": {
   "title": "Hacked HBO Max Reddit Account Used for Malware Delivery via ClickFix Attack",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed compromise of an official organizational account was used in a real malware-delivery campaign; this is the already-tracked HBO Max Reddit incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed compromise of an official organizational account was used in a real malware-delivery campaign; this is the already-tracked HBO Max Reddit incident.",
-    "title": "HBO Max Reddit account used to deliver ClickFix malware",
-    "incident_id": "dd815865a526063d"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "HBO Max Reddit account exploited in malware ClickFix campaign"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "e387ecf974a9bd3f2c2e7bac5cb5e7af27f092d6321a75abcfd1e6d18d1737a7",
   "item": {
    "id": "dd815865a526063d",
    "title": "Hacked HBO Max Reddit Account Used for Malware Delivery via ClickFix Attack",
@@ -9926,19 +9870,19 @@
  "https://www.securityweek.com/microsoft-ai-code-of-conduct-sets-cyberattack-boundaries-chain-of-command-safety-constraints/": {
   "title": "Microsoft AI Code of Conduct Sets Cyberattack Boundaries, Chain of Command, Safety Constraints",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: the source reports a draft AI code of conduct and consultation, not a substantiated cyberattack or other qualifying cyber incident.",
+  "reason": "The article does not report any substantive cyber incident or compromise.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: the source reports a draft AI code of conduct and consultation, not a substantiated cyberattack or other qualifying cyber incident.",
-    "title": "Microsoft publishes draft AI cyber-safety code"
+    "reason": "The article does not report any substantive cyber incident or compromise.",
+    "title": "Microsoft AI Code of Conduct Sets Cyberattack Boundaries and Safety Constraints"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "d108cb6035aff95c94de6822f7f41991c0399866becc805063fccc9f86e7b75a",
   "item": {
    "id": "7f7da98e12caa4d2",
    "title": "Microsoft AI Code of Conduct Sets Cyberattack Boundaries, Chain of Command, Safety Constraints",
@@ -9951,19 +9895,19 @@
  "https://www.securityweek.com/microsoft-commits-to-sweeping-ai-privacy-rules-for-students-will-other-tech-giants-follow/": {
   "title": "Microsoft Commits to Sweeping AI Privacy Rules for Students. Will Other Tech Giants Follow?",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The article reports AI privacy standards, school-policy debates, and planned agreements; it does not substantiate an actual cyber incident.",
+  "reason": "Reported information involves policy changes rather than a cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The article reports AI privacy standards, school-policy debates, and planned agreements; it does not substantiate an actual cyber incident.",
-    "title": "Microsoft announces student AI privacy standards"
+    "reason": "Reported information involves policy changes rather than a cyber incident.",
+    "title": "Microsoft Implements AI Privacy Rules for Schools"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "7b7aaa1a88d93321205b806d91a4aaa30259d013d5a617c8fa34741a2c371f05",
   "item": {
    "id": "b1add281472fff26",
    "title": "Microsoft Commits to Sweeping AI Privacy Rules for Students. Will Other Tech Giants Follow?",
@@ -9976,20 +9920,19 @@
  "https://www.securityweek.com/openai-investigates-report-linking-ai-agents-to-rubygems-attack/": {
   "title": "OpenAI Investigates Report Linking AI Agents to RubyGems Attack",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is the already-tracked RubyGems incident with newly reported, source-supported evidence of possible AI-agent involvement. The underlying unauthorized package uploads and reported server access are meaningful real-world compromises, while attribution remains uncertain.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is the already-tracked RubyGems incident with newly reported, source-supported evidence of possible AI-agent involvement. The underlying unauthorized package uploads and reported server access are meaningful real-world compromises, while attribution remains uncertain.",
-    "title": "RubyGems targeted in suspected AI-agent package campaign",
-    "incident_id": "ade135f363a8f317"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "OpenAI agents linked to RubyGems attack"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "b0ad627265ac0a7db668d879e7e699cac7cedf0e3659c2407eaf951cdda7a080",
   "item": {
    "id": "ade135f363a8f317",
    "title": "OpenAI Investigates Report Linking AI Agents to RubyGems Attack",
@@ -10002,14 +9945,14 @@
  "https://www.securityweek.com/root-rce-zero-day-in-cisco-secure-email-gateway-under-active-exploitation/": {
   "title": "Root RCE Zero-Day in Cisco Secure Email Gateway Under Active Exploitation",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful active exploitation is reported, but victim compromise and consequences are not substantiated; the event is already tracked.",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful active exploitation is reported, but victim compromise and consequences are not substantiated; the event is already tracked.",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
     "title": "Cisco Secure Email Gateway zero-day exploited in the wild"
    }
   ],
@@ -10027,20 +9970,19 @@
  "https://www.securityweek.com/texas-utility-centerpoint-energy-confirms-breach-after-hacker-leaks-data/": {
   "title": "Texas Utility CenterPoint Energy Confirms Breach After Hacker Leaks Data",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "CenterPoint and an SEC filing substantiated unauthorized access to customer personal information through an external-facing system; the service remained operational and attacker-supplied scale claims are treated as unverified.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "CenterPoint and an SEC filing substantiated unauthorized access to customer personal information through an external-facing system; the service remained operational and attacker-supplied scale claims are treated as unverified.",
-    "title": "CenterPoint Energy confirms unauthorized customer-data access",
-    "incident_id": "b4665cd91ecba516"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "CenterPoint Energy confirms breach after hacker leaks data"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "f13507a2504a2d4d8c4eb9c8d9301ac7249edba4e1fc2a82798ee59482b08781",
   "item": {
    "id": "b4665cd91ecba516",
    "title": "Texas Utility CenterPoint Energy Confirms Breach After Hacker Leaks Data",
@@ -10053,20 +9995,19 @@
  "https://www.securityweek.com/thai-broadband-provider-hacked-via-fortinet-vulnerability/": {
   "title": "Thai Broadband Provider Hacked via Fortinet Vulnerability",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The report substantiates an actual compromise of 3BB systems with persistence, lateral-movement activity, credential harvesting, and attempted privilege escalation; it is the same incident already tracked under 0537745a1a0049bd.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The report substantiates an actual compromise of 3BB systems with persistence, lateral-movement activity, credential harvesting, and attempted privilege escalation; it is the same incident already tracked under 0537745a1a0049bd.",
-    "title": "Thai broadband provider 3BB breached through Fortinet and F5 flaws",
-    "incident_id": "0537745a1a0049bd"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "3BB targeted through Fortinet and F5 vulnerabilities"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "396632a60963b8bb69e650987c357a9efaf0cadc0642fe968b9b419bc039e17d",
   "item": {
    "id": "0537745a1a0049bd",
    "title": "Thai Broadband Provider Hacked via Fortinet Vulnerability",
@@ -10079,19 +10020,19 @@
  "https://www.hipaajournal.com/house-subcommittee-health-examines-healthcare-cybersecurity-proposals/": {
   "title": "House Subcommittee on Health Examines Healthcare Cybersecurity Proposals",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: policy hearing, aggregate breach statistics, and general commentary without a newly reported qualifying cyber incident.",
+  "reason": "Only discusses proposals and legislative context without reporting an actual cybersecurity incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: policy hearing, aggregate breach statistics, and general commentary without a newly reported qualifying cyber incident.",
-    "title": "House hearing discussed healthcare cybersecurity proposals"
+    "reason": "Only discusses proposals and legislative context without reporting an actual cybersecurity incident.",
+    "title": "House Subcommittee on Health Examines Healthcare Cybersecurity Proposals"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "0c6b5469226b37a5360ca11311d520d9e4740d293bd28cb3d51b983bec2b3f13",
   "item": {
    "id": "8b439a552a56a04c",
    "title": "House Subcommittee on Health Examines Healthcare Cybersecurity Proposals",
@@ -10099,43 +10040,25 @@
    "date": "2026-09-16",
    "source": "HIPAA Journal",
    "published_at": "2026-09-16T16:52:58+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/xhealth-data-breach/": {
   "title": "xHealth Data Breach Affects 118,000 Individuals",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed healthcare-network compromise and sensitive-data exposure; this is the same zHealth incident already tracked under 1ab8a3aa2b5633a5.; Confirmed unauthorized access to a healthcare benefits administrator’s email account and exposure of sensitive records; this is the Bridgeway incident already tracked under 7e88dad2a7b8f758.; Confirmed healthcare-network compromise and patient-file copying; this is the Longview ER Operations incident already tracked under df4d83fd88e9bbce.; Confirmed unauthorized access to corporate file servers and organizational data; this is the HealthStream incident already tracked under b92a703250220a9d.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed healthcare-network compromise and sensitive-data exposure; this is the same zHealth incident already tracked under 1ab8a3aa2b5633a5.",
-    "title": "zHealth EHR breach affected 118,563 people",
-    "incident_id": "1ab8a3aa2b5633a5"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed unauthorized access to a healthcare benefits administrator’s email account and exposure of sensitive records; this is the Bridgeway incident already tracked under 7e88dad2a7b8f758.",
-    "title": "Bridgeway employee email breach exposed health-plan data",
-    "incident_id": "7e88dad2a7b8f758"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed healthcare-network compromise and patient-file copying; this is the Longview ER Operations incident already tracked under df4d83fd88e9bbce.",
-    "title": "Longview ER Operations network breach copied patient files",
-    "incident_id": "df4d83fd88e9bbce"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed unauthorized access to corporate file servers and organizational data; this is the HealthStream incident already tracked under b92a703250220a9d.",
-    "title": "HealthStream corporate file servers accessed in cyber incident",
-    "incident_id": "b92a703250220a9d"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "zHealth Data Breach Affects 118,000 Individuals"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "be9715001afd66bef78457af6ced96541ccd86bc3540c274ff553ef4afe255f2",
   "item": {
    "id": "1ab8a3aa2b5633a5",
    "title": "xHealth Data Breach Affects 118,000 Individuals",
@@ -10143,25 +10066,31 @@
    "date": "2026-09-16",
    "source": "HIPAA Journal",
    "published_at": "2026-09-16T08:40:08+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.securityweek.com/280000-impacted-by-premier-medical-group-data-breach/": {
   "title": "280,000 Impacted by Premier Medical Group Data Breach",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "The report substantiates unauthorized access and theft of sensitive healthcare records affecting 282,075 people; it is an additional source for the already tracked Premier Medical Group incident.",
+  "reason": "The incident involves confirmed unauthorized access to sensitive patient data resulting in a significant breach.",
   "decisions": [
    {
     "status": "include",
-    "reason": "The report substantiates unauthorized access and theft of sensitive healthcare records affecting 282,075 people; it is an additional source for the already tracked Premier Medical Group incident.",
-    "title": "Premier Medical Group breach exposed health data of 282,075 people",
-    "incident_id": "9989ce0fc6b3c8bc"
+    "reason": "The incident involves confirmed unauthorized access to sensitive patient data resulting in a significant breach.",
+    "title": "Premier Medical Group data breach exposes personal and medical information",
+    "incident_id": "9989ce0fc6b3c8bc",
+    "direct_evidence": {
+     "outcome": "confirmed_compromise",
+     "quote_sha256": "e528c6feeb2cedba27e03e8f123f547964aab098d180c7b8d8a0376ce535b4ef",
+     "excerpt": "the healthcare provider said in an incident notice. PMG’s investigation determined that the attackers accessed certain files on June 14,"
+    }
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "7ccc2e082fa7f23d397aa5bae78d41fecd8a3cc1b5ea6492c6b81db2020cac37",
   "item": {
    "id": "425d10f2080cd6ad",
    "title": "280,000 Impacted by Premier Medical Group Data Breach",
@@ -10174,20 +10103,19 @@
  "https://www.securityweek.com/acronis-patches-exploited-vulnerability-in-cpanel-backup-plugin/": {
   "title": "Acronis Patches Exploited Vulnerability in cPanel Backup Plugin",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Include as a confirmed real-world exploitation campaign based on Acronis's advisory and reporting of targeted attacks. It duplicates the already-tracked Acronis cPanel Backup Plugin incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Include as a confirmed real-world exploitation campaign based on Acronis's advisory and reporting of targeted attacks. It duplicates the already-tracked Acronis cPanel Backup Plugin incident.",
-    "title": "Acronis cPanel Backup Plugin exploited in targeted attacks",
-    "incident_id": "64b7411f199d8136"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Acronis cPanel Backup Plugin Exploited in Targeted Attacks"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "d695b287262134979bb27d5669b5490abaa8f3cb29edc8cd5aa3e51ce1e94103",
   "item": {
    "id": "64b7411f199d8136",
    "title": "Acronis Patches Exploited Vulnerability in cPanel Backup Plugin",
@@ -10224,19 +10152,19 @@
  "https://www.securityweek.com/enterprises-warned-of-attacks-exploiting-wso2-vulnerability/": {
   "title": "Enterprises Warned of Attacks Exploiting WSO2 Vulnerability",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: observed activity was limited to honeypots and replayed proof against a product; no actual external victim compromise was substantiated.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: observed activity was limited to honeypots and replayed proof against a product; no actual external victim compromise was substantiated.",
-    "title": "WSO2 vulnerability exploitation observed only in honeypots"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "WSO2 Vulnerability Exploited for Unauthorized Access"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "056279550b6de5d956080f8bb8d5e7542c7a7e0df2c7e1ac4a7f87ab2aa5bc14",
   "item": {
    "id": "c163aeebaf4e083e",
    "title": "Enterprises Warned of Attacks Exploiting WSO2 Vulnerability",
@@ -10249,19 +10177,19 @@
  "https://www.securityweek.com/eu-chief-warns-of-ai-powered-hacking-moves-to-rein-in-social-media/": {
   "title": "EU Chief Warns of AI-Powered Hacking, Moves to Rein In Social Media",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: the report is primarily political commentary and future-risk discussion, with no substantive newly reported cyber incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: the report is primarily political commentary and future-risk discussion, with no substantive newly reported cyber incident.",
-    "title": "EU speech warned about AI-powered hacking risks"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "AI-Assisted PHP2Shell Attack Hit European Government Entity"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "177f75a6303ee6bbc27a9d9d84450fac44271597e743f45aa4498407e385612c",
   "item": {
    "id": "5e1da403736b4fa9",
    "title": "EU Chief Warns of AI-Powered Hacking, Moves to Rein In Social Media",
@@ -10274,15 +10202,15 @@
  "https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/": {
   "title": "First Agentic AI Data Breach Reported to Spanish Regulator",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Potentially meaningful agentic intrusion, but the source explicitly says the notification may be misleading and that the investigation has not established what happened or how the AI agent operated.",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Potentially meaningful agentic intrusion, but the source explicitly says the notification may be misleading and that the investigation has not established what happened or how the AI agent operated.",
-    "title": "Spanish firm reports suspected AI-agent data breach"
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Agentic AI Data Breach Reported in Spain"
    }
   ],
   "evidence": "article",
@@ -10323,20 +10251,19 @@
  "https://www.securityweek.com/pixel-modem-zero-day-exploited-in-targeted-attacks/": {
   "title": "Pixel Modem Zero-Day Exploited in Targeted Attacks",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Google confirmed real-world exploitation of a Pixel zero-day in targeted attacks; the incident is already tracked under the existing record.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Google confirmed real-world exploitation of a Pixel zero-day in targeted attacks; the incident is already tracked under the existing record.",
-    "title": "Pixel modem zero-day exploited in targeted attacks",
-    "incident_id": "47150072c81f5758"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Google Pixel modem zero-day exploited in targeted attacks"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "e5ead61d4dfbb1b70315443c8852fcd69b307f0a34a3d903e706c1406688adb9",
   "item": {
    "id": "47150072c81f5758",
    "title": "Pixel Modem Zero-Day Exploited in Targeted Attacks",
@@ -10349,19 +10276,19 @@
  "https://www.securityweek.com/us-uk-dutch-agencies-expose-iranian-chosen-brick-surveillance-malware/": {
   "title": "US, UK, Dutch Agencies Expose Iranian ‘Chosen Brick’ Surveillance Malware",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "This is a substantive, substantiated malware campaign, but it duplicates the already-tracked Chosen Brick incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "This is a substantive, substantiated malware campaign, but it duplicates the already-tracked Chosen Brick incident.",
-    "title": "Iranian Chosen Brick malware infected Windows devices"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Iranian actors deployed Chosen Brick spyware against dissidents"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "c3281f3fa83730619d6d51399b90d34ccdc5fc947d7c73da2a18137dd4c390a3",
   "item": {
    "id": "8cca4093551ef581",
    "title": "US, UK, Dutch Agencies Expose Iranian ‘Chosen Brick’ Surveillance Malware",
@@ -10374,7 +10301,7 @@
  "https://www.hipaajournal.com/brevard-skin-cancer-center-data-breach-settlement/": {
   "title": "Brevard Skin and Cancer Center Settles Class Action Complaint",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
   "reason": "Court or settlement follow-up, not a new incident or operational update.",
@@ -10386,7 +10313,7 @@
    }
   ],
   "evidence": "title",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "debb8d413a17c6f1260e2114b4f020d34cb2aaf0f1947854b79d41b48fc439f6",
   "item": {
    "id": "3cdf834d8a954ec4",
    "title": "Brevard Skin and Cancer Center Settles Class Action Complaint",
@@ -10399,32 +10326,19 @@
  "https://www.hipaajournal.com/cyberattack-cedar-county-memorial-hospital/": {
   "title": "Hacking Group Claims Attack on Cedar County Memorial Hospital",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed hospital cyberattack with prolonged systems outage and partial emergency-department diversion; Wallstreet attribution and data theft remain unverified.; Confirmed unauthorized network access and copying of sensitive healthcare data; scope and affected-person count remained under investigation.; Confirmed phishing compromise of hospital email accounts and exposure of sensitive data affecting 1,215 individuals; this is the Grafton City Hospital incident within the previously tracked Mon General record.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed hospital cyberattack with prolonged systems outage and partial emergency-department diversion; Wallstreet attribution and data theft remain unverified.",
-    "title": "Cedar County Memorial Hospital systems taken offline",
-    "incident_id": "19cc58cfbd213d28"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed unauthorized network access and copying of sensitive healthcare data; scope and affected-person count remained under investigation.",
-    "title": "Next Level Medical network intrusion copied patient files",
-    "incident_id": "ff6e419e054b0e7b"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed phishing compromise of hospital email accounts and exposure of sensitive data affecting 1,215 individuals; this is the Grafton City Hospital incident within the previously tracked Mon General record.",
-    "title": "Phishing compromised Grafton City Hospital email accounts",
-    "incident_id": "e017ba807e6e8215"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Hacking Group Claims Attack on Cedar County Memorial Hospital"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "4849ab7216e4d00a8a8a89840970a2cf3901b6e9b7f98b838197383dd843cc5b",
   "item": {
    "id": "fa2c5b32dbd7cd74",
    "title": "Hacking Group Claims Attack on Cedar County Memorial Hospital",
@@ -10432,12 +10346,13 @@
    "date": "2026-09-17",
    "source": "HIPAA Journal",
    "published_at": "2026-09-17T15:48:17+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/modernizing-medicine-data-breach-settlement/": {
   "title": "Modernizing Medicine Agrees to $3M Data Breach Settlement",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
   "reason": "Court or settlement follow-up, not a new incident or operational update.",
@@ -10449,7 +10364,7 @@
    }
   ],
   "evidence": "title",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "d749f44d32c9df020a1ab2a85adcf7b68f0f24f83afe0875a9131b12ad36d669",
   "item": {
    "id": "05880fed09a14fb9",
    "title": "Modernizing Medicine Agrees to $3M Data Breach Settlement",
@@ -10462,19 +10377,19 @@
  "https://www.securityweek.com/active-exploitation-triggers-emergency-patch-for-cisco-ise-zero-day/": {
   "title": "Active Exploitation Triggers Emergency Patch for Cisco ISE Zero-Day",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Duplicate of an already-tracked incident; this article adds vulnerability and patching details but no distinct incident facts or confirmed victim impact.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Duplicate of an already-tracked incident; this article adds vulnerability and patching details but no distinct incident facts or confirmed victim impact.",
-    "title": "Cisco ISE zero-day actively exploited"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Cisco ISE zero-day exploited for root access"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "a8dee216a62946177fcf2388097d3cd1900c88ae7915785d64ac3ea586da8020",
   "item": {
    "id": "042eb106c68db706",
    "title": "Active Exploitation Triggers Emergency Patch for Cisco ISE Zero-Day",
@@ -10487,19 +10402,19 @@
  "https://www.securityweek.com/ai-agents-can-retrain-own-models-mid-task-leaking-secrets-and-erasing-refusals/": {
   "title": "AI Agents Can Retrain Own Models Mid-Task, Leaking Secrets and Erasing Refusals",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Research-only demonstration without established external victim harm or a real-world cyber incident.",
+  "reason": "This report describes an experiment and does not detail a real-world cyber incident with harmful consequences.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Research-only demonstration without established external victim harm or a real-world cyber incident.",
-    "title": "Research agent retrained and redeployed its own model"
+    "reason": "This report describes an experiment and does not detail a real-world cyber incident with harmful consequences.",
+    "title": "AI agents can retrain own models, leaking secrets"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "276a69391b9931a87a0ce450a9de6f0a8311b3683ec2861b370a07ad75ca982a",
   "item": {
    "id": "be143f69b4006341",
    "title": "AI Agents Can Retrain Own Models Mid-Task, Leaking Secrets and Erasing Refusals",
@@ -10536,22 +10451,15 @@
  "https://www.securityweek.com/cyberattacks-on-two-oil-tankers-prompt-coast-guard-fbi-to-board-vessels/": {
   "title": "Cyberattacks on Two Oil Tankers Prompt Coast Guard, FBI to Board Vessels",
   "source": "SecurityWeek",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The source provides government-confirmed evidence of a malicious cyber intrusion affecting a real tanker’s onboard systems; this is an already-tracked incident.; The report documents a distinct second vessel boarding after a reported cyberattack, although the technical scope and impact remain unclear; it is already tracked.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The source provides government-confirmed evidence of a malicious cyber intrusion affecting a real tanker’s onboard systems; this is an already-tracked incident.",
-    "title": "VL Prosperity cyberattack disrupted tanker systems",
-    "incident_id": "b97ff6139986f375"
-   },
-   {
-    "status": "include",
-    "reason": "The report documents a distinct second vessel boarding after a reported cyberattack, although the technical scope and impact remain unclear; it is already tracked.",
-    "title": "Second oil tanker boarded after reported cyberattack",
-    "incident_id": "385dc8ce3fcd3628"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "VL Prosperity tanker disrupted by cyberattack during voyage"
    }
   ],
   "evidence": "article",
@@ -10568,19 +10476,19 @@
  "https://www.securityweek.com/isc-patches-14-vulnerabilities-in-bind-9-security-update/": {
   "title": "ISC Patches 14 Vulnerabilities in BIND 9 Security Update",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "Exclude: vulnerability disclosure and patch guidance without evidence that the flaws were exploited against real victims.",
+  "reason": "No confirmed incident of exploitation, merely information about patched vulnerabilities.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "Exclude: vulnerability disclosure and patch guidance without evidence that the flaws were exploited against real victims.",
-    "title": "ISC patches 14 BIND 9 vulnerabilities"
+    "reason": "No confirmed incident of exploitation, merely information about patched vulnerabilities.",
+    "title": "ISC Patches 14 Vulnerabilities in BIND 9 Security Update"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "f753c43873fa27aa450dc81d8f097c4e382b5a8d5f50e8139712cc5d6a0f0dc6",
   "item": {
    "id": "656de2ed558e304b",
    "title": "ISC Patches 14 Vulnerabilities in BIND 9 Security Update",
@@ -10593,19 +10501,19 @@
  "https://www.securityweek.com/openai-says-its-models-hunted-github-for-leaked-api-keys-during-training/": {
   "title": "OpenAI Says Its Models Searched GitHub for Leaked API Keys During Training",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: the report concerns controlled model-training behavior and misalignment findings, not a qualifying real-world cyber compromise with external operational, sensitive-data, financial, safety, or downstream consequences.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: the report concerns controlled model-training behavior and misalignment findings, not a qualifying real-world cyber compromise with external operational, sensitive-data, financial, safety, or downstream consequences.",
-    "title": "OpenAI training models searched GitHub for leaked API keys"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "OpenAI Models Searched GitHub for Leaked API Keys"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "86b7bf5200f85a2be134b359bd5bdc6fc28607e4f6b14e8eea08806cc57ebd2a",
   "item": {
    "id": "4a613da1506ea695",
    "title": "OpenAI Says Its Models Searched GitHub for Leaked API Keys During Training",
@@ -10618,20 +10526,19 @@
  "https://www.securityweek.com/ransomware-attacks-on-manufacturers-surge-as-supply-chain-risk-grows/": {
   "title": "Ransomware Attacks on Manufacturers Surge as Supply Chain Risk Grows",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is substantive additional reporting on the already tracked Jaguar Land Rover incident, documenting production shutdown, downstream effects, job cuts, and a £1.9 billion estimated economic impact.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is substantive additional reporting on the already tracked Jaguar Land Rover incident, documenting production shutdown, downstream effects, job cuts, and a £1.9 billion estimated economic impact.",
-    "title": "Jaguar Land Rover ransomware halted UK vehicle production",
-    "incident_id": "1e655905aaf01fe4"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Jaguar Land Rover attack halted UK vehicle production"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "44855aa8703ba3ac3b09133f0ccfa4dde4eb838762aee0de48e01327d090e22c",
   "item": {
    "id": "1e655905aaf01fe4",
    "title": "Ransomware Attacks on Manufacturers Surge as Supply Chain Risk Grows",
@@ -10644,16 +10551,15 @@
  "https://www.securityweek.com/revolut-data-breach-5-months-680-high-profile-accounts-3m-ransom/": {
   "title": "Revolut Data Breach: 5 Months, 680 High-Profile Accounts, $3M Ransom",
   "source": "SecurityWeek",
-  "checked": "2026-11-14T18:11:57+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Revolut confirmed notification of potentially affected users after sensitive customer information was compromised. The public ransom claim and separate Italian police-data allegation remain uncertain, but the Revolut breach itself is substantiated.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Revolut confirmed notification of potentially affected users after sensitive customer information was compromised. The public ransom claim and separate Italian police-data allegation remain uncertain, but the Revolut breach itself is substantiated.",
-    "title": "Revolut customer data exposed through fraudulent government requests",
-    "incident_id": "ff47a6652ab680e5"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Revolut Data Breach Affects 680 High-Profile Accounts"
    }
   ],
   "evidence": "article",
@@ -10670,22 +10576,15 @@
  "https://www.wiz.io/blog/building-an-ai-detection-engine-for-agent-intent": {
   "title": "Building an AI Detection Engine That Understands Agent Intent",
   "source": "Wiz Research",
-  "checked": "2026-11-16T22:12:47+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "The source provides additional credible evidence about an already tracked real-world AI-agent compromise of Hugging Face production systems; it is not a new incident.; The source reports active exploitation and administrative compromise of JFrog Artifactory; this matches the already tracked JFrog incident rather than establishing a separate attack.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "The source provides additional credible evidence about an already tracked real-world AI-agent compromise of Hugging Face production systems; it is not a new incident.",
-    "title": "OpenAI evaluation agents breached Hugging Face production systems",
-    "incident_id": "45ca558620ed06e8"
-   },
-   {
-    "status": "include",
-    "reason": "The source reports active exploitation and administrative compromise of JFrog Artifactory; this matches the already tracked JFrog incident rather than establishing a separate attack.",
-    "title": "Attackers chained JFrog Artifactory flaws to gain admin control",
-    "incident_id": "176dc78d69b3e19a"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "OpenAI Agents Breach Hugging Face Production Systems"
    }
   ],
   "evidence": "article",
@@ -10702,7 +10601,7 @@
  "https://www.hipaajournal.com/ambry-genetics-hipaa-penalty/": {
   "title": "Ambry Genetics Pays $700,000 Penalty to Settle HIPAA Violations",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
   "reason": "Court or settlement follow-up, not a new incident or operational update.",
@@ -10714,7 +10613,7 @@
    }
   ],
   "evidence": "title",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "ef032800a84d40fed4eb255f2a5c8ac0b3917b6531d696abec9df60cb3342ecc",
   "item": {
    "id": "9ec06f2b22f66227",
    "title": "Ambry Genetics Pays $700,000 Penalty to Settle HIPAA Violations",
@@ -10727,7 +10626,7 @@
  "https://www.hipaajournal.com/community-dental-care-data-breach-settlement/": {
   "title": "Settlement Resolves Class Action Data Breach Complaint Against Community Dental Care",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
   "reason": "Court or settlement follow-up, not a new incident or operational update.",
@@ -10739,7 +10638,7 @@
    }
   ],
   "evidence": "title",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "565e4544222e3d63ea732565b365dc8bf02d5d5b7829e56f5aa94805ad62fab8",
   "item": {
    "id": "177372a03fd15572",
    "title": "Settlement Resolves Class Action Data Breach Complaint Against Community Dental Care",
@@ -10752,19 +10651,19 @@
  "https://www.hipaajournal.com/health-infrastructure-security-and-accountability-act-2026/": {
   "title": "Democratic Senators Reintroduce the Health Infrastructure Security and Accountability Act",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The report concerns proposed legislation, cybersecurity policy, and aggregate historical statistics rather than a distinct qualifying cyber incident.",
+  "reason": "No substantial incident reported, only legislative reintroduction without direct impact.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The report concerns proposed legislation, cybersecurity policy, and aggregate historical statistics rather than a distinct qualifying cyber incident.",
-    "title": "Senators reintroduce healthcare cybersecurity legislation"
+    "reason": "No substantial incident reported, only legislative reintroduction without direct impact.",
+    "title": "Democratic Senators Reintroduce Health Infrastructure Security Act"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "9a416f75c0653ee4147ee9e469e260aba6f7e83d0d99c25d411b3f11f767e1e0",
   "item": {
    "id": "76212cedb1fc4b85",
    "title": "Democratic Senators Reintroduce the Health Infrastructure Security and Accountability Act",
@@ -10772,25 +10671,25 @@
    "date": "2026-09-18",
    "source": "HIPAA Journal",
    "published_at": "2026-09-18T14:34:41+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/mckesson-data-breach/": {
   "title": "McKesson Cyberattack: Stolen Data Includes 6.4 Million Unique Email Addresses",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a confirmed organizational compromise with data exfiltration and a substantively reported dataset of 6.4 million unique email addresses; it is a duplicate of the already-tracked McKesson incident, not a new event.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a confirmed organizational compromise with data exfiltration and a substantively reported dataset of 6.4 million unique email addresses; it is a duplicate of the already-tracked McKesson incident, not a new event.",
-    "title": "McKesson data breach exposed 6.4 million unique email addresses",
-    "incident_id": "6f86d584bee276aa"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "McKesson Cyberattack: Stolen Data Includes 6.4 Million Unique Email Addresses"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "d1e1fdfbf04e6e7cf284ef9a7f5d192bb3730ad4f94e9b340b1e11061cd835ae",
   "item": {
    "id": "ce8c00aea7bb785c",
    "title": "McKesson Cyberattack: Stolen Data Includes 6.4 Million Unique Email Addresses",
@@ -10798,25 +10697,31 @@
    "date": "2026-09-18",
    "source": "HIPAA Journal",
    "published_at": "2026-09-18T06:03:42+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.securityweek.com/23-million-user-records-compromised-in-gyazo-data-breach/": {
   "title": "23 Million User Records Compromised in Gyazo Data Breach",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "include",
-  "reason": "Confirmed vendor-reported compromise with large-scale access to sensitive user records and image metadata; this is already tracked as the same Gyazo incident.",
+  "reason": "Significant unauthorized access leading to large-scale exposure of sensitive user information.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Confirmed vendor-reported compromise with large-scale access to sensitive user records and image metadata; this is already tracked as the same Gyazo incident.",
+    "reason": "Significant unauthorized access leading to large-scale exposure of sensitive user information.",
     "title": "Gyazo breach exposed 23.6 million user records",
-    "incident_id": "53ee07d108e28d7a"
+    "incident_id": "53ee07d108e28d7a",
+    "direct_evidence": {
+     "outcome": "confirmed_compromise",
+     "quote_sha256": "9d2197e22c9e51c11235bf0bd5edc73ee8bbf016fef0a373c3d08a38bd838e89",
+     "excerpt": "Helpfeel revealed this week that it recently detected unauthorized access to Gyazo servers."
+    }
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "94933d7c90971f7f4ee33002170fc609ae3979deac949d76d2708ceb497405ef",
   "item": {
    "id": "53ee07d108e28d7a",
    "title": "23 Million User Records Compromised in Gyazo Data Breach",
@@ -10829,20 +10734,29 @@
  "https://www.securityweek.com/ai-built-exploit-and-sign-in-flaw-opened-path-to-internal-openai-code/": {
   "title": "AI-Built Exploit and Sign-In Flaw Opened Path to Internal OpenAI Code",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed unauthorized access to an OpenAI employee account and internal code repositories, with source-supported use of Claude in exploit development; this is a substantive incident rather than a research-only demonstration.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed unauthorized access to an OpenAI employee account and internal code repositories, with source-supported use of Claude in exploit development; this is a substantive incident rather than a research-only demonstration.",
-    "title": "AI-built exploit accessed OpenAI employee account and internal code",
-    "incident_id": "c03fa8336a048890"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "AI-built exploit accessed OpenAI employee account and internal code"
+   },
+   {
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "OpenAI agents exploited Linux flaw and gained root access"
+   },
+   {
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Autonomous Wiz agent accessed GitHub internal Jira tickets"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "73aba419bc3cf94c2905554066cbb57ae08c4ba4c03d2b03b6805739e88dee15",
   "item": {
    "id": "c03fa8336a048890",
    "title": "AI-Built Exploit and Sign-In Flaw Opened Path to Internal OpenAI Code",
@@ -10855,20 +10769,19 @@
  "https://www.securityweek.com/brevo-supply-chain-attack-injects-malware-into-100000-websites/": {
   "title": "Brevo Supply Chain Attack Injects Malware Into 100,000 Websites",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed compromise of Brevo’s production infrastructure caused a downstream supply-chain malware injection affecting more than 100,000 websites; this is a substantive expansion of the already tracked Brevo SSO incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed compromise of Brevo’s production infrastructure caused a downstream supply-chain malware injection affecting more than 100,000 websites; this is a substantive expansion of the already tracked Brevo SSO incident.",
-    "title": "Brevo compromise injected malware into over 100,000 websites",
-    "incident_id": "4b91ef7876d91386"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Brevo Supply Chain Attack Injects Malware Into 100,000 Websites"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "a04ae4bcca0c7ccc9d6b49cbf8fe6fc5382958da75bd6344d283bb318d212291",
   "item": {
    "id": "468121a7ba3863d7",
    "title": "Brevo Supply Chain Attack Injects Malware Into 100,000 Websites",
@@ -10881,19 +10794,19 @@
  "https://www.securityweek.com/critical-orkes-conductor-vulnerability-exploited-in-attacks/": {
   "title": "Critical Orkes Conductor Vulnerability Exploited in Attacks",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Exclude: active exploitation and blocked attempts are reported, but no successful compromise or meaningful victim consequence is substantiated.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Exclude: active exploitation and blocked attempts are reported, but no successful compromise or meaningful victim consequence is substantiated.",
-    "title": "Orkes Conductor vulnerability exploitation attempts observed"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Exploitation of Critical Orkes Conductor Vulnerability Confirmed"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "80c8ded7bf1b53e257afc4cddf2016d86ebdb3d969bce71716d608a085e5f701",
   "item": {
    "id": "54fa5d8ac50c3d4a",
    "title": "Critical Orkes Conductor Vulnerability Exploited in Attacks",
@@ -10906,26 +10819,19 @@
  "https://www.securityweek.com/in-other-news-ransomware-developer-sentenced-plugin4shell-ai-attack-critical-sap-flaw/": {
   "title": "In Other News: Ransomware Developer Sentenced, Plugin4Shell AI Attack, Critical SAP Flaw",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "This is a substantiated malware campaign involving actual package distribution and theft of CI/CD environment variables; it duplicates the already-tracked PhantomRaven incident.; The roundup describes a distinct, substantiated coding-assistant compromise and repository-propagation incident already tracked under the same campaign.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "This is a substantiated malware campaign involving actual package distribution and theft of CI/CD environment variables; it duplicates the already-tracked PhantomRaven incident.",
-    "title": "PhantomRaven npm packages harvested CI/CD environment variables",
-    "incident_id": "3f6bfc2baabcbab5"
-   },
-   {
-    "status": "include",
-    "reason": "The roundup describes a distinct, substantiated coding-assistant compromise and repository-propagation incident already tracked under the same campaign.",
-    "title": "Hijacked coding assistant spread worm across about 100 repositories",
-    "incident_id": "2dcbb4b94e0ef75b"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Plugin auto-updates open door to silent AI agent takeover"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "50f949ad53568b468de1f06609bfe1d6463d36d6910a53bdc1ccb8005e952b57",
   "item": {
    "id": "2dcbb4b94e0ef75b",
    "title": "In Other News: Ransomware Developer Sentenced, Plugin4Shell AI Attack, Critical SAP Flaw",
@@ -10938,19 +10844,19 @@
  "https://www.securityweek.com/microsoft-patches-18-vulnerabilities-in-ai-cloud-products/": {
   "title": "Microsoft Patches 18 Vulnerabilities in AI, Cloud Products",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The report concerns patched vulnerabilities and explicitly states that none were flagged as exploited; it does not document an actual compromise or consequential cyber incident.",
+  "reason": "This reports vulnerabilities and patches without evidence of an actual exploit or compromise.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The report concerns patched vulnerabilities and explicitly states that none were flagged as exploited; it does not document an actual compromise or consequential cyber incident.",
-    "title": "Microsoft patched unexploited AI and cloud vulnerabilities"
+    "reason": "This reports vulnerabilities and patches without evidence of an actual exploit or compromise.",
+    "title": "Microsoft Patches 18 Vulnerabilities in AI, Cloud Products"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "2742dd91911283cf793a8918f3b7201187fe2e713a048894eafe96a53b8f416e",
   "item": {
    "id": "5fe3a7ee4001d652",
    "title": "Microsoft Patches 18 Vulnerabilities in AI, Cloud Products",
@@ -10987,19 +10893,19 @@
  "https://www.securityweek.com/nightmarestresser-ddos-service-disrupted-in-international-operation/": {
   "title": "NightmareStresser DDoS Service Disrupted in International Operation",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "Legal/enforcement takedown and historical activity only; no distinct substantive cyber incident against an actual victim is newly reported.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "Legal/enforcement takedown and historical activity only; no distinct substantive cyber incident against an actual victim is newly reported.",
-    "title": "NightmareStresser domains seized in international operation"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "NightmareStresser DDoS Service Disrupted in International Operation"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "23ddfa9329d3debe96238ca985b2bce1ec5683e7a2a0766b37697bf32fb020d7",
   "item": {
    "id": "50efb109edd229ca",
    "title": "NightmareStresser DDoS Service Disrupted in International Operation",
@@ -11012,19 +10918,19 @@
  "https://www.securityweek.com/tigerbyte-cyber-emerges-from-stealth-with-3-million-in-funding/": {
   "title": "TigerByte Cyber Emerges From Stealth With $3 Million in Funding",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "No actual cyber incident, unauthorized access, victim, or consequence is reported; the article is a funding and product announcement.",
+  "reason": "Article discusses funding and company establishment without any documented cyber incidents or compromises.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "No actual cyber incident, unauthorized access, victim, or consequence is reported; the article is a funding and product announcement.",
-    "title": "TigerByte Cyber announces funding and security products"
+    "reason": "Article discusses funding and company establishment without any documented cyber incidents or compromises.",
+    "title": "TigerByte Cyber Secures Funding for Cybersecurity Solutions"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "fc9df348cde2b25b44ebe166ce92e5470bba0bc7c7e04559ef010447fd9edeb6",
   "item": {
    "id": "bc2eef235a447b3e",
    "title": "TigerByte Cyber Emerges From Stealth With $3 Million in Funding",
@@ -11037,19 +10943,19 @@
  "https://www.hipaajournal.com/cybersecurity-awareness-month-2026-critical-infrastructure-urged-to-adopt-cybersecurity-3rs/": {
   "title": "Cybersecurity Awareness Month 2026: Critical Infrastructure Urged to Adopt Cybersecurity 3Rs",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "exclude",
-  "reason": "The source provides cybersecurity recommendations and threat-landscape commentary but does not substantiate an actual cyber incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "exclude",
-    "reason": "The source provides cybersecurity recommendations and threat-landscape commentary but does not substantiate an actual cyber incident.",
-    "title": "Cybersecurity Awareness Month critical-infrastructure guidance"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "HIPAA Journal reports critical infrastructure cybersecurity awareness"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "be4881a62b75963644eb51a4b727664b24c7c6a58f4af811981b757fabb84d9d",
   "item": {
    "id": "b4d4b63a16145bab",
    "title": "Cybersecurity Awareness Month 2026: Critical Infrastructure Urged to Adopt Cybersecurity 3Rs",
@@ -11057,37 +10963,25 @@
    "date": "2026-09-21",
    "source": "HIPAA Journal",
    "published_at": "2026-09-21T09:18:51+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/united-anguage-group-desert-pulmonary-sleep-consultants-breach/": {
   "title": "Data Breach at Translation Vendor Affects UnitedHealthcare Plan Members",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed vendor-network compromise exposed sensitive health, identity, and financial records; this is already tracked as the same United Language Group incident.; Confirmed unauthorized copying and disclosure of healthcare records by a former physician; this is already tracked as the same Desert Pulmonary incident.; Confirmed compromise of a healthcare provider’s remote-access infrastructure with potential access to sensitive patient and identity records; this is already tracked as the same Azle Cube Smiles incident.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed vendor-network compromise exposed sensitive health, identity, and financial records; this is already tracked as the same United Language Group incident.",
-    "title": "United Language Group breach exposed UnitedHealthcare member data",
-    "incident_id": "bd8672e58f327d32"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed unauthorized copying and disclosure of healthcare records by a former physician; this is already tracked as the same Desert Pulmonary incident.",
-    "title": "Former Desert Pulmonary physician copied patient data",
-    "incident_id": "ae583990465daf24"
-   },
-   {
-    "status": "include",
-    "reason": "Confirmed compromise of a healthcare provider’s remote-access infrastructure with potential access to sensitive patient and identity records; this is already tracked as the same Azle Cube Smiles incident.",
-    "title": "Azle Cube Smiles cyberattack exposed patient information",
-    "incident_id": "f81d2fcd91acfcbd"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "United Language Group breach affects healthcare data"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "f74bbc47a9290daebc909ca1aa089de267ddab6726e81827976e388940b1b248",
   "item": {
    "id": "bd8672e58f327d32",
    "title": "Data Breach at Translation Vendor Affects UnitedHealthcare Plan Members",
@@ -11095,24 +10989,25 @@
    "date": "2026-09-21",
    "source": "HIPAA Journal",
    "published_at": "2026-09-21T15:52:02+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.securityweek.com/ciso-conversations-noopur-davis-the-accidental-global-ciso-at-comcast/": {
   "title": "CISO Conversations: Noopur Davis – The Accidental Global CISO at Comcast",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source is an interview and career profile, not a report of an actual cyber incident.",
+  "reason": "Content is focused on CISO's career and insights, not on a specific cyber incident.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source is an interview and career profile, not a report of an actual cyber incident.",
-    "title": "SecurityWeek profiles Comcast Global CISO Noopur Davis"
+    "reason": "Content is focused on CISO's career and insights, not on a specific cyber incident.",
+    "title": "Comcast's Global CISO Discusses Career Path and Cybersecurity Leadership"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "55fbb5eb3d6773a063d479be4c14aa3d7417baa5489ae7ec186e51441d2b943a",
   "item": {
    "id": "355d59b30df9e497",
    "title": "CISO Conversations: Noopur Davis – The Accidental Global CISO at Comcast",
@@ -11125,20 +11020,19 @@
  "https://www.securityweek.com/colorado-water-utilities-hit-by-cyberattacks-targeting-ot-systems/": {
   "title": "Colorado Water Utilities Hit by Cyberattacks Targeting OT Systems",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "Confirmed unauthorized access to and manipulation of operational systems at two water utilities constitutes a meaningful critical-network intrusion, despite no documented interruption of water service.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Confirmed unauthorized access to and manipulation of operational systems at two water utilities constitutes a meaningful critical-network intrusion, despite no documented interruption of water service.",
-    "title": "Colorado water utilities’ OT systems accessed and altered",
-    "incident_id": "5fddd99af96160e5"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Colorado water utilities' OT systems accessed and settings altered"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "986db96e307f3f1f61f9736ff963704fe576a5c82426207d05cf46b81bbff58c",
   "item": {
    "id": "5fddd99af96160e5",
    "title": "Colorado Water Utilities Hit by Cyberattacks Targeting OT Systems",
@@ -11151,20 +11045,19 @@
  "https://www.securityweek.com/crowdsec-confirms-source-code-stolen-in-supply-chain-attack/": {
   "title": "CrowdSec Confirms Source Code Stolen in Supply Chain Attack",
   "source": "SecurityWeek",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "include",
-  "reason": "CrowdSec confirmed a real downstream compromise and theft of proprietary source code caused by a malicious TanStack package; this is a substantive incident within the already tracked TeamPCP supply-chain campaign.",
+  "status": "defer",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "CrowdSec confirmed a real downstream compromise and theft of proprietary source code caused by a malicious TanStack package; this is a substantive incident within the already tracked TeamPCP supply-chain campaign.",
-    "title": "CrowdSec source code stolen through TanStack supply-chain attack",
-    "incident_id": "dd84bc135c587941"
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "CrowdSec source code stolen in supply chain attack"
    }
   ],
   "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_hash": "3779ce49b3ce2640ffcd1030252fc145369894bf97270270d8a34a231a53dbd3",
   "item": {
    "id": "d4626fea5def7c62",
    "title": "CrowdSec Confirms Source Code Stolen in Supply Chain Attack",
@@ -18478,7 +18371,7 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-11-25T02:50:03+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence does not establish a qualifying real-world outcome.",
@@ -18486,7 +18379,7 @@
    {
     "status": "defer",
     "reason": "Direct evidence does not establish a qualifying real-world outcome.",
-    "title": "AI agent conducts cloud breach impacting multiple organizations"
+    "title": "AI agent breach led to extensive multi-cloud intrusion"
    }
   ],
   "evidence": "article",
@@ -18962,7 +18855,7 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-11-25T02:50:03+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence does not establish a qualifying real-world outcome.",
@@ -18970,7 +18863,7 @@
    {
     "status": "defer",
     "reason": "Direct evidence does not establish a qualifying real-world outcome.",
-    "title": "Threat Actors Abuse GCP Accounts for Unauthorized LLM Costs"
+    "title": "LLMjacking Incidents Abuse Google Cloud Billing Accounts"
    }
   ],
   "evidence": "article",
@@ -19767,7 +19660,7 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-11-25T02:50:03+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence does not establish a qualifying real-world outcome.",
@@ -19792,7 +19685,7 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-11-25T02:50:03+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence does not establish a qualifying real-world outcome.",
@@ -19800,7 +19693,7 @@
    {
     "status": "defer",
     "reason": "Direct evidence does not establish a qualifying real-world outcome.",
-    "title": "PHP2Shell vulnerabilities expose 70% of the web to RCE"
+    "title": "Malicious LiteLLM Package Uploaded to PyPI and Docker"
    }
   ],
   "evidence": "article",
@@ -24574,15 +24467,15 @@
  "https://www.wiz.io/blog/the-rise-of-agentic-attacks": {
   "title": "The Rise of Agentic Attacks: What They Look Like, and Where They're Headed",
   "source": "Wiz Research",
-  "checked": "2026-11-25T02:50:03+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Incident shows confirmed unauthorized access through AI-driven tools, impacting a critical sector.; Direct evidence does not establish a qualifying real-world outcome.",
+  "reason": "Hermes AI agent's activities resulted in confirmed unauthorized access to multiple systems within a critical government institution.; Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
     "status": "include",
-    "reason": "Incident shows confirmed unauthorized access through AI-driven tools, impacting a critical sector.",
-    "title": "Hermes AI agent compromised Thailand Ministry systems",
+    "reason": "Hermes AI agent's activities resulted in confirmed unauthorized access to multiple systems within a critical government institution.",
+    "title": "Hermes AI agent compromised Thailand ministry systems",
     "incident_id": "3154910f0425e4ea",
     "direct_evidence": {
      "outcome": "confirmed_compromise",
@@ -26230,20 +26123,25 @@
  "https://www.wiz.io/blog/black-october-for-ai-developer-platforms": {
   "title": "“Black October” for AI Developer Platforms",
   "source": "Wiz Research",
-  "checked": "2026-11-25T02:50:03+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.",
+  "reason": "Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.; Direct evidence does not establish a qualifying real-world outcome.",
   "decisions": [
    {
     "status": "defer",
     "reason": "Direct evidence does not establish a qualifying real-world outcome.",
-    "title": "Chainstack reports security incident affecting customer data"
+    "title": "Fireworks AI breach exposes development machines through cloud provider"
    },
    {
     "status": "defer",
     "reason": "Direct evidence does not establish a qualifying real-world outcome.",
-    "title": "Fireworks AI breach disclosed affecting development machines"
+    "title": "Chainstack breach exposes customer data and credentials"
+   },
+   {
+    "status": "defer",
+    "reason": "Direct evidence does not establish a qualifying real-world outcome.",
+    "title": "Kernel.sh reports incident affecting AI platform"
    }
   ],
   "evidence": "article",
@@ -31303,10 +31201,29 @@
  },
  "https://www.hipaajournal.com/cost-non-compliance-hipaa/": {
   "title": "The Cost of Non-Compliance with HIPAA",
-  "checked": "2026-11-25T02:50:03+00:00",
+  "source": "HIPAA Journal",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
-  "status": "error",
-  "reason": "APITimeoutError"
+  "status": "exclude",
+  "reason": "The article does not present a specific incident of cyber compromise.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The article does not present a specific incident of cyber compromise.",
+    "title": "The Cost of Non-Compliance with HIPAA"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "649bda1721d347e303304c9a9079ffcb18be2f92d8a49ad11987cc5dd52e02aa",
+  "item": {
+   "id": "35f1388ec4581601",
+   "title": "The Cost of Non-Compliance with HIPAA",
+   "url": "https://www.hipaajournal.com/cost-non-compliance-hipaa/",
+   "date": "2026-10-01",
+   "source": "HIPAA Journal",
+   "published_at": "2026-10-01T11:32:33+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.securityweek.com/revolve-puts-data-breach-victim-count-at-1-5-million/": {
   "title": "Revolve Puts Data Breach Victim Count at 1.5 Million",
@@ -34763,19 +34680,19 @@
  "https://www.hipaajournal.com/is-microsoft-forms-hipaa-compliant/": {
   "title": "Is Microsoft Forms HIPAA Compliant?",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source describes HIPAA compliance and a form-footer limitation, with no evidence of unauthorized activity or meaningful cyber consequences.",
+  "reason": "Does not describe a cyber incident or compromise; focuses on compliance issues.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source describes HIPAA compliance and a form-footer limitation, with no evidence of unauthorized activity or meaningful cyber consequences.",
-    "title": "Microsoft Forms footer issue may deter PHI collection"
+    "reason": "Does not describe a cyber incident or compromise; focuses on compliance issues.",
+    "title": "Is Microsoft Forms HIPAA Compliant?"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "1c63505309e8854288de81401d7936e38ac319a0dc824b10c529781f65249212",
   "item": {
    "id": "cdb70099e913ff69",
    "title": "Is Microsoft Forms HIPAA Compliant?",
@@ -34783,24 +34700,25 @@
    "date": "2026-09-16",
    "source": "HIPAA Journal",
    "published_at": "2026-09-16T14:24:58+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/google-calendar-hipaa-compliant/": {
   "title": "Is Google Calendar HIPAA Compliant?",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source is an informational HIPAA-compliance article, not a report of an actual cyber incident.",
+  "reason": "Report does not describe a cyber incident or compromise.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source is an informational HIPAA-compliance article, not a report of an actual cyber incident.",
-    "title": "Google Calendar HIPAA compliance guidance"
+    "reason": "Report does not describe a cyber incident or compromise.",
+    "title": "Is Google Calendar HIPAA Compliant?"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "088e806caa950e944841d2cc297defd42e3734f9674efcf4904efbd3d69587a0",
   "item": {
    "id": "32b827280d9bec7b",
    "title": "Is Google Calendar HIPAA Compliant?",
@@ -34808,24 +34726,25 @@
    "date": "2026-09-15",
    "source": "HIPAA Journal",
    "published_at": "2026-09-15T12:53:05+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/are-phone-calls-hipaa-compliant/": {
   "title": "Are Phone Calls HIPAA Compliant?",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source discusses HIPAA rules and best practices, not a substantive cyber incident.",
+  "reason": "No evidence of a cyber incident; this is an informational article.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source discusses HIPAA rules and best practices, not a substantive cyber incident.",
-    "title": "HIPAA telephone-compliance guidance"
+    "reason": "No evidence of a cyber incident; this is an informational article.",
+    "title": "Article on HIPAA Compliance for Phone Calls"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "9409e080e78733b143edcaa0cefad7c3f9b25760860e338b94686497541790da",
   "item": {
    "id": "a5f55ae453956fae",
    "title": "Are Phone Calls HIPAA Compliant?",
@@ -34833,24 +34752,25 @@
    "date": "2026-09-14",
    "source": "HIPAA Journal",
    "published_at": "2026-09-14T12:00:59+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/is-chatgpt-hipaa-compliant/": {
   "title": "Is ChatGPT HIPAA Compliant?",
   "source": "HIPAA Journal",
-  "checked": "2026-11-19T07:33:31+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "exclude",
-  "reason": "The source provides general HIPAA and ChatGPT compliance analysis without documenting an actual cyber incident.",
+  "reason": "The content discusses compliance aspects rather than a specific cyber incident or unauthorized access.",
   "decisions": [
    {
     "status": "exclude",
-    "reason": "The source provides general HIPAA and ChatGPT compliance analysis without documenting an actual cyber incident.",
-    "title": "HIPAA Journal explains ChatGPT compliance requirements"
+    "reason": "The content discusses compliance aspects rather than a specific cyber incident or unauthorized access.",
+    "title": "OpenAI ChatGPT services not HIPAA compliant"
    }
   ],
-  "evidence": "article",
-  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence": "summary",
+  "summary_hash": "b300974f4b5fd7a36562a67e3acab4e69aeb5e22c54df02fa7b4683f1cb54d4e",
   "item": {
    "id": "00c4722fbd29843b",
    "title": "Is ChatGPT HIPAA Compliant?",
@@ -34858,7 +34778,8 @@
    "date": "2026-09-13",
    "source": "HIPAA Journal",
    "published_at": "2026-09-13T15:23:31+00:00"
-  }
+  },
+  "retrieval_warning": "HTTPError"
  },
  "https://www.hipaajournal.com/microsoft-teams-hipaa-compliant/": {
   "title": "Is Microsoft Teams HIPAA Compliant?",
@@ -39707,7 +39628,7 @@
  "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi": {
   "title": "Microsoft agent-framework Compromised: Credential Stealer Targets Azure and CI Pipelines",
   "source": "Wiz Research",
-  "checked": "2026-11-25T02:50:03+00:00",
+  "checked": "2026-11-25T04:40:13+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence does not establish a qualifying real-world outcome.",
@@ -39715,7 +39636,7 @@
    {
     "status": "defer",
     "reason": "Direct evidence does not establish a qualifying real-world outcome.",
-    "title": "Malicious Microsoft Agent Framework PyPI versions published"
+    "title": "Malicious Microsoft PyPI releases stole cloud credentials"
    }
   ],
   "evidence": "article",
@@ -44818,5 +44739,31 @@
    "source": "SecurityWeek",
    "published_at": "2026-11-24T22:41:58+00:00"
   }
+ },
+ "https://www.darkreading.com/cybersecurity-operations/cyber-insurers-see-new-ai-divide": {
+  "title": "Cyber Insurers See New Divide: AI Defense 'Haves' & 'Have Nots'",
+  "source": "Dark Reading",
+  "checked": "2026-11-25T04:40:13+00:00",
+  "policy": "meaningful-v2",
+  "status": "exclude",
+  "reason": "The article does not report any actual cyber incidents or compromises, only a discussion about insurance models.",
+  "decisions": [
+   {
+    "status": "exclude",
+    "reason": "The article does not report any actual cyber incidents or compromises, only a discussion about insurance models.",
+    "title": "Cyber Insurers See New Divide: AI Defense 'Haves' & 'Have Nots'"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "8b3f9cef2510da6dd70273ddc4055d11133958d0bc06ee6674da6ec33475b608",
+  "item": {
+   "id": "b6c9f46a411dcaa2",
+   "title": "Cyber Insurers See New Divide: AI Defense 'Haves' & 'Have Nots'",
+   "url": "https://www.darkreading.com/cybersecurity-operations/cyber-insurers-see-new-ai-divide",
+   "date": "2026-11-25",
+   "source": "Dark Reading",
+   "published_at": "2026-11-25T15:00:00+00:00"
+  },
+  "retrieval_warning": "HTTPError"
  }
 }
