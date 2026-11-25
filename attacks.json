@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T22:20:40+00:00",
+ "updated": "2026-11-25T23:36:34+00:00",
  "incidents": [
   {
    "title": "1Password customer data stolen after employee GitHub account breach",
@@ -41,6 +41,49 @@
     },
     "source_url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
     "assessed_at": "2026-11-25T22:20:40+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Todoist confirms theft of approximately six percent of customers' details",
+   "date": "2026-11-23",
+   "category": "major_cyber",
+   "victim": "Todoist",
+   "attacker": "Not reported",
+   "what": "A hacker gained access to its production systems and stole customer data, including email IDs, password hashes, and account creation dates.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The attacker used stolen credentials to access the company’s version control system and source code.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The incident affects around 6% of Todoist's users, indicating a substantial data breach that exposes customer credentials and tokens.",
+   "id": "012170b4116a892b",
+   "source_name": "TechCrunch",
+   "source_url": "https://techcrunch.com/2026/11/25/todoist-confirms-6-of-customers-details-were-stolen-in-data-breach/",
+   "added": "2026-11-25T23:36:34+00:00",
+   "reported_date": "2026-11-25",
+   "last_reported": "2026-11-25",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "e6b1e0b34217614c7977c6d54129a60d65c59edc4f5b2b529eee94837079385b",
+    "excerpt": "a hacker gained access to its production systems and stole customer data, including email IDs, password hashes, and account creation"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The hacker accessed and stole sensitive details from customer accounts, including email addresses and API tokens.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://techcrunch.com/2026/11/25/todoist-confirms-6-of-customers-details-were-stolen-in-data-breach/",
+    "assessed_at": "2026-11-25T23:36:34+00:00",
     "method": "reported-impact-v1"
    }
   },
@@ -717,6 +760,49 @@
    ]
   },
   {
+   "title": "Todoist confirms unauthorized production access and customer data theft",
+   "date": "2026-11-23",
+   "category": "major_cyber",
+   "victim": "Todoist",
+   "attacker": "Not reported",
+   "what": "An attacker gained unauthorized access to Todoist’s production systems and retrieved some customer information.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Credentials associated with their version control system were exploited to modify workflows and obtain sensitive user information.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The breach affected approximately 6% of Todoist users and included sensitive account information like email addresses and password hashes stored using older algorithms.",
+   "id": "1341e54c29c2482a",
+   "source_name": "Todoist official disclosure",
+   "source_url": "https://www.todoist.com/help/todoist/get-started/security-incident-in-november-2026-cG0EIACNU",
+   "added": "2026-11-25T23:36:34+00:00",
+   "reported_date": "2026-11-24",
+   "last_reported": "2026-11-24",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "2d247deff75e2587b24e30df69b7aa1bca2aef07e399180742fdba63e9c79c9a",
+    "excerpt": "On November 23, 2026, an attacker gained unauthorized access to Todoist’s production systems and retrieved some customer information."
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The attacker accessed and downloaded sensitive user information, including email addresses and password hashes.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "none"
+    },
+    "source_url": "https://www.todoist.com/help/todoist/get-started/security-incident-in-november-2026-cG0EIACNU",
+    "assessed_at": "2026-11-25T23:36:34+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
    "title": "GL.iNet remote management compromise",
    "date": "2026-11-23",
    "category": "major_cyber",
@@ -1090,44 +1176,6 @@
      "financial": "unknown"
     },
     "source_url": "https://www.securityweek.com/ai-inference-providers-failed-to-detect-hacking-and-prompt-theft-says-dragos/",
-    "assessed_at": "2026-11-24T11:26:46+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
-   "title": "Cold Relic Exploits Cloud Breaches to Target Organizations",
-   "date": "2026-11-23",
-   "category": "major_cyber",
-   "victim": "Multiple organizations",
-   "attacker": "Cold Relic",
-   "what": "Cold Relic gained control of a cloud administrator account and used it to impersonate employees at second organizations.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "The attackers harvested internal communications and used social engineering to target further victims.",
-   "where": "No fixed location",
-   "major_impact": "supply_chain_compromise",
-   "significance": "This demonstrates the risk of cloud breaches being leveraged to conduct further attacks against trusted entities, increasing the threat landscape.",
-   "id": "5b9b8d2fc48f9597",
-   "source_name": "The Hacker News",
-   "source_url": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
-   "added": "2026-11-24T11:26:46+00:00",
-   "reported_date": "2026-11-23",
-   "last_reported": "2026-11-23",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "The campaign involved extracting sensitive records to facilitate identity theft and further social engineering attacks.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
     "assessed_at": "2026-11-24T11:26:46+00:00",
     "method": "reported-impact-v1"
    }
@@ -2823,6 +2871,10 @@
     {
      "name": "SecurityWeek",
      "url": "https://www.securityweek.com/russian-apt-poses-as-employee-of-hacked-firm-to-breach-another-us-organization/"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html"
     }
    ],
    "updates": [
@@ -5283,54 +5335,6 @@
    ]
   },
   {
-   "title": "BlueNoroff's FaceStealer Campaign Disrupted",
-   "date": "2026-11-14",
-   "category": "major_cyber",
-   "victim": "Multiple targets in cryptocurrency and open-source sectors",
-   "attacker": "Unattributed; linked to BlueNoroff",
-   "what": "Social engineering campaign using deepfakes to steal over $400 million in cryptocurrency through malware",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Attacks targeted tech workers, exploiting social dynamics through fake meetings and recorded footage of previous victims.",
-   "where": "58 countries, focused on tech workers",
-   "major_impact": "large_scale_data_theft",
-   "significance": "The campaign significantly impacted the cryptocurrency sector, indicating vulnerabilities in social engineering among tech professionals and the effective use of video manipulation tactics.",
-   "id": "6f6fef3ed8e124c6",
-   "source_name": "BleepingComputer",
-   "source_url": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
-   "added": "2026-11-24T13:16:56+00:00",
-   "reported_date": "2026-11-14",
-   "last_reported": "2026-11-14",
-   "evidence_status": "confirmed",
-   "lat": 43.2258491,
-   "lon": -89.3353662,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "The campaign resulted in substantial cryptocurrency theft and unauthorized access to personal and professional data.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
-    "assessed_at": "2026-11-24T13:16:56+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 43.2258491,
-     "lon": -89.3353662,
-     "label": "58 countries",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/"
-    }
-   ]
-  },
-  {
    "title": "SilentAir hijacked mobile-operator nodes to intercept calls and SMS",
    "date": "2026-11-13",
    "category": "major_cyber",
@@ -6431,6 +6435,10 @@
     {
      "name": "AI agent attack tracker",
      "url": "https://www.ic3.gov/CSA/2026/261112.pdf"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/"
     }
    ],
    "updates": [
@@ -48322,7 +48330,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-25T22:20:40+00:00",
+ "last_added": "2026-11-25T23:36:34+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }
