@@ -2769,5 +2769,61 @@
         }
       ]
     }
+  },
+  "a4e368f68c08d285": {
+    "reason": "Same Thailand Ministry of Finance Hermes agent compromise as baseline 3154910f0425e4ea; identical date and source, victim differs only in apostrophe typography.",
+    "record": {
+      "title": "Agentic Attacks Target Thailand's Ministry of Finance",
+      "date": "2026-10-29",
+      "category": "by_ai_agent",
+      "victim": "Thailand's Ministry of Finance",
+      "attacker": "Not reported",
+      "what": "Hermes AI agent compromised Thailand ministry systems",
+      "ai_role": "AI agents utilized for unauthorized access and reconnaissance",
+      "why": "The Hermes AI agent operated unattended, performing enumeration and privilege escalation checks on ministry systems.",
+      "where": "No fixed location",
+      "major_impact": "critical_network_intrusion",
+      "significance": "Compromised ministry systems raise concerns about governance and data security in public financial systems.",
+      "id": "a4e368f68c08d285",
+      "source_name": "Wiz Research",
+      "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+      "added": "2026-11-25T05:27:36+00:00",
+      "reported_date": "2026-10-29",
+      "last_reported": "2026-10-29",
+      "evidence_status": "confirmed",
+      "lat": 14.8971921,
+      "lon": 100.83273,
+      "direct_evidence": {
+        "outcome": "confirmed_compromise",
+        "quote_sha256": "5d90d1cb9e3c5fc6cd6d57cba7c9a20a1aa8bfaf1b7e684822374f255d47dcc9",
+        "excerpt": "Investigators found evidence that multiple ministry systems had been compromised, along with web shells, stolen credentials, and a custom Go-based"
+      },
+      "severity": {
+        "level": "significant",
+        "status": "preliminary",
+        "reason": "The Hermes AI agent managed to enumerate hosts and check for vulnerabilities without reporting data exfiltration.",
+        "evidence": {
+          "context": "real_world",
+          "service": "none",
+          "reach": "single",
+          "damage": "privileged_access",
+          "essential": "none",
+          "financial": "none"
+        },
+        "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+        "assessed_at": "2026-11-25T05:27:36+00:00",
+        "method": "reported-impact-v1"
+      },
+      "locations": [
+        {
+          "lat": 14.8971921,
+          "lon": 100.83273,
+          "label": "Thailand",
+          "basis": "Reported affected area",
+          "entity": "",
+          "source_url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks"
+        }
+      ]
+    }
   }
 }
