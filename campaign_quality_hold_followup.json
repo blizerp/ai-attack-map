@@ -2871,5 +2871,97 @@
         "method": "reported-impact-v1"
       }
     }
+  },
+  "495b29314c2eb2eb": {
+    "reason": "Same KEPCO breach of two systems affecting approximately 1.5 million people as baseline a50dfe86319a6af0; source and reporting date differ, not the incident.",
+    "record": {
+      "title": "KEPCO data breach affects 1.5 million customers",
+      "date": "2026-11-20",
+      "category": "major_cyber",
+      "victim": "Korea Electric Power Corporation (KEPCO)",
+      "attacker": "Not reported",
+      "what": "Data breach impacting KEPCO's customer service portal and SRM system",
+      "ai_role": "AI involvement not confirmed in the reporting.",
+      "why": "Hackers gained access and stole extensive personal information from 1.5 million individuals.",
+      "where": "South Korea",
+      "major_impact": "large_scale_data_theft",
+      "significance": "The breach exposed sensitive information of over 1.5 million individuals, impacting trust in utility security.",
+      "id": "495b29314c2eb2eb",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/1-5-million-impacted-by-data-breach-at-south-korean-electric-company-kepco/",
+      "added": "2026-11-24T13:16:56+00:00",
+      "reported_date": "2026-11-24",
+      "last_reported": "2026-11-24",
+      "evidence_status": "confirmed",
+      "lat": 36.638392,
+      "lon": 127.6961188,
+      "severity": {
+        "level": "severe",
+        "status": "preliminary",
+        "reason": "Sensitive personal data, including banking and identification details, was stolen from the systems.",
+        "evidence": {
+          "context": "real_world",
+          "service": "none",
+          "reach": "multiple",
+          "damage": "sensitive_data",
+          "essential": "none",
+          "financial": "unknown"
+        },
+        "source_url": "https://www.securityweek.com/1-5-million-impacted-by-data-breach-at-south-korean-electric-company-kepco/",
+        "assessed_at": "2026-11-24T13:16:56+00:00",
+        "method": "reported-impact-v1"
+      },
+      "locations": [
+        {
+          "lat": 36.638392,
+          "lon": 127.6961188,
+          "label": "South Korea",
+          "basis": "Reported affected area",
+          "entity": "",
+          "source_url": "https://www.securityweek.com/1-5-million-impacted-by-data-breach-at-south-korean-electric-company-kepco/"
+        }
+      ]
+    }
+  },
+  "df9a1b4931dc938e": {
+    "reason": "Same Together AI exposed repository credential and June-July prompt sample theft as baseline bebedc9daae1e677; primary disclosure is additional evidence, not a separate incident.",
+    "record": {
+      "title": "Together AI prompt samples exposed after credential leak",
+      "date": "2026-06-24",
+      "category": "on_ai_system",
+      "victim": "Together AI customers using affected hosted models",
+      "attacker": "Not reported",
+      "what": "An unauthorized party downloaded stored prompt samples from a private repository due to an exposed credential.",
+      "ai_role": "Not reported",
+      "why": "A coding agent committed a credential that allowed access to prompt samples stored in a private repository.",
+      "where": "No fixed location",
+      "major_impact": "none",
+      "significance": "The incident highlights vulnerabilities in credential management within AI development workflows, which can lead to unauthorized access to sensitive data.",
+      "id": "df9a1b4931dc938e",
+      "source_name": "AI agent attack tracker",
+      "source_url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
+      "added": "2026-11-24T11:26:46+00:00",
+      "reported_date": "2026-11-21",
+      "last_reported": "2026-11-21",
+      "evidence_status": "confirmed",
+      "lat": null,
+      "lon": null,
+      "severity": {
+        "level": "limited",
+        "status": "preliminary",
+        "reason": "Unauthorized access to stored data occurred, but no sensitive data or credentials were confirmed as leaked.",
+        "evidence": {
+          "context": "real_world",
+          "service": "none",
+          "reach": "multiple",
+          "damage": "none",
+          "essential": "none",
+          "financial": "none"
+        },
+        "source_url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
+        "assessed_at": "2026-11-24T11:26:46+00:00",
+        "method": "reported-impact-v1"
+      }
+    }
   }
 }

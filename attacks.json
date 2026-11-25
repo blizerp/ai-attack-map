@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T10:53:29+00:00",
+ "updated": "2026-11-25T12:29:51+00:00",
  "incidents": [
   {
    "title": "LaLiga fan-services platform breached and personal data stolen",
@@ -302,54 +302,6 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.hipaajournal.com/colla-health-bausch-health-opn-healthcare-data-breaches/"
-    }
-   ]
-  },
-  {
-   "title": "KEPCO data breach affects 1.5 million customers",
-   "date": "2026-11-20",
-   "category": "major_cyber",
-   "victim": "Korea Electric Power Corporation (KEPCO)",
-   "attacker": "Not reported",
-   "what": "Data breach impacting KEPCO's customer service portal and SRM system",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Hackers gained access and stole extensive personal information from 1.5 million individuals.",
-   "where": "South Korea",
-   "major_impact": "large_scale_data_theft",
-   "significance": "The breach exposed sensitive information of over 1.5 million individuals, impacting trust in utility security.",
-   "id": "495b29314c2eb2eb",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/1-5-million-impacted-by-data-breach-at-south-korean-electric-company-kepco/",
-   "added": "2026-11-24T13:16:56+00:00",
-   "reported_date": "2026-11-24",
-   "last_reported": "2026-11-24",
-   "evidence_status": "confirmed",
-   "lat": 36.638392,
-   "lon": 127.6961188,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Sensitive personal data, including banking and identification details, was stolen from the systems.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/1-5-million-impacted-by-data-breach-at-south-korean-electric-company-kepco/",
-    "assessed_at": "2026-11-24T13:16:56+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 36.638392,
-     "lon": 127.6961188,
-     "label": "South Korea",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://www.securityweek.com/1-5-million-impacted-by-data-breach-at-south-korean-electric-company-kepco/"
     }
    ]
   },
@@ -872,6 +824,12 @@
      "entity": "",
      "source_url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/"
     }
+   ],
+   "more_sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/1-5-million-impacted-by-data-breach-at-south-korean-electric-company-kepco/"
+    }
    ]
   },
   {
@@ -956,7 +914,13 @@
     "source_url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
     "assessed_at": "2026-11-24T11:17:42+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "AI agent attack tracker",
+     "url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026"
+    }
+   ]
   },
   {
    "title": "Agentic offensive frameworks attack multiple organizations",
@@ -1359,44 +1323,6 @@
      "source": "BleepingComputer"
     }
    ]
-  },
-  {
-   "title": "Together AI prompt samples exposed after credential leak",
-   "date": "2026-06-24",
-   "category": "on_ai_system",
-   "victim": "Together AI customers using affected hosted models",
-   "attacker": "Not reported",
-   "what": "An unauthorized party downloaded stored prompt samples from a private repository due to an exposed credential.",
-   "ai_role": "Not reported",
-   "why": "A coding agent committed a credential that allowed access to prompt samples stored in a private repository.",
-   "where": "No fixed location",
-   "major_impact": "none",
-   "significance": "The incident highlights vulnerabilities in credential management within AI development workflows, which can lead to unauthorized access to sensitive data.",
-   "id": "df9a1b4931dc938e",
-   "source_name": "AI agent attack tracker",
-   "source_url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
-   "added": "2026-11-24T11:26:46+00:00",
-   "reported_date": "2026-11-21",
-   "last_reported": "2026-11-21",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "limited",
-    "status": "preliminary",
-    "reason": "Unauthorized access to stored data occurred, but no sensitive data or credentials were confirmed as leaked.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "multiple",
-     "damage": "none",
-     "essential": "none",
-     "financial": "none"
-    },
-    "source_url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
-    "assessed_at": "2026-11-24T11:26:46+00:00",
-    "method": "reported-impact-v1"
-   }
   },
   {
    "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
@@ -19326,7 +19252,7 @@
    "updates": [
     {
      "date": "2026-10-29",
-     "what": "Hermes AI agent executed unauthorized actions leading to system compromises and credential theft.",
+     "what": "Hermes AI agent was discovered running in unattended mode, leading to the compromise of multiple ministry systems.",
      "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
      "source": "Wiz Research"
     }
