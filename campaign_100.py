@@ -6,6 +6,7 @@ from pathlib import Path
 
 # Follow-up audit of the latest batch. Preserve full records, never modify baseline.
 HOLD_REASONS = {
+    "f1d6246d982b8a56": "Cybersecurity Dive and SecurityWeek describe the same GreyNoise GT13 campaign against Check Point Security Management servers (22 organizations, November 24 reporting); canonical campaign record a2d8ddfa90774e7d retained.",
     "a4e368f68c08d285": "Same Thailand Ministry of Finance Hermes agent compromise as baseline 3154910f0425e4ea; identical date and source, victim differs only in apostrophe typography.",
     "4a10c0433fb3fb47": "Same Burger King Japan app breach, same SecurityWeek roundup, same reported event start and overlapping dates as canonical 4df14dd751c02da2; no separate compromise.",
     "b1c27b067e00ac4a": "Same October LiteLLM malicious package release as baseline e2e13fe6f7503c25; different publication/event date and victim wording do not establish a separate compromise.",
@@ -87,14 +88,14 @@ def refresh(root, initialize=False):
             archive[str(i["id"])]={"reason":HOLD_REASONS[str(i["id"])],"record":i}
         archive_path.write_text(json.dumps(archive,ensure_ascii=False,indent=2)+"\n")
         # Reconcile independently reviewed cross-source duplicates with the canonical
-        # baseline record. Preserve the held record and its evidence in the archive;
+        # retained record. Preserve the held record and its evidence in the archive;
         # attach only the alternate source, not its unverified impact assertions.
-        canonical_by_held_id = {"b1c27b067e00ac4a": "e2e13fe6f7503c25"}
+        canonical_by_held_id = {"b1c27b067e00ac4a": "e2e13fe6f7503c25", "f1d6246d982b8a56": "a2d8ddfa90774e7d"}
         by_id = {str(i.get("id")): i for i in incidents}
         for i in held:
             canonical_id = canonical_by_held_id.get(str(i.get("id")))
             canonical = by_id.get(canonical_id)
-            if canonical is not None and canonical_id in baseline and i.get("source_url"):
+            if canonical is not None and (canonical_id in baseline or canonical_id not in HOLD_REASONS) and i.get("source_url"):
                 urls = {canonical.get("source_url")} | {s.get("url") for s in canonical.get("more_sources", [])}
                 if i["source_url"] not in urls:
                     canonical.setdefault("more_sources", []).append({"name": i.get("source_name", "Additional report"), "url": i["source_url"]})
