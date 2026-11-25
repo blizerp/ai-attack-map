@@ -209,6 +209,21 @@ def merge_record(u, data, item, rec, geo, now):
         return len(a & b) / max(1, len(a | b))
     def entity(value):
         return tuple(re.findall(r"[a-z0-9]+", str(value).casefold()))
+    def title_signature(value):
+        # Narrow normalization of common reporting verb inflections only.
+        inflections = {"exposed":"expose", "exposes":"expose", "breached":"breach",
+                       "breaches":"breach", "stolen":"steal", "steals":"steal"}
+        return tuple(inflections.get(w, w) for w in entity(value))
+    def date_span(value):
+        value = str(value or "")
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}(?:\s+to\s+\d{4}-\d{2}-\d{2})?", value):
+            return None
+        dates = re.findall(r"\d{4}-\d{2}-\d{2}", value)
+        try:
+            dates = [datetime.fromisoformat(d).date() for d in dates]
+        except ValueError:
+            return None
+        return min(dates), max(dates)
     def strong_match(i):
         title_sim = similarity(i.get('title',''), rec.get('title',''))
         victim = entity(i.get('victim',''))
@@ -227,7 +242,15 @@ def merge_record(u, data, item, rec, geo, now):
         if generic.intersection(victim) or generic.intersection(other_victim):
             return False
         if not same_victim:
-            return named_alias and same_date and title_sim >= .75
+            # A roundup can paraphrase the same entity in different ways.
+            # Require the same source, identical normalized event title, shared
+            # identifying victim tokens, and overlapping explicit event dates.
+            a, b = date_span(i.get("date")), date_span(rec.get("date"))
+            shared = set(victim) & set(other_victim) & set(title_signature(rec.get("title","")))
+            same_roundup_event = (same_source and a and b and a[0] <= b[1] and b[0] <= a[1]
+                                  and len(shared) >= 2
+                                  and title_signature(i.get("title","")) == title_signature(rec.get("title","")))
+            return bool(same_roundup_event or (named_alias and same_date and title_sim >= .75))
         return ((same_source and title_sim >= .75)
                 or (same_date and title_sim >= .8))
     strong = [i for i in data['incidents'] if strong_match(i)]

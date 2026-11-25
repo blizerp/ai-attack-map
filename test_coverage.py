@@ -132,6 +132,19 @@ class CoverageTests(unittest.TestCase):
         self.assertEqual((result,incident_id),('merged','original'))
         self.assertEqual(len(data['incidents']),1)
 
+    def test_roundup_paraphrased_victim_and_date_range_merge(self):
+        from test_selection import record
+        original={'id':'original','title':'Burger King Japan app breach exposed 11 million member records',
+                  'victim':"BK Japan, operator of Burger King's official app in Japan, and its app members",
+                  'date':'2026-10-02 to 2026-10-07','category':'major_cyber','source_url':'https://example.com/roundup'}
+        data={'incidents':[original]}
+        item={'id':'new','url':original['source_url'],'source':'Test','date':'2026-10-16'}
+        rec=record(victim='Burger King Japan',title='Burger King Japan app breach exposes 11 million member records',date='2026-10-02')
+        with patch.object(u,'geocode',return_value=None):
+            result, incident_id=c.merge_record(u,data,item,rec,{},'2026-11-24T00:00:00+00:00')
+        self.assertEqual((result,incident_id),('merged','original'))
+        self.assertEqual(len(data['incidents']),1)
+
     def test_same_date_distinct_named_victims_do_not_merge(self):
         from test_selection import record
         original={'id':'original','title':'Hospital A data breach reported','victim':'Hospital A','date':'2026-10-20','category':'major_cyber','source_url':'https://example.com/original'}

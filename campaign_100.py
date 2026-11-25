@@ -6,6 +6,7 @@ from pathlib import Path
 
 # Follow-up audit of the latest batch. Preserve full records, never modify baseline.
 HOLD_REASONS = {
+    "4a10c0433fb3fb47": "Same Burger King Japan app breach, same SecurityWeek roundup, same reported event start and overlapping dates as canonical 4df14dd751c02da2; no separate compromise.",
     "b1c27b067e00ac4a": "Same October LiteLLM malicious package release as baseline e2e13fe6f7503c25; different publication/event date and victim wording do not establish a separate compromise.",
     "e5d92145d0f8de47": "Chainstack incident overlaps baseline a7cfb57f33eb6570; stored quote supplies no distinct compromise details.",
     "8000e3bea6d7298a": "Second Fireworks incident of October 24 overlaps campaign record 9c255d81510cbc8a (downstream Notion data). Retain one underlying event pending reconciliation.",
