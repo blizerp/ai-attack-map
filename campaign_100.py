@@ -6,6 +6,11 @@ from pathlib import Path
 
 # Follow-up audit of the latest batch. Preserve full records, never modify baseline.
 HOLD_REASONS = {
+    "62043f10af8e6e72": "Malformed title and wrong victim Nebula AI; quoted Wiz evidence identifies the same November 8 NEAR AI inference-server compromise already in baseline bff6180f286a6d5b.",
+    "05da5b398dc52fb0": "SecurityWeek describes Railway's detailed follow-up on the same October breach already in baseline 7571f14ad3bb87b6; the loss estimate is an update, not a distinct event.",
+    "9c255d81510cbc8a": "Notion customer data exposure is a downstream consequence of the October 24 Fireworks breach already explicitly represented in baseline 73b37c649f3a75f2; no distinct intrusion.",
+    "f4e984ed82aa9ab1": "FBI seizure of funds from the October Binance breach is a recovery update to baseline 0608e73237d158c5, not a new attack.",
+    "ab9e2877fe9b3e26": "Same Microsoft GSocket Linux-server persistence campaign and November 12 reporting as baseline f49b8a947f4e7688; roundup identifies no separate event.",
     "495b29314c2eb2eb": "Same KEPCO breach of two systems affecting approximately 1.5 million people as baseline a50dfe86319a6af0; source and reporting date differ, not the incident.",
     "df9a1b4931dc938e": "Same Together AI exposed repository credential and June-July prompt sample theft as baseline bebedc9daae1e677; primary disclosure is additional evidence, not a separate incident.",
     "f1d6246d982b8a56": "Cybersecurity Dive and SecurityWeek describe the same GreyNoise GT13 campaign against Check Point Security Management servers (22 organizations, November 24 reporting); canonical campaign record a2d8ddfa90774e7d retained.",
@@ -92,7 +97,7 @@ def refresh(root, initialize=False):
         # Reconcile independently reviewed cross-source duplicates with the canonical
         # retained record. Preserve the held record and its evidence in the archive;
         # attach only the alternate source, not its unverified impact assertions.
-        canonical_by_held_id = {"495b29314c2eb2eb": "a50dfe86319a6af0", "df9a1b4931dc938e": "bebedc9daae1e677", "b1c27b067e00ac4a": "e2e13fe6f7503c25", "f1d6246d982b8a56": "a2d8ddfa90774e7d"}
+        canonical_by_held_id = {"62043f10af8e6e72": "bff6180f286a6d5b", "05da5b398dc52fb0": "7571f14ad3bb87b6", "9c255d81510cbc8a": "73b37c649f3a75f2", "f4e984ed82aa9ab1": "0608e73237d158c5", "ab9e2877fe9b3e26": "f49b8a947f4e7688", "495b29314c2eb2eb": "a50dfe86319a6af0", "df9a1b4931dc938e": "bebedc9daae1e677", "b1c27b067e00ac4a": "e2e13fe6f7503c25", "f1d6246d982b8a56": "a2d8ddfa90774e7d"}
         by_id = {str(i.get("id")): i for i in incidents}
         for i in held:
             canonical_id = canonical_by_held_id.get(str(i.get("id")))
