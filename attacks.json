@@ -1,6 +1,49 @@
 {
- "updated": "2026-11-25T21:28:07+00:00",
+ "updated": "2026-11-25T22:20:40+00:00",
  "incidents": [
+  {
+   "title": "1Password customer data stolen after employee GitHub account breach",
+   "date": "2026-11-19",
+   "category": "major_cyber",
+   "victim": "1Password",
+   "attacker": "Not reported",
+   "what": "An employee's GitHub account was hacked and used to deploy malicious code to the company's backend services to steal customer data.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The attacker injected malicious code into backend services that downloaded customer account records.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "The breach exposes sensitive customer data, making users potential targets for further phishing attacks and vulnerabilities.",
+   "id": "9104fdf5e5d6d875",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
+   "added": "2026-11-25T22:20:40+00:00",
+   "reported_date": "2026-11-25",
+   "last_reported": "2026-11-25",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "ced973a95324be2648e8e9bb5b20bd749052c6ab45c47c3bf9943e2fd296d315",
+    "excerpt": "1Password has disclosed a data breach after an employee's corporate GitHub account was hacked and used to deploy malicious code"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Customer names, email addresses, account IDs, and other internal metadata were stolen, potentially exposing users to phishing attempts.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
+    "assessed_at": "2026-11-25T22:20:40+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
   {
    "title": "LaLiga fan-services platform breached and personal data stolen",
    "date": "2026-11-14",
@@ -5856,6 +5899,10 @@
     {
      "name": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/fbi-says-us-seized-1-2-billion-worth-of-cryptocurrency-stolen-from-binance/"
     }
    ],
    "updates": [
@@ -6714,44 +6761,6 @@
    ]
   },
   {
-   "title": "Railway puts unauthorized spend from stolen AI keys at $740,000",
-   "date": "2026-10-01",
-   "category": "major_cyber",
-   "victim": "Railway",
-   "attacker": "Not reported",
-   "what": "A threat actor exploited a flaw in build infrastructure, stealing customer environment variables and causing unauthorized spending.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Linked-account tokens for 1,852 users were exposed and unauthorized spending on stolen keys is estimated at $740,000.",
-   "where": "No fixed location",
-   "major_impact": "major_financial_loss",
-   "significance": "Unauthorized spending linked to the exploit indicates serious financial consequences for the company.",
-   "id": "05da5b398dc52fb0",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/",
-   "added": "2026-11-24T13:16:56+00:00",
-   "reported_date": "2026-11-13",
-   "last_reported": "2026-11-13",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "The financial impact of approximately $740,000 indicates successful exploitation of security vulnerabilities.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "multiple",
-     "damage": "none",
-     "essential": "none",
-     "financial": "major"
-    },
-    "source_url": "https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/",
-    "assessed_at": "2026-11-24T13:16:56+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
    "title": "Vanderbilt tells campus to power down devices amid attack",
    "date": "2026-11-12",
    "category": "major_cyber",
@@ -6785,44 +6794,6 @@
      "financial": "unknown"
     },
     "source_url": "https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/",
-    "assessed_at": "2026-11-24T13:16:56+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
-   "title": "Stolen Cryptocurrency Seized After Binance Hack",
-   "date": "2026-11-13",
-   "category": "major_cyber",
-   "victim": "Binance",
-   "attacker": "TraderTraitor (North Korean group)",
-   "what": "$1.2 billion in stolen cryptocurrency seized by the FBI",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Total theft from Binance reported at about $6.3 billion, biggest in history.",
-   "where": "No fixed location",
-   "major_impact": "major_financial_loss",
-   "significance": "The seizure represents efforts to recover significant funds stolen in a major cyber heist, highlighting risks in cryptocurrency exchanges.",
-   "id": "f4e984ed82aa9ab1",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/fbi-says-us-seized-1-2-billion-worth-of-cryptocurrency-stolen-from-binance/",
-   "added": "2026-11-24T13:16:56+00:00",
-   "reported_date": "2026-11-13",
-   "last_reported": "2026-11-13",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Substantial losses reported due to the stolen cryptocurrency, with ongoing recovery efforts.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "multiple",
-     "damage": "limited",
-     "essential": "none",
-     "financial": "major"
-    },
-    "source_url": "https://www.securityweek.com/fbi-says-us-seized-1-2-billion-worth-of-cryptocurrency-stolen-from-binance/",
     "assessed_at": "2026-11-24T13:16:56+00:00",
     "method": "reported-impact-v1"
    }
@@ -7745,82 +7716,6 @@
    ]
   },
   {
-   "title": "Notion Customer Data Compromised in Fireworks AI Hack",
-   "date": "2026-10-24",
-   "category": "major_cyber",
-   "victim": "Notion",
-   "attacker": "Fireworks AI (unknown actors)",
-   "what": "Data breach involving customer data through unauthorized access to AI chat transcripts.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Incident caused by unauthorized workload execution through compromised credentials and third-party cloud provider.",
-   "where": "No fixed location",
-   "major_impact": "large_scale_data_theft",
-   "significance": "Customer data, including potentially sensitive information, was accessed due to a breach in a third-party AI service, raising concerns over data security practices among collaborative platforms.",
-   "id": "9c255d81510cbc8a",
-   "source_name": "SecurityWeek",
-   "source_url": "https://www.securityweek.com/notion-customer-data-compromised-in-fireworks-ai-hack/",
-   "added": "2026-11-24T15:16:52+00:00",
-   "reported_date": "2026-11-12",
-   "last_reported": "2026-11-12",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Sensitive chat transcripts accessed, where users may have inadvertently included sensitive information.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.securityweek.com/notion-customer-data-compromised-in-fireworks-ai-hack/",
-    "assessed_at": "2026-11-24T15:16:52+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
-   "title": "GSocket detects surge in access on Linux servers",
-   "date": "2026-11-12",
-   "category": "major_cyber",
-   "victim": "Multiple devices on Linux servers",
-   "attacker": "Unspecified threat actors",
-   "what": "Attackers deployed GSocket on internet-facing Linux servers to maintain access after vulnerabilities were addressed.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "GSocket relays traffic through a public network, complicating detection of the threat actor's IP address.",
-   "where": "No fixed location",
-   "major_impact": "critical_network_intrusion",
-   "significance": "Persistent threats on servers indicate severe vulnerabilities being exploited widely; such breaches lead to long-term access for attackers and potential data leakage.",
-   "id": "ab9e2877fe9b3e26",
-   "source_name": "The Hacker News",
-   "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
-   "added": "2026-11-24T15:16:52+00:00",
-   "reported_date": "2026-11-12",
-   "last_reported": "2026-11-12",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "severity": {
-    "level": "limited",
-    "status": "preliminary",
-    "reason": "Access was maintained post-vulnerability resolution, indicating a serious operational concern.",
-    "evidence": {
-     "context": "real_world",
-     "service": "limited",
-     "reach": "multiple",
-     "damage": "none",
-     "essential": "none",
-     "financial": "none"
-    },
-    "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
-    "assessed_at": "2026-11-24T15:16:52+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
    "title": "Europol seizes 235 servers from cybercrime infrastructure",
    "date": "2026-11-12",
    "category": "major_cyber",
@@ -8287,6 +8182,10 @@
     {
      "name": "SecurityWeek",
      "url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/"
     }
    ],
    "updates": [
@@ -8451,6 +8350,10 @@
     {
      "name": "BleepingComputer",
      "url": "https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/notion-customer-data-compromised-in-fireworks-ai-hack/"
     }
    ],
    "ai_source_url": "https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/",
@@ -9741,6 +9644,12 @@
      "what": "The attacker exploited a remote-code-execution flaw in SGLang and ran code on a NEAR AI inference server inside a trusted execution environment. The attacker reached a deprecated Private Chat internal system and 18 older NEAR AI agents, downloading details for about 100 users and agent chat histories, settings, and logs; two customer Cloud API keys were exposed in logs.",
      "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
      "source": "The Hacker News"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "Wiz Research",
+     "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms"
     }
    ]
   },
@@ -18800,49 +18709,6 @@
    }
   },
   {
-   "title": "As part of ",
-   "date": "2026-11-09",
-   "category": "major_cyber",
-   "victim": "Nebula AI",
-   "attacker": "Not reported",
-   "what": "AI infrastructure breach attributed to credential access",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Unauthorized access to inference server with exposed keys.",
-   "where": "No fixed location",
-   "major_impact": "critical_network_intrusion",
-   "significance": "The incident demonstrates critical vulnerabilities in AI infrastructure security, potentially impacting numerous users relying on AI services.",
-   "id": "62043f10af8e6e72",
-   "source_name": "Wiz Research",
-   "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
-   "added": "2026-11-25T21:28:07+00:00",
-   "reported_date": "2026-10-30",
-   "last_reported": "2026-10-30",
-   "evidence_status": "confirmed",
-   "lat": null,
-   "lon": null,
-   "direct_evidence": {
-    "outcome": "confirmed_compromise",
-    "quote_sha256": "daf74353c3d2fca99efc5ba8e7ce8427e304ea7c1d1374446256330dc92a2409",
-    "excerpt": "NEAR AI disclosed an incident on 11-09 (Nov 8), in which an inference server was accessed by exploiting \"a remote"
-   },
-   "severity": {
-    "level": "significant",
-    "status": "preliminary",
-    "reason": "Access was gained to critical AI infrastructure, which may have exposed sensitive data.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "single",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "unknown"
-    },
-    "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
-    "assessed_at": "2026-11-25T21:28:07+00:00",
-    "method": "reported-impact-v1"
-   }
-  },
-  {
    "title": "Volt Typhoon used Silent Train in zero-day intrusions",
    "date": "2026-10-28",
    "category": "major_cyber",
@@ -19550,7 +19416,7 @@
    "updates": [
     {
      "date": "2026-10-29",
-     "what": "Hermes AI agent operated in unattended mode, compromising ministry systems.",
+     "what": "Hermes AI agent running in unattended mode compromised ministry systems.",
      "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
      "source": "Wiz Research"
     }
@@ -48456,7 +48322,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-25T21:28:07+00:00",
+ "last_added": "2026-11-25T22:20:40+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }
