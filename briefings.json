@@ -8202,13 +8202,200 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-25-morning",
+   "date": "2026-11-25",
+   "edition": "morning",
+   "published_at": "2026-11-25T13:51:53+00:00",
+   "generated_at": "2026-11-25T13:51:53+00:00",
+   "scheduled_for": "2026-11-25T13:00:00+00:00",
+   "window_start": "2026-11-24T22:02:03+00:00",
+   "window_end": "2026-11-25T13:51:53+00:00",
+   "sector_window_start": "2026-11-24T13:51:53+00:00",
+   "sectors_enabled": false,
+   "overview": {
+    "intro": "Fresh reporting confirms a cyberattack disrupting cancer care at a Guadeloupe hospital, a U.S. financial-reporting system investigation, and a breach of the Hex software registry. Attackers are also actively taking over some Drupal websites. No broad household power, water or communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "Guadeloupe hospital postpones cancer care and surgeries after cyberattack",
+      "what_happened": "The University Hospital of Guadeloupe suffered a suspected ransomware attack that encrypted databases and disrupted computer and telephone systems. Staff are using paper records while France’s national cybersecurity agency and prosecutors investigate. The incident began Saturday evening, November 22, and was reported in this window.",
+      "impact": "Some surgeries, consultations and imaging tests were canceled through at least Friday. Radiation therapy was suspended, and some chemotherapy sessions were canceled. Emergency care, dialysis and urgent heart procedures remain available. Access to electronic records and normal prescription processing is still limited.",
+      "what_next": "The hospital expects recovery to take several days, but the date for full normal service is unclear. Investigators may determine whether personal or medical data was stolen and whether a compromised information-technology supplier was the entry point.",
+      "change": "New report",
+      "sectors": [
+       "healthcare"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/guadeloupe-ransomware-hospital-cyber",
+        "published": "2026-11-25T13:30:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "U.S. financial crime reporting agency takes some systems offline",
+      "what_happened": "The Financial Crimes Enforcement Network, which receives required reports from banks and other financial firms, found unauthorized access to a limited part of its systems. It took some systems offline while investigating. The main online filing website remains available, though some services may be unavailable.",
+      "impact": "Banks, credit unions, brokerages and other filers may face delays submitting required reports. The agency extended some deadlines through December 30. There is no evidence in the reports that customer bank accounts or payment systems were accessed, and no stolen data has been confirmed.",
+      "what_next": "FinCEN is investigating how long the access lasted and whether information was viewed or taken. The agency is working to restore affected services; the incident’s wider effect on financial-crime investigations remains unclear.",
+      "change": "New report",
+      "sectors": [
+       "finance"
+      ],
+      "sources": [
+       {
+        "name": "CyberScoop",
+        "url": "https://cyberscoop.com/fincen-investigates-cybersecurity-incident-systems-offline/",
+        "published": "2026-11-25T13:03:24+00:00"
+       },
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html",
+        "published": "2026-11-25T12:30:08+00:00"
+       },
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/treasury-fincen-takes-systems-offline-after-cyber-incident",
+        "published": "2026-11-25T00:00:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Attackers accessed six Hex software registry servers during live breach",
+      "what_happened": "An attacker used a flaw in Hex.pm, a registry used by Elixir and Erlang developers, to run commands on six production servers on November 23. Maintainers installed a fix within about 15 minutes and found no evidence that software packages were changed.",
+      "impact": "Hex users were logged out as a precaution. Maintainers cannot rule out access to email addresses, password records, extra login-check secrets or private packages because some database activity was not recorded. Public package downloads continued, and no altered release was found.",
+      "what_next": "Hex is continuing its investigation and plans changes to its client and registry-signing system. Further findings may show whether account or private-package information was read. The attacker’s identity is unknown.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "supply_chain",
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
+        "published": "2026-11-25T09:06:59+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Attackers are taking over some Drupal websites through installer flaw",
+      "what_happened": "Drupal confirmed that attackers have exploited a flaw in its website software on live sites since November 19. Under certain conditions, an attacker without an account can take control of a Drupal website and its stored information. The flaw was fixed on November 18.",
+      "impact": "The number of affected websites is unknown. Compromised sites could be altered or used to expose visitor and subscriber information, but no specific organization, public outage or confirmed stolen-data total was reported.",
+      "what_next": "Drupal and investigators may identify more affected sites and clarify whether attackers stole data or used compromised websites for further attacks. The campaign remains active, according to the supplied reports.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "Help Net Security",
+        "url": "https://www.helpnetsecurity.com/2026/11/25/drupal-installer-rce-cve-2026-132165-exploited/",
+        "published": "2026-11-25T13:37:28+00:00"
+       },
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/",
+        "published": "2026-11-25T10:10:20+00:00"
+       },
+       {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/drupal-flaw-found-by-anthropic-scanner-exploited-in-attacks/",
+        "published": "2026-11-25T08:01:06+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {},
+   "warnings": [
+    "This edition was published late after a scheduling or update delay; its reporting window extends to the publication time below.",
+    "2 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "Cybersecurity Dive",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "CyberScoop",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "Help Net Security",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 730
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 30,
+   "usage": {
+    "completion_tokens": 1008,
+    "prompt_tokens": 33726,
+    "total_tokens": 34734,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 70,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 33723,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
-  "status": "failed",
-  "edition_id": "2026-11-25-morning",
-  "checked_at": "2026-11-25T13:01:31+00:00",
-  "error": "ValueError"
+  "status": "ok",
+  "checked_at": "2026-11-25T13:51:53+00:00"
  },
  "automatic_attempts": {
   "2026-11-22-morning": {
@@ -8236,8 +8423,8 @@
    "checked_at": "2026-11-24T22:02:03+00:00"
   },
   "2026-11-25-morning": {
-   "count": 1,
-   "checked_at": "2026-11-25T13:01:31+00:00"
+   "count": 2,
+   "checked_at": "2026-11-25T13:51:53+00:00"
   }
  }
 }
