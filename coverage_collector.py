@@ -191,13 +191,16 @@ def merge_record(u, data, item, rec, geo, now):
     by_id = {i['id']: i for i in data['incidents']}
     source_records = [i for i in data['incidents'] if item['url'] in
                       {i['source_url']} | {s['url'] for s in i.get('more_sources', [])}]
-    source_match = next((i for i in source_records if i['victim'].casefold() == rec.get('victim', i['victim']).casefold()), None)
+    # Match typographic apostrophes without conflating different named victims.
+    def victim_key(value):
+        return str(value).casefold().replace('\u2019', "'").replace('\u2018', "'").strip()
+    source_match = next((i for i in source_records if victim_key(i['victim']) == victim_key(rec.get('victim', i['victim']))), None)
     if source_match is None and item.get('single_incident') and len(source_records) == 1:
         # One report, one known event: a paraphrased victim name is not a new attack.
         # Multi-event roundups retain victim-level matching.
         source_match = source_records[0]
     id_match = by_id.get(item['id'])
-    if id_match and id_match['victim'].casefold() != rec.get('victim', id_match['victim']).casefold():
+    if id_match and victim_key(id_match['victim']) != victim_key(rec.get('victim', id_match['victim'])):
         id_match = None
     # Deterministic backstop for repeated reports with nearly identical titles.
     # Do not collapse different victims in multi-event roundups.

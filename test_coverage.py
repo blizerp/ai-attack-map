@@ -145,6 +145,22 @@ class CoverageTests(unittest.TestCase):
         self.assertEqual((result,incident_id),('merged','original'))
         self.assertEqual(len(data['incidents']),1)
 
+    def test_roundup_typographic_apostrophe_same_victim_merges(self):
+        from test_selection import record
+        original={'id':'original','title':'Hermes agent compromised ministry systems',
+                  'victim':'Thailand\u2019s Ministry of Finance','date':'2026-10-29',
+                  'category':'major_cyber','source_url':'https://example.com/roundup'}
+        other={'id':'other','title':'Other ministry compromise',
+               'victim':'Ministry of Health','date':'2026-10-29',
+               'category':'major_cyber','source_url':original['source_url']}
+        data={'incidents':[original,other]}
+        item={'id':'new','url':original['source_url'],'source':'Researcher','date':'2026-10-29'}
+        rec=record(victim="Thailand's Ministry of Finance",title='Agentic attacks target Thailand ministry',date='2026-10-29')
+        with patch.object(u,'update_severity'):
+            result, identifier=c.merge_record(u,data,item,rec,{},'2026-11-25T00:00:00+00:00')
+        self.assertEqual((result,identifier),('merged','original'))
+        self.assertEqual(len(data['incidents']),2)
+
     def test_same_date_distinct_named_victims_do_not_merge(self):
         from test_selection import record
         original={'id':'original','title':'Hospital A data breach reported','victim':'Hospital A','date':'2026-10-20','category':'major_cyber','source_url':'https://example.com/original'}
