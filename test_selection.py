@@ -114,6 +114,26 @@ class SelectionTests(unittest.TestCase):
             rec=base if "laboratory" not in passage else dict(base,actual_outcome="research_demonstration")
             self.assertFalse(u.direct_incident_evidence(rec,passage,passage))
 
+    def test_explicit_confirmations_and_access_wording(self):
+        base = record(actual_outcome="confirmed_compromise", severity_evidence={"context":"real_world"})
+        for passage in (
+            "The city can confirm it is a victim of a ransomware attack.",
+            "A third party gained unauthorized access to some client tax documents.",
+            "An unauthorised party had gained access to its backend management system.",
+            "Ransomware encrypted data on company servers.",
+        ):
+            self.assertTrue(u.direct_incident_evidence(base, passage, passage))
+            self.assertFalse(u.direct_incident_evidence(base, passage, "An unrelated report."))
+        for passage in (
+            "There was no evidence of ransomware encrypted data on company servers.",
+            "The flaw could allow a third party to gain unauthorized access.",
+            "The attackers attempted to gain access to the backend management system.",
+            "The hypothetical scenario would cause a service outage.",
+        ):
+            self.assertFalse(u.direct_incident_evidence(base, passage, passage))
+        quote = "A third party gained unauthorized access to some client tax documents."
+        self.assertFalse(u.direct_incident_evidence(dict(base, actual_outcome="research_demonstration"), quote, quote))
+
     def test_schema_requires_all_fields(self):
         self.assertEqual(set(u.SCHEMA['required']), set(u.SCHEMA['properties']))
 
