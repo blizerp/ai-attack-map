@@ -2713,5 +2713,61 @@
         "method": "reported-impact-v1"
       }
     }
+  },
+  "4a10c0433fb3fb47": {
+    "reason": "Same Burger King Japan app breach, same SecurityWeek roundup, same reported event start and overlapping dates as canonical 4df14dd751c02da2; no separate compromise.",
+    "record": {
+      "title": "Burger King Japan app breach exposes 11 million member records",
+      "date": "2026-10-02",
+      "category": "major_cyber",
+      "victim": "Burger King Japan",
+      "attacker": "Not reported",
+      "what": "Breach accessing member data for BK Japan app.",
+      "ai_role": "AI involvement not confirmed in the reporting.",
+      "why": "Unauthorized access to system holding app member data occurred.",
+      "where": "No fixed location",
+      "major_impact": "large_scale_data_theft",
+      "significance": "Exposed personal data of a vast number of users can lead to identity theft and fraud risks.",
+      "id": "4a10c0433fb3fb47",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/in-other-news-ics-sniper-attack-hacking-xworm-malware-operators-250k-chrome-exploit/",
+      "added": "2026-11-24T22:45:52+00:00",
+      "reported_date": "2026-10-16",
+      "last_reported": "2026-10-16",
+      "evidence_status": "confirmed",
+      "lat": 36.5748441,
+      "lon": 139.2394179,
+      "direct_evidence": {
+        "outcome": "confirmed_compromise",
+        "quote_sha256": "fda5d590ac0a46a556be95bc58a01b5897a77c9a28170b0ff99caba50b32c675",
+        "excerpt": "BK Japan, which runs Burger King’s official app in Japan, says hackers accessed the system holding the app’s member data"
+      },
+      "severity": {
+        "level": "severe",
+        "status": "preliminary",
+        "reason": "The app breach resulted in the exposure of personal information such as names, email addresses, and phone numbers, impacting approximately 11 million records.",
+        "evidence": {
+          "context": "real_world",
+          "service": "none",
+          "reach": "multiple",
+          "damage": "sensitive_data",
+          "essential": "none",
+          "financial": "none"
+        },
+        "source_url": "https://www.securityweek.com/in-other-news-ics-sniper-attack-hacking-xworm-malware-operators-250k-chrome-exploit/",
+        "assessed_at": "2026-11-24T22:45:52+00:00",
+        "method": "reported-impact-v1"
+      },
+      "locations": [
+        {
+          "lat": 36.5748441,
+          "lon": 139.2394179,
+          "label": "Japan",
+          "basis": "Reported affected area",
+          "entity": "",
+          "source_url": "https://www.securityweek.com/in-other-news-ics-sniper-attack-hacking-xworm-malware-operators-250k-chrome-exploit/"
+        }
+      ]
+    }
   }
 }
