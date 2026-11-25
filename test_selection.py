@@ -95,6 +95,19 @@ class SelectionTests(unittest.TestCase):
         self.assertFalse(u.direct_incident_evidence(dict(base,category="using_ai",ai_role="AI involvement not confirmed"),quote,quote))
         self.assertFalse(u.direct_incident_evidence(dict(base,severity_evidence={"context":"research_only"}),quote,quote))
 
+    def test_direct_evidence_diagnostics_preserve_gate(self):
+        quote = "The utility confirmed unauthorized access to its operational network."
+        base = record(actual_outcome="confirmed_compromise", severity_evidence={"context":"real_world"})
+        self.assertEqual(u.direct_incident_failures(base, quote, quote), [])
+        self.assertEqual(u.direct_incident_failures(base, quote, "Other article"), ["verbatim_article_quote"])
+        self.assertEqual(u.direct_incident_failures(dict(base, actual_outcome="research_demonstration"), quote, quote), ["confirmed_outcome"])
+        self.assertEqual(u.direct_incident_failures(dict(base, impact_substantiated=False), quote, quote), ["substantiated_impact"])
+        conditional = "The vulnerability could allow an attacker to access a server."
+        self.assertEqual(u.direct_incident_failures(base, conditional, conditional), ["observed_outcome_wording"])
+        for passage in (quote, conditional):
+            self.assertEqual(u.direct_incident_evidence(base, passage, passage),
+                             not u.direct_incident_failures(base, passage, passage))
+
     def test_direct_evidence_spelling_and_explicit_access(self):
         base=record(actual_outcome="confirmed_compromise", severity_evidence={"context":"real_world"})
         for passage in (

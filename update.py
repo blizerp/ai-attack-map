@@ -271,8 +271,8 @@ def fetch_tracker():
     return []
 
 
-def direct_incident_evidence(rec, quote, article):
-    """A matching passage alone does not prove real external harm."""
+def direct_incident_failures(rec, quote, article):
+    """Return only fixed diagnostic codes, never rejected article text."""
     normalize = lambda value: re.sub(r"\s+", " ", value).strip().casefold()
     q = normalize(quote)
     role = rec.get("ai_role", "").casefold()
@@ -283,16 +283,22 @@ def direct_incident_evidence(rec, quote, article):
     negated = re.compile(r"\b(?:no evidence of|no (?:signs|evidence) (?:that|of)|not (?:been )?(?:compromised|accessed|exploited)|failed to|unsuccessful|attempted to)\b")
     sentences = re.split(r"(?<=[.!?])\s+", q)
     actual = any(observed.search(s) and not hypothetical.search(s) and not negated.search(s) for s in sentences)
-    return (
-        actual
-        and        len(q) >= 20 and q in normalize(article)
-        and rec.get("actual_outcome") in {"confirmed_compromise", "confirmed_consequential_event"}
-        and rec.get("severity_evidence", {}).get("context") == "real_world"
-        and rec.get("impact_substantiated") is True
-        and rec.get("major_impact") in MAJOR_IMPACTS
-        and not (rec.get("category") in {"using_ai", "by_ai_agent"}
-                 and any(x in role for x in ("not confirmed", "not reported", "unknown", "unconfirmed")))
-    )
+    checks = {
+        "observed_outcome_wording": actual,
+        "verbatim_article_quote": len(q) >= 20 and q in normalize(article),
+        "confirmed_outcome": rec.get("actual_outcome") in {"confirmed_compromise", "confirmed_consequential_event"},
+        "real_world_context": rec.get("severity_evidence", {}).get("context") == "real_world",
+        "substantiated_impact": rec.get("impact_substantiated") is True,
+        "qualifying_major_impact": rec.get("major_impact") in MAJOR_IMPACTS,
+        "supported_ai_attribution": not (rec.get("category") in {"using_ai", "by_ai_agent"}
+                 and any(x in role for x in ("not confirmed", "not reported", "unknown", "unconfirmed"))),
+    }
+    return [name for name, passed in checks.items() if not passed]
+
+
+def direct_incident_evidence(rec, quote, article):
+    """A matching passage alone does not prove real external harm."""
+    return not direct_incident_failures(rec, quote, article)
 
 
 def extract(client, item, tracked):
@@ -333,9 +339,11 @@ def extract(client, item, tracked):
     records = json.loads(resp.choices[0].message.content)["incidents"]
     for rec in records:
         quote = rec.pop("evidence_quote", "")
-        if rec.get("decision") == "include" and not direct_incident_evidence(rec, quote, item.get("text", "")):
-            rec.update(relevant=False, decision="defer",
-                       decision_reason="Direct evidence does not establish a qualifying real-world outcome.")
+        if rec.get("decision") == "include":
+            failures = direct_incident_failures(rec, quote, item.get("text", ""))
+            if failures:
+                rec.update(relevant=False, decision="defer",
+                           decision_reason="Direct evidence gate: " + ", ".join(failures))
         actual_outcome = rec.pop("actual_outcome", None)
         if rec.get("decision") == "include":
             rec["_evidence"] = {"outcome": actual_outcome, "quote_sha256": hashlib.sha256(quote.encode("utf-8")).hexdigest(), "excerpt": " ".join(quote.split()[:20])}
