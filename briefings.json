@@ -8391,11 +8391,291 @@
      "cached_tokens": 0
     }
    }
+  },
+  {
+   "id": "2026-11-25-evening",
+   "date": "2026-11-25",
+   "edition": "evening",
+   "published_at": "2026-11-25T22:02:49+00:00",
+   "generated_at": "2026-11-25T22:02:49+00:00",
+   "scheduled_for": "2026-11-25T22:00:00+00:00",
+   "window_start": "2026-11-25T13:51:53+00:00",
+   "window_end": "2026-11-25T22:02:49+00:00",
+   "sector_window_start": "2026-11-24T22:02:49+00:00",
+   "sectors_enabled": true,
+   "overview": {
+    "intro": "Fresh reports confirm customer-data theft at 1Password, a breach at FIFA, and real attacks on supermarket refrigeration systems. Intelligence agencies also report that automated artificial-intelligence tools are being used in successful attacks. No broad household power, water or communications outage is confirmed.",
+    "items": [
+     {
+      "headline": "1Password says attackers stole limited customer account information",
+      "what_happened": "An attacker used a hacked employee GitHub account to place malicious code in 1Password’s backend services. The code copied some customer account records, including names, email addresses, account details and recovery-related tokens. Password vaults and their encryption keys were not accessed.",
+      "impact": "1Password says only a small number of users were affected and they were contacted directly. The stolen details could support convincing phishing messages, but no customer account takeovers have been found.",
+      "what_next": "1Password is investigating with outside experts and checking its recovery systems. Customers may receive further notices if the affected group or stolen information is clarified.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
+        "published": "2026-11-25T21:33:33+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "FIFA confirms hackers stole a limited amount of internal information",
+      "what_happened": "FIFA said hackers gained unauthorized access to a limited set of personal and business information. The organization has not described the records or confirmed the larger amount of data claimed by the attackers.",
+      "impact": "No effect on matches, ticketing or public soccer services is reported. People connected to FIFA could face targeted scams if their contact or work information was included.",
+      "what_next": "FIFA is working with authorities to determine what was accessed and whether the published data is genuine. The scope of the breach remains unclear.",
+      "change": "Newly confirmed",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/fifa-data-breach-limited",
+        "published": "2026-11-25T20:40:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Supermarket refrigeration systems were remotely disrupted in Europe",
+      "what_happened": "A U.S. warning says hackers recently compromised refrigeration controllers at supermarkets and food retailers in Europe. In reported attacks, they shut down cooling systems or changed temperatures. The controllers manage refrigerated displays, compressors, alarms and sometimes store lighting and heating.",
+      "impact": "Stores may lose or spoil chilled food when temperatures are changed or cooling stops. The reports do not give a current affected-store total or confirm a new wave of spoilage today. No household power outage is reported.",
+      "what_next": "Danfoss is preparing a software update, while investigators may clarify which retailers were affected and whether food losses or safety measures followed.",
+      "change": "Impact increased",
+      "sectors": [
+       "food"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
+        "published": "2026-11-25T16:13:40+00:00"
+       }
+      ],
+      "incident_ids": []
+     },
+     {
+      "headline": "Automated AI tools are being used in successful attacks on organizations",
+      "what_happened": "Swiss and Italian authorities reported attacks in which artificial-intelligence agents searched for weaknesses, used stolen credentials and adapted their actions without constant human direction. Switzerland confirmed successful compromises affecting organizations, including critical-infrastructure operators. Microsoft separately linked similar tools to Chinese state-backed activity.",
+      "impact": "The reports do not identify affected organizations or public-service outages. Faster automated attacks could increase the chance that exposed business, government and infrastructure systems are reached soon after a weakness appears.",
+      "what_next": "Authorities are investigating the affected organizations and attack scale. More reports may show whether any customer services, utilities or sensitive data were affected.",
+      "change": "Impact increased",
+      "sectors": [
+       "internet"
+      ],
+      "sources": [
+       {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
+        "published": "2026-11-25T19:39:31+00:00"
+       },
+       {
+        "name": "The Record",
+        "url": "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool",
+        "published": "2026-11-25T21:18:00+00:00"
+       }
+      ],
+      "incident_ids": []
+     }
+    ]
+   },
+   "sectors": {
+    "energy": {
+     "intro": "",
+     "items": []
+    },
+    "water": {
+     "intro": "",
+     "items": []
+    },
+    "food": {
+     "intro": "New reporting links cyberattacks to supermarket refrigeration controls, with possible consequences for chilled-food storage.",
+     "items": [
+      {
+       "headline": "European supermarkets faced attacks on refrigeration controls",
+       "what_happened": "Hackers compromised Danfoss refrigeration controllers at supermarkets and food retailers and remotely shut down cooling or changed temperatures. These systems also record temperatures and raise alerts.",
+       "impact": "Cooling failures or unsafe temperature changes can cause spoiled stock, closed refrigerated displays and food losses. The reports do not identify a current store count or confirm a new consumer shortage.",
+       "what_next": "The supplier is preparing a software update. Retailers and investigators may clarify the affected stores and any food-safety actions.",
+       "change": "Impact increased",
+       "sectors": [
+        "food"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
+         "published": "2026-11-25T16:13:40+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "finance": {
+     "intro": "",
+     "items": []
+    },
+    "healthcare": {
+     "intro": "",
+     "items": []
+    },
+    "internet": {
+     "intro": "Fresh reports describe customer-data theft and a confirmed breach at a major international sports organization. Authorities also say automated attacks are succeeding against organizations, although public service effects remain unclear.",
+     "items": [
+      {
+       "headline": "1Password says attackers stole limited customer account information",
+       "what_happened": "A hacked employee GitHub account was used to insert malicious code into 1Password backend services. The code copied limited customer account records, but not password vaults or their encryption keys.",
+       "impact": "A small number of users were affected and individually notified. The stolen details could make phishing messages more convincing; no account takeovers have been found.",
+       "what_next": "The company’s investigation may clarify the affected users and whether any stolen recovery information was misused.",
+       "change": "Newly confirmed",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
+         "published": "2026-11-25T21:33:33+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "FIFA confirms hackers stole limited personal and business information",
+       "what_happened": "FIFA said hackers accessed a limited set of internal personal and business information. It has not yet described the records or confirmed claims of a much larger theft.",
+       "impact": "No disruption to matches or public soccer services is reported. Affected people could face impersonation or scam messages if contact information was included.",
+       "what_next": "FIFA and authorities are investigating the scope and authenticity of data published by the attackers.",
+       "change": "Newly confirmed",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/fifa-data-breach-limited",
+         "published": "2026-11-25T20:40:00+00:00"
+        }
+       ],
+       "incident_ids": []
+      },
+      {
+       "headline": "Authorities confirm successful AI-assisted attacks on organizations",
+       "what_happened": "Swiss and Italian agencies reported that AI agents helped attackers find weaknesses, use credentials and compromise systems. Microsoft also reported Chinese state-backed groups using similar automation.",
+       "impact": "No named victims or household outages are reported. The main concern is that attacks can move from searching to unauthorized access in a much shorter time.",
+       "what_next": "Investigations may identify affected organizations and clarify whether public services or sensitive information were disrupted.",
+       "change": "Impact increased",
+       "sectors": [
+        "internet"
+       ],
+       "sources": [
+        {
+         "name": "BleepingComputer",
+         "url": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
+         "published": "2026-11-25T19:39:31+00:00"
+        },
+        {
+         "name": "The Record",
+         "url": "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool",
+         "published": "2026-11-25T21:18:00+00:00"
+        }
+       ],
+       "incident_ids": []
+      }
+     ]
+    },
+    "supply_chain": {
+     "intro": "",
+     "items": []
+    }
+   },
+   "warnings": [
+    "4 reports had only a short source excerpt available."
+   ],
+   "sources": [
+    {
+     "source": "BleepingComputer",
+     "ok": true,
+     "entries": 15
+    },
+    {
+     "source": "The Record",
+     "ok": true,
+     "entries": 5
+    },
+    {
+     "source": "SecurityWeek",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "CERT-FR",
+     "ok": true,
+     "entries": 40
+    },
+    {
+     "source": "The Hacker News",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "Cybersecurity Dive",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "CyberScoop",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "Wiz Research",
+     "ok": true,
+     "entries": 731
+    },
+    {
+     "source": "Help Net Security",
+     "ok": true,
+     "entries": 10
+    },
+    {
+     "source": "Dark Reading",
+     "ok": true,
+     "entries": 50
+    },
+    {
+     "source": "HIPAA Journal",
+     "ok": true,
+     "entries": 10
+    }
+   ],
+   "reviewed_reports": 39,
+   "usage": {
+    "completion_tokens": 1665,
+    "prompt_tokens": 40483,
+    "total_tokens": 42148,
+    "completion_tokens_details": {
+     "accepted_prediction_tokens": 0,
+     "audio_tokens": 0,
+     "reasoning_tokens": 288,
+     "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+     "audio_tokens": 0,
+     "cache_write_tokens": 40480,
+     "cached_tokens": 0
+    }
+   }
   }
  ],
  "last_attempt": {
   "status": "ok",
-  "checked_at": "2026-11-25T13:51:53+00:00"
+  "checked_at": "2026-11-25T22:02:49+00:00"
  },
  "automatic_attempts": {
   "2026-11-22-morning": {
@@ -8425,6 +8705,10 @@
   "2026-11-25-morning": {
    "count": 2,
    "checked_at": "2026-11-25T13:51:53+00:00"
+  },
+  "2026-11-25-evening": {
+   "count": 1,
+   "checked_at": "2026-11-25T22:02:49+00:00"
   }
  }
 }
