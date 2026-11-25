@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T18:33:35+00:00",
+ "updated": "2026-11-25T19:34:36+00:00",
  "incidents": [
   {
    "title": "LaLiga fan-services platform breached and personal data stolen",
@@ -3250,6 +3250,49 @@
     },
     "source_url": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/",
     "assessed_at": "2026-11-24T13:16:56+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "Osaki Electric ransomware disrupts production at three manufacturing sites",
+   "date": "2026-11-17",
+   "category": "major_cyber",
+   "victim": "Osaki Electric Co., Ltd.",
+   "attacker": "Not reported",
+   "what": "A ransomware attack encrypted data on servers and disrupted production.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Production and shipments of smart meters and other products were suspended due to the ransomware attack.",
+   "where": "No fixed location",
+   "major_impact": "essential_service_disruption",
+   "significance": "The ransomware attack halted production at multiple manufacturing sites, impacting the supply of essential electrical equipment.",
+   "id": "7db142a533b80518",
+   "source_name": "IOTECH",
+   "source_url": "https://www.iotech.mx/en-us/noticias/caso/osaki-electric-halts-smart-meter-production-after-ransomware-attack",
+   "added": "2026-11-25T19:34:36+00:00",
+   "reported_date": "2026-11-18",
+   "last_reported": "2026-11-18",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "3ed0cb0cdee7b22a819d84796692ca240a3b174aad3204369cd17d9f2dc823ae",
+    "excerpt": "On 17 November, around 10:35 local time, the company found that data on its servers had been encrypted."
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The company suspended production and shipments after confirming data encryption, but the extent of data leakage and financial impact remains unreported.",
+    "evidence": {
+     "context": "real_world",
+     "service": "major",
+     "reach": "single",
+     "damage": "unknown",
+     "essential": "disrupted",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.iotech.mx/en-us/noticias/caso/osaki-electric-halts-smart-meter-production-after-ransomware-attack",
+    "assessed_at": "2026-11-25T19:34:36+00:00",
     "method": "reported-impact-v1"
    }
   },
@@ -48317,7 +48360,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-25T18:33:35+00:00",
+ "last_added": "2026-11-25T19:34:36+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }
