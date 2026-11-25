@@ -95,6 +95,25 @@ class SelectionTests(unittest.TestCase):
         self.assertFalse(u.direct_incident_evidence(dict(base,category="using_ai",ai_role="AI involvement not confirmed"),quote,quote))
         self.assertFalse(u.direct_incident_evidence(dict(base,severity_evidence={"context":"research_only"}),quote,quote))
 
+    def test_direct_evidence_spelling_and_explicit_access(self):
+        base=record(actual_outcome="confirmed_compromise", severity_evidence={"context":"real_world"})
+        for passage in (
+            "The hospital confirmed unauthorised access to patient records.",
+            "Officials said an unauthorized user was able to access platform data.",
+            "The hospital discovered unauthorised activity in its app, resulting in unauthorised access to patient data.",
+            "This resulted in a data breach involving personal data of patients.",
+        ):
+            self.assertTrue(u.direct_incident_evidence(base,passage,passage))
+            self.assertFalse(u.direct_incident_evidence(base,passage,"Unrelated article."))
+        for passage in (
+            "The flaw could allow an unauthorized user to access platform data.",
+            "There was no evidence of unauthorised activity resulting in unauthorised access.",
+            "The exploit might cause a data breach involving personal data.",
+            "The researchers confirmed unauthorised access in a laboratory demonstration.",
+        ):
+            rec=base if "laboratory" not in passage else dict(base,actual_outcome="research_demonstration")
+            self.assertFalse(u.direct_incident_evidence(rec,passage,passage))
+
     def test_schema_requires_all_fields(self):
         self.assertEqual(set(u.SCHEMA['required']), set(u.SCHEMA['properties']))
 
