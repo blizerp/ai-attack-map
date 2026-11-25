@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T19:34:36+00:00",
+ "updated": "2026-11-25T21:28:07+00:00",
  "incidents": [
   {
    "title": "LaLiga fan-services platform breached and personal data stolen",
@@ -2867,15 +2867,15 @@
     },
     {
      "date": "2026-11-18",
-     "what": "An attacker published malicious versions 1.26.1 and 1.26.2 of Microsoft’s official Agent Framework package on PyPI. The releases used Python startup mechanisms to harvest credentials and secrets from environment variables, configuration files, processes, cloud identity tokens, and GitHub runner directories, then attempted to send the data to an attacker-controlled webhook.",
-     "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/",
-     "source": "BleepingComputer"
-    },
-    {
-     "date": "2026-11-18",
      "what": "Attackers published malicious versions 1.26.1 and 1.26.2 of Microsoft’s agent-framework package. The releases installed Python startup hooks that harvested credentials, environment data, cloud identity tokens, and Azure/GitHub OIDC tokens, then exfiltrated the data to a hard-coded webhook.",
      "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
      "source": "The Hacker News"
+    },
+    {
+     "date": "2026-11-18",
+     "what": "Malicious Microsoft Agent Framework PyPI releases stole cloud credentials",
+     "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/",
+     "source": "BleepingComputer"
     }
    ]
   },
@@ -6904,6 +6904,59 @@
    }
   },
   {
+   "title": "UCHealth discloses unauthorized access to employee cloud accounts",
+   "date": "2026-07-27",
+   "category": "major_cyber",
+   "victim": "UCHealth",
+   "attacker": "Not reported",
+   "what": "Unauthorized access to two employee accounts in UCHealth’s Microsoft cloud system",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Personal information related to certain individuals may have been acquired",
+   "where": "Aurora, Colorado, USA",
+   "major_impact": "large_scale_data_theft",
+   "significance": "This incident affected 129,000 individuals potentially involving sensitive personal data including social security numbers and health information.",
+   "id": "f7fb1ded7a6b5fa6",
+   "source_name": "UCHealth official disclosure",
+   "source_url": "https://www.uchealth.org/notifications/uchealth-notifies-individuals-of-data-security-incident/",
+   "added": "2026-11-25T21:28:07+00:00",
+   "reported_date": "2026-11-13",
+   "last_reported": "2026-11-13",
+   "evidence_status": "confirmed",
+   "lat": 39.7401441,
+   "lon": -104.8733376,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "29f00f5156cec3f159e84de79905bbd8c999d87108aaec030a477455aa0a7d16",
+    "excerpt": "UCHealth discovered that an unauthorized third party gained access to two employee accounts in UCHealth’s Microsoft cloud system."
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The incident involved unauthorized access to sensitive personal information affecting a significant number of individuals.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.uchealth.org/notifications/uchealth-notifies-individuals-of-data-security-incident/",
+    "assessed_at": "2026-11-25T21:28:07+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 39.7401441,
+     "lon": -104.8733376,
+     "label": "Aurora, Colorado, USA",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.uchealth.org/notifications/uchealth-notifies-individuals-of-data-security-incident/"
+    }
+   ]
+  },
+  {
    "title": "Maersk confirms breach of acquired logistics-system environment",
    "date": "2026-11-11",
    "category": "major_cyber",
@@ -8257,7 +8310,7 @@
     },
     {
      "date": "2026-11-11",
-     "what": "The attacker escaped build isolation, obtained internal credentials, moved through Railway systems, and decrypted customer environment variables. Railway said the exposed data included AI-provider keys, 1,852 linked-account tokens, and histories from 353 builds; the stolen AI keys generated an estimated $740,000 in unauthorized usage charges. Railway found no evidence that customer databases or code repositories were accessed or downloaded.",
+     "what": "AI provider keys that customers stored on Railway were stolen in an October breach and were used to commit an estimated $740,000 in unauthorized spending.",
      "url": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html",
      "source": "The Hacker News"
     }
@@ -18743,6 +18796,49 @@
     },
     "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
     "assessed_at": "2026-11-16T22:12:47+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "As part of ",
+   "date": "2026-11-09",
+   "category": "major_cyber",
+   "victim": "Nebula AI",
+   "attacker": "Not reported",
+   "what": "AI infrastructure breach attributed to credential access",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Unauthorized access to inference server with exposed keys.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "The incident demonstrates critical vulnerabilities in AI infrastructure security, potentially impacting numerous users relying on AI services.",
+   "id": "62043f10af8e6e72",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+   "added": "2026-11-25T21:28:07+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "daf74353c3d2fca99efc5ba8e7ce8427e304ea7c1d1374446256330dc92a2409",
+    "excerpt": "NEAR AI disclosed an incident on 11-09 (Nov 8), in which an inference server was accessed by exploiting \"a remote"
+   },
+   "severity": {
+    "level": "significant",
+    "status": "preliminary",
+    "reason": "Access was gained to critical AI infrastructure, which may have exposed sensitive data.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+    "assessed_at": "2026-11-25T21:28:07+00:00",
     "method": "reported-impact-v1"
    }
   },
@@ -48360,7 +48456,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-25T19:34:36+00:00",
+ "last_added": "2026-11-25T21:28:07+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }
