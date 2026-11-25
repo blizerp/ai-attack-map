@@ -6,6 +6,8 @@ from pathlib import Path
 
 # Follow-up audit of the latest batch. Preserve full records, never modify baseline.
 HOLD_REASONS = {
+    "495b29314c2eb2eb": "Same KEPCO breach of two systems affecting approximately 1.5 million people as baseline a50dfe86319a6af0; source and reporting date differ, not the incident.",
+    "df9a1b4931dc938e": "Same Together AI exposed repository credential and June-July prompt sample theft as baseline bebedc9daae1e677; primary disclosure is additional evidence, not a separate incident.",
     "f1d6246d982b8a56": "Cybersecurity Dive and SecurityWeek describe the same GreyNoise GT13 campaign against Check Point Security Management servers (22 organizations, November 24 reporting); canonical campaign record a2d8ddfa90774e7d retained.",
     "a4e368f68c08d285": "Same Thailand Ministry of Finance Hermes agent compromise as baseline 3154910f0425e4ea; identical date and source, victim differs only in apostrophe typography.",
     "4a10c0433fb3fb47": "Same Burger King Japan app breach, same SecurityWeek roundup, same reported event start and overlapping dates as canonical 4df14dd751c02da2; no separate compromise.",
@@ -90,7 +92,7 @@ def refresh(root, initialize=False):
         # Reconcile independently reviewed cross-source duplicates with the canonical
         # retained record. Preserve the held record and its evidence in the archive;
         # attach only the alternate source, not its unverified impact assertions.
-        canonical_by_held_id = {"b1c27b067e00ac4a": "e2e13fe6f7503c25", "f1d6246d982b8a56": "a2d8ddfa90774e7d"}
+        canonical_by_held_id = {"495b29314c2eb2eb": "a50dfe86319a6af0", "df9a1b4931dc938e": "bebedc9daae1e677", "b1c27b067e00ac4a": "e2e13fe6f7503c25", "f1d6246d982b8a56": "a2d8ddfa90774e7d"}
         by_id = {str(i.get("id")): i for i in incidents}
         for i in held:
             canonical_id = canonical_by_held_id.get(str(i.get("id")))
