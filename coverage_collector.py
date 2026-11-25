@@ -26,6 +26,11 @@ FEEDS = {
     'HIPAA Journal': 'https://www.hipaajournal.com/feed/',
     'CERT-FR': 'https://cert.cyber.gouv.fr/alerte/feed/',
     'Wiz Research': 'https://www.wiz.io/blog/rss.xml',
+    # Additional independent discovery channels; all candidates use the same
+    # article review, evidence requirements, deduplication and per-run budget.
+    'Cybersecurity Dive': 'https://www.cybersecuritydive.com/feeds/news/',
+    'CyberScoop': 'https://cyberscoop.com/feed/',
+    'Help Net Security': 'https://www.helpnetsecurity.com/feed/',
 }
 ARCHIVES = {k: FEEDS[k] for k in ['SecurityWeek', 'HIPAA Journal']}
 UA = 'ai-attack-map/2.0 (+https://github.com/blizerp/ai-attack-map)'
