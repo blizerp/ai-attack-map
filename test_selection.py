@@ -147,6 +147,27 @@ class SelectionTests(unittest.TestCase):
         quote = "A third party gained unauthorized access to some client tax documents."
         self.assertFalse(u.direct_incident_evidence(dict(base, actual_outcome="research_demonstration"), quote, quote))
 
+    def test_third_party_and_confirmed_cyber_incident_wording(self):
+        base = record(actual_outcome="confirmed_compromise", severity_evidence={"context":"real_world"})
+        for passage in (
+            "The hospital discovered that an unauthorized third party gained access to two employee accounts.",
+            "An unauthorized third party accessed and copied files containing patient records.",
+            "The agency is investigating a cybersecurity incident that resulted in unauthorized access to a limited subset of its systems.",
+            "A cyber incident led to unauthorized access to operational systems.",
+        ):
+            self.assertTrue(u.direct_incident_evidence(base, passage, passage))
+            self.assertFalse(u.direct_incident_evidence(base, passage, "Other article."))
+            self.assertFalse(u.direct_incident_evidence(dict(base, impact_substantiated=False), passage, passage))
+        for passage in (
+            "No unauthorized third party gained access to the employee accounts.",
+            "The vulnerability could allow an unauthorized third party to access records.",
+            "There was no evidence of a cyber incident that resulted in unauthorized access.",
+            "The incident could lead to unauthorized access to operational systems.",
+            "The researchers simulated an attack in which an unauthorized third party gained access to accounts.",
+        ):
+            rec = dict(base, actual_outcome="research_demonstration") if "simulated" in passage else base
+            self.assertFalse(u.direct_incident_evidence(rec, passage, passage))
+
     def test_schema_requires_all_fields(self):
         self.assertEqual(set(u.SCHEMA['required']), set(u.SCHEMA['properties']))
 
