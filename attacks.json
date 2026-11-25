@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T09:54:49+00:00",
+ "updated": "2026-11-25T10:53:29+00:00",
  "incidents": [
   {
    "title": "LaLiga fan-services platform breached and personal data stolen",
@@ -614,6 +614,59 @@
     "assessed_at": "2026-11-24T16:59:22+00:00",
     "method": "reported-impact-v1"
    }
+  },
+  {
+   "title": "Colorado mobile ID app hacked, app shut down amid investigation",
+   "date": "2026-11-18",
+   "category": "major_cyber",
+   "victim": "Colorado's myColorado mobile app",
+   "attacker": "Not reported",
+   "what": "Unauthorized access to platform data",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Impacting between 50,000 and 150,000 individuals’ data due to unauthorized access.",
+   "where": "No fixed location",
+   "major_impact": "essential_service_disruption",
+   "significance": "The breach jeopardizes the data of a significant number of users and interrupts essential state services.",
+   "id": "8ff65121d872b0d6",
+   "source_name": "StateScoop",
+   "source_url": "https://statescoop.com/colorado-mobile-id-app-hacked-app-shut-down-amid-investigation/",
+   "added": "2026-11-25T10:53:29+00:00",
+   "reported_date": "2026-11-24",
+   "last_reported": "2026-11-24",
+   "evidence_status": "confirmed",
+   "lat": 38.7251776,
+   "lon": -105.607716,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "06e6d6896a739adab504eed56e64318ad09367d21d7d9f065f6fd391f1b7a0e0",
+    "excerpt": "Officials said an unauthorized user was able to access platform data, and upon discovery, OIT quickly shut the app down"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The app's shutdown affects access to essential state services, while compromised user data raises privacy concerns.",
+    "evidence": {
+     "context": "real_world",
+     "service": "major",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "disrupted",
+     "financial": "none"
+    },
+    "source_url": "https://statescoop.com/colorado-mobile-id-app-hacked-app-shut-down-amid-investigation/",
+    "assessed_at": "2026-11-25T10:53:29+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 38.7251776,
+     "lon": -105.607716,
+     "label": "Colorado, USA",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://statescoop.com/colorado-mobile-id-app-hacked-app-shut-down-amid-investigation/"
+    }
+   ]
   },
   {
    "title": "GL.iNet remote management compromise",
@@ -19273,7 +19326,7 @@
    "updates": [
     {
      "date": "2026-10-29",
-     "what": "Hermes AI agent compromised multiple ministry systems, including stealing credentials and deploying web shells.",
+     "what": "Hermes AI agent executed unauthorized actions leading to system compromises and credential theft.",
      "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
      "source": "Wiz Research"
     }
@@ -48126,7 +48179,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-24T18:35:28+00:00",
+ "last_added": "2026-11-25T10:53:29+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }
