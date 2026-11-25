@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T17:55:53+00:00",
+ "updated": "2026-11-25T18:33:35+00:00",
  "incidents": [
   {
    "title": "LaLiga fan-services platform breached and personal data stolen",
@@ -617,6 +617,59 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://statescoop.com/colorado-mobile-id-app-hacked-app-shut-down-amid-investigation/"
+    }
+   ]
+  },
+  {
+   "title": "Gleneagles Hospital Hong Kong data breach affecting patient data",
+   "date": "2026-11-18",
+   "category": "major_cyber",
+   "victim": "Gleneagles Hospital Hong Kong",
+   "attacker": "Not reported",
+   "what": "Unauthorized activity detected in mobile app security infrastructure resulting in data breach",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Unauthorized access to patient and personal data was reported in the hospital's mobile application.",
+   "where": "Hong Kong",
+   "major_impact": "large_scale_data_theft",
+   "significance": "Personal data of patients was compromised, impacting privacy and security.",
+   "id": "aa96a2b63b7a6f6c",
+   "source_name": "Hong Kong Department of Health",
+   "source_url": "https://www.info.gov.hk/gia/general/202611/24/P2026112400707p.htm",
+   "added": "2026-11-25T18:33:35+00:00",
+   "reported_date": "2026-11-24",
+   "last_reported": "2026-11-24",
+   "evidence_status": "confirmed",
+   "lat": 22.3492361,
+   "lon": 114.1857778,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "c3b5b6615e2e1d1864e72001feab27207873b224e0610a91066aea83b1266b12",
+    "excerpt": "the hospital discovered on November 18 that unauthorised activity involving the security infrastructure supporting its patient mobile application, My Gleneagles"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Unauthorized access to personal data of patients confirmed, but no details on operational or financial impact stated.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.info.gov.hk/gia/general/202611/24/P2026112400707p.htm",
+    "assessed_at": "2026-11-25T18:33:35+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 22.3492361,
+     "lon": 114.1857778,
+     "label": "Hong Kong",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.info.gov.hk/gia/general/202611/24/P2026112400707p.htm"
     }
    ]
   },
@@ -5021,6 +5074,59 @@
     "assessed_at": "2026-11-24T13:16:56+00:00",
     "method": "reported-impact-v1"
    }
+  },
+  {
+   "title": "ActiveCloud ransomware attack disrupts services",
+   "date": "2026-11-10",
+   "category": "major_cyber",
+   "victim": "ActiveCloud and its customers",
+   "attacker": "Not reported",
+   "what": "ActiveCloud suffered a ransomware attack that breached its infrastructure and disrupted services for customers.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The attack encrypted parts of ActiveCloud's cloud environment, leading to service interruptions.",
+   "where": "No fixed location",
+   "major_impact": "essential_service_disruption",
+   "significance": "The ransomware incident significantly disrupted the services of ActiveCloud, affecting multiple organizations reliant on its cloud infrastructure. Confirmation of no data theft adds complexity to recovery efforts as some customer services remained affected after restoration of core systems.",
+   "id": "bdb305f85fd975ef",
+   "source_name": "Cyber Insider",
+   "source_url": "https://cyberinsider.co.uk/activecloud-restores-services-after-ransomware-disruption/",
+   "added": "2026-11-25T18:33:35+00:00",
+   "reported_date": "2026-11-16",
+   "last_reported": "2026-11-16",
+   "evidence_status": "confirmed",
+   "lat": 53.4250605,
+   "lon": 27.6971358,
+   "direct_evidence": {
+    "outcome": "confirmed_consequential_event",
+    "quote_sha256": "1abcfa50480d80fd69648b236ffb300c1dd00c578d0583f80905012452813781",
+    "excerpt": "ActiveCloud confirmed that attackers breached its infrastructure on 10 November and encrypted parts of its cloud environment."
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "ActiveCloud confirmed disruption to cloud services, business email, and customer communication, which affected organizations dependent on these services.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "none",
+     "essential": "disrupted",
+     "financial": "none"
+    },
+    "source_url": "https://cyberinsider.co.uk/activecloud-restores-services-after-ransomware-disruption/",
+    "assessed_at": "2026-11-25T18:33:35+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 53.4250605,
+     "lon": 27.6971358,
+     "label": "Belarus",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://cyberinsider.co.uk/activecloud-restores-services-after-ransomware-disruption/"
+    }
+   ]
   },
   {
    "title": "TSMC employee data stolen through breached cloud provider",
@@ -12057,6 +12163,59 @@
     "assessed_at": "2026-11-24T16:59:22+00:00",
     "method": "reported-impact-v1"
    }
+  },
+  {
+   "title": "ESTT cyberattack disrupts cloud infrastructure",
+   "date": "2026-11-06",
+   "category": "major_cyber",
+   "victim": "ESTT",
+   "attacker": "Not reported",
+   "what": "A cyberattack used file-encrypting malware to disrupt services.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "The cyberattack disrupted services across its cloud infrastructure.",
+   "where": "No fixed location",
+   "major_impact": "essential_service_disruption",
+   "significance": "The attack caused significant service disruption across ESTT's cloud infrastructure, impacting customer access to virtual servers.",
+   "id": "b0125dae6823cd6f",
+   "source_name": "The Moscow Times",
+   "source_url": "https://www.themoscowtimes.com/2026/11/09/cyberattack-disrupts-russian-web-hosting-provider-estt-a94212",
+   "added": "2026-11-25T18:33:35+00:00",
+   "reported_date": "2026-11-09",
+   "last_reported": "2026-11-09",
+   "evidence_status": "confirmed",
+   "lat": 64.6863136,
+   "lon": 97.7453061,
+   "direct_evidence": {
+    "outcome": "confirmed_consequential_event",
+    "quote_sha256": "0cbc44bd0f55b0d6a1fe95b5d3f3ce5595caa05e9fea23fb682b7511ced70dc0",
+    "excerpt": "ESTT said a cyberattack that used file-encrypting malware disrupted services across its cloud infrastructure on Sunday."
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The attack disrupted services for customers, with 90% of virtual servers restored but account dashboards still inaccessible.",
+    "evidence": {
+     "context": "real_world",
+     "service": "substantial",
+     "reach": "multiple",
+     "damage": "none",
+     "essential": "disrupted",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.themoscowtimes.com/2026/11/09/cyberattack-disrupts-russian-web-hosting-provider-estt-a94212",
+    "assessed_at": "2026-11-25T18:33:35+00:00",
+    "method": "reported-impact-v1"
+   },
+   "locations": [
+    {
+     "lat": 64.6863136,
+     "lon": 97.7453061,
+     "label": "Russia",
+     "basis": "Reported affected area",
+     "entity": "",
+     "source_url": "https://www.themoscowtimes.com/2026/11/09/cyberattack-disrupts-russian-web-hosting-provider-estt-a94212"
+    }
+   ]
   },
   {
    "title": "SonicOS SSL-VPN MFA-bypass flaw exploited in attacks",
@@ -19252,7 +19411,7 @@
    "updates": [
     {
      "date": "2026-10-29",
-     "what": "The Hermes AI agent was found running in an unattended mode, compromising multiple systems and allowing access to internal hosts and files.",
+     "what": "Hermes AI agent operated in unattended mode, compromising ministry systems.",
      "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
      "source": "Wiz Research"
     }
@@ -48158,7 +48317,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-25T14:48:10+00:00",
+ "last_added": "2026-11-25T18:33:35+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }
