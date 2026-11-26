@@ -1,14 +1,16 @@
 {
- "checked_at": "2026-11-26T05:39:11+00:00",
+ "checked_at": "2026-11-26T07:39:34+00:00",
  "last_success": "2026-11-26T05:39:11+00:00",
- "status": "ok",
- "added": 1,
+ "status": "failed",
+ "added": 0,
  "merged": 0,
- "processed": 16,
- "errors": 0,
- "summary_only": 1,
- "retrieval_warnings": 1,
- "error_samples": [],
+ "processed": 0,
+ "errors": 1,
+ "summary_only": 0,
+ "retrieval_warnings": 0,
+ "error_samples": [
+  "AuthenticationError (HTTP 401) [token_invalidated]"
+ ],
  "model": "gpt-4o-mini",
  "sources": [
   {
@@ -26,10 +28,17 @@
    "newest": "2026-11-25"
   },
   {
+   "source": "The Record",
+   "ok": true,
+   "entries": 5,
+   "candidates": 4,
+   "newest": "2026-11-25"
+  },
+  {
    "source": "The Hacker News",
    "ok": true,
    "entries": 50,
-   "candidates": 40,
+   "candidates": 41,
    "newest": "2026-11-26"
   },
   {
@@ -38,13 +47,6 @@
    "entries": 40,
    "candidates": 3,
    "newest": "2026-11-18"
-  },
-  {
-   "source": "The Record",
-   "ok": true,
-   "entries": 5,
-   "candidates": 4,
-   "newest": "2026-11-25"
   },
   {
    "source": "Cybersecurity Dive",
@@ -61,13 +63,6 @@
    "newest": "2026-11-26"
   },
   {
-   "source": "CyberScoop",
-   "ok": true,
-   "entries": 10,
-   "candidates": 10,
-   "newest": "2026-11-25"
-  },
-  {
    "source": "Dark Reading",
    "ok": true,
    "entries": 50,
@@ -75,10 +70,17 @@
    "newest": "2026-11-25"
   },
   {
+   "source": "CyberScoop",
+   "ok": true,
+   "entries": 10,
+   "candidates": 10,
+   "newest": "2026-11-25"
+  },
+  {
    "source": "Help Net Security",
    "ok": true,
    "entries": 10,
-   "candidates": 7,
+   "candidates": 6,
    "newest": "2026-11-26"
   },
   {
@@ -94,7 +96,7 @@
    "entries": 117
   }
  ],
- "pending": 0,
+ "pending": 67,
  "backfill": {
   "SecurityWeek": {
    "page": 67,
