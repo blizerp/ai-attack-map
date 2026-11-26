@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T01:26:18+00:00",
+ "updated": "2026-11-26T02:37:23+00:00",
  "incidents": [
   {
    "title": "1Password customer data stolen after employee GitHub account breach",
@@ -6647,7 +6647,13 @@
     "source_url": "https://www.securityweek.com/law-enforcement-disrupts-gootloader-castlerat-and-stealc-infrastructure/",
     "assessed_at": "2026-11-24T13:16:56+00:00",
     "method": "reported-impact-v1"
-   }
+   },
+   "more_sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html"
+    }
+   ]
   },
   {
    "title": "Baker Tilly client data taken from supplier's platform",
@@ -7573,54 +7579,6 @@
      "what": "Researchers documented 186 lookalike domains impersonating 27 AI brands. The domains delivered ClickFix lures, browser-hijacking malware, or search-hijacking Chrome extensions; one extension family had 16 live listings and 972,000 declared users.",
      "url": "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html",
      "source": "The Hacker News"
-    }
-   ]
-  },
-  {
-   "title": "Europol seizes 235 servers from cybercrime infrastructure",
-   "date": "2026-11-12",
-   "category": "major_cyber",
-   "victim": "At least 25,000 computers globally",
-   "attacker": "Multiple cybercriminal organizations",
-   "what": "Europol disrupted cybercrime infrastructure behind GootLoader, CastleRAT, and StealC malware.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Over 6 million victim credentials connected to these cybercrime tools were identified during this operation.",
-   "where": "Global",
-   "major_impact": "major_financial_loss",
-   "significance": "The operation showcases a significant crackdown on cybercrime-as-a-service, linking large-scale credential theft and ransomware attacks to specific tools.",
-   "id": "191c135c281ab3e1",
-   "source_name": "The Hacker News",
-   "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
-   "added": "2026-11-24T15:16:52+00:00",
-   "reported_date": "2026-11-12",
-   "last_reported": "2026-11-12",
-   "evidence_status": "confirmed",
-   "lat": 55.702215,
-   "lon": 12.5592485,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "GootLoader has led to significant financial losses across many U.S. victims due to ransomware attacks.",
-    "evidence": {
-     "context": "real_world",
-     "service": "unknown",
-     "reach": "widespread",
-     "damage": "limited",
-     "essential": "none",
-     "financial": "major"
-    },
-    "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html",
-    "assessed_at": "2026-11-24T15:16:52+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 55.702215,
-     "lon": 12.5592485,
-     "label": "Global",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html"
     }
    ]
   },
@@ -18570,6 +18528,50 @@
     },
     "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
     "assessed_at": "2026-11-16T22:12:47+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "NEAR AI exposes Cloud API keys in recent incident",
+   "date": "2026-11-09",
+   "category": "major_cyber",
+   "victim": "NEAR AI",
+   "attacker": "Not reported",
+   "what": "An inference server was accessed, resulting in exposure of Cloud API keys due to a remote code execution vulnerability.",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Access exploited a known vulnerability in the system.",
+   "where": "No fixed location",
+   "major_impact": "critical_network_intrusion",
+   "significance": "Exposure of API keys can lead to unauthorized access and exploitation of cloud services, posing risks to the operational integrity of AI services.",
+   "id": "7949fbf3b017c512",
+   "source_name": "Wiz Research",
+   "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+   "added": "2026-11-26T02:37:23+00:00",
+   "reported_date": "2026-10-30",
+   "last_reported": "2026-10-30",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "036c206ac50e4dbc9d530ad69a283768082d051d00d6fa76358266de98ff45c2",
+    "excerpt": "11-10, 14:19 UTC - NEAR AI disclosed an incident on 11-09 (Nov 8), in which an inference server was accessed",
+    "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms"
+   },
+   "severity": {
+    "level": "limited",
+    "status": "preliminary",
+    "reason": "Exposure of API keys can facilitate unauthorized cloud service usage.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "single",
+     "damage": "none",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+    "assessed_at": "2026-11-26T02:37:23+00:00",
     "method": "reported-impact-v1"
    }
   },
@@ -48187,7 +48189,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-25T23:36:34+00:00",
+ "last_added": "2026-11-26T02:37:23+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }
