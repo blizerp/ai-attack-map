@@ -293,6 +293,11 @@ def merge_record(u, data, item, rec, geo, now):
             dup.setdefault('more_sources', []).append({'name':item['source'], 'url':item['url']})
         dup['last_reported'] = max(dup.get('last_reported', dup.get('reported_date', dup.get('date',''))), reported)
         dup.setdefault('reported_date', reported)
+        # Backfill an audit receipt only when the original source and named victim agree.
+        if (not dup.get('direct_evidence') and rec.get('_evidence')
+                and dup.get('source_url') == item['url']
+                and victim_key(dup.get('victim', '')) == victim_key(rec.get('victim', ''))):
+            dup['direct_evidence'] = dict(rec['_evidence'], source_url=item['url'])
         if dup['category'] == 'major_cyber' and rec['category'] in u.AI_CATEGORIES:
             dup.update(category=rec['category'], ai_role=rec['ai_role'], ai_source_url=item['url'], ai_source_name=item['source'])
         if rec.get('evidence_status') == 'confirmed' or 'evidence_status' not in dup:

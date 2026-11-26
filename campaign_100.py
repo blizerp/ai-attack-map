@@ -6,6 +6,7 @@ from pathlib import Path
 
 # Follow-up audit of the latest batch. Preserve full records, never modify baseline.
 HOLD_REASONS = {
+    "191c135c281ab3e1": "Same November 12 Europol Operation Endgame against Gootloader, CastleRAT and StealC as canonical 1d1a2e7c63d82ae0; the takedown was not a second attack. Official source: https://www.europol.europa.eu/media-press/newsroom/news/64-million-victim-datasets-secured-in-international-operation-against-malware-networks",
     "704b8c4b8b1d851c": "Dark Reading explicitly cites the same Unit 42 CL-STA-1238 Cairn campaign: 25 operations, 19 targets, 10 compromised organizations, as baseline 541bf08e14054fb6. Preserve alternate reporting, not a second incident.",
     "012170b4116a892b": "Same November 23 Todoist production compromise and customer data theft as official disclosure 1341e54c29c2482a; keep the primary source record and attach TechCrunch as corroboration.",
     "d1ccbf3eed42133e": "Same Vanderbilt campus cyberattack and device shutdown instruction as baseline 246876e43529de2b; November 13 roundup is a follow-up.",
@@ -103,7 +104,7 @@ def refresh(root, initialize=False):
         # Reconcile independently reviewed cross-source duplicates with the canonical
         # retained record. Preserve the held record and its evidence in the archive;
         # attach only the alternate source, not its unverified impact assertions.
-        canonical_by_held_id = {"704b8c4b8b1d851c": "541bf08e14054fb6", "012170b4116a892b": "1341e54c29c2482a", "d1ccbf3eed42133e": "246876e43529de2b", "5b9b8d2fc48f9597": "d71f76de489e4c83", "6f6fef3ed8e124c6": "57d71ea154a28bdc", "62043f10af8e6e72": "bff6180f286a6d5b", "05da5b398dc52fb0": "7571f14ad3bb87b6", "9c255d81510cbc8a": "73b37c649f3a75f2", "f4e984ed82aa9ab1": "0608e73237d158c5", "ab9e2877fe9b3e26": "f49b8a947f4e7688", "495b29314c2eb2eb": "a50dfe86319a6af0", "df9a1b4931dc938e": "bebedc9daae1e677", "b1c27b067e00ac4a": "e2e13fe6f7503c25", "f1d6246d982b8a56": "a2d8ddfa90774e7d"}
+        canonical_by_held_id = {"191c135c281ab3e1": "1d1a2e7c63d82ae0", "704b8c4b8b1d851c": "541bf08e14054fb6", "012170b4116a892b": "1341e54c29c2482a", "d1ccbf3eed42133e": "246876e43529de2b", "5b9b8d2fc48f9597": "d71f76de489e4c83", "6f6fef3ed8e124c6": "57d71ea154a28bdc", "62043f10af8e6e72": "bff6180f286a6d5b", "05da5b398dc52fb0": "7571f14ad3bb87b6", "9c255d81510cbc8a": "73b37c649f3a75f2", "f4e984ed82aa9ab1": "0608e73237d158c5", "ab9e2877fe9b3e26": "f49b8a947f4e7688", "495b29314c2eb2eb": "a50dfe86319a6af0", "df9a1b4931dc938e": "bebedc9daae1e677", "b1c27b067e00ac4a": "e2e13fe6f7503c25", "f1d6246d982b8a56": "a2d8ddfa90774e7d"}
         by_id = {str(i.get("id")): i for i in incidents}
         for i in held:
             canonical_id = canonical_by_held_id.get(str(i.get("id")))
@@ -119,17 +120,27 @@ def refresh(root, initialize=False):
         ids-=data_ids
         old["followup_quality_audit"]={"archive":archive_path.name,"held_ids":sorted(archive)}
     added=sorted(ids-baseline)
+    # A count of database IDs is not an evidence audit. Legacy imports without
+    # a direct receipt remain candidates and cannot prematurely end the campaign.
+    verified = sorted(str(i["id"]) for i in attacks.get("incidents", [])
+                      if str(i.get("id")) in added and i.get("source_url")
+                      and i.get("evidence_status") in {"confirmed", "under_investigation"}
+                      and (i.get("direct_evidence") or {}).get("outcome") in {"confirmed_compromise", "confirmed_consequential_event"}
+                      and (i.get("direct_evidence") or {}).get("excerpt")
+                      and len((i.get("direct_evidence") or {}).get("quote_sha256", "")) == 64)
     pending=json.loads((root/"pending.json").read_text())
     feed=json.loads((root/"feed_status.json").read_text())
     old.update({"new_unique_incidents":len(added),"new_incident_ids":added,
                 "remaining":max(0,old["target"]-len(added)),
+                "direct_evidence_incidents":len(verified), "direct_evidence_ids":verified,
+                "evidence_review_remaining":max(0,old["target"]-len(verified)),
                 "pending_articles":len(pending),
                 "last_ingestion_status":feed.get("status"),
                 "last_ingestion_processed":feed.get("processed",0),
                 "last_ingestion_errors":feed.get("errors",0),
                 "last_ingestion_error_samples":feed.get("error_samples",[]),
                 "last_checked_at":datetime.now(timezone.utc).isoformat(),
-                "status":"complete" if len(added)>=old["target"] else "running"})
+                "status":"complete" if len(verified)>=old["target"] else "running"})
     path.write_text(json.dumps(old,indent=2)+"\n")
     print(json.dumps({k:old[k] for k in ("status","new_unique_incidents","remaining","pending_articles","last_ingestion_status","last_ingestion_errors")}))
     return old

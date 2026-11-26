@@ -301,6 +301,22 @@ def direct_incident_evidence(rec, quote, article):
     return not direct_incident_failures(rec, quote, article)
 
 
+def evidence_spans(article):
+    """Stable source offsets; numbering is presentation only, never evidence."""
+    return [(m.start(), m.end()) for m in re.finditer(
+        r"\S[^\n]*?(?:[.!?](?=\s|$)|(?=\n|$))", article)]
+
+
+def selected_evidence(article, spans, start, end):
+    """Resolve at most two adjacent, source-authored spans; fail closed."""
+    if type(start) is not int or type(end) is not int:
+        return ""
+    if not 1 <= start <= end <= len(spans) or end - start > 1:
+        return ""
+    passage = article[spans[start - 1][0]:spans[end - 1][1]]
+    return passage if len(passage) <= 1200 else ""
+
+
 def extract(client, item, tracked):
     # Bound repeated context to recent incidents to control API costs.
     # Search likely duplicates across the full database, maintaining the 40-record cap.
@@ -319,26 +335,29 @@ def extract(client, item, tracked):
     latest = sorted(tracked, key=lambda t: t.get("last_reported") or t.get("date") or "", reverse=True)
     recent = list({t["id"]: t for t in ranked + latest[:40]}.values())[:40]
     known = "\n".join(f"{t['id']}: {t['date']} | {t['category']} | {t['victim']} | {t['title']}" for t in recent) or "(none yet)"
+    article = item.get("text", "")
+    spans = evidence_spans(article)
+    numbered = "\n".join(f"[E{i}] {article[a:b]}" for i, (a, b) in enumerate(spans, 1))
     user = (f"Already-tracked incidents:\n{known}\n\n---\n"
             f"Source: {item['source']}\nPublished: {item['date']}\nTitle: {item['title']}\n"
-            f"URL: {item['url']}\n\n{item['text']}")
+            f"URL: {item['url']}\n\n{numbered}")
     extraction_schema = dict(
-        SCHEMA, properties=dict(SCHEMA["properties"], evidence_quote=TEXT,
+        SCHEMA, properties=dict(SCHEMA["properties"], evidence_start={"type": "integer"}, evidence_end={"type": "integer"},
                                 actual_outcome={"type": "string", "enum": [
                                     "confirmed_compromise", "confirmed_consequential_event",
                                     "research_demonstration", "attempt_without_compromise",
                                     "potential_impact_only", "background_or_forecast", "unverified"]}),
-        required=list(SCHEMA["required"]) + ["evidence_quote", "actual_outcome"])
+        required=list(SCHEMA["required"]) + ["evidence_start", "evidence_end", "actual_outcome"])
     resp = client.chat.completions.create(
         model=MODEL,
         # Omit reasoning_effort: the configured model may not support it.
-        messages=[{"role": "system", "content": SYSTEM_PROMPT + "\nFor each include decision, evidence_quote must be a verbatim passage from the supplied article body, not known-incident context or headline, establishing actual compromise or a confirmed consequential cybersecurity event. Copy one short contiguous passage, exactly as written in the article body, including its original punctuation and wording. Prefer one or two complete sentences with explicit past-tense observed outcomes. Do not paraphrase, translate, insert ellipses, concatenate nonadjacent sentences, or add quotation marks not present in the passage. Before returning an include decision, check that the exact quotation occurs in the supplied body and establishes the outcome for that same victim. If no such passage exists, defer. Exclude unrelated background links, product announcements, and navigation. Defer if direct evidence is absent. Match likely duplicates even when victim names or dates differ. Independently classify actual_outcome based on what happened, not the capabilities described: a controlled research demonstration, failed attack, mere vulnerable exposure, possible impact, or background anecdote must never be a confirmed_compromise. For AI categories require the same observed, consequential outcome as conventional attacks. Never attribute AI use unless directly supported. Do not inflate a campaign into multiple overlapping records. A vendor breach affecting several customers is one underlying incident unless the article establishes independent compromises. A warning, study, advisory, sentencing report, or precautionary shutdown is not a separate incident if it merely describes previously reported events or hypothetical risk. Compare the actual intrusion, victim, product, and event date rather than the report publication date. For confirmed consequential events the evidence quote must establish a real affected organization or a documented affected population and actual unauthorized access, theft, service disruption, or another qualifying observed effect."}, {"role": "user", "content": user}],
+        messages=[{"role": "system", "content": SYSTEM_PROMPT + "\nFor each include decision, select evidence_start and evidence_end as the numerical E-labels of one or two adjacent article-body passages that directly establish actual compromise or a confirmed consequential cybersecurity event for the SAME victim. For one passage, set both numbers equal. The program copies the exact source text from those offsets; do not select the headline, known-incident context, unrelated navigation or conditional language. If no qualifying passage exists, use zero for both and defer. Choose a short, explicit, observed outcome, not a claim or an allegation. Exclude unrelated background links, product announcements, and navigation. Defer if direct evidence is absent. Match likely duplicates even when victim names or dates differ. Independently classify actual_outcome based on what happened, not the capabilities described: a controlled research demonstration, failed attack, mere vulnerable exposure, possible impact, or background anecdote must never be a confirmed_compromise. For AI categories require the same observed, consequential outcome as conventional attacks. Never attribute AI use unless directly supported. Do not inflate a campaign into multiple overlapping records. A vendor breach affecting several customers is one underlying incident unless the article establishes independent compromises. A warning, study, advisory, sentencing report, or precautionary shutdown is not a separate incident if it merely describes previously reported events or hypothetical risk. Compare the actual intrusion, victim, product, and event date rather than the report publication date. For confirmed consequential events the selected source passage must establish a real affected organization or a documented affected population and actual unauthorized access, theft, service disruption, or another qualifying observed effect."}, {"role": "user", "content": user}],
         response_format={"type": "json_schema",
                          "json_schema": {"name": "incident", "strict": True, "schema": {"type":"object","additionalProperties":False,"properties":{"incidents":{"type":"array","items":extraction_schema}},"required":["incidents"]}}},
     )
     records = json.loads(resp.choices[0].message.content)["incidents"]
     for rec in records:
-        quote = rec.pop("evidence_quote", "")
+        quote = selected_evidence(article, spans, rec.pop("evidence_start", 0), rec.pop("evidence_end", 0))
         if rec.get("decision") == "include":
             failures = direct_incident_failures(rec, quote, item.get("text", ""))
             if failures:
@@ -346,7 +365,7 @@ def extract(client, item, tracked):
                            decision_reason="Direct evidence gate: " + ", ".join(failures))
         actual_outcome = rec.pop("actual_outcome", None)
         if rec.get("decision") == "include":
-            rec["_evidence"] = {"outcome": actual_outcome, "quote_sha256": hashlib.sha256(quote.encode("utf-8")).hexdigest(), "excerpt": " ".join(quote.split()[:20])}
+            rec["_evidence"] = {"outcome": actual_outcome, "quote_sha256": hashlib.sha256(quote.encode("utf-8")).hexdigest(), "excerpt": " ".join(quote.split()[:20]), "source_url": item["url"]}
     return records
 
 

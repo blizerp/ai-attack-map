@@ -182,6 +182,19 @@ class SelectionTests(unittest.TestCase):
             self.assertFalse(u.direct_incident_evidence(base, passage, passage))
         self.assertFalse(u.direct_incident_evidence(dict(base, actual_outcome="research_demonstration"), quote, quote))
 
+    def test_evidence_selection_is_exact_bounded_and_fail_closed(self):
+        article = "Unrelated introduction.\nThe utility confirmed unauthorized access to its operational network.  Patient records were stolen.\nA flaw could allow access."
+        spans = u.evidence_spans(article)
+        base = record(actual_outcome="confirmed_compromise", severity_evidence={"context":"real_world"})
+        quote = u.selected_evidence(article, spans, 2, 3)
+        self.assertEqual(quote, "The utility confirmed unauthorized access to its operational network.  Patient records were stolen.")
+        self.assertIn(quote, article)
+        self.assertTrue(u.direct_incident_evidence(base, quote, article))
+        for start, end in ((0, 0), (2, 4), (3, 2), (4, 99), (True, 2), ("2", 2)):
+            self.assertEqual(u.selected_evidence(article, spans, start, end), "")
+        self.assertFalse(u.direct_incident_evidence(base, u.selected_evidence(article, spans, 4, 4), article))
+        self.assertFalse(u.direct_incident_evidence(dict(base, actual_outcome="research_demonstration"), quote, article))
+
     def test_schema_requires_all_fields(self):
         self.assertEqual(set(u.SCHEMA['required']), set(u.SCHEMA['properties']))
 
