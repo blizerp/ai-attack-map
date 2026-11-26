@@ -6,6 +6,9 @@ from pathlib import Path
 
 # Follow-up audit of the latest batch. Preserve full records, never modify baseline.
 HOLD_REASONS = {
+    "012170b4116a892b": "Same November 23 Todoist production compromise and customer data theft as official disclosure 1341e54c29c2482a; keep the primary source record and attach TechCrunch as corroboration.",
+    "d1ccbf3eed42133e": "Same Vanderbilt campus cyberattack and device shutdown instruction as baseline 246876e43529de2b; November 13 roundup is a follow-up.",
+    "5c7337af671909cb": "Sponsored illustrative scenario, not a reported attack: the article opens with Imagine an AI agent being created and narrates a hypothetical company.",
     "5b9b8d2fc48f9597": "Same Cold Relic cloud identity compromise of two linked organizations already covered by the baseline canonical incident; roundup supplies no separate intrusion. Canonical d71f76de489e4c83.",
     "6f6fef3ed8e124c6": "Same FaceStealer campaign and $400 million cryptocurrency theft described in the baseline canonical record; disruption follow-up is not a separate attack. Canonical 57d71ea154a28bdc.",
     "62043f10af8e6e72": "Malformed title and wrong victim Nebula AI; quoted Wiz evidence identifies the same November 8 NEAR AI inference-server compromise already in baseline bff6180f286a6d5b.",
@@ -99,7 +102,7 @@ def refresh(root, initialize=False):
         # Reconcile independently reviewed cross-source duplicates with the canonical
         # retained record. Preserve the held record and its evidence in the archive;
         # attach only the alternate source, not its unverified impact assertions.
-        canonical_by_held_id = {"5b9b8d2fc48f9597": "d71f76de489e4c83", "6f6fef3ed8e124c6": "57d71ea154a28bdc", "62043f10af8e6e72": "bff6180f286a6d5b", "05da5b398dc52fb0": "7571f14ad3bb87b6", "9c255d81510cbc8a": "73b37c649f3a75f2", "f4e984ed82aa9ab1": "0608e73237d158c5", "ab9e2877fe9b3e26": "f49b8a947f4e7688", "495b29314c2eb2eb": "a50dfe86319a6af0", "df9a1b4931dc938e": "bebedc9daae1e677", "b1c27b067e00ac4a": "e2e13fe6f7503c25", "f1d6246d982b8a56": "a2d8ddfa90774e7d"}
+        canonical_by_held_id = {"012170b4116a892b": "1341e54c29c2482a", "d1ccbf3eed42133e": "246876e43529de2b", "5b9b8d2fc48f9597": "d71f76de489e4c83", "6f6fef3ed8e124c6": "57d71ea154a28bdc", "62043f10af8e6e72": "bff6180f286a6d5b", "05da5b398dc52fb0": "7571f14ad3bb87b6", "9c255d81510cbc8a": "73b37c649f3a75f2", "f4e984ed82aa9ab1": "0608e73237d158c5", "ab9e2877fe9b3e26": "f49b8a947f4e7688", "495b29314c2eb2eb": "a50dfe86319a6af0", "df9a1b4931dc938e": "bebedc9daae1e677", "b1c27b067e00ac4a": "e2e13fe6f7503c25", "f1d6246d982b8a56": "a2d8ddfa90774e7d"}
         by_id = {str(i.get("id")): i for i in incidents}
         for i in held:
             canonical_id = canonical_by_held_id.get(str(i.get("id")))

@@ -259,8 +259,29 @@ def merge_record(u, data, item, rec, geo, now):
                                   and len(shared) >= 2
                                   and title_signature(i.get("title","")) == title_signature(rec.get("title","")))
             return bool(same_roundup_event or (named_alias and same_date and title_sim >= .75))
+        # Parallel review uses a snapshot of known incidents, so two sources
+        # may independently extract the same event with different titles.
+        # Require exact named victim/day, the same impact, confirmed direct
+        # evidence on both, and shared specific event AND mechanism phrases.
+        def phrases(value):
+            aliases = {"data": "information"}
+            tokens = [aliases.get(w, w) for w in entity(value)]
+            common = {"the", "and", "to", "of", "a", "an", "its", "their", "by",
+                      "from", "in", "with", "access", "gained", "unauthorized",
+                      "attacker", "hacker", "breach", "attack", "credentials"}
+            return {(a, b) for a, b in zip(tokens, tokens[1:])
+                    if a not in common and b not in common}
+        shared_event = phrases(i.get("what", "")) & phrases(rec.get("what", ""))
+        shared_mechanism = phrases(i.get("why", "")) & phrases(rec.get("why", ""))
+        event_match = (same_date and i.get("category") == rec.get("category")
+                       and i.get("major_impact") and i.get("major_impact") == rec.get("major_impact")
+                       and (i.get("direct_evidence") or {}).get("outcome") == "confirmed_compromise"
+                       and (rec.get("_evidence") or {}).get("outcome") == "confirmed_compromise"
+                       and any(not (set(a) & set(b)) for a in shared_event for b in shared_event)
+                       and bool(shared_mechanism))
         return ((same_source and title_sim >= .75)
-                or (same_date and title_sim >= .8))
+                or (same_date and title_sim >= .8)
+                or event_match)
     strong = [i for i in data['incidents'] if strong_match(i)]
     deterministic = strong[0] if len(strong) == 1 else None
     dup = by_id.get(rec.get('duplicate_of')) or source_match or id_match or deterministic

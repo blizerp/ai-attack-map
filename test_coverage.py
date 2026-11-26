@@ -161,6 +161,36 @@ class CoverageTests(unittest.TestCase):
         self.assertEqual((result,identifier),('merged','original'))
         self.assertEqual(len(data['incidents']),2)
 
+    def test_same_victim_day_and_specific_event_and_mechanism_merge(self):
+        from test_selection import record
+        original={'id':'original','title':'Todoist confirms theft of six percent of customer details',
+                  'victim':'Todoist','date':'2026-11-23','category':'major_cyber',
+                  'major_impact':'large_scale_data_theft',
+                  'what':'A hacker gained access to production systems and stole customer data.',
+                  'why':'Stolen credentials used to access the version control system.',
+                  'direct_evidence':{'outcome':'confirmed_compromise'},
+                  'source_url':'https://example.com/original'}
+        item={'id':'new','url':'https://example.com/followup','source':'Test','date':'2026-11-25'}
+        rec=record(victim='Todoist',title='Todoist confirms unauthorized production access and customer data theft',
+                   date='2026-11-23',major_impact='large_scale_data_theft',
+                   what='An attacker accessed production systems and retrieved customer information.',
+                   why='Credentials associated with their version control system were exploited.',
+                   _evidence={'outcome':'confirmed_compromise'})
+        data={'incidents':[dict(original)]}
+        with patch.object(u,'update_severity'):
+            result,identifier=c.merge_record(u,data,item,rec,{},'2026-11-25T00:00:00+00:00')
+        self.assertEqual((result,identifier),('merged','original'))
+        self.assertEqual(len(data['incidents']),1)
+        # Same victim, day, and broad outcome are not sufficient for a merge.
+        data={'incidents':[dict(original)]}
+        distinct=dict(rec,title='Todoist payment processor data incident',
+                      what='A third party stole customer information from payment records.',
+                      why='Exploitation of the payment gateway.')
+        with patch.object(u,'update_severity'), patch.object(u,'locate_incident'):
+            result,identifier=c.merge_record(u,data,item,distinct,{},'2026-11-25T00:00:00+00:00')
+        self.assertEqual((result,identifier),('added','new'))
+        self.assertEqual(len(data['incidents']),2)
+
     def test_same_date_distinct_named_victims_do_not_merge(self):
         from test_selection import record
         original={'id':'original','title':'Hospital A data breach reported','victim':'Hospital A','date':'2026-10-20','category':'major_cyber','source_url':'https://example.com/original'}
