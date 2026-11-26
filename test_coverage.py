@@ -7,6 +7,23 @@ import update as u
 import coverage_collector as c
 
 class CoverageTests(unittest.TestCase):
+    def test_reviewed_near_alias_does_not_duplicate_baseline(self):
+        from test_selection import record
+        url = 'https://www.wiz.io/blog/black-october-for-ai-developer-platforms'
+        original = {'id':'bff6180f286a6d5b','title':'SGLang inference intrusion',
+                    'victim':'NEAR AI, including NEAR AI Agents and Private Chat users',
+                    'date':'2026-11-08','category':'major_cyber',
+                    'source_url':'https://example.com/near',
+                    'more_sources':[{'name':'Wiz','url':url}]}
+        data = {'incidents':[original]}
+        item = {'id':'roundup','url':url,'source':'Wiz','date':'2026-10-30'}
+        with patch.object(u,'update_severity'), patch.object(u,'geocode',return_value=None):
+            result, identifier = c.merge_record(u,data,item,record(victim='NEAR AI',date='2026-11-09'),{},'2026-11-26T00:00:00+00:00')
+            self.assertEqual((result, identifier), ('merged', original['id']))
+            result, identifier = c.merge_record(u,data,item,record(victim='Other Company',date='2026-11-09'),{},'2026-11-26T00:00:00+00:00')
+            self.assertEqual(result, 'added')
+        self.assertEqual(len(data['incidents']),2)
+
     def test_single_report_reuses_incident_when_victim_name_is_paraphrased(self):
         from test_selection import record
         inc={'id':'canonical','title':'Cloud intrusion','date':'2026-10-20','category':'major_cyber',

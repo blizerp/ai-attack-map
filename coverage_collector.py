@@ -200,6 +200,16 @@ def merge_record(u, data, item, rec, geo, now):
     def victim_key(value):
         return str(value).casefold().replace('\u2019', "'").replace('\u2018', "'").strip()
     source_match = next((i for i in source_records if victim_key(i['victim']) == victim_key(rec.get('victim', i['victim']))), None)
+    # Independently reviewed alias of a specific multi-incident roundup.
+    # Match only the exact source, victim and event/disclosure dates; other
+    # incidents in the roundup must still be evaluated independently.
+    if (source_match is None
+            and item['url'] == 'https://www.wiz.io/blog/black-october-for-ai-developer-platforms'
+            and victim_key(rec.get('victim', '')) == 'near ai'
+            and rec.get('date') in {'2026-11-08', '2026-11-09'}):
+        canonical = by_id.get('bff6180f286a6d5b')
+        if canonical is not None and canonical in source_records:
+            source_match = canonical
     if source_match is None and item.get('single_incident') and len(source_records) == 1:
         # One report, one known event: a paraphrased victim name is not a new attack.
         # Multi-event roundups retain victim-level matching.

@@ -271,20 +271,25 @@ def fetch_tracker():
     return []
 
 
-def direct_incident_failures(rec, quote, article):
-    """Return only fixed diagnostic codes, never rejected article text."""
-    normalize = lambda value: re.sub(r"\s+", " ", value).strip().casefold()
-    q = normalize(quote)
-    role = rec.get("ai_role", "").casefold()
+def observed_outcome_wording(quote):
+    """Lexical precheck only; never establishes incident identity or validity."""
+    q = re.sub(r"\s+", " ", quote).strip().casefold()
     # A model label is not evidence: require an observed outcome in the quotation.
     # Conditional advisories and capability descriptions must not pass as incidents.
     hypothetical = re.compile(r"\b(?:could|would|might|may|can)\s+(?:allow|let|enable|lead|result|cause|provide|gain|execute|access|steal|expose|bypass|compromise|obtain|be exploited)\b|\bif (?:successfully )?exploited\b|\bsuccessful exploitation (?:could|would|may|can)\b")
     observed = re.compile(r"\b(?:confirmed unauthori[sz]ed access|unauthori[sz]ed (?:user|party|person|third[- ]party) (?:accessed|was able to access|(?:had )?gained access)|unauthori[sz]ed activity[^.!?]{0,240}resulting in unauthori[sz]ed access|resulted in a data breach involving personal data|unauthori[sz]ed access (?:occurred|was detected|was confirmed)|(?:was|were) confirmed to have been (?:leaked|stolen|exfiltrated|accessed|compromised)|(?:was|were|had been|has been|have been) (?:breached|compromised|stolen|exfiltrated|accessed|disrupted|encrypted)|(?:attackers?|intruders?|hackers?|threat actors?) (?:accessed|stole|exfiltrated|compromised|breached|encrypted|deployed|obtained|infiltrated|gained)|(?:data|records|files|credentials) (?:was|were) (?:exposed|leaked|stolen|exfiltrated|accessed)|(?:diverted|redirected) (?:ambulances|patients|emergency services)|(?:forced|caused) (?:it|the (?:hospital|company|utility|organization|operator)) to (?:send|divert|suspend|close|shut|cancel)|(?:suspended|disrupted|halted|cancelled|canceled|shut down) (?:operations|services|appointments|production|surgeries|trading)|(?:confirmed|disclosed|reported|detected) (?:a |an |the )?(?:data breach|security breach|network intrusion|ransomware attack|unauthori[sz]ed access)|(?:confirmed|confirms|can confirm) (?:that )?(?:it|the (?:city|company|hospital|organization)) (?:is|was) (?:a |the )?victim of a ransomware attack|(?:third party|third-party actor) (?:had )?gained unauthori[sz]ed access|unauthori[sz]ed party (?:had )?gained access|ransomware encrypted (?:data|files|servers|systems)|(?:breach|intrusion|attack) (?:resulted in|led to|disrupted|forced|exposed)|cyber(?:security)? incident (?:that )?(?:resulted in|led to) unauthori[sz]ed access)\b")
     negated = re.compile(r"\b(?:no evidence of|no (?:signs|evidence) (?:that|of)|no unauthori[sz]ed (?:user|party|person|third[- ]party)|not (?:been )?(?:compromised|accessed|exploited)|failed to|unsuccessful|attempted to)\b")
     sentences = re.split(r"(?<=[.!?])\s+", q)
-    actual = any(observed.search(s) and not hypothetical.search(s) and not negated.search(s) for s in sentences)
+    return any(observed.search(s) and not hypothetical.search(s) and not negated.search(s) for s in sentences)
+
+
+def direct_incident_failures(rec, quote, article):
+    """Return only fixed diagnostic codes, never rejected article text."""
+    normalize = lambda value: re.sub(r"\s+", " ", value).strip().casefold()
+    q = normalize(quote)
+    role = rec.get("ai_role", "").casefold()
     checks = {
-        "observed_outcome_wording": actual,
+        "observed_outcome_wording": observed_outcome_wording(quote),
         "verbatim_article_quote": len(q) >= 20 and q in normalize(article),
         "confirmed_outcome": rec.get("actual_outcome") in {"confirmed_compromise", "confirmed_consequential_event"},
         "real_world_context": rec.get("severity_evidence", {}).get("context") == "real_world",
@@ -331,13 +336,20 @@ def extract(client, item, tracked):
         v = tokens(t.get("victim", ""))
         h = tokens(t.get("title", ""))
         return 3 * len(q & v) / max(1, len(v)) + len(q & h) / max(1, len(h))
-    ranked = sorted(tracked, key=overlap, reverse=True)[:25]
+    # Known source identity outranks incidental words in long roundups.
+    def source_match(t):
+        return item["url"] in ({t.get("source_url")} | {s.get("url") for s in t.get("more_sources", [])})
+    ranked = sorted(tracked, key=lambda t: (source_match(t), overlap(t)), reverse=True)[:25]
     latest = sorted(tracked, key=lambda t: t.get("last_reported") or t.get("date") or "", reverse=True)
     recent = list({t["id"]: t for t in ranked + latest[:40]}.values())[:40]
     known = "\n".join(f"{t['id']}: {t['date']} | {t['category']} | {t['victim']} | {t['title']}" for t in recent) or "(none yet)"
     article = item.get("text", "")
     spans = evidence_spans(article)
-    numbered = "\n".join(f"[E{i}] {article[a:b]}" for i, (a, b) in enumerate(spans, 1))
+    # Mark passages meeting the existing lexical gate to help the model select
+    # valid offsets, without changing the gate or making extra API calls.
+    numbered = "\n".join(
+        f"[E{i}]{' *' if observed_outcome_wording(article[a:b]) else ''} {article[a:b]}"
+        for i, (a, b) in enumerate(spans, 1))
     user = (f"Already-tracked incidents:\n{known}\n\n---\n"
             f"Source: {item['source']}\nPublished: {item['date']}\nTitle: {item['title']}\n"
             f"URL: {item['url']}\n\n{numbered}")
@@ -351,7 +363,7 @@ def extract(client, item, tracked):
     resp = client.chat.completions.create(
         model=MODEL,
         # Omit reasoning_effort: the configured model may not support it.
-        messages=[{"role": "system", "content": SYSTEM_PROMPT + "\nFor each include decision, select evidence_start and evidence_end as the numerical E-labels of one or two adjacent article-body passages that directly establish actual compromise or a confirmed consequential cybersecurity event for the SAME victim. For one passage, set both numbers equal. The program copies the exact source text from those offsets; do not select the headline, known-incident context, unrelated navigation or conditional language. If no qualifying passage exists, use zero for both and defer. Choose a short, explicit, observed outcome, not a claim or an allegation. Exclude unrelated background links, product announcements, and navigation. Defer if direct evidence is absent. Match likely duplicates even when victim names or dates differ. Independently classify actual_outcome based on what happened, not the capabilities described: a controlled research demonstration, failed attack, mere vulnerable exposure, possible impact, or background anecdote must never be a confirmed_compromise. For AI categories require the same observed, consequential outcome as conventional attacks. Never attribute AI use unless directly supported. Do not inflate a campaign into multiple overlapping records. A vendor breach affecting several customers is one underlying incident unless the article establishes independent compromises. A warning, study, advisory, sentencing report, or precautionary shutdown is not a separate incident if it merely describes previously reported events or hypothetical risk. Compare the actual intrusion, victim, product, and event date rather than the report publication date. For confirmed consequential events the selected source passage must establish a real affected organization or a documented affected population and actual unauthorized access, theft, service disruption, or another qualifying observed effect."}, {"role": "user", "content": user}],
+        messages=[{"role": "system", "content": SYSTEM_PROMPT + "\nFor each include decision, select evidence_start and evidence_end as the numerical E-labels of one or two adjacent article-body passages that directly establish actual compromise or a confirmed consequential cybersecurity event for the SAME victim. For one passage, set both numbers equal. An asterisk after a label flags wording that meets a preliminary observed-outcome lexical check, not proof of an incident. Prefer a marked passage only if it actually supports the SAME victim and qualifying incident; include its adjacent context if needed. For an already-tracked event with qualifying source evidence, return include with duplicate_of so the existing record can receive an evidence receipt instead of creating a new one. The program copies the exact source text from those offsets; do not select the headline, known-incident context, unrelated navigation or conditional language. If no qualifying passage exists, use zero for both and defer. Choose a short, explicit, observed outcome, not a claim or an allegation. Exclude unrelated background links, product announcements, and navigation. Defer if direct evidence is absent. Match likely duplicates even when victim names or dates differ. Independently classify actual_outcome based on what happened, not the capabilities described: a controlled research demonstration, failed attack, mere vulnerable exposure, possible impact, or background anecdote must never be a confirmed_compromise. For AI categories require the same observed, consequential outcome as conventional attacks. Never attribute AI use unless directly supported. Do not inflate a campaign into multiple overlapping records. A vendor breach affecting several customers is one underlying incident unless the article establishes independent compromises. A warning, study, advisory, sentencing report, or precautionary shutdown is not a separate incident if it merely describes previously reported events or hypothetical risk. Compare the actual intrusion, victim, product, and event date rather than the report publication date. For confirmed consequential events the selected source passage must establish a real affected organization or a documented affected population and actual unauthorized access, theft, service disruption, or another qualifying observed effect."}, {"role": "user", "content": user}],
         response_format={"type": "json_schema",
                          "json_schema": {"name": "incident", "strict": True, "schema": {"type":"object","additionalProperties":False,"properties":{"incidents":{"type":"array","items":extraction_schema}},"required":["incidents"]}}},
     )

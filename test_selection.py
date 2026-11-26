@@ -25,6 +25,11 @@ def record(**overrides):
     return rec
 
 class SelectionTests(unittest.TestCase):
+    def test_preliminary_passage_marker_preserves_observed_wording(self):
+        self.assertTrue(u.observed_outcome_wording("Attackers stole customer records from the hospital."))
+        self.assertFalse(u.observed_outcome_wording("The vulnerability could allow attackers to steal data."))
+        self.assertFalse(u.observed_outcome_wording("There was no evidence of unauthorized access."))
+
     def test_severity_tiers_depend_on_observed_impact(self):
         base=dict(context='real_world',service='unknown',reach='single',damage='unknown',essential='unknown',reason='Source evidence.')
         cases=[({},'unknown'), ({'damage':'limited'},'limited'), ({'damage':'sensitive_data'},'significant'),
