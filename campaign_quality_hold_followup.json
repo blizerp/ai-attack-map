@@ -3485,5 +3485,52 @@
         }
       ]
     }
+  },
+  "7949fbf3b017c512": {
+    "reason": "Same November 8 NEAR AI inference-server intrusion and exposed cloud API keys already documented in baseline bff6180f286a6d5b. Wiz explicitly identifies the November 9 disclosure, not a second attack.",
+    "record": {
+      "title": "NEAR AI exposes Cloud API keys in recent incident",
+      "date": "2026-11-09",
+      "category": "major_cyber",
+      "victim": "NEAR AI",
+      "attacker": "Not reported",
+      "what": "An inference server was accessed, resulting in exposure of Cloud API keys due to a remote code execution vulnerability.",
+      "ai_role": "AI involvement not confirmed in the reporting.",
+      "why": "Access exploited a known vulnerability in the system.",
+      "where": "No fixed location",
+      "major_impact": "critical_network_intrusion",
+      "significance": "Exposure of API keys can lead to unauthorized access and exploitation of cloud services, posing risks to the operational integrity of AI services.",
+      "id": "7949fbf3b017c512",
+      "source_name": "Wiz Research",
+      "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+      "added": "2026-11-26T02:37:23+00:00",
+      "reported_date": "2026-10-30",
+      "last_reported": "2026-10-30",
+      "evidence_status": "confirmed",
+      "lat": null,
+      "lon": null,
+      "direct_evidence": {
+        "outcome": "confirmed_compromise",
+        "quote_sha256": "036c206ac50e4dbc9d530ad69a283768082d051d00d6fa76358266de98ff45c2",
+        "excerpt": "11-10, 14:19 UTC - NEAR AI disclosed an incident on 11-09 (Nov 8), in which an inference server was accessed",
+        "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms"
+      },
+      "severity": {
+        "level": "limited",
+        "status": "preliminary",
+        "reason": "Exposure of API keys can facilitate unauthorized cloud service usage.",
+        "evidence": {
+          "context": "real_world",
+          "service": "none",
+          "reach": "single",
+          "damage": "none",
+          "essential": "none",
+          "financial": "unknown"
+        },
+        "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+        "assessed_at": "2026-11-26T02:37:23+00:00",
+        "method": "reported-impact-v1"
+      }
+    }
   }
 }
