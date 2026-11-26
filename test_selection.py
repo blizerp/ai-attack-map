@@ -168,6 +168,20 @@ class SelectionTests(unittest.TestCase):
             rec = dict(base, actual_outcome="research_demonstration") if "simulated" in passage else base
             self.assertFalse(u.direct_incident_evidence(rec, passage, passage))
 
+    def test_confirmed_past_data_leak_wording(self):
+        base = record(actual_outcome="confirmed_compromise", severity_evidence={"context":"real_world"})
+        quote = "Personal information of customers was confirmed to have been leaked."
+        self.assertTrue(u.direct_incident_evidence(base, quote, quote))
+        self.assertFalse(u.direct_incident_evidence(base, quote, "Unrelated article."))
+        for passage in (
+            "Personal information may have been leaked.",
+            "No evidence of personal information being leaked was found.",
+            "The flaw could allow personal information to be leaked.",
+            "The data was not confirmed to have been leaked.",
+        ):
+            self.assertFalse(u.direct_incident_evidence(base, passage, passage))
+        self.assertFalse(u.direct_incident_evidence(dict(base, actual_outcome="research_demonstration"), quote, quote))
+
     def test_schema_requires_all_fields(self):
         self.assertEqual(set(u.SCHEMA['required']), set(u.SCHEMA['properties']))
 
