@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T04:28:12+00:00",
+ "updated": "2026-11-26T05:39:11+00:00",
  "incidents": [
   {
    "title": "1Password customer data stolen after employee GitHub account breach",
@@ -41,6 +41,50 @@
     },
     "source_url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
     "assessed_at": "2026-11-25T22:20:40+00:00",
+    "method": "reported-impact-v1"
+   }
+  },
+  {
+   "title": "GoFundMe Pro breach exposes donor addresses and phone numbers",
+   "date": "2026-10-10",
+   "category": "major_cyber",
+   "victim": "GoFundMe Pro",
+   "attacker": "Not reported",
+   "what": "Unauthorized access to the fundraising software used by nonprofits and social enterprises",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Access through GoFundMe Pro API exposed sensitive donor information",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "This breach risks the privacy of numerous donors, exposing their personal data.",
+   "id": "f1c0836366f2f482",
+   "source_name": "CrowdFund.News",
+   "source_url": "https://crowdfund.news/news/industry/gofundme-pro-breach-exposes-donors-addresses-and-phone-numbers-15079/",
+   "added": "2026-11-26T05:39:11+00:00",
+   "reported_date": "2026-11-25",
+   "last_reported": "2026-11-25",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "a1e93d058e31d3da67cbfbde5233af17cdbad92608f575909552bf3c0e433d00",
+    "excerpt": "An unauthorized party accessed GoFundMe Pro, the fundraising software used by nonprofits and social enterprises, from October 10 through 18",
+    "source_url": "https://crowdfund.news/news/industry/gofundme-pro-breach-exposes-donors-addresses-and-phone-numbers-15079/"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "Names, addresses, and phone numbers of various donors were accessed, potentially compromising their personal information.",
+    "evidence": {
+     "context": "real_world",
+     "service": "limited",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "none"
+    },
+    "source_url": "https://crowdfund.news/news/industry/gofundme-pro-breach-exposes-donors-addresses-and-phone-numbers-15079/",
+    "assessed_at": "2026-11-26T05:39:11+00:00",
     "method": "reported-impact-v1"
    }
   },
@@ -48153,7 +48197,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-26T04:28:12+00:00",
+ "last_added": "2026-11-26T05:39:11+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }
