@@ -3532,5 +3532,64 @@
         "method": "reported-impact-v1"
       }
     }
+  },
+  "c9ec8e70b636a2fa": {
+    "reason": "The Record explicitly identifies Wellington IT as the supplier in the early October breach of more than 40 Irish credit unions, already recorded in baseline 44fa9d7e476f2142. This is additional reporting, not a separate compromise.",
+    "record": {
+      "title": "Supplier Breach Hits 40+ Irish Credit Unions",
+      "date": "2026-10-01",
+      "category": "major_cyber",
+      "victim": "Over 40 Irish credit unions",
+      "attacker": "Not reported",
+      "what": "Hackers accessed payment details by exploiting a vulnerability in Wellington IT's systems.",
+      "ai_role": "AI involvement not confirmed in the reporting.",
+      "why": "Breach notifications were received after the supplier's systems were compromised.",
+      "where": "Ireland",
+      "major_impact": "large_scale_data_theft",
+      "significance": "Sensitive member payment details were accessed, raising concerns over data protection and trust in financial systems.",
+      "id": "c9ec8e70b636a2fa",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach",
+      "added": "2026-11-24T11:26:46+00:00",
+      "reported_date": "2026-11-20",
+      "last_reported": "2026-11-20",
+      "evidence_status": "confirmed",
+      "lat": 52.865196,
+      "lon": -7.9794599,
+      "severity": {
+        "level": "severe",
+        "status": "preliminary",
+        "reason": "Member payment details were compromised, but there is no current evidence of unauthorized account access or fraudulent activity.",
+        "evidence": {
+          "context": "real_world",
+          "service": "none",
+          "reach": "multiple",
+          "damage": "sensitive_data",
+          "essential": "none",
+          "financial": "none"
+        },
+        "source_url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach",
+        "assessed_at": "2026-11-24T11:26:46+00:00",
+        "method": "reported-impact-v1"
+      },
+      "locations": [
+        {
+          "lat": 52.865196,
+          "lon": -7.9794599,
+          "label": "Ireland",
+          "basis": "Reported affected area",
+          "entity": "",
+          "source_url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach"
+        }
+      ],
+      "updates": [
+        {
+          "date": "2026-11-20",
+          "what": "Payment details belonging to members accessed by hackers exploiting a supplier vulnerability.",
+          "url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach",
+          "source": "The Record"
+        }
+      ]
+    }
   }
 }

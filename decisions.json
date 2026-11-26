@@ -130,7 +130,7 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-11-26T03:31:22+00:00",
+  "checked": "2026-11-26T04:28:12+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence gate: observed_outcome_wording",
@@ -138,7 +138,7 @@
    {
     "status": "defer",
     "reason": "Direct evidence gate: observed_outcome_wording",
-    "title": "Gheist campaign abused compromised GitHub tokens to steal secrets"
+    "title": "Automated Abuse of Compromised GitHub Tokens"
    }
   ],
   "evidence": "article",
@@ -18197,15 +18197,15 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-11-26T03:31:22+00:00",
+  "checked": "2026-11-26T04:28:12+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence gate: observed_outcome_wording",
+  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Direct evidence gate: observed_outcome_wording",
-    "title": "AI Agent Conducts Multi-Cloud Intrusion with Extensive Access"
+    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+    "title": "AI agent operated multi-cloud intrusion with credential theft"
    }
   ],
   "evidence": "article",
@@ -18681,15 +18681,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-11-26T03:31:22+00:00",
+  "checked": "2026-11-26T04:28:12+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote, supported_ai_attribution",
+  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote, supported_ai_attribution",
-    "title": "Threat Actor Hijacks GCP Billing for Unauthorized AI Usage"
+    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+    "title": "Threat actors use AI in phishing to disrupt Google Cloud billing"
    }
   ],
   "evidence": "article",
@@ -19486,7 +19486,7 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-11-26T03:31:22+00:00",
+  "checked": "2026-11-26T04:28:12+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
@@ -19511,15 +19511,15 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-11-26T03:31:22+00:00",
+  "checked": "2026-11-26T04:28:12+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence gate: observed_outcome_wording",
+  "reason": "Direct evidence gate: observed_outcome_wording, qualifying_major_impact",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Direct evidence gate: observed_outcome_wording",
-    "title": "Malicious LiteLLM release compromises user credentials"
+    "reason": "Direct evidence gate: observed_outcome_wording, qualifying_major_impact",
+    "title": "Malicious LiteLLM Package Compromised by Credential Stealer"
    }
   ],
   "evidence": "article",
@@ -24293,20 +24293,15 @@
  "https://www.wiz.io/blog/the-rise-of-agentic-attacks": {
   "title": "The Rise of Agentic Attacks: What They Look Like, and Where They're Headed",
   "source": "Wiz Research",
-  "checked": "2026-11-26T03:31:22+00:00",
+  "checked": "2026-11-26T04:28:12+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote; Direct evidence gate: observed_outcome_wording, verbatim_article_quote, qualifying_major_impact",
+  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
   "decisions": [
    {
     "status": "defer",
     "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
-    "title": "Hermes AI agent compromised Thailand ministry systems"
-   },
-   {
-    "status": "defer",
-    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote, qualifying_major_impact",
-    "title": "AI-assisted API exploitation affected organizations in Japan"
+    "title": "Hermes AI agent compromised Thailand Ministry systems"
    }
   ],
   "evidence": "article",
@@ -25909,27 +25904,32 @@
  "https://www.wiz.io/blog/black-october-for-ai-developer-platforms": {
   "title": "“Black October” for AI Developer Platforms",
   "source": "Wiz Research",
-  "checked": "2026-11-26T03:31:22+00:00",
+  "checked": "2026-11-26T04:28:12+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Includes a confirmed unauthorized access incident on NEAR AI's infrastructure with reported consequences.; Direct evidence gate: observed_outcome_wording",
+  "reason": "Direct evidence gate: observed_outcome_wording; Direct evidence gate: observed_outcome_wording; NEAR AI confirmed a serious security incident affecting their infrastructure with clear vulnerabilities.",
   "decisions": [
    {
-    "status": "include",
-    "reason": "Includes a confirmed unauthorized access incident on NEAR AI's infrastructure with reported consequences.",
-    "title": "Unauthorized access to NEAR AI inference infrastructure",
-    "incident_id": "bff6180f286a6d5b",
-    "direct_evidence": {
-     "outcome": "confirmed_compromise",
-     "quote_sha256": "036c206ac50e4dbc9d530ad69a283768082d051d00d6fa76358266de98ff45c2",
-     "excerpt": "11-10, 14:19 UTC - NEAR AI disclosed an incident on 11-09 (Nov 8), in which an inference server was accessed",
-     "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms"
-    }
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording",
+    "title": "Vulnerability exploitation leads to unauthorized access at Brev"
    },
    {
     "status": "defer",
     "reason": "Direct evidence gate: observed_outcome_wording",
-    "title": "Chainstack breach exposed customer data"
+    "title": "Fireworks AI cloud breach affects development environment"
+   },
+   {
+    "status": "include",
+    "reason": "NEAR AI confirmed a serious security incident affecting their infrastructure with clear vulnerabilities.",
+    "title": "NEAR AI exposure of inference server due to SGLang flaw",
+    "incident_id": "bff6180f286a6d5b",
+    "direct_evidence": {
+     "outcome": "confirmed_consequential_event",
+     "quote_sha256": "036c206ac50e4dbc9d530ad69a283768082d051d00d6fa76358266de98ff45c2",
+     "excerpt": "11-10, 14:19 UTC - NEAR AI disclosed an incident on 11-09 (Nov 8), in which an inference server was accessed",
+     "source_url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms"
+    }
    }
   ],
   "evidence": "article",
@@ -39407,15 +39407,15 @@
  "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi": {
   "title": "Microsoft agent-framework Compromised: Credential Stealer Targets Azure and CI Pipelines",
   "source": "Wiz Research",
-  "checked": "2026-11-26T03:31:22+00:00",
+  "checked": "2026-11-26T04:28:12+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+  "reason": "Direct evidence gate: observed_outcome_wording",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
-    "title": "Microsoft Agent Framework Compromised: Credential Stealer Targets Azure"
+    "reason": "Direct evidence gate: observed_outcome_wording",
+    "title": "Malicious Microsoft Agent Framework PyPI Release Compromises Credentials"
    }
   ],
   "evidence": "article",
@@ -44276,15 +44276,22 @@
  "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/": {
   "title": "Radware discloses breach exposing customer cloud access keys",
   "source": "BleepingComputer",
-  "checked": "2026-11-26T03:31:22+00:00",
+  "checked": "2026-11-26T04:28:12+00:00",
   "policy": "meaningful-v2",
-  "status": "defer",
-  "reason": "Direct evidence gate: qualifying_major_impact",
+  "status": "include",
+  "reason": "The incident involves a breach leading to the exposure of customer data and is substantiated by credible reporting.",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Direct evidence gate: qualifying_major_impact",
-    "title": "Radware breach exposes customer cloud access keys"
+    "status": "include",
+    "reason": "The incident involves a breach leading to the exposure of customer data and is substantiated by credible reporting.",
+    "title": "Radware discloses breach exposing customer cloud access keys",
+    "incident_id": "7d7129fa2ced9baf",
+    "direct_evidence": {
+     "outcome": "confirmed_compromise",
+     "quote_sha256": "cc944a359d3ab1e2e57351f126ffb055abe44a9d6a33c45f731d37d0ad6f4d9c",
+     "excerpt": "\"On 19 November 2026, an unauthorized party accessed an internal-only Cloud WAF management API that was reachable from the Public",
+     "source_url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/"
+    }
    }
   ],
   "evidence": "article",
@@ -47121,7 +47128,7 @@
  "https://therecord.media/fifa-data-breach-limited": {
   "title": "FIFA says hackers accessed limited set of personal and business information",
   "source": "The Record",
-  "checked": "2026-11-26T02:37:23+00:00",
+  "checked": "2026-11-26T04:28:12+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
@@ -47129,15 +47136,15 @@
    {
     "status": "defer",
     "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
-    "title": "FIFA confirms cyberattack exposed limited personal and business data"
+    "title": "FIFA confirms data breach involving unauthorized access to internal systems"
    }
   ],
   "evidence": "article",
   "summary_hash": "9420d53b690b23764a8ec0a198eebf070deec646d54e996e9087143a2e4351fb",
   "item": {
-   "id": "da7f279c80d04cdb",
-   "title": "FIFA says hackers accessed limited set of personal and business information",
+   "id": "02da45af3a32eddb",
    "url": "https://therecord.media/fifa-data-breach-limited",
+   "title": "FIFA says hackers accessed limited set of personal and business information",
    "date": "2026-11-25",
    "source": "The Record",
    "priority": 1
@@ -47784,6 +47791,133 @@
    "date": "2026-11-26",
    "source": "Wiz Research",
    "published_at": "2026-11-26T02:26:16+00:00"
+  }
+ },
+ "https://thepaypers.com/fraud-and-fincrime/news/samsung-securities-data-breach-exposes-data-of-over-8000-customers": {
+  "title": "Samsung Securities data breach exposes data of over 8,000 customers",
+  "source": "The Paypers",
+  "checked": "2026-11-26T04:28:12+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+    "title": "Samsung Securities data breach exposes data of over 8,000 customers"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "item": {
+   "id": "f68bb5d14ab38ead",
+   "url": "https://thepaypers.com/fraud-and-fincrime/news/samsung-securities-data-breach-exposes-data-of-over-8000-customers",
+   "title": "Samsung Securities data breach exposes data of over 8,000 customers",
+   "date": "2026-11-25",
+   "source": "The Paypers",
+   "priority": 1
+  }
+ },
+ "https://www.wateraid.org/us/gofundme-pro-november-2026-data-incident": {
+  "title": "GoFundMe Pro November 2026 Data Incident",
+  "source": "WaterAid",
+  "checked": "2026-11-26T04:28:12+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "No readable source evidence; retry required.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "No readable source evidence; retry required.",
+    "title": "GoFundMe Pro data incident compromises sensitive user information"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "item": {
+   "id": "71106ca7e4648df5",
+   "url": "https://www.wateraid.org/us/gofundme-pro-november-2026-data-incident",
+   "title": "GoFundMe Pro November 2026 Data Incident",
+   "date": "2026-11-24",
+   "source": "WaterAid",
+   "priority": 1
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://en.yna.co.kr/view/AEN20261123002951320": {
+  "title": "Personal information of more than 8,000 clients at Samsung Securities breached",
+  "source": "Yonhap",
+  "checked": "2026-11-26T04:28:12+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+    "title": "Personal information of over 8,000 clients at Samsung Securities breached"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "item": {
+   "id": "cfcb579c93eca40c",
+   "url": "https://en.yna.co.kr/view/AEN20261123002951320",
+   "title": "Personal information of more than 8,000 clients at Samsung Securities breached",
+   "date": "2026-11-23",
+   "source": "Yonhap",
+   "priority": 1
+  }
+ },
+ "https://pingoru.io/providers/classy/incidents/12499020": {
+  "title": "Classy security notice on GoFundMe Pro third-party access",
+  "source": "Pingoru",
+  "checked": "2026-11-26T04:28:12+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "No readable source evidence; retry required.",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "No readable source evidence; retry required.",
+    "title": "GoFundMe Pro Employee Credentials Compromised"
+   }
+  ],
+  "evidence": "summary",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "item": {
+   "id": "39f303e1c48021c1",
+   "url": "https://pingoru.io/providers/classy/incidents/12499020",
+   "title": "Classy security notice on GoFundMe Pro third-party access",
+   "date": "2026-11-20",
+   "source": "Pingoru",
+   "priority": 1
+  },
+  "retrieval_warning": "HTTPError"
+ },
+ "https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html": {
+  "title": "13 Malicious NuGet Packages Turn Fake .NET Job Assessments Into Malware Delivery Traps",
+  "source": "The Hacker News",
+  "checked": "2026-11-26T04:28:12+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence gate: observed_outcome_wording, qualifying_major_impact",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording, qualifying_major_impact",
+    "title": "13 Malicious NuGet Packages Turn Fake .NET Job Assessments Into Malware Delivery Traps"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "8433a9b9c8752c08b392e3e9b88c8118e23bd6046c1fd0cd2c19abda6a399414",
+  "item": {
+   "id": "d518b50fbb3046e0",
+   "title": "13 Malicious NuGet Packages Turn Fake .NET Job Assessments Into Malware Delivery Traps",
+   "url": "https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html",
+   "date": "2026-11-26",
+   "source": "The Hacker News",
+   "published_at": "2026-11-26T03:48:52+00:00"
   }
  }
 }

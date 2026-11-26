@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T03:31:22+00:00",
+ "updated": "2026-11-26T04:28:12+00:00",
  "incidents": [
   {
    "title": "1Password customer data stolen after employee GitHub account breach",
@@ -764,6 +764,50 @@
      "url": "https://techcrunch.com/2026/11/25/todoist-confirms-6-of-customers-details-were-stolen-in-data-breach/"
     }
    ]
+  },
+  {
+   "title": "Radware discloses breach exposing customer cloud access keys",
+   "date": "2026-11-19",
+   "category": "major_cyber",
+   "victim": "Radware",
+   "attacker": "Not reported",
+   "what": "Unauthorized access to Radware's internal Cloud WAF management API",
+   "ai_role": "AI involvement not confirmed in the reporting.",
+   "why": "Attackers accessed customer account details and cloud access keys due to misconfiguration of an internal API.",
+   "where": "No fixed location",
+   "major_impact": "large_scale_data_theft",
+   "significance": "This breach exposed sensitive information, including customer cloud access keys, which could lead to further unauthorized access or exploitation.",
+   "id": "7d7129fa2ced9baf",
+   "source_name": "BleepingComputer",
+   "source_url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+   "added": "2026-11-26T04:28:12+00:00",
+   "reported_date": "2026-11-24",
+   "last_reported": "2026-11-24",
+   "evidence_status": "confirmed",
+   "lat": null,
+   "lon": null,
+   "direct_evidence": {
+    "outcome": "confirmed_compromise",
+    "quote_sha256": "cc944a359d3ab1e2e57351f126ffb055abe44a9d6a33c45f731d37d0ad6f4d9c",
+    "excerpt": "\"On 19 November 2026, an unauthorized party accessed an internal-only Cloud WAF management API that was reachable from the Public",
+    "source_url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/"
+   },
+   "severity": {
+    "level": "severe",
+    "status": "preliminary",
+    "reason": "The breach resulted in exposure of customer cloud access keys and credentials for log export, which could facilitate further unauthorized access.",
+    "evidence": {
+     "context": "real_world",
+     "service": "none",
+     "reach": "multiple",
+     "damage": "sensitive_data",
+     "essential": "none",
+     "financial": "unknown"
+    },
+    "source_url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+    "assessed_at": "2026-11-26T04:28:12+00:00",
+    "method": "reported-impact-v1"
+   }
   },
   {
    "title": "GL.iNet remote management compromise",
@@ -1908,62 +1952,6 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://therecord.media/west-virginia-legislature-cyberattack"
-    }
-   ]
-  },
-  {
-   "title": "Supplier Breach Hits 40+ Irish Credit Unions",
-   "date": "2026-10-01",
-   "category": "major_cyber",
-   "victim": "Over 40 Irish credit unions",
-   "attacker": "Not reported",
-   "what": "Hackers accessed payment details by exploiting a vulnerability in Wellington IT's systems.",
-   "ai_role": "AI involvement not confirmed in the reporting.",
-   "why": "Breach notifications were received after the supplier's systems were compromised.",
-   "where": "Ireland",
-   "major_impact": "large_scale_data_theft",
-   "significance": "Sensitive member payment details were accessed, raising concerns over data protection and trust in financial systems.",
-   "id": "c9ec8e70b636a2fa",
-   "source_name": "The Record",
-   "source_url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach",
-   "added": "2026-11-24T11:26:46+00:00",
-   "reported_date": "2026-11-20",
-   "last_reported": "2026-11-20",
-   "evidence_status": "confirmed",
-   "lat": 52.865196,
-   "lon": -7.9794599,
-   "severity": {
-    "level": "severe",
-    "status": "preliminary",
-    "reason": "Member payment details were compromised, but there is no current evidence of unauthorized account access or fraudulent activity.",
-    "evidence": {
-     "context": "real_world",
-     "service": "none",
-     "reach": "multiple",
-     "damage": "sensitive_data",
-     "essential": "none",
-     "financial": "none"
-    },
-    "source_url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach",
-    "assessed_at": "2026-11-24T11:26:46+00:00",
-    "method": "reported-impact-v1"
-   },
-   "locations": [
-    {
-     "lat": 52.865196,
-     "lon": -7.9794599,
-     "label": "Ireland",
-     "basis": "Reported affected area",
-     "entity": "",
-     "source_url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach"
-    }
-   ],
-   "updates": [
-    {
-     "date": "2026-11-20",
-     "what": "Payment details belonging to members accessed by hackers exploiting a supplier vulnerability.",
-     "url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach",
-     "source": "The Record"
     }
    ]
   },
@@ -3144,6 +3132,12 @@
      "basis": "Reported affected area",
      "entity": "",
      "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/"
+    }
+   ],
+   "more_sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach"
     }
    ]
   },
@@ -9468,7 +9462,7 @@
    "updates": [
     {
      "date": "2026-10-30",
-     "what": "An inference server was accessed by exploiting a remote code execution vulnerability in SGLang, resulting in exposure of two Cloud API keys in logs.",
+     "what": "NEAR AI disclosed access to its inference infrastructure through exploitation of a remote code execution vulnerability, exposing sensitive API keys.",
      "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
      "source": "Wiz Research"
     },
@@ -48159,7 +48153,7 @@
    "updates": []
   }
  ],
- "last_added": "2026-11-25T23:36:34+00:00",
+ "last_added": "2026-11-26T04:28:12+00:00",
  "coverage_reviewed_at": "2026-10-27T07:13:28+00:00",
  "last_manual_publish": "2026-11-24T11:18:18+00:00"
 }
