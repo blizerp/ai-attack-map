@@ -130,7 +130,7 @@
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
   "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
   "source": "Wiz Research",
-  "checked": "2026-11-25T23:36:34+00:00",
+  "checked": "2026-11-26T00:32:31+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence gate: observed_outcome_wording",
@@ -138,7 +138,7 @@
    {
     "status": "defer",
     "reason": "Direct evidence gate: observed_outcome_wording",
-    "title": "Gheist campaign leveraged stolen GitHub tokens for secret exfiltration"
+    "title": "Mass abuse of GitHub tokens stems from exploited vulnerabilities"
    }
   ],
   "evidence": "article",
@@ -18197,7 +18197,7 @@
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
   "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
   "source": "Wiz Research",
-  "checked": "2026-11-25T23:36:34+00:00",
+  "checked": "2026-11-26T00:32:31+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence gate: observed_outcome_wording",
@@ -18205,7 +18205,7 @@
    {
     "status": "defer",
     "reason": "Direct evidence gate: observed_outcome_wording",
-    "title": "AI agent runs entire intrusions across cloud environments"
+    "title": "AI Agent Conducted Multi-Cloud Intrusion"
    }
   ],
   "evidence": "article",
@@ -18681,15 +18681,15 @@
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
   "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
   "source": "Wiz Research",
-  "checked": "2026-11-25T23:36:34+00:00",
+  "checked": "2026-11-26T00:32:31+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence gate: observed_outcome_wording",
+  "reason": "Direct evidence gate: observed_outcome_wording, supported_ai_attribution",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Direct evidence gate: observed_outcome_wording",
-    "title": "Threat Actors Hijack Cloud Accounts for Unauthorized AI Usage"
+    "reason": "Direct evidence gate: observed_outcome_wording, supported_ai_attribution",
+    "title": "Threat Actors Abuse Cloud Billing Accounts for Unauthorized AI Usage"
    }
   ],
   "evidence": "article",
@@ -19486,15 +19486,15 @@
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
   "title": "LiteLLM Compromised, Steals Credentials",
   "source": "Wiz Research",
-  "checked": "2026-11-25T23:36:34+00:00",
+  "checked": "2026-11-26T00:32:31+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+  "reason": "Direct evidence gate: observed_outcome_wording",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
-    "title": "LiteLLM Compromised, Steals Credentials"
+    "reason": "Direct evidence gate: observed_outcome_wording",
+    "title": "BerriAI LiteLLM Compromised, Credentials Stolen"
    }
   ],
   "evidence": "feed_full_text",
@@ -19511,15 +19511,15 @@
  "https://www.wiz.io/blog/php2shell-php-rce": {
   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
   "source": "Wiz Research",
-  "checked": "2026-11-25T23:36:34+00:00",
+  "checked": "2026-11-26T00:32:31+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+  "reason": "Direct evidence gate: observed_outcome_wording",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
-    "title": "AI Uncovers Critical PHP Vulnerabilities Affecting 70% of the Internet"
+    "reason": "Direct evidence gate: observed_outcome_wording",
+    "title": "Critical vulnerabilities in PHP potentially affect 70% of websites"
    }
   ],
   "evidence": "article",
@@ -24293,20 +24293,31 @@
  "https://www.wiz.io/blog/the-rise-of-agentic-attacks": {
   "title": "The Rise of Agentic Attacks: What They Look Like, and Where They're Headed",
   "source": "Wiz Research",
-  "checked": "2026-11-25T23:36:34+00:00",
+  "checked": "2026-11-26T00:32:31+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence gate: supported_ai_attribution; Direct evidence gate: observed_outcome_wording, qualifying_major_impact, supported_ai_attribution",
+  "reason": "The incident involved a significant compromise of the Ministry of Finance's internal systems by an AI agent, substantiated by the evidence provided.; Direct evidence gate: observed_outcome_wording, qualifying_major_impact, supported_ai_attribution; Direct evidence gate: observed_outcome_wording",
   "decisions": [
    {
-    "status": "defer",
-    "reason": "Direct evidence gate: supported_ai_attribution",
-    "title": "AI Agent Compromise at Thailand's Ministry of Finance"
+    "status": "include",
+    "reason": "The incident involved a significant compromise of the Ministry of Finance's internal systems by an AI agent, substantiated by the evidence provided.",
+    "title": "Hermes AI agent compromised Thailand ministry systems",
+    "incident_id": "3154910f0425e4ea",
+    "direct_evidence": {
+     "outcome": "confirmed_compromise",
+     "quote_sha256": "5d90d1cb9e3c5fc6cd6d57cba7c9a20a1aa8bfaf1b7e684822374f255d47dcc9",
+     "excerpt": "Investigators found evidence that multiple ministry systems had been compromised, along with web shells, stolen credentials, and a custom Go-based"
+    }
    },
    {
     "status": "defer",
     "reason": "Direct evidence gate: observed_outcome_wording, qualifying_major_impact, supported_ai_attribution",
-    "title": "AI-assisted API Exploitation Affects Organizations in Japan"
+    "title": "AI-assisted API exploitation affected organizations in Japan"
+   },
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording",
+    "title": "ConnectWise Cloud Backup compromised in a supply-chain attack"
    }
   ],
   "evidence": "article",
@@ -25909,15 +25920,20 @@
  "https://www.wiz.io/blog/black-october-for-ai-developer-platforms": {
   "title": "“Black October” for AI Developer Platforms",
   "source": "Wiz Research",
-  "checked": "2026-11-25T23:36:34+00:00",
+  "checked": "2026-11-26T00:32:31+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote, qualifying_major_impact, supported_ai_attribution; Direct evidence gate: observed_outcome_wording, verbatim_article_quote, qualifying_major_impact, supported_ai_attribution",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
-    "title": "Chainstack breach exposes user data and trading data"
+    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote, qualifying_major_impact, supported_ai_attribution",
+    "title": "Credential abuse leads to over 800k unauthorized Bedrock calls"
+   },
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote, qualifying_major_impact, supported_ai_attribution",
+    "title": "Unauthorized key usage led to significant AI service calls"
    }
   ],
   "evidence": "article",
@@ -39402,15 +39418,15 @@
  "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi": {
   "title": "Microsoft agent-framework Compromised: Credential Stealer Targets Azure and CI Pipelines",
   "source": "Wiz Research",
-  "checked": "2026-11-25T23:36:34+00:00",
+  "checked": "2026-11-26T00:32:31+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
-  "reason": "Direct evidence gate: observed_outcome_wording, supported_ai_attribution",
+  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
   "decisions": [
    {
     "status": "defer",
-    "reason": "Direct evidence gate: observed_outcome_wording, supported_ai_attribution",
-    "title": "Malicious Microsoft Agent Framework PyPI releases stole cloud credentials"
+    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+    "title": "Microsoft Agent Framework users and organizations that installed PyPI versions 1.26.1 or 1.26.2"
    }
   ],
   "evidence": "article",
@@ -44273,9 +44289,9 @@
   }
  },
  "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/": {
-  "title": "Radware Cloud WAF breach exposes customer cloud access keys",
+  "title": "Radware discloses breach exposing customer cloud access keys",
   "source": "BleepingComputer",
-  "checked": "2026-11-25T23:36:34+00:00",
+  "checked": "2026-11-26T00:32:31+00:00",
   "policy": "meaningful-v2",
   "status": "defer",
   "reason": "Direct evidence gate: verbatim_article_quote",
@@ -44283,18 +44299,18 @@
    {
     "status": "defer",
     "reason": "Direct evidence gate: verbatim_article_quote",
-    "title": "Radware Cloud WAF breach exposes customer cloud access keys"
+    "title": "Radware breach exposes customer cloud access keys"
    }
   ],
   "evidence": "article",
   "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "item": {
-   "title": "Radware Cloud WAF breach exposes customer cloud access keys",
+   "id": "7d7129fa2ced9baf",
+   "title": "Radware discloses breach exposing customer cloud access keys",
    "url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
    "date": "2026-11-24",
    "source": "BleepingComputer",
-   "id": "a0398aec7b4dcf86",
-   "priority": 1
+   "published_at": "2026-11-24T17:49:05+00:00"
   }
  },
  "https://therecord.media/idscan-data-breach-warning-congressional-letter": {
@@ -47382,6 +47398,181 @@
    "date": "2026-11-16",
    "source": "Komori / PLAID regulatory disclosure",
    "id": "72df53a78c0d2f0d",
+   "priority": 1
+  }
+ },
+ "https://en.traicy.com/posts/2026112542664/": {
+  "title": "Keio railway group confirms ransomware-related personal data leak",
+  "source": "TRAICY Global",
+  "checked": "2026-11-26T00:32:31+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence gate: observed_outcome_wording",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording",
+    "title": "Keio railway group confirms ransomware-related personal data leak"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "item": {
+   "title": "Keio railway group confirms ransomware-related personal data leak",
+   "url": "https://en.traicy.com/posts/2026112542664/",
+   "date": "2026-11-25",
+   "source": "TRAICY Global",
+   "id": "cb035e03fa183ce1",
+   "priority": 1
+  }
+ },
+ "https://japancyberwatch.com/articles/keio-ransomware-attack-2026": {
+  "title": "Keio railway group ransomware disclosure and data leakage",
+  "source": "Japan Cyber Watch",
+  "checked": "2026-11-26T00:32:31+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+    "title": "Keio Railway Group ransomware attack disrupts business operations"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "item": {
+   "title": "Keio railway group ransomware disclosure and data leakage",
+   "url": "https://japancyberwatch.com/articles/keio-ransomware-attack-2026",
+   "date": "2026-11-24",
+   "source": "Japan Cyber Watch",
+   "id": "a0f4209c85f28b71",
+   "priority": 1
+  }
+ },
+ "https://ascii.jp/en/elem/000/004/453/4453973/": {
+  "title": "Japan Digital Agency confirms distinct later unauthorized access to GSS file sharing service",
+  "source": "ASCII.jp",
+  "checked": "2026-11-26T00:32:31+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence gate: observed_outcome_wording, qualifying_major_impact",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording, qualifying_major_impact",
+    "title": "Japan Digital Agency confirms distinct later unauthorized access to GSS file sharing service"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "item": {
+   "title": "Japan Digital Agency confirms distinct later unauthorized access to GSS file sharing service",
+   "url": "https://ascii.jp/en/elem/000/004/453/4453973/",
+   "date": "2026-11-24",
+   "source": "ASCII.jp",
+   "id": "f24dbbc00c8b3d34",
+   "priority": 1
+  }
+ },
+ "https://tokyodispatch.com/tech/digital-agency-gss-file-sharing-leak": {
+  "title": "Japan Digital Agency second GSS incident and service suspension",
+  "source": "Tokyo Dispatch",
+  "checked": "2026-11-26T00:32:31+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence gate: observed_outcome_wording, qualifying_major_impact",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording, qualifying_major_impact",
+    "title": "Japan Digital Agency second GSS incident and service suspension"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "item": {
+   "title": "Japan Digital Agency second GSS incident and service suspension",
+   "url": "https://tokyodispatch.com/tech/digital-agency-gss-file-sharing-leak",
+   "date": "2026-11-21",
+   "source": "Tokyo Dispatch",
+   "id": "2b1bdcc33e49cbbb",
+   "priority": 1
+  }
+ },
+ "https://open.co.jp/en/blog/202611181500/": {
+  "title": "OPEN confirms unauthorized access to BizRobo authentication server and other cloud services",
+  "source": "OPEN Inc. official disclosure",
+  "checked": "2026-11-26T00:32:31+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence gate: verbatim_article_quote",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: verbatim_article_quote",
+    "title": "OPEN confirms unauthorized access to BizRobo authentication server"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "item": {
+   "title": "OPEN confirms unauthorized access to BizRobo authentication server and other cloud services",
+   "url": "https://open.co.jp/en/blog/202611181500/",
+   "date": "2026-11-18",
+   "source": "OPEN Inc. official disclosure",
+   "id": "58387cd8532a0110",
+   "priority": 1
+  }
+ },
+ "https://shop.hololivepro.com/en/blogs/news/shipping_openlogi_databreach_20261117": {
+  "title": "OpenLogi vendor breach confirmed by affected shipping customer",
+  "source": "Hololive official shop disclosure",
+  "checked": "2026-11-26T00:32:31+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence gate: observed_outcome_wording",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording",
+    "title": "OpenLogi vendor breach exposes customer shipping data"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "item": {
+   "title": "OpenLogi vendor breach confirmed by affected shipping customer",
+   "url": "https://shop.hololivepro.com/en/blogs/news/shipping_openlogi_databreach_20261117",
+   "date": "2026-11-17",
+   "source": "Hololive official shop disclosure",
+   "id": "8e028cd962f485c0",
+   "priority": 1
+  }
+ },
+ "https://corp.openlogi.com/news/notice/notice-20261117/": {
+  "title": "OpenLogi confirms data leakage following unauthorized access to logistics system",
+  "source": "OpenLogi official disclosure",
+  "checked": "2026-11-26T00:32:31+00:00",
+  "policy": "meaningful-v2",
+  "status": "defer",
+  "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+  "decisions": [
+   {
+    "status": "defer",
+    "reason": "Direct evidence gate: observed_outcome_wording, verbatim_article_quote",
+    "title": "OpenLogi confirms data leakage following unauthorized access to logistics system"
+   }
+  ],
+  "evidence": "article",
+  "summary_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "item": {
+   "title": "OpenLogi confirms data leakage following unauthorized access to logistics system",
+   "url": "https://corp.openlogi.com/news/notice/notice-20261117/",
+   "date": "2026-11-17",
+   "source": "OpenLogi official disclosure",
+   "id": "6884a8f5812dde9d",
    "priority": 1
   }
  }

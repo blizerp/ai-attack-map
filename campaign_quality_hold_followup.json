@@ -3265,5 +3265,133 @@
         }
       ]
     }
+  },
+  "012170b4116a892b": {
+    "reason": "Same November 23 Todoist production compromise and customer data theft as official disclosure 1341e54c29c2482a; keep the primary source record and attach TechCrunch as corroboration.",
+    "record": {
+      "title": "Todoist confirms theft of approximately six percent of customers' details",
+      "date": "2026-11-23",
+      "category": "major_cyber",
+      "victim": "Todoist",
+      "attacker": "Not reported",
+      "what": "A hacker gained access to its production systems and stole customer data, including email IDs, password hashes, and account creation dates.",
+      "ai_role": "AI involvement not confirmed in the reporting.",
+      "why": "The attacker used stolen credentials to access the company’s version control system and source code.",
+      "where": "No fixed location",
+      "major_impact": "large_scale_data_theft",
+      "significance": "The incident affects around 6% of Todoist's users, indicating a substantial data breach that exposes customer credentials and tokens.",
+      "id": "012170b4116a892b",
+      "source_name": "TechCrunch",
+      "source_url": "https://techcrunch.com/2026/11/25/todoist-confirms-6-of-customers-details-were-stolen-in-data-breach/",
+      "added": "2026-11-25T23:36:34+00:00",
+      "reported_date": "2026-11-25",
+      "last_reported": "2026-11-25",
+      "evidence_status": "confirmed",
+      "lat": null,
+      "lon": null,
+      "direct_evidence": {
+        "outcome": "confirmed_compromise",
+        "quote_sha256": "e6b1e0b34217614c7977c6d54129a60d65c59edc4f5b2b529eee94837079385b",
+        "excerpt": "a hacker gained access to its production systems and stole customer data, including email IDs, password hashes, and account creation"
+      },
+      "severity": {
+        "level": "severe",
+        "status": "preliminary",
+        "reason": "The hacker accessed and stole sensitive details from customer accounts, including email addresses and API tokens.",
+        "evidence": {
+          "context": "real_world",
+          "service": "limited",
+          "reach": "multiple",
+          "damage": "sensitive_data",
+          "essential": "none",
+          "financial": "unknown"
+        },
+        "source_url": "https://techcrunch.com/2026/11/25/todoist-confirms-6-of-customers-details-were-stolen-in-data-breach/",
+        "assessed_at": "2026-11-25T23:36:34+00:00",
+        "method": "reported-impact-v1"
+      }
+    }
+  },
+  "d1ccbf3eed42133e": {
+    "reason": "Same Vanderbilt campus cyberattack and device shutdown instruction as baseline 246876e43529de2b; November 13 roundup is a follow-up.",
+    "record": {
+      "title": "Vanderbilt tells campus to power down devices amid attack",
+      "date": "2026-11-12",
+      "category": "major_cyber",
+      "victim": "Vanderbilt University",
+      "attacker": "BYOD group",
+      "what": "University advised community to shut down devices due to an active cybersecurity incident.",
+      "ai_role": "AI involvement not confirmed in the reporting.",
+      "why": "The attack could affect devices, systems, and cloud-based services across campus.",
+      "where": "No fixed location",
+      "major_impact": "essential_service_disruption",
+      "significance": "The incident poses a potential risk to university operations impacting a wide range of services.",
+      "id": "d1ccbf3eed42133e",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/",
+      "added": "2026-11-24T13:16:56+00:00",
+      "reported_date": "2026-11-13",
+      "last_reported": "2026-11-13",
+      "evidence_status": "confirmed",
+      "lat": null,
+      "lon": null,
+      "severity": {
+        "level": "severe",
+        "status": "preliminary",
+        "reason": "The request to power down devices suggests a substantial impact on university services during the incident.",
+        "evidence": {
+          "context": "real_world",
+          "service": "major",
+          "reach": "single",
+          "damage": "none",
+          "essential": "disrupted",
+          "financial": "unknown"
+        },
+        "source_url": "https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/",
+        "assessed_at": "2026-11-24T13:16:56+00:00",
+        "method": "reported-impact-v1"
+      }
+    }
+  },
+  "5c7337af671909cb": {
+    "reason": "Sponsored illustrative scenario, not a reported attack: the article opens with Imagine an AI agent being created and narrates a hypothetical company.",
+    "record": {
+      "title": "AI agent exposes critical enterprise security gaps due to uncontrolled access",
+      "date": "2026-11-13",
+      "category": "by_ai_agent",
+      "victim": "mid-sized company",
+      "attacker": "Not reported",
+      "what": "An AI agent created without security oversight accessed sensitive systems and caused unauthorized changes.",
+      "ai_role": "AI agent operated without design security measures, leading to critical gaps.",
+      "why": "AI agent was able to access email, ERP, and Slack with inadequate security configurations and approval mechanisms.",
+      "where": "No fixed location",
+      "major_impact": "critical_network_intrusion",
+      "significance": "This incident illustrates how unsupervised AI agents can be exploited, leading to unauthorized actions in critical systems.",
+      "id": "5c7337af671909cb",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/how-one-ai-agent-exposed-five-critical-enterprise-security-gaps/",
+      "added": "2026-11-24T13:16:56+00:00",
+      "reported_date": "2026-11-13",
+      "last_reported": "2026-11-13",
+      "evidence_status": "confirmed",
+      "lat": null,
+      "lon": null,
+      "severity": {
+        "level": "unknown",
+        "status": "preliminary",
+        "reason": "Unauthorized changes occurred due to uncontrolled access by an AI agent.",
+        "evidence": {
+          "context": "real_world",
+          "service": "unknown",
+          "reach": "single",
+          "damage": "unknown",
+          "essential": "none",
+          "financial": "unknown"
+        },
+        "source_url": "https://www.bleepingcomputer.com/news/security/how-one-ai-agent-exposed-five-critical-enterprise-security-gaps/",
+        "assessed_at": "2026-11-24T13:16:56+00:00",
+        "method": "reported-impact-v1"
+      }
+    }
   }
 }
