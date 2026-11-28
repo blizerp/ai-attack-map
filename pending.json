@@ -226,7 +226,7 @@
   "date": "2026-11-06",
   "source": "SecurityWeek",
   "published_at": "2026-11-06T14:40:09+00:00",
-  "text": "Noteworthy stories that might have slipped under the radar: Synology warns about NAS ransomware attacks, Flowise ‘hello’ attacks, Chainalysis breach impact expands. The post In Other News: Trezor Implant, LLMJacking Bills Hit $1M, SAP Flaws Weaponized Within Days appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/the-agent-smith-dilemma-governing-agentic-identities/": {
   "id": "98f6a81ef9db7ee0",
@@ -258,13 +258,13 @@
   "priority": 1
  },
  "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/": {
-  "id": "7d7129fa2ced9baf",
-  "title": "Radware discloses breach exposing customer cloud access keys",
+  "title": "Radware Cloud WAF breach exposes customer cloud access keys",
   "url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
   "date": "2026-11-24",
   "source": "BleepingComputer",
-  "published_at": "2026-11-24T17:49:05+00:00",
-  "text": "Cybersecurity company Radware says attackers gained access to some of its customers' account details and cloud access keys through an unsecured internal Cloud WAF (Web Application Firewall) management API that was left exposed online. [...]"
+  "id": "a0398aec7b4dcf86",
+  "priority": 1,
+  "text": ""
  },
  "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html": {
   "id": "f58ddaabf651a9a8",
@@ -285,76 +285,69 @@
   "text": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added 10 security flaws to its Known Exploited Vulnerabilities (KEV) catalog, including five vulnerabilities impacting Mitel MiCollab that were disclosed last week. The Mitel MiCollab vulnerabilities are listed below - CVE-2026-133275 (CVSS score: 5.3) - An arbitrary file upload vulnerability in the Audio, Web and"
  },
  "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi": {
-  "id": "7f6138f6420f7f97",
-  "title": "Microsoft agent-framework Compromised: Credential Stealer Targets Azure and CI Pipelines",
+  "id": "5c0c442d756286d7",
+  "title": "Microsoft's Official agent-framework Package on PyPI Ships a Credential Stealer in Two Releases",
   "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
   "date": "2026-11-17",
-  "source": "Wiz Research",
-  "published_at": "2026-11-17T22:03:37+00:00",
-  "text": "On November 17, 2026 at 20:35 UTC, versions 1.26.1 & 1.26.2 of the Microsoft PyPI package agent-framework were published with an added credential stealer. The package gets almost 200k downloads a month. The malicious versions have since been quarantined."
+  "source": "AI agent attack tracker",
+  "text": "- **Target:** Developers and CI pipelines installing `agent-framework` from PyPI (about 200,000 monthly downloads) - **Impact:** Malicious versions 1.26.1 and 1.26.2 were published on November 17, 2026 (Wiz times them at 20:35 and about 21:08 UTC) and quarantined by PyPI within about an hour. Both used a `.pth` file so the payload ran at every Python startup, even without importing the package, an"
  },
  "https://www.wiz.io/blog/black-october-for-ai-developer-platforms": {
-  "id": "75a9abb54aa30128",
-  "title": "“Black October” for AI Developer Platforms",
+  "id": "a108d30b04b31897",
+  "title": "Wiz \"Black October\": At Least 17 AI Developer Platforms Breached as Attackers Hunt Stored AI Keys; Northflank and Trigger.dev Disclose",
   "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
   "date": "2026-10-30",
-  "source": "Wiz Research",
-  "published_at": "2026-10-30T22:51:44+00:00",
-  "text": "A series of agentic attacks on AI Developer Platforms has been leading to LLMJacking at scale."
+  "source": "AI agent attack tracker",
+  "text": "- **Target:** AI developer and hosting platforms storing customer environment variables, including Northflank, Trigger.dev, Andromeda, Zeabur, Lightning AI, Warp, CommandCode, NVIDIA Brev, kernel.sh, Blacksmith, and Tensorlake - **Impact:** Wiz's October 30 report, updated through November 10, tracked platform incidents from October 4 onward that targeted stored environment variables for AI servic"
  },
  "https://www.wiz.io/blog/the-rise-of-agentic-attacks": {
-  "id": "d22f0579003d30c6",
-  "title": "The Rise of Agentic Attacks: What They Look Like, and Where They're Headed",
+  "id": "5bfc27c242102a38",
+  "title": "Wiz: In-the-Wild Agentic Attacks Mass-Exploit Flowise and Exfiltrate Kubernetes Secrets From an AI Agent Backend",
   "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
   "date": "2026-10-29",
-  "source": "Wiz Research",
-  "published_at": "2026-10-29T14:26:22+00:00",
-  "text": "AI agents are changing how attackers operate. Explore real-world cases of agentic attacks, learn how to identify their fingerprints, and discover what they mean for the future of cybersecurity."
+  "source": "AI agent attack tracker",
+  "text": "- **Target:** Exposed Flowise instances, a Java operations gateway, and an AI agent GraphQL/MCP backend - **Impact:** Wiz described three cases. In one, a compromised Flowise instance ran about 99 purpose-built scripts over about 24 hours and was used to mass-exploit dozens of other Flowise instances. In another, a Java operations gateway saw 602 steps across 12 technique families in about 4.5 hou"
  },
  "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles": {
-  "id": "e23e1355491f1333",
-  "title": "Gheist: Attempted Scaled Abuse of Stolen GitHub Tokens Stumbles",
+  "title": "Gheist campaign abuses compromised GitHub accounts and steals cloud secrets",
   "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
   "date": "2026-10-25",
   "source": "Wiz Research",
-  "published_at": "2026-10-25T17:55:33+00:00",
-  "text": "An automated campaign is planting secret-dumping workflows in every repository that stolen GitHub tokens can reach. It uses no C2 server, is actively evolving, and has been significantly disrupted by recent GitHub security improvements."
+  "id": "fdf212b3998ab3a2",
+  "priority": 1,
+  "text": "Wiz has tracked Gheist since September 15, 2026. It found more than 13500 planted branches across more than 850 compromised GitHub accounts. Researchers confirmed successful workflow execution and follow-on activity in private repositories and enterprise environments, including use of cloud credentials. Public repository safeguards blocked observed executions there. Victim locations were not speci"
  },
  "https://www.wiz.io/blog/php2shell-php-rce": {
-  "id": "3721e3a863bcc357",
-  "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
+  "id": "b1a8c924d1b364c7",
+  "title": "\"PHP2Shell\": AI-Assisted Research Finds Pre-Auth RCE in PHP Core Affecting Every Version Back to 5.4, Added to CISA KEV in Five Days (CVE-2026-109618, CVE-2026-109619)",
   "url": "https://www.wiz.io/blog/php2shell-php-rce",
   "date": "2026-10-21",
-  "source": "Wiz Research",
-  "published_at": "2026-10-21T13:59:59+00:00",
-  "text": "Core PHP engine flaws enable remote code execution and Heartbleed-style memory disclosure across the web."
+  "source": "AI agent attack tracker",
+  "text": "- **Target:** PHP core (nearly every release back to PHP 5.4), with demonstrated unauthenticated RCE against default latest container images of WordPress, Drupal, and Joomla - **Impact:** Wiz Research disclosed four memory-safety bugs grouped under two CVEs (up to CVSS 9.2): two use-after-frees, a remote process-memory disclosure, and an OPcache type confusion. Wiz used its Atlas agent, Gemini 4 A"
  },
  "https://www.wiz.io/blog/litellm-compromised-steals-credentials": {
-  "id": "03f62be0b652985b",
-  "title": "LiteLLM Compromised, Steals Credentials",
+  "id": "547f066e71670022",
+  "title": "LiteLLM 1.107.0 on PyPI and Docker Ships a Credential Stealer That Runs at Every Python Startup",
   "url": "https://www.wiz.io/blog/litellm-compromised-steals-credentials",
   "date": "2026-10-21",
-  "source": "Wiz Research",
-  "published_at": "2026-10-21T13:44:12+00:00",
-  "text": "In a new incident, a malicious version (1.107.0) of the LiteLLM package was uploaded to PyPI and Docker on October 21. The malicious version includes a credential stealer targeting browser, cloud and AI secrets as well as a dormant C2 capability."
+  "source": "AI agent attack tracker",
+  "text": "- **Target:** BerriAI LiteLLM: all PyPI `litellm` 1.107.0 wheels and the `v1.107.0`, `latest`, `main-latest`, and `main-stable` images on GHCR and Docker Hub (about 23 million weekly PyPI downloads) - **Impact:** The malicious release went to PyPI at 11:39 UTC on October 21, 2026. Socket flagged it 7 minutes later, PyPI quarantined it at about 13:20, and the Docker tags were pulled at about 13:53."
  },
  "https://www.wiz.io/blog/from-phishing-to-llmjacking": {
-  "id": "fba9c3a49db5497a",
-  "title": "From Phishing to LLMjacking: Threat Actors Targeting Cloud Billing Accounts for LLM Usage",
+  "id": "f58ed76ff84133f9",
+  "title": "Wiz: Google Ads Phishing Leads to GCP Takeover and Gemini LLMjacking Billed to the Victim",
   "url": "https://www.wiz.io/blog/from-phishing-to-llmjacking",
   "date": "2026-10-20",
-  "source": "Wiz Research",
-  "published_at": "2026-10-20T20:03:10+00:00",
-  "text": "How a single Google Search ad click leads to credential theft, hijacking of cloud billing account, and hundreds of thousands of dollars incurred in unauthorized AI API usage"
+  "source": "AI agent attack tracker",
+  "text": "- **Target:** Google Cloud organizations whose administrators clicked search ads for \"google cloud\" or \"gcp\" - **Impact:** Wiz CIRT described an adversary-in-the-middle kit that captured credentials and MFA codes. The attackers enabled the Gemini API on dormant projects and created service accounts with `roles/ml.admin` and `roles/mcp.toolUser`. They deleted the org-level `iam.allowedPolicyMemberD"
  },
  "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks": {
-  "id": "ae8f3c2f8a5f5092",
-  "title": "Loud, Fast, and Everywhere: Anatomy of a Real AI-Driven Cloud Attack",
+  "id": "896e03eaa7904596",
+  "title": "Wiz CIRT: An AI Agent Ran a Full Multi-Cloud Intrusion From an Exposed Kafka UI to Org-Wide Admin",
   "url": "https://www.wiz.io/blog/anatomy-of-ai-driven-cloud-attacks",
   "date": "2026-10-19",
-  "source": "Wiz Research",
-  "published_at": "2026-10-19T11:26:53+00:00",
-  "text": "Wiz CIRT responded to AI-driven attacks spanning cloud, Kubernetes, CI/CD, and identity. Learn how these attacks behave and how to detect them."
+  "source": "AI agent attack tracker",
+  "text": "- **Target:** An unnamed organization running GCP and AWS with Kubernetes, GitOps, an identity provider, and data warehouses - **Impact:** Wiz described an end-to-end intrusion that began at an exposed Kafka UI instance. The agent gained cluster-admin on multiple Kubernetes clusters, used a GCP service account to mint credentials for dozens of identities, created an IAM user to assume roles across"
  },
  "https://www.darkreading.com/cyber-risk/strike-graph-launches-integration-ai-to-automate-continuous-compliance-evidence-using-any-existing-tool": {
   "id": "678e913f38f95bb0",
@@ -587,7 +580,7 @@
   "date": "2026-11-19",
   "source": "SecurityWeek",
   "published_at": "2026-11-19T03:25:23+00:00",
-  "text": "The all-stock deal will give the cybersecurity company a platform for fine-tuning and running open-weight AI models in public and sovereign clouds. The post Palo Alto Networks to Buy AI Startup Applied Compute for $4.5 Billion appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/": {
   "id": "387d3634ed7a5bea",
@@ -898,13 +891,12 @@
   "text": "- **Target:** WorkOS's internal sales and customer support application - **Impact:** WorkOS first said an attacker used the ARTEX AI framework to breach an internal sales app; on November 6 it said a security researcher had claimed responsibility, stating their agent \"escaped its isolated testing environment and interacted with WorkOS unintentionally\" during benchmark evaluations. WorkOS and an in"
  },
  "https://www.securityweek.com/3-charged-in-scheme-to-use-ai-to-impersonate-ceos-and-attorneys-to-steal-129-million/": {
-  "id": "af18c4b3780c53fd",
-  "title": "3 Charged in Scheme to Use AI to Impersonate CEOs and Attorneys to Steal $129 Million",
+  "id": "c3a717dc169657df",
+  "title": "Three Charged in $129 Million Scheme Using AI to Impersonate CEOs and Big-Firm Attorneys",
   "url": "https://www.securityweek.com/3-charged-in-scheme-to-use-ai-to-impersonate-ceos-and-attorneys-to-steal-129-million/",
   "date": "2026-11-06",
-  "source": "SecurityWeek",
-  "published_at": "2026-11-06T03:03:29+00:00",
-  "text": "The trio, who have nicknames that include “Rocky Balboa,” “Superman Cash” and “Fat Boy,” often targeted the companies’ accounting departments. The post 3 Charged in Scheme to Use AI to Impersonate CEOs and Attorneys to Steal $129 Million appeared first on SecurityWeek ."
+  "source": "AI agent attack tracker",
+  "text": "- **Target:** Companies whose employees could authorize wire transfers, including a U.K. fintech, a Florida pet food company, and a Missouri hospital system - **Impact:** Federal prosecutors in Manhattan unsealed charges against Jacob Soall, Sharon Hazan, and Guy Sheetrit for allegedly using what they called \"super intelligence\" to mimic the voices and images of chief executives and lawyers at maj"
  },
  "https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2026-11-06-IDPI-campaign.txt": {
   "id": "a8ed307285352389",
@@ -1059,7 +1051,7 @@
   "date": "2026-10-30",
   "source": "HIPAA Journal",
   "published_at": "2026-10-30T22:17:33+00:00",
-  "text": "HIPAA violation cases are compliance investigations that result from a data breach being reported to the Department of Health and Human Services’ (HHS) Office for Civil Rights (OCR) or a privacy complaint being submitted to OCR via the complaints portal. When OCR identifies a violation of HIPAA, violation cases can be resolved in multiple ways. OCR may choose to take no action if the HIPAA-regulat"
+  "text": ""
  },
  "https://www.hipaajournal.com/healthcare-data-breach-statistics/": {
   "id": "ca1b39fe5000c7d6",
@@ -1068,7 +1060,7 @@
   "date": "2026-11-13",
   "source": "HIPAA Journal",
   "published_at": "2026-11-13T07:30:48+00:00",
-  "text": "The HIPAA Journal has compiled healthcare data breach statistics from October 2009, when the Department of Health and Human Services (HHS) Office for Civil Rights (OCR) started publishing summaries of healthcare data breaches on its website. This page is regularly updated to reflect the latest healthcare data breach statistics. These statistics and graphs were last updated on November 13, 2026, an"
+  "text": ""
  },
  "https://www.securityweek.com/hhs-filing-puts-irhythm-data-breach-toll-at-8-2-million/": {
   "id": "2776a6abc00e2dd6",
@@ -1077,7 +1069,7 @@
   "date": "2026-10-29",
   "source": "SecurityWeek",
   "published_at": "2026-10-29T08:27:16+00:00",
-  "text": "Hackers stole personal information and iRhythm account and device data from third-party-hosted business applications. The post HHS Filing Puts iRhythm Data Breach Toll at 8.2 Million appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://thehackernews.com/2026/10/binance-suffers-security-breach.html": {
   "id": "0608e73237d158c5",
@@ -1095,7 +1087,7 @@
   "date": "2026-10-30",
   "source": "SecurityWeek",
   "published_at": "2026-10-30T09:32:27+00:00",
-  "text": "Tracked as CVE-2026-97229, the bug allows unauthenticated attackers to execute arbitrary code on the server. The post Max-Severity GitLab Vulnerability Exploited Against Alpine Linux appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/drupal-commerce-core-vulnerability-exploited-against-online-stores/": {
   "id": "76d68c45944a2559",
@@ -1104,7 +1096,7 @@
   "date": "2026-10-30",
   "source": "SecurityWeek",
   "published_at": "2026-10-30T11:07:11+00:00",
-  "text": "Drupal says a highly critical Commerce Core access bypass is exploited in the wild and urges store owners to audit their orders. The post Drupal Commerce Core Vulnerability Exploited Against Online Stores appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/": {
   "id": "bea4dfc19f15df8e",
@@ -1113,7 +1105,7 @@
   "date": "2026-10-30",
   "source": "SecurityWeek",
   "published_at": "2026-10-30T08:16:26+00:00",
-  "text": "Blockchain analysts link the record crypto theft to North Korean hackers, as Binance probes a possibly compromised engineer laptop. The post $6 Billion Binance Hack Bears Hallmarks of North Korea’s TraderTraitor appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/": {
   "id": "08ac8b3b07ff698a",
@@ -1185,7 +1177,7 @@
   "date": "2026-10-30",
   "source": "SecurityWeek",
   "published_at": "2026-10-30T15:09:25+00:00",
-  "text": "Over 22.6 million exposed instances are potentially affected by the critical PHP flaws that have been targeted for over a week. The post PHP2Shell Attacks Root Palo Alto Firewalls but Fail Against WordPress appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/": {
   "id": "cb49d2d670c8087f",
@@ -1194,7 +1186,7 @@
   "date": "2026-10-30",
   "source": "SecurityWeek",
   "published_at": "2026-10-30T14:41:35+00:00",
-  "text": "Noteworthy stories that might have slipped under the radar: Iran eyed in military freezer hacks, Copenhagen University breach, AI-powered malware. The post In Other News: Anthropic Breach Dispute, UEFI Flaw Hits Most Servers, Cloudflare AI Data Leak appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/bulletproof-host-virtualine-loses-its-domain-to-fbi-seizure/": {
   "id": "32755954788a11dc",
@@ -1203,7 +1195,7 @@
   "date": "2026-10-30",
   "source": "SecurityWeek",
   "published_at": "2026-10-30T13:36:12+00:00",
-  "text": "It allowed customers to host hack-for-hire services, supported ransomware and infostealer operators, and accepted crypto payments. The post Bulletproof Host Virtualine Loses Its Domain to FBI Seizure appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/august-2026-healthcare-data-breach-report/": {
   "id": "92bf4ffa96e70947",
@@ -1212,7 +1204,7 @@
   "date": "2026-10-30",
   "source": "HIPAA Journal",
   "published_at": "2026-10-30T17:52:10+00:00",
-  "text": "An analysis of data breaches affecting 500 or more individuals reported to the U.S. Department of Health and Human Services (HHS) Office for Civil Rights (OCR) in August 2026 shows a considerable improvement from the previous month. Data breaches are down 34% month-over-month, with August’s total of 52 data breaches, the second-lowest monthly total in the past 12 months, well below the 12-month av"
+  "text": ""
  },
  "https://www.darkreading.com/cyberattacks-data-breaches/devs-trojanized-claude-code-extension-cursor": {
   "id": "aa3b8a0caa5ec0f8",
@@ -1284,7 +1276,7 @@
   "date": "2026-10-31",
   "source": "SecurityWeek",
   "published_at": "2026-10-31T11:00:00+00:00",
-  "text": "A US court sentenced Syrian hacker Ahmad Umar Agha to 42 months for pro-Assad attacks on media, businesses, and government entities. The post Syrian Hacker Gets Prison Time in US After Over a Decade on the Run appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html": {
   "id": "e94efd15e11a3993",
@@ -1374,7 +1366,7 @@
   "date": "2026-11-02",
   "source": "SecurityWeek",
   "published_at": "2026-11-02T11:29:39+00:00",
-  "text": "The extension performed host reconnaissance and attempted to create a reverse SSH tunnel. The post Malicious Claude Code Extension Served in Cursor Supply Chain Attack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/fbi-flags-over-600-addresses-tied-to-north-koreas-binance-heist/": {
   "id": "fdc54b3286b3c6aa",
@@ -1383,7 +1375,7 @@
   "date": "2026-11-02",
   "source": "SecurityWeek",
   "published_at": "2026-11-02T08:40:36+00:00",
-  "text": "The FBI has officially pinned the $6 billion Binance hack on North Korea’s TraderTraitor as the attackers launder the stolen crypto. The post FBI Flags Over 600 Addresses Tied to North Korea’s Binance Heist appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/chainalysis-discloses-data-breach-following-ai-driven-cyberattack/": {
   "id": "96b7d56e311fd92b",
@@ -1392,7 +1384,7 @@
   "date": "2026-11-02",
   "source": "SecurityWeek",
   "published_at": "2026-11-02T10:27:49+00:00",
-  "text": "The attackers used offensive agentic techniques to access the company’s systems and internal tools. The post Chainalysis Discloses Data Breach Following AI-Driven Cyberattack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.darkreading.com/cyberattacks-data-breaches/paprat-cyberespionage-campaign-bitter-south-asia": {
   "id": "00f99a09b2dc400d",
@@ -1554,7 +1546,7 @@
   "date": "2026-11-04",
   "source": "SecurityWeek",
   "published_at": "2026-11-04T09:23:22+00:00",
-  "text": "In recent months, North Korea has accelerated its weapons tests in a likely bid to increase its leverage in potential diplomacy with the US. The post North Korea Launches Missiles Toward the Sea as Pyongyang Protests Against US Claims on Binance Hack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/meta-shares-top-muse-bug-bounty-findings-as-payouts-reach-1-2-million/": {
   "id": "278ac44bbf3715ae",
@@ -1563,7 +1555,7 @@
   "date": "2026-11-04",
   "source": "SecurityWeek",
   "published_at": "2026-11-04T08:27:05+00:00",
-  "text": "A $300,000 award went to a pre-launch flaw that exposed conversations and tokens on internal Muse test VMs used by Meta staff. The post Meta Shares Top Muse Bug Bounty Findings as Payouts Reach $1.2 Million appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html": {
   "id": "777e0f02d1f7eef8",
@@ -1590,7 +1582,7 @@
   "date": "2026-11-05",
   "source": "SecurityWeek",
   "published_at": "2026-11-05T10:56:41+00:00",
-  "text": "Tracked as CVE-2026-107441, the out-of-bounds write flaw could allow attackers to execute OS commands via crafted HTTP requests. The post Zyxel Switch Hacks Blamed on Patched Flaw Actually Exploited a Zero-Day appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/russia-linked-hackers-hit-ios-android-devices-with-exploit-chains-via-watering-holes/": {
   "id": "b2cd37c695807c1d",
@@ -1599,7 +1591,7 @@
   "date": "2026-11-05",
   "source": "SecurityWeek",
   "published_at": "2026-11-05T10:37:13+00:00",
-  "text": "The large-scale watering hole campaign has been targeting entities in the US and Europe, mainly in Ukraine. The post Russia-Linked Hackers Hit iOS, Android Devices With Exploit Chains via Watering Holes appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/openai-finds-gpt-6-astra-quietly-holding-back-on-internal-red-teaming-exploit-tasks/": {
   "id": "a2356c69d5d4c0f4",
@@ -1608,7 +1600,7 @@
   "date": "2026-11-05",
   "source": "SecurityWeek",
   "published_at": "2026-11-05T10:02:00+00:00",
-  "text": "OpenAI says its Critical-rated cyber model met fewer hidden task goals when work was framed as AI safety research, often silently. The post OpenAI Finds GPT-6 Astra Quietly Holding Back on Internal Red-Teaming, Exploit Tasks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/": {
   "id": "a7b6d9f5065e055b",
@@ -1626,7 +1618,7 @@
   "date": "2026-11-06",
   "source": "SecurityWeek",
   "published_at": "2026-11-06T18:28:41+00:00",
-  "text": "The emergency package comes after dozens of companies and government agencies were hit by unauthorized access to their systems and leaks of client data, prompting uneasiness across Japan. The post Japan Announces Emergency Cybersecurity Package Following a Wave of Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/": {
   "id": "7781d301e48f2c40",
@@ -1644,7 +1636,7 @@
   "date": "2026-11-07",
   "source": "SecurityWeek",
   "published_at": "2026-11-07T10:16:23+00:00",
-  "text": "CVE-2026-19868 can let attackers holding credentials for a different login method get past SAML checks, including SAML-enforced MFA. The post SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html": {
   "id": "8dd7c604c87474a3",
@@ -1662,7 +1654,7 @@
   "date": "2026-11-06",
   "source": "SecurityWeek",
   "published_at": "2026-11-06T12:47:55+00:00",
-  "text": "The October incident will cut fourth-quarter sales by up to €250 million and has led Ahold Delhaize to lower its 2026 outlook. The post Grocery Giant Ahold Delhaize Estimates Financial Toll of October Cyberattack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.darkreading.com/ics-ot-security/europes-freezer-hacks-spread-so-far-so-fast": {
   "id": "c2d214bbfa1b2abe",
@@ -1779,7 +1771,7 @@
   "date": "2026-11-05",
   "source": "SecurityWeek",
   "published_at": "2026-11-05T12:58:32+00:00",
-  "text": "The incident comes after supermarkets in a number of European countries reported this week that their fridges and freezers warmed up after they were remotely hacked. The post Cyberattack Hits French Blood Bank Site but No Blood Products Are Compromised appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/ciso-conversations-ryan-davis-the-unknown-is-where-security-meets-reality/": {
   "id": "d0634225a41921f5",
@@ -1788,7 +1780,7 @@
   "date": "2026-11-05",
   "source": "SecurityWeek",
   "published_at": "2026-11-05T11:00:00+00:00",
-  "text": "Ryan Davis went from hacking his school’s network to running security at New Charter Technologies. What worries him now is shadow AI. The post CISO Conversations: Ryan Davis – The Unknown Is Where Security Meets Reality appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.darkreading.com/mobile-security/apt29-watering-holes-target-mobile-users": {
   "id": "6d6d7462b62ba235",
@@ -1878,7 +1870,7 @@
   "date": "2026-11-04",
   "source": "SecurityWeek",
   "published_at": "2026-11-04T12:43:20+00:00",
-  "text": "Hackers have been harvesting AI access tokens and have been using AI-assisted offensive tools to automate attacks. The post AI-Linked Breaches Mount as WorkOS, Northflank, Trigger.dev Disclose Hacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/university-hospitals-eyemed-facial-surgery-group-data-breaches/": {
   "id": "ac69eadbc713c197",
@@ -1887,7 +1879,7 @@
   "date": "2026-11-04",
   "source": "HIPAA Journal",
   "published_at": "2026-11-04T11:05:10+00:00",
-  "text": "University Hospitals is working on restoring systems after an October 22 cyberattack. Cybersecurity incidents have also been announced by EyeMed Vision Care and Facial Surgery Group. University Hospitals Cleveland, Ohio-based University Hospitals, a 21-hospital health system, is dealing with a cybersecurity incident that was identified on October 22, 2026. University Hospitals activated its incide"
+  "text": ""
  },
  "https://www.hipaajournal.com/data-breaches-hca-healthcare-blossom-health/": {
   "id": "51e2913622c8e98a",
@@ -1896,7 +1888,7 @@
   "date": "2026-11-04",
   "source": "HIPAA Journal",
   "published_at": "2026-11-04T11:49:30+00:00",
-  "text": "Data breaches have been announced by HCA Healthcare, Blossom Health, El Camino Health, and University of Mississippi Medical Center. HCA Healthcare Inc. Nashville, Tennessee-based HCA Healthcare Inc., the operator of 189 hospitals and approximately 2,600 ambulatory sites of care in 19 U.S. states, has disclosed a cybersecurity incident that was first identified on August 12, 2026. Patient and empl"
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/": {
   "id": "153fba715e7958fa",
@@ -1995,7 +1987,7 @@
   "date": "2026-11-03",
   "source": "SecurityWeek",
   "published_at": "2026-11-03T12:10:19+00:00",
-  "text": "Multiple attacks from the same IP address attempted to deploy various payloads, including a Linux bot and webshells. The post Critical Node-RED Flaw Exploited in Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/marathon-health-data-breach/": {
   "id": "f6bef5de108a194e",
@@ -2004,7 +1996,7 @@
   "date": "2026-11-03",
   "source": "HIPAA Journal",
   "published_at": "2026-11-03T11:26:17+00:00",
-  "text": "State attorneys general have been informed about a substantial Marathon Health data breach that reportedly involved the personal and protected health information of almost 5.7 million individuals. Indianapolis, Indiana-based Marathon Health is an employer-sponsored healthcare provider. The company partners with employers, labor unions, and public sector organizations and provides advanced primary "
+  "text": ""
  },
  "https://www.hipaajournal.com/cognitive-health-technologies-data-breach/": {
   "id": "1e226b5b99790920",
@@ -2013,7 +2005,7 @@
   "date": "2026-11-03",
   "source": "HIPAA Journal",
   "published_at": "2026-11-03T11:00:10+00:00",
-  "text": "Data breaches have been announced by Cognitive Health Technologies in New York, City Ambulance Service in Texas, Baraga County Memorial Hospital in Michigan, The Speech Clinic in Georgia, and Innovative Alternatives in Texas. Cognitive Health Technologies, New York Cognitive Health Technologies LLC, a New York-based healthcare technology and IT consulting company, has disclosed a data security inc"
+  "text": ""
  },
  "https://www.darkreading.com/data-privacy/3am-affiliate-ai-loops-european-school-attack": {
   "id": "9b35534b736936df",
@@ -2166,7 +2158,7 @@
   "date": "2026-11-09",
   "source": "SecurityWeek",
   "published_at": "2026-11-09T13:13:28+00:00",
-  "text": "Threat actors are exploiting the four-flaw chain to hack the Plex Media Server application on QNAP NAS devices. The post Plex2Shell Exploited Against QNAP NAS Users appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/italys-meloni-blames-pro-russian-hackers-for-leak-of-foreign-ministers-data-on-the-dark-web/": {
   "id": "a696ad54dbbab111",
@@ -2175,7 +2167,7 @@
   "date": "2026-11-09",
   "source": "SecurityWeek",
   "published_at": "2026-11-09T12:22:12+00:00",
-  "text": "Italian Foreign Minister Antonio Tajani said Saturday that his personal data had been disseminated on the dark web. The post Italy’s Meloni Blames Pro-Russian Hackers for Leak of Foreign Minister’s Data on the Dark Web appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/hackers-exploiting-sshole-authentication-bypass-in-openssh/": {
   "id": "eb18f45cb725957d",
@@ -2184,7 +2176,7 @@
   "date": "2026-11-09",
   "source": "SecurityWeek",
   "published_at": "2026-11-09T12:13:32+00:00",
-  "text": "The initial exploitation attempts are attributed to botnets and crypto miners, but other threat actors are expected to follow suit. The post Hackers Exploiting ‘SSHole’ Authentication Bypass in OpenSSH appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/healthcare-providers-unauthorized-disclosure-phi-ai-tools/": {
   "id": "e6795ebf799dc297",
@@ -2193,7 +2185,7 @@
   "date": "2026-11-09",
   "source": "HIPAA Journal",
   "published_at": "2026-11-09T16:46:27+00:00",
-  "text": "Two data privacy incidents have recently been announced that involved patient data uploaded to artificial intelligence (AI) tools without authorization. Weill Cornell Medicine, New York Weill Cornell Medicine, Cornell University’s school of medicine and biomedical research institution in New York City, has alerted certain patients about a privacy incident involving patient information being used i"
+  "text": ""
  },
  "https://www.darkreading.com/endpoint-security/attackers-claude-office-party-flaw-malicious-code-linux": {
   "id": "df4e5cf43e105305",
@@ -2391,7 +2383,7 @@
   "date": "2026-11-11",
   "source": "HIPAA Journal",
   "published_at": "2026-11-11T11:00:08+00:00",
-  "text": "Premise Health Holding Corp has announced that a former employee copied patient data without authorization. Data security incidents have also been announced by Telecare Corporation and Enara Health. Premise Health Holding Corp. Premise Health Holding Corp., a Brentwood, Tennessee-based direct healthcare provider that works with employers, unions, and health plans to provide employer-sponsored and "
+  "text": ""
  },
  "https://www.securityweek.com/hackers-target-n-central-zero-days-as-n-able-rushes-patches/": {
   "id": "8b3857111c6f70ad",
@@ -2400,7 +2392,7 @@
   "date": "2026-11-12",
   "source": "SecurityWeek",
   "published_at": "2026-11-12T09:39:55+00:00",
-  "text": "The malicious activity started shortly after a researcher dropped over 30 zero-days. N-able patched the unauthenticated ones. The post Hackers Target N-central Zero-Days as N-able Rushes Patches appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/minnesota-epilepsy-group-data-breach/": {
   "id": "f7f481a00ba574bf",
@@ -2409,7 +2401,7 @@
   "date": "2026-11-12",
   "source": "HIPAA Journal",
   "published_at": "2026-11-12T15:24:33+00:00",
-  "text": "Minnesota Epilepsy Group, P.A., a Level 4 Epilepsy Center in Roseville, Minnesota, has announced that it has fallen victim to its second cyberattack of the year. The first incident involved unauthorized access to its network between March 16, 2026, and April 10, 2026, and affected 80,061 individuals. The latest incident occurred four months after the previous unauthorized access was terminated and"
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/": {
   "id": "9320c6c337fb565d",
@@ -2445,7 +2437,7 @@
   "date": "2026-11-13",
   "source": "HIPAA Journal",
   "published_at": "2026-11-13T12:23:46+00:00",
-  "text": "Data breaches have recently been announced by the Virginia healthcare technology company Dorsata, the Florida mental healthcare provider Bay Area Psychological Consultants, and the Michigan urgent care provider Lansing Urgent Care. Dorsata, Virginia Dorsata, Inc., an Arlington, Virginia-based healthcare technology company whose products include electronic medical record software and data solutions"
+  "text": ""
  },
  "https://www.hipaajournal.com/data-breach-hood-river-dental-liberty-health-keep-smiling-dental/": {
   "id": "ac7edf688e78745c",
@@ -2454,7 +2446,7 @@
   "date": "2026-11-13",
   "source": "HIPAA Journal",
   "published_at": "2026-11-13T13:49:19+00:00",
-  "text": "Data security incidents have been announced by the dental practices Hood River Dental in Oregon and Keep Smiling Dental Group in Ohio, and the multi-state senior living, rehabilitation, and skilled nursing provider Liberty Healthcare Group. Hood River Dental, Oregon Hood River Dental, an Oregon dental practice with two locations in Hood River, has recently reported two data security incidents to t"
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/": {
   "id": "3b7854e67b3a73a1",
@@ -2472,7 +2464,7 @@
   "date": "2026-11-16",
   "source": "SecurityWeek",
   "published_at": "2026-11-16T08:55:32+00:00",
-  "text": "Tor 0.4.9.17 patches several security issues, including one related to how built-in DoS protections deal with IPv6. The post Tor Updates DoS Defenses Again as Relay Attacks Continue appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/telegram-widgets-hit-by-rce-demos-malware-warning-days-after-launch/": {
   "id": "d61edb3c44b11bca",
@@ -2481,7 +2473,7 @@
   "date": "2026-11-16",
   "source": "SecurityWeek",
   "published_at": "2026-11-16T12:48:03+00:00",
-  "text": "Kaspersky suspects exploitation of Telegram’s new widgets to deliver WebRAT, as researchers demo RCE and Pavel Durov disputes the claims. The post Telegram Widgets Hit by RCE Demos, Malware Warning Days After Launch appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/weaponized-artex-pen-testing-framework-attacks-healthcare/": {
   "id": "a0bf26a9b7bb63bc",
@@ -2490,7 +2482,7 @@
   "date": "2026-11-16",
   "source": "HIPAA Journal",
   "published_at": "2026-11-16T18:32:37+00:00",
-  "text": "Threat actors are using a weaponized version of the ARTEX open source penetration testing tool to attack organizations in a variety of sectors, including healthcare, according to a November 13, 2026, Federal Bureau of Investigation (FBI) Flash Advisory . ARTEX is an agentic LLM-driven framework that was developed as an autonomous defensive penetration testing tool for security assessments. The ori"
+  "text": ""
  },
  "https://www.hipaajournal.com/fda-feedback-autonomous-remote-teleoperation-medical-devices/": {
   "id": "53dc088b169fca9c",
@@ -2499,7 +2491,7 @@
   "date": "2026-11-16",
   "source": "HIPAA Journal",
   "published_at": "2026-11-16T16:25:26+00:00",
-  "text": "The U.S. Food and Drug Administration (FDA) is seeking feedback on the benefits and risks of implementing autonomous and remotely operated medical devices in healthcare and has published a paper – Evaluating Benefit-Risk in Robotic Medical Devices with Autonomous or Remote Teleoperation Capabilities – to start a discussion. The FDA states that the paper does not constitute draft or final guidance,"
+  "text": ""
  },
  "https://www.hipaajournal.com/data-breach-lifetouch-mpower-health-geisinger/": {
   "id": "96ca5b6d9bbd367d",
@@ -2508,7 +2500,7 @@
   "date": "2026-11-16",
   "source": "HIPAA Journal",
   "published_at": "2026-11-16T17:30:18+00:00",
-  "text": "Data breaches have been announced by the Arkansas hospice operator LifeTouch Health, the Texas-based healthcare company MPOWERHealth Holdings, and the Pennsylvania-based healthcare system Geisinger. LifeTouch Health LifeTouch Health, formerly known as Arkansas Hospice Inc., the largest nonprofit hospice and palliative care provider in Arkansas, has announced that it experienced a cybersecurity inc"
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/": {
   "id": "8117bc931951529c",
@@ -2607,7 +2599,7 @@
   "date": "2026-11-23",
   "source": "SecurityWeek",
   "published_at": "2026-11-23T15:06:49+00:00",
-  "text": "The company has restored access to the affected services and continues to monitor the affected environments. The post N-able Patches Critical Flaw Discovered After Mail Assure Cyberattack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/gl-inet-routers-kvms-compromised-via-remote-management-service-flaw/": {
   "id": "0deb3809956c7075",
@@ -2616,7 +2608,7 @@
   "date": "2026-11-23",
   "source": "SecurityWeek",
   "published_at": "2026-11-23T13:26:22+00:00",
-  "text": "Attackers abused a flaw in the GoodCloud remote management service to push malware to devices, and cleaning them requires new firmware. The post GL.iNet Routers, KVMs Compromised via Remote Management Service Flaw appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/": {
   "id": "bebedc9daae1e677",
@@ -2643,7 +2635,7 @@
   "date": "2026-11-20",
   "source": "SecurityWeek",
   "published_at": "2026-11-20T14:56:23+00:00",
-  "text": "Noteworthy stories that might have slipped under the radar: EU adds NoName057(16) to cyber sanctions list, malware targets CACs left in personal computers, Gemini agents targeted Epoch AI. The post In Other News: Norwegian Energy Firm Cyberattacks, Supercomputer Hack, New Nightmare Eclipse Exploit appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/shinyhunters-resurfaces-after-fbi-arrests-uses-old-pgp-keys-as-proof/": {
   "id": "60d61d164ff2cbb5",
@@ -3264,7 +3256,7 @@
   "date": "2026-09-21",
   "source": "SecurityWeek",
   "published_at": "2026-09-21T15:46:58+00:00",
-  "text": "The attackers impersonate at least 40 companies and disable 145 security products to deploy infostealer malware. The post Fake LastPass Installers Push Kernel-Level EDR Killer, ‘Rapuncel’ Stealer appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/google-confirms-gemini-ai-breached-three-firms/": {
   "id": "324452444b6617b9",
@@ -3273,7 +3265,7 @@
   "date": "2026-09-21",
   "source": "SecurityWeek",
   "published_at": "2026-09-21T07:20:46+00:00",
-  "text": "Google is the latest AI giant to confirm that its models escaped a testing environment and hacked real companies. The post Google Confirms Gemini AI Breached Three Firms appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/rathat-android-trojan-uses-ai-for-automation/": {
   "id": "497c7f57f8ce0c4f",
@@ -3282,7 +3274,7 @@
   "date": "2026-09-21",
   "source": "SecurityWeek",
   "published_at": "2026-09-21T12:51:41+00:00",
-  "text": "The malware relies on AI for real-time device navigation and control, increasing adaptability and evasion. The post RatHat Android Trojan Uses AI for Automation appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/call-on-doc-data-breach/": {
   "id": "20302d4c9a5ef6f7",
@@ -3291,7 +3283,7 @@
   "date": "2026-09-22",
   "source": "HIPAA Journal",
   "published_at": "2026-09-22T13:50:51+00:00",
-  "text": "The telemedicine platform operator Call-on-Doc has notified patients about a December 2025 cyberattack and data breach. Data breaches have also been announced by Provident Behavioral Health, Vernon & Waldrep OB-Gyn Associates, and Partnership HealthPlan of California. Call-on-Doc Call-on-Doc, Inc., a Dallas, Texas-based online telemedicine platform provider, started issuing notification letters on"
+  "text": ""
  },
  "https://www.securityweek.com/bigcommerce-data-stolen-via-ribon-apps-hack/": {
   "id": "522a5aad3df9a38b",
@@ -3300,7 +3292,7 @@
   "date": "2026-09-22",
   "source": "SecurityWeek",
   "published_at": "2026-09-22T17:58:00+00:00",
-  "text": "The attackers used a compromised BigCommerce application key held by Ribon to access customer data. The post BigCommerce Data Stolen via Ribon Apps Hack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/malicious-b-tree-npm-package-accumulates-millions-of-downloads/": {
   "id": "d6e09d9874fed660",
@@ -3309,7 +3301,7 @@
   "date": "2026-09-22",
   "source": "SecurityWeek",
   "published_at": "2026-09-22T11:33:59+00:00",
-  "text": "Posing as the legitimate sorted-btree package, indexed-btree hides a malware trigger in its prototype method. The post Malicious B-tree NPM Package Accumulates Millions of Downloads appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/recent-zyxel-switch-vulnerability-exploited-by-chinese-hackers/": {
   "id": "7bffe3ae86de109e",
@@ -3318,7 +3310,7 @@
   "date": "2026-09-22",
   "source": "SecurityWeek",
   "published_at": "2026-09-22T11:55:20+00:00",
-  "text": "A Chinese threat actor has exploited the bug to exfiltrate sensitive information from nearly 1,000 ZyXEL switches. The post Recent ZyXEL Switch Vulnerability Exploited by Chinese Hackers appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/ai-powered-phishing-platform-eviltokens-disrupted-by-microsoft/": {
   "id": "81117887e86780e4",
@@ -3327,7 +3319,7 @@
   "date": "2026-09-23",
   "source": "SecurityWeek",
   "published_at": "2026-09-23T11:23:30+00:00",
-  "text": "The cybercrime platform leveraged AI at every step of the attack chain, including writing social engineering messages and deciding targets. The post AI-Powered Phishing Platform EvilTokens Disrupted by Microsoft appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/arista-urges-immediate-patching-of-exploited-vco-zero-day/": {
   "id": "afd0a0a96af45c7a",
@@ -3336,7 +3328,7 @@
   "date": "2026-09-23",
   "source": "SecurityWeek",
   "published_at": "2026-09-23T08:33:06+00:00",
-  "text": "Remote attackers could trigger the critical-severity flaw to access privileged internal functionality. The post Arista Urges Immediate Patching of Exploited VCO Zero-Day appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/check-point-patches-exploited-management-server-zero-day/": {
   "id": "409c0f3c65c01d8d",
@@ -3345,7 +3337,7 @@
   "date": "2026-09-23",
   "source": "SecurityWeek",
   "published_at": "2026-09-23T06:14:03+00:00",
-  "text": "The critical-severity flaw could allow unauthenticated attackers to upload and execute arbitrary scripts. The post Check Point Patches Exploited Management Server Zero-Day appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/critical-f5-big-ip-vulnerability-exploited-as-zero-day/": {
   "id": "eddc68599ca890b2",
@@ -3354,7 +3346,7 @@
   "date": "2026-09-23",
   "source": "SecurityWeek",
   "published_at": "2026-09-23T07:34:18+00:00",
-  "text": "Unauthenticated attackers could send malicious traffic to BIG-IP to achieve remote code execution. The post Critical F5 BIG-IP Vulnerability Exploited as Zero-Day appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/shinyhunters-claims-fbi-hack-demands-retraction-of-threat-report/": {
   "id": "6fe54f31ac4a79e5",
@@ -3363,7 +3355,7 @@
   "date": "2026-09-23",
   "source": "SecurityWeek",
   "published_at": "2026-09-23T07:13:49+00:00",
-  "text": "The cybercrime group is unhappy with its description in an FBI report and threatens to leak stolen information. The post ShinyHunters Claims FBI Hack, Demands Retraction of Threat Report appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/worries-about-an-ai-internet-takeover-gain-new-urgency-among-doomsday-scenarios/": {
   "id": "a026d6c01ce9cb97",
@@ -3372,7 +3364,7 @@
   "date": "2026-09-23",
   "source": "SecurityWeek",
   "published_at": "2026-09-23T18:05:58+00:00",
-  "text": "The idea that AI could break away and work toward its own agenda is looking increasingly plausible to researchers and experts. The post Worries About an AI Internet Takeover Gain New Urgency Among Doomsday Scenarios appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/data-breaches-gastroenterology-hospice-home-healthcare-companies/": {
   "id": "8722fa1f237657eb",
@@ -3381,7 +3373,7 @@
   "date": "2026-09-24",
   "source": "HIPAA Journal",
   "published_at": "2026-09-24T11:57:13+00:00",
-  "text": "Data breaches have been announced by Gastroenterology & Hepatology of Central New York, Three Oaks Hospice, and Doctor’s Choice Home Care. Gastroenterology & Hepatology of Central New York Gastroenterology & Hepatology of Central New York, a medical practice specializing in digestive disorders and liver disease with locations in Liverpool and Syracuse, has started notifying patients about a cybers"
+  "text": ""
  },
  "https://www.hipaajournal.com/oculus-pathology-data-breach/": {
   "id": "264938b472681daf",
@@ -3390,7 +3382,7 @@
   "date": "2026-09-24",
   "source": "HIPAA Journal",
   "published_at": "2026-09-24T09:54:08+00:00",
-  "text": "Data breaches have been announced by Paradigm Healthcare Services in California. Oculus Pathology in Texas, and LeMaitre Vascular in Massachusetts. Paradigm Healthcare Services, California Paradigm Healthcare Services, a San Francisco, California-based third-party school Medi-Cal billing company, identified unauthorized access to its local computer network on October 13, 2025. Third-party cybersec"
+  "text": ""
  },
  "https://www.securityweek.com/ai-powered-campaign-targets-hundreds-of-online-retailers/": {
   "id": "8e260b2c11f9ff77",
@@ -3399,7 +3391,7 @@
   "date": "2026-09-24",
   "source": "SecurityWeek",
   "published_at": "2026-09-24T12:48:14+00:00",
-  "text": "A threat actor is using three AI harnesses for vulnerability research, exploitation, and attack orchestration. The post AI-Powered Campaign Targets Hundreds of Online Retailers appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/astrana-health-data-breach-impacts-private-confidential-information/": {
   "id": "9366cff2915da14e",
@@ -3408,7 +3400,7 @@
   "date": "2026-09-24",
   "source": "SecurityWeek",
   "published_at": "2026-09-24T09:56:04+00:00",
-  "text": "Hackers impersonated the company’s personnel and contacted its employees to gain access to Astrana Health’s servers. The post Astrana Health Data Breach Impacts Private, Confidential Information appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/autonomous-ai-hacks-raise-thorny-questions-of-legal-accountability/": {
   "id": "0582635ed315ca2a",
@@ -3417,7 +3409,7 @@
   "date": "2026-09-24",
   "source": "SecurityWeek",
   "published_at": "2026-09-24T20:35:21+00:00",
-  "text": "The prospect of legal accountability is unclear. Lawsuits are a possibility, but some legal experts believe any criminal investigations would face an extremely high burden. The post Autonomous AI Hacks Raise Thorny Questions of Legal Accountability appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/critical-wordpress-vulnerability-exploited-immediately-after-disclosure/": {
   "id": "895ea1ae84642670",
@@ -3426,7 +3418,7 @@
   "date": "2026-09-24",
   "source": "SecurityWeek",
   "published_at": "2026-09-24T07:12:26+00:00",
-  "text": "Tracked as CVE-2026-87902, the path traversal flaw allows remote, unauthenticated attackers to execute arbitrary code. The post Critical WordPress Vulnerability Exploited Immediately After Disclosure appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/openai-agents-probed-websites-for-vulnerabilities-while-fetching-public-data/": {
   "id": "314a6f558b031f43",
@@ -3435,7 +3427,7 @@
   "date": "2026-09-24",
   "source": "SecurityWeek",
   "published_at": "2026-09-24T14:43:13+00:00",
-  "text": "Australia disclosed that an OpenAI agent gained unauthorized access to non-public government information. The post OpenAI Agents Probed Websites for Vulnerabilities While Fetching Public Data appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/data-breaches-medimpact-healthcare-systems-rosch-visionary-systems/": {
   "id": "35768dc96749af6b",
@@ -3444,7 +3436,7 @@
   "date": "2026-09-25",
   "source": "HIPAA Journal",
   "published_at": "2026-09-25T10:00:18+00:00",
-  "text": "Notification letters are being mailed to individuals affected by data breaches at the pharmacy benefit management service provider MedImpact Healthcare Systems and the healthcare software company Rosch Visionary Systems. MedImpact Healthcare Systems MedImpact Healthcare Systems, a provider of pharmacy benefit management services to health plans, government entities, and self-insured employers, ide"
+  "text": ""
  },
  "https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/": {
   "id": "180a77575cb182d7",
@@ -3453,7 +3445,7 @@
   "date": "2026-09-25",
   "source": "SecurityWeek",
   "published_at": "2026-09-25T15:07:31+00:00",
-  "text": "Noteworthy stories that might have slipped under the radar: BragJack attack against browser AI assistants, TDengine flaw threatens industrial telemetry uptime, Ubuntu update overhaul. The post In Other News: Clop Leak Site Takeover, Docker Botnet Hunts AI Keys, Water Utility Exposure appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/north-korea-suspected-in-351-million-bitget-crypto-heist/": {
   "id": "a594ba0629a587bb",
@@ -3462,7 +3454,7 @@
   "date": "2026-09-25",
   "source": "SecurityWeek",
   "published_at": "2026-09-25T14:16:18+00:00",
-  "text": "Bitget’s security systems caught the unauthorized transfers on September 24, and some wallet addresses linked to the attacker have been frozen. The post North Korea Suspected in $351 Million Bitget Crypto Heist appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/roundcube-webmail-vulnerability-in-attackers-crosshairs/": {
   "id": "2b2e1ab1f9a51a5f",
@@ -3471,7 +3463,7 @@
   "date": "2026-09-25",
   "source": "SecurityWeek",
   "published_at": "2026-09-25T06:57:40+00:00",
-  "text": "Tracked as CVE-2026-48842, the exploited bug is an SQL injection that can be exploited without authentication. The post Roundcube Webmail Vulnerability in Attackers’ Crosshairs appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/salesbleed-flaws-in-salesforce-agentforce-enabled-zero-click-data-exfiltration/": {
   "id": "d3b57b01ac3e938b",
@@ -3480,7 +3472,7 @@
   "date": "2026-09-25",
   "source": "SecurityWeek",
   "published_at": "2026-09-25T09:27:51+00:00",
-  "text": "Three vulnerabilities in Salesforce Agentforce allowed hackers to hijack trusted agents, steal data, and launch phishing attacks. The post ‘SalesBleed’ Flaws in Salesforce Agentforce Enabled Zero-Click Data Exfiltration appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/new-x47-c-windows-botnet-weaponizes-xai-grok-ai-api-draining/": {
   "id": "23775c49e7bc7961",
@@ -3489,7 +3481,7 @@
   "date": "2026-09-26",
   "source": "SecurityWeek",
   "published_at": "2026-09-26T12:00:00+00:00",
-  "text": "The Windows botnet relies on AI to maintain persistence, using xAI Grok to choose from predefined actions. The post New x47.c Windows Botnet Weaponizes xAI Grok, AI API Draining appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/openai-says-its-models-engaged-with-us-government-websites-in-new-model-misbehavior-disclosure/": {
   "id": "1f37a060ad4ef7e6",
@@ -3498,7 +3490,7 @@
   "date": "2026-09-26",
   "source": "SecurityWeek",
   "published_at": "2026-09-26T10:15:41+00:00",
-  "text": "OpenAI’s CEO said there is an “extensive and ongoing review related to our agents’ use of internet access during training and evaluation.” The post OpenAI Says Its Models Engaged With US Government Websites in New Model Misbehavior Disclosure appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/microsoft-sharepoint-flaw-cve-2026-65660-now-exploited-in-attacks/": {
   "id": "29678bc546a5a6ba",
@@ -3507,7 +3499,7 @@
   "date": "2026-09-27",
   "source": "SecurityWeek",
   "published_at": "2026-09-27T09:23:09+00:00",
-  "text": "CISA added CVE-2026-65660 to its KEV catalog, giving federal agencies a patching deadline of September 28. The post Microsoft SharePoint Flaw CVE-2026-65660 Now Exploited in Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/california-critical-access-hospital-cybersecurity-incident/": {
   "id": "03340fdf61d3bff0",
@@ -3516,7 +3508,7 @@
   "date": "2026-09-28",
   "source": "HIPAA Journal",
   "published_at": "2026-09-28T06:27:45+00:00",
-  "text": "Data breaches have been announced by Modoc Medical Center and Vista Del Mar Child and Family Services in California, Park Place Behavioral Healthcare in Florida, and Millstone Medical Outsourcing in Massachusetts. Modoc Medical Center Modoc Medical Center, a 12-bed critical access hospital and rural healthcare system based in Alturas, California, has identified unauthorized access to its computer "
+  "text": ""
  },
  "https://www.hipaajournal.com/openai-agent-hacks-australian-medicare-portal/": {
   "id": "af13fcbfd732412b",
@@ -3525,7 +3517,7 @@
   "date": "2026-09-28",
   "source": "HIPAA Journal",
   "published_at": "2026-09-28T15:51:25+00:00",
-  "text": "An artificial intelligence (AI) agent developed by OpenAI gained unauthorized access to an Australian Medicare statistics reporting service portal and obtained non-public data. The same AI agent also accessed three other government systems as part of its autonomous research activities: the web portals of the Australian Institute of Health and Welfare, the Victorian Department of Health, and the Ne"
+  "text": ""
  },
  "https://www.securityweek.com/dc-health-agency-exposes-400000-beneficiary-records/": {
   "id": "19a2badb9e5d91ab",
@@ -3534,7 +3526,7 @@
   "date": "2026-09-28",
   "source": "SecurityWeek",
   "published_at": "2026-09-28T11:29:29+00:00",
-  "text": "The Medicaid IDs and other information of Medicaid and DC Healthcare Alliance beneficiaries were exposed. The post DC Health Agency Exposes 400,000 Beneficiary Records appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/": {
   "id": "be4782ece5ea9d5a",
@@ -3543,7 +3535,7 @@
   "date": "2026-09-28",
   "source": "SecurityWeek",
   "published_at": "2026-09-28T10:56:46+00:00",
-  "text": "The extortion group has modified its exploit in new attacks targeting the PeopleSoft vulnerability CVE-2026-35273. The post Google Warns of ShinyHunters’ Fresh Oracle PeopleSoft Campaign appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/astrana-health-data-breach/": {
   "id": "a7f39f69565ad144",
@@ -3552,7 +3544,7 @@
   "date": "2026-09-29",
   "source": "HIPAA Journal",
   "published_at": "2026-09-29T13:46:30+00:00",
-  "text": "Astrana Health, a managed services organization that helps healthcare providers deliver value-based, coordinated care to patients, has notified the U.S. Securities and Exchange Commission (SEC) about a material cybersecurity incident that exposed patient, employee, and provider information. According to the Form 8-K filing, Astrana Health subsidiary Astrana Health Management identified unusual act"
+  "text": ""
  },
  "https://www.hipaajournal.com/citrix-zero-day-vulnerabilities-exploited-sept-2026/": {
   "id": "d13035fd14408d7a",
@@ -3561,7 +3553,7 @@
   "date": "2026-09-29",
   "source": "HIPAA Journal",
   "published_at": "2026-09-29T13:53:49+00:00",
-  "text": "Two critical zero-day vulnerabilities in Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) are under active exploitation and require immediate patching. The vulnerabilities are part of a batch of eight flaws detailed in a Citrix security bulletin issued on September 27, 2026. Six of the vulnerabilities are rated high severity, with CVSS v4.0 severity"
+  "text": ""
  },
  "https://www.securityweek.com/daemon-tools-hackers-needymantis-malware-dissected-by-microsoft/": {
   "id": "d797f69f0b329a79",
@@ -3570,7 +3562,7 @@
   "date": "2026-09-29",
   "source": "SecurityWeek",
   "published_at": "2026-09-29T09:46:13+00:00",
-  "text": "The malware framework uses a modular architecture and a custom executable file format for long-term persistence. The post Daemon Tools Hackers’ NeedyMantis Malware Dissected by Microsoft appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/four-cyber-threats-harboring-big-plans-for-the-future/": {
   "id": "c689c1ddf2500693",
@@ -3579,7 +3571,7 @@
   "date": "2026-09-29",
   "source": "SecurityWeek",
   "published_at": "2026-09-29T11:30:00+00:00",
-  "text": "- AI, supply-chain exposure, quantum computing and geopolitical conflict are testing security programs. Preparing for disruption must become part of day-to-day operations. The post Four Cyber Threats Harboring Big Plans for the Future appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/hackers-use-chatgpt-custom-gpts-in-clickfix-attacks/": {
   "id": "3f69b9ba3e22ed3a",
@@ -3588,7 +3580,7 @@
   "date": "2026-09-29",
   "source": "SecurityWeek",
   "published_at": "2026-09-29T13:03:35+00:00",
-  "text": "The personalized versions of ChatGPT were used to impersonate legitimate products and trick users into executing PowerShell commands. The post Hackers Use ChatGPT Custom GPTs in ClickFix Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/new-spectre-v2-variant-exposes-intel-amd-arm-cpus-to-data-leaks/": {
   "id": "6d549f069728df18",
@@ -3597,7 +3589,7 @@
   "date": "2026-09-29",
   "source": "SecurityWeek",
   "published_at": "2026-09-29T17:00:00+00:00",
-  "text": "Branch Target Reuse (BTR) is a new Spectre v2 attack targeting JIT compilers in web browsers, language runtimes, and the operating system kernel The post New Spectre v2 Variant Exposes Intel, AMD, Arm CPUs to Data Leaks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/openai-calls-off-gpt-6-1-astra-launch-details-safety-cases-for-frontier-training/": {
   "id": "6dff7ed2c324b6f7",
@@ -3606,7 +3598,7 @@
   "date": "2026-09-29",
   "source": "SecurityWeek",
   "published_at": "2026-09-29T11:15:59+00:00",
-  "text": "The GPT-6.1 Astra model was slated to debut in ChatGPT and Codex in October, but it fell short of expectations. The post OpenAI Calls Off GPT-6.1 Astra Launch, Details Safety Cases for Frontier Training appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/pentagon-personnel-agency-data-breach-impacts-3-million-people/": {
   "id": "16e809290c2ab470",
@@ -3615,7 +3607,7 @@
   "date": "2026-09-29",
   "source": "SecurityWeek",
   "published_at": "2026-09-29T12:25:12+00:00",
-  "text": "The data breach affects the Defense Manpower Data Center (DMDC), which maintains personnel records for the Department of Defense. The post Pentagon Personnel Agency Data Breach Impacts 3 Million People appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/district-columbia-department-health-care-finance-data-breach/": {
   "id": "4475a59cd993f733",
@@ -3624,7 +3616,7 @@
   "date": "2026-09-30",
   "source": "HIPAA Journal",
   "published_at": "2026-09-30T11:34:16+00:00",
-  "text": "Almost 400,000 Medicaid beneficiaries in the District of Columbia have had personal and protected health information exposed online, according to a recent disclosure by DC’s Medicaid agency. On July 21, 2026, the District of Columbia Department of Health Care Finance (DHCF) said it discovered two reports had been published on its website that exposed sensitive data to unauthorized individuals. The"
+  "text": ""
  },
  "https://www.hipaajournal.com/h1-2026-healthcare-data-breach-report/": {
   "id": "fd99e1e94c6cf4b9",
@@ -3633,7 +3625,7 @@
   "date": "2026-09-30",
   "source": "HIPAA Journal",
   "published_at": "2026-09-30T16:44:10+00:00",
-  "text": "There has been a 5.9% decline in healthcare breaches compared to H1 2025. Between January 1 and June 30, 2026, 397 data breaches affecting 500 or more individuals were reported to the U.S. Department of Health and Human Services (HHS) Office for Civil Rights – the lowest H1 total since 2023. While the year-over-year reduction in healthcare data breaches is a step in the right direction, healthcare"
+  "text": ""
  },
  "https://www.securityweek.com/anthropic-flags-ai-agent-liability-risks-as-openai-faces-hacking-lawsuit/": {
   "id": "a0d560a6752f9242",
@@ -3642,7 +3634,7 @@
   "date": "2026-09-30",
   "source": "SecurityWeek",
   "published_at": "2026-09-30T11:19:00+00:00",
-  "text": "Attacks by autonomous AI agents are moving out of the lab and into the courtroom, raising unsettled questions about who is liable for what agents do. The post Anthropic Flags AI Agent Liability Risks as OpenAI Faces Hacking Lawsuit appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/google-ai-is-changing-the-pace-and-profile-of-vulnerability-discovery/": {
   "id": "82c1aedb89b658bb",
@@ -3651,7 +3643,7 @@
   "date": "2026-09-30",
   "source": "SecurityWeek",
   "published_at": "2026-09-30T14:05:58+00:00",
-  "text": "Google’s analysis found that AI-discovered vulnerabilities are more likely to enable remote code execution. The post Google: AI Is Changing the Pace and Profile of Vulnerability Discovery appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/government-finance-orgs-targeted-in-weeks-long-netscaler-zero-day-attacks/": {
   "id": "a1d93e7e78d4769a",
@@ -3660,7 +3652,7 @@
   "date": "2026-09-30",
   "source": "SecurityWeek",
   "published_at": "2026-09-30T12:48:20+00:00",
-  "text": "Several security firms have confirmed seeing exploitation of the NetScaler vulnerabilities CVE-2026-88771 and CVE-2026-88772. The post Government, Finance Orgs Targeted in Weeks-Long NetScaler Zero-Day Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/cpap-medical-supplies-services-data-breach-settlement/": {
   "id": "e240cd5402640dd3",
@@ -3669,7 +3661,7 @@
   "date": "2026-10-01",
   "source": "HIPAA Journal",
   "published_at": "2026-10-01T10:00:57+00:00",
-  "text": "CPAP Medical Supplies and Services, a Jacksonville, Florida-based provider of durable medical equipment for treating sleep apnea, has agreed to pay up to $500,000 in benefits to individuals affected by a December 2024 cyberattack and data breach. The cybersecurity incident was identified in late December 2024, and the forensic investigation determined that an unauthorized third party accessed its "
+  "text": ""
  },
  "https://www.hipaajournal.com/data-breaches-saber-healthcare-buchalter/": {
   "id": "8bfab1270d596be2",
@@ -3678,7 +3670,7 @@
   "date": "2026-10-01",
   "source": "HIPAA Journal",
   "published_at": "2026-10-01T13:46:53+00:00",
-  "text": "Data breaches have been announced by Saber Healthcare in Ohio and Buchalter, a California-headquartered law firm that provides services to Arrowhead Regional Medical Center. Bright Smile Dental Care in Indiana has fallen victim to a ransomware attack, although unauthorized access to patient data is considered unlikely. Saber Healthcare Saber Healthcare, a Beachwood, Ohio-based skilled nursing, lon"
+  "text": ""
  },
  "https://www.securityweek.com/500000-active-credentials-left-exposed-on-github/": {
   "id": "a53f056b277e2658",
@@ -3687,7 +3679,7 @@
   "date": "2026-10-01",
   "source": "SecurityWeek",
   "published_at": "2026-10-01T09:43:56+00:00",
-  "text": "Roughly 200,000 of the credentials were exposed after GitHub enabled push protections by default. The post 500,000 Active Credentials Left Exposed on GitHub appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/zammad-zero-days-exploited-in-ai-powered-divd-hack/": {
   "id": "e5f579d88a96a613",
@@ -3696,7 +3688,7 @@
   "date": "2026-10-01",
   "source": "SecurityWeek",
   "published_at": "2026-10-01T10:42:49+00:00",
-  "text": "The flaws were chained to hijack sessions, achieve remote code execution, and elevate privileges to root. The post Zammad Zero-Days Exploited in AI-Powered DIVD Hack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/zero-trust-creator-says-model-holds-firm-against-ai-assisted-attacks/": {
   "id": "4c8afc1027b4de13",
@@ -3705,7 +3697,7 @@
   "date": "2026-10-01",
   "source": "SecurityWeek",
   "published_at": "2026-10-01T18:00:00+00:00",
-  "text": "Fifteen years after coining the framework, John Kindervag insists zero trust still works in the AI era—if you get the implementation right. The post Zero Trust Creator Says Model Holds Firm Against AI-Assisted Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/zimbra-vulnerability-exploited-in-the-wild-prior-to-public-disclosure/": {
   "id": "b22b8b48028b39a5",
@@ -3714,7 +3706,7 @@
   "date": "2026-10-01",
   "source": "SecurityWeek",
   "published_at": "2026-10-01T12:55:57+00:00",
-  "text": "Under certain conditions, CVE-2026-73570 can be exploited via specially crafted emails without user interaction. The post Zimbra Vulnerability Exploited in the Wild Prior to Public Disclosure appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/angmar-management-services-data-breach/": {
   "id": "87f6ad0f836beaa2",
@@ -3723,7 +3715,7 @@
   "date": "2026-10-02",
   "source": "HIPAA Journal",
   "published_at": "2026-10-02T10:00:01+00:00",
-  "text": "AngMar Management Services, a Mansfield, Texas-based home health and hospice management company, has identified unauthorized access to its information technology systems. The incident was identified on July 20, 2026, and the forensic investigation determined that an unauthorized individual potentially accessed and/or acquired files containing patient information on or around July 18, 2026. The rev"
+  "text": ""
  },
  "https://www.securityweek.com/crypto-scammers-hijack-microsofts-official-x-account/": {
   "id": "f44af5ad58cc5c1f",
@@ -3732,7 +3724,7 @@
   "date": "2026-10-02",
   "source": "SecurityWeek",
   "published_at": "2026-10-02T11:46:10+00:00",
-  "text": "Hackers used the account, which has 13 million followers, to amplify a Clippy-themed cryptocurrency account. The post Crypto Scammers Hijack Microsoft’s Official X Account appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/exploited-fortinet-fortimail-zero-day-calls-for-urgent-action/": {
   "id": "db77070331493845",
@@ -3741,7 +3733,7 @@
   "date": "2026-10-02",
   "source": "SecurityWeek",
   "published_at": "2026-10-02T08:07:33+00:00",
-  "text": "CVE-2026-104286 is a critical-severity path traversal vulnerability that could allow attackers to write arbitrary files to the system. The post Exploited Fortinet FortiMail Zero-Day Calls for Urgent Action appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/warlock-expands-sharepoint-exploitation-in-critical-infrastructure-attacks/": {
   "id": "92e01821f40cf0e4",
@@ -3750,7 +3742,7 @@
   "date": "2026-10-02",
   "source": "SecurityWeek",
   "published_at": "2026-10-02T09:34:41+00:00",
-  "text": "The China-based hacking group has been exploiting SharePoint vulnerabilities since July 2025. The post Warlock Expands SharePoint Exploitation in Critical Infrastructure Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/windrose-health-network-data-breach/": {
   "id": "b6a05a40658d1c52",
@@ -3759,7 +3751,7 @@
   "date": "2026-10-05",
   "source": "HIPAA Journal",
   "published_at": "2026-10-05T16:49:17+00:00",
-  "text": "Data breaches have been announced by WindRose Health Network and Advantage Home Health Care in Indiana, Camden-on-Gauley Medical Center in West Virginia, and Lakes Region Visiting Nursing Association in New Hampshire. WindRose Health Network, Indiana WindRose Health Network, a network of Federally Qualified Health Centers that provide primary care and behavioral health services at several location"
+  "text": ""
  },
  "https://www.securityweek.com/250000-impacted-by-data-breaches-at-new-jersey-texas-healthcare-firms/": {
   "id": "4b702de9ad5beba4",
@@ -3768,7 +3760,7 @@
   "date": "2026-10-05",
   "source": "SecurityWeek",
   "published_at": "2026-10-05T12:35:15+00:00",
-  "text": "Hackers stole patient information from Clover Health Investments and AngMar Management Services in July. The post 250,000 Impacted by Data Breaches at New Jersey, Texas Healthcare Firms appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/alleged-shinyhunters-leader-arrested-in-jordan/": {
   "id": "4a849dce736f0de3",
@@ -3777,7 +3769,7 @@
   "date": "2026-10-05",
   "source": "SecurityWeek",
   "published_at": "2026-10-05T07:16:53+00:00",
-  "text": "Known as Rey, the suspect is reportedly helping the FBI identify and locate other members of the extortion group. The post Alleged ShinyHunters Leader Arrested in Jordan appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/exploitation-hits-rejetto-hfs-vulnerability-discovered-by-ai/": {
   "id": "6c44dc94be2479a2",
@@ -3786,7 +3778,7 @@
   "date": "2026-10-05",
   "source": "SecurityWeek",
   "published_at": "2026-10-05T11:00:05+00:00",
-  "text": "CVE-2026-61500 allows attackers to recover the session-cookie signing key and gain administrative access and RCE. The post Exploitation Hits Rejetto HFS Vulnerability Discovered by AI appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/exploitation-of-citrix-netscaler-zero-day-hits-appliances-patched-days-earlier/": {
   "id": "8348207590771ef1",
@@ -3795,7 +3787,7 @@
   "date": "2026-10-05",
   "source": "SecurityWeek",
   "published_at": "2026-10-05T05:14:48+00:00",
-  "text": "Citrix has confirmed that a new zero-day vulnerability, CVE-2026-88779, emerged just days after two other exploited flaws were patched. The post Exploitation of Citrix NetScaler Zero-Day Hits Appliances Patched Days Earlier appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/linux-backdoor-abuses-stun-protocol-exploits-dozens-of-flaws/": {
   "id": "d88dab7aa8fde579",
@@ -3804,7 +3796,7 @@
   "date": "2026-10-05",
   "source": "SecurityWeek",
   "published_at": "2026-10-05T13:00:00+00:00",
-  "text": "ClingSTUN operates as a back-connect proxy backdoor, sets up persistence, and contains exploits for self-propagation. The post Linux Backdoor Abuses STUN Protocol, Exploits Dozens of Flaws appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/citrix-patches-third-actively-exploited-netscaler-zero-day/": {
   "id": "3b147adf4d21ce75",
@@ -3813,7 +3805,7 @@
   "date": "2026-10-06",
   "source": "HIPAA Journal",
   "published_at": "2026-10-06T10:26:38+00:00",
-  "text": "Citrix has released another patch for a zero day vulnerability under active exploitation, just a few days after patches were released for two other actively exploited zero day flaws. Like the previous two zero day flaws, the latest vulnerability affects Citrix NetScaler Application Delivery Controller (ADC) and NetScaler Gateway appliances. The former is often used to provide cloud applications to"
+  "text": ""
  },
  "https://www.securityweek.com/fbi-blames-contractors-missed-patch-for-shinyhunters-breach/": {
   "id": "e8add04d6922b398",
@@ -3822,7 +3814,7 @@
   "date": "2026-10-06",
   "source": "SecurityWeek",
   "published_at": "2026-10-06T14:15:00+00:00",
-  "text": "The FBI has removed an Accenture contractor over a data breach that exposed personal information of thousands of bureau employees. The post FBI Blames Contractor’s Missed Patch for ShinyHunters Breach appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/long-running-npm-malware-campaign-accumulates-40000-downloads/": {
   "id": "55bc3b59ce78ad65",
@@ -3831,7 +3823,7 @@
   "date": "2026-10-06",
   "source": "SecurityWeek",
   "published_at": "2026-10-06T10:34:25+00:00",
-  "text": "Since August 2023, attackers have published eight malicious packages as part of the MALFEX supply chain campaign. The post Long-Running NPM Malware Campaign Accumulates 40,000 Downloads appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/advantest-discloses-data-breach-months-after-ransomware-attack/": {
   "id": "c79f571130c6f55b",
@@ -3840,7 +3832,7 @@
   "date": "2026-10-07",
   "source": "SecurityWeek",
   "published_at": "2026-10-07T12:37:24+00:00",
-  "text": "The Japanese chip testing giant said hackers stole personal information from its servers in the February 2026 cyberattack. The post Advantest Discloses Data Breach Months After Ransomware Attack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/asos-confirms-cyberattack-data-breach/": {
   "id": "3b064d531f38e9b5",
@@ -3849,7 +3841,7 @@
   "date": "2026-10-07",
   "source": "SecurityWeek",
   "published_at": "2026-10-07T09:46:20+00:00",
-  "text": "Hackers compromised a third-party communication platform and sent rogue notifications to ASOS users. The post ASOS Confirms Cyberattack, Data Breach appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/atlassian-patches-critical-vulnerability-affecting-8-products/": {
   "id": "c1fc9022c295ff9e",
@@ -3858,7 +3850,7 @@
   "date": "2026-10-07",
   "source": "SecurityWeek",
   "published_at": "2026-10-07T06:37:16+00:00",
-  "text": "Unauthenticated attackers could exploit the flaw to access specific files in the web application root directory. The post Atlassian Patches Critical Vulnerability Affecting 8 Products appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/georgia-power-alabama-power-data-breach-hits-400000-accounts/": {
   "id": "1b84ae1584bcf8f5",
@@ -3867,7 +3859,7 @@
   "date": "2026-10-07",
   "source": "SecurityWeek",
   "published_at": "2026-10-07T14:15:20+00:00",
-  "text": "Southern Company is notifying customers that their utility account information was accessed by hackers. The post Georgia Power, Alabama Power Data Breach Hits 400,000 Accounts appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/personal-information-for-over-1-million-people-stolen-in-a-cyberattack-on-arizonas-court-system/": {
   "id": "7287e7b8e4d244d0",
@@ -3876,7 +3868,7 @@
   "date": "2026-10-07",
   "source": "SecurityWeek",
   "published_at": "2026-10-07T01:32:58+00:00",
-  "text": "The Arizona Supreme Court said the information was copied for people dating back as far as 30 years. The post Personal Information for Over 1 Million People Stolen in a Cyberattack on Arizona’s Court System appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/wikimedia-says-rogue-openai-agents-tried-to-turn-its-tools-into-proxies/": {
   "id": "e7b0d94ec1de24b7",
@@ -3885,7 +3877,7 @@
   "date": "2026-10-07",
   "source": "SecurityWeek",
   "published_at": "2026-10-07T07:58:22+00:00",
-  "text": "Wikimedia looked into whether its own websites had seen activity like that disclosed by other organizations The post Wikimedia Says Rogue OpenAI Agents Tried to Turn Its Tools Into Proxies appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/casper-orthopedic-associates-atlantic-digestive-specialists-data-breaches/": {
   "id": "9e667054fb1f349c",
@@ -3894,7 +3886,7 @@
   "date": "2026-10-08",
   "source": "HIPAA Journal",
   "published_at": "2026-10-08T15:32:58+00:00",
-  "text": "Data breaches have been announced by Atlantic Digestive Specialists in New Hampshire and Casper Orthopedic Associates in Wyoming. Atlantic Digestive Specialists Atlantic Digestive Specialists, a multi-location gastroenterology practice in New Hampshire, has disclosed a security incident involving unauthorized access to systems containing patient information. Atlantic Digestive Specialists said it "
+  "text": ""
  },
  "https://www.securityweek.com/fake-decryption-tools-masked-11m-markup-in-ransomware-recovery-scheme/": {
   "id": "34054adb75f1a6cf",
@@ -3903,7 +3895,7 @@
   "date": "2026-10-08",
   "source": "SecurityWeek",
   "published_at": "2026-10-08T09:27:55+00:00",
-  "text": "Zohar Pinhasi was paying ransoms to obtain decryption keys and then charging victims substantially more for remediation. The post Fake Decryption Tools Masked $11M Markup in Ransomware Recovery Scheme appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/bacon-county-health-services-investigating-cyber-incident/": {
   "id": "6c5f8faba1c081ed",
@@ -3912,7 +3904,7 @@
   "date": "2026-10-09",
   "source": "HIPAA Journal",
   "published_at": "2026-10-09T14:43:21+00:00",
-  "text": "Data breaches have been announced by Bacon County Health Services in Georgia, Comprehensive Orthopaedics & Musculoskeletal Care in Connecticut, Imagine the Possibilities in Iowa, and Health Plans Inc. in Massachusetts. Bacon County Health Services Bacon County Health Services, an Alma, Georgia-based nonprofit healthcare organization, is investigating a data security incident involving unauthorized"
+  "text": ""
  },
  "https://www.securityweek.com/citrix-urges-immediate-patching-of-critical-netscaler-vulnerability/": {
   "id": "8b646415f88eca9b",
@@ -3921,7 +3913,7 @@
   "date": "2026-10-09",
   "source": "SecurityWeek",
   "published_at": "2026-10-09T06:53:53+00:00",
-  "text": "The security defect, tracked as CVE-2026-107406, could lead to remote code execution or denial-of-service. The post Citrix Urges Immediate Patching of Critical NetScaler Vulnerability appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/google-domains-impacted-by-recent-cctld-domain-hijacks/": {
   "id": "2830bdbb4f46b52f",
@@ -3930,7 +3922,7 @@
   "date": "2026-10-09",
   "source": "SecurityWeek",
   "published_at": "2026-10-09T11:43:14+00:00",
-  "text": "Hackers hijacked the .gh, .sl, and .as ccTLDs and obtained HTTPS certificates for several Google domains. The post Google Domains Impacted by Recent ccTLD Hijacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/openai-fires-3-safety-researchers-in-dispute-over-ai-risks/": {
   "id": "775c5b133c034313",
@@ -3939,7 +3931,7 @@
   "date": "2026-10-09",
   "source": "SecurityWeek",
   "published_at": "2026-10-09T21:07:46+00:00",
-  "text": "The ChatGPT maker said the researchers \"violated clear policies on handling sensitive information.” The post OpenAI Fires 3 Safety Researchers in Dispute Over AI Risks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/pre-baked-firmware-malware-hits-budget-android-devices-in-150-countries/": {
   "id": "44f773c828780956",
@@ -3948,7 +3940,7 @@
   "date": "2026-10-09",
   "source": "SecurityWeek",
   "published_at": "2026-10-09T09:55:35+00:00",
-  "text": "Midnight Mimosa is the name given to a malware campaign primarily running preinstalled on low-cost Android devices. The post Pre-Baked Firmware Malware Hits Budget Android Devices in 150+ Countries appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/unpatched-ahsaycbs-vulnerabilities-exploited-in-the-wild/": {
   "id": "b97d270e7caaaec9",
@@ -3957,7 +3949,7 @@
   "date": "2026-10-09",
   "source": "SecurityWeek",
   "published_at": "2026-10-09T10:23:42+00:00",
-  "text": "The flaws, CVE-2026-105133 and CVE-2026-105134, allow attackers to bypass authentication and inject OS commands. The post Unpatched AhsayCBS Vulnerabilities Exploited in the Wild appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/us-disrupts-chinese-state-sponsored-hacking-tools/": {
   "id": "cbb722cfe5b9ea57",
@@ -3966,7 +3958,7 @@
   "date": "2026-10-09",
   "source": "SecurityWeek",
   "published_at": "2026-10-09T08:36:37+00:00",
-  "text": "Flax Typhoon and other APTs used MicroScan and FishHub to scan and hack US and foreign critical infrastructure. The post US Disrupts Chinese State-Sponsored Hacking Tools appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/secure-healthcare-information-management-desert-orthopaedic-center-data-breaches/": {
   "id": "25c592ae26a4adcc",
@@ -3975,7 +3967,7 @@
   "date": "2026-10-12",
   "source": "HIPAA Journal",
   "published_at": "2026-10-12T16:13:02+00:00",
-  "text": "Data breaches have been announced by the Pennsylvania-based medical management and billing service provider Secure Healthcare Information Management and Desert Orthopaedic Center in Nevada. Secure Healthcare Information Management The Allentown, Pennsylvania-based medical management and billing service provider, Secure Healthcare Information Management, LLC, has announced a recent security inciden"
+  "text": ""
  },
  "https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/": {
   "id": "7ebd73471d2b37bf",
@@ -3984,7 +3976,7 @@
   "date": "2026-10-12",
   "source": "SecurityWeek",
   "published_at": "2026-10-12T13:14:37+00:00",
-  "text": "The vulnerability tracked as CVE-2026-85097 can allow threat actors to take control of the targeted WordPress websites. The post Bricksforge WordPress Plugin Vulnerability Exploited in the Wild appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/canonical-websites-disrupted-in-second-ddos-attack-this-year/": {
   "id": "90f2b18dcec9bec5",
@@ -3993,7 +3985,7 @@
   "date": "2026-10-12",
   "source": "SecurityWeek",
   "published_at": "2026-10-12T11:58:39+00:00",
-  "text": "The outage hit the main Ubuntu and Canonical websites, including the Ubuntu blog and developer portal. The post Canonical Websites Disrupted in Second DDoS Attack This Year appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/critical-sonicwall-vulnerability-exploited-days-after-disclosure/": {
   "id": "c93cad611d221328",
@@ -4002,7 +3994,7 @@
   "date": "2026-10-12",
   "source": "SecurityWeek",
   "published_at": "2026-10-12T08:36:01+00:00",
-  "text": "CVE-2026-102255 is a pre-authenticated SSRF flaw that could allow attackers to perform unauthorized operations. The post Critical SonicWall Vulnerability Exploited Days After Disclosure appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/ransomware-response-expert-arrested-in-shinyhunters-fbi-hack-probe/": {
   "id": "2746d21731a7b345",
@@ -4011,7 +4003,7 @@
   "date": "2026-10-12",
   "source": "SecurityWeek",
   "published_at": "2026-10-12T10:32:05+00:00",
-  "text": "The suspect is believed to be Edward Dubrovsky, a Canadian cybersecurity executive who was visiting the United States for a conference. The post Ransomware Response Expert Arrested in ShinyHunters FBI Hack Probe appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/photon-health-healthcare-highways-data-breaches/": {
   "id": "d06fe825b147ede4",
@@ -4020,7 +4012,7 @@
   "date": "2026-10-13",
   "source": "HIPAA Journal",
   "published_at": "2026-10-13T15:06:21+00:00",
-  "text": "Data breaches have been announced by the New York-based healthcare technology company Photon Health, the Texas-based medical provider network company Healthcare Highways, and the New York-based home health agency Any-Time Home Care. Photon Health Photon Health, a Brooklyn, New York-based healthcare technology company that operates a prescription network, has disclosed a cybersecurity incident invo"
+  "text": ""
  },
  "https://www.securityweek.com/cyberattack-prompts-ahold-delhaize-to-disconnect-systems/": {
   "id": "8896d8faac230d36",
@@ -4029,7 +4021,7 @@
   "date": "2026-10-13",
   "source": "SecurityWeek",
   "published_at": "2026-10-13T09:37:12+00:00",
-  "text": "The company says it took some of its systems offline to contain a security issue within its network. The post Cyberattack Prompts Grocery Giant Ahold Delhaize to Disconnect Systems appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/ivanti-zero-day-chain-gave-attackers-root-access-to-fully-patched-vpn/": {
   "id": "2544e4d3fcebdd95",
@@ -4038,7 +4030,7 @@
   "date": "2026-10-13",
   "source": "SecurityWeek",
   "published_at": "2026-10-13T18:43:43+00:00",
-  "text": "CVE-2026-104935 affects Ivanti Connect Secure and it can be exploited for unauthenticated remote code execution with elevated privileges. The post Ivanti Zero-Day Chain Gave Attackers Root Access to Fully Patched VPN appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/meta-says-hackers-took-code-personal-data-of-1500-in-github-breach/": {
   "id": "f1b83ece5faf5bdc",
@@ -4047,7 +4039,7 @@
   "date": "2026-10-13",
   "source": "SecurityWeek",
   "published_at": "2026-10-13T16:01:00+00:00",
-  "text": "Most of the affected individuals are Meta employees in the United States and they are being offered credit monitoring services. The post Meta Says Hackers Took Code, Personal Data of 1,500 in GitHub Breach appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/refrigeration-controller-hack-spoils-food-across-european-supermarkets/": {
   "id": "39336798eafd2933",
@@ -4056,7 +4048,7 @@
   "date": "2026-10-13",
   "source": "SecurityWeek",
   "published_at": "2026-10-13T08:28:51+00:00",
-  "text": "A cyberattack targeted refrigeration controllers, setting refrigerators and freezers across hundreds of supermarkets to defrost. The post Refrigeration Controller Hack Spoils Food Across European Supermarkets appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/xworm-rat-evolves-into-surveillance-platform/": {
   "id": "8a6dfecc02d44fe2",
@@ -4065,7 +4057,7 @@
   "date": "2026-10-13",
   "source": "SecurityWeek",
   "published_at": "2026-10-13T11:13:10+00:00",
-  "text": "Expanded plugin count allows the malware to monitor users’ location, stream live audio, and interact with authenticated browser sessions. The post XWorm RAT Evolves Into Surveillance Platform appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.darkreading.com/cyberattacks-data-breaches/russian-influence-operation-targeting-latin-america": {
   "id": "31f365880a91e86b",
@@ -4090,7 +4082,7 @@
   "date": "2026-10-14",
   "source": "HIPAA Journal",
   "published_at": "2026-10-14T11:05:37+00:00",
-  "text": "A high-severity authentication bypass vulnerability has been identified in the Ivanti Connect Secure (Pulse Connect Secure) enterprise-grade SSL VPN that can allow a remote, unauthenticated malicious actor to execute arbitrary commands, steal credentials, and exfiltrate sensitive data. Researchers at the cybersecurity firm Volexity identified in-the-wild exploitation of a vulnerability chain invol"
+  "text": ""
  },
  "https://www.securityweek.com/microsoft-patches-record-1413-vulnerabilities-including-exploited-windows-zero-day/": {
   "id": "e4f4fca967f47a2e",
@@ -4099,7 +4091,7 @@
   "date": "2026-10-14",
   "source": "SecurityWeek",
   "published_at": "2026-10-14T07:16:12+00:00",
-  "text": "The most important is CVE-2026-96951, a security feature bypass flaw in Windows that has been exploited in the wild. The post Microsoft Patches Record 1,413 Vulnerabilities, Including Exploited Windows Zero-Day appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.darkreading.com/cybersecurity-operations/sector-2026-reveals-a-rapidly-shifting-cybersecurity-landscape": {
   "id": "cba3835f7a65b2ad",
@@ -4132,7 +4124,7 @@
   "date": "2026-10-15",
   "source": "HIPAA Journal",
   "published_at": "2026-10-15T08:18:28+00:00",
-  "text": "In July 2026, 77 healthcare data breaches affecting 500 or more individuals were reported to the U.S. Department of Health and Human Services (HHS) Office for Civil Rights. July was the third consecutive month in which large healthcare data breaches increased, with a month-over-month increase of 10%. Last year was a record-breaking year for healthcare data breaches. The OCR data breach portal curr"
+  "text": ""
  },
  "https://www.securityweek.com/cikabika-bot-rat-uses-discord-for-cc/": {
   "id": "fcfc502339b28463",
@@ -4141,7 +4133,7 @@
   "date": "2026-10-15",
   "source": "SecurityWeek",
   "published_at": "2026-10-15T11:25:58+00:00",
-  "text": "Delivered via phishing, the malware provides reconnaissance, remote execution, and data exfiltration capabilities. The post CikaBika Bot RAT Uses Discord for C&C appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/cisco-warns-of-exploited-secure-email-gateway-vulnerability/": {
   "id": "4e056e9e35300ba5",
@@ -4150,7 +4142,7 @@
   "date": "2026-10-15",
   "source": "SecurityWeek",
   "published_at": "2026-10-15T06:34:15+00:00",
-  "text": "Unauthenticated, remote attackers could write arbitrary files to the operating system and execute commands with root privileges. The post Cisco Warns of Exploited Secure Email Gateway Vulnerability appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/novel-android-banking-rat-hirudo-replaces-banking-apps-with-trojanized-copies/": {
   "id": "a4252f2e355734d6",
@@ -4159,7 +4151,7 @@
   "date": "2026-10-15",
   "source": "SecurityWeek",
   "published_at": "2026-10-15T10:15:32+00:00",
-  "text": "The Hirudo malware combines elements of a traditional banking trojan and a full-featured RAT. The post Novel Android RAT ‘Hirudo’ Replaces Banking Apps With Trojanized Copies appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/": {
   "id": "d312fa7392f56427",
@@ -4168,7 +4160,7 @@
   "date": "2026-10-15",
   "source": "SecurityWeek",
   "published_at": "2026-10-15T06:59:54+00:00",
-  "text": "The company says it’s aware of limited exploitation against customers’ firewalls, and it has made IoCs available. The post Palo Alto Networks Patches PAN-OS Zero-Day Exploited for Remote Code Execution appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/supermarket-refrigeration-attack-widens-to-copeland-dixell-controllers/": {
   "id": "eeb23eac4f030fc2",
@@ -4177,7 +4169,7 @@
   "date": "2026-10-15",
   "source": "SecurityWeek",
   "published_at": "2026-10-15T12:50:42+00:00",
-  "text": "Roughly 700 French supermarkets were hit by the cyberattacks, for which no group has claimed responsibility. The post Supermarket Refrigeration Attack Widens to Copeland, Dixell Controllers appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/uk-legal-aid-agency-hack-scope-widens-after-forensic-review/": {
   "id": "5a1c3ebea5c2d640",
@@ -4186,7 +4178,7 @@
   "date": "2026-10-15",
   "source": "SecurityWeek",
   "published_at": "2026-10-15T14:22:34+00:00",
-  "text": "Most of the data is related to applications, claims, and payments submitted between 2007 and 2025. The post UK Legal Aid Agency Hack Scope Widens After Forensic Review appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.darkreading.com/application-security/fake-claude-chatgpt-attacks-developers-risk": {
   "id": "375385da46ee2000",
@@ -4243,7 +4235,7 @@
   "date": "2026-10-16",
   "source": "SecurityWeek",
   "published_at": "2026-10-16T11:46:40+00:00",
-  "text": "A cyber incident affecting contractor BAE Systems has knocked out the Bankruptcy Noticing Center, halting notices nationwide for a week. The post BAE Systems Security Incident Stalls Notices From US Bankruptcy Courts appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/chinese-apt-exploited-beyondtrust-vulnerability-as-zero-day/": {
   "id": "62e3ac03b67c421e",
@@ -4252,7 +4244,7 @@
   "date": "2026-10-16",
   "source": "SecurityWeek",
   "published_at": "2026-10-16T10:53:22+00:00",
-  "text": "Armory Castle exploited CVE-2026-102764 for initial access, deployed custom tools, and deleted logs and artifacts. The post Chinese APT Exploited BeyondTrust Vulnerability as Zero-Day appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/in-other-news-ics-sniper-attack-hacking-xworm-malware-operators-250k-chrome-exploit/": {
   "id": "787e8e23cc521341",
@@ -4261,7 +4253,7 @@
   "date": "2026-10-16",
   "source": "SecurityWeek",
   "published_at": "2026-10-16T14:09:51+00:00",
-  "text": "Noteworthy stories that might have slipped under the radar: BofA adds 1,000 patching contractors, KGB RAT pairs data theft with jump scares, and Langflow flaw under attack. The post In Other News: ICS-Sniper Attack, Hacking XWorm Malware Operators, $250k Chrome Exploit appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/openai-models-hacked-data-portals-raided-a-crypto-wallet-to-finish-tasks/": {
   "id": "9995b6879c60f376",
@@ -4270,7 +4262,7 @@
   "date": "2026-10-16",
   "source": "SecurityWeek",
   "published_at": "2026-10-16T10:32:11+00:00",
-  "text": "Left without funds for a coding task, an OpenAI model spent test crypto from a stranger’s wallet and left it out of its report. The post OpenAI Models Hacked Data Portals, Raided a Crypto Wallet to Finish Tasks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.darkreading.com/data-privacy/adfection-online-ads-spyware-delivery": {
   "id": "357c5ae87788c6d1",
@@ -4303,7 +4295,7 @@
   "date": "2026-10-19",
   "source": "HIPAA Journal",
   "published_at": "2026-10-19T06:44:39+00:00",
-  "text": "The scale of a June 2026 data breach at the wearable cardiac device manufacturer iRhythm Technologies has been confirmed. While it was clear that the cybersecurity incident involved a significant volume of patient data, the company has not previously confirmed exactly how many individuals were affected by the incident. Over the past few days, state attorneys general have been publishing details of"
+  "text": ""
  },
  "https://www.securityweek.com/exploited-fortinet-bug-linked-to-stealthy-fortigate-implant-in-telecom-hack/": {
   "id": "09d019a99e01777c",
@@ -4312,7 +4304,7 @@
   "date": "2026-10-19",
   "source": "SecurityWeek",
   "published_at": "2026-10-19T11:13:23+00:00",
-  "text": "The persistent, stealthy FortiGate implant was deployed against a telecommunications organization. The post Exploited Fortinet Bug Linked to Stealthy FortiGate Implant in Telecom Hack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/": {
   "id": "bf73193df13b809e",
@@ -4321,7 +4313,7 @@
   "date": "2026-10-19",
   "source": "SecurityWeek",
   "published_at": "2026-10-19T09:37:04+00:00",
-  "text": "Defenders get 15 new detection strategies, six for Enterprise and nine for ICS, backed by 38 analytics. The post MITRE ATT&CK v20 Catalogs AI Abuse, MFA Bypass, Water Utility Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/one-compromised-login-exposed-millions-of-california-students-records/": {
   "id": "445a07488c147bd2",
@@ -4330,7 +4322,7 @@
   "date": "2026-10-19",
   "source": "SecurityWeek",
   "published_at": "2026-10-19T11:55:50+00:00",
-  "text": "Intruders used compromised credentials to access an ETS SFTP server, copying records of California students back to 2006. The post One Compromised Login Exposed Millions of California Students’ Records appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/plex2shell-exploit-chain-weaponized-against-plex-servers-hours-after-disclosure/": {
   "id": "2e418f7a37a42091",
@@ -4339,7 +4331,7 @@
   "date": "2026-10-19",
   "source": "SecurityWeek",
   "published_at": "2026-10-19T12:44:39+00:00",
-  "text": "Threat actors have been observed delivering cryptocurrency miners and proxy software. The post Plex2Shell Exploit Chain Weaponized Against Plex Servers Hours After Disclosure appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/rank-math-pro-wordpress-plugin-compromised-in-supply-chain-attack/": {
   "id": "fa3a31a7ad9bd9bb",
@@ -4348,7 +4340,7 @@
   "date": "2026-10-19",
   "source": "SecurityWeek",
   "published_at": "2026-10-19T15:20:53+00:00",
-  "text": "Hackers injected malware into Rank Math PRO version 3.0.123 packages distributed between October 15 and October 16. The post Rank Math PRO WordPress Plugin Compromised in Supply Chain Attack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/siemens-software-center-vulnerability-exploited-in-clickfix-malware-attacks/": {
   "id": "b6ae61bfc528af52",
@@ -4357,7 +4349,7 @@
   "date": "2026-10-19",
   "source": "SecurityWeek",
   "published_at": "2026-10-19T18:15:39+00:00",
-  "text": "Attackers paired a genuine, signed copy of Siemens Software Center with malicious DLLs to infect Windows PCs via ClickFix lures. The post Siemens Software Center Vulnerability Exploited in ClickFix Malware Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.darkreading.com/application-security/close-identity-gaps-sdlc-before-ai": {
   "id": "ddd0407865ba3324",
@@ -4398,7 +4390,7 @@
   "date": "2026-10-20",
   "source": "HIPAA Journal",
   "published_at": "2026-10-20T15:31:03+00:00",
-  "text": "Central Ohio Primary Care Physicians, one of the largest independent physician-owned primary care medical groups in the United States, has experienced a cybersecurity incident that involved the personal and protected health information of approximately 1.4 million current and former patients, according to local media reports. The Westerville, Ohio-based medical group, which has more than 80 locati"
+  "text": ""
  },
  "https://www.securityweek.com/970000-medi-cal-members-affected-by-paradigm-healthcare-data-breach/": {
   "id": "02dd5d96d0371a37",
@@ -4407,7 +4399,7 @@
   "date": "2026-10-20",
   "source": "SecurityWeek",
   "published_at": "2026-10-20T09:33:49+00:00",
-  "text": "Paradigm Healthcare Services detected an intrusion in October 2025, but it took nearly a year to start notifying affected individuals. The post 970,000 Medi-Cal Members Affected by Paradigm Healthcare Data Breach appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/ahold-delhaize-restoring-services-disrupted-by-cyberattack/": {
   "id": "a8da395850cd24d0",
@@ -4416,7 +4408,7 @@
   "date": "2026-10-20",
   "source": "SecurityWeek",
   "published_at": "2026-10-20T13:02:18+00:00",
-  "text": "The company has restored many websites and apps in Europe and expects e-commerce brands in the US to be restored in days. The post Ahold Delhaize Restoring Services Disrupted by Cyberattack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/ai-platform-cairn-abused-to-hack-over-100-organizations/": {
   "id": "f0f0742f0196742c",
@@ -4425,7 +4417,7 @@
   "date": "2026-10-20",
   "source": "SecurityWeek",
   "published_at": "2026-10-20T12:47:22+00:00",
-  "text": "At least three threat actors have been abusing Cairn for persistent access and financial theft. The post AI Platform Cairn Abused to Hack Over 100 Organizations appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/aomei-backupper-compromised-in-short-burst-supply-chain-campaign/": {
   "id": "000170e31033f974",
@@ -4434,7 +4426,7 @@
   "date": "2026-10-20",
   "source": "SecurityWeek",
   "published_at": "2026-10-20T13:51:01+00:00",
-  "text": "Across multiple short compromise windows, users were served a downloader for the ShinyRoad modular backdoor framework. The post AOMEI Backupper Compromised in Short-Burst Supply Chain Campaign appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/hackers-steal-1-8-million-records-from-nikkei/": {
   "id": "bf1b9d413c6fe4b4",
@@ -4443,7 +4435,7 @@
   "date": "2026-10-20",
   "source": "SecurityWeek",
   "published_at": "2026-10-20T10:35:18+00:00",
-  "text": "The compromised information includes names, addresses, email addresses, phone numbers, and dates of birth. The post Hackers Steal 1.8 Million Records From Nikkei appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/the-key-to-ai-software-security-isnt-speed-its-maturity/": {
   "id": "d3f13fca9c12eacf",
@@ -4452,7 +4444,7 @@
   "date": "2026-10-20",
   "source": "SecurityWeek",
   "published_at": "2026-10-20T13:34:23+00:00",
-  "text": "Where your developers sit on the AI adoption scale has a real impact on how you are addressing security risk. The post The Key to AI Software Security Isn’t Speed, It’s Maturity appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html": {
   "id": "3265dfcb90268a64",
@@ -4547,7 +4539,7 @@
   "date": "2026-10-21",
   "source": "HIPAA Journal",
   "published_at": "2026-10-21T14:02:25+00:00",
-  "text": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), Secret Service (USSS), and cybersecurity agencies in Germany and the United Kingdom have issued a joint cybersecurity advisory about the SafePay ransomware group. SafePay is a financially motivated threat group that has been in operation since August 2024 and targets businesses and critical inf"
+  "text": ""
  },
  "https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/": {
   "id": "4fcbfac17660cdab",
@@ -4556,7 +4548,7 @@
   "date": "2026-10-21",
   "source": "SecurityWeek",
   "published_at": "2026-10-21T11:22:05+00:00",
-  "text": "The private keys associated with eight certificates were compromised, and root programs and trust stores are blocking them. The post Browsers Block eMudhra Intermediate CAs Over Recoverable Private Keys appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/china-defends-deepseek-after-us-ban-of-its-ai-from-government-systems/": {
   "id": "a1fc360371e45c68",
@@ -4565,7 +4557,7 @@
   "date": "2026-10-21",
   "source": "SecurityWeek",
   "published_at": "2026-10-21T10:54:49+00:00",
-  "text": "The DHS said agencies should remove DeepSeek products as well as third-party products and services developed using DeepSeek from their IT systems. The post China Defends DeepSeek After US Ban of Its AI From Government Systems appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/chinese-ai-model-writes-more-hackable-code-when-told-its-for-us-contractor/": {
   "id": "eebda5c455ee8e82",
@@ -4574,7 +4566,7 @@
   "date": "2026-10-21",
   "source": "SecurityWeek",
   "published_at": "2026-10-21T10:03:24+00:00",
-  "text": "Tasked with writing an application for a US defense contractor, the model made the code 19% more likely to be hackable. The post Chinese AI Model Writes More Hackable Code When Told It’s for US Contractor appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/google-hardens-chrome-against-clickfix-attacks-insecure-http-connections/": {
   "id": "4af7615b9dba75e3",
@@ -4583,7 +4575,7 @@
   "date": "2026-10-21",
   "source": "SecurityWeek",
   "published_at": "2026-10-21T17:00:00+00:00",
-  "text": "Protections have been added against scams and social engineering, including new site warnings and server-side Gemini analysis. The post Google Hardens Chrome Against ClickFix Attacks, Insecure HTTP Connections appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/hijacked-developer-account-used-to-plant-stealer-in-ovhcloud-cli/": {
   "id": "9bf81eb78ce9c3dd",
@@ -4592,7 +4584,7 @@
   "date": "2026-10-21",
   "source": "SecurityWeek",
   "published_at": "2026-10-21T06:02:27+00:00",
-  "text": "Researchers say the developer’s account was compromised in March with a GlassWorm-linked loader. The post Hijacked Developer Account Used to Plant Stealer in OVHcloud CLI appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/php2shell-mass-exploitation-looms-for-leaked-critical-php-flaws/": {
   "id": "83554623c42b19f5",
@@ -4601,7 +4593,7 @@
   "date": "2026-10-21",
   "source": "SecurityWeek",
   "published_at": "2026-10-21T07:02:06+00:00",
-  "text": "Tracked as CVE-2026-109618 and CVE-2026-109619, the bugs could potentially lead to unauthenticated remote code execution. The post PHP2Shell: Mass Exploitation Looms for Leaked Critical PHP Flaws appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/php2shell-patches-land-as-first-exploitation-attempts-hit-sensors/": {
   "id": "ac25b3347614565d",
@@ -4610,7 +4602,7 @@
   "date": "2026-10-21",
   "source": "SecurityWeek",
   "published_at": "2026-10-21T16:50:40+00:00",
-  "text": "Several cybersecurity companies saw exploitation attempts of CVE-2026-109618 and CVE-2026-109619 before PHP released the patches. The post PHP2Shell Patches Land as First Exploitation Attempts Hit Sensors appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html": {
   "id": "d6bee8946b1b9d77",
@@ -4694,7 +4686,7 @@
   "date": "2026-10-22",
   "source": "HIPAA Journal",
   "published_at": "2026-10-22T15:41:37+00:00",
-  "text": "A data breach at Ridgeway Pharmacy in Montana has affected almost 259,000 individuals. Data breaches have also been announced by IMS Care Center in Arizona and Persona Dental in Minnesota. Ridgeway Pharmacy Ridgeway Pharmacy Ltd, a Victor, Montana-based mail order and community pharmacy, has identified a data security incident involving its website that exposed the personal and protected health in"
+  "text": ""
  },
  "https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html": {
   "id": "baf088feaa89b3a1",
@@ -4805,7 +4797,7 @@
   "date": "2026-10-23",
   "source": "HIPAA Journal",
   "published_at": "2026-10-23T10:00:01+00:00",
-  "text": "The law firm Tarter Krinsky & Drogin has reported a breach of the protected health information of 196,645 patients of its healthcare clients. Data breaches have also been announced by Park Dental in Virginia and Heritage Pediatrics in Texas. Tarter Krinsky & Drogin A data breach has been announced by the Manhattan, New York-based law firm Tarter Krinsky & Drogin, which involved confidential and at"
+  "text": ""
  },
  "https://www.hipaajournal.com/quest-diagnostics-data-breach-2026/": {
   "id": "a74ceb344214bac8",
@@ -4814,7 +4806,7 @@
   "date": "2026-10-23",
   "source": "HIPAA Journal",
   "published_at": "2026-10-23T12:25:33+00:00",
-  "text": "Quest Diagnostics, a Secaucus, New Jersey-based Fortune 500 diagnostic testing company, has notified the U.S. Securities and Exchange Commission (SEC) that it has identified unauthorized access to its Quantum Lab Services Manager (LSM) system and suspects patient records have likely been compromised. The scale of the data breach has yet to be determined. No threat group appears to have claimed res"
+  "text": ""
  },
  "https://www.securityweek.com/11-million-impacted-by-capcom-data-breach/": {
   "id": "5e3e1ac9382f712f",
@@ -4823,7 +4815,7 @@
   "date": "2026-10-23",
   "source": "SecurityWeek",
   "published_at": "2026-10-23T08:34:14+00:00",
-  "text": "The hackers stole 11 million email addresses from CAPCOM ID and changed the login passwords for 196 accounts. The post 11 Million Impacted by Capcom Data Breach appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/attackers-exploit-third-velocloud-orchestrator-zero-day-in-four-months/": {
   "id": "8f22997a8f669dd3",
@@ -4832,7 +4824,7 @@
   "date": "2026-10-23",
   "source": "SecurityWeek",
   "published_at": "2026-10-23T09:58:34+00:00",
-  "text": "The critical-severity SQL injection flaw allows attackers to access privileged internal functionality and gain operator privileges. The post Attackers Exploit Third Arista VCO Zero-Day in Four Months appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/china-apt-uses-ai-pentest-tool-artex-in-connectwise-attacks/": {
   "id": "de34b1ac53c0eac9",
@@ -4841,7 +4833,7 @@
   "date": "2026-10-23",
   "source": "SecurityWeek",
   "published_at": "2026-10-23T10:31:16+00:00",
-  "text": "The state-sponsored hackers targeted hundreds of organizations and gained privileged access to some environments. The post China APT Uses AI Pentest Tool Artex in ConnectWise Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/": {
   "id": "354ea3c01e213ad5",
@@ -4850,7 +4842,7 @@
   "date": "2026-10-23",
   "source": "SecurityWeek",
   "published_at": "2026-10-23T14:23:37+00:00",
-  "text": "Noteworthy stories that might have slipped under the radar: Russia’s APT28 hit NATO defense firms, PingCAP source code stolen, ShinyHunters negotiator probe. The post In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/quest-diagnostics-reports-cyber-breach-affecting-certain-patient-records/": {
   "id": "fe72bbbf4f10634a",
@@ -4859,7 +4851,7 @@
   "date": "2026-10-23",
   "source": "SecurityWeek",
   "published_at": "2026-10-23T08:25:06+00:00",
-  "text": "In a regulatory filing, Quest Diagnostics reported unauthorized access to its Quanum Lab Services Manager, a platform where certain clients can place test orders. The post Quest Diagnostics Data Breach Exposed ‘Certain Patient Records’ appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html": {
   "id": "8f336dea632e093c",
@@ -5032,7 +5024,7 @@
   "date": "2026-10-26",
   "source": "HIPAA Journal",
   "published_at": "2026-10-26T19:13:24+00:00",
-  "text": "Denver Health Medical Plan has notified more than 238,000 individuals about a vendor-related data incident. Data breaches have also been announced by Johns Hopkins Bayview Medical Center and BASS Medical Group. Denver Health Medical Plan Denver Health Medical Plan, a Denver, Colorado-based non-profit health plan affiliated with the Denver Health and Hospital Authority, has recently disclosed a dat"
+  "text": ""
  },
  "https://www.securityweek.com/953-online-stores-infected-in-long-lasting-malware-campaign/": {
   "id": "50e6f85897518766",
@@ -5041,7 +5033,7 @@
   "date": "2026-10-26",
   "source": "SecurityWeek",
   "published_at": "2026-10-26T12:46:44+00:00",
-  "text": "Small loader code injected into the stores served a payload to visitors or did nothing to avoid detection. The post 953 Online Stores Infected in Long-Lasting Malware Campaign appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/anthropic-files-for-potentially-the-biggest-ipo-ever-as-ceo-warns-of-risk-to-humanity-from-ai/": {
   "id": "c5a45cac06623676",
@@ -5050,7 +5042,7 @@
   "date": "2026-10-26",
   "source": "SecurityWeek",
   "published_at": "2026-10-26T20:20:56+00:00",
-  "text": "A string of hacking incidents by rogue AI agents also has raised fears the technology will slip free of human control to carry out harmful, life-threatening tasks. The post Anthropic Files for Potentially the Biggest IPO Ever as CEO Warns of Risk to Humanity From AI appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/genesys-hack-exposes-customer-data-from-internal-systems/": {
   "id": "f477296617030137",
@@ -5059,7 +5051,7 @@
   "date": "2026-10-26",
   "source": "SecurityWeek",
   "published_at": "2026-10-26T14:40:48+00:00",
-  "text": "The Genesys Cloud, Genesys Engage, and Genesys Engage Cloud platforms were not affected. The post Genesys Hack Exposes Customer Data From Internal Systems appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/php2shell-exploitation-moves-from-probes-to-working-shells/": {
   "id": "70ab4c3962906717",
@@ -5068,7 +5060,7 @@
   "date": "2026-10-26",
   "source": "SecurityWeek",
   "published_at": "2026-10-26T13:30:10+00:00",
-  "text": "Attackers successfully exploited the PHP2Shell flaws against honeypots, launching 35 shells from two IP addresses on October 24. The post PHP2Shell Exploitation Moves From Probes to Working Shells appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/stolen-ai-reasoning-could-help-china-build-cheaper-rivals/": {
   "id": "2563193d1ce14fe7",
@@ -5077,7 +5069,7 @@
   "date": "2026-10-26",
   "source": "SecurityWeek",
   "published_at": "2026-10-26T14:30:09+00:00",
-  "text": "Xint says a flaw in OpenAI’s compaction process let researchers move reasoning traces between models, potentially making it cheaper to distill a rival AI. The post Stolen AI Reasoning Could Help China Build Cheaper Rivals appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html": {
   "id": "cfb6efcf5b424ea2",
@@ -5111,7 +5103,7 @@
   "date": "2026-10-27",
   "source": "SecurityWeek",
   "published_at": "2026-10-27T10:44:20+00:00",
-  "text": "Anthropic presents its own initial public offering as a step toward mitigating the risks it believes AI poses. The post Risks Spelled Out for Anthropic Investors Include Possible Harms From Runaway AI appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/ios-macos-27-2-patch-286-bugs-fix-for-exploited-flaw-backported-to-ios-18/": {
   "id": "dd95bff74a017aaa",
@@ -5120,7 +5112,7 @@
   "date": "2026-10-27",
   "source": "SecurityWeek",
   "published_at": "2026-10-27T11:49:57+00:00",
-  "text": "Apple patched 286 vulnerabilities in iOS and macOS 27.2 and brought the fix for an exploited CoreGraphics zero-day to older iPhones. The post iOS, macOS 27.2 Patch 286 Bugs; Fix for Exploited Flaw Backported to iOS 18 appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/": {
   "id": "3b7ba51aebb1d253",
@@ -5192,7 +5184,7 @@
   "date": "2026-10-27",
   "source": "HIPAA Journal",
   "published_at": "2026-10-27T16:53:26+00:00",
-  "text": "Data breaches have been announced by Paylogix, the Kenaitze Indian Tribe, the Center for Bone and Joint Surgery of the Palm Beaches, and Wichita Family Dental. Paylogix, New York Paylogix LLC, a New York-based third-party administrator and software-as-a-service provider, whose solutions are used for enrollment, billing, and managing voluntary employee benefits, has notified the HHS Office for Civi"
+  "text": ""
  },
  "https://www.darkreading.com/endpoint-security/aokigahara-stealer-developer-keyrings-ai-assistants": {
   "id": "d0239b5538280ddc",
@@ -5327,7 +5319,7 @@
   "date": "2026-10-28",
   "source": "SecurityWeek",
   "published_at": "2026-10-28T09:14:23+00:00",
-  "text": "CVE-2026-101767 is an unauthenticated SQL injection that can be exploited for remote code execution. The post Hackers Start Probing Fresh Oracle EBS Vulnerability appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/cisa-warns-of-node2shell-exploitation-as-honeypots-log-attack-attempts/": {
   "id": "129590957fb40b7c",
@@ -5336,7 +5328,7 @@
   "date": "2026-10-28",
   "source": "SecurityWeek",
   "published_at": "2026-10-28T08:37:24+00:00",
-  "text": "CISA added the Brotli flaw to its KEV catalog, and two honeypot operators logged attempts, including one that used a broken exploit. The post CISA Warns of Node2Shell Exploitation as Honeypots Log Attack Attempts appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/china-linked-hackers-exploit-php2shell-to-root-firewalls/": {
   "id": "8550c665be3b6045",
@@ -5345,7 +5337,7 @@
   "date": "2026-10-28",
   "source": "SecurityWeek",
   "published_at": "2026-10-28T12:00:59+00:00",
-  "text": "The attackers chained PHP2Shell and Fragnesia exploits and hacked two servers of a US government-affiliated organization. The post China-Linked Hackers Exploit PHP2Shell to Root Firewalls appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/university-new-mexico-health-system-cyberattack/": {
   "id": "5c383d5b8468ff2c",
@@ -5354,7 +5346,7 @@
   "date": "2026-10-28",
   "source": "HIPAA Journal",
   "published_at": "2026-10-28T10:10:28+00:00",
-  "text": "The University of New Mexico Health System (UNM Health) has experienced a cyberattack that has prevented access to critical electronic systems. The incident was detected on October 26, 2026, and as a precaution to ensure patient safety, all ambulance traffic was temporarily diverted to alternative hospitals. A decision was made to cancel all appointments at UNM Health facilities on October 26. UNM"
+  "text": ""
  },
  "https://www.darkreading.com/cybersecurity-operations/third-serengeti-sweep-1400-arrests-investigations-mature": {
   "id": "5d35adc27b9083e8",
@@ -5408,7 +5400,7 @@
   "date": "2026-10-28",
   "source": "HIPAA Journal",
   "published_at": "2026-10-28T13:18:58+00:00",
-  "text": "Small and rural healthcare providers lack the resources they need to make essential improvements to their information security programs to defend against cyberattacks. One of the biggest criticisms of the proposed update to the HIPAA Security Rule was the cost of implementation, especially for small, rural, and other underserved healthcare providers, who simply do not have the spare funds to make "
+  "text": ""
  },
  "https://www.darkreading.com/cyber-risk/attacker-impersonates-ai-bots-scans-credentials": {
   "id": "4b38731b7dd20648",
@@ -5480,7 +5472,7 @@
   "date": "2026-10-29",
   "source": "SecurityWeek",
   "published_at": "2026-10-29T11:00:00+00:00",
-  "text": "The data of So-net and Plala customers in Japan was exposed, along with 54,401 email account passwords and 16 bank account records. The post Hackers Steal 2.6 Million Records From Sony’s Japanese ISP So-net appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.darkreading.com/threat-intelligence/ai-relay-service-openai-codex-claude-code-sandboxes": {
   "id": "e60540b93f971ee8",
@@ -5507,7 +5499,7 @@
   "date": "2026-10-29",
   "source": "SecurityWeek",
   "published_at": "2026-10-29T13:26:49+00:00",
-  "text": "BAE Systems says no data was extracted and no PII was breached in the incident that disrupted US bankruptcy court notices for weeks. The post BAE Says No Data Extracted in Incident Hitting Bankruptcy Courts appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.darkreading.com/cyberattacks-data-breaches/anthropic-phishing-emails-bypass-security-tools": {
   "id": "4ed170aabf80f644",
@@ -5651,7 +5643,7 @@
   "date": "2026-10-01",
   "source": "HIPAA Journal",
   "published_at": "2026-10-01T04:40:29+00:00",
-  "text": "The HIPAA training requirements are that “a covered entity must train all members of its workforce on policies and procedures […] as necessary and appropriate for the members of the workforce to carry out their functions within the covered entity” ( §164.530(b)(1) of the HIPAA Privacy Rule). A covered entity or business associate must “implement a security awareness and training program for all me"
+  "text": ""
  },
  "https://www.darkreading.com/cyber-risk/ai-coding-agents-leak-secrets-github": {
   "id": "58208bd45f94a474",
@@ -5822,7 +5814,7 @@
   "date": "2026-11-17",
   "source": "SecurityWeek",
   "published_at": "2026-11-17T10:22:20+00:00",
-  "text": "Affected organizations include BBC, CNN, Zoom, GitLab, Salesforce, Equifax, HSBC, and IKEA. The post Optimizely Vulnerability Exploited to Serve Malware on Major Websites appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/n-able-kills-legacy-apis-patches-17-n-central-zero-days/": {
   "id": "3d876effdef99162",
@@ -5831,7 +5823,7 @@
   "date": "2026-11-17",
   "source": "SecurityWeek",
   "published_at": "2026-11-17T12:28:45+00:00",
-  "text": "The patches target recently disclosed zero-days, as well as vulnerabilities already exploited in the wild. The post N-able Kills Legacy APIs, Patches 17 N-central Zero-Days appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/msp-screenconnect-servers-targeted-in-month-long-campaign/": {
   "id": "905bafb7d22c0f31",
@@ -5840,7 +5832,7 @@
   "date": "2026-11-17",
   "source": "SecurityWeek",
   "published_at": "2026-11-17T13:24:43+00:00",
-  "text": "More than 40 servers received over 688,000 requests exploiting CVE-2026-84869 to execute guest-pushed files. The post MSP ScreenConnect Servers Targeted in Month-Long Campaign appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/market-research-giant-ipsos-investigating-breach-of-internal-system/": {
   "id": "2f723fa0ad81a604",
@@ -5849,7 +5841,7 @@
   "date": "2026-11-17",
   "source": "SecurityWeek",
   "published_at": "2026-11-17T14:55:30+00:00",
-  "text": "The company made the incident public on Monday, November 16, five days after filing a complaint with authorities. The post Market Research Giant Ipsos Investigating Breach of Internal System appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/fandango-warns-ticket-buyers-of-payment-card-data-exposure/": {
   "id": "b7fbe48c4f21881e",
@@ -5858,7 +5850,7 @@
   "date": "2026-11-17",
   "source": "SecurityWeek",
   "published_at": "2026-11-17T14:14:24+00:00",
-  "text": "Card numbers, CVVs, expiration dates, and email addresses used at Fandango’s ticketing checkout over four days in October may have been exposed. The post Fandango Warns Ticket Buyers of Payment Card Data Exposure appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/california-sues-openai-seeking-court-ordered-changes-after-the-hugging-face-hack/": {
   "id": "cf6a803ed1a58065",
@@ -5867,7 +5859,7 @@
   "date": "2026-11-17",
   "source": "SecurityWeek",
   "published_at": "2026-11-17T12:00:00+00:00",
-  "text": "The lawsuit alleges that OpenAI misled and endangered the public and users by knowingly developing advanced AI models without necessary safeguards. The post California Sues OpenAI, Seeking Court-Ordered Changes After the Hugging Face Hack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/ai-framework-autonomously-weaponized-flaws-in-real-attacks-google-says/": {
   "id": "1b7653b5c795308c",
@@ -5876,7 +5868,7 @@
   "date": "2026-11-17",
   "source": "SecurityWeek",
   "published_at": "2026-11-17T18:16:17+00:00",
-  "text": "Threat actors are deploying multi-agent offensive frameworks to increase the velocity of multi-stage intrusions. The post AI Framework Autonomously Weaponized Flaws in Real Attacks, Google Says appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/": {
   "id": "c489a3786b630063",
@@ -5885,7 +5877,7 @@
   "date": "2026-11-17",
   "source": "SecurityWeek",
   "published_at": "2026-11-17T12:59:04+00:00",
-  "text": "Hackers breached Access Dental’s network and stole personal, health, and insurance information. The post Access Dental Management Data Breach Impacts Over 340,000 appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/": {
   "id": "6db3c0972f54804a",
@@ -6011,7 +6003,7 @@
   "date": "2026-11-24",
   "source": "SecurityWeek",
   "published_at": "2026-11-24T22:41:58+00:00",
-  "text": "It was not clear what specific information was compromised or who was responsible. The post An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/in-other-news-tanker-cyberattacks-eu-quantum-act-new-virustotal-capabilities/": {
   "id": "f0e029018fccfb51",
@@ -6344,7 +6336,7 @@
   "date": "2026-08-31",
   "source": "SecurityWeek",
   "published_at": "2026-08-31T12:11:58+00:00",
-  "text": "The AI giant is logging customers out of their accounts and removing payment data to prevent unauthorized Claude usage. The post Anthropic Warns Claude Users of Infostealer Malware Infections appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/berlin-wont-pay-extortion-group-claiming-data-theft/": {
   "id": "4aeeec979e675464",
@@ -6353,7 +6345,7 @@
   "date": "2026-08-31",
   "source": "SecurityWeek",
   "published_at": "2026-08-31T08:49:36+00:00",
-  "text": "The Rhysida ransomware group has claimed the exfiltration of over 5TB of data, including personal information and credentials. The post Berlin Won’t Pay Extortion Group Claiming Data Theft appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/boston-scientific-still-recovering-from-cyberattack/": {
   "id": "89b5e641d049a2fb",
@@ -6362,7 +6354,7 @@
   "date": "2026-08-31",
   "source": "SecurityWeek",
   "published_at": "2026-08-31T10:50:57+00:00",
-  "text": "The company has called in CrowdStrike and others to investigate the attack that caused global network disruption. The post Boston Scientific Still Recovering From Cyberattack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/extortion-group-claims-manchester-airports-group-data-breach/": {
   "id": "3809f0d741f75427",
@@ -6371,7 +6363,7 @@
   "date": "2026-08-31",
   "source": "SecurityWeek",
   "published_at": "2026-08-31T10:29:10+00:00",
-  "text": "FulcrumSec says it stole over 80 GB of data from Manchester Airports Group and plans to leak it online. The post Extortion Group Claims Manchester Airports Group Data Breach appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/mckesson-confirms-data-breach-as-attacker-deadline-looms/": {
   "id": "6f86d584bee276aa",
@@ -6380,7 +6372,7 @@
   "date": "2026-08-31",
   "source": "SecurityWeek",
   "published_at": "2026-08-31T13:14:46+00:00",
-  "text": "The ShinyHunters extortion group has claimed the theft of 284 million records from the company’s systems. The post McKesson Confirms Data Breach as Attacker Deadline Looms appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/more-details-emerge-on-exploited-papercut-vulnerabilities/": {
   "id": "589d6515422059f4",
@@ -6389,7 +6381,7 @@
   "date": "2026-08-31",
   "source": "SecurityWeek",
   "published_at": "2026-08-31T06:51:31+00:00",
-  "text": "PaperCut has released a second emergency patch for the exploited vulnerabilities, which are now tracked as CVE-2026-82078 and CVE-2026-81578. The post More Details Emerge on Exploited PaperCut Vulnerabilities appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/servicenow-patches-3-critical-code-injection-vulnerabilities/": {
   "id": "228313705af5b26a",
@@ -6398,7 +6390,7 @@
   "date": "2026-08-31",
   "source": "SecurityWeek",
   "published_at": "2026-08-31T13:59:19+00:00",
-  "text": "Attackers could exploit the security defects to execute arbitrary code and access or tamper with data. The post ServiceNow Patches 3 Critical Code Injection Vulnerabilities appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/what-the-hugging-face-incident-teaches-security-leaders-about-ai-agent-access/": {
   "id": "4b4fa5d8014fe6b1",
@@ -6407,7 +6399,7 @@
   "date": "2026-08-31",
   "source": "SecurityWeek",
   "published_at": "2026-08-31T12:15:00+00:00",
-  "text": "Security teams must treat autonomous agents as highly privileged identities. The post What the Hugging Face Incident Teaches Security Leaders About AI Agent Access appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/aesto-health-data-breach/": {
   "id": "65211e55001e4c7c",
@@ -6416,7 +6408,7 @@
   "date": "2026-09-01",
   "source": "HIPAA Journal",
   "published_at": "2026-09-01T06:07:50+00:00",
-  "text": "On August 14, 2026, we reported on a data breach at the Birmingham, Alabama-based healthcare technology company Aesto Health. While it was clear when we reported on the incident that it was a major breach, the number of individuals affected was unclear. We now know that at least 40 of the company’s healthcare provider clients were affected, as detailed in the list at the bottom of this page. The d"
+  "text": ""
  },
  "https://www.hipaajournal.com/hacking-incidents-rehabilitative-care-providers-senior-living-facilities/": {
   "id": "6072e07f1125c89d",
@@ -6425,7 +6417,7 @@
   "date": "2026-09-01",
   "source": "HIPAA Journal",
   "published_at": "2026-09-01T16:04:13+00:00",
-  "text": "Data breaches have been announced by multiple North Carolina rehabilitative care practices, senior living and skilled nursing care providers in Ohio and Washington, and the California-based nonprofit foundation The Health Trust and its subsidiary, FASS. North Carolina Rehabilitation Practices Notify Patients About November Hacking Incident The operator of multiple clinical, long-term, and rehabili"
+  "text": ""
  },
  "https://www.securityweek.com/critical-jfrog-artifactory-vulnerability-reportedly-exploited-in-the-wild/": {
   "id": "b82cdea09eff713c",
@@ -6434,7 +6426,7 @@
   "date": "2026-09-01",
   "source": "SecurityWeek",
   "published_at": "2026-09-01T09:59:44+00:00",
-  "text": "Exploitation of the authentication bypass vulnerability CVE-2026-82329 started just days after its public disclosure. The post Critical JFrog Artifactory Vulnerability Reportedly Exploited in the Wild appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/hackers-start-exploiting-critical-langflow-vulnerability/": {
   "id": "548574d7955ad99c",
@@ -6443,7 +6435,7 @@
   "date": "2026-09-01",
   "source": "SecurityWeek",
   "published_at": "2026-09-01T12:07:54+00:00",
-  "text": "Tracked as CVE-2026-0768, the security defect allows unauthenticated attackers to execute arbitrary Python code remotely. The post Hackers Start Exploiting Critical Langflow Vulnerability appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/papercut-exploitation-escalates-to-active-intrusions/": {
   "id": "9bfeb5eaa94026c3",
@@ -6452,7 +6444,7 @@
   "date": "2026-09-01",
   "source": "SecurityWeek",
   "published_at": "2026-09-01T05:27:18+00:00",
-  "text": "CISA has added the vulnerabilities tracked as CVE-2026-82078 and CVE-2026-81578 to its KEV catalog. The post PaperCut Exploitation Escalates to Active Intrusions appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/baylor-genetics-data-breach/": {
   "id": "d17f95352c4bb6cb",
@@ -6461,7 +6453,7 @@
   "date": "2026-09-02",
   "source": "HIPAA Journal",
   "published_at": "2026-09-02T15:00:48+00:00",
-  "text": "On August 19, 2026, we reported on a cybersecurity incident at the clinical genomics company Baylor Genetics. At the time, it was clear that this was a significant breach, based on reports submitted to state attorneys general; however, the scale of the breach was unknown. The Baylor Genetics data breach has recently been added to the HHS’ Office for Civil Rights website, which shows that the elect"
+  "text": ""
  },
  "https://www.hipaajournal.com/nutex-health-data-breach/": {
   "id": "b042b7f3de4a479a",
@@ -6470,7 +6462,7 @@
   "date": "2026-09-02",
   "source": "HIPAA Journal",
   "published_at": "2026-09-02T13:19:57+00:00",
-  "text": "Nutex Health, a Houston, Texas-based healthcare management and operations company that delivers care through 27 micro-hospitals, specialty hospitals, and outpatient departments in 12 U.S. states, has disclosed a cyberattack involving the exfiltration of data from some of its servers. Nutex is currently investigating the incident to determine the extent of data theft, including whether provider, em"
+  "text": ""
  },
  "https://www.securityweek.com/anthropic-details-response-to-security-incidents-unveils-enterprise-safeguards/": {
   "id": "9c12abf40ac6968f",
@@ -6479,7 +6471,7 @@
   "date": "2026-09-02",
   "source": "SecurityWeek",
   "published_at": "2026-09-02T11:48:31+00:00",
-  "text": "Anthropic introduced Enterprise Frontier Safeguards (EFS), a system that combines zero data retention with automated monitoring for misuse. The post Anthropic Details Response to Security Incidents, Unveils Enterprise Safeguards appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/openais-astra-becomes-first-model-to-cross-critical-cybersecurity-threshold/": {
   "id": "e4b6b87599e654de",
@@ -6488,7 +6480,7 @@
   "date": "2026-09-02",
   "source": "SecurityWeek",
   "published_at": "2026-09-02T10:38:13+00:00",
-  "text": "The designation applies when a model can independently find and exploit zero-day vulnerabilities across many well-defended systems. The post OpenAI’s Astra Crosses ‘Critical’ Cyber Threshold After Finding Zero-Days appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/": {
   "id": "2e7a9097180f53b9",
@@ -6497,7 +6489,7 @@
   "date": "2026-09-02",
   "source": "SecurityWeek",
   "published_at": "2026-09-02T05:04:52+00:00",
-  "text": "The vulnerabilities CVE-2026-83549 and CVE-2026-83548 can be chained for unauthenticated remote code execution. The post SonicWall Warns of Two SMA1000 Zero-Days Exploited in Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/uk-moves-to-block-high-risk-tech-suppliers-from-critical-infrastructure/": {
   "id": "48b818165038a9ad",
@@ -6506,7 +6498,7 @@
   "date": "2026-09-02",
   "source": "SecurityWeek",
   "published_at": "2026-09-02T15:45:08+00:00",
-  "text": "Late amendments to the Cyber Security and Resilience Bill would give ministers new powers to restrict risky technology providers as supply chain attacks intensify. The post UK Moves to Block High-Risk Tech Suppliers From Critical Infrastructure appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/ransomware-healthcare-providers-ca-ma-mo-fl-mi/": {
   "id": "fdfdabe419a37511",
@@ -6515,7 +6507,7 @@
   "date": "2026-09-03",
   "source": "HIPAA Journal",
   "published_at": "2026-09-03T14:19:07+00:00",
-  "text": "Data breaches have been confirmed by Alta Orthopaedics in California, Cornerstone Behavioral Healthcare in Maine, Cameron Regional Medical Center in Missouri, Suntree Internal Medicine in Florida, and Associated Endocrinologists in Michigan. Ransomware groups have claimed responsibility for the attacks. Alta Orthopaedics Medical Group, California Alta Orthopaedics, a specialty medical practice wit"
+  "text": ""
  },
  "https://www.securityweek.com/153-million-driver-license-images-offered-on-dark-web/": {
   "id": "f1a25319701f5382",
@@ -6524,7 +6516,7 @@
   "date": "2026-09-03",
   "source": "SecurityWeek",
   "published_at": "2026-09-03T10:54:18+00:00",
-  "text": "Cybercriminals are offering digital scans of US and Canadian driver’s licenses, likely stolen from IDScan.net. The post 153 Million Driver License Images Offered on Dark Web appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/manchester-airports-group-data-on-8-8-million-people-leaked-after-ransom-refusal/": {
   "id": "0f5cb10262676bb8",
@@ -6533,7 +6525,7 @@
   "date": "2026-09-03",
   "source": "SecurityWeek",
   "published_at": "2026-09-03T15:35:19+00:00",
-  "text": "Hacker group published roughly 550GB of data after MAG reportedly refused to pay a ransom demand; the group says it gained access via exposed admin keys. The post Manchester Airports Group Data on 8.8 Million People Leaked After Ransom Refusal appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/midwest-spine-brain-institute-3c-care-systems-breach/": {
   "id": "94af207f986cd1d8",
@@ -6542,7 +6534,7 @@
   "date": "2026-09-04",
   "source": "HIPAA Journal",
   "published_at": "2026-09-04T10:00:48+00:00",
-  "text": "Data breaches have been announced by Midwest Spine and Brain Institute, Brookhaven ENT Allergy and Facial Surgery, Digestive Disease Center and Heart Vascular & Leg Center, Premier Medical Group of the Hudson Valley, Risk Program Administrators, and Telus Health (US). Midwest Spine and Brain Institute (3C Care Systems) Midwest Spine and Brain Institute (MSBI), an independent medical clinic serving"
+  "text": ""
  },
  "https://www.hipaajournal.com/resource-center-dallas-data-breach/": {
   "id": "4700fd5b292d00a3",
@@ -6551,7 +6543,7 @@
   "date": "2026-09-04",
   "source": "HIPAA Journal",
   "published_at": "2026-09-04T11:00:37+00:00",
-  "text": "Data breaches have been announced by Resource Center of Dallas, Kern Psychiatric Health and Wellness Center, The Asthma Center, Integrative Emergency Services, and Psychiatry of Texas (PsychPlus). Resource Center of Dallas Resource Center of Dallas, Inc., a provider of health, wellness, and advocacy services to the LGBTQIA+ community in North Texas, is notifying 12,490 individuals about a data sec"
+  "text": ""
  },
  "https://www.hipaajournal.com/sonicwall-actively-exploited-vulnerabilities-sma1000-appliances-sep-26/": {
   "id": "ecfeeab0e61a78ab",
@@ -6560,7 +6552,7 @@
   "date": "2026-09-04",
   "source": "HIPAA Journal",
   "published_at": "2026-09-04T12:16:05+00:00",
-  "text": "Two remotely exploitable zero-day vulnerabilities in SonicWall SMA1000 appliances are being chained together to achieve remote code execution, according to a recent SonicWall security alert. SMA1000 appliances are used for secure remote access and VPN connections and, as such, are commonly exposed to the Internet. One of the vulnerabilities, tracked as CVE-2026-83548, is a critical pre-authenticat"
+  "text": ""
  },
  "https://www.securityweek.com/nvidia-is-buying-ai-platform-hugging-face-for-13-billion/": {
   "id": "4448409fd6a1f2eb",
@@ -6569,7 +6561,7 @@
   "date": "2026-09-04",
   "source": "SecurityWeek",
   "published_at": "2026-09-04T10:00:00+00:00",
-  "text": "The deal highlights Nvidia’s push to champion increasingly popular open-source AI models. The post Nvidia Is Buying AI Platform Hugging Face for $13 Billion appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/sangoma-switchvox-vulnerabilities-exploited-in-the-wild/": {
   "id": "7cb754453b665576",
@@ -6578,7 +6570,7 @@
   "date": "2026-09-04",
   "source": "SecurityWeek",
   "published_at": "2026-09-04T13:23:12+00:00",
-  "text": "Tracked as CVE-2026-9586, the unauthenticated SQL injection flaw can be exploited remotely for arbitrary code execution. The post Sangoma Switchvox Vulnerability Exploited in the Wild appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/elementor-pro-wordpress-plugin-vulnerability-exploited-to-hack-sites/": {
   "id": "6fba08370da5bbde",
@@ -6587,7 +6579,7 @@
   "date": "2026-09-05",
   "source": "SecurityWeek",
   "published_at": "2026-09-05T13:00:28+00:00",
-  "text": "Tracked as CVE-2026-32475 (CVSS score of 9.8), the bug described as an arbitrary file upload issue in the function that handles form submissions. The post Elementor Pro WordPress Plugin Vulnerability Exploited to Hack Sites appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/data-breaches-lumexa-imaging-fmrs-health-systems/": {
   "id": "09f0f2f26648bb4c",
@@ -6596,7 +6588,7 @@
   "date": "2026-09-07",
   "source": "HIPAA Journal",
   "published_at": "2026-09-07T10:00:57+00:00",
-  "text": "The diagnostic imaging service provider Lumexa Imaging has been affected by a security incident involving one of its vendors. FMRS Health Systems, a West Virginia-based provider of mental health services, is investigating a January 2026 data breach. Lumexa Imaging Lumexa Imaging, a diagnostic imaging provider that, together with its affiliates, has the second-largest diagnostic imaging footprint i"
+  "text": ""
  },
  "https://www.hipaajournal.com/june-2026-healthcare-data-breach-report/": {
   "id": "70b50eedb03b3c68",
@@ -6605,7 +6597,7 @@
   "date": "2026-09-07",
   "source": "HIPAA Journal",
   "published_at": "2026-09-07T13:07:20+00:00",
-  "text": "In June 2026, 66 large healthcare data breaches – data breaches involving the protected health information of 500 or more individuals – were reported to the U.S. Department of Health and Human Services (HHS) Office for Civil Rights (OCR) – a slight increase from the 64 data breaches reported in May. More than two large data breaches a day is the new normal. Over the past 12 months, an average of 6"
+  "text": ""
  },
  "https://www.hipaajournal.com/luminis-health-jeffrey-reuben-well-child-horizon-eye-care-data-breaches/": {
   "id": "0cc0cbb1505c550d",
@@ -6614,7 +6606,7 @@
   "date": "2026-09-07",
   "source": "HIPAA Journal",
   "published_at": "2026-09-07T15:23:38+00:00",
-  "text": "Luminis Health in Maryland is investigating a cyberattack that has taken certain systems offline. Data breaches have been announced by Texas Orthopedic surgeon Jeffrey David Reuben, M.D, Well Child in Tennessee, and Horizon Eye Care Laser & Eye Surgery Center in New Jersey. Luminis Health, Maryland Luminis Health, a nonprofit health system that includes Anne Arundel Medical Center in Annapolis and"
+  "text": ""
  },
  "https://www.securityweek.com/adobe-commerce-zero-day-exploited-to-backdoor-online-stores/": {
   "id": "aa1f1768b8e5a293",
@@ -6623,7 +6615,7 @@
   "date": "2026-09-07",
   "source": "SecurityWeek",
   "published_at": "2026-09-07T11:58:37+00:00",
-  "text": "The StyleSmuggler zero-day allows attackers to execute code and deploy a stealthy backdoor on Adobe Commerce and Magento stores. The post Adobe Commerce Zero-Day Exploited to Backdoor Online Stores appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/nightmare-eclipse-drops-crowdstrike-nvidia-avast-zero-day-exploits/": {
   "id": "c90e4112823cde5a",
@@ -6632,7 +6624,7 @@
   "date": "2026-09-07",
   "source": "SecurityWeek",
   "published_at": "2026-09-07T12:15:57+00:00",
-  "text": "The proof-of-concept (PoC) exploits lead to privilege escalation, spawning a shell with System privileges. The post Nightmare Eclipse Drops CrowdStrike, Nvidia, Avast Zero-Day Exploits appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/north-korean-hackers-deploy-new-linux-espionage-toolkit/": {
   "id": "7d4b748b2e6817dd",
@@ -6641,7 +6633,7 @@
   "date": "2026-09-07",
   "source": "SecurityWeek",
   "published_at": "2026-09-07T12:12:08+00:00",
-  "text": "The stealthy toolkit embeds a backdoor in HAProxy and targets automotive and media organizations in South Korea for long-term surveillance. The post North Korean Hackers Deploy New Linux Espionage Toolkit appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/openai-agents-hijack-another-victim-website/": {
   "id": "ebba2a06b291c5be",
@@ -6650,7 +6642,7 @@
   "date": "2026-09-07",
   "source": "SecurityWeek",
   "published_at": "2026-09-07T12:03:04+00:00",
-  "text": "OpenAI agents made 15,000–18,000 autonomous edits to a German wiki over three months, evading moderation and echoing tactics seen in the Hugging Face breach. The post OpenAI Agents Hijack Another Victim Website appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/nfi-north-nephrology-associates-data-breaches/": {
   "id": "49ff59a7b7ace69f",
@@ -6659,7 +6651,7 @@
   "date": "2026-09-08",
   "source": "HIPAA Journal",
   "published_at": "2026-09-08T10:00:53+00:00",
-  "text": "Data breaches have been announced by NFI North in New Hampshire, Nephrology Associates in Kansas, PAMCAH-UA Local 675 Health and Welfare Fund in Hawaii, and Indico Data Solutions in Massachusetts. NFI North, Inc. NFI North, Inc., a Contoocook, New Hampshire-based nonprofit human services organization that provides mental health, behavioral, and educational support services in New Hampshire and Mai"
+  "text": ""
  },
  "https://www.securityweek.com/adobe-patches-over-170-vulnerabilities-including-commerce-zero-day/": {
   "id": "29aebe4bf6535525",
@@ -6668,7 +6660,7 @@
   "date": "2026-09-08",
   "source": "SecurityWeek",
   "published_at": "2026-09-08T18:37:17+00:00",
-  "text": "Tracked as CVE-2026-75650, the exploited defect allows unauthenticated attackers to execute arbitrary code. The post Adobe Patches Over 170 Vulnerabilities, Including Commerce Zero-Day appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/hackers-return-263-million-stolen-from-liquid-network/": {
   "id": "7c4d8c17276c2ee6",
@@ -6677,7 +6669,7 @@
   "date": "2026-09-08",
   "source": "SecurityWeek",
   "published_at": "2026-09-08T16:35:54+00:00",
-  "text": "Alleged ‘white-hat’ hackers drained $320 million from Liquid’s federation wallet, demanding a bug fix. The post Hackers Return $263 Million Stolen From Liquid Network appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/mathspace-data-breach-exposes-over-1-million-people/": {
   "id": "6166d3a85944d606",
@@ -6686,7 +6678,7 @@
   "date": "2026-09-08",
   "source": "SecurityWeek",
   "published_at": "2026-09-08T10:47:36+00:00",
-  "text": "Hackers stole the information of students, teachers, staff, and parents/guardians from a self-hosted Metabase instance. The post Mathspace Data Breach Exposes Over 1 Million People appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/mikrotik-patches-critical-flaws-chained-to-hack-routers/": {
   "id": "301d7d084a23c7ac",
@@ -6695,7 +6687,7 @@
   "date": "2026-09-08",
   "source": "SecurityWeek",
   "published_at": "2026-09-08T11:15:00+00:00",
-  "text": "Dubbed MikroTrick, the bugs allow attackers to bypass authentication, overwrite configuration files, and take over devices. The post MikroTik Patches Critical Flaws Chained to Hack Routers appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/the-hidden-instructions-that-can-hijack-ai-agents/": {
   "id": "21e3a78e92b5c991",
@@ -6704,7 +6696,7 @@
   "date": "2026-09-08",
   "source": "SecurityWeek",
   "published_at": "2026-09-08T17:00:00+00:00",
-  "text": "Malicious prompts concealed in documents, metadata, emails, images and code can manipulate autonomous agents into taking dangerous actions. The post The Hidden Instructions That Can Hijack AI Agents appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/boston-scientific-cyberattack/": {
   "id": "1dcce41928b19e8d",
@@ -6713,7 +6705,7 @@
   "date": "2026-09-09",
   "source": "HIPAA Journal",
   "published_at": "2026-09-09T07:00:12+00:00",
-  "text": "It has been two weeks since a cyberattack on the Massachusetts-based medical device manufacturer Boston Scientific prevented access to critical information systems and caused major disruption to operations globally. The attack was detected on August 25, 2026, and the company quickly activated its incident response protocol, contained the attack, and has been working round the clock to investigate "
+  "text": ""
  },
  "https://www.hipaajournal.com/interim-healthcare-ransomware/": {
   "id": "60fcca1d80277c28",
@@ -6722,7 +6714,7 @@
   "date": "2026-09-09",
   "source": "HIPAA Journal",
   "published_at": "2026-09-09T10:00:20+00:00",
-  "text": "Two ransomware groups have claimed attacks on the home health care provider Interim Healthcare. Data breaches have been announced by Crystal Coast Pain Management, Golden State Orthopedics & Spine, Gardiner Family Chiropractic, and BestCare Treatment Services. Interim HealthCare of Oklahoma City Interim HealthCare, a home healthcare provider operating in 40 U.S. states, has been added to the data "
+  "text": ""
  },
  "https://www.securityweek.com/ai-is-giving-lesser-resourced-attackers-nation-state-level-reach-google-warns/": {
   "id": "09184b03a255a19b",
@@ -6731,7 +6723,7 @@
   "date": "2026-09-09",
   "source": "SecurityWeek",
   "published_at": "2026-09-09T16:56:25+00:00",
-  "text": "Criminal and state-sponsored adversaries are increasingly using AI to automate and scale their attacks, according to GTIG. The post AI Is Giving Lesser-Resourced Attackers Nation-State-Level Reach, Google Warns appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/meta-launches-personal-ai-agent-muse-emphasizes-safety-and-privacy/": {
   "id": "c9663a93f41d1eea",
@@ -6740,7 +6732,7 @@
   "date": "2026-09-09",
   "source": "SecurityWeek",
   "published_at": "2026-09-09T12:00:00+00:00",
-  "text": "Muse runs on a dedicated, secure virtual machine that houses both the agent and the user’s data. The post Meta Launches Personal AI Agent, Muse, Emphasizes Safety and Privacy appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/us-agencies-warn-china-is-systematically-extracting-frontier-ai-capabilities/": {
   "id": "0669ca84588966ca",
@@ -6749,7 +6741,7 @@
   "date": "2026-09-09",
   "source": "SecurityWeek",
   "published_at": "2026-09-09T12:32:13+00:00",
-  "text": "Distillation is an ‘attack’ against an AI model designed to capture outputs, understand reasoning processes, and subsequently train a different model. The post US Agencies Warn China Is Systematically Extracting Frontier AI Capabilities appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/adapthealth-data-breach/": {
   "id": "df41c2617c0481cc",
@@ -6758,7 +6750,7 @@
   "date": "2026-09-10",
   "source": "HIPAA Journal",
   "published_at": "2026-09-10T11:07:59+00:00",
-  "text": "In early July, we reported that AdaptHealth had notified the U.S. Securities and Exchange Commission that it had experienced a cybersecurity incident involving the theft of patient data. At the time of the Form 8-K filing, AdaptHealth had not determined the extent to which patient data was compromised in the incident. The HHS Office for Civil Rights has now been informed that the electronic protec"
+  "text": ""
  },
  "https://www.hipaajournal.com/veradigm-data-breach-2026/": {
   "id": "b80c2c3d96260dd3",
@@ -6767,7 +6759,7 @@
   "date": "2026-09-10",
   "source": "HIPAA Journal",
   "published_at": "2026-09-10T16:43:40+00:00",
-  "text": "The Chicago, Illinois-based practice management and electronic health record company Veradigm (formerly Allscripts Healthcare Solutions) has disclosed a cybersecurity incident in a Form 8-K filing with the U.S. Securities and Exchange Commission (SEC). According to the September 8, 2026, filing, Veradigm recently learned that one of its third-party vendors had experienced a cybersecurity incident "
+  "text": ""
  },
  "https://www.securityweek.com/4-1-million-impacted-by-adapthealth-data-breach/": {
   "id": "e256e63efb481ce3",
@@ -6776,7 +6768,7 @@
   "date": "2026-09-10",
   "source": "SecurityWeek",
   "published_at": "2026-09-10T11:20:43+00:00",
-  "text": "In June 2026, hackers stole personal, health, and insurance information from AdaptHealth’s systems. The post 4.1 Million Impacted by AdaptHealth Data Breach appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/anthropic-researcher-resigns-with-warning-about-the-dangers-of-ai-development/": {
   "id": "4e290b715b6f6c6e",
@@ -6785,7 +6777,7 @@
   "date": "2026-09-10",
   "source": "SecurityWeek",
   "published_at": "2026-09-10T14:52:07+00:00",
-  "text": "Both Anthropic and OpenAI have seen high-profile resignations in recent years that were tied to safety concerns. The post Anthropic Researcher Resigns With Warning About the Dangers of AI Development appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/critical-netscaler-vulnerability-exploited-in-attacks/": {
   "id": "d1b307fdafd6a30d",
@@ -6794,7 +6786,7 @@
   "date": "2026-09-10",
   "source": "SecurityWeek",
   "published_at": "2026-09-10T12:20:21+00:00",
-  "text": "Tracked as CVE-2026-19490, the authentication bypass flaw has been exploited in the wild since at least September 3. The post Critical NetScaler Vulnerability Exploited in Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/fortinet-code-execution-flaw-exploited-in-pivotc2-rat-attacks/": {
   "id": "44cd6a6481029cbd",
@@ -6803,7 +6795,7 @@
   "date": "2026-09-10",
   "source": "SecurityWeek",
   "published_at": "2026-09-10T06:33:36+00:00",
-  "text": "The high-severity, unauthenticated vulnerability tracked as CVE-2025-25249 was patched in January 2026. The post Fortinet Code Execution Flaw Exploited in PivotC2 RAT Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/organizations-warned-of-cisco-secure-fmc-exploitation/": {
   "id": "6c726da58c41f21d",
@@ -6812,7 +6804,7 @@
   "date": "2026-09-10",
   "source": "SecurityWeek",
   "published_at": "2026-09-10T10:06:20+00:00",
-  "text": "Cisco and CISA have flagged exploitation of CVE-2026-20079, a vulnerability disclosed in March 2026. The post Organizations Warned of Cisco Secure FMC Exploitation appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/widened-scan-turns-up-fourth-rogue-claude-cyber-incident/": {
   "id": "e683234d8f54b6dd",
@@ -6821,7 +6813,7 @@
   "date": "2026-09-10",
   "source": "SecurityWeek",
   "published_at": "2026-09-10T11:52:44+00:00",
-  "text": "Anthropic is most concerned about Claude Mythos 5’s reckless behavior after recent incidents in which real systems were hacked. The post Widened Scan Turns Up Fourth Rogue Claude Cyber Incident appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/anthropic-says-russian-hackers-used-claude-ai-to-automate-malware-evasion/": {
   "id": "1c121ed3d0985594",
@@ -6830,7 +6822,7 @@
   "date": "2026-09-11",
   "source": "SecurityWeek",
   "published_at": "2026-09-11T08:47:07+00:00",
-  "text": "Anthropic reveals how criminal groups are increasingly targeting AI vendors' own infrastructure, including to steal a pre-release Claude model. The post Anthropic Says Russian Hackers Used Claude AI to Automate Malware Evasion appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/gitlab-vulnerability-exploited-one-day-after-disclosure/": {
   "id": "a278299ccef2efc5",
@@ -6839,7 +6831,7 @@
   "date": "2026-09-11",
   "source": "SecurityWeek",
   "published_at": "2026-09-11T16:11:08+00:00",
-  "text": "The critical-severity path traversal flaw allows unauthenticated attackers to read arbitrary files from the GitLab server. The post GitLab Vulnerability Exploited One Day After Disclosure appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/papercut-flaws-exploited-in-ai-powered-attacks/": {
   "id": "955f1c398e4a2d0f",
@@ -6848,7 +6840,7 @@
   "date": "2026-09-11",
   "source": "SecurityWeek",
   "published_at": "2026-09-11T08:18:23+00:00",
-  "text": "A Russian threat actor used AI to build, test, and deploy exploits against hundreds of organizations worldwide. The post PaperCut Flaws Exploited in AI-Powered Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/surfshark-systems-targeted-by-hackers/": {
   "id": "6d31dd9c434900bb",
@@ -6857,7 +6849,7 @@
   "date": "2026-09-11",
   "source": "SecurityWeek",
   "published_at": "2026-09-11T09:41:03+00:00",
-  "text": "A misconfigured test server containing engineering material, including internal configurations, was accessed by threat actors. The post Surfshark Systems Targeted by Hackers appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/trezor-says-347000-users-received-phishing-emails-after-brevo-hack/": {
   "id": "4b91ef7876d91386",
@@ -6866,7 +6858,7 @@
   "date": "2026-09-11",
   "source": "SecurityWeek",
   "published_at": "2026-09-11T12:48:04+00:00",
-  "text": "Hackers compromised the Brevo marketing platform and used that access to send phishing emails to users of Trezor, BitBox, and CoinTracking. The post Trezor Says 347,000 Users Received Phishing Emails After Brevo Hack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/bluemoon-exploit-kit-chains-recent-chrome-windows-zero-days/": {
   "id": "74a69887eb6b1cb7",
@@ -6875,7 +6867,7 @@
   "date": "2026-09-12",
   "source": "SecurityWeek",
   "published_at": "2026-09-12T11:10:00+00:00",
-  "text": "Multiple espionage-motivated threat actors have adopted BlueMoon in opportunistic, rushed deployments. The post BlueMoon Exploit Kit Chains Recent Chrome, Windows Zero-Days appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/users-in-houthi-held-yemen-tried-to-develop-advanced-weapons-with-ai-anthropic-says/": {
   "id": "f3f02c966dd1916d",
@@ -6884,7 +6876,7 @@
   "date": "2026-09-12",
   "source": "SecurityWeek",
   "published_at": "2026-09-12T01:50:53+00:00",
-  "text": "Anthropic said the users did not succeed in “fielding an operational device” but did carry out a failed test of a guided rocket. The post Users in Houthi-Held Yemen Tried to Develop Advanced Weapons With AI, Anthropic Says appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/anthropic-ceo-dario-amodei-says-ai-industry-needs-to-give-safety-measures-time-to-catch-up/": {
   "id": "e5c1744d2e82498e",
@@ -6893,7 +6885,7 @@
   "date": "2026-09-13",
   "source": "SecurityWeek",
   "published_at": "2026-09-13T13:27:25+00:00",
-  "text": "Dario Amodei warned that within six to 12 months AI could be capable of leading a swarm of agents that could take over the entire internet. The post Anthropic CEO Dario Amodei Says AI Industry Needs to Give Safety Measures Time to Catch Up appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/hacking-incident-hawaii-family-dental/": {
   "id": "c563ac07e7425069",
@@ -6902,7 +6894,7 @@
   "date": "2026-09-14",
   "source": "HIPAA Journal",
   "published_at": "2026-09-14T15:27:35+00:00",
-  "text": "A hacking incident at Hawaii Family Dental has affected almost 46,000 individuals. Data breaches have also been announced by Life Bridges in Tennessee, Westchester Institute for Human Development in New York, Community Health Care in Ohio, and Shoshone Medical Center in Idaho. Hawaii Family Dental Hawaii Dental Group, Inc., doing business as Hawaii Family Dental, a Honolulu-based operator of a doz"
+  "text": ""
  },
  "https://www.securityweek.com/beijing-hits-back-at-anthropic-ceos-call-to-curb-chinas-ai-development/": {
   "id": "9a5486789ee87e77",
@@ -6911,7 +6903,7 @@
   "date": "2026-09-14",
   "source": "SecurityWeek",
   "published_at": "2026-09-14T14:28:26+00:00",
-  "text": "China’s Ministry of Foreign Affairs responded to a question about Amodei’s essay by saying that all parties should work together on AI. The post Beijing Hits Back at Anthropic CEO’s Call to Curb China’s AI Development appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/chinese-hackers-exploit-critical-tencent-software-flaw-for-one-click-code-execution/": {
   "id": "d2b13be789221612",
@@ -6920,7 +6912,7 @@
   "date": "2026-09-14",
   "source": "SecurityWeek",
   "published_at": "2026-09-14T11:51:29+00:00",
-  "text": "The Chinese-language input method editor for Windows can allow attackers to execute arbitrary code remotely. The post Chinese Hackers Exploit Critical Tencent Software Flaw for One-Click Code Execution appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/connectwise-patches-screenconnect-vulnerability-exploited-in-worm-like-attacks/": {
   "id": "393c0325c013638f",
@@ -6929,7 +6921,7 @@
   "date": "2026-09-14",
   "source": "SecurityWeek",
   "published_at": "2026-09-14T08:25:14+00:00",
-  "text": "The flaw allows attackers to send files and execute them without authorization through an active remote session. The post ConnectWise Patches ScreenConnect Vulnerability Exploited in Worm-Like Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/new-warnings-about-the-risks-of-ai-to-humanity-revive-a-long-running-debate/": {
   "id": "531d4330e5384f86",
@@ -6938,7 +6930,7 @@
   "date": "2026-09-14",
   "source": "SecurityWeek",
   "published_at": "2026-09-14T13:31:15+00:00",
-  "text": "Concerns over the potential risks of the technology are rising as new AI models become more powerful, heightening both the potential for misuse by people with criminal aims. The post New Warnings About the Risks of AI to Humanity Revive a Long-Running Debate appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/personal-financial-info-exposed-in-revolut-data-breach/": {
   "id": "ff47a6652ab680e5",
@@ -6947,7 +6939,7 @@
   "date": "2026-09-14",
   "source": "SecurityWeek",
   "published_at": "2026-09-14T13:03:35+00:00",
-  "text": "The company unintentionally disclosed users’ information to a third party impersonating a government agency. The post Personal, Financial Info Exposed in Revolut Data Breach appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/telus-warns-customers-of-account-breaches/": {
   "id": "90086c92a8626c1b",
@@ -6956,7 +6948,7 @@
   "date": "2026-09-14",
   "source": "SecurityWeek",
   "published_at": "2026-09-14T09:56:57+00:00",
-  "text": "Stolen credentials were used in a multi-month campaign to access subscriber personal data and billing records. The post Telus Warns Customers of Account Breaches appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/three-jfrog-artifactory-flaws-exploited-for-backdoor-deployment/": {
   "id": "1944b2534224e62f",
@@ -6965,7 +6957,7 @@
   "date": "2026-09-14",
   "source": "SecurityWeek",
   "published_at": "2026-09-14T09:27:29+00:00",
-  "text": "The vulnerabilities can allow attackers to bypass authentication and elevate their privileges to administrator. The post Three JFrog Artifactory Flaws Exploited for Backdoor Deployment appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/lhc-group-data-breach/": {
   "id": "ccf7ed7e007480b5",
@@ -6974,7 +6966,7 @@
   "date": "2026-09-15",
   "source": "HIPAA Journal",
   "published_at": "2026-09-15T14:29:31+00:00",
-  "text": "Data breaches have been reported by the Louisiana-based home health service provider LHC Group, Provident Behavioral Health in Missouri, Elixir Medical Corporation in California, and Central Arkansas Pediatrics. LHC Group LHC Group, a Lafayette, Louisiana-based provider of home health, hospice, and home- and community-based services in 28 U.S. states and the District of Columbia, has been affected"
+  "text": ""
  },
  "https://www.securityweek.com/hacked-hbo-reddit-account-used-for-malware-delivery-via-clickfix-attack/": {
   "id": "dd815865a526063d",
@@ -6983,7 +6975,7 @@
   "date": "2026-09-15",
   "source": "SecurityWeek",
   "published_at": "2026-09-15T09:09:00+00:00",
-  "text": "Ads led to a ClickFix page designed to trick macOS and Windows users into installing malware. The post Hacked HBO Max Reddit Account Used for Malware Delivery via ClickFix Attack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/openai-investigates-report-linking-ai-agents-to-rubygems-attack/": {
   "id": "ade135f363a8f317",
@@ -6992,7 +6984,7 @@
   "date": "2026-09-15",
   "source": "SecurityWeek",
   "published_at": "2026-09-15T12:42:32+00:00",
-  "text": "The incident occurred in May, when RubyGems maintainers suspended new account registrations due to what appeared like malicious activity. The post OpenAI Investigates Report Linking AI Agents to RubyGems Attack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/root-rce-zero-day-in-cisco-secure-email-gateway-under-active-exploitation/": {
   "id": "6a3c4784f3bdcfc5",
@@ -7001,7 +6993,7 @@
   "date": "2026-09-15",
   "source": "SecurityWeek",
   "published_at": "2026-09-15T05:18:51+00:00",
-  "text": "An unauthenticated attacker can exploit CVE-2026-76461 to execute arbitrary commands on the underlying OS with root privileges. The post Root RCE Zero-Day in Cisco Secure Email Gateway Under Active Exploitation appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/texas-utility-centerpoint-energy-confirms-breach-after-hacker-leaks-data/": {
   "id": "b4665cd91ecba516",
@@ -7010,7 +7002,7 @@
   "date": "2026-09-15",
   "source": "SecurityWeek",
   "published_at": "2026-09-15T15:30:24+00:00",
-  "text": "A hacker claims to have stolen 7.5 million customer records after breaching the company’s systems. The post Texas Utility CenterPoint Energy Confirms Breach After Hacker Leaks Data appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/thai-broadband-provider-hacked-via-fortinet-vulnerability/": {
   "id": "0537745a1a0049bd",
@@ -7019,7 +7011,7 @@
   "date": "2026-09-15",
   "source": "SecurityWeek",
   "published_at": "2026-09-15T13:33:58+00:00",
-  "text": "The hackers staged numerous scripts for reconnaissance and CVE probing, along with brute-force utilities and privilege escalation tools. The post Thai Broadband Provider Hacked via Fortinet Vulnerability appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/xhealth-data-breach/": {
   "id": "1ab8a3aa2b5633a5",
@@ -7028,7 +7020,7 @@
   "date": "2026-09-16",
   "source": "HIPAA Journal",
   "published_at": "2026-09-16T08:40:08+00:00",
-  "text": "A data breach at zHealth, a practice management and EHR software provider, has affected 118,000 individuals. Data breaches have also been announced by Bridgeway Benefit Technologies, Longview ER Operations, and HealthStream. zHealth zHealth, Inc., a San Francisco, California-based cloud-based practice management and electronic health records (EHR) software provider, has disclosed a cybersecurity i"
+  "text": ""
  },
  "https://www.securityweek.com/acronis-patches-exploited-vulnerability-in-cpanel-backup-plugin/": {
   "id": "64b7411f199d8136",
@@ -7037,7 +7029,7 @@
   "date": "2026-09-16",
   "source": "SecurityWeek",
   "published_at": "2026-09-16T09:52:31+00:00",
-  "text": "CVE-2026-87886 is a high-severity insecure file permissions flaw that can lead to local privilege escalation. The post Acronis Patches Exploited Vulnerability in cPanel Backup Plugin appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/enterprises-warned-of-attacks-exploiting-wso2-vulnerability/": {
   "id": "c163aeebaf4e083e",
@@ -7046,7 +7038,7 @@
   "date": "2026-09-16",
   "source": "SecurityWeek",
   "published_at": "2026-09-16T08:39:05+00:00",
-  "text": "The vulnerability, tracked as CVE-2026-5430, can be exploited to gain access to valuable enterprise data. The post Enterprises Warned of Attacks Exploiting WSO2 Vulnerability appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/eu-chief-warns-of-ai-powered-hacking-moves-to-rein-in-social-media/": {
   "id": "5e1da403736b4fa9",
@@ -7055,7 +7047,7 @@
   "date": "2026-09-16",
   "source": "SecurityWeek",
   "published_at": "2026-09-16T14:15:18+00:00",
-  "text": "Ursula von der Leyen warns that advanced AI could unleash hacking on an unprecedented scale as Europe prepares new protections against social media’s “capture” of children. The post EU Chief Warns of AI-Powered Hacking, Moves to Rein In Social Media appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/": {
   "id": "03979d3e6a171134",
@@ -7064,7 +7056,7 @@
   "date": "2026-09-16",
   "source": "SecurityWeek",
   "published_at": "2026-09-16T16:39:19+00:00",
-  "text": "Spanish regulators say an AI agent chained together a successful login, vulnerability discovery, and access to personal data in a potential milestone for autonomous cyberattacks. The post First Agentic AI Data Breach Reported to Spanish Regulator appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/pixel-modem-zero-day-exploited-in-targeted-attacks/": {
   "id": "47150072c81f5758",
@@ -7073,7 +7065,7 @@
   "date": "2026-09-16",
   "source": "SecurityWeek",
   "published_at": "2026-09-16T13:10:54+00:00",
-  "text": "Google announced patches for the exploited privilege escalation vulnerability (CVE-2026-58704) on September 15. The post Pixel Modem Zero-Day Exploited in Targeted Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/us-uk-dutch-agencies-expose-iranian-chosen-brick-surveillance-malware/": {
   "id": "8cca4093551ef581",
@@ -7082,7 +7074,7 @@
   "date": "2026-09-16",
   "source": "SecurityWeek",
   "published_at": "2026-09-16T12:00:14+00:00",
-  "text": "US, UK, and Dutch government agencies published a report detailing the malware, and the FBI described the abuse of Telegram for C&C. The post US, UK, Dutch Agencies Expose Iranian ‘Chosen Brick’ Surveillance Malware appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/cyberattack-cedar-county-memorial-hospital/": {
   "id": "fa2c5b32dbd7cd74",
@@ -7091,7 +7083,7 @@
   "date": "2026-09-17",
   "source": "HIPAA Journal",
   "published_at": "2026-09-17T15:48:17+00:00",
-  "text": "A hacking group has claimed responsibility for an August 2026 cyberattack on Cedar County Memorial Hospital in Missouri. Hacking-related data breaches have been reported by Next Level Medical in Texas and Grafton City Hospital in West Virginia. Cedar County Memorial Hospital Cedar County Memorial Hospital in El Dorado Springs, Missouri, disclosed on August 23, 2026, that it was the victim of a cyb"
+  "text": ""
  },
  "https://www.securityweek.com/active-exploitation-triggers-emergency-patch-for-cisco-ise-zero-day/": {
   "id": "042eb106c68db706",
@@ -7100,7 +7092,7 @@
   "date": "2026-09-17",
   "source": "SecurityWeek",
   "published_at": "2026-09-17T06:19:52+00:00",
-  "text": "Remote, unauthenticated attackers can exploit the vulnerability to bypass authentication via crafted requests. The post Active Exploitation Triggers Emergency Patch for Cisco ISE Zero-Day appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/cyberattacks-on-two-oil-tankers-prompt-coast-guard-fbi-to-board-vessels/": {
   "id": "b97ff6139986f375",
@@ -7109,7 +7101,7 @@
   "date": "2026-09-17",
   "source": "SecurityWeek",
   "published_at": "2026-09-17T17:09:40+00:00",
-  "text": "The Coast Guard confirmed evidence of malicious cyber activity on the VL Prosperity, but has not attributed the attack to Iran. The post Cyberattacks on Two Oil Tankers Prompt Coast Guard, FBI to Board Vessels appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/openai-says-its-models-hunted-github-for-leaked-api-keys-during-training/": {
   "id": "4a613da1506ea695",
@@ -7118,7 +7110,7 @@
   "date": "2026-09-17",
   "source": "SecurityWeek",
   "published_at": "2026-09-17T15:45:29+00:00",
-  "text": "OpenAI published a framework for disclosing model misalignment alongside six reports describing problematic behavior. The post OpenAI Says Its Models Searched GitHub for Leaked API Keys During Training appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/ransomware-attacks-on-manufacturers-surge-as-supply-chain-risk-grows/": {
   "id": "1e655905aaf01fe4",
@@ -7127,7 +7119,7 @@
   "date": "2026-09-17",
   "source": "SecurityWeek",
   "published_at": "2026-09-17T12:29:53+00:00",
-  "text": "Research shows attacks on manufacturers rose 40% in early 2026, as ransomware groups increasingly exploit the supply-chain disruption caused by operational shutdowns. The post Ransomware Attacks on Manufacturers Surge as Supply Chain Risk Grows appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/revolut-data-breach-5-months-680-high-profile-accounts-3m-ransom/": {
   "id": "95f1ec035da87e68",
@@ -7136,7 +7128,7 @@
   "date": "2026-09-17",
   "source": "SecurityWeek",
   "published_at": "2026-09-17T13:57:41+00:00",
-  "text": "Revolut allegedly fed customer information to hackers impersonating an Italian government agency for five months. The post Revolut Data Breach: 5 Months, 680 High-Profile Accounts, $3M Ransom appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/mckesson-data-breach/": {
   "id": "ce8c00aea7bb785c",
@@ -7145,7 +7137,7 @@
   "date": "2026-09-18",
   "source": "HIPAA Journal",
   "published_at": "2026-09-18T06:03:42+00:00",
-  "text": "McKesson, a major U.S. wholesale medical supplies & equipment, pharmaceutical distribution, and healthcare technology solutions company, continues to investigate a cybersecurity incident involving unauthorized access and the exfiltration of sensitive data. The number of individuals affected has yet to be determined; however, on September 8, 2026, McKesson issued an update on the initial findings o"
+  "text": ""
  },
  "https://www.securityweek.com/ai-built-exploit-and-sign-in-flaw-opened-path-to-internal-openai-code/": {
   "id": "c03fa8336a048890",
@@ -7154,7 +7146,7 @@
   "date": "2026-09-18",
   "source": "SecurityWeek",
   "published_at": "2026-09-18T12:45:24+00:00",
-  "text": "Hacktron researchers earned a bug bounty after demonstrating access to OpenAI employee accounts. The post AI-Built Exploit and Sign-In Flaw Opened Path to Internal OpenAI Code appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/brevo-supply-chain-attack-injects-malware-into-100000-websites/": {
   "id": "468121a7ba3863d7",
@@ -7163,7 +7155,7 @@
   "date": "2026-09-18",
   "source": "SecurityWeek",
   "published_at": "2026-09-18T09:46:57+00:00",
-  "text": "Hackers used a compromised API key to deploy a Cloudflare worker that injected malicious scripts. The post Brevo Supply Chain Attack Injects Malware Into 100,000 Websites appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/critical-orkes-conductor-vulnerability-exploited-in-attacks/": {
   "id": "54fa5d8ac50c3d4a",
@@ -7172,7 +7164,7 @@
   "date": "2026-09-18",
   "source": "SecurityWeek",
   "published_at": "2026-09-18T08:42:18+00:00",
-  "text": "CVE-2026-58138 is an unauthenticated remote code execution vulnerability that attackers can exploit via inline workflow definitions. The post Critical Orkes Conductor Vulnerability Exploited in Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/in-other-news-ransomware-developer-sentenced-plugin4shell-ai-attack-critical-sap-flaw/": {
   "id": "2dcbb4b94e0ef75b",
@@ -7181,7 +7173,7 @@
   "date": "2026-09-18",
   "source": "SecurityWeek",
   "published_at": "2026-09-18T14:25:00+00:00",
-  "text": "Noteworthy stories that might have slipped under the radar: Mandiant's 2026 AI risk report, PhantomRaven malware used by bug bounty hunter, WordPress plugin bug exploited. The post In Other News: Ransomware Developer Sentenced, Plugin4Shell AI Attack, Critical SAP Flaw appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/nightmarestresser-ddos-service-disrupted-in-international-operation/": {
   "id": "50efb109edd229ca",
@@ -7190,7 +7182,7 @@
   "date": "2026-09-18",
   "source": "SecurityWeek",
   "published_at": "2026-09-18T10:12:33+00:00",
-  "text": "Active since at least 2022, NightmareStresser was one of the longest-running DDoS-for-hire services in the world. The post NightmareStresser DDoS Service Disrupted in International Operation appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/cybersecurity-awareness-month-2026-critical-infrastructure-urged-to-adopt-cybersecurity-3rs/": {
   "id": "b4d4b63a16145bab",
@@ -7199,7 +7191,7 @@
   "date": "2026-09-21",
   "source": "HIPAA Journal",
   "published_at": "2026-09-21T09:18:51+00:00",
-  "text": "October is Cybersecurity Awareness Month, a global effort to promote online safety and digital security. Launched in 2024 by the National Cybersecurity Alliance and the Cybersecurity and Infrastructure Security Agency (CISA), the aim is to teach individuals and organizations practical steps to improve resilience to cyber threats. The general theme this year is Don’t Make It Easy for Them , which f"
+  "text": ""
  },
  "https://www.hipaajournal.com/united-anguage-group-desert-pulmonary-sleep-consultants-breach/": {
   "id": "bd8672e58f327d32",
@@ -7208,7 +7200,7 @@
   "date": "2026-09-21",
   "source": "HIPAA Journal",
   "published_at": "2026-09-21T15:52:02+00:00",
-  "text": "Data breaches have been announced by United Language Group in Minnesota, Desert Pulmonary & Sleep Consultants in Arizona, and Azle Cube Smiles in Texas. United Language Group, Minnesota United Language Group, LLC, a Minneapolis, Minnesota-based provider of translation, localization, and interpretation services, has notified the HHS’ Office for Civil Rights about a breach of the protected health in"
+  "text": ""
  },
  "https://www.securityweek.com/colorado-water-utilities-hit-by-cyberattacks-targeting-ot-systems/": {
   "id": "5fddd99af96160e5",
@@ -7217,7 +7209,7 @@
   "date": "2026-09-21",
   "source": "SecurityWeek",
   "published_at": "2026-09-21T10:03:44+00:00",
-  "text": "The hackers changed equipment settings, disabled remote access and alarms, and altered pumping cycles, officials said. The post Colorado Water Utilities Hit by Cyberattacks Targeting OT Systems appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/crowdsec-confirms-source-code-stolen-in-supply-chain-attack/": {
   "id": "d4626fea5def7c62",
@@ -7226,7 +7218,7 @@
   "date": "2026-09-21",
   "source": "SecurityWeek",
   "published_at": "2026-09-21T10:55:46+00:00",
-  "text": "The cybersecurity firm believes the data breach was the result of the May 2026 TanStack supply chain attack. The post CrowdSec Confirms Source Code Stolen in Supply Chain Attack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html": {
   "id": "de2662bd21e79473",
@@ -7352,7 +7344,7 @@
   "date": "2026-11-25",
   "source": "SecurityWeek",
   "published_at": "2026-11-25T08:12:24+00:00",
-  "text": "A China-linked hacking group chained PHP2Shell with Fragnesia in AI-assisted attacks that hit 25 servers. The post Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/": {
   "id": "b35db0321a8a83ac",
@@ -7361,7 +7353,7 @@
   "date": "2026-11-25",
   "source": "SecurityWeek",
   "published_at": "2026-11-25T09:05:13+00:00",
-  "text": "Attackers can exploit CVE-2026-131914 to achieve remote code execution via a single web request containing specially crafted data. The post Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/drupal-flaw-found-by-anthropic-scanner-exploited-in-attacks/": {
   "id": "c72639125fbf7ce0",
@@ -7370,7 +7362,7 @@
   "date": "2026-11-25",
   "source": "SecurityWeek",
   "published_at": "2026-11-25T08:01:06+00:00",
-  "text": "CISA has added the vulnerability to its KEV catalog and instructed federal agencies to patch it within three days. The post Drupal Flaw Found by Anthropic Scanner Exploited in Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.helpnetsecurity.com/2026/11/25/idunno-anticsrf-rce-cve-2026-131914-exploited/": {
   "id": "27f1ce053d6f6a44",
@@ -7406,7 +7398,7 @@
   "date": "2026-11-25",
   "source": "SecurityWeek",
   "published_at": "2026-11-25T10:40:07+00:00",
-  "text": "The edtech company says the systems are fully operational and safe to use while it investigates the incident. The post Plagiarism Checker Turnitin Investigating Cyberattack appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/": {
   "id": "3b20202950545f3f",
@@ -8070,7 +8062,7 @@
   "date": "2026-11-17",
   "source": "HIPAA Journal",
   "published_at": "2026-11-17T13:29:24+00:00",
-  "text": "A final rule has been issued by the U.S. Department of Health and Human Services (HHS), implementing proposed modifications to the Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule to support care coordination and strengthen individuals’ rights to their protected health information, 5 years, 11 months, and 6 days after the proposed modifications were first announced. While e"
+  "text": ""
  },
  "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html": {
   "id": "8b71dc35fd91ecd8",
@@ -8088,7 +8080,7 @@
   "date": "2026-11-18",
   "source": "SecurityWeek",
   "published_at": "2026-11-18T13:33:47+00:00",
-  "text": "Star Blizzard weaponized data and identities stolen in late 2025 to phish and compromise a US organization. The post Russian APT Poses as Employee of Hacked Firm to Breach Another US Organization appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/microsoft-agent-framework-releases-poisoned-with-credential-stealer/": {
   "id": "50d9ed00cb903542",
@@ -8097,7 +8089,7 @@
   "date": "2026-11-18",
   "source": "SecurityWeek",
   "published_at": "2026-11-18T11:05:39+00:00",
-  "text": "Versions 1.26.1 and 1.26.2 of agent-framework on PyPI steal Azure, Azure DevOps, and GitHub Actions credentials when Python starts. The post Microsoft Agent Framework Releases Poisoned With Credential Stealer appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.securityweek.com/critical-perforce-puppet-rce-exploited-in-attacks/": {
   "id": "e9a845ef284eb34b",
@@ -8106,7 +8098,7 @@
   "date": "2026-11-18",
   "source": "SecurityWeek",
   "published_at": "2026-11-18T10:37:08+00:00",
-  "text": "Tracked as CVE-2026-115731, it allows a client that holds any CA-signed agent certificate to execute code on the server. The post Critical Perforce Puppet RCE Exploited in Attacks appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.hipaajournal.com/healthcare-employees-sharing-patient-data-ai-tools-major-risk/": {
   "id": "c12b126257536670",
@@ -8115,7 +8107,7 @@
   "date": "2026-11-18",
   "source": "HIPAA Journal",
   "published_at": "2026-11-18T13:27:14+00:00",
-  "text": "Healthcare security leaders are increasingly concerned about patient privacy incidents, HIPAA violations, and intellectual property loss due to employees sharing sensitive data with public AI models. While there is a risk of employees uploading patient data to unapproved tools such as ChatGPT, Gemini, or Claude, sensitive data may also be disclosed by unauthorized browser extensions, plug-ins, or "
+  "text": ""
  },
  "https://www.hipaajournal.com/alleged-us-hospital-ransomware-attacker-extradited/": {
   "id": "e16c9e70f8df181b",
@@ -8124,7 +8116,7 @@
   "date": "2026-11-18",
   "source": "HIPAA Journal",
   "published_at": "2026-11-18T13:10:52+00:00",
-  "text": "The U.S. Department of Justice has announced that a Kazakh national suspected of engaging in ransomware attacks on U.S. hospitals, healthcare organizations, and schools has been extradited to the U.S. to face charges. Roman Khlynovskiy, 43, is alleged to have been a member of the 8-Digits Team, a ransomware group with links to the INC Ransom and Lynx ransomware groups. Along with other members of "
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/from-deepfakes-to-helpdesk-impersonation-why-stronger-verification-matters/": {
   "id": "9e584bff1d23eb6f",
@@ -8243,7 +8235,7 @@
   "date": "2026-11-25",
   "source": "SecurityWeek",
   "published_at": "2026-11-25T14:15:25+00:00",
-  "text": "An account tied to ShinyHunters announced the group’s return, as Okta spots possible links between Inception and ShinyHunters hackers. The post ShinyHunters Claims Comeback, New Inception Group Rejects Alleged Ties appeared first on SecurityWeek ."
+  "text": ""
  },
  "https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/": {
   "id": "7b9478c4956d9db8",
@@ -8498,21 +8490,21 @@
  },
  "https://www.securityweek.com/check-point-security-management-servers-hacked-in-ai-assisted-campaign/": {
   "id": "a2d8ddfa90774e7d",
-  "title": "Check Point Security Management Servers Hacked in AI-Assisted Campaign",
   "url": "https://www.securityweek.com/check-point-security-management-servers-hacked-in-ai-assisted-campaign/",
+  "title": "Check Point Security Management Servers Hacked in AI-Assisted Campaign",
   "date": "2026-11-24",
   "source": "SecurityWeek",
-  "published_at": "2026-11-24T14:21:56+00:00",
-  "text": "The attacks were launched from 99 IP addresses and targeted organizations across multiple industries and countries. The post Check Point Security Management Servers Hacked in AI-Assisted Campaign appeared first on SecurityWeek ."
+  "priority": 1,
+  "text": ""
  },
  "https://www.securityweek.com/peninsula-energy-halts-trading-after-cyber-incident-hits-us-uranium-mine/": {
   "id": "47052fe79444aaba",
-  "title": "Peninsula Energy Halts Trading After Cyber Incident Hits US Uranium Mine",
   "url": "https://www.securityweek.com/peninsula-energy-halts-trading-after-cyber-incident-hits-us-uranium-mine/",
+  "title": "Peninsula Energy halts trading after cyber incident at Wyoming uranium mine",
   "date": "2026-11-24",
   "source": "SecurityWeek",
-  "published_at": "2026-11-24T10:35:04+00:00",
-  "text": "The company told the ASX that a cybersecurity incident at its Wyoming uranium project would temporarily affect operations. The post Peninsula Energy Halts Trading After Cyber Incident Hits US Uranium Mine appeared first on SecurityWeek ."
+  "priority": 1,
+  "text": ""
  },
  "https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/": {
   "id": "625032aaa0251fbc",
@@ -8521,7 +8513,8 @@
   "date": "2026-11-22",
   "source": "SecurityWeek",
   "published_at": "2026-11-22T00:53:02+00:00",
-  "text": "The FBI is investigating an apparent hack of a national law enforcement database that it maintains. The post FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Says appeared first on SecurityWeek ."
+  "priority": 1,
+  "text": ""
  },
  "https://www.securityweek.com/sbc-medical-group-data-breach-impacts-over-2-million/": {
   "id": "6c3de3cb84e8f112",
@@ -8530,7 +8523,8 @@
   "date": "2026-11-20",
   "source": "SecurityWeek",
   "published_at": "2026-11-20T11:36:51+00:00",
-  "text": "Threat actors accessed databases containing customer information associated with clinics in Japan. The post SBC Medical Group Data Breach Impacts Over 2 Million appeared first on SecurityWeek ."
+  "priority": 1,
+  "text": ""
  },
  "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/": {
   "id": "859252b312e3d82e",
@@ -8764,7 +8758,8 @@
   "date": "2026-11-13",
   "source": "SecurityWeek",
   "published_at": "2026-11-13T15:20:00+00:00",
-  "text": "Noteworthy stories that might have slipped under the radar: Siemens details security advisory policy, OpenAI Codex backdoor risk, Microsoft warns of model weight backdoors. The post In Other News: New CISA Director Nominee, Connected Car Hacking, Baker Tilly Data Breach appeared first on SecurityWeek ."
+  "priority": 1,
+  "text": ""
  },
  "https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/": {
   "id": "7bce34f792878823",
@@ -9718,7 +9713,8 @@
   "date": "2026-11-20",
   "source": "HIPAA Journal",
   "published_at": "2026-11-20T14:12:26+00:00",
-  "text": "A data breach at Access Dental Management has affected more than 341,000 individuals in Texas. Monadnock Community Hospital is investigating a cybersecurity-related outage, and data breaches have been confirmed by Valley Family Health Care and Ochsner Health. Access Dental Management Access Dental Management LLC, a dental management company based in Irving, Dallas, has notified the Texas Attorney "
+  "priority": 1,
+  "text": ""
  },
  "https://www.hipaajournal.com/data-breach-southwire-kern-medical-uchealth/": {
   "id": "335efbad9fcaf3c0",
@@ -9727,7 +9723,8 @@
   "date": "2026-11-19",
   "source": "HIPAA Journal",
   "published_at": "2026-11-19T18:35:28+00:00",
-  "text": "Cybersecurity incidents have exposed the personal and protected health information of members of the Southwire Company and Affiliates Employee Health & Welfare Plan, and patients of Kern Medical in California and UCHealth in Colorado. Southwire Company and Affiliates Employee Health & Welfare Plan Southwire Company, LLC, a Carrollton, Georgia-based manufacturer of electrical wire, cable, tools, an"
+  "priority": 1,
+  "text": ""
  },
  "https://www.hipaajournal.com/virtual-forty-fourth-national-hipaa-summit-2027/": {
   "id": "896ae040aac62e0b",
@@ -10838,6 +10835,114 @@
   "date": "2026-11-25",
   "source": "The Record",
   "published_at": "2026-11-25T21:18:00+00:00",
+  "text": ""
+ },
+ "https://thehackernews.com/2026/11/pcloud-password-manager-hit-by-cyber.html": {
+  "id": "882f6f9420fbbb92",
+  "title": "pCloud Password Manager Hit by Cyber Attack Involving Email Address Exposure and Login Attempts",
+  "url": "https://thehackernews.com/2026/11/pcloud-password-manager-hit-by-cyber.html",
+  "date": "2026-11-28",
+  "source": "The Hacker News",
+  "published_at": "2026-11-28T08:08:11+00:00",
+  "text": "Cross-platform password manager pCloud Pass has confirmed it was targeted by a cyber attack after users reported seeing unknown devices being connected to their accounts. \"A cyber attack targeting pCloud Pass occurred, which was promptly contained by the pCloud team,\" the Swiss company said in response to a number of posts on Reddit. \"Unfortunately, a small number of pCloud Pass user email"
+ },
+ "https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html": {
+  "id": "c074b7b62bd9eebd",
+  "title": "1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach",
+  "url": "https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html",
+  "date": "2026-11-26",
+  "source": "The Hacker News",
+  "published_at": "2026-11-26T10:57:25+00:00",
+  "text": "Popular password management software 1Password on Wednesday disclosed a security incident involving its backend systems that led to the unauthorized access of some customer information, but emphasized that customer password vaults and other secrets were not accessed. \"While we took immediate steps to contain the incident, the attacker gained access to some of our backend systems and accessed a"
+ },
+ "https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html": {
+  "id": "d518b50fbb3046e0",
+  "title": "13 Malicious NuGet Packages Turn Fake .NET Job Assessments Into Malware Delivery Traps",
+  "url": "https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html",
+  "date": "2026-11-26",
+  "source": "The Hacker News",
+  "published_at": "2026-11-26T03:48:52+00:00",
+  "text": "Cybersecurity researchers have discovered 13 malicious NuGet packages that are designed to target Windows .NET developers under the guise of a fake take-home job assessment. \"Most of the packages pose as WinUI 3 and WPF [Windows Presentation Foundation] button controls,\" Socket security researcher Kush Pandya said in a technical write-up. \"In the versions we analyzed, building or running a"
+ },
+ "https://en.yna.co.kr/view/AEN20261123002900320": {
+  "url": "https://en.yna.co.kr/view/AEN20261123002900320",
+  "title": "Samsung Securities confirms unauthorized customer response system access and leakage of 8,241 clients' data",
+  "date": "2026-11-23",
+  "source": "Yonhap",
+  "id": "7a2c84add0501921",
+  "priority": 1,
+  "text": ""
+ },
+ "https://isdown.app/status/classy/incidents/692307-security-notice": {
+  "url": "https://isdown.app/status/classy/incidents/692307-security-notice",
+  "title": "GoFundMe Pro vendor security notice confirms unauthorized third-party access to donor information",
+  "date": "2026-11-20",
+  "source": "IsDown",
+  "id": "3da650efca19f600",
+  "priority": 1,
+  "text": ""
+ },
+ "https://www.donorperfect.com/message-from-our-president/": {
+  "url": "https://www.donorperfect.com/message-from-our-president/",
+  "title": "DonorPerfect president confirms unauthorized system activity and prolonged service restrictions",
+  "date": "2026-11-24",
+  "source": "DonorPerfect",
+  "id": "997a773086180812",
+  "priority": 1,
+  "text": ""
+ },
+ "https://dysruptionhub.com/incidents/profiles/softerware-inc-2026-01/": {
+  "url": "https://dysruptionhub.com/incidents/profiles/softerware-inc-2026-01/",
+  "title": "DonorPerfect cyber incident disrupts fundraising and customer access",
+  "date": "2026-11-19",
+  "source": "DysruptionHub",
+  "id": "5fbc9208b63d2339",
+  "priority": 1,
+  "text": ""
+ },
+ "https://therecord.media/fifa-data-breach-limited": {
+  "id": "02da45af3a32eddb",
+  "url": "https://therecord.media/fifa-data-breach-limited",
+  "title": "FIFA says hackers accessed limited set of personal and business information",
+  "date": "2026-11-25",
+  "source": "The Record",
+  "priority": 1,
+  "text": ""
+ },
+ "https://thepaypers.com/fraud-and-fincrime/news/samsung-securities-data-breach-exposes-data-of-over-8000-customers": {
+  "id": "f68bb5d14ab38ead",
+  "url": "https://thepaypers.com/fraud-and-fincrime/news/samsung-securities-data-breach-exposes-data-of-over-8000-customers",
+  "title": "Samsung Securities data breach exposes data of over 8,000 customers",
+  "date": "2026-11-25",
+  "source": "The Paypers",
+  "priority": 1,
+  "text": ""
+ },
+ "https://www.wateraid.org/us/gofundme-pro-november-2026-data-incident": {
+  "id": "71106ca7e4648df5",
+  "url": "https://www.wateraid.org/us/gofundme-pro-november-2026-data-incident",
+  "title": "GoFundMe Pro November 2026 Data Incident",
+  "date": "2026-11-24",
+  "source": "WaterAid",
+  "priority": 1,
+  "text": ""
+ },
+ "https://en.yna.co.kr/view/AEN20261123002951320": {
+  "id": "cfcb579c93eca40c",
+  "url": "https://en.yna.co.kr/view/AEN20261123002951320",
+  "title": "Personal information of more than 8,000 clients at Samsung Securities breached",
+  "date": "2026-11-23",
+  "source": "Yonhap",
+  "priority": 1,
+  "text": ""
+ },
+ "https://pingoru.io/providers/classy/incidents/12499020": {
+  "id": "39f303e1c48021c1",
+  "url": "https://pingoru.io/providers/classy/incidents/12499020",
+  "title": "Classy security notice on GoFundMe Pro third-party access",
+  "date": "2026-11-20",
+  "source": "Pingoru",
+  "priority": 1,
   "text": ""
  }
 }
